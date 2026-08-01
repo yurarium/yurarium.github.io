@@ -108,11 +108,14 @@
     and not followed. This is mostly a first-import problem — everything present when tracking
     began carries an inherited date (初確認 marks it), and it resolves as releases are watched
     appearing rather than found already there.
+    <br><br>
+    <strong id="promoline"></strong>
   </div>
   <div class="controls" style="margin-top:.9rem">
     <input type="search" id="fq" placeholder="検索 — 作品名・作者 / work, creator" autocomplete="off">
     <select id="ftype">
-      <option value="">すべての更新 / all releases</option>
+      <option value="">連載のみ / serialised only</option>
+      <option value="all">試し読みも含む / include samples</option>
       <option value="adv">本編のみ / story only</option>
       <option value="chapter">話 / chapters</option>
       <option value="oneshot">読み切り / one-shots</option>
@@ -202,8 +205,11 @@ function renderFeed() {
   const rows = FEED.releases.filter(r => {
     if (q && !norm(r.work).includes(q) && !norm(r.author).includes(q) && !norm(r.ep).includes(q))
       return false;
+    // A series whose entire output is 試し読み is promoting a printed volume, not publishing web
+    // manga. Excluded by default rather than deleted; reachable via the filter.
+    if (f !== 'all' && r.web === 'promotional-sample-only') return false;
     if (f === 'adv') return r.adv;
-    if (f) return r.type === f;
+    if (f && f !== 'all') return r.type === f;
     return true;
   });
 
@@ -330,7 +336,17 @@ el('list').addEventListener('click', e => {
 
 /* ── queue ────────────────────────────────────────────── */
 function renderQueue() {
-  el('queue').innerHTML = FEED.queue.map(c => `
+  const pc = (FEED.print_candidates || []).map(c => `
+    <li style="padding:.6rem .2rem">
+      <span class="t">${esc(c.work_title)}</span>
+      <span class="tag q">print (試し読み)</span>
+      <span class="tag grey">${esc(c.status)}</span>
+      <div class="meta" style="margin-top:.15rem">${esc(c.author || '')} · ${esc(c.label || '')}
+        · ${c.sample_count} samples on ${esc(c.platform)}</div>
+      <div class="meta"><a href="${esc(c.sample_url)}" target="_blank"
+        rel="noopener noreferrer nofollow" style="color:var(--accent)">sample</a></div>
+    </li>`).join('');
+  el('queue').innerHTML = pc + FEED.queue.map(c => `
     <li style="padding:.6rem .2rem">
       <span class="t">${esc(c.work)}</span>
       <span class="tag q">${esc(c.signal)}</span>
@@ -350,13 +366,21 @@ Promise.all([
   fetch('data/feed.json').then(r => r.json()),
 ]).then(([idx, feed]) => {
   INDEX = idx; FEED = feed;
+  const ser = feed.releases.filter(r => r.web !== 'promotional-sample-only').length;
+  const nq  = feed.queue.length + (feed.print_candidates || []).length;
   el('hstats').textContent =
-    `${feed.releases.length} 更新 · ${idx.length} 作品 · ${idx.reduce((n,w)=>n+w.n,0)} 巻`;
-  el('n-feed').textContent  = feed.releases.length;
+    `${ser} 更新 · ${idx.length} 作品 · ${idx.reduce((n,w)=>n+w.n,0)} 巻`;
+  el('n-feed').textContent  = ser;
   el('n-cat').textContent   = idx.length;
-  el('n-queue').textContent = feed.queue.length;
+  el('n-queue').textContent = nq;
   el('cov').textContent = feed.platforms
     .map(p => `${p.name} (${p.series} series)`).join(', ') || 'none';
+  const promo = feed.releases.filter(r => r.web === 'promotional-sample-only').length;
+  el('promoline').innerHTML = promo
+    ? `${promo} entries are 試し読み samples of printed volumes and are hidden by default — those `
+      + `series publish no web manga, so their samples are not releases. `
+      + `${feed.print_candidates.length} such volumes are listed under 候補 as catalogue candidates.`
+    : '';
   renderFeed(); renderCat(); renderQueue();
 }).catch(() => {
   el('fcount').textContent = 'データを読み込めません / could not load data';
