@@ -309,9 +309,9 @@ function renderFeed() {
     return true;
   });
 
-  el('fcount').textContent =
-    `${rows.length} 件 / shown` + (rows.length !== FEED.releases.length
-      ? `　(全 ${FEED.releases.length} 件 / of all)` : '');
+  el('fcount').textContent = rows.length === FEED.releases.length
+    ? `${rows.length} 件 / total`
+    : `${rows.length} 件 / shown　·　${FEED.releases.length} 件 / total`;
   el('fempty').hidden = rows.length > 0;
   el('feed').innerHTML = view === 'compact' ? compactList(rows) : detailList(rows);
 }
@@ -416,8 +416,9 @@ function renderCat() {
     return true;
   }).sort(by);
 
-  el('count').textContent = `${rows.length} 作品 / works`
-    + (rows.length !== INDEX.length ? ` (${INDEX.length} 中 / of)` : '');
+  el('count').textContent = rows.length === INDEX.length
+    ? `${rows.length} 作品 / total`
+    : `${rows.length} 作品 / shown　·　${INDEX.length} 作品 / total`;
   el('empty').hidden = rows.length > 0;
   el('list').innerHTML = rows.map(w => `
     <li data-id="${esc(w.id)}">
