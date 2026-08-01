@@ -116,6 +116,7 @@
       <option value="chapter">話 / chapters</option>
       <option value="oneshot">読み切り / one-shots</option>
       <option value="trial">試し読み / trials</option>
+      <option value="free">無料で読める / free to read</option>
     </select>
     <select id="fplat"><option value="">全プラットフォーム / all platforms</option></select>
   </div>
@@ -208,6 +209,7 @@ function renderFeed() {
     const pf = el('fplat').value;
     if (pf && (r.plat_name || r.plat) !== pf) return false;
     if (f === 'adv') return r.adv;
+    if (f === 'free') return r.free_from || (r.access_modes||[]).includes('free');
     if (f && f !== 'all') return r.type === f;
     return true;
   });
@@ -238,7 +240,10 @@ function renderFeed() {
         <a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">
           <span class="t">${esc(r.work)}</span>
           <span class="tag grey">${esc(TYPE_JA[r.type] || r.type)}</span>
-          ${r.free_from ? '<span class="tag">無料</span>' : ''}
+          ${r.free_from || (r.access_modes||[]).includes('free')
+              ? '<span class="tag">無料</span>' : ''}
+          ${(r.access_modes||[]).includes('purchase')
+              ? '<span class="tag grey" title="costs points on this platform">有料</span>' : ''}
           <div class="line2">
             <span class="ep">${esc(r.ep)}</span>
             <span class="meta">${esc(r.author || '')}</span>
