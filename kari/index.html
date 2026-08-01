@@ -78,8 +78,22 @@
      wrapped them into unindented lines that read as separate entries. */
   .crow{display:grid;grid-template-columns:auto 1fr;gap:.35rem;align-items:baseline;
     padding:.14rem 0;line-height:1.55}
+  /* One grid cell holding both parts. With .cmain and .cmeta as direct children of the row the
+     grid had three items against two columns, so the meta always wrapped to its own grid row —
+     stacked whether or not the title needed it. */
+  .ccell{min-width:0;overflow-wrap:anywhere}
+  .cmain,.cmeta{display:inline}
   .cmain{min-width:0;overflow-wrap:anywhere}
   .cmain > *{margin-right:.35rem}
+  .cmeta > *{margin-right:.35rem}
+  /* A source name is a name: breaking カドコミ across lines makes it unreadable. */
+  .cmeta .m{white-space:nowrap}
+  /* When the title has already wrapped, the source name and state badges trail off the end of the
+     last line and read as part of the title. Given the row costs a second line anyway, they are
+     better off owning it: `.stacked` is set by measurement after render, because whether a title
+     wraps depends on the text and the viewport and CSS alone cannot ask. */
+  .crow.stacked .cmeta{display:block;margin-top:.1rem}
+  .crow.stacked .cmeta > :first-child{margin-left:0}
   /* Wrapped rows need to be told apart from their neighbours once they are more than one line. */
   @media (max-width:34rem){
     .crow{padding:.3rem 0;border-bottom:1px dotted var(--line)}
@@ -303,6 +317,28 @@ function renderFeed() {
     : `${rows.length} 件 / shown　·　${FEED.releases.length} 件 / total`;
   el('fempty').hidden = rows.length > 0;
   el('feed').innerHTML = view === 'compact' ? compactList(rows) : detailList(rows);
+  if (view === 'compact') stackWrappedRows();
+}
+
+// An inline element reports one client rect per line box, so >1 means the title wrapped. All
+// measuring is done before any class is set: interleaving reads and writes would re-layout the
+// list on every row.
+function stackWrappedRows() {
+  const rows = [...document.querySelectorAll('#feed .crow')];
+  // Measure the whole cell, not just the title. 怪異部〜M県Y市の怪現象について〜 fits on one line
+  // and then pushes the source name onto the next, breaking it mid-word (カドコ / ミ) — the title
+  // had not wrapped but the row had, which is the case worth handling.
+  // Height against line-height, not client rects. .ccell is a GRID ITEM, so it is blockified and
+  // reports a single box however many lines it occupies — measuring its rects said "never wrapped"
+  // for rows that plainly had. Whether the title or the source name caused the wrap does not
+  // matter; the row costs two lines either way, so the source may as well own the second.
+  const wrapped = rows.filter(r => {
+    const c = r.querySelector('.ccell');
+    if (!c) return false;
+    const lh = parseFloat(getComputedStyle(c).lineHeight) || 20;
+    return c.offsetHeight > lh * 1.4;
+  });
+  for (const r of wrapped) r.classList.add('stacked');
 }
 
 const KIND = {
@@ -359,11 +395,11 @@ function compactList(rows) {
       const kinds = [...new Set(g.map(x => x.kind))];
       html += `<div class="crow">
         ${kindTag(lead)}
-        <span class="cmain">${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${esc(lead.work)}</a>`
+        <span class="ccell"><span class="cmain">${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${esc(lead.work)}</a>`
                    : `<span style="font-weight:600">${esc(lead.work)}</span>`}
         ${lead.title_unsplit ? '<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">作者未分離</span>' : ''}
         ${extra ? `<span class="m" title="${esc(kinds.map(k => (KIND[k] || KIND.unknown)[0]).join(' + '))}">他 ${extra} 件</span>` : ''}
-        <span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(lead.plat_name || lead.plat)}</span>
+        </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(lead.plat_name || lead.plat)}</span>
         ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">転載</span>` : ''}
         ${(el('fmodel').value === 'all' && lead.ahead_n)
           ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) published ahead of the free line, newest ${esc(lead.ahead_ep || '')} — readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}">有料先行 ${esc(lead.ahead_n)}</span>` : ''}
@@ -371,7 +407,7 @@ function compactList(rows) {
         ${lead.basis === 'heuristic' ? '<span class="k k-unk" title="the date was matched as a pattern in the platform\'s page, not stated by it">推定</span>' : ''}
         ${lead.provenance === 'claimed'
           ? `<span class="k k-claim" title="reported by ${esc(lead.claim_source || '')}; not confirmed against the platform">要確認</span>` : ''}
-        </span>
+        </span></span>
       </div>`;
     }
     html += '</div></div>';
