@@ -74,6 +74,7 @@
   .k-unk{background:transparent;color:var(--faint);border:1px solid var(--line)}
   .k-claim{background:var(--queue-bg);color:var(--queue-fg)}
   .k-free{background:var(--accent-bg);color:var(--accent)}
+  .k-newfree{background:var(--accent);color:var(--card);font-weight:600}
   .date-h{font-size:.78rem;color:var(--faint);font-weight:600;letter-spacing:.05em;
     padding:1rem 0 .3rem;border-bottom:1px solid var(--line)}
   .rel{padding:.6rem .2rem;border-bottom:1px solid var(--line)}
@@ -154,7 +155,8 @@
     <input type="search" id="fq" placeholder="検索 — 作品名・作者 / work, creator" autocomplete="off">
     <select id="fmodel" title="which updates count">
       <option value="all">すべての更新 / all updates</option>
-      <option value="free">無料の更新のみ / free updates only</option>
+      <option value="free">無料で読める更新 / free to read</option>
+      <option value="newly-free">無料化のみ / newly free only</option>
     </select>
     <select id="ftype">
       <option value="">すべての種類 / all kinds</option>
@@ -304,7 +306,10 @@ function renderFeed() {
       return false;
     // Two models of "update". Free includes rate-limited free and chapters that have flipped
     // out from behind a paywall, which is an update for a reader watching for free content.
+    // "Became free" is a different event from "is free": a chapter moving out from behind a
+    // paywall is news to a reader who has been waiting, where a normally-free release is not.
     if (model === 'free' && !r.free) return false;
+    if (model === 'newly-free' && !r.became_free) return false;
     if (f) return r.type === f;
     return true;
   });
@@ -365,7 +370,10 @@ function compactList(rows) {
                    : `<span style="font-weight:600">${esc(lead.work)}</span>`}
         ${extra ? `<span class="m" title="${esc(kinds.map(k => (KIND[k] || KIND.unknown)[0]).join(' + '))}">他 ${extra} 件</span>` : ''}
         <span class="m">${esc(lead.plat_name || lead.plat)}</span>
-        ${anyFree ? '<span class="k k-free">無料</span>' : ''}
+        ${g.some(x => x.became_free)
+          ? `<span class="k k-newfree" title="moved out from behind a paywall${
+              g.some(x => x.access_inferred) ? ' (inferred, not observed)' : ''}">無料化</span>`
+          : (anyFree ? '<span class="k k-free">無料</span>' : '')}
         ${lead.provenance === 'claimed'
           ? `<span class="k k-claim" title="reported by ${esc(lead.claim_source || '')}; not confirmed against the platform">要確認</span>` : ''}
       </div>`;
@@ -394,7 +402,8 @@ function detailList(rows) {
       <span class="t">${esc(r.work)}</span>
       ${kindTag(r)}
       <span class="tag grey">${esc(TYPE_JA[r.type] || r.type)}</span>
-      ${r.free ? '<span class="tag">無料</span>' : ''}
+      ${r.became_free ? `<span class="k k-newfree">無料化${r.access_inferred ? '?' : ''}</span>`
+        : (r.free ? '<span class="tag">無料</span>' : '')}
       ${(r.access_modes || []).includes('purchase') && !r.free ? '<span class="tag grey">有料</span>' : ''}
       ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
       <div class="line2">
