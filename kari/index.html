@@ -144,6 +144,8 @@
     <span class="k k-new">新連載</span> a first numbered chapter or a one-shot ·
     <span class="k k-ch">新話</span> a later numbered chapter ·
     <span class="k k-oth">その他</span> notice, trial or reprint ·
+    <span class="k k-unk">転載</span> a syndicated appearance rather than original web
+    publication — the work is published elsewhere and carried here ·
     <span class="k k-unk">—</span> a listing site reports an update but names no chapter, and the
     work is not tracked on a platform we reach — so we know something happened and nothing more.
     Every one of these is a 要確認 entry. Kinds are inferred from what we hold, not stated by the
@@ -368,8 +370,10 @@ function compactList(rows) {
         ${kindTag(lead)}
         ${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${esc(lead.work)}</a>`
                    : `<span style="font-weight:600">${esc(lead.work)}</span>`}
+        ${lead.title_unsplit ? '<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">作者未分離</span>' : ''}
         ${extra ? `<span class="m" title="${esc(kinds.map(k => (KIND[k] || KIND.unknown)[0]).join(' + '))}">他 ${extra} 件</span>` : ''}
-        <span class="m">${esc(lead.plat_name || lead.plat)}</span>
+        <span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(lead.plat_name || lead.plat)}</span>
+        ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">転載</span>` : ''}
         ${g.some(x => x.became_free)
           ? `<span class="k k-newfree" title="moved out from behind a paywall${
               g.some(x => x.access_inferred) ? ' (inferred, not observed)' : ''}">無料化</span>`
@@ -400,6 +404,7 @@ function detailList(rows) {
     }
     const inner = `
       <span class="t">${esc(r.work)}</span>
+      ${r.title_unsplit ? '<span class="tag q" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">作者未分離</span>' : ''}
       ${kindTag(r)}
       <span class="tag grey">${esc(TYPE_JA[r.type] || r.type)}</span>
       ${r.became_free ? `<span class="k k-newfree">無料化${r.access_inferred ? '?' : ''}</span>`
@@ -409,7 +414,8 @@ function detailList(rows) {
       <div class="line2">
         ${r.ep ? `<span class="ep">${esc(r.ep)}</span>` : ''}
         <span class="meta">${esc(r.author || '')}</span>
-        <span class="meta">· ${esc(r.plat_name || r.plat)}</span>
+        <span class="meta"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>· ${esc(r.plat_name || r.plat)}</span>
+        ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">転載</span>` : ''}
         ${(r.also_on && r.also_on.length) ? `<span class="meta">・他 ${esc(r.also_on.join('、'))}</span>` : ''}
         ${r.provenance === 'claimed'
           ? `<span class="tag q">${esc(r.claim_source || 'claim')} 報告 — 未確認</span>`
