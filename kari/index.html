@@ -69,6 +69,7 @@
   .k{font-size:.63rem;padding:.05rem .32rem;border-radius:3px;letter-spacing:.02em;
     white-space:nowrap;vertical-align:.08em}
   .k-new{background:var(--accent-bg);color:var(--accent)}
+  .k-fin{background:transparent;color:var(--warn-fg);border:1px solid var(--warn-fg);font-weight:600}
   .k-ch{background:var(--line);color:var(--dim)}
   .k-oth{background:var(--warn-bg);color:var(--warn-fg)}
   .k-unk{background:transparent;color:var(--faint);border:1px solid var(--line)}
@@ -324,6 +325,7 @@ function renderFeed() {
 }
 
 const KIND = {
+  'final':       ['最終回', 'k-fin', 'the series ends here'],
   'new-series':  ['新連載', 'k-new', 'first numbered chapter, or a one-shot'],
   'new-chapter': ['新話',   'k-ch',  'a later numbered chapter'],
   'other':       ['その他', 'k-oth', 'notice, trial, reprint or artwork'],
@@ -332,7 +334,13 @@ const KIND = {
 
 function kindTag(r) {
   const [label, cls, why] = KIND[r.kind] || KIND.unknown;
-  return `<span class="k ${cls}" title="${esc(why)}${r.kind_inferred ? ' (inferred)' : ''}">${label}</span>`;
+  // Every kind here is our inference rather than a publisher statement, so saying so on each tag
+  // adds nothing. What is worth flagging is the weaker route to 最終回: the series is marked 完結
+  // and this is simply the newest chapter we hold, rather than a title that says it is the last.
+  const q = r.kind === 'final' && r.final_inferred;
+  return `<span class="k ${cls}" title="${esc(why)}${
+    q ? ' — inferred: the series is marked 完結 and this is the newest chapter we hold, but no title states it is the last' : ''
+  }">${label}${q ? '?' : ''}</span>`;
 }
 
 function byDate(rows) {
@@ -348,7 +356,9 @@ function byDate(rows) {
 // A series dropping several instalments at once is one event to a reader, not N. Collapsed to a
 // single line with a count. Precedence: the start of a series outranks a further chapter, which
 // outranks a notice — so a new series arriving with several chapters still reads as 新連載.
-const KIND_RANK = { 'new-series': 3, 'new-chapter': 2, 'other': 1, 'unknown': 0 };
+// A series ending outranks everything: if a finale lands alongside other updates for the same
+// work, the ending is the fact the reader wants.
+const KIND_RANK = { 'final': 4, 'new-series': 3, 'new-chapter': 2, 'other': 1, 'unknown': 0 };
 
 function compactList(rows) {
   let html = '';
