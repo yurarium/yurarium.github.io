@@ -562,6 +562,9 @@ Promise.all([
   el('n-feed').textContent  = ser;
   el('n-cat').textContent   = idx.length;
   el('n-queue').textContent = nq;
+  // The queue is a worklist, not a section of the database. When every candidate has been
+  // confirmed there is nothing to show, and a tab offering an empty list is just a dead end.
+  document.querySelector('[data-tab="queue"]').hidden = nq === 0;
   const active = feed.platforms.filter(p =>
     feed.releases.some(r => (r.plat_name || r.plat) === p.name)).length;
   const att = feed.releases.filter(r => r.provenance === 'attested').length;
