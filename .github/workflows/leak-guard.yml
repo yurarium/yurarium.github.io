@@ -1,0 +1,31 @@
+name: leak-guard
+
+# Server-side, un-bypassable backstop for the local .githooks guard: needs no clone-time setup and runs on
+# every push. github.com has no pre-receive, so this detects right after the push (contained while private)
+# rather than blocking before it. The guard self-tests against a canary, so a broken run fails, not passes.
+on: [push, pull_request]
+
+jobs:
+  leak-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history — identity is checked over every commit
+
+      - name: Require the content-denylist secret (fail closed if unset)
+        env:
+          LEAK_DENY: ${{ secrets.LEAK_DENY }}
+        run: |
+          if [ -z "${LEAK_DENY}" ]; then
+            echo "::error::LEAK_DENY secret is not set — the content guard would be a no-op. Set it in repo secrets."
+            exit 1
+          fi
+
+      - name: Identity + content leak guard (self-testing)
+        env:
+          LEAK_DENY: ${{ secrets.LEAK_DENY }}
+        run: |
+          chmod +x .githooks/leak-guard.sh
+          .githooks/leak-guard.sh identity HEAD
+          .githooks/leak-guard.sh content tree

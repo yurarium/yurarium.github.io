@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Fail-closed leak guard (pre-push): the exposure moment. Every pushed commit's author + committer must be
+# the pseudonym, and the pushed tree content must be clean. Self-tests against a canary each run. See
+# README.md. (github.com has no server-side pre-receive; the CI workflow is the un-bypassable layer.)
+set -uo pipefail
+DIR="$(git rev-parse --show-toplevel)/.githooks"
+[ -f "$DIR/leak-deny.local" ] && export LEAK_DENY="$(cat "$DIR/leak-deny.local")"
+GUARD="$DIR/leak-guard.sh"
+ZERO='0000000000000000000000000000000000000000'
+while read -r _lref loid _rref roid; do
+  [ "$loid" = "$ZERO" ] && continue
+  if [ "$roid" = "$ZERO" ]; then range="$loid"; else range="$roid..$loid"; fi
+  "$GUARD" identity "$range" || exit $?
+done
+"$GUARD" content tree || exit $?

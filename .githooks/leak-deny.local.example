@@ -1,0 +1,10 @@
+# Local content denylist for the leak guard — FIXED strings, one per line, matched case-insensitively.
+# install.sh copies this to .githooks/leak-deny.local (gitignored). NEVER commit the populated file.
+#
+# Add the specific strings that must never appear in this public repo — the maintainer's real name and
+# email(s):
+#   Your Real Name
+#   your.real@email.example
+#
+# The pseudonym identity allowlist and generic path/tag shapes are enforced WITHOUT this file; this adds
+# only the specific real-identity strings the committed guard is deliberately kept from containing.

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Fail-closed leak guard (pre-commit): the about-to-author identity must be the pseudonym and the staged
+# content must be clean. The guard self-tests against a canary each run, so a broken guard blocks rather
+# than passing. Bypassable with --no-verify; the CI workflow is the server-side backstop. See README.md.
+set -uo pipefail
+DIR="$(git rev-parse --show-toplevel)/.githooks"
+[ -f "$DIR/leak-deny.local" ] && export LEAK_DENY="$(cat "$DIR/leak-deny.local")"
+"$DIR/leak-guard.sh" identity-config || exit $?
+"$DIR/leak-guard.sh" content staged  || exit $?

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Yurarium 仮</title>
+<style>
+  :root{
+    color-scheme: light dark;
+    --bg:#fbfaf9; --fg:#2a2725; --dim:#6b625c; --faint:#968d87;
+    --line:#e4dfda; --card:#fff; --accent:#8b5e83; --accent-bg:#f3ecf1;
+    --warn-bg:#f7f0e6; --warn-fg:#7a5c2e;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
+           --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
+           --warn-bg:#2c2416; --warn-fg:#c9a86a; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:15px/1.65 ui-sans-serif,system-ui,"Hiragino Sans","Noto Sans JP",sans-serif}
+  .wrap{max-width:64rem;margin:0 auto;padding:1.5rem 1.1rem 4rem}
+  header{border-bottom:1px solid var(--line);padding-bottom:1rem;margin-bottom:1.2rem}
+  h1{font-size:1.1rem;font-weight:600;margin:0 0 .2rem;letter-spacing:.02em}
+  .sub{color:var(--dim);font-size:.85rem;margin:0}
+  .note{background:var(--warn-bg);color:var(--warn-fg);border-radius:6px;
+    padding:.55rem .8rem;font-size:.82rem;margin:.9rem 0 0}
+  .controls{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center;margin-bottom:.9rem}
+  input[type=search],select{font:inherit;font-size:.88rem;padding:.42rem .6rem;
+    border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg)}
+  input[type=search]{flex:1 1 15rem;min-width:0}
+  .count{color:var(--dim);font-size:.83rem;margin-bottom:.7rem}
+  ol{list-style:none;margin:0;padding:0}
+  li{border-bottom:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;align-items:baseline;
+    padding:.62rem .2rem;cursor:pointer;background:none;border:0;width:100%;
+    text-align:left;font:inherit;color:inherit}
+  .row:hover{background:var(--accent-bg)}
+  .t{font-weight:600;font-size:.97rem}
+  .yomi{color:var(--faint);font-size:.76rem;margin-left:.5rem;font-weight:400}
+  .meta{color:var(--dim);font-size:.82rem}
+  .num{color:var(--dim);font-size:.8rem;white-space:nowrap;text-align:right}
+  .tag{display:inline-block;font-size:.68rem;padding:.08rem .4rem;border-radius:3px;
+    background:var(--accent-bg);color:var(--accent);vertical-align:.08em;margin-left:.4rem}
+  .tag.grey{background:var(--line);color:var(--dim)}
+  .detail{padding:.3rem .2rem 1.1rem;font-size:.86rem}
+  .detail h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--faint);margin:1rem 0 .35rem;font-weight:600}
+  .vols{width:100%;border-collapse:collapse;font-size:.82rem}
+  .vols th{text-align:left;color:var(--faint);font-weight:500;padding:.2rem .5rem .2rem 0}
+  .vols td{padding:.18rem .5rem .18rem 0;border-top:1px solid var(--line);
+    font-variant-numeric:tabular-nums}
+  .basis{background:var(--card);border:1px solid var(--line);border-radius:6px;
+    padding:.6rem .75rem;color:var(--dim);font-size:.82rem}
+  .basis a{color:var(--accent)}
+  .scroll{overflow-x:auto}
+  .empty{color:var(--dim);padding:2rem 0;text-align:center}
+  footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);
+    color:var(--faint);font-size:.78rem}
+  footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Yurarium <span class="tag">仮 / provisional</span></h1>
+  <p class="sub">百合姫コミックス — 一迅社 · <span id="hcount">…</span></p>
+  <div class="note" id="banner">
+    Development view. Classification is incomplete: every work here carries a publisher-side
+    <code>marketing_label</code> derived from its imprint, and none has yet been given a
+    <code>content_tier</code>, which requires human judgment.
+  </div>
+</header>
+
+<div class="controls">
+  <input type="search" id="q" placeholder="検索 — 題名・よみ・作者 / title, reading, creator" autocomplete="off">
+  <select id="sort">
+    <option value="date">刊行順 / by date</option>
+    <option value="date-desc">新しい順 / newest</option>
+    <option value="yomi">五十音順 / by reading</option>
+    <option value="vols">巻数順 / by volumes</option>
+  </select>
+  <select id="filter">
+    <option value="">すべて / all works</option>
+    <option value="multi">複数巻 / multi-volume</option>
+    <option value="single">単巻 / single volume</option>
+    <option value="unverified">要確認 / unverified grouping</option>
+  </select>
+</div>
+
+<p class="count" id="count"></p>
+<ol id="list"></ol>
+<p class="empty" id="empty" hidden>該当なし / no matches</p>
+
+<footer>
+  <p>Bibliographic facts from
+    <a href="https://mediaarts-db.artmuseums.go.jp/">文化庁メディア芸術データベース</a> (1.2.18)
+    and <a href="https://openbd.jp/">openBD</a>. Facts are not copyrightable; original
+    classifications and notes are CC0. No cover art, synopses or manga are hosted here.</p>
+</footer>
+</div>
+
+<script>
+const KANA_SHIFT = 0x60;
+const toKata = s => s.replace(/[ぁ-ゖ]/g, c => String.fromCharCode(c.charCodeAt(0) + KANA_SHIFT));
+const norm = s => toKata(String(s || '').normalize('NFKC').toLowerCase());
+
+let INDEX = [], DETAIL = null, open = null;
+
+const el = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function matches(w, q) {
+  if (!q) return true;
+  return norm(w.t).includes(q) || norm(w.y).includes(q) || norm(w.c).includes(q);
+}
+
+function passes(w, f) {
+  if (f === 'multi') return w.n > 1;
+  if (f === 'single') return w.n <= 1;
+  if (f === 'unverified') return w.g === 'title-only' || w.g === 'title-match' || w.g === 'mixed';
+  return true;
+}
+
+function sortWorks(a, mode) {
+  const by = {
+    'date': (x, y) => (x.d || '9999').localeCompare(y.d || '9999'),
+    'date-desc': (x, y) => (y.d || '').localeCompare(x.d || ''),
+    'yomi': (x, y) => (x.y || x.t).localeCompare(y.y || y.t, 'ja'),
+    'vols': (x, y) => y.n - x.n || (x.d || '').localeCompare(y.d || ''),
+  }[mode];
+  return a.slice().sort(by);
+}
+
+function render() {
+  const q = norm(el('q').value.trim());
+  const f = el('filter').value;
+  const rows = sortWorks(INDEX.filter(w => matches(w, q) && passes(w, f)), el('sort').value);
+
+  el('count').textContent =
+    `${rows.length} 作品 / works` + (rows.length !== INDEX.length ? ` (${INDEX.length} 中 / of)` : '');
+  el('empty').hidden = rows.length > 0;
+
+  el('list').innerHTML = rows.map(w => `
+    <li data-id="${esc(w.id)}">
+      <button class="row" aria-expanded="false">
+        <span>
+          <span class="t">${esc(w.t)}</span>${w.y ? `<span class="yomi">${esc(w.y)}</span>` : ''}
+          ${w.g && w.g !== 'series-link' ? `<span class="tag grey" title="grouping route">${esc(w.g)}</span>` : ''}
+          <br><span class="meta">${esc(w.c || '—')}</span>
+        </span>
+        <span class="num">${esc(w.d || '—')}<br>${w.n} 巻</span>
+      </button>
+    </li>`).join('');
+}
+
+async function detail(id, li) {
+  if (!DETAIL) DETAIL = fetch('data/works.json').then(r => r.json());
+  const data = await DETAIL;
+  const w = (data.works || []).find(x => x.work_id === id);
+  if (!w) return;
+
+  const vols = (w.volumes || []).map(v => `
+    <tr><td>${esc(v.number ?? '—')}</td><td>${esc(v.published ?? '—')}</td>
+    <td>${esc(v.isbn ?? '—')}</td><td>${v.openbd === 'present' ? 'openBD' : '—'}</td></tr>`).join('');
+
+  const b = w.marketing_label_basis || {};
+  const fp = w.first_publication || {};
+
+  li.querySelector('.detail')?.remove();
+  const d = document.createElement('div');
+  d.className = 'detail';
+  d.innerHTML = `
+    <h3>初出 / first known publication</h3>
+    <p>${esc(fp.date || '—')} · ${esc(fp.venue || '—')}
+       <span class="tag grey">${esc(fp.country || '')}</span>
+       <span class="tag grey">date via ${esc(fp.date_source || '?')}</span></p>
+    <p class="meta">${esc(fp.note || '')}</p>
+
+    <h3>巻 / volumes (${(w.volumes || []).length})</h3>
+    <div class="scroll"><table class="vols">
+      <tr><th>巻</th><th>刊行</th><th>ISBN</th><th>source</th></tr>${vols}
+    </table></div>
+
+    <h3>分類 / classification</h3>
+    <p><strong>marketing_label:</strong> ${esc(w.marketing_label || '—')} &nbsp;
+       <strong>content_tier:</strong> ${w.content_tier ? esc(w.content_tier) : '<em>未設定 / not yet assigned</em>'}</p>
+    <div class="basis">
+      <strong>根拠 / basis</strong> — ${esc(b.source || '?')}${b.retrieved ? `, retrieved ${esc(b.retrieved)}` : ''}<br>
+      ${esc(b.note || '')}
+      ${b.url ? `<br><a href="${esc(b.url)}" rel="noreferrer">${esc(b.url)}</a>` : ''}
+    </div>
+
+    <h3>出典 / sources</h3>
+    <p class="meta">${esc((w.sources || []).join(', '))} · grouping: ${esc(w.grouping || '?')}</p>`;
+  li.appendChild(d);
+}
+
+el('list').addEventListener('click', e => {
+  const btn = e.target.closest('.row');
+  if (!btn) return;
+  const li = btn.parentElement;
+  const isOpen = btn.getAttribute('aria-expanded') === 'true';
+  if (open && open !== btn) {
+    open.setAttribute('aria-expanded', 'false');
+    open.parentElement.querySelector('.detail')?.remove();
+  }
+  if (isOpen) {
+    btn.setAttribute('aria-expanded', 'false');
+    li.querySelector('.detail')?.remove();
+    open = null;
+  } else {
+    btn.setAttribute('aria-expanded', 'true');
+    open = btn;
+    detail(li.dataset.id, li);
+  }
+});
+
+['q', 'sort', 'filter'].forEach(id => el(id).addEventListener('input', render));
+
+fetch('data/index.json')
+  .then(r => r.json())
+  .then(d => {
+    INDEX = d;
+    el('hcount').textContent =
+      `${d.length} 作品 · ${d.reduce((n, w) => n + w.n, 0)} 巻`;
+    render();
+  })
+  .catch(() => { el('count').textContent = 'データを読み込めません / could not load data'; });
+</script>
+</body>
+</html>
