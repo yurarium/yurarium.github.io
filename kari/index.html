@@ -12,11 +12,16 @@
     --line:#e4dfda; --card:#fff; --accent:#8b5e83; --accent-bg:#f3ecf1;
     --warn-bg:#f7f0e6; --warn-fg:#7a5c2e; --queue-bg:#eef1f4; --queue-fg:#4a5a68;
   }
+  /* Dark applies from the system preference unless the reader has explicitly chosen light,
+     and from data-theme when they have explicitly chosen dark. */
   @media (prefers-color-scheme: dark){
-    :root{ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
+    :root:not([data-theme="light"]){ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
            --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
            --warn-bg:#2c2416; --warn-fg:#c9a86a; --queue-bg:#1c222a; --queue-fg:#8ea6b8; }
   }
+  :root[data-theme="dark"]{ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
+           --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
+           --warn-bg:#2c2416; --warn-fg:#c9a86a; --queue-bg:#1c222a; --queue-fg:#8ea6b8; }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--fg);
     font:15px/1.65 ui-sans-serif,system-ui,"Hiragino Sans","Noto Sans JP",sans-serif}
@@ -75,12 +80,23 @@
     color:var(--faint);font-size:.78rem}
   footer a{color:var(--accent)}
   [hidden]{display:none !important}
+  .themebox{float:right;display:inline-flex;gap:.15rem}
+  .themebtn{font:inherit;font-size:.72rem;padding:.12rem .45rem;cursor:pointer;
+    border:1px solid var(--line);background:var(--card);color:var(--dim);border-radius:4px}
+  .themebtn[aria-pressed=true]{background:var(--accent-bg);color:var(--accent);
+    border-color:var(--accent)}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <h1>Yurarium <span class="tag">仮 / provisional</span></h1>
+  <h1>Yurarium <span class="tag">仮 / provisional</span>
+    <span class="themebox">
+      <button class="themebtn" data-theme-set="auto"  title="follow system">自動</button>
+      <button class="themebtn" data-theme-set="light" title="light">明</button>
+      <button class="themebtn" data-theme-set="dark"  title="dark">暗</button>
+    </span>
+  </h1>
   <p class="sub" id="hstats">…</p>
 </header>
 
@@ -169,10 +185,58 @@
     and <a href="https://openbd.jp/">openBD</a>; release data from publishers' own feeds.
     Facts are not copyrightable; original classifications and notes are CC0. No cover art,
     synopses or manga are hosted here.</p>
+  <p>This site stores your display preferences — theme, tab and filters — in your own browser's
+    local storage, written only when you choose them. Nothing is transmitted and no cookies are
+    set. <button id="clearprefs" class="themebtn">設定を消去 / clear</button></p>
 </footer>
 </div>
 
 <script>
+/* Preference persistence (localStorage, never cookies).
+   Cookies are sent to the server on every request; localStorage never leaves the browser, so
+   nothing about the reader reaches GitHub or anyone else. Values are written only in response to
+   an explicit choice, and hold no identifier — see the note in the footer. */
+const PREF_THEME = 'yurarium.pref.theme';
+const PREF_VIEW  = 'yurarium.pref.view';
+
+function prefGet(key, fallback) {
+  try { const v = localStorage.getItem(key); return v === null ? fallback : JSON.parse(v); }
+  catch (e) { return fallback; }          // private mode or storage disabled
+}
+function prefSet(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* non-fatal */ }
+}
+
+function applyTheme(mode) {
+  if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', mode);
+  document.querySelectorAll('.themebtn[data-theme-set]').forEach(b =>
+    b.setAttribute('aria-pressed', String(b.dataset.themeSet === mode)));
+}
+applyTheme(prefGet(PREF_THEME, 'auto'));
+document.querySelectorAll('.themebtn[data-theme-set]').forEach(b =>
+  b.addEventListener('click', () => {
+    applyTheme(b.dataset.themeSet);
+    prefSet(PREF_THEME, b.dataset.themeSet);   // explicit action only
+  }));
+
+// Search text is deliberately NOT persisted — restoring a stale query on load is surprising.
+const VIEW_FIELDS = ['ftype', 'fplat', 'sort', 'filter'];
+function saveView() {
+  const v = { tab: document.querySelector('nav button[aria-selected=true]')?.dataset.tab };
+  VIEW_FIELDS.forEach(id => { const e = el(id); if (e) v[id] = e.value; });
+  prefSet(PREF_VIEW, v);
+}
+function restoreView() {
+  const v = prefGet(PREF_VIEW, null);
+  if (!v) return;
+  VIEW_FIELDS.forEach(id => {
+    const e = el(id);
+    if (e && v[id] != null && [...e.options].some(o => o.value === v[id])) e.value = v[id];
+  });
+  if (v.tab) document.querySelector(`nav button[data-tab="${v.tab}"]`)?.click();
+}
+
 const KANA = 0x60;
 const norm = s => String(s||'').normalize('NFKC').toLowerCase()
   .replace(/[ぁ-ゖ]/g, c => String.fromCharCode(c.charCodeAt(0)+KANA));
@@ -195,6 +259,7 @@ document.querySelectorAll('nav button').forEach(b => b.addEventListener('click',
   document.querySelectorAll('nav button').forEach(x =>
     x.setAttribute('aria-selected', String(x === b)));
   ['feed','cat','queue'].forEach(t => el('tab-'+t).hidden = (t !== b.dataset.tab));
+  saveView();
 }));
 
 /* ── feed ─────────────────────────────────────────────── */
@@ -366,6 +431,13 @@ function renderQueue() {
 
 ['fq','ftype','fplat'].forEach(i => el(i).addEventListener('input', renderFeed));
 ['q','sort','filter'].forEach(i => el(i).addEventListener('input', renderCat));
+// Persist only the durable controls, and only when the reader changes one.
+VIEW_FIELDS.forEach(i => el(i)?.addEventListener('change', saveView));
+el('clearprefs').addEventListener('click', () => {
+  try { localStorage.removeItem(PREF_THEME); localStorage.removeItem(PREF_VIEW); } catch (e) {}
+  applyTheme('auto');
+  location.reload();
+});
 
 Promise.all([
   fetch('data/index.json').then(r => r.json()),
@@ -401,6 +473,7 @@ Promise.all([
       + `series publish no web manga, so their samples are not releases. `
       + `${feed.print_candidates.length} such volumes are listed under 候補 as catalogue candidates.`
     : '';
+  restoreView();
   renderFeed(); renderCat(); renderQueue();
 }).catch(() => {
   el('fcount').textContent = 'データを読み込めません / could not load data';
