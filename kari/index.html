@@ -93,16 +93,17 @@
 <!-- ── FEED ───────────────────────────────────────────────────────── -->
 <section id="tab-feed">
   <div class="note">
-    Web chapter releases, taken from publishers' own Atom feeds. Coverage is
-    <strong id="cov"></strong> so far — one platform of ten confirmed, and the platforms that apply
-    no genre label are not represented here at all. This is not yet a complete picture of what is
-    being published.
+    Web chapter releases, taken from publishers' own Atom feeds. <strong id="cov"></strong>
+    Feeds are a rolling window of recent updates, so this shows what has appeared lately rather
+    than a catalogue.
     <br><br>
     <strong>Dates are the earlier of the platform's claim and when this database first saw the
     release, fixed at that point and never revised.</strong> These feeds carry only Atom
     <code>updated</code> — last-modified — and platforms rewrite it in bulk during refreshes and
     imports, so a later change is recorded but not followed. 初確認 marks a date inherited rather
     than observed; 日付要確認 marks a run whose timestamps look rewritten.
+    <br><br>
+    <strong id="provline"></strong>
     <br><br>
     <strong id="promoline"></strong>
   </div>
@@ -116,6 +117,7 @@
       <option value="oneshot">読み切り / one-shots</option>
       <option value="trial">試し読み / trials</option>
     </select>
+    <select id="fplat"><option value="">全プラットフォーム / all platforms</option></select>
   </div>
   <p class="count" id="fcount"></p>
   <div id="feed"></div>
@@ -203,6 +205,8 @@ function renderFeed() {
     // A series whose entire output is 試し読み is promoting a printed volume, not publishing web
     // manga. Excluded by default rather than deleted; reachable via the filter.
     if (f !== 'all' && r.web === 'promotional-sample-only') return false;
+    const pf = el('fplat').value;
+    if (pf && (r.plat_name || r.plat) !== pf) return false;
     if (f === 'adv') return r.adv;
     if (f && f !== 'all') return r.type === f;
     return true;
@@ -239,6 +243,11 @@ function renderFeed() {
             <span class="ep">${esc(r.ep)}</span>
             <span class="meta">${esc(r.author || '')}</span>
             <span class="meta">· ${esc(r.plat_name || r.plat)}</span>
+            ${(r.also_on && r.also_on.length)
+              ? `<span class="meta">・他 ${esc(r.also_on.join('、'))}</span>` : ''}
+            ${r.ident === 'discovery-candidate'
+              ? '<span class="tag q" title="named by a Tier C listing, attested by the platform\u0027s own feed">要分類</span>'
+              : ''}
           </div>
           ${r.basis === 'bootstrap' || r.moved ? `<div class="datewarn">${
             r.moved ? `⚠ source date changed (${esc(r.moved)}) — earliest kept · ` : ''
@@ -350,7 +359,7 @@ function renderQueue() {
     </li>`).join('');
 }
 
-['fq','ftype'].forEach(i => el(i).addEventListener('input', renderFeed));
+['fq','ftype','fplat'].forEach(i => el(i).addEventListener('input', renderFeed));
 ['q','sort','filter'].forEach(i => el(i).addEventListener('input', renderCat));
 
 Promise.all([
@@ -365,8 +374,22 @@ Promise.all([
   el('n-feed').textContent  = ser;
   el('n-cat').textContent   = idx.length;
   el('n-queue').textContent = nq;
-  el('cov').textContent = feed.platforms
-    .map(p => `${p.name} (${p.series} series)`).join(', ') || 'none';
+  const active = feed.platforms.filter(p =>
+    feed.releases.some(r => (r.plat_name || r.plat) === p.name)).length;
+  el('cov').innerHTML =
+    `Watching <strong>${feed.platforms.length}</strong> platforms, `
+    + `<strong>${active}</strong> with releases in the current window. `
+    + `Coverage against Web漫画アンテナ's 百合 tag is <strong>53.6%</strong> of 1,203 works, `
+    + `so this is not yet a complete picture of what is being published.`;
+  const plats = [...new Set(feed.releases.map(r => r.plat_name || r.plat))].sort();
+  el('fplat').insertAdjacentHTML('beforeend',
+    plats.map(p => `<option value="${p}">${p}</option>`).join(''));
+  const prov = feed.releases.filter(r => r.ident === 'discovery-candidate').length;
+  el('provline').innerHTML = prov
+    ? `${prov} entries were found by a listing site naming the work and then attested by the `
+      + `platform's own feed. Those platforms apply no genre label, so the works carry no `
+      + `<code>marketing_label</code> and are marked 要分類 — they need a human classification.`
+    : '';
   const promo = feed.releases.filter(r => r.web === 'promotional-sample-only').length;
   el('promoline').innerHTML = promo
     ? `${promo} entries are 試し読み samples of printed volumes and are hidden by default — those `
