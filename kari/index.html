@@ -98,16 +98,11 @@
     no genre label are not represented here at all. This is not yet a complete picture of what is
     being published.
     <br><br>
-    <strong>Dates are the platform's, and are not reliable.</strong> These feeds carry Atom
-    <code>updated</code> — last-modified — and no publication date at all. Sites mass-update it
-    during metadata refreshes and when importing an existing series, which collapses a whole run
-    onto one instant. Runs flagged <em>日付要確認</em> show that signature.
-    <br><br>
-    Dates here are <strong>locked at first sight and never revised</strong>: the earliest evidence
-    held when a release was first seen. A later mass-update at the source is recorded as divergence
-    and not followed. This is mostly a first-import problem — everything present when tracking
-    began carries an inherited date (初確認 marks it), and it resolves as releases are watched
-    appearing rather than found already there.
+    <strong>Dates are the earlier of the platform's claim and when this database first saw the
+    release, fixed at that point and never revised.</strong> These feeds carry only Atom
+    <code>updated</code> — last-modified — and platforms rewrite it in bulk during refreshes and
+    imports, so a later change is recorded but not followed. 初確認 marks a date inherited rather
+    than observed; 日付要確認 marks a run whose timestamps look rewritten.
     <br><br>
     <strong id="promoline"></strong>
   </div>
@@ -229,12 +224,9 @@ function renderFeed() {
       html += `<div class="date-h">${esc(d)}${low.length
         ? ' <span class="tag warn">日付要確認</span>' : ''}</div>`;
       if (low.length) {
-        const boot = low.filter(x => x.basis === 'bootstrap').length;
-        html += `<div class="datewarn" style="padding:.35rem 0 .1rem">⚠ ${low.length}
-          releases across ${works.size} work${works.size > 1 ? 's' : ''} share this exact
-          timestamp — consistent with a metadata refresh or a series import rather than same-day
-          publication.${boot ? ` ${boot} of these were already present when tracking began, so the
-          date is the platform's with nothing observed behind it.` : ''}</div>`;
+        html += `<div class="datewarn" style="padding:.3rem 0 .1rem">${low.length} releases
+          across ${works.size} work${works.size > 1 ? 's' : ''} share this exact timestamp —
+          likely a refresh or import rather than same-day publication.</div>`;
       }
     }
     html += `
