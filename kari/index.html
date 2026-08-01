@@ -375,6 +375,7 @@ function compactList(rows) {
         ${(el('fmodel').value === 'all' && lead.ahead_n)
           ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) published ahead of the free line, newest ${esc(lead.ahead_ep || '')} — readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}">有料先行 ${esc(lead.ahead_n)}</span>` : ''}
         ${anyFree ? '<span class="k k-free">無料</span>' : ''}
+        ${lead.basis === 'heuristic' ? '<span class="k k-unk" title="the date was matched as a pattern in the platform\'s page, not stated by it">推定</span>' : ''}
         ${lead.provenance === 'claimed'
           ? `<span class="k k-claim" title="reported by ${esc(lead.claim_source || '')}; not confirmed against the platform">要確認</span>` : ''}
         </span>
@@ -419,6 +420,7 @@ function detailList(rows) {
           ? `<span class="tag q">${esc(r.claim_source || 'claim')} 報告 — 未確認</span>`
           : (r.ident === 'discovery-candidate' ? '<span class="tag q">要分類</span>' : '')}
       </div>
+      ${r.basis === 'heuristic' ? `<div class="datewarn">⚠ 推定 — the date was matched as a pattern in the platform's page, not stated by it</div>` : ''}
       ${r.basis === 'bootstrap' || r.moved ? `<div class="datewarn">${
         r.moved ? `⚠ source date changed (${esc(r.moved)}) — earliest kept · ` : ''
         }初確認 ${esc(r.seen)}</div>` : ''}`;
