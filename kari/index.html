@@ -30,6 +30,10 @@
   .sub{color:var(--dim);font-size:.85rem;margin:0}
   .note{background:var(--warn-bg);color:var(--warn-fg);border-radius:6px;
     padding:.55rem .8rem;font-size:.82rem;margin:.9rem 0 0}
+  /* The notes ran to more than a full screen on a phone, so the feed began below the fold.
+     Collapsed by default; the coverage line above it stays visible. */
+  .legend summary{cursor:pointer;margin-top:.5rem;font-weight:600;opacity:.85}
+  .legend[open] summary{margin-bottom:.5rem}
   nav{display:flex;gap:.3rem;border-bottom:1px solid var(--line);margin:1.1rem 0 1.1rem}
   nav button{font:inherit;font-size:.88rem;background:none;border:0;border-bottom:2px solid transparent;
     padding:.5rem .8rem;color:var(--dim);cursor:pointer;margin-bottom:-1px}
@@ -61,6 +65,12 @@
     border-top:1px solid var(--line);padding:.5rem 0}
   .cday-d{font-size:.78rem;color:var(--faint);font-weight:600;padding-top:.15rem;
     font-variant-numeric:tabular-nums}
+  /* On a narrow screen a fixed date column costs ~25% of the width for two digits and a slash,
+     and titles are what the space is for. Below 34rem the date becomes its own line instead. */
+  @media (max-width:34rem){
+    .cday{grid-template-columns:1fr;gap:.15rem}
+    .cday-d{padding-top:0}
+  }
   .cday-l{min-width:0}
   .crow{display:flex;flex-wrap:wrap;gap:.35rem;align-items:baseline;padding:.14rem 0;line-height:1.5}
   .crow a{color:inherit;text-decoration:none;font-weight:600;font-size:.92rem}
@@ -119,6 +129,7 @@
     </span>
   </h1>
   <p class="sub" id="hstats">…</p>
+  <p class="sub" id="hcov" style="font-size:.8rem"></p>
 </header>
 
 <nav role="tablist">
@@ -129,39 +140,7 @@
 
 <!-- ── FEED ───────────────────────────────────────────────────────── -->
 <section id="tab-feed">
-  <div class="note">
-    Updates to yuri web manga, newest first. <strong id="cov"></strong>
-    <br><br>
-    <strong>Two kinds of entry.</strong> Most come from a publisher's own feed or work pages and
-    are confirmed. Those marked <span class="k k-claim">要確認</span> are reported by
-    Web漫画アンテナ or 百合ナビ and <em>not</em> confirmed against the platform — taken as
-    provisionally true that something updated, on the date claimed. They carry no classification
-    and establish nothing beyond that.
-    <br><br>
-    <strong>Two models of "update".</strong> <em>All</em> counts every update including
-    paid-only chapters. <em>Free</em> counts what can be read without paying right now —
-    including rate-limited free (one chapter a day with an account) and chapters that have moved
-    out from behind a paywall. A chapter that has just become free and one that was always free
-    are the same thing when the question is what is newest that you can read, so they carry the
-    same <span class="k k-free">無料</span>.
-    <br><br>
-    On COMIC FUZ the dates are the free schedule rather than publication: chapters are published
-    paid and each date is when one stops costing points. Where a work has chapters running ahead
-    of that line, <span class="k k-adv">有料先行</span> says how many and when the next becomes
-    free.
-    <br><br>
-    <span class="k k-new">新連載</span> a first numbered chapter or a one-shot ·
-    <span class="k k-ch">新話</span> a later numbered chapter ·
-    <span class="k k-oth">その他</span> notice, trial or reprint ·
-    <span class="k k-unk">転載</span> a syndicated appearance rather than original web
-    publication — the work is published elsewhere and carried here ·
-    <span class="k k-unk">—</span> a listing site reports an update but names no chapter, and the
-    work is not tracked on a platform we reach — so we know something happened and nothing more.
-    Every one of these is a 要確認 entry. Kinds are inferred from what we hold, not stated by the
-    publisher; 新連載 means first seen here.
-    <br><br>
-    <strong id="provline"></strong>
-  </div>
+  
   <div class="controls" style="margin-top:.9rem">
     <input type="search" id="fq" placeholder="検索 — 作品名・作者 / work, creator" autocomplete="off">
     <select id="fmodel" title="which updates count">
@@ -187,10 +166,7 @@
 
 <!-- ── CATALOGUE ──────────────────────────────────────────────────── -->
 <section id="tab-cat" hidden>
-  <div class="note">
-    百合姫コミックス (一迅社). Every work carries a publisher-side <code>marketing_label</code> from
-    its imprint; none has a <code>content_tier</code> yet, which needs human judgment.
-  </div>
+  
   <div class="controls" style="margin-top:.9rem">
     <input type="search" id="q" placeholder="検索 — 題名・よみ・作者 / title, reading, creator" autocomplete="off">
     <select id="sort">
@@ -214,13 +190,7 @@
 
 <!-- ── QUEUE ──────────────────────────────────────────────────────── -->
 <section id="tab-queue" hidden>
-  <div class="note">
-    <strong>Candidates, not records.</strong> Works named in Japanese editorial coverage
-    (百合ナビ) that have not been confirmed against a publisher. Nothing here is in the database.
-    This queue exists because publisher labelling has a structural bias: many works, including
-    large ones, carry no 百合 label for audience-targeting or house-policy reasons, so
-    label-based discovery alone would silently omit them.
-  </div>
+  
   <ul class="plain" id="queue" style="margin-top:.9rem"></ul>
 </section>
 
@@ -581,19 +551,12 @@ Promise.all([
     feed.releases.some(r => (r.plat_name || r.plat) === p.name)).length;
   const att = feed.releases.filter(r => r.provenance === 'attested').length;
   const clm = feed.releases.length - att;
-  el('cov').innerHTML =
-    `<strong>${att}</strong> confirmed from publishers and <strong>${clm}</strong> reported by the `
-    + `listing sites but unconfirmed, across <strong>${feed.platforms.length}</strong> watched `
-    + `platforms. Coverage against Web漫画アンテナ's 百合 tag is <strong>74.4%</strong> of 1,203 works.`;
+  // The counts belong in the header line, not in a paragraph explaining the project to itself.
+  el('hcov').textContent = `${att} 確認済 / confirmed · ${clm} 未確認 / reported`;
   const plats = [...new Set(feed.releases.map(r => r.plat_name || r.plat))].sort();
   el('fplat').insertAdjacentHTML('beforeend',
     plats.map(p => `<option value="${p}">${p}</option>`).join(''));
-  const prov = feed.releases.filter(r => r.ident === 'discovery-candidate').length;
-  el('provline').innerHTML = prov
-    ? `${prov} entries were found by a listing site naming the work and then confirmed by the `
-      + `platform itself. Those platforms apply no genre label, so the works carry no `
-      + `<code>marketing_label</code> and are marked 要分類 — they need a human classification.`
-    : '';
+
 
   restoreView();
   renderFeed(); renderCat(); renderQueue();
