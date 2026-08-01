@@ -363,7 +363,9 @@ function kindTag(r) {
 function byDate(rows) {
   const days = new Map();
   for (const r of rows) {
-    const d = (r.pub || '').slice(0, 10);
+    // feed_date, not pub: a late discovery is news today and carries its real
+    // publication date as a badge rather than being filed months back.
+    const d = (r.feed_date || r.pub || '').slice(0, 10);
     if (!days.has(d)) days.set(d, []);
     days.get(d).push(r);
   }
@@ -397,6 +399,7 @@ function compactList(rows) {
         ${kindTag(lead)}
         <span class="ccell"><span class="cmain">${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${esc(lead.work)}</a>`
                    : `<span style="font-weight:600">${esc(lead.work)}</span>`}
+        ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">既出 ${esc((lead.pub || '').slice(5))}</span>` : ''}
         ${lead.title_unsplit ? '<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">作者未分離</span>' : ''}
         ${extra ? `<span class="m" title="${esc(kinds.map(k => (KIND[k] || KIND.unknown)[0]).join(' + '))}">他 ${extra} 件</span>` : ''}
         </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(lead.plat_name || lead.plat)}</span>
@@ -418,7 +421,9 @@ function compactList(rows) {
 function detailList(rows) {
   let html = '', day = null;
   for (const r of rows) {
-    const d = (r.pub || '').slice(0, 10);
+    // feed_date, not pub: a late discovery is news today and carries its real
+    // publication date as a badge rather than being filed months back.
+    const d = (r.feed_date || r.pub || '').slice(0, 10);
     if (d !== day) {
       day = d;
       const low = rows.filter(x => (x.pub || '').slice(0, 10) === d && x.conf === 'low');
@@ -432,6 +437,7 @@ function detailList(rows) {
     }
     const inner = `
       <span class="t">${esc(r.work)}</span>
+      ${r.late_discovered ? `<span class="tag warn" title="we only learned of it on ${esc(r.feed_date)}">既出 — 公開 ${esc(r.pub)}</span>` : ''}
       ${r.title_unsplit ? '<span class="tag q" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">作者未分離</span>' : ''}
       ${kindTag(r)}
       <span class="tag grey">${esc(TYPE_JA[r.type] || r.type)}</span>
