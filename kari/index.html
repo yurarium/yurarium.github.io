@@ -49,6 +49,8 @@
     background:var(--accent-bg);color:var(--accent);vertical-align:.08em;margin-left:.4rem}
   .tag.grey{background:var(--line);color:var(--dim)}
   .tag.q{background:var(--queue-bg);color:var(--queue-fg)}
+  .tag.warn{background:var(--warn-bg);color:var(--warn-fg)}
+  .datewarn{color:var(--warn-fg);font-size:.75rem;margin-top:.2rem;line-height:1.45}
   .date-h{font-size:.78rem;color:var(--faint);font-weight:600;letter-spacing:.05em;
     padding:1rem 0 .3rem;border-bottom:1px solid var(--line)}
   .rel{padding:.6rem .2rem;border-bottom:1px solid var(--line)}
@@ -95,6 +97,17 @@
     <strong id="cov"></strong> so far — one platform of ten confirmed, and the platforms that apply
     no genre label are not represented here at all. This is not yet a complete picture of what is
     being published.
+    <br><br>
+    <strong>Dates are the platform's, and are not reliable.</strong> These feeds carry Atom
+    <code>updated</code> — last-modified — and no publication date at all. Sites mass-update it
+    during metadata refreshes and when importing an existing series, which collapses a whole run
+    onto one instant. Runs flagged <em>日付要確認</em> show that signature.
+    <br><br>
+    Dates here are <strong>locked at first sight and never revised</strong>: the earliest evidence
+    held when a release was first seen. A later mass-update at the source is recorded as divergence
+    and not followed. This is mostly a first-import problem — everything present when tracking
+    began carries an inherited date (初確認 marks it), and it resolves as releases are watched
+    appearing rather than found already there.
   </div>
   <div class="controls" style="margin-top:.9rem">
     <input type="search" id="fq" placeholder="検索 — 作品名・作者 / work, creator" autocomplete="off">
@@ -201,7 +214,23 @@ function renderFeed() {
   let html = '', day = null;
   for (const r of rows) {
     const d = (r.pub || '').slice(0, 10);
-    if (d !== day) { day = d; html += `<div class="date-h">${esc(d)}</div>`; }
+    if (d !== day) {
+      day = d;
+      // The heading carries the platform's own date. Where a bulk-update signature is present,
+      // explain it once for the whole group rather than on every row.
+      const low = rows.filter(x => (x.pub || '').slice(0, 10) === d && x.conf === 'low');
+      const works = new Set(low.map(x => x.work));
+      html += `<div class="date-h">${esc(d)}${low.length
+        ? ' <span class="tag warn">日付要確認</span>' : ''}</div>`;
+      if (low.length) {
+        const boot = low.filter(x => x.basis === 'bootstrap').length;
+        html += `<div class="datewarn" style="padding:.35rem 0 .1rem">⚠ ${low.length}
+          releases across ${works.size} work${works.size > 1 ? 's' : ''} share this exact
+          timestamp — consistent with a metadata refresh or a series import rather than same-day
+          publication.${boot ? ` ${boot} of these were already present when tracking began, so the
+          date is the platform's with nothing observed behind it.` : ''}</div>`;
+      }
+    }
     html += `
       <div class="rel${NON_STORY.has(r.type) ? ' quiet' : ''}">
         <a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">
@@ -213,6 +242,9 @@ function renderFeed() {
             <span class="meta">${esc(r.author || '')}</span>
             <span class="meta">· ${esc(r.plat_name || r.plat)}</span>
           </div>
+          ${r.basis === 'bootstrap' || r.moved ? `<div class="datewarn">${
+            r.moved ? `⚠ source date changed (${esc(r.moved)}) — earliest kept · ` : ''
+            }初確認 ${esc(r.seen)}</div>` : ''}
         </a>
       </div>`;
   }
