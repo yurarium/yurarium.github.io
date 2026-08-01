@@ -106,6 +106,7 @@
     white-space:nowrap;vertical-align:.08em}
   .k-new{background:var(--accent-bg);color:var(--accent)}
   .k-fin{background:var(--queue-bg);color:var(--queue-fg)}
+  .k-one{background:var(--accent-bg);color:var(--accent);font-weight:600}
   .k-ch{background:var(--line);color:var(--dim)}
   .k-oth{background:var(--warn-bg);color:var(--warn-fg)}
   .k-unk{background:transparent;color:var(--faint);border:1px solid var(--line)}
@@ -342,6 +343,7 @@ function stackWrappedRows() {
 }
 
 const KIND = {
+  'oneshot':     ['読切',   'k-one', 'complete in one instalment'],
   'final':       ['最終回', 'k-fin', 'the series ends here'],
   'new-series':  ['新連載', 'k-new', 'first numbered chapter, or a one-shot'],
   'new-chapter': ['新話',   'k-ch',  'a later numbered chapter'],
@@ -377,7 +379,7 @@ function byDate(rows) {
 // outranks a notice — so a new series arriving with several chapters still reads as 新連載.
 // An ending outranks an ordinary chapter but not a new series: a series starting is the thing a
 // reader most wants surfaced, and a finale should not be shouting over it.
-const KIND_RANK = { 'new-series': 4, 'final': 3, 'new-chapter': 2, 'other': 1, 'unknown': 0 };
+const KIND_RANK = { 'new-series': 4, 'oneshot': 4, 'final': 3, 'new-chapter': 2, 'other': 1, 'unknown': 0 };
 
 function compactList(rows) {
   let html = '';
