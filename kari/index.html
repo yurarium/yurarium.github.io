@@ -69,13 +69,14 @@
   .k{font-size:.63rem;padding:.05rem .32rem;border-radius:3px;letter-spacing:.02em;
     white-space:nowrap;vertical-align:.08em}
   .k-new{background:var(--accent-bg);color:var(--accent)}
-  .k-fin{background:transparent;color:var(--warn-fg);border:1px solid var(--warn-fg);font-weight:600}
+  .k-fin{background:var(--queue-bg);color:var(--queue-fg)}
   .k-ch{background:var(--line);color:var(--dim)}
   .k-oth{background:var(--warn-bg);color:var(--warn-fg)}
   .k-unk{background:transparent;color:var(--faint);border:1px solid var(--line)}
   .k-claim{background:var(--queue-bg);color:var(--queue-fg)}
   .k-free{background:var(--accent-bg);color:var(--accent)}
   .k-newfree{background:var(--accent);color:var(--card);font-weight:600}
+  .k-adv{background:var(--warn-bg);color:var(--warn-fg);font-weight:600}
   .date-h{font-size:.78rem;color:var(--faint);font-weight:600;letter-spacing:.05em;
     padding:1rem 0 .3rem;border-bottom:1px solid var(--line)}
   .rel{padding:.6rem .2rem;border-bottom:1px solid var(--line)}
@@ -138,9 +139,16 @@
     and establish nothing beyond that.
     <br><br>
     <strong>Two models of "update".</strong> <em>All</em> counts every update including
-    paid-only chapters. <em>Free</em> counts only what can be read without paying — including
-    rate-limited free (one chapter a day with an account) and chapters that have moved out from
-    behind a paywall, which is an update if free reading is what you are watching for.
+    paid-only chapters. <em>Free</em> counts what can be read without paying right now —
+    including rate-limited free (one chapter a day with an account) and chapters that have moved
+    out from behind a paywall. A chapter that has just become free and one that was always free
+    are the same thing when the question is what is newest that you can read, so they carry the
+    same <span class="k k-free">無料</span>.
+    <br><br>
+    On COMIC FUZ the dates are the free schedule rather than publication: chapters are published
+    paid and each date is when one stops costing points. Where a work has chapters running ahead
+    of that line, <span class="k k-adv">有料先行</span> says how many and when the next becomes
+    free.
     <br><br>
     <span class="k k-new">新連載</span> a first numbered chapter or a one-shot ·
     <span class="k k-ch">新話</span> a later numbered chapter ·
@@ -159,7 +167,6 @@
     <select id="fmodel" title="which updates count">
       <option value="all">すべての更新 / all updates</option>
       <option value="free">無料で読める更新 / free to read</option>
-      <option value="newly-free">無料化のみ / newly free only</option>
     </select>
     <select id="ftype">
       <option value="">すべての種類 / all kinds</option>
@@ -312,7 +319,6 @@ function renderFeed() {
     // "Became free" is a different event from "is free": a chapter moving out from behind a
     // paywall is news to a reader who has been waiting, where a normally-free release is not.
     if (model === 'free' && !r.free) return false;
-    if (model === 'newly-free' && !r.became_free) return false;
     if (f) return r.type === f;
     return true;
   });
@@ -356,9 +362,9 @@ function byDate(rows) {
 // A series dropping several instalments at once is one event to a reader, not N. Collapsed to a
 // single line with a count. Precedence: the start of a series outranks a further chapter, which
 // outranks a notice — so a new series arriving with several chapters still reads as 新連載.
-// A series ending outranks everything: if a finale lands alongside other updates for the same
-// work, the ending is the fact the reader wants.
-const KIND_RANK = { 'final': 4, 'new-series': 3, 'new-chapter': 2, 'other': 1, 'unknown': 0 };
+// An ending outranks an ordinary chapter but not a new series: a series starting is the thing a
+// reader most wants surfaced, and a finale should not be shouting over it.
+const KIND_RANK = { 'new-series': 4, 'final': 3, 'new-chapter': 2, 'other': 1, 'unknown': 0 };
 
 function compactList(rows) {
   let html = '';
@@ -384,10 +390,9 @@ function compactList(rows) {
         ${extra ? `<span class="m" title="${esc(kinds.map(k => (KIND[k] || KIND.unknown)[0]).join(' + '))}">他 ${extra} 件</span>` : ''}
         <span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(lead.plat_name || lead.plat)}</span>
         ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">転載</span>` : ''}
-        ${g.some(x => x.became_free)
-          ? `<span class="k k-newfree" title="moved out from behind a paywall${
-              g.some(x => x.access_inferred) ? ' (inferred, not observed)' : ''}">無料化</span>`
-          : (anyFree ? '<span class="k k-free">無料</span>' : '')}
+        ${(el('fmodel').value === 'all' && lead.ahead_n)
+          ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) published ahead of the free line, newest ${esc(lead.ahead_ep || '')} — readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}">有料先行 ${esc(lead.ahead_n)}</span>` : ''}
+        ${anyFree ? '<span class="k k-free">無料</span>' : ''}
         ${lead.provenance === 'claimed'
           ? `<span class="k k-claim" title="reported by ${esc(lead.claim_source || '')}; not confirmed against the platform">要確認</span>` : ''}
       </div>`;
@@ -417,8 +422,8 @@ function detailList(rows) {
       ${r.title_unsplit ? '<span class="tag q" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">作者未分離</span>' : ''}
       ${kindTag(r)}
       <span class="tag grey">${esc(TYPE_JA[r.type] || r.type)}</span>
-      ${r.became_free ? `<span class="k k-newfree">無料化${r.access_inferred ? '?' : ''}</span>`
-        : (r.free ? '<span class="tag">無料</span>' : '')}
+      ${r.free ? '<span class="tag">無料</span>' : ''}
+      ${r.ahead_n ? `<span class="tag warn" title="readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">有料先行 ${esc(r.ahead_n)}（最新 ${esc(r.ahead_ep || '')}）</span>` : ''}
       ${(r.access_modes || []).includes('purchase') && !r.free ? '<span class="tag grey">有料</span>' : ''}
       ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
       <div class="line2">
