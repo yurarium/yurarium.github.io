@@ -147,7 +147,6 @@
 <nav role="tablist">
   <button role="tab" aria-selected="true"  data-tab="feed">更新 <span class="n" id="n-feed"></span></button>
   <button role="tab" aria-selected="false" data-tab="cat">単行本 <span class="n" id="n-cat"></span></button>
-  <button role="tab" aria-selected="false" data-tab="queue">候補 <span class="n" id="n-queue"></span></button>
 </nav>
 
 <!-- ── FEED ───────────────────────────────────────────────────────── -->
@@ -198,12 +197,6 @@
   <p class="count" id="count"></p>
   <ol id="list"></ol>
   <p class="empty" id="empty" hidden>該当なし / no matches</p>
-</section>
-
-<!-- ── QUEUE ──────────────────────────────────────────────────────── -->
-<section id="tab-queue" hidden>
-  
-  <ul class="plain" id="queue" style="margin-top:.9rem"></ul>
 </section>
 
 <footer>
@@ -285,7 +278,7 @@ const NON_STORY = new Set(['trial', 'notice', 'apology-art', 'republication']);
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('nav button').forEach(x =>
     x.setAttribute('aria-selected', String(x === b)));
-  ['feed','cat','queue'].forEach(t => el('tab-'+t).hidden = (t !== b.dataset.tab));
+  ['feed','cat'].forEach(t => el('tab-'+t).hidden = (t !== b.dataset.tab));
   saveView();
 }));
 
@@ -509,30 +502,6 @@ el('list').addEventListener('click', e => {
   else { open = btn; detail(li.dataset.id, li); }
 });
 
-/* ── queue ────────────────────────────────────────────── */
-function renderQueue() {
-  const pc = (FEED.print_candidates || []).map(c => `
-    <li style="padding:.6rem .2rem">
-      <span class="t">${esc(c.work_title)}</span>
-      <span class="tag q">print (試し読み)</span>
-      <span class="tag grey">${esc(c.status)}</span>
-      <div class="meta" style="margin-top:.15rem">${esc(c.author || '')} · ${esc(c.label || '')}
-        · ${c.sample_count} samples on ${esc(c.platform)}</div>
-      <div class="meta"><a href="${esc(c.sample_url)}" target="_blank"
-        rel="noopener noreferrer nofollow" style="color:var(--accent)">sample</a></div>
-    </li>`).join('');
-  el('queue').innerHTML = pc + FEED.queue.map(c => `
-    <li style="padding:.6rem .2rem">
-      <span class="t">${esc(c.work)}</span>
-      <span class="tag q">${esc(c.signal)}</span>
-      <span class="tag grey">${esc(c.status)}</span>
-      <div class="meta" style="margin-top:.15rem">${esc(c.headline)}</div>
-      <div class="meta"><a href="${esc(c.url)}" target="_blank"
-        rel="noopener noreferrer nofollow" style="color:var(--accent)">${esc(c.source)}</a>
-        · ${esc((c.announced || '').slice(0, 16))}</div>
-    </li>`).join('');
-}
-
 ['fq','ftype','fplat','fmodel','fview'].forEach(i => el(i).addEventListener('input', renderFeed));
 ['q','sort','filter'].forEach(i => el(i).addEventListener('input', renderCat));
 // Persist only the durable controls, and only when the reader changes one.
@@ -556,15 +525,10 @@ Promise.all([
 ]).then(([idx, feed]) => {
   INDEX = idx; FEED = feed;
   const ser = feed.releases.filter(r => r.web !== 'promotional-sample-only').length;
-  const nq  = feed.queue.length + (feed.print_candidates || []).length;
   el('hstats').textContent =
     `${ser} 更新 · ${idx.length} 作品 · ${idx.reduce((n,w)=>n+w.n,0)} 巻`;
   el('n-feed').textContent  = ser;
   el('n-cat').textContent   = idx.length;
-  el('n-queue').textContent = nq;
-  // The queue is a worklist, not a section of the database. When every candidate has been
-  // confirmed there is nothing to show, and a tab offering an empty list is just a dead end.
-  document.querySelector('[data-tab="queue"]').hidden = nq === 0;
   const active = feed.platforms.filter(p =>
     feed.releases.some(r => (r.plat_name || r.plat) === p.name)).length;
   const att = feed.releases.filter(r => r.provenance === 'attested').length;
@@ -577,7 +541,7 @@ Promise.all([
 
 
   restoreView();
-  renderFeed(); renderCat(); renderQueue();
+  renderFeed(); renderCat();
 }).catch(() => {
   el('fcount').textContent = 'データを読み込めません / could not load data';
 });
