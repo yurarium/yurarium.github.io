@@ -143,12 +143,12 @@
     <span class="k k-new">新連載</span> a first numbered chapter or a one-shot ·
     <span class="k k-ch">新話</span> a later numbered chapter ·
     <span class="k k-oth">その他</span> notice, trial or reprint ·
-    <span class="k k-unk">—</span> no chapter information. These are inferred from what we hold,
-    not stated by the publisher; 新連載 means first seen here.
+    <span class="k k-unk">—</span> a listing site reports an update but names no chapter, and the
+    work is not tracked on a platform we reach — so we know something happened and nothing more.
+    Every one of these is a 要確認 entry. Kinds are inferred from what we hold, not stated by the
+    publisher; 新連載 means first seen here.
     <br><br>
     <strong id="provline"></strong>
-    <br><br>
-    <strong id="promoline"></strong>
   </div>
   <div class="controls" style="margin-top:.9rem">
     <input type="search" id="fq" placeholder="検索 — 作品名・作者 / work, creator" autocomplete="off">
@@ -157,8 +157,7 @@
       <option value="free">無料の更新のみ / free updates only</option>
     </select>
     <select id="ftype">
-      <option value="">連載のみ / serialised only</option>
-      <option value="all">試し読みも含む / include samples</option>
+      <option value="">すべての種類 / all kinds</option>
       <option value="chapter">話 / chapters</option>
       <option value="oneshot">読み切り / one-shots</option>
     </select>
@@ -167,6 +166,7 @@
       <option value="detail">詳細 / detailed</option>
     </select>
     <select id="fplat"><option value="">全プラットフォーム / all platforms</option></select>
+    <button id="freset" class="themebtn" title="clear search and all filters">リセット / reset</button>
   </div>
   <p class="count" id="fcount"></p>
   <div id="feed"></div>
@@ -187,6 +187,7 @@
       <option value="yomi">五十音順 / by reading</option>
       <option value="vols">巻数順 / by volumes</option>
     </select>
+    <button id="creset" class="themebtn" style="order:99" title="clear search and all filters">リセット / reset</button>
     <select id="filter">
       <option value="">すべて / all works</option>
       <option value="multi">複数巻 / multi-volume</option>
@@ -301,11 +302,10 @@ function renderFeed() {
   const rows = FEED.releases.filter(r => {
     if (q && !norm(r.work).includes(q) && !norm(r.author).includes(q) && !norm(r.ep).includes(q))
       return false;
-    if (f !== 'all' && r.web === 'promotional-sample-only') return false;
     // Two models of "update". Free includes rate-limited free and chapters that have flipped
     // out from behind a paywall, which is an update for a reader watching for free content.
     if (model === 'free' && !r.free) return false;
-    if (f && f !== 'all') return r.type === f;
+    if (f) return r.type === f;
     return true;
   });
 
@@ -338,19 +338,36 @@ function byDate(rows) {
   return days;
 }
 
+// A series dropping several instalments at once is one event to a reader, not N. Collapsed to a
+// single line with a count. Precedence: the start of a series outranks a further chapter, which
+// outranks a notice — so a new series arriving with several chapters still reads as 新連載.
+const KIND_RANK = { 'new-series': 3, 'new-chapter': 2, 'other': 1, 'unknown': 0 };
+
 function compactList(rows) {
   let html = '';
   for (const [d, list] of byDate(rows)) {
-    html += `<div class="cday"><div class="cday-d">${esc(d.slice(5))}</div><div class="cday-l">`;
+    const groups = new Map();
     for (const r of list) {
+      const k = (r.work || '') + '\u0000' + (r.plat_name || r.plat || '');
+      if (!groups.has(k)) groups.set(k, []);
+      groups.get(k).push(r);
+    }
+    html += `<div class="cday"><div class="cday-d">${esc(d.slice(5))}</div><div class="cday-l">`;
+    for (const g of groups.values()) {
+      const lead = g.reduce((a, b) =>
+        (KIND_RANK[b.kind] ?? 0) > (KIND_RANK[a.kind] ?? 0) ? b : a);
+      const extra = g.length - 1;
+      const anyFree = g.some(x => x.free);
+      const kinds = [...new Set(g.map(x => x.kind))];
       html += `<div class="crow">
-        ${kindTag(r)}
-        ${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">${esc(r.work)}</a>`
-                : `<span style="font-weight:600">${esc(r.work)}</span>`}
-        <span class="m">${esc(r.plat_name || r.plat)}</span>
-        ${r.free ? '<span class="k k-free">無料</span>' : ''}
-        ${r.provenance === 'claimed'
-          ? `<span class="k k-claim" title="reported by ${esc(r.claim_source || '')}; not confirmed against the platform">要確認</span>` : ''}
+        ${kindTag(lead)}
+        ${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${esc(lead.work)}</a>`
+                   : `<span style="font-weight:600">${esc(lead.work)}</span>`}
+        ${extra ? `<span class="m" title="${esc(kinds.map(k => (KIND[k] || KIND.unknown)[0]).join(' + '))}">他 ${extra} 件</span>` : ''}
+        <span class="m">${esc(lead.plat_name || lead.plat)}</span>
+        ${anyFree ? '<span class="k k-free">無料</span>' : ''}
+        ${lead.provenance === 'claimed'
+          ? `<span class="k k-claim" title="reported by ${esc(lead.claim_source || '')}; not confirmed against the platform">要確認</span>` : ''}
       </div>`;
     }
     html += '</div></div>';
@@ -505,6 +522,13 @@ function renderQueue() {
 ['q','sort','filter'].forEach(i => el(i).addEventListener('input', renderCat));
 // Persist only the durable controls, and only when the reader changes one.
 VIEW_FIELDS.forEach(i => el(i)?.addEventListener('change', saveView));
+function resetFilters(ids, render) {
+  ids.forEach(id => { const e = el(id); if (!e) return; e.value = e.tagName === 'SELECT' ? e.options[0].value : ''; });
+  saveView(); render();
+}
+el('freset').addEventListener('click', () => resetFilters(['fq','fmodel','ftype','fplat'], renderFeed));
+el('creset').addEventListener('click', () => resetFilters(['q','sort','filter'], renderCat));
+
 el('clearprefs').addEventListener('click', () => {
   try { localStorage.removeItem(PREF_THEME); localStorage.removeItem(PREF_VIEW); } catch (e) {}
   applyTheme('auto');
@@ -540,12 +564,7 @@ Promise.all([
       + `platform itself. Those platforms apply no genre label, so the works carry no `
       + `<code>marketing_label</code> and are marked 要分類 — they need a human classification.`
     : '';
-  const promo = feed.releases.filter(r => r.web === 'promotional-sample-only').length;
-  el('promoline').innerHTML = promo
-    ? `${promo} entries are 試し読み samples of printed volumes and are hidden by default — those `
-      + `series publish no web manga, so their samples are not releases. `
-      + `${feed.print_candidates.length} such volumes are listed under 候補 as catalogue candidates.`
-    : '';
+
   restoreView();
   renderFeed(); renderCat(); renderQueue();
 }).catch(() => {
