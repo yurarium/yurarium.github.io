@@ -56,6 +56,24 @@
   .tag.q{background:var(--queue-bg);color:var(--queue-fg)}
   .tag.warn{background:var(--warn-bg);color:var(--warn-fg)}
   .datewarn{color:var(--warn-fg);font-size:.75rem;margin-top:.2rem;line-height:1.45}
+  /* Compact list: one line per update, in the spirit of 百合ナビ's date-grouped table. */
+  .cday{display:grid;grid-template-columns:4.2rem 1fr;gap:0 .8rem;
+    border-top:1px solid var(--line);padding:.5rem 0}
+  .cday-d{font-size:.78rem;color:var(--faint);font-weight:600;padding-top:.15rem;
+    font-variant-numeric:tabular-nums}
+  .cday-l{min-width:0}
+  .crow{display:flex;flex-wrap:wrap;gap:.35rem;align-items:baseline;padding:.14rem 0;line-height:1.5}
+  .crow a{color:inherit;text-decoration:none;font-weight:600;font-size:.92rem}
+  .crow a:hover{color:var(--accent);text-decoration:underline}
+  .crow .m{color:var(--dim);font-size:.78rem}
+  .k{font-size:.63rem;padding:.05rem .32rem;border-radius:3px;letter-spacing:.02em;
+    white-space:nowrap;vertical-align:.08em}
+  .k-new{background:var(--accent-bg);color:var(--accent)}
+  .k-ch{background:var(--line);color:var(--dim)}
+  .k-oth{background:var(--warn-bg);color:var(--warn-fg)}
+  .k-unk{background:transparent;color:var(--faint);border:1px solid var(--line)}
+  .k-claim{background:var(--queue-bg);color:var(--queue-fg)}
+  .k-free{background:var(--accent-bg);color:var(--accent)}
   .date-h{font-size:.78rem;color:var(--faint);font-weight:600;letter-spacing:.05em;
     padding:1rem 0 .3rem;border-bottom:1px solid var(--line)}
   .rel{padding:.6rem .2rem;border-bottom:1px solid var(--line)}
@@ -109,15 +127,24 @@
 <!-- ── FEED ───────────────────────────────────────────────────────── -->
 <section id="tab-feed">
   <div class="note">
-    Web chapter releases, taken from publishers' own Atom feeds. <strong id="cov"></strong>
-    Feeds are a rolling window of recent updates, so this shows what has appeared lately rather
-    than a catalogue.
+    Updates to yuri web manga, newest first. <strong id="cov"></strong>
     <br><br>
-    <strong>Dates are the earlier of the platform's claim and when this database first saw the
-    release, fixed at that point and never revised.</strong> These feeds carry only Atom
-    <code>updated</code> — last-modified — and platforms rewrite it in bulk during refreshes and
-    imports, so a later change is recorded but not followed. 初確認 marks a date inherited rather
-    than observed; 日付要確認 marks a run whose timestamps look rewritten.
+    <strong>Two kinds of entry.</strong> Most come from a publisher's own feed or work pages and
+    are confirmed. Those marked <span class="k k-claim">要確認</span> are reported by
+    Web漫画アンテナ or 百合ナビ and <em>not</em> confirmed against the platform — taken as
+    provisionally true that something updated, on the date claimed. They carry no classification
+    and establish nothing beyond that.
+    <br><br>
+    <strong>Two models of "update".</strong> <em>All</em> counts every update including
+    paid-only chapters. <em>Free</em> counts only what can be read without paying — including
+    rate-limited free (one chapter a day with an account) and chapters that have moved out from
+    behind a paywall, which is an update if free reading is what you are watching for.
+    <br><br>
+    <span class="k k-new">新連載</span> a first numbered chapter or a one-shot ·
+    <span class="k k-ch">新話</span> a later numbered chapter ·
+    <span class="k k-oth">その他</span> notice, trial or reprint ·
+    <span class="k k-unk">—</span> no chapter information. These are inferred from what we hold,
+    not stated by the publisher; 新連載 means first seen here.
     <br><br>
     <strong id="provline"></strong>
     <br><br>
@@ -125,14 +152,19 @@
   </div>
   <div class="controls" style="margin-top:.9rem">
     <input type="search" id="fq" placeholder="検索 — 作品名・作者 / work, creator" autocomplete="off">
+    <select id="fmodel" title="which updates count">
+      <option value="all">すべての更新 / all updates</option>
+      <option value="free">無料の更新のみ / free updates only</option>
+    </select>
     <select id="ftype">
       <option value="">連載のみ / serialised only</option>
       <option value="all">試し読みも含む / include samples</option>
-      <option value="adv">本編のみ / story only</option>
       <option value="chapter">話 / chapters</option>
       <option value="oneshot">読み切り / one-shots</option>
-      <option value="trial">試し読み / trials</option>
-      <option value="free">無料で読める / free to read</option>
+    </select>
+    <select id="fview" title="layout">
+      <option value="compact">簡易 / compact</option>
+      <option value="detail">詳細 / detailed</option>
     </select>
     <select id="fplat"><option value="">全プラットフォーム / all platforms</option></select>
   </div>
@@ -221,7 +253,7 @@ document.querySelectorAll('.themebtn[data-theme-set]').forEach(b =>
   }));
 
 // Search text is deliberately NOT persisted — restoring a stale query on load is surprising.
-const VIEW_FIELDS = ['ftype', 'fplat', 'sort', 'filter'];
+const VIEW_FIELDS = ['fmodel', 'ftype', 'fview', 'fplat', 'sort', 'filter'];
 function saveView() {
   const v = { tab: document.querySelector('nav button[aria-selected=true]')?.dataset.tab };
   VIEW_FIELDS.forEach(id => { const e = el(id); if (e) v[id] = e.value; });
@@ -265,67 +297,106 @@ document.querySelectorAll('nav button').forEach(b => b.addEventListener('click',
 /* ── feed ─────────────────────────────────────────────── */
 function renderFeed() {
   const q = norm(el('fq').value.trim()), f = el('ftype').value;
+  const model = el('fmodel').value, view = el('fview').value;
   const rows = FEED.releases.filter(r => {
     if (q && !norm(r.work).includes(q) && !norm(r.author).includes(q) && !norm(r.ep).includes(q))
       return false;
-    // A series whose entire output is 試し読み is promoting a printed volume, not publishing web
-    // manga. Excluded by default rather than deleted; reachable via the filter.
     if (f !== 'all' && r.web === 'promotional-sample-only') return false;
-    const pf = el('fplat').value;
-    if (pf && (r.plat_name || r.plat) !== pf) return false;
-    if (f === 'adv') return r.adv;
-    if (f === 'free') return r.free_from || (r.access_modes||[]).includes('free');
+    // Two models of "update". Free includes rate-limited free and chapters that have flipped
+    // out from behind a paywall, which is an update for a reader watching for free content.
+    if (model === 'free' && !r.free) return false;
     if (f && f !== 'all') return r.type === f;
     return true;
   });
 
-  el('fcount').textContent = `${rows.length} 更新 / releases`
-    + (rows.length !== FEED.releases.length ? ` (${FEED.releases.length} 中 / of)` : '');
+  el('fcount').textContent =
+    `${rows.length} 件 / shown` + (rows.length !== FEED.releases.length
+      ? `　(全 ${FEED.releases.length} 件 / of all)` : '');
   el('fempty').hidden = rows.length > 0;
+  el('feed').innerHTML = view === 'compact' ? compactList(rows) : detailList(rows);
+}
 
+const KIND = {
+  'new-series':  ['新連載', 'k-new', 'first numbered chapter, or a one-shot'],
+  'new-chapter': ['新話',   'k-ch',  'a later numbered chapter'],
+  'other':       ['その他', 'k-oth', 'notice, trial, reprint or artwork'],
+  'unknown':     ['—',      'k-unk', 'no chapter information available'],
+};
+
+function kindTag(r) {
+  const [label, cls, why] = KIND[r.kind] || KIND.unknown;
+  return `<span class="k ${cls}" title="${esc(why)}${r.kind_inferred ? ' (inferred)' : ''}">${label}</span>`;
+}
+
+function byDate(rows) {
+  const days = new Map();
+  for (const r of rows) {
+    const d = (r.pub || '').slice(0, 10);
+    if (!days.has(d)) days.set(d, []);
+    days.get(d).push(r);
+  }
+  return days;
+}
+
+function compactList(rows) {
+  let html = '';
+  for (const [d, list] of byDate(rows)) {
+    html += `<div class="cday"><div class="cday-d">${esc(d.slice(5))}</div><div class="cday-l">`;
+    for (const r of list) {
+      html += `<div class="crow">
+        ${kindTag(r)}
+        ${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">${esc(r.work)}</a>`
+                : `<span style="font-weight:600">${esc(r.work)}</span>`}
+        <span class="m">${esc(r.plat_name || r.plat)}</span>
+        ${r.free ? '<span class="k k-free">無料</span>' : ''}
+        ${r.provenance === 'claimed'
+          ? `<span class="k k-claim" title="reported by ${esc(r.claim_source || '')}; not confirmed against the platform">要確認</span>` : ''}
+      </div>`;
+    }
+    html += '</div></div>';
+  }
+  return html;
+}
+
+function detailList(rows) {
   let html = '', day = null;
   for (const r of rows) {
     const d = (r.pub || '').slice(0, 10);
     if (d !== day) {
       day = d;
-      // The heading carries the platform's own date. Where a bulk-update signature is present,
-      // explain it once for the whole group rather than on every row.
       const low = rows.filter(x => (x.pub || '').slice(0, 10) === d && x.conf === 'low');
-      const works = new Set(low.map(x => x.work));
-      html += `<div class="date-h">${esc(d)}${low.length
-        ? ' <span class="tag warn">日付要確認</span>' : ''}</div>`;
+      html += `<div class="date-h">${esc(d)}${low.length ? ' <span class="tag warn">日付要確認</span>' : ''}</div>`;
       if (low.length) {
+        const works = new Set(low.map(x => x.work));
         html += `<div class="datewarn" style="padding:.3rem 0 .1rem">${low.length} releases
           across ${works.size} work${works.size > 1 ? 's' : ''} share this exact timestamp —
           likely a refresh or import rather than same-day publication.</div>`;
       }
     }
-    html += `
-      <div class="rel${NON_STORY.has(r.type) ? ' quiet' : ''}">
-        <a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">
-          <span class="t">${esc(r.work)}</span>
-          <span class="tag grey">${esc(TYPE_JA[r.type] || r.type)}</span>
-          ${r.free_from || (r.access_modes||[]).includes('free')
-              ? '<span class="tag">無料</span>' : ''}
-          ${(r.access_modes||[]).includes('purchase')
-              ? '<span class="tag grey" title="costs points on this platform">有料</span>' : ''}
-          <div class="line2">
-            <span class="ep">${esc(r.ep)}</span>
-            <span class="meta">${esc(r.author || '')}</span>
-            <span class="meta">· ${esc(r.plat_name || r.plat)}</span>
-            ${(r.also_on && r.also_on.length)
-              ? `<span class="meta">・他 ${esc(r.also_on.join('、'))}</span>` : ''}
-            ${r.ident === 'discovery-candidate'
-              ? '<span class="tag q" title="named by a Tier C listing, attested by the platform\u0027s own feed">要分類</span>'
-              : ''}
-          </div>
-          ${r.basis === 'bootstrap' || r.moved ? `<div class="datewarn">${
-            r.moved ? `⚠ source date changed (${esc(r.moved)}) — earliest kept · ` : ''
-            }初確認 ${esc(r.seen)}</div>` : ''}
-        </a>
-      </div>`;
+    const inner = `
+      <span class="t">${esc(r.work)}</span>
+      ${kindTag(r)}
+      <span class="tag grey">${esc(TYPE_JA[r.type] || r.type)}</span>
+      ${r.free ? '<span class="tag">無料</span>' : ''}
+      ${(r.access_modes || []).includes('purchase') && !r.free ? '<span class="tag grey">有料</span>' : ''}
+      ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
+      <div class="line2">
+        ${r.ep ? `<span class="ep">${esc(r.ep)}</span>` : ''}
+        <span class="meta">${esc(r.author || '')}</span>
+        <span class="meta">· ${esc(r.plat_name || r.plat)}</span>
+        ${(r.also_on && r.also_on.length) ? `<span class="meta">・他 ${esc(r.also_on.join('、'))}</span>` : ''}
+        ${r.provenance === 'claimed'
+          ? `<span class="tag q">${esc(r.claim_source || 'claim')} 報告 — 未確認</span>`
+          : (r.ident === 'discovery-candidate' ? '<span class="tag q">要分類</span>' : '')}
+      </div>
+      ${r.basis === 'bootstrap' || r.moved ? `<div class="datewarn">${
+        r.moved ? `⚠ source date changed (${esc(r.moved)}) — earliest kept · ` : ''
+        }初確認 ${esc(r.seen)}</div>` : ''}`;
+    html += `<div class="rel${NON_STORY.has(r.type) ? ' quiet' : ''}">${
+      r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">${inner}</a>` : inner
+    }</div>`;
   }
-  el('feed').innerHTML = html;
+  return html;
 }
 
 /* ── catalogue ────────────────────────────────────────── */
@@ -429,7 +500,7 @@ function renderQueue() {
     </li>`).join('');
 }
 
-['fq','ftype','fplat'].forEach(i => el(i).addEventListener('input', renderFeed));
+['fq','ftype','fplat','fmodel','fview'].forEach(i => el(i).addEventListener('input', renderFeed));
 ['q','sort','filter'].forEach(i => el(i).addEventListener('input', renderCat));
 // Persist only the durable controls, and only when the reader changes one.
 VIEW_FIELDS.forEach(i => el(i)?.addEventListener('change', saveView));
@@ -453,18 +524,19 @@ Promise.all([
   el('n-queue').textContent = nq;
   const active = feed.platforms.filter(p =>
     feed.releases.some(r => (r.plat_name || r.plat) === p.name)).length;
+  const att = feed.releases.filter(r => r.provenance === 'attested').length;
+  const clm = feed.releases.length - att;
   el('cov').innerHTML =
-    `Watching <strong>${feed.platforms.length}</strong> platforms, `
-    + `<strong>${active}</strong> with releases in the current window. `
-    + `Coverage against Web漫画アンテナ's 百合 tag is <strong>74.4%</strong> of 1,203 works, `
-    + `so this is not yet a complete picture of what is being published.`;
+    `<strong>${att}</strong> confirmed from publishers and <strong>${clm}</strong> reported by the `
+    + `listing sites but unconfirmed, across <strong>${feed.platforms.length}</strong> watched `
+    + `platforms. Coverage against Web漫画アンテナ's 百合 tag is <strong>74.4%</strong> of 1,203 works.`;
   const plats = [...new Set(feed.releases.map(r => r.plat_name || r.plat))].sort();
   el('fplat').insertAdjacentHTML('beforeend',
     plats.map(p => `<option value="${p}">${p}</option>`).join(''));
   const prov = feed.releases.filter(r => r.ident === 'discovery-candidate').length;
   el('provline').innerHTML = prov
-    ? `${prov} entries were found by a listing site naming the work and then attested by the `
-      + `platform's own feed. Those platforms apply no genre label, so the works carry no `
+    ? `${prov} entries were found by a listing site naming the work and then confirmed by the `
+      + `platform itself. Those platforms apply no genre label, so the works carry no `
       + `<code>marketing_label</code> and are marked 要分類 — they need a human classification.`
     : '';
   const promo = feed.releases.filter(r => r.web === 'promotional-sample-only').length;
