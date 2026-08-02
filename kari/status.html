@@ -198,6 +198,27 @@ function render(d) {
         here show it.</p>`;
   }
 
+  // ── Bulk re-dating ────────────────────────────────────────────────────────
+  const bulk = d.bulk_dated || [];
+  if (bulk.length) {
+    h += `<h2>一括再日付 / bulk re-dating (${bulk.length})</h2>
+      <p class="note">A run of chapters sharing one exact timestamp. Detected by comparing each
+        (platform, date) against that platform's own median day, so it needs no per-platform
+        configuration and catches new cases without anyone noticing them first. Nothing is altered:
+        the date is the platform's own statement and the chapter did become available then — it is
+        just not a per-chapter publication date.</p>
+      <p class="note"><b>Read the works column, not the row count.</b> Many rows across ONE work is
+        a back catalogue arriving at once; the same number spread over many works is a
+        platform-wide restamp. The two look identical by volume and are different events.</p>
+      <div class="scroll"><table>
+      <tr><th>platform</th><th class="n">date</th><th class="n">rows</th><th class="n">works</th>
+      <th class="n">median/day</th><th>example</th></tr>` +
+      bulk.map(b => `<tr><td>${esc(b.platform)}</td><td class="n">${esc(b.date)}</td>
+        <td class="n">${b.releases}</td><td class="n">${b.distinct_works}</td>
+        <td class="n">${b.median_per_day}</td><td>${esc(b.example_work || '')}</td></tr>`).join('') +
+      `</table></div>`;
+  }
+
   // ── Coverage gaps ─────────────────────────────────────────────────────────
   // Cases the main interface used to render as doubt (不明, 要確認 grouping). They are decided now
   // and they live here, because they are facts about our coverage rather than about any manga.
