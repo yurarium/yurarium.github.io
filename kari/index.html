@@ -735,6 +735,17 @@ function credit(c) {
   return c.replace(/\[([^\]]+)\]/g, (m, r) => ROLE_EN[r] ? `[${ROLE_EN[r]}]` : m);
 }
 
+/* The source chips sit OUTSIDE bilingual() — they are links, and two sets of clickable chips to the
+   same platforms reads as a bug rather than a translation. But that left them Japanese-only in
+   併記, where the whole point is to show both. So the chip carries both names on ONE link instead
+   of the row carrying two links. */
+function platBoth(n) {
+  if (!n) return '';
+  const en = PLAT_EN[n];
+  if (!en || en === n) return n;
+  return LANG === 'en' ? en : LANG === 'ja' ? n : `${n} / ${en}`;
+}
+
 function platName(n) {
   // A name, not a phrase: shown as one or the other, never "ガンガンONLINE / GANGAN ONLINE" —
   // that doubles the width of a meta line for no gain. Absent from the map means already Latin,
@@ -1334,7 +1345,7 @@ function renderSeries() {
           const f = s.free + s.free_timed;
           const tip = `${s.chapters}${s.partial ? '+' : ''} chapters held here${
               f ? `, ${f} free` : ''}${s.priced ? `, ${s.priced} paid` : ''}`;
-          const body = `${esc(platName(s.platform))}${
+          const body = `${esc(platBoth(s.platform))}${
               s.format !== 'standard' ? ` <span class="fmt">${esc(s.format)}</span>` : ''}<span
               class="srcn">${s.chapters}${s.partial ? '+' : ''}</span>`;
           return s.url
