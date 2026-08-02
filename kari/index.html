@@ -154,34 +154,45 @@
     color:var(--faint);font-size:.78rem}
   footer a{color:var(--accent)}
   [hidden]{display:none !important}
-  .themebox{float:right;display:inline-flex;gap:.15rem}
-  /* Two unrelated settings sitting flush against each other read as one control. A gap plus a
-     hairline says they are separate without adding a label to either. */
-  .langbox{margin-right:.75rem;padding-right:.75rem;border-right:1px solid var(--line)}
+  /* Language and theme are two separate settings and were reading as one strip of six buttons.
+     A gap alone did not fix it, and the hairline I tried first landed in the wrong place: both
+     boxes were float:right, so the one FIRST in source sits RIGHTMOST and its right border drew on
+     the outer edge rather than between the groups.
+     So: one flex container, explicit order, and each group drawn as a single segmented control —
+     one outline around the group, dividers only between its own buttons. Two bordered objects read
+     as two settings without needing a label on either. */
+  .ctlbar{float:right;display:flex;gap:.85rem;align-items:center}
+  .themebox{display:inline-flex;border:1px solid var(--line);border-radius:5px;overflow:hidden;
+    background:var(--card)}
+  .themebox .themebtn{border:0;border-radius:0;border-left:1px solid var(--line);background:none}
+  .themebox .themebtn:first-child{border-left:0}
   @media (max-width:34rem){
-    .themebox{float:none}
-    .langbox{margin-right:.5rem;padding-right:.5rem}
-    h1 .themebox{margin-top:.4rem}
+    .ctlbar{float:none;justify-content:flex-end;margin-top:.45rem;gap:.6rem}
   }
   .themebtn{font:inherit;font-size:.72rem;padding:.12rem .45rem;cursor:pointer;
     border:1px solid var(--line);background:var(--card);color:var(--dim);border-radius:4px}
   .themebtn[aria-pressed=true]{background:var(--accent-bg);color:var(--accent);
-    border-color:var(--accent)}
+    border-color:var(--accent);font-weight:600}
+  /* Inside a segmented group the selected button is filled, not outlined — an outline would fight
+     the group's own border. */
+  .themebox .themebtn[aria-pressed=true]{border-left-color:var(--line)}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
   <h1>Yurarium <span class="tag">仮 / provisional</span>
-    <span class="themebox langbox">
-      <button class="themebtn" data-lang-set="ja"   title="日本語のみ">日本語</button>
-      <button class="themebtn" data-lang-set="en"   title="English only">EN</button>
-      <button class="themebtn" data-lang-set="both" title="both / 併記">両</button>
-    </span>
-    <span class="themebox">
-      <button class="themebtn" data-theme-set="auto"  title="follow system">自動</button>
-      <button class="themebtn" data-theme-set="light" title="light">明</button>
-      <button class="themebtn" data-theme-set="dark"  title="dark">暗</button>
+    <span class="ctlbar">
+      <span class="themebox" role="group" aria-label="表示言語 / interface language">
+        <button class="themebtn" data-lang-set="ja"   title="日本語のみ">日本語</button>
+        <button class="themebtn" data-lang-set="en"   title="English only">EN</button>
+        <button class="themebtn" data-lang-set="both" title="both / 併記">両</button>
+      </span>
+      <span class="themebox" role="group" aria-label="配色 / colour theme">
+        <button class="themebtn" data-theme-set="auto"  title="follow system">自動</button>
+        <button class="themebtn" data-theme-set="light" title="light">明</button>
+        <button class="themebtn" data-theme-set="dark"  title="dark">暗</button>
+      </span>
     </span>
   </h1>
   <p class="sub" id="hstats">…</p>
