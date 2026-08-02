@@ -673,7 +673,7 @@ function renderSeries() {
     if (q && !norm(r.work).includes(q) && !norm(r.author).includes(q)) return false;
     if (state && r.state !== state) return false;
     if (plat && r.platform !== plat) return false;
-    if (freeOnly && !(r.free + r.free_timed)) return false;
+    if (freeOnly && !(r.free + r.free_timed)) return false;   // unknown is not free either
     return true;
   });
   rows = rows.slice().sort(
@@ -689,8 +689,13 @@ function renderSeries() {
     // "全話無料" of a single chapter is a category error — there is no proportion to state, only
     // whether the thing is free. A two-part 読切 is different: those genuinely differ in access
     // part to part, so the count is the useful answer there and the badge shows it.
+    // NO access badge where there is no access data. This read 有料 for every row whose source
+    // states nothing — 293 of 1145, including all 261 カドコミ rows, whose adapter records no access
+    // at all. オタクサキュバスの才能がありすぎる！ is free and was listed as paid on that basis. Zero
+    // free chapters known is not the same fact as zero free chapters, and only the second is 有料.
     const freeN = r.free + r.free_timed;
-    const acc = !r.chapters ? ''
+    const known = freeN + r.priced;
+    const acc = !r.chapters || !known ? ''
       : r.chapters === 1 ? (freeN ? `<span class="tag">${esc(T('無料'))}</span>`
                                   : `<span class="tag grey">${esc(T('有料'))}</span>`)
       : freeN >= r.chapters ? `<span class="tag">${esc(T('全話無料'))}</span>`
