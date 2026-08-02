@@ -1,0 +1,78 @@
+{
+ "generated": "",
+ "invariants": [
+  {
+   "name": "ruby spells the reading",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "no ruby over bare Latin",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "feed holds only attested rows",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "every update has a kind",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "readings are stored as kana",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "English mode has no Japanese",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "archives are unchanged",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "deployed data matches built",
+   "violations": 5,
+   "examples": [
+    "run.json",
+    "series.json",
+    "feed/meta.json",
+    "feed/names.json",
+    "feed/current.json"
+   ]
+  }
+ ],
+ "budgets": [
+  {
+   "name": "uncertain readings",
+   "value": 10,
+   "budget": 10,
+   "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes."
+  },
+  {
+   "name": "works without English",
+   "value": 0,
+   "budget": 0,
+   "means": "works that render in Japanese in English-only mode. Should be 0; a rise means the automatic naming pass stopped covering something it used to."
+  },
+  {
+   "name": "incomplete attested rows",
+   "value": 15,
+   "budget": 15,
+   "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector — the adapter still returns rows, just emptier ones."
+  },
+  {
+   "name": "shadowed names in build.py",
+   "value": 38,
+   "budget": 38,
+   "means": "names rebound more than 300 lines from their first binding. Two shipped bugs came from this; see adapters/lint/shadowing.py for why the count is not simply falling."
+  }
+ ],
+ "note": "Invariants are statements that are either true or the data is broken. At runtime a violation degrades to the fallback named in check.py and is counted here; at check-in the same violation blocks. Budgets are counts with no correct value, only a direction: they tighten automatically and loosen only by hand."
+}
