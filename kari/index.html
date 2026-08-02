@@ -301,6 +301,7 @@ document.querySelectorAll('nav button').forEach(b => b.addEventListener('click',
 function renderFeed() {
   const q = norm(el('fq').value.trim()), f = el('ftype').value;
   const model = el('fmodel').value, view = el('fview').value;
+  const plat = el('fplat').value;
   const rows = FEED.releases.filter(r => {
     if (q && !norm(r.work).includes(q) && !norm(r.author).includes(q) && !norm(r.ep).includes(q))
       return false;
@@ -309,6 +310,10 @@ function renderFeed() {
     // "Became free" is a different event from "is free": a chapter moving out from behind a
     // paywall is news to a reader who has been waiting, where a normally-free release is not.
     if (model === 'free' && !r.free) return false;
+    // The platform selector was populated, wired to re-render, and never read. A chapter carried
+    // in several places counts for each of them, so an alternative carrier matches too — filtering
+    // to マガポケ should not hide a chapter it carries merely because コミックDAYS is preferred.
+    if (plat && (r.plat_name || r.plat) !== plat && !(r.also_on || []).includes(plat)) return false;
     if (f) return r.type === f;
     return true;
   });
