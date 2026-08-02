@@ -150,6 +150,26 @@ function render(d, feed) {
     h += `</table></div></details>`;
   }
 
+  // ── When the record starts ────────────────────────────────────────────────
+  // The one honest statement about date quality, made once. It replaces a per-row badge that went
+  // 日付要確認 → 一括掲載 → nothing: each wording was truer than the last and all three asked a
+  // reader to hold a caveat they cannot act on.
+  const from = (d.sources || []).map(s => s.retrieved).filter(Boolean).sort()[0];
+  if (from) {
+    const before = (feed?.releases || []).filter(r => (r.pub || '') < from).length;
+    h += `<h2>記録の開始 / when the record starts</h2>
+      <p class="note">This pipeline first retrieved anything on <b>${esc(from)}</b>. From that date
+        a release is dated by what the platform said when we saw it, and the first sighting is
+        written to a ledger and never revised.</p>
+      <p class="note">Everything earlier — ${before} of ${d.releases} releases — was imported in a
+        single pass from what each platform states about its own back catalogue. That is usually
+        the real publication date, but not always: several platforms date a whole back catalogue to
+        the day they listed it. 一迅プラス stamps 277 chapters across 16 works with one date;
+        竹コミ and アサコミ give every chapter they hold the same day. Those dates are real events —
+        they are just listing events, not publication events, and nothing on the page can tell
+        which a given pre-${esc(from)} date is.</p>`;
+  }
+
   // ── Coverage gaps ─────────────────────────────────────────────────────────
   // Cases the main interface used to render as doubt (不明, 要確認 grouping). They are decided now
   // and they live here, because they are facts about our coverage rather than about any manga.

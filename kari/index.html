@@ -54,11 +54,17 @@
   .yomi{color:var(--faint);font-size:.76rem;margin-left:.5rem;font-weight:400}
   .meta{color:var(--dim);font-size:.82rem}
   .num{color:var(--dim);font-size:.8rem;white-space:nowrap;text-align:right}
-  .tag{display:inline-block;font-size:.68rem;padding:.08rem .4rem;border-radius:3px;
-    background:var(--accent-bg);color:var(--accent);vertical-align:.08em;margin-left:.4rem}
+  /* ONE badge. There were two families — .tag at .68rem and .k at .63rem — which met in the works
+     tab, where the state badge is a .k and the access badge beside it is a .tag. Weight had drifted
+     too: three classes were 600 and the rest normal, so "Paid early" came out bolder than "Free",
+     emphasising a standing series fact over what the update actually did.
+     Size and weight now say nothing. COLOUR is the only variable, because it is the only one that
+     carries meaning: accent = readable, grey = neutral, queue = ended, warn = costs something. */
+  .tag,.k{display:inline-block;font-size:.66rem;font-weight:500;padding:.06rem .36rem;
+    border-radius:3px;letter-spacing:.02em;white-space:nowrap;vertical-align:.08em;
+    background:var(--accent-bg);color:var(--accent)}
+  h1 .tag{margin-left:.45rem}
   .tag.grey{background:var(--line);color:var(--dim)}
-  .tag.q{background:var(--queue-bg);color:var(--queue-fg)}
-  .tag.warn{background:var(--warn-bg);color:var(--warn-fg)}
   .datewarn{color:var(--warn-fg);font-size:.75rem;margin-top:.2rem;line-height:1.45}
   /* Compact list: one line per update, in the spirit of 百合ナビ's date-grouped table. */
   .cday{display:grid;grid-template-columns:5.7rem 1fr;gap:0 .8rem;
@@ -102,18 +108,15 @@
   .crow a{color:inherit;text-decoration:none;font-weight:600;font-size:.92rem}
   .crow a:hover{color:var(--accent);text-decoration:underline}
   .crow .m{color:var(--dim);font-size:.78rem}
-  .k{font-size:.63rem;padding:.05rem .32rem;border-radius:3px;letter-spacing:.02em;
-    white-space:nowrap;vertical-align:.08em}
-  .k-new{background:var(--accent-bg);color:var(--accent)}
-  .k-fin{background:var(--queue-bg);color:var(--queue-fg)}
-  .k-one{background:var(--accent-bg);color:var(--accent);font-weight:600}
+  .k-new,.k-one,.k-free{background:var(--accent-bg);color:var(--accent)}
   .k-ch{background:var(--line);color:var(--dim)}
-  .k-oth{background:var(--warn-bg);color:var(--warn-fg)}
-  .k-unk{background:transparent;color:var(--faint);border:1px solid var(--line)}
-  .k-claim{background:var(--queue-bg);color:var(--queue-fg)}
-  .k-free{background:var(--accent-bg);color:var(--accent)}
-  .k-newfree{background:var(--accent);color:var(--card);font-weight:600}
-  .k-adv{background:var(--warn-bg);color:var(--warn-fg);font-weight:600}
+  .k-fin{background:var(--queue-bg);color:var(--queue-fg)}
+  .k-oth,.k-adv{background:var(--warn-bg);color:var(--warn-fg)}
+  /* The one shape difference kept: no fill, so it needs an edge to read as a badge at all. Drawn
+     as an inset shadow rather than a border so it does not sit 2px wider than its neighbours. */
+  .k-unk{background:transparent;color:var(--faint);box-shadow:inset 0 0 0 1px var(--line)}
+  /* Removed with their last user: .k-claim (claims no longer reach this page), .k-newfree,
+     .tag.q, .tag.warn. */
   .date-h{font-size:.78rem;color:var(--faint);font-weight:600;letter-spacing:.05em;
     padding:1rem 0 .3rem;border-bottom:1px solid var(--line)}
   /* The weekday rides with the date but must not compete with it — it is orientation, not a label. */
@@ -310,6 +313,7 @@
     and <a href="https://openbd.jp/">openBD</a>; release data from publishers' own feeds.
     Facts are not copyrightable; original classifications and notes are CC0. No cover art,
     synopses or manga are hosted here.</p>
+  <p id="trackfrom" hidden></p>
   <p>This site stores your display preferences — theme, tab and filters — in your own browser's
     local storage, written only when you choose them. Nothing is transmitted and no cookies are
     set. <button id="clearprefs" class="themebtn" data-i18n>設定を消去 / clear</button></p>
@@ -459,6 +463,21 @@ function platName(n) {
   return (LANG === 'en' && PLAT_EN[n]) || n || '';
 }
 
+/* Set once from run.json, re-rendered on every language change like the rest of the chrome. */
+let TRACK_FROM = null;
+function renderTrackNote() {
+  const p = el('trackfrom');
+  if (!p || !TRACK_FROM) return;
+  p.hidden = false;
+  p.innerHTML = T(
+    `更新の追跡開始は ${TRACK_FROM}。それ以前の日付は各プラットフォームの記載を一括で取り込んだもので、`
+    + `既刊をまとめて同じ日付で登録するプラットフォームもあるため、公開日として正確とは限りません。`,
+    `Update tracking began on ${TRACK_FROM}. Dates before then were imported in a single pass from
+     what each platform states about its own back catalogue — and some platforms date a whole back
+     catalogue to the day they listed it, so publication dates before ${TRACK_FROM} may not be
+     reliable.`) + ` <a href="status.html">${T('内部状態', 'build status')}</a>`;
+}
+
 function applyLang(lang) {
   LANG = lang;
   prefSet('lang', lang);
@@ -479,6 +498,7 @@ function applyLang(lang) {
     if (e.dataset.origPh === undefined) e.dataset.origPh = e.placeholder;
     e.placeholder = splitLang(e.dataset.origPh, lang);
   });
+  renderTrackNote();
   if (FEED) { renderFeed(); renderCat(); renderSeries(); }
 }
 document.querySelectorAll('[data-lang-set]').forEach(b =>
@@ -579,7 +599,7 @@ const EN = {
   '無料':'Free', '有料':'Paid', '無料（条件付）':'Free (paced)', '全話無料':'All free',
   '読み切り':'One-shot', '試し読み':'Preview', '番外編':'Extra', 'お知らせ':'Notice',
   'お詫び':'Apology', '再掲':'Reprint', '未分類':'Unclassified', '転載':'Syndicated',
-  '公開予定':'Announced', '一括掲載':'Batch-listed', '既出':'Seen',
+  '公開予定':'Announced', '既出':'Seen',
   '作者未分離':'Author not split', '有料先行':'Paid early', '先行':'Early',
 
   /* words inside running text — lower case */
@@ -745,20 +765,14 @@ function detailList(rows) {
     const d = (r.feed_date || r.pub || '').slice(0, 10);
     if (d !== day) {
       day = d;
-      // Was 日付要確認 — "this date needs checking", which is our problem, not the reader's. The
-      // case is decided: every row it fires on is 一迅プラス, which stamps a whole back catalogue
-      // with one date. So the badge now states what the platform did, as a fact about the
-      // publication, and the underlying dates are being fixed separately.
-      const low = rows.filter(x => (x.pub || '').slice(0, 10) === d && x.conf === 'low');
-      html += `<div class="date-h">${esc(d)} <span class="dow">${esc(dow(d))}</span>${
-        low.length ? ` <span class="tag warn">${esc(L('一括掲載'))}</span>` : ''}</div>`;
-      if (low.length) {
-        const works = new Set(low.map(x => x.work));
-        html += `<div class="datewarn" style="padding:.3rem 0 .1rem">${T(
-          `${low.length}件・${works.size}作品が同じ日時で掲載 — 各話の公開日ではなく、まとめて登録された日付`,
-          `${low.length} releases across ${works.size} work${works.size > 1 ? 's' : ''} carry one
-           timestamp — the date the platform listed them together, not each chapter's own`)}</div>`;
-      }
+      // No badge here. This was 日付要確認, then 一括掲載 — each an improvement on the last and
+      // each still the wrong kind of thing to put in front of a reader, who can no more act on
+      // "the platform batched these" than on "we should check this". The general fact — that
+      // update tracking starts on a known date and dates before it are the platforms' own,
+      // imported in one pass and only as good as each platform's back-catalogue dating — is a
+      // single statement about the whole database. It belongs in the accompanying text, said once,
+      // not re-asserted per day on the rows that happen to trip a heuristic.
+      html += `<div class="date-h">${esc(d)} <span class="dow">${esc(dow(d))}</span></div>`;
     }
     const inner = `
       <div class="relhead">
@@ -1004,6 +1018,18 @@ Promise.all([
   const ser = feed.releases.filter(r => r.web !== 'promotional-sample-only').length;
   el('n-feed').textContent  = ser;
   el('n-cat').textContent   = idx.length;
+  // Said once, in the accompanying text, instead of per-row badges nobody can act on. Dates before
+  // this pipeline started watching are the platforms' own, imported in one pass — and a platform
+  // that stamps a whole back catalogue with the day it listed it gives a date that is real but is
+  // not a publication date. The cutoff is read from run.json rather than written in, so it stays
+  // true without anyone remembering to update it.
+  fetch('data/run.json', { cache: 'no-cache' })
+    .then(r => r.ok ? r.json() : null)
+    .then(run => {
+      TRACK_FROM = (run?.sources || []).map(s => s.retrieved).filter(Boolean).sort()[0] || null;
+      renderTrackNote();
+    }).catch(() => {});
+
   const plats = [...new Set(feed.releases.map(r => r.plat_name || r.plat))].sort();
   el('fplat').insertAdjacentHTML('beforeend',
     plats.map(p => `<option value="${p}">${p}</option>`).join(''));
