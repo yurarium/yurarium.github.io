@@ -136,6 +136,13 @@
   .rel .coll{color:var(--faint);font-size:.78rem}
   .rel .coll::before{content:"／ "}
   .rel .plat{color:var(--faint)}
+  /* Sources are ways in to one work, not competing entries, so they read as a row of small chips
+     under it rather than as another title-weight line. */
+  .srcs{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.25rem}
+  .src{font-size:.75rem;color:var(--dim);background:var(--line);border-radius:3px;
+    padding:.05rem .4rem;white-space:nowrap}
+  .src .srcn{color:var(--faint);margin-left:.3rem;font-variant-numeric:tabular-nums}
+  .src .fmt{color:var(--accent);font-weight:600}
   .rel .plat::before{content:"· ";color:var(--faint)}
   @media (max-width:34rem){
     .rel .by{max-width:100%}
@@ -677,7 +684,7 @@ function renderSeries() {
   let rows = SERIES.series.filter(r => {
     if (q && !norm(r.work).includes(q) && !norm(r.author).includes(q)) return false;
     if (state && r.state !== state) return false;
-    if (plat && r.platform !== plat) return false;
+    if (plat && !r.sources.some(s => s.platform === plat)) return false;
     if (freeOnly && !(r.free + r.free_timed)) return false;   // unknown is not free either
     return true;
   });
@@ -726,10 +733,17 @@ function renderSeries() {
             r.latest_ep ? ' ' + esc(r.latest_ep) : ''}` : ''}</div>
         <div class="line2">
           ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
-          <span class="meta plat">${esc(r.platform)}</span>
-          ${r.also_on.length ? `<span class="meta">・他 ${esc(r.also_on.join('、'))}</span>` : ''}
-          ${r.upcoming ? `<span class="meta" title="chapters the platform has announced but not yet published">${esc(T('公開予定'))} ${r.upcoming}</span>` : ''}
         </div>
+        <div class="srcs">${r.sources.map(s => {
+          // Each source states its OWN coverage. コミックDAYS holds 121 chapters of 雨夜の月 and
+          // マガポケ 10 — that is what we can see on each, not two different lengths of one story,
+          // so the count is shown per source rather than rolled up or summed.
+          const f = s.free + s.free_timed;
+          return `<span class="src" title="${s.chapters}${s.partial ? '+' : ''} chapters held here${
+              f ? `, ${f} free` : ''}${s.priced ? `, ${s.priced} paid` : ''}">${esc(s.platform)}${
+              s.format !== 'standard' ? ` <span class="fmt">${esc(s.format)}</span>` : ''}<span
+              class="srcn">${s.chapters}${s.partial ? '+' : ''}</span></span>`;
+        }).join('')}</div>
       ${r.url ? '</a>' : ''}
     </div>`;
   }).join('');
