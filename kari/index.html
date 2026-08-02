@@ -770,7 +770,7 @@ function renderCat() {
 }
 
 async function detail(id, li) {
-  if (!DETAIL) DETAIL = fetch('data/works.json').then(r => r.json());
+  if (!DETAIL) DETAIL = fetch('data/works.json', { cache: 'no-cache' }).then(r => r.json());
   const w = ((await DETAIL).works || []).find(x => x.work_id === id);
   if (!w) return;
   const b = w.marketing_label_basis || {}, fp = w.first_publication || {};
@@ -832,10 +832,16 @@ el('clearprefs').addEventListener('click', () => {
   location.reload();
 });
 
+// no-cache means REVALIDATE, not "don't cache": the browser still stores the file and the server
+// still answers 304 when it has not changed, so this costs a conditional request and not a
+// download. Without it the data is cached indefinitely and a reader keeps seeing the previous
+// build — 運命は役に立たない sat at a stale 6/10 through a hard reload while the file on disk said
+// 13. A bibliographic feed that silently serves yesterday is worse than one that loads slowly.
+const DATA = f => fetch('data/' + f, { cache: 'no-cache' }).then(r => r.json());
 Promise.all([
-  fetch('data/index.json').then(r => r.json()),
-  fetch('data/feed.json').then(r => r.json()),
-  fetch('data/series.json').then(r => r.json()).catch(() => null),
+  DATA('index.json'),
+  DATA('feed.json'),
+  DATA('series.json').catch(() => null),
 ]).then(([idx, feed, series]) => {
   INDEX = idx; FEED = feed; SERIES = series;
   const ser = feed.releases.filter(r => r.web !== 'promotional-sample-only').length;
