@@ -10,9 +10,15 @@
     --line:#e4dfda; --card:#fff; --accent:#8b5e83; --accent-bg:#f3ecf1;
     --warn-bg:#f7f0e6; --warn-fg:#7a5c2e; --ok-bg:#eaf1ea; --ok-fg:#3f6042;
   }
-  :root:not([data-theme="light"]){ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
-         --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
-         --warn-bg:#2c2416; --warn-fg:#c9a86a; --ok-bg:#1b241c; --ok-fg:#8fb094; }
+  /* Same two-rule shape as the main page: dark from the SYSTEM preference unless the reader has
+     explicitly chosen light, and dark from data-theme when they have explicitly chosen dark.
+     The media wrapper was missing here, so this page came out dark for everyone whatever their
+     system said — it only looked right because the author's system is dark. */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
+           --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
+           --warn-bg:#2c2416; --warn-fg:#c9a86a; --ok-bg:#1b241c; --ok-fg:#8fb094; }
+  }
   :root[data-theme="dark"]{ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
          --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
          --warn-bg:#2c2416; --warn-fg:#c9a86a; --ok-bg:#1b241c; --ok-fg:#8fb094; }
@@ -46,6 +52,15 @@
   details{margin:.5rem 0}
   summary{cursor:pointer;color:var(--accent);font-size:.85rem}
 </style>
+<script>
+/* The theme is chosen on the main page and stored under the same key; this page has no toggle of
+   its own but must not contradict the choice. Inline and before the body so the attribute is set
+   before first paint — done at the end of the document it would flash the wrong theme first. */
+try {
+  const m = JSON.parse(localStorage.getItem('yurarium.pref.theme') || '"auto"');
+  if (m === 'light' || m === 'dark') document.documentElement.setAttribute('data-theme', m);
+} catch (e) { /* private mode or storage disabled — fall back to the system preference */ }
+</script>
 <div class="wrap">
 <a class="back" href="./">&larr; 一覧に戻る / back to the database</a>
 <h1>内部状態 / build status</h1>
@@ -161,13 +176,20 @@ function render(d, feed) {
       <p class="note">This pipeline first retrieved anything on <b>${esc(from)}</b>. From that date
         a release is dated by what the platform said when we saw it, and the first sighting is
         written to a ledger and never revised.</p>
-      <p class="note">Everything earlier — ${before} of ${d.releases} releases — was imported in a
-        single pass from what each platform states about its own back catalogue. That is usually
-        the real publication date, but not always: several platforms date a whole back catalogue to
-        the day they listed it. 一迅プラス stamps 277 chapters across 16 works with one date;
-        竹コミ and アサコミ give every chapter they hold the same day. Those dates are real events —
-        they are just listing events, not publication events, and nothing on the page can tell
-        which a given pre-${esc(from)} date is.</p>`;
+      <p class="note">Everything earlier — ${before} of ${d.releases} releases — comes from what
+        each platform states about its own back catalogue. That is usually the real publication
+        date. Sometimes it is not: a run of chapters will share one exact timestamp. 一迅プラス
+        answers <code>2026-06-05T02:00:00Z</code> for chapter 1 and chapter 12 of the same
+        twelve-chapter serial; 竹コミ gives 386 chapters — 77% of everything it holds — a single
+        day.</p>
+      <p class="note">This is not a platform failing to record dates. The same platforms date
+        chapters correctly week to week; 一迅プラス has 74 distinct dates across 197 works. Nor is
+        there one explanation: a work arriving from another platform is re-dated on arrival, and so
+        is a whole catalogue at a relaunch — but it also happens to ordinary runs for no reason
+        visible from outside. What can be said is only what is observable: on these dates the
+        timestamp records when the chapter entered the platform's current system, not when it was
+        published, and nothing on the page distinguishes the two. At least 13 of the platforms read
+        here show it.</p>`;
   }
 
   // ── Coverage gaps ─────────────────────────────────────────────────────────

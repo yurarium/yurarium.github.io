@@ -1039,9 +1039,15 @@ Promise.all([
     // Count what the tab actually lists. Rows with no chapters are filtered out of the view, so
     // counting the raw array promised 45 works that are not there when you open it.
     el('n-ser').textContent = SERIES.series.filter(r => r.chapters).length;
-    const sp = [...new Set(SERIES.series.map(r => r.platform))].filter(Boolean).sort();
+    // From sources[], not a top-level r.platform — there is no such field. The series index became
+    // one row per WORK carrying a sources[] list when works on several platforms were collapsed
+    // into one row; this line was not updated, so every value was undefined, filter(Boolean) threw
+    // them all away and the dropdown rendered with only its "all platforms" placeholder. The
+    // FILTER already read sources[], so the control was unusable rather than wrong.
+    const sp = [...new Set(SERIES.series.flatMap(r => (r.sources || []).map(s => s.platform)))]
+      .filter(Boolean).sort();
     el('splat').insertAdjacentHTML('beforeend',
-      sp.map(p => `<option value="${p}">${p}</option>`).join(''));
+      sp.map(p => `<option value="${esc(p)}">${esc(p)}</option>`).join(''));
   }
   restoreView();
   renderFeed(); renderCat(); renderSeries();
