@@ -136,6 +136,10 @@
   .rel .coll{color:var(--faint);font-size:.78rem}
   .rel .coll::before{content:"／ "}
   .rel .plat{color:var(--faint)}
+  /* A channel sits inside its host, so it reads as a qualifier on the platform rather than beside
+     it as an equal. */
+  .rel .chan{color:var(--faint);font-size:.76rem}
+  .rel .chan::before{content:"／"}
   /* Sources are ways in to one work, not competing entries, so they read as a row of small chips
      under it rather than as another title-weight line. */
   .srcs{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.25rem}
@@ -653,6 +657,7 @@ function detailList(rows) {
         ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
         ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection — the collection's genre label does not necessarily describe every instalment">${esc(r.collection)}</span>` : ''}
         <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(r.plat_name || r.plat)}</span>
+        ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(r.plat_name)}, not a platform of its own">${esc(r.channel_name)}</span>` : ''}
         ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">転載</span>` : ''}
         ${(r.also_on && r.also_on.length) ? `<span class="meta">・他 ${esc(r.also_on.join('、'))}</span>` : ''}
       </div>
