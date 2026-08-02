@@ -127,6 +127,13 @@
   /* An English rendering that is OURS, or rests on an unverified reading, is marked — quietly.
      A dotted underline says "this is a rendering" without competing with the name it sits under. */
   .en.ours{border-bottom:1px dotted currentColor}
+  /* The English line is the same row again, one step quieter — enough to read as a translation
+     of the line above rather than as a second entry, which is what an equally-weighted duplicate
+     looks like. */
+  .bi{display:block}
+  .bi-en{display:block;opacity:.72;font-size:.94em;margin-top:.05rem}
+  .bi-en .t,.bi-en a{font-weight:500}
+  .crow .bi-en{font-size:.92em}
   /* The second line has to BREAK the line, and both places it appears are flex rows where
      display:block does not do that — a flex item is blockified already and still sits in the row.
      flex-basis:100% is what forces the wrap; the .cmain case is inline flow, so it needs its own. */
@@ -499,6 +506,30 @@ function L(ja, en) {
 }
 
 
+
+/* ── 併記 as two complete lines ───────────────────────────────────────────────────────────────
+   併記 means "show both", and the first attempt read it as "add an English title underneath" —
+   which left a compact row at three lines (Japanese row / English title / platform) and every
+   badge stubbornly Japanese. Taken at its word instead: render the WHOLE row once in each
+   language and stack the two. Everything that can be translated is, on its own line, so the
+   English line is a row a reader of English can use without reference to the one above it.
+   Duplication is the point, not a cost to minimise.
+
+   `inLang` renders a fragment as if the toggle were set to one language. Every label helper
+   already reads LANG, so nothing else has to know this is happening. */
+function inLang(lang, fn) {
+  const prev = LANG;
+  LANG = lang;
+  try { return fn(); } finally { LANG = prev; }
+}
+
+/* One row, or two stacked and distinguished. `render(lang)` must produce a complete row. */
+function bilingual(render, cls) {
+  if (LANG !== 'both') return render(LANG);
+  return `<span class="bi ${cls || ''}">${inLang('ja', () => render('ja'))}` +
+         `<span class="bi-en">${inLang('en', () => render('en'))}</span></span>`;
+}
+
 /* ── English names and readings ──────────────────────────────────────────────────────────────
    The build ships a kana reading plus all three romanisation styles precomputed, because the
    stored form is kana (NAMES-PLAN §8.1) and the style is the reader's choice — Yūri / Yuuri / Yuri
@@ -565,29 +596,22 @@ function enHtml(rec, cls) {
   return `<span class="en${mark} ${cls || ''}" title="${esc(why)}">${esc(e.text)}</span>`;
 }
 
-/* Titles: EN replaces, 両 adds a second line, JA shows nothing extra. Suppressed entirely when
-   there is nothing to add — §5b, no row should carry a duplicate of itself. */
+/* Titles: EN replaces the Japanese, and in 併記 the whole ROW is rendered again in English by
+   bilingual() rather than a title being appended here — so this only ever produces one language. */
 function workLabel(r) {
   const e = enOf(r.work_en);
   if (LANG === 'en' && e) return esc(e.text);
   return ruby(r.work, r.work_en);
 }
-function workSecond(r) {
-  if (LANG !== 'both') return '';
-  const e = enOf(r.work_en);
-  if (!e || e.text === r.work) return '';
-  return enHtml(r.work_en, 'ensecond');
-}
-/* Authors take no second line in any mode: a romanisation and its Japanese are the same name
+
+/* Authors likewise: one language, chosen by the caller's context — a romanisation and its Japanese are the same name
    twice, so the toggle picks one (§5b). */
 function authorLabel(r) {
   const e = enOf(r.author_en);
   if (!e) return esc(r.author || '');
   if (LANG === 'en') return enHtml(r.author_en, 'byen');
-  // 両 means both. An earlier draft showed the Japanese alone here on the grounds that a
-  // romanisation is "the same name twice" — true of the information, false of the reader, who
-  // chose 併記 precisely because one script is not enough for them.
-  if (LANG === 'both') return `${esc(r.author)} ${enHtml(r.author_en, 'byen')}`;
+  // No 'both' branch any more. In 併記 this is called twice — once per line — so pairing the two
+  // scripts HERE would print the romanisation twice on the English line and once on the Japanese.
   return esc(r.author || '');
 }
 
@@ -1005,10 +1029,12 @@ function compactList(rows) {
       // others", and the reader either wants the list or wants the row. The row names the
       // instalment that ranks highest and links to the work, which is where the rest are.
       const anyFree = g.some(x => x.free);
-      html += `<div class="crow">
-        ${kindTag(lead)}
+      // One complete row per language. Everything in it — the kind badge, the platform name, the
+      // access badges — is rendered again on the English line rather than left in Japanese, which
+      // is what 併記 asks for and what the previous "English title underneath" did not give.
+      const line = () => `${kindTag(lead)}
         <span class="ccell"><span class="cmain">${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${workLabel(lead)}</a>`
-                   : `<span style="font-weight:600">${workLabel(lead)}</span>`}${workSecond(lead)}
+                   : `<span style="font-weight:600">${workLabel(lead)}</span>`}
         ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc((lead.pub || '').slice(5))}</span>` : ''}
         ${lead.title_unsplit ? `<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">${esc(T('作者未分離'))}</span>` : ''}
         </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(platName(lead.plat_name || lead.plat))}</span>
@@ -1016,8 +1042,8 @@ function compactList(rows) {
         ${anyFree ? `<span class="k k-free">${esc(T('無料'))}</span>` : ''}
         ${(el('fmodel').value === 'all' && lead.ahead_n)
           ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) of this series sit ahead of the free line, newest ${esc(lead.ahead_ep || '')} — readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}. A standing fact about the series, not a count of what this update added.">${esc(T('有料先行'))}</span>` : ''}
-        </span></span>
-      </div>`;
+        </span></span>`;
+      html += `<div class="crow">${bilingual(line)}</div>`;
     }
     html += '</div></div>';
   }
@@ -1095,14 +1121,16 @@ function detailList(rows) {
       // not re-asserted per day on the rows that happen to trip a heuristic.
       html += `<div class="date-h">${esc(d)} <span class="dow">${esc(dow(d))}</span></div>`;
     }
-    const inner = `
+    // The whole row again in the other language, not an English title bolted under a Japanese
+    // row: kind, type, access, author, platform and syndication all re-render.
+    const inner = bilingual(() => `
       <div class="relhead">
         <span class="t">${workLabel(r)}</span>
         ${kindTag(r)}
         ${redundantType(r) ? '' : `<span class="tag grey">${esc(T(TYPE_JA[r.type] || r.type))}</span>`}
         ${accessTag(r)}
         ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
-      </div>${workSecond(r)}
+      </div>
       ${epLine(r) ? `<div class="ep">${esc(epLine(r))}</div>` : ''}
       ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">${esc(T('公開'))} ${esc(r.pub)}</div>` : ''}
       <div class="line2">
@@ -1113,7 +1141,7 @@ function detailList(rows) {
         ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">${esc(T('転載'))}</span>` : ''}
         ${(r.also_on && r.also_on.length) ? `<span class="meta">・${esc(L('他', 'also on'))} ${esc(r.also_on.join(LANG === 'en' ? ', ' : '、'))}</span>` : ''}
       </div>
-      ${caveats(r)}`;
+      ${caveats(r)}`);
     html += `<div class="rel${NON_STORY.has(r.type) ? ' quiet' : ''}">${
       r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">${inner}</a>` : inner
     }</div>`;
@@ -1179,7 +1207,11 @@ function renderSeries() {
     // denominator is visible rather than implied.
     const freeN = r.free + r.free_timed;
     const known = freeN + r.priced;
-    const acc = !r.chapters || !known ? ''
+    // A FUNCTION, not a string. Computed once it would be evaluated under 併記, where T() returns
+    // Japanese, and the English line would carry 無料 — the badge that most needs translating being
+    // the one that silently did not. Anything language-dependent has to be called inside
+    // bilingual()'s callback, not captured before it.
+    const acc = () => !r.chapters || !known ? ''
       : r.chapters === 1 ? (freeN ? `<span class="tag">${esc(T('無料'))}</span>`
                                   : `<span class="tag grey">${esc(T('有料'))}</span>`)
       : freeN >= r.chapters ? `<span class="tag">${esc(T('全話無料'))}</span>`
@@ -1190,17 +1222,15 @@ function renderSeries() {
       : `<span class="tag grey">${esc(T('有料'))}</span>`;
     return `<div class="rel">
       ${r.url ? `<a class="wlink" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">` : ''}
-        <div class="relhead">
+        ${bilingual(() => `<div class="relhead">
           <span class="t">${workLabel(r)}</span>
           <span class="k ${cls}" title="${esc(why)}">${esc(T(lbl))}</span>
-          ${acc}
-        </div>${workSecond(r)}
+          ${acc()}
+        </div>
         <div class="ep">${r.chapters}${r.partial ? '+' : ''} ${esc(T('話'))}${
           r.latest ? ` · ${esc(T('最新'))} ${esc(r.latest)}${
             r.latest_ep ? ' ' + esc(r.latest_ep) : ''}` : ''}</div>
-        <div class="line2">
-          ${r.author ? `<span class="meta by">${authorLabel(r)}</span>` : ''}
-        </div>
+        ${r.author ? `<div class="line2"><span class="meta by">${authorLabel(r)}</span></div>` : ''}`)}
       ${r.url ? '</a>' : ''}
         <div class="srcs">${r.sources.map(s => {
           // Each source states its OWN coverage. コミックDAYS holds 121 chapters of 雨夜の月 and
