@@ -34,7 +34,10 @@
      Collapsed by default; the coverage line above it stays visible. */
   .legend summary{cursor:pointer;margin-top:.5rem;font-weight:600;opacity:.85}
   .legend[open] summary{margin-bottom:.5rem}
-  nav{display:flex;gap:.3rem;border-bottom:1px solid var(--line);margin:1.1rem 0 1.1rem}
+  /* clear: the control bar floats right, and a third group made it tall enough that the tab strip
+     flowed alongside it and was squeezed to one character per line. */
+  nav{display:flex;gap:.3rem;border-bottom:1px solid var(--line);margin:1.1rem 0 1.1rem;clear:both}
+  nav button{white-space:nowrap}
   nav button{font:inherit;font-size:.88rem;background:none;border:0;border-bottom:2px solid transparent;
     padding:.5rem .8rem;color:var(--dim);cursor:pointer;margin-bottom:-1px}
   nav button[aria-selected=true]{color:var(--fg);border-bottom-color:var(--accent);font-weight:600}
@@ -121,6 +124,17 @@
     padding:1rem 0 .3rem;border-bottom:1px solid var(--line)}
   /* The weekday rides with the date but must not compete with it — it is orientation, not a label. */
   .dow{font-weight:400;opacity:.72}
+  /* An English rendering that is OURS, or rests on an unverified reading, is marked — quietly.
+     A dotted underline says "this is a rendering" without competing with the name it sits under. */
+  .en.ours{border-bottom:1px dotted currentColor}
+  /* The second line has to BREAK the line, and both places it appears are flex rows where
+     display:block does not do that — a flex item is blockified already and still sits in the row.
+     flex-basis:100% is what forces the wrap; the .cmain case is inline flow, so it needs its own. */
+  /* Its own line, but AFTER the badge row rather than splitting it — forcing a flex break in the
+     middle pushed the state and access badges onto a third line, so a 両-mode row cost two extra
+     lines instead of one. */
+  .ensecond{color:var(--dim);font-size:.82rem;font-weight:400;margin-top:.05rem;display:block}
+  .crow .ensecond{font-size:.76rem}
   .rel{padding:.6rem .2rem;border-bottom:1px solid var(--line)}
   .rel a{color:inherit;text-decoration:none}
   .rel a:hover .t{color:var(--accent);text-decoration:underline}
@@ -222,6 +236,14 @@
              says nothing to someone who does not read Japanese, which is exactly half the audience
              this button serves. So it carries its gloss permanently rather than conditionally. -->
         <button class="themebtn" data-lang-set="both" title="both / 併記">両 both</button>
+      </span>
+      <!-- Romanisation style. Taste, not correctness, so it is the reader's (NAMES-PLAN §8.1) —
+           and it is meaningless while nothing Latin is on screen, so it appears only when EN does.
+           All three are rendered at build time from the same kana, so switching costs nothing. -->
+      <span class="themebox" role="group" aria-label="ローマ字 / romanisation" id="rjbox" hidden>
+        <button class="themebtn" data-romaji-set="macron" title="Yūri">ū</button>
+        <button class="themebtn" data-romaji-set="double" title="Yuuri">uu</button>
+        <button class="themebtn" data-romaji-set="plain"  title="Yuri">u</button>
       </span>
       <span class="themebox" role="group" aria-label="配色 / colour theme">
         <!-- Theme is not a language, so unlike the buttons above these follow the locale like
@@ -438,6 +460,79 @@ function L(ja, en) {
   return LANG === 'en' ? (en !== undefined ? en : EN[ja] || ja) : ja;
 }
 
+
+/* ── English names and readings ──────────────────────────────────────────────────────────────
+   The build ships a kana reading plus all three romanisation styles precomputed, because the
+   stored form is kana (NAMES-PLAN §8.1) and the style is the reader's choice — Yūri / Yuuri / Yuri
+   are all derivable from kana and none from each other, so nothing is baked and no romanisation
+   engine ships to the browser.
+
+   A record is absent for most works, and that is a finished state, not a gap: §6 says show the
+   Japanese. So every function here returns null rather than a placeholder when it has nothing. */
+const PREF_ROMAJI = 'yurarium.pref.romaji';
+let ROMAJI_STYLE = prefGet(PREF_ROMAJI, 'macron');
+
+function enOf(rec) {
+  if (!rec) return null;
+  const styled = rec.romaji && rec.romaji[ROMAJI_STYLE];
+  // An English NAME the work actually has outranks a romanisation — a name is a name whatever the
+  // style toggle says, so official-jp, licensed and translated take `en` directly.
+  if (rec.en && rec.basis !== 'romaji')
+    return { text: rec.en, ours: rec.basis === 'translated',
+             unverified: !!rec.unverified, basis: rec.basis };
+  // basis 'romaji' is a ROMANISATION, so render it from the kana whenever we hold the kana —
+  // otherwise the style control silently does nothing to it, which is exactly the failure §8.1
+  // exists to prevent. Some records arrived as a romanised string with no reading behind it; those
+  // fall back to the stored string and cannot follow the toggle. That is a property of the record,
+  // not of the design, and it disappears as readings are filled in.
+  if (styled) return { text: styled, ours: true, unverified: !!rec.unverified, basis: 'romaji' };
+  if (rec.en) return { text: rec.en, ours: true, unverified: !!rec.unverified, basis: rec.basis };
+  return null;
+}
+
+/* Marked when it is OURS or when the reading behind it is unverified; unmarked when it is the
+   work's own English name or a licensor's. §5d: an unverified reading IS marked in the reader
+   interface, and that is not a return of 要確認 — it is a fact about the name, a reader who knows
+   Japanese can judge it on sight, and it stops a real person being authoritatively misnamed. */
+function enHtml(rec, cls) {
+  const e = enOf(rec);
+  if (!e) return '';
+  const why = e.unverified
+    ? 'reading not confirmed against a source — this romanisation may be wrong'
+    : e.ours
+      ? (e.basis === 'romaji' ? 'our romanisation of the Japanese, not an English title the work has'
+                              : 'our translation, not an English title the work has')
+      : 'the English name the work itself uses';
+  const mark = (e.ours || e.unverified) ? ' ours' : '';
+  return `<span class="en${mark} ${cls || ''}" title="${esc(why)}">${esc(e.text)}</span>`;
+}
+
+/* Titles: EN replaces, 両 adds a second line, JA shows nothing extra. Suppressed entirely when
+   there is nothing to add — §5b, no row should carry a duplicate of itself. */
+function workLabel(r) {
+  const e = enOf(r.work_en);
+  if (LANG === 'en' && e) return esc(e.text);
+  return esc(r.work);
+}
+function workSecond(r) {
+  // Not in the compact list. 両 mode costs a second line (§5b) and that is accepted — but compact
+  // exists to be scannable, and a third line per row (title / English / platform) is the thing it
+  // is for avoiding. Nothing is lost: EN mode REPLACES the title in compact, and the detail view
+  // carries both. So the reader who wants both languages at once asks for the view that has room.
+  if (el('fview') && el('fview').value === 'compact' && el('tab-feed') && !el('tab-feed').hidden)
+    return '';
+  if (LANG !== 'both') return '';
+  const e = enOf(r.work_en);
+  if (!e || e.text === r.work) return '';
+  return enHtml(r.work_en, 'ensecond');
+}
+/* Authors take no second line in any mode: a romanisation and its Japanese are the same name
+   twice, so the toggle picks one (§5b). */
+function authorLabel(r) {
+  const e = enOf(r.author_en);
+  return (LANG === 'en' && e) ? enHtml(r.author_en, 'byen') : esc(r.author || '');
+}
+
 /* Weekday, short. Web serials run to a weekly slot far more than to a date — a reader tracking a
    Saturday series reads the day before the number. Parsed as UTC so the label cannot slip a day on
    a browser west of Greenwich; these dates are calendar days, not instants. */
@@ -509,6 +604,25 @@ function renderTrackNote() {
      reliable.`) + ` <a href="status.html">${T('内部状態', 'build status')}</a>`;
 }
 
+function applyRomajiVisibility() {
+  const box = el('rjbox');
+  if (!box) return;
+  // Hidden in 日本語 mode: it would offer a choice about text that is not on the page.
+  box.hidden = (LANG === 'ja');
+  box.querySelectorAll('[data-romaji-set]').forEach(b =>
+    b.setAttribute('aria-pressed', String(b.dataset.romajiSet === ROMAJI_STYLE)));
+}
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-romaji-set]').forEach(b =>
+    b.addEventListener('click', () => {
+      ROMAJI_STYLE = b.dataset.romajiSet;
+      prefSet(PREF_ROMAJI, ROMAJI_STYLE);
+      applyRomajiVisibility();
+      if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+    }));
+  applyRomajiVisibility();
+});
+
 function applyLang(lang) {
   LANG = lang;
   prefSet('lang', lang);
@@ -529,6 +643,7 @@ function applyLang(lang) {
     if (e.dataset.origPh === undefined) e.dataset.origPh = e.placeholder;
     e.placeholder = splitLang(e.dataset.origPh, lang);
   });
+  applyRomajiVisibility();
   renderTrackNote();
   if (FEED) { renderFeed(); renderCat(); renderSeries(); }
 }
@@ -798,8 +913,8 @@ function compactList(rows) {
       const anyFree = g.some(x => x.free);
       html += `<div class="crow">
         ${kindTag(lead)}
-        <span class="ccell"><span class="cmain">${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${esc(lead.work)}</a>`
-                   : `<span style="font-weight:600">${esc(lead.work)}</span>`}
+        <span class="ccell"><span class="cmain">${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${workLabel(lead)}</a>`
+                   : `<span style="font-weight:600">${workLabel(lead)}</span>`}${workSecond(lead)}
         ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc((lead.pub || '').slice(5))}</span>` : ''}
         ${lead.title_unsplit ? `<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">${esc(T('作者未分離'))}</span>` : ''}
         </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(platName(lead.plat_name || lead.plat))}</span>
@@ -888,16 +1003,16 @@ function detailList(rows) {
     }
     const inner = `
       <div class="relhead">
-        <span class="t">${esc(r.work)}</span>
+        <span class="t">${workLabel(r)}</span>
         ${kindTag(r)}
         ${redundantType(r) ? '' : `<span class="tag grey">${esc(T(TYPE_JA[r.type] || r.type))}</span>`}
         ${accessTag(r)}
         ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
-      </div>
+      </div>${workSecond(r)}
       ${epLine(r) ? `<div class="ep">${esc(epLine(r))}</div>` : ''}
       ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">${esc(T('公開'))} ${esc(r.pub)}</div>` : ''}
       <div class="line2">
-        ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
+        ${r.author ? `<span class="meta by">${authorLabel(r)}</span>` : ''}
         ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection — the collection's genre label does not necessarily describe every instalment">${esc(r.collection)}</span>` : ''}
         <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(platName(r.plat_name || r.plat))}</span>
         ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(platName(r.plat_name))}, not a platform of its own">${esc(r.channel_name)}</span>` : ''}
@@ -982,15 +1097,15 @@ function renderSeries() {
     return `<div class="rel">
       ${r.url ? `<a class="wlink" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">` : ''}
         <div class="relhead">
-          <span class="t">${esc(r.work)}</span>
+          <span class="t">${workLabel(r)}</span>
           <span class="k ${cls}" title="${esc(why)}">${esc(T(lbl))}</span>
           ${acc}
-        </div>
+        </div>${workSecond(r)}
         <div class="ep">${r.chapters}${r.partial ? '+' : ''} ${esc(T('話'))}${
           r.latest ? ` · ${esc(T('最新'))} ${esc(r.latest)}${
             r.latest_ep ? ' ' + esc(r.latest_ep) : ''}` : ''}</div>
         <div class="line2">
-          ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
+          ${r.author ? `<span class="meta by">${authorLabel(r)}</span>` : ''}
         </div>
       ${r.url ? '</a>' : ''}
         <div class="srcs">${r.sources.map(s => {
