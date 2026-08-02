@@ -143,6 +143,9 @@
      underline gives romanisations, in the one form that works above a character. */
   rt.rt-guess{opacity:.72;font-style:italic}
   .rel .t ruby, .crow ruby{line-height:2.1}
+  /* The toggle carries ruby of its own, which needs the room a control does not normally give. */
+  .furibtn{line-height:1.9;padding-top:0;padding-bottom:.1rem}
+  .furibtn rt{font-size:.5em;opacity:.8}
   .rel{padding:.6rem .2rem;border-bottom:1px solid var(--line)}
   .rel a{color:inherit;text-decoration:none}
   .rel a:hover .t{color:var(--accent);text-decoration:underline}
@@ -250,13 +253,16 @@
            All three are rendered at build time from the same kana, so switching costs nothing. -->
       <!-- Furigana. Optional (§5c), off by default, and pointless while the Japanese is not on
            screen, so it hides in EN mode exactly as the romanisation control hides in 日本語. -->
+      <!-- The button demonstrates itself: 振仮名 wearing its own furigana. A bare ふ said nothing to
+           a reader who did not already know the feature, which is precisely the reader it is for. -->
       <span class="themebox" role="group" aria-label="ふりがな / furigana" id="furibox" hidden>
-        <button class="themebtn" id="furibtn" title="ふりがな / furigana">ふ</button>
+        <button class="themebtn furibtn" id="furibtn"
+                title="ふりがな / show readings above kanji"><ruby>振仮名<rt>ふりがな</rt></ruby></button>
       </span>
       <span class="themebox" role="group" aria-label="ローマ字 / romanisation" id="rjbox" hidden>
-        <button class="themebtn" data-romaji-set="macron" title="Yūri">ū</button>
-        <button class="themebtn" data-romaji-set="double" title="Yuuri">uu</button>
-        <button class="themebtn" data-romaji-set="plain"  title="Yuri">u</button>
+        <button class="themebtn" data-romaji-set="macron" title="macron — Tōkyō, Yūri">ō</button>
+        <button class="themebtn" data-romaji-set="double" title="doubled vowel — Toukyou, Yuuri">ou</button>
+        <button class="themebtn" data-romaji-set="plain"  title="plain — Tokyo, Yuri">o</button>
       </span>
       <span class="themebox" role="group" aria-label="配色 / colour theme">
         <!-- Theme is not a language, so unlike the buttons above these follow the locale like
@@ -493,14 +499,16 @@ const HAS_KANJI = /[\u4e00-\u9fff]/;
    here: ruby over the wrong character is worse than none, and unlike a whole-string reading it is
    wrong in a specific, visible place. Suppressed when the title has no kanji, because furigana over
    ワインガールズ tells a reader nothing they cannot already read. */
-const FURI_MAX = 24;
+/* Ruby per KANJI RUN — the build ships spans aligned with the anchor algorithm, so 雨夜の月 gets
+   あまよ over 雨夜 and つき over 月, with の bare. The earlier version stacked the whole reading over
+   the whole title, which is not how furigana works and broke the column on long titles.
+   No length cap is needed any more: aligned ruby wraps with the text it annotates. */
 function ruby(ja, rec) {
-  if (!FURIGANA || !rec || !rec.furigana || !HAS_KANJI.test(ja)) return esc(ja);
-  // Whole-string ruby over a long title is a single unbreakable run of kana wider than the column,
-  // and unreadable even where it fits. Level 2 (per-kanji alignment) is what would make long titles
-  // work; until then they simply do not get furigana.
-  if (ja.length > FURI_MAX || rec.furigana.length > FURI_MAX * 2) return esc(ja);
-  return `<ruby>${esc(ja)}<rt${rec.unverified ? ' class="rt-guess"' : ''}>${esc(rec.furigana)}</rt></ruby>`;
+  if (!FURIGANA || !rec || !rec.ruby || !HAS_KANJI.test(ja)) return esc(ja);
+  const cls = rec.unverified ? ' class="rt-guess"' : '';
+  return rec.ruby.map(([text, rd]) => rd
+    ? `<ruby>${esc(text)}<rt${cls}>${esc(rd)}</rt></ruby>`
+    : esc(text)).join('');
 }
 
 function enOf(rec) {
