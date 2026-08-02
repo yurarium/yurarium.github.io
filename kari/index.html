@@ -198,7 +198,9 @@
   @media (max-width:34rem){
     .ctlbar{float:none;justify-content:flex-end;margin-top:.45rem;gap:.6rem}
   }
-  .themebtn{font:inherit;font-size:.72rem;padding:.12rem .45rem;cursor:pointer;
+  /* Labels gained a second word (両 both, 自動 / auto) and started breaking mid-label on a phone,
+     which turns a three-button group into a six-line block. Let the GROUPS wrap instead. */
+  .themebtn{font:inherit;font-size:.72rem;padding:.12rem .45rem;cursor:pointer;white-space:nowrap;
     border:1px solid var(--line);background:var(--card);color:var(--dim);border-radius:4px}
   .themebtn[aria-pressed=true]{background:var(--accent-bg);color:var(--accent);
     border-color:var(--accent);font-weight:600}
@@ -215,12 +217,18 @@
       <span class="themebox" role="group" aria-label="表示言語 / interface language">
         <button class="themebtn" data-lang-set="ja"   title="日本語のみ">日本語</button>
         <button class="themebtn" data-lang-set="en"   title="English only">EN</button>
-        <button class="themebtn" data-lang-set="both" title="both / 併記">両</button>
+        <!-- Each language button labels itself IN its own language, so they do not follow the
+             toggle — 日本語 and EN are legible to the reader who wants them. 両 alone is not: it
+             says nothing to someone who does not read Japanese, which is exactly half the audience
+             this button serves. So it carries its gloss permanently rather than conditionally. -->
+        <button class="themebtn" data-lang-set="both" title="both / 併記">両 both</button>
       </span>
       <span class="themebox" role="group" aria-label="配色 / colour theme">
-        <button class="themebtn" data-theme-set="auto"  title="follow system">自動</button>
-        <button class="themebtn" data-theme-set="light" title="light">明</button>
-        <button class="themebtn" data-theme-set="dark"  title="dark">暗</button>
+        <!-- Theme is not a language, so unlike the buttons above these follow the locale like
+             the rest of the chrome. data-i18n puts them through the same splitter. -->
+        <button class="themebtn" data-theme-set="auto"  data-i18n title="follow system">自動 / auto</button>
+        <button class="themebtn" data-theme-set="light" data-i18n title="light">明 / light</button>
+        <button class="themebtn" data-theme-set="dark"  data-i18n title="dark">暗 / dark</button>
       </span>
     </span>
   </h1>
