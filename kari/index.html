@@ -641,10 +641,26 @@ function enHtml(rec, cls) {
 
 /* Titles: EN replaces the Japanese, and in 併記 the whole ROW is rendered again in English by
    bilingual() rather than a title being appended here — so this only ever produces one language. */
+/* A collection is a work, so it gets a work's rendering. It was the one title-shaped string on the
+   row that never went through the store. */
+/* Chapter names, collections and credit lines. Not titles — a chapter name is mostly structure
+   (第12話 -> Ch. 12) and a credit line is roles plus names — so they live in their own map, but
+   they are looked up exactly the same way. Falls through to the Japanese when nothing is held. */
+function phraseOf(ja) {
+  if (LANG !== 'en' || !ja || !NAMES || !NAMES.phrases) return ja;
+  return NAMES.phrases[foldKey(ja)] || ja;
+}
+
+function workTextOf(ja) {
+  const e = enOf(nameFor('titles', ja, null));
+  return (LANG === 'en' && e) ? e.text : phraseOf(ja);
+}
+
 function workLabel(r) {
   const e = enOf(nameFor('titles', r.work, r.work_en));
   const rec = nameFor('titles', r.work, r.work_en);
   if (LANG === 'en' && e) return esc(e.text) + uncertainMark(rec);
+  if (LANG === 'en') { const ph = phraseOf(r.work); if (ph !== r.work) return esc(ph); }
   return ruby(r.work, rec) + (FURIGANA ? uncertainMark(rec) : '');
 }
 
@@ -653,8 +669,17 @@ function workLabel(r) {
 function authorLabel(r) {
   const rec = nameFor('authors', (r.author || '').trim(), r.author_en);
   const e = enOf(rec);
-  if (!e) return esc(r.author || '');
-  if (LANG === 'en') return enHtml(rec, 'byen');
+  if (!e) {
+    const ph = phraseOf((r.author || '').trim());
+    return esc(ph);
+  }
+  if (LANG === 'en') {
+    // A credit line has no reading of its own — it is roles and several people — so it is rendered
+    // as a phrase rather than a name, and only falls back to the name store for a single author.
+    const ph = phraseOf((r.author || '').trim());
+    if (ph !== (r.author || '').trim()) return esc(ph);
+    return enHtml(rec, 'byen');
+  }
   // No 'both' branch any more. In 併記 this is called twice — once per line — so pairing the two
   // scripts HERE would print the romanisation twice on the English line and once on the Japanese.
   return esc(r.author || '');
@@ -695,6 +720,7 @@ const PLAT_EN = {
   '竹コミ':'Takecomi', 'キミコミ':'Kimicomi', 'ビッコミ':'Bikkomi', 'ライコミ':'Raicomi',
   'Gコミ':'G-Comi', 'アサコミ':'Asacomi', 'きららベース':'Kirara Base',
   'GANMA!(更新終了)':'GANMA! (ended)', 'コミックゼノン':'Comic Zenon',
+  'マイナビニュース':'Mynavi News', 'ヤンジャン+':'Yanjan+', 'コミックエッセイ劇場':'Comic Essay Gekijo',
 };
 /* Creator role markers, which arrive welded into the credit string: "[著]森永みるく",
    "[漫画]東雲水生 / [脚本]駒尾真子". The NAME is a proper noun and stays as it is in every mode —
@@ -1123,6 +1149,26 @@ function accessTag(r) {
 // Platforms routinely name a one-shot's episode after the work, so the detail view showed
 // 吸血少女とウンディーネ with 【読切】吸血少女とウンディーネ directly beneath it. Strip the repeat, and
 // the bracketed 読切 marker with it — the kind tag beside the title already says that.
+/* The rendered chapter name.
+
+   epLine() strips the work's name off the front of its own chapter name — 大室家の135 under the
+   work 大室家 becomes の135 — and that strip has to happen AFTER translation, not before. Stripping
+   first left a fragment that was never a key in the store, so it fell through untranslated and put
+   the one remaining piece of Japanese on the English page.
+
+   So: render the WHOLE chapter name, then strip the rendered work name off the front of it. */
+function epText(r) {
+  if (LANG !== 'en') return epLine(r);
+  const full = phraseOf((r.ep || '').trim());
+  if (!full) return '';
+  const w = workTextOf(r.work);
+  let ep = full;
+  if (w && ep.startsWith(w)) ep = ep.slice(w.length).replace(/^[\s:：・—-]+/, '');
+  ep = ep.trim();
+  // A remainder that is only a particle or a counter is a fragment, not a name.
+  return (!ep || ep === w || /^(no|wa|ga|ni|de|to|Ch\.?)$/i.test(ep)) ? '' : ep;
+}
+
 function epLine(r) {
   let ep = (r.ep || '').trim();
   if (!ep) return '';
@@ -1176,15 +1222,15 @@ function detailList(rows) {
         ${accessTag(r)}
         ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
       </div>
-      ${epLine(r) ? `<div class="ep">${esc(epLine(r))}</div>` : ''}
+      ${epText(r) ? `<div class="ep">${esc(epText(r))}</div>` : ''}
       ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">${esc(T('公開'))} ${esc(r.pub)}</div>` : ''}
       <div class="line2">
         ${r.author ? `<span class="meta by">${authorLabel(r)}</span>` : ''}
-        ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection — the collection's genre label does not necessarily describe every instalment">${esc(r.collection)}</span>` : ''}
+        ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection — the collection's genre label does not necessarily describe every instalment">${esc(workTextOf(r.collection))}</span>` : ''}
         <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(platName(r.plat_name || r.plat))}</span>
         ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(platName(r.plat_name))}, not a platform of its own">${esc(r.channel_name)}</span>` : ''}
         ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">${esc(T('転載'))}</span>` : ''}
-        ${(r.also_on && r.also_on.length) ? `<span class="meta">・${esc(L('他', 'also on'))} ${esc(r.also_on.join(LANG === 'en' ? ', ' : '、'))}</span>` : ''}
+        ${(r.also_on && r.also_on.length) ? `<span class="meta">${LANG === 'en' ? '· ' : '・'}${esc(L('他', 'also on'))} ${esc(r.also_on.map(platName).join(LANG === 'en' ? ', ' : '、'))}</span>` : ''}
       </div>
       ${caveats(r)}`);
     html += `<div class="rel${NON_STORY.has(r.type) ? ' quiet' : ''}">${
@@ -1274,7 +1320,7 @@ function renderSeries() {
         </div>
         <div class="ep">${r.chapters}${r.partial ? '+' : ''} ${esc(T('話'))}${
           r.latest ? ` · ${esc(T('最新'))} ${esc(r.latest)}${
-            r.latest_ep ? ' ' + esc(r.latest_ep) : ''}` : ''}</div>
+            r.latest_ep ? ' ' + esc(phraseOf(r.latest_ep)) : ''}` : ''}</div>
         ${r.author ? `<div class="line2"><span class="meta by">${authorLabel(r)}</span></div>` : ''}`)}
       ${r.url ? '</a>' : ''}
         <div class="srcs">${r.sources.map(s => {
