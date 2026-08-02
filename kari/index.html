@@ -153,6 +153,7 @@
      The per-item hook stays, because it becomes meaningful as sourced readings arrive; until then
      the honest place to say "these are guesses" is once, above the list. */
   rt.rt-guess{opacity:.85}
+  .unc{font-size:.62em;color:var(--warn-fg);margin-left:.1em;font-weight:600;cursor:help}
   .rel .t ruby, .crow ruby{line-height:2.1}
   /* The toggle carries ruby of its own, which needs the room a control does not normally give.
      padding-top:0 put the rt hard against the border — ruby needs headroom above the line box, not
@@ -233,7 +234,12 @@
      control that is present but clipped is worse than one that wrapped. */
   .ctlbar{float:right;display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;
     justify-content:flex-end}
-  .ctlbar > .themebox{flex:0 0 auto}
+  .ctlbar > .ctlrow{display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;flex:0 0 auto}
+  .ctlrow > .themebox{flex:0 0 auto}
+  /* The dependent row breaks to its own line and right-aligns under the rest. Needs the same
+     specificity as the rule above it — `.ctlbar > .ctlrow` beats a bare `.ctlrow-dep`, so the
+     flex-basis was being overridden and all three rows stayed on one line. */
+  .ctlbar > .ctlrow-dep{flex-basis:100%;justify-content:flex-end;margin-top:.1rem}
   .conditional.inert{visibility:hidden;pointer-events:none}
   /* The theme labels are the only ones that change length with the language — 自動 / auto / 自動 /
      auto — and the language and romanisation groups are self-labelling, so they never move. Left
@@ -264,6 +270,11 @@
 <header>
   <h1>Yurarium <span class="tag" data-i18n>仮 / provisional</span>
     <span class="ctlbar">
+      <!-- Row 1: the controls that are ALWAYS applicable, so they never move.
+           Row 2: the two that depend on the language. Splitting every group onto its own line
+           cost three rows for six buttons; pairing the stable ones keeps it to two, which is the
+           fewest that still lets the conditional pair appear and vanish without shifting them. -->
+      <span class="ctlrow">
       <span class="themebox" role="group" aria-label="表示言語 / interface language">
         <button class="themebtn" data-lang-set="ja"   title="日本語のみ">日本語</button>
         <button class="themebtn" data-lang-set="en"   title="English only">EN</button>
@@ -276,6 +287,15 @@
       <!-- Romanisation style. Taste, not correctness, so it is the reader's (NAMES-PLAN §8.1) —
            and it is meaningless while nothing Latin is on screen, so it appears only when EN does.
            All three are rendered at build time from the same kana, so switching costs nothing. -->
+      <span class="themebox" role="group" aria-label="配色 / colour theme" id="thbox">
+        <!-- Theme is not a language, so unlike the buttons above these follow the locale like
+             the rest of the chrome. data-i18n puts them through the same splitter. -->
+        <button class="themebtn" data-theme-set="auto"  data-i18n title="follow system">自動 / auto</button>
+        <button class="themebtn" data-theme-set="light" data-i18n title="light">明 / light</button>
+        <button class="themebtn" data-theme-set="dark"  data-i18n title="dark">暗 / dark</button>
+      </span>
+      </span>
+      <span class="ctlrow ctlrow-dep">
       <!-- Furigana. Optional (§5c), off by default, and pointless while the Japanese is not on
            screen, so it hides in EN mode exactly as the romanisation control hides in 日本語. -->
       <!-- The button demonstrates itself: 振仮名 wearing its own furigana. A bare ふ said nothing to
@@ -289,15 +309,9 @@
         <button class="themebtn" data-romaji-set="double" title="doubled vowel — Toukyou, Yuuri">ou</button>
         <button class="themebtn" data-romaji-set="plain"  title="plain — Tokyo, Yuri">o</button>
       </span>
-      <span class="themebox" role="group" aria-label="配色 / colour theme" id="thbox">
-        <!-- Theme is not a language, so unlike the buttons above these follow the locale like
-             the rest of the chrome. data-i18n puts them through the same splitter. -->
-        <button class="themebtn" data-theme-set="auto"  data-i18n title="follow system">自動 / auto</button>
-        <button class="themebtn" data-theme-set="light" data-i18n title="light">明 / light</button>
-        <button class="themebtn" data-theme-set="dark"  data-i18n title="dark">暗 / dark</button>
       </span>
-    </span>
-  </h1>
+      </span>
+    </h1>
 </header>
 
 <nav role="tablist">
@@ -583,6 +597,17 @@ function enOf(rec) {
    work's own English name or a licensor's. §5d: an unverified reading IS marked in the reader
    interface, and that is not a return of 要確認 — it is a fact about the name, a reader who knows
    Japanese can judge it on sight, and it stops a real person being authoritatively misnamed. */
+/* A reading we assembled character by character, because nothing could read the word. Marked
+   visibly and separately from an ordinary guess: those are merely unsourced, this one is likely to
+   be WRONG in a specific way a reader can see — the isolated reading of a character is often not
+   its reading in a compound, so 抱き came out カカエ where it should be ダキ. The mark is the
+   smallest thing that cannot be mistaken for part of the name. */
+function uncertainMark(rec) {
+  return rec && rec.uncertain
+    ? `<sup class="unc" title="${esc('this reading was assembled character by character and may well be wrong')}">[?]</sup>`
+    : '';
+}
+
 function enHtml(rec, cls) {
   const e = enOf(rec);
   if (!e) return '';
@@ -593,15 +618,15 @@ function enHtml(rec, cls) {
                               : 'our translation, not an English title the work has')
       : 'the English name the work itself uses';
   const mark = (e.ours || e.unverified) ? ' ours' : '';
-  return `<span class="en${mark} ${cls || ''}" title="${esc(why)}">${esc(e.text)}</span>`;
+  return `<span class="en${mark} ${cls || ''}" title="${esc(why)}">${esc(e.text)}</span>${uncertainMark(rec)}`;
 }
 
 /* Titles: EN replaces the Japanese, and in 併記 the whole ROW is rendered again in English by
    bilingual() rather than a title being appended here — so this only ever produces one language. */
 function workLabel(r) {
   const e = enOf(r.work_en);
-  if (LANG === 'en' && e) return esc(e.text);
-  return ruby(r.work, r.work_en);
+  if (LANG === 'en' && e) return esc(e.text) + uncertainMark(r.work_en);
+  return ruby(r.work, r.work_en) + (FURIGANA ? uncertainMark(r.work_en) : '');
 }
 
 /* Authors likewise: one language, chosen by the caller's context — a romanisation and its Japanese are the same name
