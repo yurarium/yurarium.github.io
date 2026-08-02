@@ -155,6 +155,14 @@
   footer a{color:var(--accent)}
   [hidden]{display:none !important}
   .themebox{float:right;display:inline-flex;gap:.15rem}
+  /* Two unrelated settings sitting flush against each other read as one control. A gap plus a
+     hairline says they are separate without adding a label to either. */
+  .langbox{margin-right:.75rem;padding-right:.75rem;border-right:1px solid var(--line)}
+  @media (max-width:34rem){
+    .themebox{float:none}
+    .langbox{margin-right:.5rem;padding-right:.5rem}
+    h1 .themebox{margin-top:.4rem}
+  }
   .themebtn{font:inherit;font-size:.72rem;padding:.12rem .45rem;cursor:pointer;
     border:1px solid var(--line);background:var(--card);color:var(--dim);border-radius:4px}
   .themebtn[aria-pressed=true]{background:var(--accent-bg);color:var(--accent);
@@ -165,6 +173,11 @@
 <div class="wrap">
 <header>
   <h1>Yurarium <span class="tag">仮 / provisional</span>
+    <span class="themebox langbox">
+      <button class="themebtn" data-lang-set="ja"   title="日本語のみ">日本語</button>
+      <button class="themebtn" data-lang-set="en"   title="English only">EN</button>
+      <button class="themebtn" data-lang-set="both" title="both / 併記">両</button>
+    </span>
     <span class="themebox">
       <button class="themebtn" data-theme-set="auto"  title="follow system">自動</button>
       <button class="themebtn" data-theme-set="light" title="light">明</button>
@@ -177,6 +190,7 @@
 
 <nav role="tablist">
   <button role="tab" aria-selected="true"  data-tab="feed">更新 <span class="n" id="n-feed"></span></button>
+  <button role="tab" aria-selected="false" data-tab="ser">作品 <span class="n" id="n-ser"></span></button>
   <button role="tab" aria-selected="false" data-tab="cat">単行本 <span class="n" id="n-cat"></span></button>
 </nav>
 
@@ -199,7 +213,7 @@
       <option value="detail">詳細 / detailed</option>
     </select>
     <select id="fplat"><option value="">全プラットフォーム / all platforms</option></select>
-    <button id="freset" class="themebtn" title="clear search and all filters">リセット / reset</button>
+    <button id="freset" class="themebtn" data-i18n title="clear search and all filters">リセット / reset</button>
   </div>
   <p class="count" id="fcount"></p>
   <div id="feed"></div>
@@ -207,6 +221,33 @@
 </section>
 
 <!-- ── CATALOGUE ──────────────────────────────────────────────────── -->
+<section id="tab-ser" hidden>
+  <div class="controls">
+    <input type="search" id="sq" placeholder="検索 — 作品名・作者 / work, creator" autocomplete="off">
+    <select id="sstate">
+      <option value="">すべて / all</option>
+      <option value="active">更新中 — 45日以内 / updating</option>
+      <option value="oneshot">読切 / one-shots</option>
+      <option value="slow">停滞 — 1年以内 / slow</option>
+      <option value="dormant">休眠 — 1年超 / dormant</option>
+    </select>
+    <select id="sfree">
+      <option value="">課金状況を問わない / any access</option>
+      <option value="free">無料で読める話がある / has free chapters</option>
+    </select>
+    <select id="splat"><option value="">全プラットフォーム / all platforms</option></select>
+    <select id="ssort">
+      <option value="latest">最終更新順 / last updated</option>
+      <option value="chapters">話数順 / chapter count</option>
+      <option value="work">作品名順 / title</option>
+    </select>
+    <button id="sreset" class="themebtn" data-i18n title="clear search and all filters">リセット / reset</button>
+  </div>
+  <p class="count" id="scount"></p>
+  <div id="serlist"></div>
+  <p class="empty" id="sempty" hidden>該当なし / no matches</p>
+</section>
+
 <section id="tab-cat" hidden>
   
   <div class="controls" style="margin-top:.9rem">
@@ -217,7 +258,7 @@
       <option value="yomi">五十音順 / by reading</option>
       <option value="vols">巻数順 / by volumes</option>
     </select>
-    <button id="creset" class="themebtn" style="order:99" title="clear search and all filters">リセット / reset</button>
+    <button id="creset" class="themebtn" style="order:99" title="clear search and all filters" data-i18n>リセット / reset</button>
     <select id="filter">
       <option value="">すべて / all works</option>
       <option value="multi">複数巻 / multi-volume</option>
@@ -238,7 +279,7 @@
     synopses or manga are hosted here.</p>
   <p>This site stores your display preferences — theme, tab and filters — in your own browser's
     local storage, written only when you choose them. Nothing is transmitted and no cookies are
-    set. <button id="clearprefs" class="themebtn">設定を消去 / clear</button></p>
+    set. <button id="clearprefs" class="themebtn" data-i18n>設定を消去 / clear</button></p>
 </footer>
 </div>
 
@@ -272,7 +313,8 @@ document.querySelectorAll('.themebtn[data-theme-set]').forEach(b =>
   }));
 
 // Search text is deliberately NOT persisted — restoring a stale query on load is surprising.
-const VIEW_FIELDS = ['fmodel', 'ftype', 'fview', 'fplat', 'sort', 'filter'];
+const VIEW_FIELDS = ['fmodel', 'ftype', 'fview', 'fplat', 'sort', 'filter',
+                     'sstate', 'sfree', 'splat', 'ssort'];
 function saveView() {
   const v = { tab: document.querySelector('nav button[aria-selected=true]')?.dataset.tab };
   VIEW_FIELDS.forEach(id => { const e = el(id); if (e) v[id] = e.value; });
@@ -294,7 +336,45 @@ const norm = s => String(s||'').normalize('NFKC').toLowerCase()
 const el = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-let INDEX = [], FEED = null, DETAIL = null, open = null;
+let INDEX = [], FEED = null, SERIES = null, DETAIL = null, open = null;
+let LANG = prefGet('lang', 'both'), STATS = null, COV = null;
+
+/* Split the "日本語 / english" strings the interface is already written in. Captured once into a
+   data attribute, so switching back and forth is lossless — re-splitting an already-split string
+   would strip a further half each time. */
+function splitLang(s, lang) {
+  const i = s.indexOf(' / ');
+  if (i < 0) return lang === 'en' ? (EN[s.trim()] || s) : s;
+  return lang === 'ja' ? s.slice(0, i) : lang === 'en' ? s.slice(i + 3) : s;
+}
+function applyLang(lang) {
+  LANG = lang;
+  prefSet('lang', lang);
+  document.documentElement.lang = lang === 'en' ? 'en' : 'ja';
+  document.querySelectorAll('[data-lang-set]').forEach(b =>
+    b.setAttribute('aria-pressed', String(b.dataset.langSet === lang)));
+  document.querySelectorAll('option, [data-i18n], nav button').forEach(e => {
+    if (e.dataset.orig === undefined) {
+      // nav buttons carry a count span that must survive the rewrite
+      const n = e.querySelector && e.querySelector('.n');
+      e.dataset.orig = n ? e.firstChild.textContent.trim() : e.textContent.trim();
+    }
+    const out = splitLang(e.dataset.orig, lang);
+    const n = e.querySelector && e.querySelector('.n');
+    if (n) { e.firstChild.textContent = out + ' '; } else { e.textContent = out; }
+  });
+  document.querySelectorAll('input[placeholder]').forEach(e => {
+    if (e.dataset.origPh === undefined) e.dataset.origPh = e.placeholder;
+    e.placeholder = splitLang(e.dataset.origPh, lang);
+  });
+  if (STATS) el('hstats').textContent =
+    lang === 'en' ? STATS.en : lang === 'ja' ? STATS.ja : `${STATS.ja} / ${STATS.en}`;
+  if (COV) el('hcov').textContent =
+    lang === 'en' ? COV.en : lang === 'ja' ? COV.ja : `${COV.ja} / ${COV.en}`;
+  if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+}
+document.querySelectorAll('[data-lang-set]').forEach(b =>
+  b.addEventListener('click', () => applyLang(b.dataset.langSet)));
 
 const TYPE_JA = { chapter:'話', oneshot:'読み切り', trial:'試し読み', extra:'番外編',
                   notice:'お知らせ', 'apology-art':'お詫び', republication:'再掲',
@@ -309,7 +389,7 @@ const NON_STORY = new Set(['trial', 'notice', 'apology-art', 'republication']);
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('nav button').forEach(x =>
     x.setAttribute('aria-selected', String(x === b)));
-  ['feed','cat'].forEach(t => el('tab-'+t).hidden = (t !== b.dataset.tab));
+  ['feed','ser','cat'].forEach(t => el('tab-'+t).hidden = (t !== b.dataset.tab));
   saveView();
 }));
 
@@ -335,8 +415,10 @@ function renderFeed() {
   });
 
   el('fcount').textContent = rows.length === FEED.releases.length
-    ? `${rows.length} 件 / total`
-    : `${rows.length} 件 / shown　·　${FEED.releases.length} 件 / total`;
+    ? nTotal(rows.length)
+    : (LANG === 'en' ? `${rows.length} shown · ${FEED.releases.length} total`
+       : LANG === 'ja' ? `${rows.length} 件表示　·　${FEED.releases.length} 件`
+       : `${rows.length} 件 / shown　·　${FEED.releases.length} 件 / total`);
   el('fempty').hidden = rows.length > 0;
   el('feed').innerHTML = view === 'compact' ? compactList(rows) : detailList(rows);
   if (view === 'compact') stackWrappedRows();
@@ -363,6 +445,28 @@ function stackWrappedRows() {
   for (const r of wrapped) r.classList.add('stacked');
 }
 
+/* ── interface language ───────────────────────────────────
+   Most chrome is already written as "日本語 / english", so the switch splits those at the
+   separator rather than duplicating every string in a table. What needs a table is the chrome that
+   is Japanese-only — tab names and the badges.
+
+   The DATA is never translated. Work titles, creator names and platform names are the record, and
+   an English rendering of 百合ナビ or くずしろ would be an invention, not a translation. */
+const EN = {
+  '更新':'Updates', '作品':'Works', '単行本':'Volumes',
+  '更新中':'Updating', '停滞':'Slow', '休眠':'Dormant', '不明':'Unknown',
+  '読切':'One-shot', '最終回':'Final', '新連載':'New', '新話':'Chapter', 'その他':'Other',
+  '無料':'Free', '有料':'Paid', '無料（条件付）':'Free*', '全話無料':'All free',
+  '話':'ch', '読み切り':'one-shot', '試し読み':'preview', '番外編':'extra',
+  'お知らせ':'notice', 'お詫び':'apology', '再掲':'reprint', '未分類':'unclassified',
+  '公開':'published', '転載':'syndicated', '公開予定':'announced',
+};
+function T(s) { return LANG === 'en' ? (EN[s] || s) : s; }
+// Counts are generated, so they cannot carry the "日本語 / english" form the rest of the chrome uses.
+function nTotal(n) {
+  return LANG === 'en' ? `${n} total` : LANG === 'ja' ? `${n} 件` : `${n} 件 / total`;
+}
+
 const KIND = {
   'oneshot':     ['読切',   'k-one', 'complete in one instalment'],
   'final':       ['最終回', 'k-fin', 'the series ends here'],
@@ -380,7 +484,7 @@ function kindTag(r) {
   const q = r.kind === 'final' && r.final_inferred;
   return `<span class="k ${cls}" title="${esc(why)}${
     q ? ' — inferred: the series is marked 完結 and this is the newest chapter we hold, but no title states it is the last' : ''
-  }">${label}${q ? '?' : ''}</span>`;
+  }">${esc(T(label))}${q ? '?' : ''}</span>`;
 }
 
 function byDate(rows) {
@@ -458,13 +562,13 @@ function redundantType(r) {
 
 // One badge for access, because free / free-timed / paid are one question with one answer.
 function accessTag(r) {
-  if (r.free) return '<span class="tag">無料</span>';
+  if (r.free) return `<span class="tag">${esc(T('無料'))}</span>`;
   const m = r.access_modes || [];
   if (m.includes('free-timed'))
-    return '<span class="tag" title="readable now without paying — a 作品チケット or a limited free window">無料（条件付）</span>';
+    return `<span class="tag" title="readable now without paying — a 作品チケット or a limited free window">${esc(T('無料（条件付）'))}</span>`;
   if (r.ahead_n)
     return `<span class="tag grey" title="readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">先行 ${esc(r.ahead_n)}</span>`;
-  if (m.includes('purchase')) return '<span class="tag grey">有料</span>';
+  if (m.includes('purchase')) return `<span class="tag grey">${esc(T('有料'))}</span>`;
   return '';
 }
 
@@ -517,12 +621,12 @@ function detailList(rows) {
       <div class="relhead">
         <span class="t">${esc(r.work)}</span>
         ${kindTag(r)}
-        ${redundantType(r) ? '' : `<span class="tag grey">${esc(TYPE_JA[r.type] || r.type)}</span>`}
+        ${redundantType(r) ? '' : `<span class="tag grey">${esc(T(TYPE_JA[r.type] || r.type))}</span>`}
         ${accessTag(r)}
         ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
       </div>
       ${epLine(r) ? `<div class="ep">${esc(epLine(r))}</div>` : ''}
-      ${r.late_discovered ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">公開 ${esc(r.pub)}</div>` : ''}
+      ${r.late_discovered ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">${esc(T('公開'))} ${esc(r.pub)}</div>` : ''}
       <div class="line2">
         ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
         <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(r.plat_name || r.plat)}</span>
@@ -535,6 +639,66 @@ function detailList(rows) {
     }</div>`;
   }
   return html;
+}
+
+/* ── series ───────────────────────────────────────────────
+   Built from data/series.json, which is the FULL chapter history per (work, platform) rather than
+   the 60-day feed window. That is the whole point of the tab: a series between arcs is absent from
+   the updates feed and perfectly readable, and it is exactly the kind a reader is looking for. */
+const SSTATE = {
+  active:  ['更新中', 'k-new',   'a chapter within the last 45 days'],
+  oneshot: ['読切',   'k-one',   'complete in one instalment — finished, not dormant'],
+  slow:    ['停滞',   'k-ch',    'last chapter within a year'],
+  dormant: ['休眠',   'k-unk',   'nothing for over a year'],
+  unknown: ['不明',   'k-unk',   'the platform states no date we could read'],
+};
+
+function renderSeries() {
+  if (!SERIES) return;
+  const q = norm(el('sq').value.trim());
+  const state = el('sstate').value, freeOnly = el('sfree').value, plat = el('splat').value;
+  const sort = el('ssort').value;
+  let rows = SERIES.series.filter(r => {
+    if (q && !norm(r.work).includes(q) && !norm(r.author).includes(q)) return false;
+    if (state && r.state !== state) return false;
+    if (plat && r.platform !== plat) return false;
+    if (freeOnly && !(r.free + r.free_timed)) return false;
+    return true;
+  });
+  rows = rows.slice().sort(
+    sort === 'chapters' ? (a, b) => b.chapters - a.chapters
+    : sort === 'work'   ? (a, b) => a.work.localeCompare(b.work, 'ja')
+    : (a, b) => (b.latest || '').localeCompare(a.latest || ''));
+
+  el('scount').textContent = nTotal(rows.length);
+  el('sempty').hidden = rows.length > 0;
+  el('serlist').innerHTML = rows.map(r => {
+    const [lbl, cls, why] = SSTATE[r.state] || SSTATE.unknown;
+    // Free count is the reader's actual question — not "is it free" but "how much of it is".
+    const freeN = r.free + r.free_timed;
+    const acc = !r.chapters ? ''
+      : freeN >= r.chapters ? `<span class="tag">${esc(T('全話無料'))}</span>`
+      : freeN ? `<span class="tag">${freeN}${LANG === 'en' ? ' free' : '話無料'}</span>`
+      : `<span class="tag grey">${esc(T('有料'))}</span>`;
+    return `<div class="rel">
+      ${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">` : ''}
+        <div class="relhead">
+          <span class="t">${esc(r.work)}</span>
+          <span class="k ${cls}" title="${esc(why)}">${esc(T(lbl))}</span>
+          ${acc}
+        </div>
+        <div class="ep">${r.chapters}${r.partial ? '+' : ''} ${esc(T('話'))}${
+          r.latest ? ` · ${LANG === 'en' ? 'latest' : '最新'} ${esc(r.latest)}${
+            r.latest_ep ? ' ' + esc(r.latest_ep) : ''}` : ''}</div>
+        <div class="line2">
+          ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
+          <span class="meta plat">${esc(r.platform)}</span>
+          ${r.also_on.length ? `<span class="meta">・他 ${esc(r.also_on.join('、'))}</span>` : ''}
+          ${r.upcoming ? `<span class="meta" title="chapters the platform has announced but not yet published">${esc(T('公開予定'))} ${r.upcoming}</span>` : ''}
+        </div>
+      ${r.url ? '</a>' : ''}
+    </div>`;
+  }).join('');
 }
 
 /* ── catalogue ────────────────────────────────────────── */
@@ -616,6 +780,8 @@ el('list').addEventListener('click', e => {
 });
 
 ['fq','ftype','fplat','fmodel','fview'].forEach(i => el(i).addEventListener('input', renderFeed));
+['sq','sstate','sfree','splat','ssort'].forEach(i => el(i).addEventListener('input', renderSeries));
+el('sreset').addEventListener('click', () => resetFilters(['sq','sstate','sfree','splat','ssort'], renderSeries));
 ['q','sort','filter'].forEach(i => el(i).addEventListener('input', renderCat));
 // Persist only the durable controls, and only when the reader changes one.
 VIEW_FIELDS.forEach(i => el(i)?.addEventListener('change', saveView));
@@ -635,11 +801,14 @@ el('clearprefs').addEventListener('click', () => {
 Promise.all([
   fetch('data/index.json').then(r => r.json()),
   fetch('data/feed.json').then(r => r.json()),
-]).then(([idx, feed]) => {
-  INDEX = idx; FEED = feed;
+  fetch('data/series.json').then(r => r.json()).catch(() => null),
+]).then(([idx, feed, series]) => {
+  INDEX = idx; FEED = feed; SERIES = series;
   const ser = feed.releases.filter(r => r.web !== 'promotional-sample-only').length;
-  el('hstats').textContent =
-    `${ser} 更新 · ${idx.length} 作品 · ${idx.reduce((n,w)=>n+w.n,0)} 巻`;
+  const vols = idx.reduce((n, w) => n + w.n, 0);
+  STATS = { ja: `${ser} 更新 · ${idx.length} 作品 · ${vols} 巻`,
+            en: `${ser} updates · ${idx.length} works · ${vols} volumes` };
+  el('hstats').textContent = STATS.ja;
   el('n-feed').textContent  = ser;
   el('n-cat').textContent   = idx.length;
   const active = feed.platforms.filter(p =>
@@ -647,14 +816,23 @@ Promise.all([
   const att = feed.releases.filter(r => r.provenance === 'attested').length;
   const clm = feed.releases.length - att;
   // The counts belong in the header line, not in a paragraph explaining the project to itself.
+  COV = { ja: `${att} 確認済 · ${clm} 未確認`,
+          en: `${att} confirmed · ${clm} reported` };
   el('hcov').textContent = `${att} 確認済 / confirmed · ${clm} 未確認 / reported`;
   const plats = [...new Set(feed.releases.map(r => r.plat_name || r.plat))].sort();
   el('fplat').insertAdjacentHTML('beforeend',
     plats.map(p => `<option value="${p}">${p}</option>`).join(''));
 
 
+  if (SERIES) {
+    el('n-ser').textContent = SERIES.series.length;
+    const sp = [...new Set(SERIES.series.map(r => r.platform))].filter(Boolean).sort();
+    el('splat').insertAdjacentHTML('beforeend',
+      sp.map(p => `<option value="${p}">${p}</option>`).join(''));
+  }
   restoreView();
-  renderFeed(); renderCat();
+  renderFeed(); renderCat(); renderSeries();
+  applyLang(LANG);
 }).catch(() => {
   el('fcount').textContent = 'データを読み込めません / could not load data';
 });
