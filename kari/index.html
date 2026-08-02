@@ -131,6 +131,10 @@
      chapter. Clamped to one line at full size; the whole string stays available on hover and to a
      screen reader, and the row keeps its shape. */
   .rel .by{max-width:min(30rem,100%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  /* An anthology instalment belongs to a collection but is its own work by its own author, so the
+     collection is shown as context rather than as the title. */
+  .rel .coll{color:var(--faint);font-size:.78rem}
+  .rel .coll::before{content:"／ "}
   .rel .plat{color:var(--faint)}
   .rel .plat::before{content:"· ";color:var(--faint)}
   @media (max-width:34rem){
@@ -640,6 +644,7 @@ function detailList(rows) {
       ${r.late_discovered ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">${esc(T('公開'))} ${esc(r.pub)}</div>` : ''}
       <div class="line2">
         ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
+        ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection — the collection's genre label does not necessarily describe every instalment">${esc(r.collection)}</span>` : ''}
         <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(r.plat_name || r.plat)}</span>
         ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">転載</span>` : ''}
         ${(r.also_on && r.also_on.length) ? `<span class="meta">・他 ${esc(r.also_on.join('、'))}</span>` : ''}
