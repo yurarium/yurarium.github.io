@@ -119,8 +119,24 @@
   .rel{padding:.6rem .2rem;border-bottom:1px solid var(--line)}
   .rel a{color:inherit;text-decoration:none}
   .rel a:hover .t{color:var(--accent);text-decoration:underline}
-  .rel .ep{font-size:.86rem;color:var(--dim)}
-  .rel .line2{display:flex;flex-wrap:wrap;gap:.5rem;align-items:baseline;margin-top:.15rem}
+  /* Three tiers, so the eye has somewhere to land: the work, then the chapter, then who and where.
+     Before this they were all near-equal weight and the row read as a paragraph. */
+  .rel .relhead{display:flex;flex-wrap:wrap;gap:.3rem;align-items:baseline}
+  .rel .relhead .tag,.rel .relhead .k{margin-left:0}
+  .rel .ep{font-size:.88rem;color:var(--fg);opacity:.88;margin-top:.1rem;overflow-wrap:anywhere}
+  .rel .pubnote{font-size:.75rem;color:var(--faint);margin-top:.1rem;font-variant-numeric:tabular-nums}
+  .rel .line2{display:flex;flex-wrap:wrap;gap:.15rem .5rem;align-items:baseline;margin-top:.2rem}
+  /* A credit string can be longer than everything else in the row —
+     原作／宮澤伊織(早川書房刊)　作画／水野英多　キャラクター原案／shirakaba — and it was burying the
+     chapter. Clamped to one line at full size; the whole string stays available on hover and to a
+     screen reader, and the row keeps its shape. */
+  .rel .by{max-width:min(30rem,100%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rel .plat{color:var(--faint)}
+  .rel .plat::before{content:"· ";color:var(--faint)}
+  @media (max-width:34rem){
+    .rel .by{max-width:100%}
+    .rel .line2{gap:.1rem .4rem}
+  }
   .quiet{opacity:.62}
   .detail{padding:.3rem .2rem 1.1rem;font-size:.86rem}
   .detail h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;
@@ -427,6 +443,59 @@ function compactList(rows) {
   return html;
 }
 
+/* ── detail row helpers ───────────────────────────────────
+   This view is for a reader deciding what to open, so it answers four questions in order: what
+   updated, can I read it now, where, and is there any reason to doubt it. Anything that is only
+   true of OUR processing — that we have not classified a work yet, the date we first saw a row —
+   is bookkeeping and is not shown. It stays in the data and in the coverage files, where it is
+   for us. What survives here is only what changes what a reader should believe about the manga. */
+
+// The kind tag already says 読切; TYPE_JA says 読み切り. Same fact, twice, side by side.
+function redundantType(r) {
+  return (r.type === 'oneshot' && r.kind === 'oneshot') ||
+         (r.type === 'chapter' && r.kind !== 'unknown');
+}
+
+// One badge for access, because free / free-timed / paid are one question with one answer.
+function accessTag(r) {
+  if (r.free) return '<span class="tag">無料</span>';
+  const m = r.access_modes || [];
+  if (m.includes('free-timed'))
+    return '<span class="tag" title="readable now without paying — a 作品チケット or a limited free window">無料（条件付）</span>';
+  if (r.ahead_n)
+    return `<span class="tag grey" title="readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">先行 ${esc(r.ahead_n)}</span>`;
+  if (m.includes('purchase')) return '<span class="tag grey">有料</span>';
+  return '';
+}
+
+// Platforms routinely name a one-shot's episode after the work, so the detail view showed
+// 吸血少女とウンディーネ with 【読切】吸血少女とウンディーネ directly beneath it. Strip the repeat, and
+// the bracketed 読切 marker with it — the kind tag beside the title already says that.
+function epLine(r) {
+  let ep = (r.ep || '').trim();
+  if (!ep) return '';
+  const stripped = ep.replace(/^[【\[]?(読切|読み切り|よみきり)[】\]]?\s*/, '');
+  // Only take the stripped form if what is left still says something. 読み切り作品 reduces to 作品,
+  // which is a fragment, not a chapter name — better to show nothing than a leftover.
+  if (stripped && !/^(作品|版|話|回)?$/.test(stripped.trim())) ep = stripped;
+  const w = (r.work || '').trim();
+  if (w && ep.startsWith(w)) ep = ep.slice(w.length).replace(/^[\s:：・—-]+/, '');
+  ep = ep.trim();
+  return (ep === w || /^(作品|版|話|回)?$/.test(ep)) ? '' : ep;
+}
+
+// Reasons to doubt the row. These stay because they are about the manga, not about us: a date we
+// pattern-matched rather than read, and an update no platform has confirmed.
+function caveats(r) {
+  const out = [];
+  if (r.provenance === 'claimed')
+    out.push(`${esc(r.claim_source || '報告')}のみ — プラットフォーム未確認`);
+  if (r.basis === 'heuristic')
+    out.push('日付は推定 — ページ内のパターンから読み取ったもので、プラットフォームの記載ではない');
+  if (r.moved) out.push(`公開日が変更された（${esc(r.moved)}）— 最も早い日付を保持`);
+  return out.length ? `<div class="datewarn">${out.join(' · ')}</div>` : '';
+}
+
 function detailList(rows) {
   let html = '', day = null;
   for (const r of rows) {
@@ -445,29 +514,22 @@ function detailList(rows) {
       }
     }
     const inner = `
-      <span class="t">${esc(r.work)}</span>
-      ${r.late_discovered ? `<span class="tag warn" title="we only learned of it on ${esc(r.feed_date)}">既出 — 公開 ${esc(r.pub)}</span>` : ''}
-      ${r.title_unsplit ? '<span class="tag q" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">作者未分離</span>' : ''}
-      ${kindTag(r)}
-      <span class="tag grey">${esc(TYPE_JA[r.type] || r.type)}</span>
-      ${r.free ? '<span class="tag">無料</span>' : ''}
-      ${r.ahead_n ? `<span class="tag warn" title="readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">有料先行 ${esc(r.ahead_n)}（最新 ${esc(r.ahead_ep || '')}）</span>` : ''}
-      ${(r.access_modes || []).includes('purchase') && !r.free ? '<span class="tag grey">有料</span>' : ''}
-      ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
+      <div class="relhead">
+        <span class="t">${esc(r.work)}</span>
+        ${kindTag(r)}
+        ${redundantType(r) ? '' : `<span class="tag grey">${esc(TYPE_JA[r.type] || r.type)}</span>`}
+        ${accessTag(r)}
+        ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
+      </div>
+      ${epLine(r) ? `<div class="ep">${esc(epLine(r))}</div>` : ''}
+      ${r.late_discovered ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">公開 ${esc(r.pub)}</div>` : ''}
       <div class="line2">
-        ${r.ep ? `<span class="ep">${esc(r.ep)}</span>` : ''}
-        <span class="meta">${esc(r.author || '')}</span>
-        <span class="meta"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>· ${esc(r.plat_name || r.plat)}</span>
+        ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
+        <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(r.plat_name || r.plat)}</span>
         ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">転載</span>` : ''}
         ${(r.also_on && r.also_on.length) ? `<span class="meta">・他 ${esc(r.also_on.join('、'))}</span>` : ''}
-        ${r.provenance === 'claimed'
-          ? `<span class="tag q">${esc(r.claim_source || 'claim')} 報告 — 未確認</span>`
-          : (r.ident === 'discovery-candidate' ? '<span class="tag q">要分類</span>' : '')}
       </div>
-      ${r.basis === 'heuristic' ? `<div class="datewarn">⚠ 推定 — the date was matched as a pattern in the platform's page, not stated by it</div>` : ''}
-      ${r.basis === 'bootstrap' || r.moved ? `<div class="datewarn">${
-        r.moved ? `⚠ source date changed (${esc(r.moved)}) — earliest kept · ` : ''
-        }初確認 ${esc(r.seen)}</div>` : ''}`;
+      ${caveats(r)}`;
     html += `<div class="rel${NON_STORY.has(r.type) ? ' quiet' : ''}">${
       r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">${inner}</a>` : inner
     }</div>`;
