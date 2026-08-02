@@ -560,17 +560,31 @@ function stackWrappedRows() {
 
    The DATA is never translated. Work titles, creator names and platform names are the record, and
    an English rendering of 百合ナビ or くずしろ would be an invention, not a translation. */
+/* Japanese carries no case, so English has to choose one, and the choice has to be the same for
+   badges that sit side by side. "Free" next to "paid early" on the same row reads as two different
+   kinds of thing. It had drifted both ways: Free/Chapter/Final were capitalised while
+   syndicated/preview/extra/unclassified were not, and every badge added since followed whichever
+   neighbour it was copied from.
+
+   The rule, split into the two groups below: a BADGE is a label and takes an initial capital; a
+   word that sits INSIDE running text is lower case, because capitalising it mid-sentence would be
+   the error in the other direction. */
 const EN = {
+  /* tabs */
   '更新':'Updates', '作品':'Works', '単行本':'Volumes',
+
+  /* badges — initial capital */
   '更新中':'Updating', '停滞':'Slow', '休眠':'Dormant', '不明':'Unknown', '完結':'Completed',
-  '一括掲載':'batch-listed',
   '読切':'One-shot', '最終回':'Final', '新連載':'New', '新話':'Chapter', 'その他':'Other',
   '無料':'Free', '有料':'Paid', '無料（条件付）':'Free (paced)', '全話無料':'All free',
-  '話':'ch', '読み切り':'one-shot', '試し読み':'preview', '番外編':'extra',
-  'お知らせ':'notice', 'お詫び':'apology', '再掲':'reprint', '未分類':'unclassified',
-  '公開':'published', '転載':'syndicated', '公開予定':'announced',
-  '既出':'seen', '作者未分離':'author not split', '有料先行':'paid early', '先行':'early',
-  '最新':'latest', '巻':'vols', '根拠':'basis', '未設定':'not yet assigned', '他':'also',
+  '読み切り':'One-shot', '試し読み':'Preview', '番外編':'Extra', 'お知らせ':'Notice',
+  'お詫び':'Apology', '再掲':'Reprint', '未分類':'Unclassified', '転載':'Syndicated',
+  '公開予定':'Announced', '一括掲載':'Batch-listed', '既出':'Seen',
+  '作者未分離':'Author not split', '有料先行':'Paid early', '先行':'Early',
+
+  /* words inside running text — lower case */
+  '話':'ch', '巻':'vols', '最新':'latest', '公開':'published', '根拠':'basis',
+  '未設定':'not yet assigned', '他':'also',
 };
 // Counts are generated, so they cannot carry the "日本語 / english" form the rest of the chrome uses.
 function nTotal(n) {
@@ -611,6 +625,20 @@ function byDate(rows) {
   return days;
 }
 
+// BADGE ORDER, and why 有料先行 carries no count.
+//
+// The free badge comes first. If an update put out a chapter anyone can read, that is the fact a
+// reader wants off the row, and it should not be queued behind anything.
+//
+// 有料先行 is a fact about the SERIES — how many chapters currently sit ahead of the free line —
+// and it used to render as "有料先行 11" on an update row, which reads as a claim about this
+// update. It is not: all 58 rows carrying ahead_n also carry free:true, so the update added a FREE
+// chapter while the badge announced eleven paid ones.
+//
+// There is no count that survives both readings. Counting what is ahead describes the series;
+// counting what this update added describes the event; the same number cannot mean both, and the
+// data only ever holds the first. So the badge is a flag and the tooltip carries the detail.
+
 // A series dropping several instalments at once is one event to a reader, not N. Collapsed to a
 // single line with a count. Precedence: the start of a series outranks a further chapter, which
 // outranks a notice — so a new series arriving with several chapters still reads as 新連載.
@@ -644,9 +672,9 @@ function compactList(rows) {
         ${extra ? `<span class="m" title="${esc(kinds.map(k => (KIND[k] || KIND.unknown)[0]).join(' + '))}">${esc(L('他', 'also'))} ${extra}${LANG === 'en' ? '' : ' 件'}</span>` : ''}
         </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(platName(lead.plat_name || lead.plat))}</span>
         ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">${esc(T('転載'))}</span>` : ''}
-        ${(el('fmodel').value === 'all' && lead.ahead_n)
-          ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) published ahead of the free line, newest ${esc(lead.ahead_ep || '')} — readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}">${esc(T('有料先行'))} ${esc(lead.ahead_n)}</span>` : ''}
         ${anyFree ? `<span class="k k-free">${esc(T('無料'))}</span>` : ''}
+        ${(el('fmodel').value === 'all' && lead.ahead_n)
+          ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) of this series sit ahead of the free line, newest ${esc(lead.ahead_ep || '')} — readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}. A standing fact about the series, not a count of what this update added.">${esc(T('有料先行'))}</span>` : ''}
         </span></span>
       </div>`;
     }
@@ -675,7 +703,7 @@ function accessTag(r) {
   if (m.includes('free-timed'))
     return `<span class="tag" title="free, but paced — a daily ticket or a limited window. Every chapter marked this way can be read at no cost eventually; the systems differ by platform, the outcome does not.">${esc(T('無料（条件付）'))}</span>`;
   if (r.ahead_n)
-    return `<span class="tag grey" title="readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">${esc(T('先行'))} ${esc(r.ahead_n)}</span>`;
+    return `<span class="tag grey" title="this series runs chapters ahead of the free line, readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">${esc(T('先行'))}</span>`;
   if (m.includes('purchase')) return `<span class="tag grey">${esc(T('有料'))}</span>`;
   return '';
 }
