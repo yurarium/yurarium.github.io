@@ -61,7 +61,7 @@
   .tag.warn{background:var(--warn-bg);color:var(--warn-fg)}
   .datewarn{color:var(--warn-fg);font-size:.75rem;margin-top:.2rem;line-height:1.45}
   /* Compact list: one line per update, in the spirit of 百合ナビ's date-grouped table. */
-  .cday{display:grid;grid-template-columns:4.2rem 1fr;gap:0 .8rem;
+  .cday{display:grid;grid-template-columns:5.7rem 1fr;gap:0 .8rem;
     border-top:1px solid var(--line);padding:.5rem 0}
   .cday-d{font-size:.78rem;color:var(--faint);font-weight:600;padding-top:.15rem;
     font-variant-numeric:tabular-nums}
@@ -116,6 +116,8 @@
   .k-adv{background:var(--warn-bg);color:var(--warn-fg);font-weight:600}
   .date-h{font-size:.78rem;color:var(--faint);font-weight:600;letter-spacing:.05em;
     padding:1rem 0 .3rem;border-bottom:1px solid var(--line)}
+  /* The weekday rides with the date but must not compete with it — it is orientation, not a label. */
+  .dow{font-weight:400;opacity:.72}
   .rel{padding:.6rem .2rem;border-bottom:1px solid var(--line)}
   .rel a{color:inherit;text-decoration:none}
   .rel a:hover .t{color:var(--accent);text-decoration:underline}
@@ -197,7 +199,7 @@
 <body>
 <div class="wrap">
 <header>
-  <h1>Yurarium <span class="tag">仮 / provisional</span>
+  <h1>Yurarium <span class="tag" data-i18n>仮 / provisional</span>
     <span class="ctlbar">
       <span class="themebox" role="group" aria-label="表示言語 / interface language">
         <button class="themebtn" data-lang-set="ja"   title="日本語のみ">日本語</button>
@@ -211,8 +213,6 @@
       </span>
     </span>
   </h1>
-  <p class="sub" id="hstats">…</p>
-  <p class="sub" id="hcov" style="font-size:.8rem"></p>
 </header>
 
 <nav role="tablist">
@@ -235,11 +235,14 @@
       <option value="chapter">話 / chapters</option>
       <option value="oneshot">読み切り / one-shots</option>
     </select>
-    <select id="fview" title="layout">
+    <select id="fplat"><option value="">全プラットフォーム / all platforms</option></select>
+    <!-- 表示 is the odd one out: the three above narrow WHICH updates are listed, this one only
+         changes how they look. It sat third, splitting the filters around it. Now the filters run
+         together and the presentation control sits at the end, against the reset button. -->
+    <select id="fview" title="layout" style="margin-left:auto">
       <option value="compact">簡易 / compact</option>
       <option value="detail">詳細 / detailed</option>
     </select>
-    <select id="fplat"><option value="">全プラットフォーム / all platforms</option></select>
     <button id="freset" class="themebtn" data-i18n title="clear search and all filters">リセット / reset</button>
   </div>
   <p class="count" id="fcount"></p>
@@ -255,6 +258,7 @@
       <option value="">すべて / all</option>
       <option value="active">更新中 — 45日以内 / updating</option>
       <option value="oneshot">読切 / one-shots</option>
+      <option value="completed">完結 / completed</option>
       <option value="slow">停滞 — 1年以内 / slow</option>
       <option value="dormant">休眠 — 1年超 / dormant</option>
     </select>
@@ -290,7 +294,9 @@
       <option value="">すべて / all works</option>
       <option value="multi">複数巻 / multi-volume</option>
       <option value="single">単巻 / single volume</option>
-      <option value="unverified">要確認 / unverified grouping</option>
+      <!-- Was: 要確認 / unverified grouping — volumes gathered into a work by title match rather
+           than by an explicit series link (80 of 302). That is a statement about how WE grouped
+           them, and no reader can adjudicate it. The count now lives on status.html. -->
     </select>
   </div>
   <p class="count" id="count"></p>
@@ -307,6 +313,8 @@
   <p>This site stores your display preferences — theme, tab and filters — in your own browser's
     local storage, written only when you choose them. Nothing is transmitted and no cookies are
     set. <button id="clearprefs" class="themebtn" data-i18n>設定を消去 / clear</button></p>
+  <p><a href="status.html">内部状態 / build status</a> — what the last build did, which sources
+    answered, and which reports are still untraced.</p>
 </footer>
 </div>
 
@@ -364,16 +372,93 @@ const el = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 let INDEX = [], FEED = null, SERIES = null, DETAIL = null, open = null;
-let LANG = prefGet('lang', 'both'), STATS = null, COV = null;
+let LANG = prefGet('lang', 'both');
 
 /* Split the "日本語 / english" strings the interface is already written in. Captured once into a
    data attribute, so switching back and forth is lossless — re-splitting an already-split string
    would strip a further half each time. */
 function splitLang(s, lang) {
   const i = s.indexOf(' / ');
-  if (i < 0) return lang === 'en' ? (EN[s.trim()] || s) : s;
+  // A platform name has no " / " to split on, so it falls through here — the filter dropdowns
+  // are built from raw names. PLAT_EN is consulted alongside EN so those options localise too;
+  // dataset.orig keeps the Japanese, which is what the filter actually matches on.
+  if (i < 0) return lang === 'en' ? (EN[s.trim()] || PLAT_EN[s.trim()] || s) : s;
   return lang === 'ja' ? s.slice(0, i) : lang === 'en' ? s.slice(i + 3) : s;
 }
+/* Bilingual strings built in JS, where there is no element to carry data-i18n.
+   One argument is a badge — look it up in EN, and in 併記 mode show the Japanese alone, because
+   "話 / ch" is wider than the row it sits in. Two arguments is prose, which gets both. */
+function T(ja, en) {
+  const e = en !== undefined ? en : EN[ja];
+  if (!e || e === ja) return ja;
+  if (LANG === 'en') return e;
+  if (LANG === 'ja') return ja;
+  return en !== undefined ? `${ja} / ${e}` : ja;
+}
+
+/* Label form: always ONE language, never both. Badges and the volume-count column have no room
+   for "巻 / vols", and a two-language string in a 3-character cell reads as noise rather than as
+   help. Use T() for prose, L() for anything that sits in a fixed-width slot. */
+function L(ja, en) {
+  return LANG === 'en' ? (en !== undefined ? en : EN[ja] || ja) : ja;
+}
+
+/* Weekday, short. Web serials run to a weekly slot far more than to a date — a reader tracking a
+   Saturday series reads the day before the number. Parsed as UTC so the label cannot slip a day on
+   a browser west of Greenwich; these dates are calendar days, not instants. */
+const DOW_JA = ['日','月','火','水','木','金','土'];
+const DOW_EN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+function dow(d) {
+  if (!/^\d{4}-\d\d-\d\d/.test(d || '')) return '';
+  const n = new Date(d.slice(0, 10) + 'T00:00:00Z').getUTCDay();
+  return LANG === 'en' ? DOW_EN[n] : DOW_JA[n];
+}
+
+/* Platform names in English.
+   Where the platform publishes its own Latin-script name — pixiv Comic, Comic Days, Sunday Webry,
+   KADOKOMI, Magazine Pocket — that name is used, because it is the one the platform answers to and
+   the one a reader will find. Where it publishes none, this is a romanisation and nothing more: a
+   best-effort reading of the Japanese, marked as such rather than invented as a translation.
+   Names already in Latin script are absent from the map and pass through untouched. */
+const PLAT_EN = {
+  'pixivコミック':'pixiv Comic', 'コミックDAYS':'Comic Days', 'サンデーうぇぶり':'Sunday Webry',
+  'カドコミ':'KADOKOMI', 'マガポケ':'Magazine Pocket', '少年ジャンプ+':'Shonen Jump+',
+  'ガンガンONLINE':'GANGAN ONLINE', 'ニコニコ漫画':'Niconico Manga', 'コロコロオンライン':'CoroCoro Online',
+  'となりのヤングジャンプ':'Tonari no Young Jump', 'くらげバンチ':'Kurage Bunch',
+  'コミックガルド':'Comic Gardo', 'コミックゼノン':'Comic Zenon', 'コミックボーダー':'Comic Border',
+  'コミック アース・スター':'Comic Earth Star', 'チャンピオンクロス':'Champion Cross',
+  'ヤングチャンピオン':'Young Champion', 'ヤンマガWeb':'Yanmaga Web', 'マンガワン':'Manga One',
+  'マンガPark':'Manga Park', 'マンガよもんが':'Manga Yomonga', '一迅プラス':'Ichijin Plus',
+  '花とゆめ+':'Hanayume+', 'webアクション':'Web Action', 'まんがタイムSquare':'Manga Time Square',
+  'ダ・ヴィンチニュース':'Da Vinci News', 'ゼロサムオンライン':'Zero-Sum Online',
+  'コミックPASH! neo':'Comic PASH! neo', 'コミックトレイル':'Comic Trail',
+  'コミックグロウル':'Comic Growl', 'コミックノヴァ':'Comic Nova', 'コミックリュエル':'Comic Ruelle',
+  'COMICリュエル':'COMIC Ruelle', 'COMIC熱帯':'COMIC Nettai', 'コミックオギャー!!':'Comic Ogyaaa!!',
+  'ファイアCROSS':'Fire CROSS', 'フラコミlike!':'Furacomi like!', 'ゼノン編集部':'Zenon editorial',
+  '竹コミ':'Takecomi', 'キミコミ':'Kimicomi', 'ビッコミ':'Bikkomi', 'ライコミ':'Raicomi',
+  'Gコミ':'G-Comi', 'アサコミ':'Asacomi', 'きららベース':'Kirara Base',
+  'GANMA!(更新終了)':'GANMA! (ended)', 'コミックゼノン':'Comic Zenon',
+};
+/* Creator role markers, which arrive welded into the credit string: "[著]森永みるく",
+   "[漫画]東雲水生 / [脚本]駒尾真子". The NAME is a proper noun and stays as it is in every mode —
+   transliterating a mangaka is not translation, it is guessing. The bracketed ROLE is a label and
+   is rendered. MADB's own vocabulary, so the set is small and closed. */
+const ROLE_EN = {
+  '著':'author', '原作':'story', '漫画':'art', '作画':'art', '脚本':'script',
+  'キャラクターデザイン原案':'character design',
+};
+function credit(c) {
+  if (LANG !== 'en' || !c) return c || '';
+  return c.replace(/\[([^\]]+)\]/g, (m, r) => ROLE_EN[r] ? `[${ROLE_EN[r]}]` : m);
+}
+
+function platName(n) {
+  // A name, not a phrase: shown as one or the other, never "ガンガンONLINE / GANGAN ONLINE" —
+  // that doubles the width of a meta line for no gain. Absent from the map means already Latin,
+  // or no rendering worth asserting.
+  return (LANG === 'en' && PLAT_EN[n]) || n || '';
+}
+
 function applyLang(lang) {
   LANG = lang;
   prefSet('lang', lang);
@@ -394,10 +479,6 @@ function applyLang(lang) {
     if (e.dataset.origPh === undefined) e.dataset.origPh = e.placeholder;
     e.placeholder = splitLang(e.dataset.origPh, lang);
   });
-  if (STATS) el('hstats').textContent =
-    lang === 'en' ? STATS.en : lang === 'ja' ? STATS.ja : `${STATS.ja} / ${STATS.en}`;
-  if (COV) el('hcov').textContent =
-    lang === 'en' ? COV.en : lang === 'ja' ? COV.ja : `${COV.ja} / ${COV.en}`;
   if (FEED) { renderFeed(); renderCat(); renderSeries(); }
 }
 document.querySelectorAll('[data-lang-set]').forEach(b =>
@@ -481,14 +562,16 @@ function stackWrappedRows() {
    an English rendering of 百合ナビ or くずしろ would be an invention, not a translation. */
 const EN = {
   '更新':'Updates', '作品':'Works', '単行本':'Volumes',
-  '更新中':'Updating', '停滞':'Slow', '休眠':'Dormant', '不明':'Unknown',
+  '更新中':'Updating', '停滞':'Slow', '休眠':'Dormant', '不明':'Unknown', '完結':'Completed',
+  '一括掲載':'batch-listed',
   '読切':'One-shot', '最終回':'Final', '新連載':'New', '新話':'Chapter', 'その他':'Other',
   '無料':'Free', '有料':'Paid', '無料（条件付）':'Free (paced)', '全話無料':'All free',
   '話':'ch', '読み切り':'one-shot', '試し読み':'preview', '番外編':'extra',
   'お知らせ':'notice', 'お詫び':'apology', '再掲':'reprint', '未分類':'unclassified',
   '公開':'published', '転載':'syndicated', '公開予定':'announced',
+  '既出':'seen', '作者未分離':'author not split', '有料先行':'paid early', '先行':'early',
+  '最新':'latest', '巻':'vols', '根拠':'basis', '未設定':'not yet assigned', '他':'also',
 };
-function T(s) { return LANG === 'en' ? (EN[s] || s) : s; }
 // Counts are generated, so they cannot carry the "日本語 / english" form the rest of the chrome uses.
 function nTotal(n) {
   return LANG === 'en' ? `${n} total` : LANG === 'ja' ? `${n} 件` : `${n} 件 / total`;
@@ -504,6 +587,8 @@ const KIND = {
 };
 
 function kindTag(r) {
+  // Tags are built in JS, so the markup-level data-i18n pass never reaches them; T() reads the
+  // same EN dictionary the language toggle uses, rather than being hardcoded Japanese.
   const [label, cls, why] = KIND[r.kind] || KIND.unknown;
   // Every kind here is our inference rather than a publisher statement, so saying so on each tag
   // adds nothing. What is worth flagging is the weaker route to 最終回: the series is marked 完結
@@ -542,7 +627,8 @@ function compactList(rows) {
       if (!groups.has(k)) groups.set(k, []);
       groups.get(k).push(r);
     }
-    html += `<div class="cday"><div class="cday-d">${esc(d.slice(5))}</div><div class="cday-l">`;
+    html += `<div class="cday"><div class="cday-d">${esc(d.slice(5))} <span class="dow"
+      >${esc(dow(d))}</span></div><div class="cday-l">`;
     for (const g of groups.values()) {
       const lead = g.reduce((a, b) =>
         (KIND_RANK[b.kind] ?? 0) > (KIND_RANK[a.kind] ?? 0) ? b : a);
@@ -553,19 +639,14 @@ function compactList(rows) {
         ${kindTag(lead)}
         <span class="ccell"><span class="cmain">${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${esc(lead.work)}</a>`
                    : `<span style="font-weight:600">${esc(lead.work)}</span>`}
-        ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">既出 ${esc((lead.pub || '').slice(5))}</span>` : ''}
-        ${lead.title_unsplit ? '<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">作者未分離</span>' : ''}
-        ${extra ? `<span class="m" title="${esc(kinds.map(k => (KIND[k] || KIND.unknown)[0]).join(' + '))}">他 ${extra} 件</span>` : ''}
-        </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(lead.plat_name || lead.plat)}</span>
-        ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">転載</span>` : ''}
+        ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc((lead.pub || '').slice(5))}</span>` : ''}
+        ${lead.title_unsplit ? `<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">${esc(T('作者未分離'))}</span>` : ''}
+        ${extra ? `<span class="m" title="${esc(kinds.map(k => (KIND[k] || KIND.unknown)[0]).join(' + '))}">${esc(L('他', 'also'))} ${extra}${LANG === 'en' ? '' : ' 件'}</span>` : ''}
+        </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(platName(lead.plat_name || lead.plat))}</span>
+        ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">${esc(T('転載'))}</span>` : ''}
         ${(el('fmodel').value === 'all' && lead.ahead_n)
-          ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) published ahead of the free line, newest ${esc(lead.ahead_ep || '')} — readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}">有料先行 ${esc(lead.ahead_n)}</span>` : ''}
-        ${anyFree ? '<span class="k k-free">無料</span>' : ''}
-        ${lead.basis === 'heuristic' ? '<span class="k k-unk" title="the date was matched as a pattern in the platform\'s page, not stated by it">推定</span>' : ''}
-        ${lead.provenance === 'claimed'
-          ? `<span class="k k-claim" title="${lead.unconfirmable
-                ? 'reported by ' + esc(lead.claim_source || '') + '. This platform publishes no per-chapter dates at all — a reader on the site cannot see when a chapter appeared either — so there is nothing to confirm it against.'
-                : 'reported by ' + esc(lead.claim_source || '') + '; not confirmed against the platform'}">${lead.unconfirmable ? '確認不能' : '要確認'}</span>` : ''}
+          ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) published ahead of the free line, newest ${esc(lead.ahead_ep || '')} — readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}">${esc(T('有料先行'))} ${esc(lead.ahead_n)}</span>` : ''}
+        ${anyFree ? `<span class="k k-free">${esc(T('無料'))}</span>` : ''}
         </span></span>
       </div>`;
     }
@@ -594,7 +675,7 @@ function accessTag(r) {
   if (m.includes('free-timed'))
     return `<span class="tag" title="free, but paced — a daily ticket or a limited window. Every chapter marked this way can be read at no cost eventually; the systems differ by platform, the outcome does not.">${esc(T('無料（条件付）'))}</span>`;
   if (r.ahead_n)
-    return `<span class="tag grey" title="readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">先行 ${esc(r.ahead_n)}</span>`;
+    return `<span class="tag grey" title="readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">${esc(T('先行'))} ${esc(r.ahead_n)}</span>`;
   if (m.includes('purchase')) return `<span class="tag grey">${esc(T('有料'))}</span>`;
   return '';
 }
@@ -615,16 +696,17 @@ function epLine(r) {
   return (ep === w || /^(作品|版|話|回)?$/.test(ep)) ? '' : ep;
 }
 
-// Reasons to doubt the row. These stay because they are about the manga, not about us: a date we
-// pattern-matched rather than read, and an update no platform has confirmed.
+// One caveat survives, and only because it is a fact about the MANGA rather than about us: the
+// platform itself moved the publication date, and we keep the earliest.
+//
+// Removed: 要確認 (a listing site reported it, no platform confirmed) — a note about us, addressed
+// to someone who cannot act on it; claims are traced by the build now and land on status.html.
+// Removed: 日付は推定 (the date was pattern-matched rather than stated) — it matched zero rows, so
+// it was reassurance about a problem that no longer exists in the data.
 function caveats(r) {
-  const out = [];
-  if (r.provenance === 'claimed')
-    out.push(`${esc(r.claim_source || '報告')}のみ — プラットフォーム未確認`);
-  if (r.basis === 'heuristic')
-    out.push('日付は推定 — ページ内のパターンから読み取ったもので、プラットフォームの記載ではない');
-  if (r.moved) out.push(`公開日が変更された（${esc(r.moved)}）— 最も早い日付を保持`);
-  return out.length ? `<div class="datewarn">${out.join(' · ')}</div>` : '';
+  return r.moved
+    ? `<div class="datewarn">${T('公開日が変更された', 'publication date was moved')}（${esc(r.moved)}）—
+       ${T('最も早い日付を保持', 'earliest date kept')}</div>` : '';
 }
 
 function detailList(rows) {
@@ -635,13 +717,19 @@ function detailList(rows) {
     const d = (r.feed_date || r.pub || '').slice(0, 10);
     if (d !== day) {
       day = d;
+      // Was 日付要確認 — "this date needs checking", which is our problem, not the reader's. The
+      // case is decided: every row it fires on is 一迅プラス, which stamps a whole back catalogue
+      // with one date. So the badge now states what the platform did, as a fact about the
+      // publication, and the underlying dates are being fixed separately.
       const low = rows.filter(x => (x.pub || '').slice(0, 10) === d && x.conf === 'low');
-      html += `<div class="date-h">${esc(d)}${low.length ? ' <span class="tag warn">日付要確認</span>' : ''}</div>`;
+      html += `<div class="date-h">${esc(d)} <span class="dow">${esc(dow(d))}</span>${
+        low.length ? ` <span class="tag warn">${esc(L('一括掲載'))}</span>` : ''}</div>`;
       if (low.length) {
         const works = new Set(low.map(x => x.work));
-        html += `<div class="datewarn" style="padding:.3rem 0 .1rem">${low.length} releases
-          across ${works.size} work${works.size > 1 ? 's' : ''} share this exact timestamp —
-          likely a refresh or import rather than same-day publication.</div>`;
+        html += `<div class="datewarn" style="padding:.3rem 0 .1rem">${T(
+          `${low.length}件・${works.size}作品が同じ日時で掲載 — 各話の公開日ではなく、まとめて登録された日付`,
+          `${low.length} releases across ${works.size} work${works.size > 1 ? 's' : ''} carry one
+           timestamp — the date the platform listed them together, not each chapter's own`)}</div>`;
       }
     }
     const inner = `
@@ -657,10 +745,10 @@ function detailList(rows) {
       <div class="line2">
         ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
         ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection — the collection's genre label does not necessarily describe every instalment">${esc(r.collection)}</span>` : ''}
-        <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(r.plat_name || r.plat)}</span>
-        ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(r.plat_name)}, not a platform of its own">${esc(r.channel_name)}</span>` : ''}
-        ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">転載</span>` : ''}
-        ${(r.also_on && r.also_on.length) ? `<span class="meta">・他 ${esc(r.also_on.join('、'))}</span>` : ''}
+        <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(platName(r.plat_name || r.plat))}</span>
+        ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(platName(r.plat_name))}, not a platform of its own">${esc(r.channel_name)}</span>` : ''}
+        ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">${esc(T('転載'))}</span>` : ''}
+        ${(r.also_on && r.also_on.length) ? `<span class="meta">・${esc(L('他', 'also on'))} ${esc(r.also_on.join(LANG === 'en' ? ', ' : '、'))}</span>` : ''}
       </div>
       ${caveats(r)}`;
     html += `<div class="rel${NON_STORY.has(r.type) ? ' quiet' : ''}">${
@@ -675,11 +763,16 @@ function detailList(rows) {
    the 60-day feed window. That is the whole point of the tab: a series between arcs is absent from
    the updates feed and perfectly readable, and it is exactly the kind a reader is looking for. */
 const SSTATE = {
-  active:  ['更新中', 'k-new',   'a chapter within the last 45 days'],
-  oneshot: ['読切',   'k-one',   'complete in one instalment — finished, not dormant'],
-  slow:    ['停滞',   'k-ch',    'last chapter within a year'],
-  dormant: ['休眠',   'k-unk',   'nothing for over a year'],
-  unknown: ['不明',   'k-unk',   'the platform states no date we could read'],
+  active:    ['更新中', 'k-new', 'a chapter within the last 45 days'],
+  // 103 works reach this state and there was no entry for it, so they fell through to `unknown`
+  // and were labelled 不明 — "the platform states no date we could read" — about series we know
+  // have ENDED, on the firmest evidence the build accepts (a 最終話 title, or the platform's own
+  // serialisation status). The fallback made a confident finding look like a failure to look.
+  completed: ['完結', 'k-fin', 'the series has finished — a final chapter, or the platform says so'],
+  oneshot:   ['読切', 'k-one', 'complete in one instalment — finished, not dormant'],
+  slow:      ['停滞', 'k-ch',  'last chapter within a year'],
+  dormant:   ['休眠', 'k-unk', 'nothing for over a year'],
+  unknown:   ['不明', 'k-unk', 'the platform states no date we could read'],
 };
 
 function renderSeries() {
@@ -688,6 +781,11 @@ function renderSeries() {
   const state = el('sstate').value, freeOnly = el('sfree').value, plat = el('splat').value;
   const sort = el('ssort').value;
   let rows = SERIES.series.filter(r => {
+    // 45 rows carry a title and a platform and nothing else — no chapters, no dates, no URL. They
+    // rendered as 不明 / Unknown, which is the interface admitting it has nothing rather than
+    // telling the reader something. A work we cannot say one fact about is a lead, not an entry;
+    // it belongs in the coverage gaps on status.html, where it is work to do.
+    if (!r.chapters) return false;
     if (q && !norm(r.work).includes(q) && !norm(r.author).includes(q)) return false;
     if (state && r.state !== state) return false;
     if (plat && !r.sources.some(s => s.platform === plat)) return false;
@@ -725,7 +823,7 @@ function renderSeries() {
       : freeN ? `<span class="tag" title="${r.free} free now${
             r.free_timed ? `, ${r.free_timed} free with a daily ticket — readable at no cost, just paced` : ''}${
             r.priced ? `; ${r.priced} paid` : ''}">${freeN}/${r.chapters}${
-            LANG === 'en' ? ' free' : ' 無料'}</span>`
+            ' ' + esc(T('無料'))}</span>`
       : `<span class="tag grey">${esc(T('有料'))}</span>`;
     return `<div class="rel">
       ${r.url ? `<a class="wlink" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">` : ''}
@@ -735,7 +833,7 @@ function renderSeries() {
           ${acc}
         </div>
         <div class="ep">${r.chapters}${r.partial ? '+' : ''} ${esc(T('話'))}${
-          r.latest ? ` · ${LANG === 'en' ? 'latest' : '最新'} ${esc(r.latest)}${
+          r.latest ? ` · ${esc(T('最新'))} ${esc(r.latest)}${
             r.latest_ep ? ' ' + esc(r.latest_ep) : ''}` : ''}</div>
         <div class="line2">
           ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
@@ -752,7 +850,7 @@ function renderSeries() {
           const f = s.free + s.free_timed;
           const tip = `${s.chapters}${s.partial ? '+' : ''} chapters held here${
               f ? `, ${f} free` : ''}${s.priced ? `, ${s.priced} paid` : ''}`;
-          const body = `${esc(s.platform)}${
+          const body = `${esc(platName(s.platform))}${
               s.format !== 'standard' ? ` <span class="fmt">${esc(s.format)}</span>` : ''}<span
               class="srcn">${s.chapters}${s.partial ? '+' : ''}</span>`;
           return s.url
@@ -776,23 +874,23 @@ function renderCat() {
     if (q && !norm(w.t).includes(q) && !norm(w.y).includes(q) && !norm(w.c).includes(q)) return false;
     if (f === 'multi') return w.n > 1;
     if (f === 'single') return w.n <= 1;
-    if (f === 'unverified') return w.g !== 'series-link';
     return true;
   }).sort(by);
 
   el('count').textContent = rows.length === INDEX.length
-    ? `${rows.length} 作品 / total`
-    : `${rows.length} 作品 / shown　·　${INDEX.length} 作品 / total`;
+    // The count is a number followed by a unit, so only the UNIT is bilingual — translating the
+    // whole phrase gave "302 作品 / 302 works", printing the figure twice.
+    ? `${rows.length} ${T('作品', 'works')}`
+    : `${rows.length} ${T('作品表示', 'shown')}　·　${INDEX.length} ${T('作品', 'works')}`;
   el('empty').hidden = rows.length > 0;
   el('list').innerHTML = rows.map(w => `
     <li data-id="${esc(w.id)}">
       <button class="row" aria-expanded="false">
         <span>
           <span class="t">${esc(w.t)}</span>${w.y ? `<span class="yomi">${esc(w.y)}</span>` : ''}
-          ${w.g && w.g !== 'series-link' ? `<span class="tag grey">${esc(w.g)}</span>` : ''}
-          <br><span class="meta">${esc(w.c || '—')}</span>
+          <br><span class="meta">${esc(credit(w.c) || '—')}</span>
         </span>
-        <span class="num">${esc(w.d || '—')}<br>${w.n} 巻</span>
+        <span class="num">${esc(w.d || '—')}<br>${w.n} ${esc(L('巻', w.n === 1 ? 'vol' : 'vols'))}</span>
       </button>
     </li>`).join('');
 }
@@ -820,8 +918,8 @@ async function detail(id, li) {
     <h3>分類 / classification</h3>
     <p><strong>marketing_label:</strong> ${esc(w.marketing_label || '—')} &nbsp;
        <strong>content_tier:</strong> ${w.content_tier ? esc(w.content_tier)
-         : '<em>未設定 / not yet assigned</em>'}</p>
-    <div class="basis"><strong>根拠 / basis</strong> — ${esc(b.source || '?')}${
+         : `<em>${esc(T('未設定'))}</em>`}</p>
+    <div class="basis"><strong>${esc(T('根拠'))}</strong> — ${esc(b.source || '?')}${
       b.retrieved ? `, retrieved ${esc(b.retrieved)}` : ''}<br>${esc(b.note || '')}
       ${b.url ? `<br><a href="${esc(b.url)}" rel="noreferrer">${esc(b.url)}</a>` : ''}</div>
     <h3>出典 / sources</h3>
@@ -872,28 +970,21 @@ Promise.all([
   DATA('series.json').catch(() => null),
 ]).then(([idx, feed, series]) => {
   INDEX = idx; FEED = feed; SERIES = series;
+  // The header used to restate the totals — "1350 更新 · 302 作品 · 646 巻" and a release/platform
+  // count under it. The tabs already carry those numbers, next to the thing they count, and a
+  // reader arriving wants the list rather than its size. Gone; the tab badges remain.
   const ser = feed.releases.filter(r => r.web !== 'promotional-sample-only').length;
-  const vols = idx.reduce((n, w) => n + w.n, 0);
-  STATS = { ja: `${ser} 更新 · ${idx.length} 作品 · ${vols} 巻`,
-            en: `${ser} updates · ${idx.length} works · ${vols} volumes` };
-  el('hstats').textContent = STATS.ja;
   el('n-feed').textContent  = ser;
   el('n-cat').textContent   = idx.length;
-  const active = feed.platforms.filter(p =>
-    feed.releases.some(r => (r.plat_name || r.plat) === p.name)).length;
-  const att = feed.releases.filter(r => r.provenance === 'attested').length;
-  const clm = feed.releases.length - att;
-  // The counts belong in the header line, not in a paragraph explaining the project to itself.
-  COV = { ja: `${att} 確認済 · ${clm} 未確認`,
-          en: `${att} confirmed · ${clm} reported` };
-  el('hcov').textContent = `${att} 確認済 / confirmed · ${clm} 未確認 / reported`;
   const plats = [...new Set(feed.releases.map(r => r.plat_name || r.plat))].sort();
   el('fplat').insertAdjacentHTML('beforeend',
     plats.map(p => `<option value="${p}">${p}</option>`).join(''));
 
 
   if (SERIES) {
-    el('n-ser').textContent = SERIES.series.length;
+    // Count what the tab actually lists. Rows with no chapters are filtered out of the view, so
+    // counting the raw array promised 45 works that are not there when you open it.
+    el('n-ser').textContent = SERIES.series.filter(r => r.chapters).length;
     const sp = [...new Set(SERIES.series.map(r => r.platform))].filter(Boolean).sort();
     el('splat').insertAdjacentHTML('beforeend',
       sp.map(p => `<option value="${p}">${p}</option>`).join(''));
