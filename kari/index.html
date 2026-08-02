@@ -471,7 +471,7 @@ const EN = {
   '更新':'Updates', '作品':'Works', '単行本':'Volumes',
   '更新中':'Updating', '停滞':'Slow', '休眠':'Dormant', '不明':'Unknown',
   '読切':'One-shot', '最終回':'Final', '新連載':'New', '新話':'Chapter', 'その他':'Other',
-  '無料':'Free', '有料':'Paid', '無料（条件付）':'Free*', '全話無料':'All free',
+  '無料':'Free', '有料':'Paid', '無料（条件付）':'Free (paced)', '全話無料':'All free',
   '話':'ch', '読み切り':'one-shot', '試し読み':'preview', '番外編':'extra',
   'お知らせ':'notice', 'お詫び':'apology', '再掲':'reprint', '未分類':'unclassified',
   '公開':'published', '転載':'syndicated', '公開予定':'announced',
@@ -580,7 +580,7 @@ function accessTag(r) {
   if (r.free) return `<span class="tag">${esc(T('無料'))}</span>`;
   const m = r.access_modes || [];
   if (m.includes('free-timed'))
-    return `<span class="tag" title="readable now without paying — a 作品チケット or a limited free window">${esc(T('無料（条件付）'))}</span>`;
+    return `<span class="tag" title="free, but paced — a daily ticket or a limited window. Every chapter marked this way can be read at no cost eventually; the systems differ by platform, the outcome does not.">${esc(T('無料（条件付）'))}</span>`;
   if (r.ahead_n)
     return `<span class="tag grey" title="readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">先行 ${esc(r.ahead_n)}</span>`;
   if (m.includes('purchase')) return `<span class="tag grey">${esc(T('有料'))}</span>`;
@@ -698,13 +698,21 @@ function renderSeries() {
     // states nothing — 293 of 1145, including all 261 カドコミ rows, whose adapter records no access
     // at all. オタクサキュバスの才能がありすぎる！ is free and was listed as paid on that basis. Zero
     // free chapters known is not the same fact as zero free chapters, and only the second is 有料.
+    // "6話無料" of a ten-chapter series reads as "four are paid", which was wrong for
+    // 運命は役に立たない: nine of its ten are readable now — four outright, five on a 作品チケット or a
+    // 待てば無料 timer — and exactly one is behind a coin. Conditionally free IS free to a reader
+    // deciding what to open tonight, so it counts here, and the proportion is stated as N/M so the
+    // denominator is visible rather than implied.
     const freeN = r.free + r.free_timed;
     const known = freeN + r.priced;
     const acc = !r.chapters || !known ? ''
       : r.chapters === 1 ? (freeN ? `<span class="tag">${esc(T('無料'))}</span>`
                                   : `<span class="tag grey">${esc(T('有料'))}</span>`)
       : freeN >= r.chapters ? `<span class="tag">${esc(T('全話無料'))}</span>`
-      : freeN ? `<span class="tag">${freeN}${LANG === 'en' ? ' free' : '話無料'}</span>`
+      : freeN ? `<span class="tag" title="${r.free} free now${
+            r.free_timed ? `, ${r.free_timed} free with a daily ticket — readable at no cost, just paced` : ''}${
+            r.priced ? `; ${r.priced} paid` : ''}">${freeN}/${r.chapters}${
+            LANG === 'en' ? ' free' : ' 無料'}</span>`
       : `<span class="tag grey">${esc(T('有料'))}</span>`;
     return `<div class="rel">
       ${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">` : ''}
