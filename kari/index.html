@@ -135,6 +135,14 @@
      lines instead of one. */
   .ensecond{color:var(--dim);font-size:.82rem;font-weight:400;margin-top:.05rem;display:block}
   .crow .ensecond{font-size:.76rem}
+  /* Ruby needs room above the line or it collides with the row before it. */
+  ruby{ruby-position:over}
+  rt{font-size:.55em;color:var(--dim);font-weight:400;letter-spacing:0;overflow-wrap:anywhere}
+  ruby{overflow-wrap:anywhere}
+  /* A guessed reading is dimmer still — the same "this is a rendering" signal the dotted
+     underline gives romanisations, in the one form that works above a character. */
+  rt.rt-guess{opacity:.72;font-style:italic}
+  .rel .t ruby, .crow ruby{line-height:2.1}
   .rel{padding:.6rem .2rem;border-bottom:1px solid var(--line)}
   .rel a{color:inherit;text-decoration:none}
   .rel a:hover .t{color:var(--accent);text-decoration:underline}
@@ -240,6 +248,11 @@
       <!-- Romanisation style. Taste, not correctness, so it is the reader's (NAMES-PLAN §8.1) —
            and it is meaningless while nothing Latin is on screen, so it appears only when EN does.
            All three are rendered at build time from the same kana, so switching costs nothing. -->
+      <!-- Furigana. Optional (§5c), off by default, and pointless while the Japanese is not on
+           screen, so it hides in EN mode exactly as the romanisation control hides in 日本語. -->
+      <span class="themebox" role="group" aria-label="ふりがな / furigana" id="furibox" hidden>
+        <button class="themebtn" id="furibtn" title="ふりがな / furigana">ふ</button>
+      </span>
       <span class="themebox" role="group" aria-label="ローマ字 / romanisation" id="rjbox" hidden>
         <button class="themebtn" data-romaji-set="macron" title="Yūri">ū</button>
         <button class="themebtn" data-romaji-set="double" title="Yuuri">uu</button>
@@ -470,7 +483,25 @@ function L(ja, en) {
    A record is absent for most works, and that is a finished state, not a gap: §6 says show the
    Japanese. So every function here returns null rather than a placeholder when it has nothing. */
 const PREF_ROMAJI = 'yurarium.pref.romaji';
+const PREF_FURI   = 'yurarium.pref.furigana';
 let ROMAJI_STYLE = prefGet(PREF_ROMAJI, 'macron');
+let FURIGANA     = prefGet(PREF_FURI, false);
+
+const HAS_KANJI = /[\u4e00-\u9fff]/;
+
+/* Whole-string ruby — NAMES-PLAN §5c level 1. Per-kanji alignment is level 2 and is not attempted
+   here: ruby over the wrong character is worse than none, and unlike a whole-string reading it is
+   wrong in a specific, visible place. Suppressed when the title has no kanji, because furigana over
+   ワインガールズ tells a reader nothing they cannot already read. */
+const FURI_MAX = 24;
+function ruby(ja, rec) {
+  if (!FURIGANA || !rec || !rec.furigana || !HAS_KANJI.test(ja)) return esc(ja);
+  // Whole-string ruby over a long title is a single unbreakable run of kana wider than the column,
+  // and unreadable even where it fits. Level 2 (per-kanji alignment) is what would make long titles
+  // work; until then they simply do not get furigana.
+  if (ja.length > FURI_MAX || rec.furigana.length > FURI_MAX * 2) return esc(ja);
+  return `<ruby>${esc(ja)}<rt${rec.unverified ? ' class="rt-guess"' : ''}>${esc(rec.furigana)}</rt></ruby>`;
+}
 
 function enOf(rec) {
   if (!rec) return null;
@@ -512,15 +543,9 @@ function enHtml(rec, cls) {
 function workLabel(r) {
   const e = enOf(r.work_en);
   if (LANG === 'en' && e) return esc(e.text);
-  return esc(r.work);
+  return ruby(r.work, r.work_en);
 }
 function workSecond(r) {
-  // Not in the compact list. 両 mode costs a second line (§5b) and that is accepted — but compact
-  // exists to be scannable, and a third line per row (title / English / platform) is the thing it
-  // is for avoiding. Nothing is lost: EN mode REPLACES the title in compact, and the detail view
-  // carries both. So the reader who wants both languages at once asks for the view that has room.
-  if (el('fview') && el('fview').value === 'compact' && el('tab-feed') && !el('tab-feed').hidden)
-    return '';
   if (LANG !== 'both') return '';
   const e = enOf(r.work_en);
   if (!e || e.text === r.work) return '';
@@ -530,7 +555,13 @@ function workSecond(r) {
    twice, so the toggle picks one (§5b). */
 function authorLabel(r) {
   const e = enOf(r.author_en);
-  return (LANG === 'en' && e) ? enHtml(r.author_en, 'byen') : esc(r.author || '');
+  if (!e) return esc(r.author || '');
+  if (LANG === 'en') return enHtml(r.author_en, 'byen');
+  // 両 means both. An earlier draft showed the Japanese alone here on the grounds that a
+  // romanisation is "the same name twice" — true of the information, false of the reader, who
+  // chose 併記 precisely because one script is not enough for them.
+  if (LANG === 'both') return `${esc(r.author)} ${enHtml(r.author_en, 'byen')}`;
+  return esc(r.author || '');
 }
 
 /* Weekday, short. Web serials run to a weekly slot far more than to a date — a reader tracking a
@@ -606,13 +637,26 @@ function renderTrackNote() {
 
 function applyRomajiVisibility() {
   const box = el('rjbox');
-  if (!box) return;
-  // Hidden in 日本語 mode: it would offer a choice about text that is not on the page.
-  box.hidden = (LANG === 'ja');
-  box.querySelectorAll('[data-romaji-set]').forEach(b =>
-    b.setAttribute('aria-pressed', String(b.dataset.romajiSet === ROMAJI_STYLE)));
+  if (box) {
+    // Hidden in 日本語 mode: it would offer a choice about text that is not on the page.
+    box.hidden = (LANG === 'ja');
+    box.querySelectorAll('[data-romaji-set]').forEach(b =>
+      b.setAttribute('aria-pressed', String(b.dataset.romajiSet === ROMAJI_STYLE)));
+  }
+  const fb = el('furibox');
+  if (fb) {
+    fb.hidden = (LANG === 'en');          // nothing to annotate when the Japanese is replaced
+    el('furibtn').setAttribute('aria-pressed', String(!!FURIGANA));
+  }
 }
 document.addEventListener('DOMContentLoaded', () => {
+  const fb = el('furibtn');
+  if (fb) fb.addEventListener('click', () => {
+    FURIGANA = !FURIGANA;
+    prefSet(PREF_FURI, FURIGANA);
+    applyRomajiVisibility();
+    if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+  });
   document.querySelectorAll('[data-romaji-set]').forEach(b =>
     b.addEventListener('click', () => {
       ROMAJI_STYLE = b.dataset.romajiSet;
