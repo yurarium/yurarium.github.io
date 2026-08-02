@@ -680,16 +680,18 @@ function compactList(rows) {
     for (const g of groups.values()) {
       const lead = g.reduce((a, b) =>
         (KIND_RANK[b.kind] ?? 0) > (KIND_RANK[a.kind] ?? 0) ? b : a);
-      const extra = g.length - 1;
+      // A work dropping several chapters at once is still ONE row — that has not changed. What is
+      // gone is the "他 N 件 / also N" counter beside it. The number was a property of how this
+      // page groups, not of the release: the platform published chapters, not "a chapter and 11
+      // others", and the reader either wants the list or wants the row. The row names the
+      // instalment that ranks highest and links to the work, which is where the rest are.
       const anyFree = g.some(x => x.free);
-      const kinds = [...new Set(g.map(x => x.kind))];
       html += `<div class="crow">
         ${kindTag(lead)}
         <span class="ccell"><span class="cmain">${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${esc(lead.work)}</a>`
                    : `<span style="font-weight:600">${esc(lead.work)}</span>`}
         ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc((lead.pub || '').slice(5))}</span>` : ''}
         ${lead.title_unsplit ? `<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">${esc(T('作者未分離'))}</span>` : ''}
-        ${extra ? `<span class="m" title="${esc(kinds.map(k => (KIND[k] || KIND.unknown)[0]).join(' + '))}">${esc(L('他', 'also'))} ${extra}${LANG === 'en' ? '' : ' 件'}</span>` : ''}
         </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(platName(lead.plat_name || lead.plat))}</span>
         ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">${esc(T('転載'))}</span>` : ''}
         ${anyFree ? `<span class="k k-free">${esc(T('無料'))}</span>` : ''}
