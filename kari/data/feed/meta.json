@@ -1,0 +1,967 @@
+{
+ "platforms": [
+  {
+   "id": "comic-action",
+   "name": "webアクション",
+   "publisher": "双葉社",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comic-days",
+   "name": "コミックDAYS",
+   "publisher": "講談社",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comic-earthstar",
+   "name": "コミック アース・スター",
+   "publisher": "アース・スター エンターテイメント",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comic-gardo",
+   "name": "コミックガルド",
+   "publisher": "オーバーラップ",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comic-ogyaaa",
+   "name": "COMIC OGYAAA!!",
+   "publisher": "一迅社",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comic-ryu",
+   "name": "COMICリュウ",
+   "publisher": "",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comic-seasons",
+   "name": "Seasons",
+   "publisher": "",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comic-trail",
+   "name": "コミックトレイル",
+   "publisher": "白泉社",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comic-y-ours",
+   "name": "COMIC Y-OURS",
+   "publisher": "",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comic-zenon",
+   "name": "コミックゼノン",
+   "publisher": "コアミックス",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comicborder",
+   "name": "コミックボーダー",
+   "publisher": "",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "comics",
+   "name": "パイコミックス",
+   "publisher": "",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "debut",
+   "name": "マガジンデビュー(更新終了)",
+   "publisher": "",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "feelweb",
+   "name": "FEEL web",
+   "publisher": "",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "ichicomi",
+   "name": "一迅プラス",
+   "publisher": "一迅社",
+   "series": 165,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "kuragebunch",
+   "name": "くらげバンチ",
+   "publisher": "新潮社",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "magcomi",
+   "name": "MAGCOMI",
+   "publisher": "マッグガーデン",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "mangatime-square",
+   "name": "まんがタイムSquare",
+   "publisher": "",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "shiori-on",
+   "name": "栞",
+   "publisher": "",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "shonenjumpplus",
+   "name": "少年ジャンプ+",
+   "publisher": "集英社",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "sundaywebry",
+   "name": "サンデーうぇぶり",
+   "publisher": "小学館",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  },
+  {
+   "id": "tonarinoyj",
+   "name": "となりのヤングジャンプ",
+   "publisher": "集英社",
+   "series": 0,
+   "retrieved": "2026-08-02"
+  }
+ ],
+ "contradicted": [
+  {
+   "work": "マユノウタ",
+   "platform": "一迅プラス",
+   "claimed": "2026-07-23",
+   "platform_latest": "2026-06-17",
+   "chapters_held": 10,
+   "source": "yurinavi"
+  },
+  {
+   "work": "マユノウタ",
+   "platform": "一迅プラス",
+   "claimed": "2026-07-23",
+   "platform_latest": "2026-06-17",
+   "chapters_held": 10,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "たゆたう恋の散り際に",
+   "platform": "一迅プラス",
+   "claimed": "2026-07-23",
+   "platform_latest": "2026-06-17",
+   "chapters_held": 6,
+   "source": "yurinavi"
+  },
+  {
+   "work": "たゆたう恋の散り際に",
+   "platform": "一迅プラス",
+   "claimed": "2026-07-23",
+   "platform_latest": "2026-06-17",
+   "chapters_held": 6,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "小林さんちのメイドラゴン",
+   "platform": "webアクション",
+   "claimed": "2026-07-21",
+   "platform_latest": "2026-07-07",
+   "chapters_held": 190,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "#ギャルとギャルの百合",
+   "platform": "サンデーうぇぶり",
+   "claimed": "2026-07-14",
+   "platform_latest": "2026-07-28",
+   "chapters_held": 21,
+   "source": "yurinavi"
+  },
+  {
+   "work": "陰キャギャルでもイキがりたい!",
+   "platform": "一迅プラス",
+   "claimed": "2026-07-02",
+   "platform_latest": "2026-06-17",
+   "chapters_held": 32,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "現実世界でも幸せにしてくださいね?",
+   "platform": "一迅プラス",
+   "claimed": "2026-07-02",
+   "platform_latest": "2026-07-16",
+   "chapters_held": 21,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "無力聖女と無能王女～魔力ゼロで召喚された聖女の異世界救国記～",
+   "platform": "一迅プラス",
+   "claimed": "2026-07-02",
+   "platform_latest": "2026-07-16",
+   "chapters_held": 19,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "小春と湊 わたしのパートナーは女の子",
+   "platform": "一迅プラス",
+   "claimed": "2026-07-02",
+   "platform_latest": "2026-07-16",
+   "chapters_held": 38,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "キミが吠えるための歌を、",
+   "platform": "一迅プラス",
+   "claimed": "2026-07-02",
+   "platform_latest": "2026-06-17",
+   "chapters_held": 19,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "ぜんぶ壊して地獄で愛して",
+   "platform": "一迅プラス",
+   "claimed": "2026-07-02",
+   "platform_latest": "2026-07-16",
+   "chapters_held": 31,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "アイドラトリィ",
+   "platform": "コミックDAYS",
+   "claimed": "2026-06-27",
+   "platform_latest": "2026-06-16",
+   "chapters_held": 31,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "僕らのアイは気持ち悪い",
+   "platform": "一迅プラス",
+   "claimed": "2026-06-25",
+   "platform_latest": "2026-04-17",
+   "chapters_held": 18,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "誰かオオカミさんのしつけ方知りませんか!?",
+   "platform": "一迅プラス",
+   "claimed": "2026-06-18",
+   "platform_latest": "2026-05-18",
+   "chapters_held": 5,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "残骸少女、きらきらな世界の底",
+   "platform": "一迅プラス",
+   "claimed": "2026-06-18",
+   "platform_latest": "2026-07-16",
+   "chapters_held": 4,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "晴れた日のドレスコード",
+   "platform": "一迅プラス",
+   "claimed": "2026-06-18",
+   "platform_latest": "2026-07-16",
+   "chapters_held": 6,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "私の百合はお仕事です!",
+   "platform": "一迅プラス",
+   "claimed": "2026-06-11",
+   "platform_latest": "2026-07-16",
+   "chapters_held": 76,
+   "source": "webcomics.jp"
+  },
+  {
+   "work": "映しちゃダメな顔",
+   "platform": "一迅プラス",
+   "claimed": "2026-06-04",
+   "platform_latest": "2026-06-17",
+   "chapters_held": 21,
+   "source": "webcomics.jp"
+  }
+ ],
+ "print_candidates": [
+  {
+   "work_title": "セフレ沼から抜け出せないっ！百合えっちアンソロジー",
+   "author": "アンソロジー",
+   "sample_count": 7,
+   "sample_url": "https://ichicomi.com/episode/12207421984000326502",
+   "label": "コミック百合姫",
+   "status": "unconfirmed",
+   "platform": "ichicomi"
+  },
+  {
+   "work_title": "今日、お姉さんとエッチしない？ 百合アンソロジー",
+   "author": "アンソロジー",
+   "sample_count": 6,
+   "sample_url": "https://ichicomi.com/episode/12207421984000326495",
+   "label": "コミック百合姫",
+   "status": "unconfirmed",
+   "platform": "ichicomi"
+  }
+ ],
+ "web_works": [
+  {
+   "title": "この湯で、あなたと",
+   "url": "https://comic-walker.com/detail/KC_019740_S",
+   "platform": "kadokomi",
+   "status": "ongoing",
+   "tags": [
+    "現代",
+    "女主人公",
+    "ドラマ",
+    "大人向け",
+    "百合",
+    "癒やされる",
+    "社会",
+    "社会人",
+    "考えさせられる",
+    "アイドル"
+   ],
+   "label": "CandleA",
+   "authors": [
+    {
+     "name": "南部くまこ",
+     "role": "原作"
+    },
+    {
+     "name": "春木やちか",
+     "role": "作画"
+    }
+   ],
+   "marketing_label": "yuri",
+   "marketing_label_basis": {
+    "source": "kadokomi",
+    "url": "https://comic-walker.com/detail/KC_019740_S",
+    "retrieved": "2026-08-01",
+    "note": "Publisher applies the tag 百合 on カドコミ. Platform-side labelling under DEFINITIONS §4."
+   },
+   "content_tier": null,
+   "discovered_via": {
+    "source": null,
+    "signal": "new-serial",
+    "url": "https://yurinavi.com/2026/07/29/konoyude-anatato/"
+   },
+   "oneshot": false
+  },
+  {
+   "title": "姉妹傭兵",
+   "url": "https://comic-walker.com/detail/KC_019475_S",
+   "platform": "kadokomi",
+   "status": "ongoing",
+   "tags": [
+    "コミカライズ",
+    "女主人公",
+    "家族",
+    "百合",
+    "働く女子",
+    "年の差",
+    "MF文庫J"
+   ],
+   "label": "コミックNewtype",
+   "authors": [
+    {
+     "name": "坂南加",
+     "role": "漫画"
+    },
+    {
+     "name": "三河ごーすと",
+     "role": "原作"
+    },
+    {
+     "name": "kappe",
+     "role": "キャラクター原案"
+    }
+   ],
+   "marketing_label": "yuri",
+   "marketing_label_basis": {
+    "source": "kadokomi",
+    "url": "https://comic-walker.com/detail/KC_019475_S",
+    "retrieved": "2026-08-01",
+    "note": "Publisher applies the tag 百合 on カドコミ. Platform-side labelling under DEFINITIONS §4."
+   },
+   "content_tier": null,
+   "discovered_via": {
+    "source": null,
+    "signal": "new-serial",
+    "url": "https://yurinavi.com/2026/07/22/shimaiyouhei-start/"
+   },
+   "oneshot": false
+  },
+  {
+   "title": "世界一可愛い私の幼馴染が隠れてVTuberをしているらしい",
+   "url": "https://comic-walker.com/detail/KC_016982_S",
+   "platform": "kadokomi",
+   "status": "ongoing",
+   "tags": [
+    "コミカライズ",
+    "ラブコメ",
+    "現代",
+    "美少女",
+    "ほのぼの",
+    "胸キュン",
+    "なろう系",
+    "いちゃラブ",
+    "百合",
+    "癒やされる",
+    "ハッピー",
+    "WEB小説",
+    "巨乳",
+    "ギャップ女子",
+    "ツンデレ",
+    "オタク",
+    "推し活",
+    "萌え",
+    "アイドル",
+    "女子大生",
+    "配信者"
+   ],
+   "label": "コミックコンプ＆コンプティーク",
+   "authors": [
+    {
+     "name": "岡野く仔",
+     "role": "漫画"
+    },
+    {
+     "name": "不和二亜",
+     "role": "原作"
+    }
+   ],
+   "marketing_label": "yuri",
+   "marketing_label_basis": {
+    "source": "kadokomi",
+    "url": "https://comic-walker.com/detail/KC_016982_S",
+    "retrieved": "2026-08-01",
+    "note": "Publisher applies the tag 百合 on カドコミ. Platform-side labelling under DEFINITIONS §4."
+   },
+   "content_tier": null,
+   "discovered_via": {
+    "source": null,
+    "signal": "new-serial",
+    "url": "https://yurinavi.com/2026/07/16/sekaiichikawaii-start/"
+   },
+   "oneshot": false
+  },
+  {
+   "title": "イジめてイジられて",
+   "url": "https://comic-walker.com/detail/KC_019052_S",
+   "platform": "kadokomi",
+   "status": "ongoing",
+   "tags": [
+    "ラブコメ",
+    "現代",
+    "学園モノ",
+    "美少女",
+    "胸キュン",
+    "大人向け",
+    "溺愛",
+    "いちゃラブ",
+    "百合",
+    "笑える",
+    "お色気",
+    "おっぱい",
+    "秘密の関係",
+    "クセになる",
+    "ギャップ女子",
+    "ツンデレ",
+    "ギャル",
+    "性癖",
+    "片思い",
+    "ヤンデレ",
+    "変態",
+    "パンツ",
+    "地味女子",
+    "尽くす系女子",
+    "生意気",
+    "ヤンキー",
+    "ケンカップル",
+    "コスプレ"
+   ],
+   "label": "ヤングエースＵＰ",
+   "authors": [
+    {
+     "name": "千田大輔",
+     "role": "著者"
+    }
+   ],
+   "marketing_label": "yuri",
+   "marketing_label_basis": {
+    "source": "kadokomi",
+    "url": "https://comic-walker.com/detail/KC_019052_S",
+    "retrieved": "2026-08-01",
+    "note": "Publisher applies the tag 百合 on カドコミ. Platform-side labelling under DEFINITIONS §4."
+   },
+   "content_tier": null,
+   "discovered_via": {
+    "source": null,
+    "signal": "new-serial",
+    "url": "https://yurinavi.com/2026/07/19/ijimeteijirarete-start/"
+   },
+   "oneshot": false
+  },
+  {
+   "title": "残光再撮",
+   "url": "https://comic-walker.com/detail/KC_011927_S",
+   "platform": "kadokomi",
+   "status": "ongoing",
+   "tags": [
+    "ラブコメ",
+    "学園モノ",
+    "女主人公",
+    "ドキドキハラハラ",
+    "いちゃラブ",
+    "百合"
+   ],
+   "label": "コミックキューン",
+   "authors": [
+    {
+     "name": "若鶏にこみ",
+     "role": "著者"
+    }
+   ],
+   "marketing_label": "yuri",
+   "marketing_label_basis": {
+    "source": "kadokomi",
+    "url": "https://comic-walker.com/detail/KC_011927_S",
+    "retrieved": "2026-08-01",
+    "note": "Publisher applies the tag 百合 on カドコミ. Platform-side labelling under DEFINITIONS §4."
+   },
+   "content_tier": null,
+   "discovered_via": {
+    "source": null,
+    "signal": "new-serial",
+    "url": "https://yurinavi.com/2026/07/27/zankou-start/"
+   },
+   "oneshot": false
+  },
+  {
+   "title": "その手紙代行します！",
+   "url": "https://comic-walker.com/detail/KC_014260_S",
+   "platform": "kadokomi",
+   "status": "unknown",
+   "tags": [
+    "ラブコメ",
+    "現代",
+    "美少女",
+    "胸キュン",
+    "女子高校生(JK)",
+    "百合",
+    "癒やされる"
+   ],
+   "label": "アライブ＋",
+   "authors": [
+    {
+     "name": "仁科",
+     "role": "著者"
+    }
+   ],
+   "marketing_label": "yuri",
+   "marketing_label_basis": {
+    "source": "kadokomi",
+    "url": "https://comic-walker.com/detail/KC_014260_S",
+    "retrieved": "2026-08-01",
+    "note": "Publisher applies the tag 百合 on カドコミ. Platform-side labelling under DEFINITIONS §4."
+   },
+   "content_tier": null,
+   "discovered_via": {
+    "source": null,
+    "signal": "oneshot",
+    "url": "https://yurinavi.com/2026/07/10/sonotegami-yomikiri/"
+   },
+   "oneshot": true
+  },
+  {
+   "title": "クレアちゃん飼育日記―カブトムシ少女にお世話されてます―",
+   "url": "https://comic-walker.com/detail/KC_016896_S",
+   "platform": "kadokomi",
+   "status": "ongoing",
+   "tags": [
+    "日常系",
+    "現代",
+    "女主人公",
+    "百合",
+    "お色気",
+    "動物",
+    "秘密の関係",
+    "巨乳",
+    "ギャップ女子",
+    "性癖",
+    "尽くす系女子"
+   ],
+   "label": "ドラドラしゃーぷ#",
+   "authors": [
+    {
+     "name": "庄司ひろのり",
+     "role": "著者"
+    }
+   ],
+   "marketing_label": "yuri",
+   "marketing_label_basis": {
+    "source": "kadokomi",
+    "url": "https://comic-walker.com/detail/KC_016896_S",
+    "retrieved": "2026-08-01",
+    "note": "Publisher applies the tag 百合 on カドコミ. Platform-side labelling under DEFINITIONS §4."
+   },
+   "content_tier": null,
+   "discovered_via": {
+    "source": null,
+    "signal": "new-serial",
+    "url": "https://yurinavi.com/2026/07/03/kureachan-start/"
+   },
+   "oneshot": false
+  }
+ ],
+ "samples_dropped": 13,
+ "platform_meta": {
+  "カドコミ": {
+   "rank": 1,
+   "overlap": 0.28
+  },
+  "COMIC FUZ": {
+   "rank": 1,
+   "overlap": 0.38
+  },
+  "ニコニコ漫画": {
+   "rank": 3,
+   "overlap": 0.71
+  },
+  "pixivコミック": {
+   "rank": 3,
+   "overlap": 0.77
+  },
+  "サンデーうぇぶり": {
+   "rank": null,
+   "overlap": 0.02
+  },
+  "一迅プラス": {
+   "rank": null,
+   "overlap": null
+  },
+  "コミックDAYS": {
+   "rank": null,
+   "overlap": null
+  },
+  "となりのヤングジャンプ": {
+   "rank": null,
+   "overlap": null
+  },
+  "少年ジャンプ+": {
+   "rank": null,
+   "overlap": null
+  },
+  "くらげバンチ": {
+   "rank": null,
+   "overlap": null
+  },
+  "コミックゼノン": {
+   "rank": null,
+   "overlap": null
+  },
+  "MAGCOMI": {
+   "rank": null,
+   "overlap": null
+  },
+  "コミックトレイル": {
+   "rank": null,
+   "overlap": null
+  },
+  "コミックガルド": {
+   "rank": null,
+   "overlap": null
+  },
+  "ビッコミ": {
+   "rank": null,
+   "overlap": 0.04
+  },
+  "竹コミ": {
+   "rank": null,
+   "overlap": 0.27
+  },
+  "ヤンマガWeb": {
+   "rank": null,
+   "overlap": 0.38
+  },
+  "webアクション": {
+   "rank": null,
+   "overlap": 0.5
+  },
+  "マガポケ": {
+   "rank": null,
+   "overlap": 0.76
+  },
+  "チャンピオンクロス": {
+   "rank": null,
+   "overlap": 0.11
+  },
+  "COMIC OGYAAA!!": {
+   "rank": null,
+   "overlap": null
+  },
+  "コミック アース・スター": {
+   "rank": null,
+   "overlap": null
+  },
+  "キミコミ": {
+   "rank": null,
+   "overlap": 0.62
+  },
+  "きららベース": {
+   "rank": null,
+   "overlap": null
+  }
+ },
+ "lapsed": [
+  {
+   "work": "一畳間まんきつ暮らし",
+   "platform": "COMIC FUZ",
+   "latest_chapter": 5,
+   "behind_by": 59,
+   "status": "lapsed"
+  },
+  {
+   "work": "彼氏の女友達がぐいぐい来る(私に)",
+   "platform": "pixivコミック",
+   "latest_chapter": 5,
+   "behind_by": 7,
+   "status": "lapsed"
+  },
+  {
+   "work": "球詠",
+   "platform": "COMIC FUZ",
+   "latest_chapter": 14,
+   "behind_by": 103,
+   "status": "lapsed"
+  },
+  {
+   "work": "しあわせ鳥見んぐ",
+   "platform": "COMIC FUZ",
+   "latest_chapter": 3,
+   "behind_by": 52,
+   "status": "lapsed"
+  },
+  {
+   "work": "アイドラトリィ",
+   "platform": "コミックDAYS",
+   "latest_chapter": 31,
+   "behind_by": 17,
+   "status": "lapsed"
+  },
+  {
+   "work": "このままモブじゃ終われない",
+   "platform": "COMIC FUZ",
+   "latest_chapter": 2,
+   "behind_by": 26,
+   "status": "lapsed"
+  },
+  {
+   "work": "ぜんぶ壊して地獄で愛して",
+   "platform": "pixivコミック",
+   "latest_chapter": 27,
+   "behind_by": 4,
+   "status": "lapsed"
+  },
+  {
+   "work": "たゆたう恋の散り際に",
+   "platform": "pixivコミック",
+   "latest_chapter": 3,
+   "behind_by": 3,
+   "status": "lapsed"
+  },
+  {
+   "work": "たゆたう恋の散り際に",
+   "platform": "ニコニコ漫画",
+   "latest_chapter": 3,
+   "behind_by": 3,
+   "status": "lapsed"
+  },
+  {
+   "work": "ひなちゃんが生きてるなら",
+   "platform": "pixivコミック",
+   "latest_chapter": 3,
+   "behind_by": 5,
+   "status": "lapsed"
+  },
+  {
+   "work": "カナリアは綺羅星の夢をみる",
+   "platform": "pixivコミック",
+   "latest_chapter": 5,
+   "behind_by": 9,
+   "status": "lapsed"
+  },
+  {
+   "work": "骨に願いを星に呪いを",
+   "platform": "pixivコミック",
+   "latest_chapter": 2,
+   "behind_by": 5,
+   "status": "lapsed"
+  },
+  {
+   "work": "乙女のおかず",
+   "platform": "コミックDAYS",
+   "latest_chapter": 21,
+   "behind_by": 17,
+   "status": "lapsed"
+  },
+  {
+   "work": "きみが死ぬまで恋をしたい",
+   "platform": "コミックDAYS",
+   "latest_chapter": 40,
+   "behind_by": 2,
+   "status": "lapsed"
+  },
+  {
+   "work": "きみが死ぬまで恋をしたい",
+   "platform": "ニコニコ漫画",
+   "latest_chapter": 6,
+   "behind_by": 36,
+   "status": "lapsed"
+  },
+  {
+   "work": "ばっどがーる",
+   "platform": "ニコニコ漫画",
+   "latest_chapter": 61,
+   "behind_by": 3,
+   "status": "lapsed"
+  },
+  {
+   "work": "現実世界でも幸せにしてくださいね",
+   "platform": "pixivコミック",
+   "latest_chapter": 15,
+   "behind_by": 6,
+   "status": "lapsed"
+  },
+  {
+   "work": "現実世界でも幸せにしてくださいね",
+   "platform": "ニコニコ漫画",
+   "latest_chapter": 16,
+   "behind_by": 5,
+   "status": "lapsed"
+  },
+  {
+   "work": "星屑テレパス",
+   "platform": "COMIC FUZ",
+   "latest_chapter": 4,
+   "behind_by": 63,
+   "status": "lapsed"
+  },
+  {
+   "work": "夢でフラれてはじまる百合",
+   "platform": "ニコニコ漫画",
+   "latest_chapter": 52,
+   "behind_by": 2,
+   "status": "lapsed"
+  },
+  {
+   "work": "ボイタボイネ",
+   "platform": "MAGCOMI",
+   "latest_chapter": 17,
+   "behind_by": 2,
+   "status": "lapsed"
+  },
+  {
+   "work": "ささやくように恋を唄う",
+   "platform": "pixivコミック",
+   "latest_chapter": 59,
+   "behind_by": 5,
+   "status": "lapsed"
+  },
+  {
+   "work": "ささやくように恋を唄う",
+   "platform": "ニコニコ漫画",
+   "latest_chapter": 60,
+   "behind_by": 4,
+   "status": "lapsed"
+  },
+  {
+   "work": "晴れた日のドレスコード",
+   "platform": "pixivコミック",
+   "latest_chapter": 3,
+   "behind_by": 3,
+   "status": "lapsed"
+  },
+  {
+   "work": "魔法少女にあこがれて",
+   "platform": "ニコニコ漫画",
+   "latest_chapter": 62,
+   "behind_by": 2,
+   "status": "lapsed"
+  },
+  {
+   "work": "腹割るウチらの秘密ごと",
+   "platform": "まんがタイムSquare",
+   "latest_chapter": 5,
+   "behind_by": 12,
+   "status": "lapsed"
+  },
+  {
+   "work": "私の推しは悪役令嬢",
+   "platform": "pixivコミック",
+   "latest_chapter": 56,
+   "behind_by": 7,
+   "status": "lapsed"
+  },
+  {
+   "work": "無力聖女と無能王女~魔力ゼロで召喚された聖女の異世界救国記~",
+   "platform": "pixivコミック",
+   "latest_chapter": 14,
+   "behind_by": 5,
+   "status": "lapsed"
+  },
+  {
+   "work": "好都合セミフレンド",
+   "platform": "COMIC FUZ",
+   "latest_chapter": 39,
+   "behind_by": 2,
+   "status": "lapsed"
+  },
+  {
+   "work": "私に天使が舞い降りた",
+   "platform": "pixivコミック",
+   "latest_chapter": 120,
+   "behind_by": 6,
+   "status": "lapsed"
+  },
+  {
+   "work": "映しちゃダメな顔",
+   "platform": "ニコニコ漫画",
+   "latest_chapter": 17,
+   "behind_by": 4,
+   "status": "lapsed"
+  }
+ ],
+ "archive_months": [
+  "2026-07"
+ ],
+ "archive_from": "2026-07",
+ "window_days": 14,
+ "generated": "2026-08-02"
+}

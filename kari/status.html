@@ -99,13 +99,18 @@ const DISPO = {
 const J = f => fetch('data/' + f, {cache:'no-cache'})
                  .then(r => r.ok ? r.json() : Promise.reject(f + ' ' + r.status));
 
-Promise.all([J('run.json'), J('feed.json').catch(() => null)])
-  .then(([run, feed]) => render(run, feed))
+// run.json only. This page used to fetch feed.json as well, to bucket releases into weeks and to
+// count what predates the record. It cannot any more: the published feed is a 14-day window plus
+// one file per archived month, and reassembling a whole history from those would mean downloading
+// every month to draw one bar chart. Both figures are small, so build.py computes them and they
+// arrive in run.json with everything else this page shows.
+J('run.json')
+  .then(render)
   .catch(e => { document.getElementById('body').innerHTML =
     `<p class="note">run.json could not be loaded (${esc(e)}). It is written by build.py; a
      deployment that predates it will not have one.</p>`; });
 
-function render(d, feed) {
+function render(d) {
   const c = d.claims.by_disposition || {};
   const open = (d.claims.trace || []).filter(t => t.disposition === 'open');
   const refuted = (d.claims.trace || []).filter(t => t.disposition === 'refuted');
@@ -169,9 +174,10 @@ function render(d, feed) {
   // The one honest statement about date quality, made once. It replaces a per-row badge that went
   // 日付要確認 → 一括掲載 → nothing: each wording was truer than the last and all three asked a
   // reader to hold a caveat they cannot act on.
-  const from = (d.sources || []).map(s => s.retrieved).filter(Boolean).sort()[0];
+  const from = (d.weekly || {}).tracking_from
+            || (d.sources || []).map(s => s.retrieved).filter(Boolean).sort()[0];
   if (from) {
-    const before = (feed?.releases || []).filter(r => (r.pub || '') < from).length;
+    const before = (d.weekly || {}).pre_tracking_releases ?? 0;
     h += `<h2>記録の開始 / when the record starts</h2>
       <p class="note">This pipeline first retrieved anything on <b>${esc(from)}</b>. From that date
         a release is dated by what the platform said when we saw it, and the first sighting is
@@ -243,36 +249,24 @@ function render(d, feed) {
   // recorded, so a "changes per run" graph would have to invent its own past. This graph is made
   // only of dates the platforms themselves stated, and it starts where the collection window
   // starts rather than pretending to reach further back than it does.
-  if (feed && feed.releases) {
-    const wk = {};
-    for (const r of feed.releases) {
-      const p = (r.pub || '').slice(0, 10);
-      if (!/^\d{4}-\d\d-\d\d$/.test(p)) continue;
-      const dt = new Date(p + 'T00:00:00Z');
-      dt.setUTCDate(dt.getUTCDate() - dt.getUTCDay());        // week beginning Sunday
-      const k = dt.toISOString().slice(0, 10);
-      wk[k] = (wk[k] || 0) + 1;
-    }
-    let keys = Object.keys(wk).sort().slice(-26);
-    // Trim the leading window edge. The feed holds a rolling ~60 days, so weeks older than that
-    // appear only where something was discovered late — two or three rows against a typical two
-    // hundred. Drawn as bars they read as a collapse in publishing, which is the opposite of what
-    // happened: those weeks are thin in OUR record, not in the world. A bar chart cannot caption
-    // itself, so the underpopulated tail comes off rather than being explained away underneath.
-    const med = [...Object.values(wk)].sort((a, b) => a - b)[Math.floor(keys.length / 2)] || 0;
-    while (keys.length > 4 && wk[keys[0]] < med * 0.25) keys = keys.slice(1);
-    if (keys.length > 1) {
-      const max = Math.max(...keys.map(k => wk[k]));
-      h += `<h2>公開の推移 / releases per week</h2>
-        <p class="note">By the date the platform published, over the ${keys.length} weeks the feed
-          window covers. This is the manga's own history, not ours — the run-by-run record starts
-          today, so there is nothing earlier to draw. The current week is still in progress.</p>
-        <div class="bars">` +
-        keys.map(k => `<div style="height:${Math.round(wk[k] / max * 100)}%"
-                        title="${esc(k)} — ${wk[k]}"></div>`).join('') +
-        `</div><div class="axis"><span>${esc(keys[0])}</span>
-         <span>peak ${max}/wk</span><span>${esc(keys[keys.length - 1])}</span></div>`;
-    }
+  //
+  // The bucketing and the leading-edge trim moved into build.py, unchanged: the source layer holds
+  // a rolling ~60 days, so the earliest weeks carry two or three late discoveries against a typical
+  // two hundred, and drawn as bars they read as a collapse in publishing rather than as thinness in
+  // our own record. A bar chart cannot caption itself, so those weeks come off. `weeks` arrives
+  // already trimmed; `trimmed_weeks` is how many were dropped.
+  const wkd = (d.weekly || {}).weeks || [];
+  if (wkd.length > 1) {
+    const max = Math.max(...wkd.map(w => w.n));
+    h += `<h2>公開の推移 / releases per week</h2>
+      <p class="note">By the date the platform published, over the ${wkd.length} weeks the
+        collection window covers. This is the manga's own history, not ours — the run-by-run record
+        starts today, so there is nothing earlier to draw. The current week is still in progress.</p>
+      <div class="bars">` +
+      wkd.map(w => `<div style="height:${Math.round(w.n / max * 100)}%"
+                      title="${esc(w.week)} — ${w.n}"></div>`).join('') +
+      `</div><div class="axis"><span>${esc(wkd[0].week)}</span>
+       <span>peak ${max}/wk</span><span>${esc(wkd[wkd.length - 1].week)}</span></div>`;
   }
 
   // ── Composition ───────────────────────────────────────────────────────────
