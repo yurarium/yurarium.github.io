@@ -144,7 +144,8 @@
      under it rather than as another title-weight line. */
   .srcs{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.25rem}
   .src{font-size:.75rem;color:var(--dim);background:var(--line);border-radius:3px;
-    padding:.05rem .4rem;white-space:nowrap}
+    padding:.05rem .4rem;white-space:nowrap;text-decoration:none}
+  a.src:hover{background:var(--accent-bg);color:var(--accent)}
   .src .srcn{color:var(--faint);margin-left:.3rem;font-variant-numeric:tabular-nums}
   .src .fmt{color:var(--accent);font-weight:600}
   .rel .plat::before{content:"· ";color:var(--faint)}
@@ -727,7 +728,7 @@ function renderSeries() {
             LANG === 'en' ? ' free' : ' 無料'}</span>`
       : `<span class="tag grey">${esc(T('有料'))}</span>`;
     return `<div class="rel">
-      ${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">` : ''}
+      ${r.url ? `<a class="wlink" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">` : ''}
         <div class="relhead">
           <span class="t">${esc(r.work)}</span>
           <span class="k ${cls}" title="${esc(why)}">${esc(T(lbl))}</span>
@@ -739,17 +740,25 @@ function renderSeries() {
         <div class="line2">
           ${r.author ? `<span class="meta by">${esc(r.author)}</span>` : ''}
         </div>
+      ${r.url ? '</a>' : ''}
         <div class="srcs">${r.sources.map(s => {
           // Each source states its OWN coverage. コミックDAYS holds 121 chapters of 雨夜の月 and
           // マガポケ 10 — that is what we can see on each, not two different lengths of one story,
           // so the count is shown per source rather than rolled up or summed.
+          //
+          // And each is a LINK to that platform. A chip naming a place you can read something, that
+          // you cannot click, is a worse version of the row's single link — the whole reason to
+          // list sources is so a reader can choose one.
           const f = s.free + s.free_timed;
-          return `<span class="src" title="${s.chapters}${s.partial ? '+' : ''} chapters held here${
-              f ? `, ${f} free` : ''}${s.priced ? `, ${s.priced} paid` : ''}">${esc(s.platform)}${
+          const tip = `${s.chapters}${s.partial ? '+' : ''} chapters held here${
+              f ? `, ${f} free` : ''}${s.priced ? `, ${s.priced} paid` : ''}`;
+          const body = `${esc(s.platform)}${
               s.format !== 'standard' ? ` <span class="fmt">${esc(s.format)}</span>` : ''}<span
-              class="srcn">${s.chapters}${s.partial ? '+' : ''}</span></span>`;
+              class="srcn">${s.chapters}${s.partial ? '+' : ''}</span>`;
+          return s.url
+            ? `<a class="src" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer nofollow" title="${tip}">${body}</a>`
+            : `<span class="src" title="${tip}">${body}</span>`;
         }).join('')}</div>
-      ${r.url ? '</a>' : ''}
     </div>`;
   }).join('');
 }
