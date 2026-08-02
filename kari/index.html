@@ -575,6 +575,24 @@ function ruby(ja, rec) {
     : esc(text)).join('');
 }
 
+/* Names for rows that carry none. An archived month is written once and never rewritten (that is
+   what protects its dates), so 2026-07 was frozen before any of this existed and every row in it
+   showed Japanese only. Dates must not change; a romanisation improving is the system working. So
+   the archive keeps its rows as published and the current names are joined on here, at render
+   time, from one file covering every month.
+
+   Folded exactly as the build folds, because （私に） and (私に) are different strings and the same
+   work arrives as both. */
+let NAMES = null;
+function foldKey(t) {
+  return (t || '').normalize('NFKC').replace(/ /g, '');
+}
+function nameFor(kind, raw, existing) {
+  if (existing) return existing;
+  if (!NAMES || !raw) return null;
+  return NAMES[kind][foldKey(raw)] || null;
+}
+
 function enOf(rec) {
   if (!rec) return null;
   const styled = rec.romaji && rec.romaji[ROMAJI_STYLE];
@@ -624,17 +642,19 @@ function enHtml(rec, cls) {
 /* Titles: EN replaces the Japanese, and in 併記 the whole ROW is rendered again in English by
    bilingual() rather than a title being appended here — so this only ever produces one language. */
 function workLabel(r) {
-  const e = enOf(r.work_en);
-  if (LANG === 'en' && e) return esc(e.text) + uncertainMark(r.work_en);
-  return ruby(r.work, r.work_en) + (FURIGANA ? uncertainMark(r.work_en) : '');
+  const e = enOf(nameFor('titles', r.work, r.work_en));
+  const rec = nameFor('titles', r.work, r.work_en);
+  if (LANG === 'en' && e) return esc(e.text) + uncertainMark(rec);
+  return ruby(r.work, rec) + (FURIGANA ? uncertainMark(rec) : '');
 }
 
 /* Authors likewise: one language, chosen by the caller's context — a romanisation and its Japanese are the same name
    twice, so the toggle picks one (§5b). */
 function authorLabel(r) {
-  const e = enOf(r.author_en);
+  const rec = nameFor('authors', (r.author || '').trim(), r.author_en);
+  const e = enOf(rec);
   if (!e) return esc(r.author || '');
-  if (LANG === 'en') return enHtml(r.author_en, 'byen');
+  if (LANG === 'en') return enHtml(rec, 'byen');
   // No 'both' branch any more. In 併記 this is called twice — once per line — so pairing the two
   // scripts HERE would print the romanisation twice on the English line and once on the Japanese.
   return esc(r.author || '');
@@ -1402,7 +1422,11 @@ Promise.all([
   DATA('feed/current.json'),
   DATA('series.json').catch(() => null),
   DATA('feed/meta.json').catch(() => null),
-]).then(([idx, feed, series, meta]) => {
+  // Names, keyed by folded title/author, joined onto rows at render time — see nameFor(). Shipped
+  // apart from the rows so an archived month, which is never rewritten, still gets current ones.
+  DATA('feed/names.json').catch(() => null),
+]).then(([idx, feed, series, meta, names]) => {
+  NAMES = names && names.titles ? names : null;
   INDEX = idx; FEED = feed; SERIES = series; META = meta;
   // The header used to restate the totals — "1350 更新 · 302 作品 · 646 巻" and a release/platform
   // count under it. The tabs already carry those numbers, next to the thing they count, and a
