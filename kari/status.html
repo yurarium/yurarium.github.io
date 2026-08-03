@@ -131,6 +131,26 @@ function render(d, checks) {
   <p class="note">Built ${esc(d.generated)}. ${d.series_rows} work rows held,
     ${un0.length} of them with nothing captured behind the title and so not listed.</p>`;
 
+  // ── Content flags ─────────────────────────────────────────────────────────
+  // A source flagged these on content grounds. They are listed rather than counted, because a
+  // number cannot be reviewed and the reason this block exists is that a register was written
+  // from the first run, read by nothing, and every work in it published regardless.
+  const cf = d.content_flags;
+  if (cf && cf.total) {
+    h += `<h2>内容フラグ / content flags</h2>
+      <p class="note">${cf.total} work(s) carry a content flag from their source.
+      ${cf.published} published, ${cf.withheld} held back.
+      Every platform here is a commercial publisher's own web arm, so a flag does not withhold by
+      itself; it is recorded so a less obvious case cannot pass unnoticed.</p>
+      <div class="scroll"><table><tr><th>work</th><th>source</th><th>state</th><th>flag</th></tr>`;
+    for (const r of cf.rows) {
+      h += `<tr><td>${esc(r.title)}</td><td>${esc(r.source)}</td>
+            <td><span class="pill ${r.withheld ? 'warn' : 'ok'}">${r.withheld ? '非公開 withheld' : '公開 published'}</span></td>
+            <td class="why">${esc(r.reason || '')}</td></tr>`;
+    }
+    h += `</table></div>`;
+  }
+
   // ── Claims ────────────────────────────────────────────────────────────────
   h += `<h2>報告の追跡 / claim tracing</h2>
     <p class="note">${d.claims.total} reports from listing sites, each ending in exactly one state.</p>
