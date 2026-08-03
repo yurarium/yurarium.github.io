@@ -1763,7 +1763,11 @@ el('fmonth').addEventListener('change', () => {
   setPlatOptions();
   renderFeed();
   navSync(true);
-  el('tab-feed').scrollIntoView({ block: 'start', behavior: 'smooth' });
+  // NO SCROLL. It was deliberate once: the period selector lived at the FOOT of the tab, below the
+  // list it governs, so choosing a month left a reader looking at the bottom of a list that had
+  // just been replaced, and this carried them back up to it. The control is first in the bar now,
+  // so the reader is already at the top and the scroll only moves the page out from under them.
+  // A behaviour that was right for a layout outlives the layout unless somebody goes and looks.
 });
 ['sq','sstate','sfree','splat','ssort'].forEach(i => el(i).addEventListener('input', renderSeries));
 el('sreset').addEventListener('click', () => resetFilters(RESETS.ser, renderSeries));
