@@ -1018,10 +1018,22 @@ function authorLabel(r) {
    a browser west of Greenwich; these dates are calendar days, not instants. */
 const DOW_JA = ['日','月','火','水','木','金','土'];
 const DOW_EN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+/* A DATE IS MOSTLY NOT A TRANSLATION PROBLEM. 08-03 and 2026-08-03 belong to neither language:
+   English would write 3 Aug and Japanese 8月3日, and the ISO order reads correctly to both. Only
+   two tokens are language-bound, the weekday and the month name, and they are what these two
+   functions produce.
+
+   併記 SHOWS BOTH, as it does everywhere else. The day heading is a divider, so it cannot take a
+   second line the way §5b gives one to a title, but the token is three characters and doubles
+   along the axis that is free. The month picker's own button already did this, from
+   the same mode, because it happens to route through T().
+
+   Neither used to decide anything for 併記. `LANG === 'en' ? EN : JA` gave it Japanese because it
+   is not 'en', so the page showed 月 beside a button reading 最新 / latest. */
 function dow(d) {
   if (!/^\d{4}-\d\d-\d\d/.test(d || '')) return '';
   const n = new Date(d.slice(0, 10) + 'T00:00:00Z').getUTCDay();
-  return LANG === 'en' ? DOW_EN[n] : DOW_JA[n];
+  return LANG === 'en' ? DOW_EN[n] : LANG === 'ja' ? DOW_JA[n] : `${DOW_JA[n]} ${DOW_EN[n]}`;
 }
 
 /* Platform names in English.
@@ -1532,7 +1544,11 @@ const MONTH_EN = ['January','February','March','April','May','June',
                   'July','August','September','October','November','December'];
 function monthLabel(m, lang) {
   const [y, mo] = String(m).split('-');
-  return (lang || LANG) === 'en' ? `${MONTH_EN[+mo - 1]} ${y}` : `${y}年${+mo}月`;
+  const ja = `${y}年${+mo}月`, en = `${MONTH_EN[+mo - 1]} ${y}`;
+  // An explicit `lang` still forces one: the hidden <select> builds both halves itself, and each
+  // option needs them separately rather than as a string this function has already joined.
+  const L = lang || LANG;
+  return L === 'en' ? en : L === 'ja' ? ja : `${ja} / ${en}`;
 }
 
 /* Which set the tab is showing: the recent window, or one archived month. Read off the control
@@ -2210,7 +2226,7 @@ function soonSubLabel() { return T('今後1か月まで', 'up to a month ahead')
 function monthBtnLabel() {
   const m = el('fmonth').value;
   const face = !m ? recentLabel() : m === SOON ? soonLabel()
-             : monthLabel(m, LANG === 'en' ? 'en' : 'ja');
+             : monthLabel(m);      // follows the mode, including 併記
   return face + ' ▾';
 }
 
