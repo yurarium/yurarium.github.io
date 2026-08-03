@@ -75,6 +75,47 @@
   /* The way out, lit at the same moment. Disabled when there is nothing to clear, which is most
      of the time and is also how the two are learned as one idea. */
   .controls button[disabled]{opacity:.4;cursor:default}
+  /* THE DISPLAY-DETAIL POPUP. Anchored to its own button rather than to the bar, so it opens
+     under the control that summoned it wherever the header has wrapped it to. Right-aligned,
+     because the button sits at the end of the row and a left-aligned panel would leave the page. */
+  /* overflow:visible undoes .themebox, which clips to its own rounded corners so the buttons
+     inside a group square off against them. That clipping removed the whole panel: it reported
+     itself open, on screen and 272px wide, and nothing was drawn. This group holds one button and
+     has no corners to defend. */
+  /* Both classes in the selector, not just .langmore: .themebox is declared further down and the
+     two would otherwise tie on specificity, with the later rule winning and the panel staying
+     clipped. It reported itself open, on screen and 272px wide, and nothing was drawn. */
+  .themebox.langmore{position:relative;overflow:visible}
+  .morepop{position:absolute;top:calc(100% + .35rem);right:0;z-index:60;min-width:17rem;
+    max-width:min(23rem, calc(100vw - 1.5rem));padding:.7rem .8rem;text-align:left;
+    background:var(--bg);border:1px solid var(--line);border-radius:.5rem;
+    box-shadow:0 6px 22px rgba(0,0,0,.18)}
+  .moregrp{margin:0 0 .85rem}
+  .moregrp:last-child{margin-bottom:0}
+  .morelab{display:block;font-size:.76rem;color:var(--dim);margin-bottom:.3rem}
+  .morenote{font-size:.72rem;color:var(--dim);margin:.35rem 0 0;line-height:1.45}
+  /* A group that cannot apply keeps its space and goes inert, the same rule the header row used:
+     a control vanishing reflows the panel and the reader loses their place. */
+  .moregrp[data-inert]{opacity:.4}
+  .moregrp[data-inert] button, .moregrp[data-inert] .enorow{pointer-events:none}
+
+  /* THE ORDER LIST. Draggable rows, and each also carries its own move buttons, because drag is
+     unavailable to a keyboard and awkward on a touch screen, and this is a preference rather than
+     a flourish. */
+  .enorder{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.25rem}
+  .enorow{display:flex;align-items:center;gap:.4rem;padding:.3rem .4rem;cursor:grab;
+    border:1px solid var(--line);border-radius:.35rem;background:var(--bg);font-size:.82rem}
+  .enorow[aria-grabbed="true"]{opacity:.45;cursor:grabbing}
+  .enorow.over{border-color:var(--accent)}
+  .enorow .grip{color:var(--dim);cursor:grab;line-height:1}
+  .enorow .nm{flex:1;min-width:0}
+  .enorow .ct{color:var(--dim);font-size:.72rem;white-space:nowrap}
+  /* Ordered below a form every work has, so it can never be reached. Struck through rather than
+     hidden: the reader put it there, and it has to stay visible to be dragged back out. */
+  .enorow[data-dead] .nm{text-decoration:line-through;color:var(--dim)}
+  .enorow .mv{border:0;background:none;color:var(--dim);padding:0 .15rem;font-size:.85rem;
+    line-height:1;cursor:pointer}
+  .enorow .mv[disabled]{opacity:.25;cursor:default}
   .count{color:var(--dim);font-size:.83rem;margin:0 0 .7rem}
   ol,ul.plain{list-style:none;margin:0;padding:0}
   li{border-bottom:1px solid var(--line)}
@@ -296,12 +337,13 @@
   .mast-text{min-width:0}
   .ctlbar{display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;
     justify-content:flex-end;margin-left:auto}
-  .ctlbar > .ctlrow{display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;flex:0 0 auto}
+  /* `flex:0 1 auto`, not `0 0 auto`. The row may not shrink was true while it held exactly what
+     fitted; adding the "…" button took it past 375px and, unable to narrow, it overflowed to the
+     LEFT and put 日本語 off the edge of the screen. A row that cannot shrink cannot wrap either,
+     because its own wrapping needs a width to wrap within. */
+  .ctlbar > .ctlrow{display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;
+    flex:0 1 auto;max-width:100%;justify-content:flex-end}
   .ctlrow > .themebox{flex:0 0 auto}
-  /* The dependent row breaks to its own line and right-aligns under the rest. Needs the same
-     specificity as the rule above it: `.ctlbar > .ctlrow` beats a bare `.ctlrow-dep`, so the
-     flex-basis was being overridden and all three rows stayed on one line. */
-  .ctlbar > .ctlrow-dep{flex-basis:100%;justify-content:flex-end;margin-top:.1rem}
   .conditional.inert{visibility:hidden;pointer-events:none}
   /* The theme labels are the only ones that change length with the language: 自動 / auto / 自動 /
      auto, and the language and romanisation groups are self-labelling, so they never move. Left
@@ -362,20 +404,58 @@
         <button class="themebtn" data-theme-set="light" data-i18n title="light">明 / light</button>
         <button class="themebtn" data-theme-set="dark"  data-i18n title="dark">暗 / dark</button>
       </span>
-      </span>
-      <span class="ctlrow ctlrow-dep">
-      <!-- Furigana. Optional (§5c), off by default, and pointless while the Japanese is not on
-           screen, so it hides in EN mode exactly as the romanisation control hides in 日本語. -->
-      <!-- The button demonstrates itself: 振仮名 wearing its own furigana. A bare ふ said nothing to
-           a reader who did not already know the feature, which is precisely the reader it is for. -->
-      <span class="themebox conditional" role="group" aria-label="ふりがな / furigana" id="furibox">
-        <button class="themebtn furibtn" id="furibtn"
-                title="ふりがな / show readings above kanji"><ruby>振仮名<rt>ふりがな</rt></ruby></button>
-      </span>
-      <span class="themebox conditional" role="group" aria-label="ローマ字 / romanisation" id="rjbox">
-        <button class="themebtn" data-romaji-set="macron" title="macron: Tōkyō, Yūri">ō</button>
-        <button class="themebtn" data-romaji-set="double" title="doubled vowel: Toukyou, Yuuri">ou</button>
-        <button class="themebtn" data-romaji-set="plain"  title="plain: Tokyo, Yuri">o</button>
+      <!-- The language sub-options used to sit on a second row, where they were four controls
+           wide and appeared and vanished with the language. That row is now one button: they are
+           all refinements OF the language choice, so they belong behind it rather than beside it,
+           and the header keeps one row whatever the language is. -->
+      <span class="themebox langmore" role="group" aria-label="表示の詳細 / display detail">
+        <button class="themebtn" id="morebtn" aria-haspopup="dialog" aria-expanded="false"
+                title="表示の詳細 / display detail">…</button>
+        <div class="morepop" id="morepop" role="dialog" aria-label="表示の詳細 / display detail" hidden>
+
+          <!-- Romanisation style. Taste, not correctness, so it is the reader's (NAMES-PLAN §8.1).
+               All three are rendered at build time from the same kana, so switching costs nothing. -->
+          <div class="moregrp conditional" id="rjbox">
+            <span class="morelab" data-i18n>ローマ字 / romanisation</span>
+            <span class="themebox">
+              <button class="themebtn" data-romaji-set="macron" title="macron: Tōkyō, Yūri">ō</button>
+              <button class="themebtn" data-romaji-set="double" title="doubled vowel: Toukyou, Yuuri">ou</button>
+              <button class="themebtn" data-romaji-set="plain"  title="plain: Tokyo, Yuri">o</button>
+            </span>
+          </div>
+
+          <!-- Furigana. Optional (§5c), off by default. The button demonstrates itself: 振仮名
+               wearing its own furigana. A bare ふ said nothing to a reader who did not already know
+               the feature, which is precisely the reader it is for. -->
+          <div class="moregrp conditional" id="furibox">
+            <span class="morelab" data-i18n>ふりがな / furigana</span>
+            <span class="themebox">
+              <button class="themebtn furibtn" id="furibtn"
+                      title="ふりがな / show readings above kanji"><ruby>振仮名<rt>ふりがな</rt></ruby></button>
+            </span>
+          </div>
+
+          <!-- Which English a work is shown by, when it has more than one. The order was fixed
+               here and is now the reader's: somebody who knows a series by what a licensor calls
+               it should not have to know that we prefer the work's own name. -->
+          <div class="moregrp conditional" id="enorderbox">
+            <span class="morelab" data-i18n>英語表記の優先順位 / English name, in order of preference</span>
+            <ol class="enorder" id="enorder"></ol>
+            <p class="morenote" id="enordernote"></p>
+          </div>
+
+          <!-- Applied ONLY to text we wrote. A licensed or official English title is a name, and a
+               name is not respelt: The Moon on a Rainy Night is what Kodansha publishes it as
+               whichever side of the Atlantic the reader is on. -->
+          <div class="moregrp conditional" id="dialbox">
+            <span class="morelab" data-i18n>綴り / spelling</span>
+            <span class="themebox">
+              <button class="themebtn" data-dialect-set="gb" title="colour, realise">en-GB</button>
+              <button class="themebtn" data-dialect-set="us" title="color, realize">en-US</button>
+            </span>
+            <p class="morenote" id="dialnote"></p>
+          </div>
+        </div>
       </span>
       </span>
       </span>
@@ -679,8 +759,80 @@ function bilingual(render, cls) {
    Japanese. So every function here returns null rather than a placeholder when it has nothing. */
 const PREF_ROMAJI = 'yurarium.pref.romaji';
 const PREF_FURI   = 'yurarium.pref.furigana';
+const PREF_ENORDER = 'yurarium.pref.enorder';
+const PREF_DIALECT = 'yurarium.pref.dialect';
 let ROMAJI_STYLE = prefGet(PREF_ROMAJI, 'macron');
 let FURIGANA     = prefGet(PREF_FURI, false);
+
+/* WHICH ENGLISH, IN WHAT ORDER. The build ships every English form it holds for a work under
+   `en_forms`, keyed by what makes it that form, plus the romanisation separately. This was a fixed
+   precedence in the code: the work's own name, then a licensor's, then ours, then the romanisation.
+   That order is defensible and it is still the default, but it is a preference and not a fact, and
+   a reader who knows a series by what its licensor calls it should not have to know that we think
+   the Japanese publisher's English outranks it.
+
+   `romaji` is a level like the others, and it is the one that makes the control worth having: a
+   reader who would rather see Anata no Tonari than a translation nobody has checked can put it at
+   the top and get romanisations throughout. */
+const EN_LEVELS = ['licensed', 'official-jp', 'translated', 'romaji'];
+const EN_LEVEL_LABEL = {
+  'licensed':    ['ライセンス版', 'Licensed'],
+  'official-jp': ['公式英題', 'Official'],
+  // Named for what it is. NAMES-PLAN §5 calls this `translated` and marks it as ours in the
+  // interface; from the reader's side the honest word for who did the translating is this one.
+  'translated':  ['機械翻訳', 'Machine translation'],
+  'romaji':      ['ローマ字', 'Romanisation'],
+};
+const EN_DEFAULT = ['official-jp', 'licensed', 'translated', 'romaji'];
+
+function enOrder() {
+  const saved = prefGet(PREF_ENORDER, null);
+  if (!Array.isArray(saved)) return EN_DEFAULT.slice();
+  // Repaired rather than trusted. A stored order from an older build may be missing a level that
+  // has since been added, and a level absent from the list would be unreachable for ever with
+  // nothing on screen to say why.
+  const clean = saved.filter(x => EN_LEVELS.includes(x));
+  return clean.concat(EN_LEVELS.filter(x => !clean.includes(x)));
+}
+let EN_ORDER = enOrder();
+
+/* SPELLING. Applied to text WE wrote and to nothing else: a licensed or official English title is
+   a name, and names are not respelt. Kodansha publishes The Moon on a Rainy Night, and if a
+   licensor spells a title with -ize then that is the title.
+
+   Suffix rules are unusable here: this page is full of romaji, and a rule that rewrites -our or
+   -re eats Kaeru, Namae, Sumire and Mae. So it is a dictionary, whole words only, case kept. */
+const SPELL_US = {
+  colour:'color', colours:'colors', coloured:'colored', colourful:'colorful',
+  favour:'favor', favours:'favors', favourite:'favorite', favourites:'favorites',
+  honour:'honor', honours:'honors', neighbour:'neighbor', neighbours:'neighbors',
+  behaviour:'behavior', flavour:'flavor', flavours:'flavors', humour:'humor',
+  rumour:'rumor', rumours:'rumors', savour:'savor', harbour:'harbor', labour:'labor',
+  realise:'realize', realised:'realized', realises:'realizes', realising:'realizing',
+  recognise:'recognize', recognised:'recognized', apologise:'apologize',
+  organise:'organize', organised:'organized', memorise:'memorize', memorised:'memorized',
+  theatre:'theater', theatres:'theaters', centre:'center', centres:'centers',
+  metre:'meter', metres:'meters', litre:'liter', litres:'liters', fibre:'fiber',
+  grey:'gray', greyer:'grayer', jewellery:'jewelry', practise:'practice',
+  travelling:'traveling', travelled:'traveled', traveller:'traveler',
+  cancelled:'canceled', cancelling:'canceling', marvellous:'marvelous',
+  defence:'defense', offence:'offense', pretence:'pretense', licence:'license',
+  catalogue:'catalog', dialogue:'dialog', mould:'mold', moustache:'mustache',
+  plough:'plow', pyjamas:'pajamas', storey:'story', storeys:'stories',
+};
+let DIALECT = prefGet(PREF_DIALECT, 'gb');
+
+function respell(s) {
+  if (DIALECT !== 'us' || !s) return s;
+  return s.replace(/[A-Za-z]+/g, w => {
+    const hit = SPELL_US[w.toLowerCase()];
+    if (!hit) return w;
+    // Preserve the case the author used: Colour at the start of a title must not become color.
+    if (w === w.toUpperCase() && w.length > 1) return hit.toUpperCase();
+    if (w[0] === w[0].toUpperCase()) return hit[0].toUpperCase() + hit.slice(1);
+    return hit;
+  });
+}
 
 const HAS_KANJI = /[\u4e00-\u9fff]/;
 
@@ -718,21 +870,34 @@ function nameFor(kind, raw, existing) {
   return NAMES[kind][foldKey(raw)] || null;
 }
 
-function enOf(rec) {
-  if (!rec) return null;
-  const styled = rec.romaji && rec.romaji[ROMAJI_STYLE];
-  // An English NAME the work actually has outranks a romanisation. A name is a name whatever the
-  // style toggle says, so official-jp, licensed and translated take `en` directly.
-  if (rec.en && rec.basis !== 'romaji')
-    return { text: rec.en, ours: rec.basis === 'translated',
-             unverified: !!rec.unverified, basis: rec.basis };
-  // basis 'romaji' is a ROMANISATION, so render it from the kana whenever we hold the kana.
+/* What this record can offer at each level. Kept separate from the choosing, so the popup can
+   count what is available without duplicating the rules that decide what is shown. */
+function enAvailable(rec) {
+  if (!rec) return {};
+  const out = Object.assign({}, rec.en_forms || {});
+  // A record predating en_forms, or one whose only claim is the live one.
+  if (rec.en && rec.basis && rec.basis !== 'romaji' && !out[rec.basis]) out[rec.basis] = rec.en;
+  // basis 'romaji' is a ROMANISATION, so render it from the kana whenever we hold the kana,
   // otherwise the style control silently does nothing to it, which is exactly the failure §8.1
   // exists to prevent. Some records arrived as a romanised string with no reading behind it; those
   // fall back to the stored string and cannot follow the toggle. That is a property of the record,
   // not of the design, and it disappears as readings are filled in.
-  if (styled) return { text: styled, ours: true, unverified: !!rec.unverified, basis: 'romaji' };
-  if (rec.en) return { text: rec.en, ours: true, unverified: !!rec.unverified, basis: rec.basis };
+  const styled = rec.romaji && rec.romaji[ROMAJI_STYLE];
+  if (styled) out.romaji = styled;
+  else if (rec.en && rec.basis === 'romaji') out.romaji = rec.en;
+  return out;
+}
+
+function enOf(rec) {
+  if (!rec) return null;
+  const have = enAvailable(rec);
+  for (const level of EN_ORDER) {
+    if (!have[level]) continue;
+    const ours = level === 'translated' || level === 'romaji';
+    // Respelt only where it is ours to respell. See SPELL_US.
+    const text = ours ? respell(have[level]) : have[level];
+    return { text, ours, unverified: !!rec.unverified, basis: level };
+  }
   return null;
 }
 
@@ -968,20 +1133,134 @@ function setApplicable(box, on) {
   box.querySelectorAll('button').forEach(b => { b.tabIndex = on ? 0 : -1; });
 }
 
+/* Inside the popup a group is a block, so it marks itself with an attribute the panel's own rules
+   read. Same idea as setApplicable: keep the space, drop out of the tab order. */
+function setGroupApplicable(box, on) {
+  if (!box) return;
+  if (on) box.removeAttribute('data-inert'); else box.setAttribute('data-inert', '1');
+  box.setAttribute('aria-hidden', String(!on));
+  box.querySelectorAll('button').forEach(b => { b.tabIndex = on ? 0 : -1; });
+}
+
 function applyRomajiVisibility() {
   const box = el('rjbox');
   if (box) {
     // Not applicable in 日本語 mode. It would offer a choice about text that is not on the page.
-    setApplicable(box, LANG !== 'ja');
+    setGroupApplicable(box, LANG !== 'ja');
     box.querySelectorAll('[data-romaji-set]').forEach(b =>
       b.setAttribute('aria-pressed', String(b.dataset.romajiSet === ROMAJI_STYLE)));
   }
   const fb = el('furibox');
   if (fb) {
-    setApplicable(fb, LANG !== 'en');     // nothing to annotate when the Japanese is replaced
+    setGroupApplicable(fb, LANG !== 'en');   // nothing to annotate when the Japanese is replaced
     el('furibtn').setAttribute('aria-pressed', String(!!FURIGANA));
   }
+  setGroupApplicable(el('enorderbox'), LANG !== 'ja');
+  const db = el('dialbox');
+  if (db) {
+    setGroupApplicable(db, LANG !== 'ja');
+    db.querySelectorAll('[data-dialect-set]').forEach(b =>
+      b.setAttribute('aria-pressed', String(b.dataset.dialectSet === DIALECT)));
+  }
+  renderEnOrder();
+  renderDialNote();
+  markMoreActive();
   renderFuriNote();
+}
+
+/* The "…" button lights when anything behind it is set, because a control that hides its own state
+   is a control the reader has to open to check. Same accent as the filter row uses for the same
+   meaning: this is set, not this is wrong. */
+function markMoreActive() {
+  const b = el('morebtn');
+  if (!b) return;
+  const changed = ROMAJI_STYLE !== 'macron' || FURIGANA || DIALECT !== 'gb'
+    || EN_ORDER.join() !== EN_DEFAULT.join();
+  if (changed) b.setAttribute('data-active', '1'); else b.removeAttribute('data-active');
+}
+
+/* HOW MANY WORKS EACH LEVEL WOULD ACTUALLY BE USED FOR, in the order currently set. Not how many
+   hold that form, which is a different and much less useful number: with the default order,
+   Licensed is held by six works and used for the four of them that have no official English name.
+
+   Counting the effect rather than the availability is also what makes "this will not apply"
+   exact. An earlier version guessed at it by looking for a level held by every work, which never
+   fired, because romaji is held for 1,045 of 1,074 and not for all of them. A level used zero
+   times is used zero times, and there is nothing to infer.
+
+   Counted from the data on screen rather than baked at build time, so the numbers cannot drift
+   away from the file they describe. */
+function enLevelCounts(order) {
+  order = order || EN_ORDER;
+  const out = { licensed: 0, 'official-jp': 0, translated: 0, romaji: 0, total: 0, none: 0 };
+  if (!NAMES || !NAMES.titles) return out;
+  for (const k in NAMES.titles) {
+    out.total++;
+    const have = enAvailable(NAMES.titles[k]);
+    const used = order.find(lv => have[lv]);
+    if (used) out[used]++; else out.none++;
+  }
+  return out;
+}
+
+function renderEnOrder() {
+  const ol = el('enorder');
+  if (!ol) return;
+  const counts = enLevelCounts();
+  ol.innerHTML = '';
+  EN_ORDER.forEach((lv, i) => {
+    const li = document.createElement('li');
+    li.className = 'enorow';
+    li.draggable = true;
+    li.dataset.level = lv;
+    // Zero works reach this level in the order as it stands, so moving it about below its current
+    // position changes nothing on the page. Struck through rather than hidden: the reader put it
+    // there, and it has to stay visible to be dragged back out.
+    if (!counts[lv]) li.dataset.dead = '1';
+    const [ja, en] = EN_LEVEL_LABEL[lv];
+    li.innerHTML =
+      `<span class="grip" aria-hidden="true">⠿</span>` +
+      `<span class="nm">${esc(T(ja, en))}</span>` +
+      `<span class="ct">${counts[lv]}</span>` +
+      `<button class="mv" data-mv="up" ${i === 0 ? 'disabled' : ''} ` +
+        `aria-label="${esc(T('上へ', 'move up'))}">▲</button>` +
+      `<button class="mv" data-mv="down" ${i === EN_ORDER.length - 1 ? 'disabled' : ''} ` +
+        `aria-label="${esc(T('下へ', 'move down'))}">▼</button>`;
+    ol.appendChild(li);
+  });
+  const note = el('enordernote');
+  if (note) {
+    const dead = EN_LEVELS.filter(lv => !counts[lv]);
+    const base = T('数字はこの順序で実際に使われる作品数です。',
+                   'The number is how many works actually use that form, in this order.');
+    note.textContent = dead.length
+      ? base + T(' 取り消し線の項目は現在どの作品にも使われません。',
+                 ' Struck-through entries are used by no work as things stand.')
+      : base;
+  }
+}
+
+function renderDialNote() {
+  const n = el('dialnote');
+  if (!n) return;
+  n.textContent = T(
+    'ライセンス版・公式英題には適用されません。題名そのものだからです。',
+    'Not applied to licensed or official titles: the spelling is part of the name.');
+}
+
+function setEnOrder(next) {
+  EN_ORDER = next;
+  prefSet(PREF_ENORDER, EN_ORDER);
+  renderEnOrder();
+  markMoreActive();
+  if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+}
+
+function moveLevel(from, to) {
+  if (to < 0 || to >= EN_ORDER.length || from === to) return;
+  const next = EN_ORDER.slice();
+  next.splice(to, 0, next.splice(from, 1)[0]);
+  setEnOrder(next);
 }
 document.addEventListener('DOMContentLoaded', () => {
   const fb = el('furibtn');
@@ -998,6 +1277,81 @@ document.addEventListener('DOMContentLoaded', () => {
       applyRomajiVisibility();
       if (FEED) { renderFeed(); renderCat(); renderSeries(); }
     }));
+  document.querySelectorAll('[data-dialect-set]').forEach(b =>
+    b.addEventListener('click', () => {
+      DIALECT = b.dataset.dialectSet;
+      prefSet(PREF_DIALECT, DIALECT);
+      applyRomajiVisibility();
+      if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+    }));
+
+  // THE POPUP. Same open/close contract as the month picker: the button toggles, a click outside
+  // or Escape closes, and focus returns to the button so a keyboard is not left adrift.
+  const mb = el('morebtn'), mp = el('morepop');
+  if (mb && mp) {
+    const setOpen = on => {
+      mp.hidden = !on;
+      mb.setAttribute('aria-expanded', String(on));
+    };
+    mb.addEventListener('click', e => { e.stopPropagation(); setOpen(mp.hidden); });
+    // Clicks inside must not reach the document handler that closes it, or dragging a row would
+    // shut the panel underneath the reader's hand.
+    mp.addEventListener('click', e => e.stopPropagation());
+    document.addEventListener('click', () => setOpen(false));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !mp.hidden) { setOpen(false); mb.focus(); }
+    });
+  }
+
+  // REORDERING. Drag for a mouse, buttons for everything else. The buttons are not a fallback
+  // bolted on: drag is unavailable to a keyboard and unreliable on a touch screen, and this is a
+  // setting a reader may want to change once and never again.
+  const ol = el('enorder');
+  if (ol) {
+    let dragging = null;
+    ol.addEventListener('click', e => {
+      const btn = e.target.closest('.mv');
+      if (!btn) return;
+      const row = btn.closest('.enorow');
+      const from = EN_ORDER.indexOf(row.dataset.level);
+      moveLevel(from, from + (btn.dataset.mv === 'up' ? -1 : 1));
+      // Keep the keyboard on the row that moved rather than on the index it vacated.
+      const moved = ol.querySelector(`[data-level="${row.dataset.level}"]`);
+      const same = moved && moved.querySelector(`[data-mv="${btn.dataset.mv}"]`);
+      if (same && !same.disabled) same.focus(); else if (moved) moved.focus();
+    });
+    ol.addEventListener('dragstart', e => {
+      const row = e.target.closest('.enorow');
+      if (!row) return;
+      dragging = row.dataset.level;
+      row.setAttribute('aria-grabbed', 'true');
+      e.dataTransfer.effectAllowed = 'move';
+      // Firefox will not start a drag without data set on the transfer.
+      try { e.dataTransfer.setData('text/plain', dragging); } catch (err) { /* older browsers */ }
+    });
+    ol.addEventListener('dragover', e => {
+      e.preventDefault();
+      const row = e.target.closest('.enorow');
+      ol.querySelectorAll('.enorow').forEach(r => r.classList.toggle('over', r === row));
+    });
+    ol.addEventListener('dragleave', e => {
+      const row = e.target.closest('.enorow');
+      if (row) row.classList.remove('over');
+    });
+    ol.addEventListener('drop', e => {
+      e.preventDefault();
+      const row = e.target.closest('.enorow');
+      if (!row || !dragging) return;
+      moveLevel(EN_ORDER.indexOf(dragging), EN_ORDER.indexOf(row.dataset.level));
+      dragging = null;
+    });
+    ol.addEventListener('dragend', () => {
+      dragging = null;
+      ol.querySelectorAll('.enorow').forEach(r => {
+        r.classList.remove('over'); r.removeAttribute('aria-grabbed');
+      });
+    });
+  }
   applyRomajiVisibility();
 });
 
@@ -1945,8 +2299,18 @@ function markActive() {
   }
 }
 
+/* A control whose FACE is drawn separately from the element holding its value. Assigning .value
+   fires no event, so anything that paints itself from that value has to be told. The month picker
+   is a button over a hidden <select>: reset put the select back to the recent window and left the
+   button still reading 近日更新予定, so the tab showed one period and the control claimed another.
+   Adding a control with a rendered face means adding it here, which is the point of the table. */
+const FACE_PAINTERS = {
+  fmonth: () => { if (typeof paintMonthPicker === 'function' && el('fmonthbtn')) paintMonthPicker(); },
+};
+
 function resetFilters(ids, render) {
   ids.forEach(id => { const e = el(id); if (!e) return; e.value = e.tagName === 'SELECT' ? e.options[0].value : ''; });
+  ids.forEach(id => { if (FACE_PAINTERS[id]) FACE_PAINTERS[id](); });
   saveView(); render(); markActive();
 }
 // fmonth is in the list: a reader who has gone back to an archived month and then asks for a clean
@@ -1973,7 +2337,9 @@ function wireClearPrefs() {
     try {
       // 'lang' is stored unprefixed, unlike the four PREF_ keys. Checked against the browser
       // rather than assumed: a guessed key removes nothing and fails silently.
-      [PREF_THEME, PREF_VIEW, PREF_ROMAJI, PREF_FURI, 'lang']
+      // Enumerated, but checked against the constants rather than typed out again: every
+      // PREF_ key this file defines, plus the one stored unprefixed.
+      [PREF_THEME, PREF_VIEW, PREF_ROMAJI, PREF_FURI, PREF_ENORDER, PREF_DIALECT, 'lang']
         .forEach(k => localStorage.removeItem(k));
     } catch (e) { /* private mode; nothing was stored to remove */ }
     applyTheme('auto');
