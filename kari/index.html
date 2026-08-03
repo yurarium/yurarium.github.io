@@ -2306,7 +2306,8 @@ function windowDays() { return (FEED && FEED.window_days) || 14; }
 function recentLabel() { return T('最新', 'latest'); }
 function recentSubLabel() { return T(`直近${windowDays()}日`, `last ${windowDays()} days`); }
 function soonLabel() { return T('近日更新予定', 'coming soon'); }
-function soonSubLabel() { return T('今後1か月まで', 'up to a month ahead'); }
+// Shorter so it sits on one line beside its label at 375px, as "last 14 days" does above it.
+function soonSubLabel() { return T('今後1か月', 'in the next month'); }
 
 function monthBtnLabel() {
   const m = el('fmonth').value;
