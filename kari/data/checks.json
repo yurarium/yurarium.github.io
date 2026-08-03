@@ -78,6 +78,12 @@
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage."
   },
   {
+   "name": "modules without a test",
+   "value": 17,
+   "budget": 17,
+   "means": "Python modules no suite covers. Offline tests are the enforcement for factoring as well: a module that cannot be tested without a network has not separated its logic from its I/O, so this number falling is the refactoring, not a proxy for it."
+  },
+  {
    "name": "three as an organising shape",
    "value": 28,
    "budget": 28,

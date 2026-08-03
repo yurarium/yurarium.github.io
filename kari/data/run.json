@@ -1,6 +1,6 @@
 {
  "generated": "2026-08-03",
- "releases": 1360,
+ "releases": 1395,
  "platforms": 22,
  "works": 302,
  "series_rows": 1055,
@@ -9,9 +9,9 @@
    "source": "comicfuz",
    "files": 2,
    "works": 43,
-   "rows": 2388,
-   "retrieved": "2026-08-02",
-   "age_days": 1,
+   "rows": 2389,
+   "retrieved": "2026-08-03",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -30,8 +30,8 @@
    "files": 69,
    "works": 687,
    "rows": 8069,
-   "retrieved": "2026-08-02",
-   "age_days": 1,
+   "retrieved": "2026-08-03",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -60,8 +60,8 @@
    "files": 2,
    "works": 190,
    "rows": 190,
-   "retrieved": "2026-08-02",
-   "age_days": 1,
+   "retrieved": "2026-08-03",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -90,8 +90,8 @@
    "files": 33,
    "works": 428,
    "rows": 5552,
-   "retrieved": "2026-08-02",
-   "age_days": 1,
+   "retrieved": "2026-08-03",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   }
@@ -4186,6 +4186,14 @@
    "distinct_works": 1,
    "median_per_day": 1.0,
    "example_work": "はなにあらし"
+  },
+  {
+   "platform": "COMIC FUZ",
+   "date": "2026-08-03",
+   "releases": 33,
+   "distinct_works": 3,
+   "median_per_day": 1,
+   "example_work": "IDOL×IDOL STORY！"
   }
  ],
  "gaps": {
@@ -4418,7 +4426,7 @@
    },
    {
     "week": "2026-08-02",
-    "n": 3
+    "n": 38
    }
   ],
   "trimmed_weeks": 3,
@@ -4426,23 +4434,23 @@
   "tracking_from": "2026-08-01"
  },
  "access_modes": {
-  "free": 677,
-  "purchase": 567,
-  "free-timed": 100
+  "purchase": 568,
+  "free": 710,
+  "free-timed": 101
  },
  "update_kinds": {
-  "new-chapter": 1251,
+  "new-chapter": 1286,
   "final": 8,
   "new-series": 45,
   "other": 20,
   "oneshot": 36
  },
  "identification": {
-  "discovery-candidate": 1047,
+  "discovery-candidate": 1082,
   "platform-genre": 313
  },
  "collapsed": {
-  "duplicate_chapters": 60,
+  "duplicate_chapters": 61,
   "thin_sitemap": 8,
   "resolver": 48,
   "samples": 13
