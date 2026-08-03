@@ -75,7 +75,9 @@ try {
 <p class="note">Listing sites report that a work updated. Those reports are <em>inputs</em>. Earlier
   versions put unconfirmed ones into the update feed marked 要確認, which asked readers to hold a
   question only this system can answer. Every claim now ends in one disposition, and only the
-  <b>open</b> ones represent work outstanding.</p>
+  <b>open</b> ones represent work outstanding. A claim we have traced and cannot settle is a
+  finished state, not a queue: the platform's own listing may be partial, may be far behind, or
+  may not be shown to us at all, and looking again will not change that.</p>
 <p class="note">A refutation is only recorded where our own capture is deep enough to support it:
   at least three chapters of the platform's own history, and no long gap between the claim and the
   newest chapter we hold. Those two guards exist because “the platform lists nothing” and “our fetch
@@ -94,6 +96,12 @@ const DISPO = {
   undatable: ['日付なし', 'the platform publishes no per-chapter dates, so nothing can confirm or refute it', ''],
   phantom:   ['非作品', 'the reported name is not a work', ''],
   open:      ['未追跡', 'not yet traced. This is the work outstanding', 'warn'],
+  // TRACED, AND STILL UNSETTLED. We read the platform's own listing and it cannot settle the
+  // claim: it is partial, or too far behind, or empty, or the platform will not show it to us at
+  // all. No amount of looking again changes any of those, so this is a finished state and not a
+  // queue. It used to be counted as outstanding, which asked somebody to go and do a thing that
+  // had already been done: the same category error as 要確認, in a different place.
+  unsettleable: ['照合不能', 'we read the platform\u2019s own listing and it cannot confirm or refute this', ''],
   'print-serialised': ['雑誌掲載', 'dated to a magazine instalment. A publisher\u2019s web arm publishes '
                        + 'two to five weeks later, so its chapter dates can neither confirm nor refute it', ''],
 };

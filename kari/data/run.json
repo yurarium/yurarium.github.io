@@ -1,9 +1,9 @@
 {
  "generated": "2026-08-03",
- "releases": 1369,
+ "releases": 1377,
  "platforms": 22,
  "works": 302,
- "series_rows": 1029,
+ "series_rows": 1031,
  "sources": [
   {
    "source": "comicfuz",
@@ -87,9 +87,9 @@
   },
   {
    "source": "webpages",
-   "files": 33,
-   "works": 428,
-   "rows": 5552,
+   "files": 35,
+   "works": 432,
+   "rows": 5604,
    "retrieved": "2026-08-03",
    "age_days": 0,
    "in_scope": true,
@@ -97,13 +97,14 @@
   }
  ],
  "claims": {
-  "total": 433,
+  "total": 434,
   "by_disposition": {
-   "absorbed": 367,
-   "open": 43,
-   "undatable": 3,
+   "absorbed": 372,
+   "refuted": 3,
+   "print-serialised": 26,
+   "unsettleable": 29,
    "phantom": 1,
-   "print-serialised": 19
+   "undatable": 3
   },
   "trace": [
    {
@@ -121,11 +122,11 @@
     "url": "https://ynjn.jp/title/27600",
     "claimed": "2026-08-01",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
+    "disposition": "refuted",
+    "why": "we hold this platform's own history for this work and it lists nothing within a week of the claimed date",
+    "platform_latest": "2026-07-21",
+    "chapters_held": 11,
+    "gap_days": 11
    },
    {
     "work": "私を喰べたい、ひとでなし",
@@ -148,36 +149,9 @@
    {
     "work": "リリィズコンプレックス",
     "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-08-01",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "リリィズコンプレックス",
-    "platform": "カドコミ",
     "url": "https://comic-walker.com/detail/KC_005531_S",
     "claimed": "2026-08-01",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "フルボイス！",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-08-01",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "カムパネルラの塔",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-08-01",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -196,20 +170,9 @@
     "url": "https://pocket.shonenmagazine.com/title/03282",
     "claimed": "2026-08-01",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
-   },
-   {
-    "work": "この湯で、あなたと",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-08-01",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-07-22"
    },
    {
     "work": "この湯で、あなたと",
@@ -217,15 +180,6 @@
     "url": "https://comic-walker.com/detail/KC_019740_S",
     "claimed": "2026-08-01",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "おちこぼれフルーツタルト",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-08-01",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -271,15 +225,6 @@
     "url": "https://shonenjumpplus.com/episode/17107094912913096422",
     "claimed": "2026-07-31",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "君となら、明日を歌えるの",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-31",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -347,15 +292,6 @@
     "why": "the platform attests this work on this date"
    },
    {
-    "work": "わたしが恋人になれるわけないじゃん、ムリムリ！（※ムリじゃなかった!?）",
-    "platform": "ニコニコ静画",
-    "url": null,
-    "claimed": "2026-07-31",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "わたしが恋人になれるわけないじゃん、ムリムリ!(※ムリじゃなかった!?)",
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/47265",
@@ -394,15 +330,6 @@
    },
    {
     "work": "忍者と殺し屋のふたりぐらし",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-30",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "忍者と殺し屋のふたりぐらし",
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/54592",
     "claimed": "2026-07-30",
@@ -436,15 +363,6 @@
     "source": "webcomics.jp",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "スライム倒して300年、知らないうちにレベルMAXになってました 森田季節/シバユウスケ",
-    "platform": "ガンガンONLINE",
-    "url": null,
-    "claimed": "2026-07-30",
-    "source": "yurinavi",
-    "disposition": "undatable",
-    "why": "this platform publishes no per-chapter dates — a reader on the site cannot see when a chapter appeared either, so there is nothing to check against"
    },
    {
     "work": "ガイド役の天使を殴り倒したら、死霊術師になりました ～激カワゴスロリ魔神様、サイコー!～",
@@ -597,20 +515,8 @@
     "url": "https://televikun-super-hero-comics.com/rensai/gokumonnadeshiko/",
     "claimed": "2026-07-28",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
-   },
-   {
-    "work": "彼女のカノジョと不純な初恋",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-28",
-    "source": "yurinavi",
     "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "why": "attested within 2 days — the same event, dated differently"
    },
    {
     "work": "彼女のカノジョと不純な初恋",
@@ -636,11 +542,10 @@
     "url": "https://drecomi-plus.jp/series/CD00038",
     "claimed": "2026-07-28",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
+    "disposition": "unsettleable",
+    "why": "HTTP 403",
     "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "last_looked": "2026-08-03"
    },
    {
     "work": "冷たくて 柔らか",
@@ -675,15 +580,6 @@
     "url": "https://yanmaga.jp/comics/%E4%B9%99%E5%A5%B3%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%9A",
     "claimed": "2026-07-28",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "上伊那ぼたん、酔へる姿は百合の花",
-    "platform": "チャンピオンクロス",
-    "url": null,
-    "claimed": "2026-07-28",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -797,15 +693,6 @@
    },
    {
     "work": "ばっどがーる",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-28",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "ばっどがーる",
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/53991",
     "claimed": "2026-07-28",
@@ -837,11 +724,9 @@
     "url": "https://comic-fuz.com/manga/3108",
     "claimed": "2026-07-28",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-06-23"
    },
    {
     "work": "このままモブじゃ終われない!",
@@ -876,11 +761,8 @@
     "url": "https://www.corocoro.jp/title/773",
     "claimed": "2026-07-27",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
    },
    {
     "work": "残光再撮",
@@ -888,24 +770,6 @@
     "url": "https://comic-walker.com/detail/KC_011927_S",
     "claimed": "2026-07-27",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "月はタピオカみたいに",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-27",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "或いは、私の名探偵",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-27",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -924,33 +788,6 @@
     "url": "https://comic-walker.com/detail/KC_006778_S",
     "claimed": "2026-07-27",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "モブヘブン",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-27",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "フレンドガールフレンド",
-    "platform": "花とゆめ＋",
-    "url": null,
-    "claimed": "2026-07-27",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "バカに告白",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-27",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -974,29 +811,11 @@
     "platform_latest": "2026-07-23"
    },
    {
-    "work": "この恋、一旦持ち帰らせていただきます！",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-27",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "この恋、一旦持ち帰らせていただきます!",
     "platform": "カドコミ",
     "url": "https://comic-walker.com/detail/KC_008367_S",
     "claimed": "2026-07-27",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "きょうはなにしよう？",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-27",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1091,29 +910,11 @@
     "why": "the platform attests this work on this date"
    },
    {
-    "work": "エイティエイトを２でわって",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-25",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "attested within 2 days — the same event, dated differently"
-   },
-   {
     "work": "ひとりみです",
     "platform": "カドコミ",
     "url": "https://comic-walker.com/detail/KC_006607_S",
     "claimed": "2026-07-25",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "ぬるめた",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-25",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1126,15 +927,6 @@
     "disposition": "absorbed",
     "why": "attested on this platform within a week — one event",
     "platform_latest": "2026-07-18"
-   },
-   {
-    "work": "しあわせ鳥見んぐ",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-25",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
    },
    {
     "work": "銀の河に星の城",
@@ -1169,15 +961,6 @@
     "url": "https://comic-walker.com/detail/KC_006798_S",
     "claimed": "2026-07-24",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "機動戦士ガンダム 水星の魔女 青春フロンティア",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-24",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1238,27 +1021,9 @@
    {
     "work": "ウィキッドスポット",
     "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-24",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "ウィキッドスポット",
-    "platform": "カドコミ",
     "url": "https://comic-walker.com/detail/KC_005923_S",
     "claimed": "2026-07-24",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "イジめてイジられて",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-24",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1281,24 +1046,6 @@
     "why": "the platform attests this work on this date"
    },
    {
-    "work": "魔法少女201",
-    "platform": "ニコニコ静画",
-    "url": null,
-    "claimed": "2026-07-23",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "魔女まじょS-WITCH",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-23",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "週に一度クラスメイトを買う話 ～ふたりの時間、言い訳の五千円～",
     "platform": "ヤンチャンWeb",
     "url": "https://youngchampion.jp/series/e95df2815bad1",
@@ -1306,16 +1053,6 @@
     "source": "webcomics.jp",
     "disposition": "absorbed",
     "why": "attested within 2 days — the same event, dated differently"
-   },
-   {
-    "work": "超深宇宙より愛をこめて",
-    "platform": "一迅プラス",
-    "url": null,
-    "claimed": "2026-07-23",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "attested on this platform within a week — one event",
-    "platform_latest": "2026-07-16"
    },
    {
     "work": "超深宇宙より愛をこめて",
@@ -1356,28 +1093,10 @@
    },
    {
     "work": "拝啓、在りし日に咲く花たちへ",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-23",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "拝啓、在りし日に咲く花たちへ",
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/70738",
     "claimed": "2026-07-23",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "押しかけ女房、コドモ付き！",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-23",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1393,15 +1112,6 @@
    {
     "work": "妄執女と芥川",
     "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-23",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "妄執女と芥川",
-    "platform": "カドコミ",
     "url": "https://comic-walker.com/detail/KC_007176_S",
     "claimed": "2026-07-23",
     "source": "webcomics.jp",
@@ -1411,14 +1121,12 @@
    {
     "work": "君のせいなんだから、責任とってよね。",
     "platform": "一迅プラス",
-    "url": null,
+    "url": "https://ichicomi.com/episode/2551460909807196614",
     "claimed": "2026-07-23",
-    "source": "webcomics.jp+yurinavi",
-    "disposition": "open",
-    "why": "no URL reported, and no history held — nothing to trace to",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": false
+    "source": "webcomics.jp",
+    "disposition": "absorbed",
+    "why": "attested on this platform within a week — one event",
+    "platform_latest": "2026-07-16"
    },
    {
     "work": "世界で一番おっぱいが好き!",
@@ -1426,21 +1134,10 @@
     "url": "https://www.mangabox.me/reader/262412/",
     "claimed": "2026-07-23",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
-   },
-   {
-    "work": "マユノウタ",
-    "platform": "一迅プラス",
-    "url": null,
-    "claimed": "2026-07-23",
-    "source": "yurinavi",
-    "disposition": "print-serialised",
-    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
-    "platform_latest": "2026-06-17"
+    "disposition": "unsettleable",
+    "why": "we hold 74 chapters ending 2025-08-27, 330 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 74,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "マユノウタ",
@@ -1464,16 +1161,6 @@
    {
     "work": "ひなちゃんが生きてるなら",
     "platform": "一迅プラス",
-    "url": null,
-    "claimed": "2026-07-23",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "attested on this platform within a week — one event",
-    "platform_latest": "2026-07-16"
-   },
-   {
-    "work": "ひなちゃんが生きてるなら",
-    "platform": "一迅プラス",
     "url": "https://ichicomi.com/episode/2551460909885349908",
     "claimed": "2026-07-23",
     "source": "webcomics.jp",
@@ -1493,16 +1180,6 @@
    {
     "work": "たゆたう恋の散り際に",
     "platform": "一迅プラス",
-    "url": null,
-    "claimed": "2026-07-23",
-    "source": "yurinavi",
-    "disposition": "print-serialised",
-    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
-    "platform_latest": "2026-06-17"
-   },
-   {
-    "work": "たゆたう恋の散り際に",
-    "platform": "一迅プラス",
     "url": "https://ichicomi.com/episode/2551460909671541131",
     "claimed": "2026-07-23",
     "source": "webcomics.jp",
@@ -1512,28 +1189,10 @@
    },
    {
     "work": "魔女とくゅらす",
-    "platform": "コミプレ",
-    "url": null,
-    "claimed": "2026-07-22",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "魔女とくゅらす",
     "platform": "HERO'S Web",
     "url": "https://heros-web.com/series/2b64bc0622a2a",
     "claimed": "2026-07-22",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "咲きそめコンプレックス",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-22",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1552,15 +1211,6 @@
     "url": "https://youngchampion.jp/series/81d9b296d7bc7",
     "claimed": "2026-07-22",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "らぶぶいっ！",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-22",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1588,15 +1238,6 @@
     "url": "https://www.yomonga.com/titles/2546/",
     "claimed": "2026-07-21",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "英雄少女と呪われの銀姫",
-    "platform": "となりのヤングジャンプ",
-    "url": null,
-    "claimed": "2026-07-21",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1649,15 +1290,6 @@
    {
     "work": "創る庭",
     "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-21",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "創る庭",
-    "platform": "カドコミ",
     "url": "https://comic-walker.com/detail/KC_007254_S",
     "claimed": "2026-07-21",
     "source": "webcomics.jp",
@@ -1670,24 +1302,6 @@
     "url": "https://manga.nicovideo.jp/comic/56450",
     "claimed": "2026-07-21",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "一畳間まんきつ暮らし！",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-21",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "ユリノコ",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-21",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1721,15 +1335,6 @@
    {
     "work": "なとりとしずは",
     "platform": "サンデーうぇぶり",
-    "url": null,
-    "claimed": "2026-07-21",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "なとりとしずは",
-    "platform": "サンデーうぇぶり",
     "url": "https://www.sunday-webry.com/episode/12207421983745504350",
     "claimed": "2026-07-21",
     "source": "webcomics.jp",
@@ -1751,11 +1356,10 @@
     "url": "https://takecomic.jp/series/2ff377e5bc873",
     "claimed": "2026-07-21",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "we hold 2 chapters ending 2024-03-01, 872 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 2,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "真先輩の前ではかっこつけられない!",
@@ -1775,24 +1379,6 @@
     "disposition": "absorbed",
     "why": "attested on this platform within a week — one event",
     "platform_latest": "2026-07-17"
-   },
-   {
-    "work": "晴れ晴れ日和",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-20",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "安達としまむら",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-20",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
    },
    {
     "work": "安達としまむら",
@@ -1815,36 +1401,9 @@
    {
     "work": "ボイタボイネ",
     "platform": "pixivコミック",
-    "url": null,
-    "claimed": "2026-07-20",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "ボイタボイネ",
-    "platform": "pixivコミック",
     "url": "https://comic.pixiv.net/works/12194",
     "claimed": "2026-07-20",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "バクガタリzzZ",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-20",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "ケイヤクシマイ",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-20",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1863,15 +1422,6 @@
     "url": "https://comic-days.com/episode/2550689798616042670",
     "claimed": "2026-07-20",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "お姉さまと巨人 ～お嬢さまが異世界転生～",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-20",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -1958,15 +1508,6 @@
     "why": "attested within 2 days — the same event, dated differently"
    },
    {
-    "work": "雨夜の月",
-    "platform": "コミックDAYS",
-    "url": null,
-    "claimed": "2026-07-18",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "灼熱の卓球娘 REBURN!!",
     "platform": "竹コミ‎‏‎",
     "url": "https://takecomic.jp/series/b3efcd5f3a6a7",
@@ -1986,28 +1527,10 @@
    },
    {
     "work": "星屑テレパス",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-18",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "星屑テレパス",
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/48976",
     "claimed": "2026-07-18",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "怪異部～M県Y市の怪現象について～",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-18",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -2017,11 +1540,10 @@
     "url": "https://comic.pixiv.net/works/13457",
     "claimed": "2026-07-18",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
+    "disposition": "unsettleable",
+    "why": "we read this platform's own listing and it carries nothing dated here",
     "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
+    "last_looked": "2026-08-03"
    },
    {
     "work": "喫茶 秘匿異",
@@ -2033,15 +1555,6 @@
     "why": "attested within 2 days — the same event, dated differently"
    },
    {
-    "work": "十字トンボは空を飛ばない",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-18",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "上杉くんは女の子をやめたい",
     "platform": "ちゃおプラス",
     "url": "https://ciao.shogakukan.co.jp/comics/title/00577/episode/22025",
@@ -2049,15 +1562,6 @@
     "source": "webcomics.jp",
     "disposition": "absorbed",
     "why": "attested within 2 days — the same event, dated differently"
-   },
-   {
-    "work": "ダメ犬彼女",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-18",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
    },
    {
     "work": "ダメ犬彼女",
@@ -2087,38 +1591,11 @@
     "why": "the platform attests this work on this date"
    },
    {
-    "work": "DOUBLE HELIX BLOSSOM",
-    "platform": "週刊コロコロ",
-    "url": null,
-    "claimed": "2026-07-18",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "魔法少女にあこがれて",
-    "platform": "竹コミ！",
-    "url": null,
-    "claimed": "2026-07-17",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "魔法少女にあこがれて",
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/40675",
     "claimed": "2026-07-17",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "顔だけ良いクラスメイトが、やたらとグイグイ来る百合の話。",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-17",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -2141,25 +1618,15 @@
     "why": "the platform attests this work on this date"
    },
    {
-    "work": "明日ちゃんのセーラー服",
-    "platform": "となりのヤングジャンプ",
-    "url": null,
-    "claimed": "2026-07-17",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "平良深姉妹はどっちもヤんでる",
     "platform": "マガポケ",
     "url": "https://pocket.shonenmagazine.com/title/02257",
     "claimed": "2026-07-17",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "we hold 23 chapters ending 2026-03-17, 122 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 23,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "声に乗せてファンファーレ",
@@ -2167,20 +1634,10 @@
     "url": "https://comic.pixiv.net/works/13440",
     "claimed": "2026-07-17",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
+    "disposition": "unsettleable",
+    "why": "we read this platform's own listing and it carries nothing dated here",
     "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
-   },
-   {
-    "work": "壊していいよ、すいかちゃん",
-    "platform": "COMIC OGYAAA!!",
-    "url": null,
-    "claimed": "2026-07-17",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "last_looked": "2026-08-03"
    },
    {
     "work": "壊していいよ、すいかちゃん",
@@ -2201,43 +1658,15 @@
     "why": "the platform attests this work on this date"
    },
    {
-    "work": "令嬢VTuberはメイドの夜食に蹂躙される～禁断ご飯で食レポ生配信～",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-17",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "今夜、エーテルで待ちあわせ",
     "platform": "Seasons",
     "url": "https://comic-seasons.com/episode/2551460909766158255",
     "claimed": "2026-07-17",
     "source": "webcomics.jp",
-    "disposition": "open",
+    "disposition": "unsettleable",
     "why": "we hold 1 chapters ending 2025-12-05, 224 days before the claim — too far behind to argue the platform shows nothing",
     "chapters_held": 1,
-    "also_attested_elsewhere": false,
-    "traceable": true
-   },
-   {
-    "work": "世界一可愛い私の幼馴染が隠れてVTuberをしているらしい",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-17",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "七限目は忍者修行です！",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-17",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "last_looked": "2026-08-03"
    },
    {
     "work": "バカ女26時",
@@ -2245,11 +1674,10 @@
     "url": "https://ynjn.jp/title/12102",
     "claimed": "2026-07-17",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
+    "disposition": "unsettleable",
+    "why": "we read this platform's own listing and it carries nothing dated here",
     "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
+    "last_looked": "2026-08-03"
    },
    {
     "work": "たゆたうふたり",
@@ -2271,28 +1699,10 @@
    },
    {
     "work": "あの子とふたりで。",
-    "platform": "コミックオギャー!!",
-    "url": null,
-    "claimed": "2026-07-17",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "あの子とふたりで。",
     "platform": "COMIC OGYAAA!!",
     "url": "https://comic-ogyaaa.com/episode/2550912965818317820",
     "claimed": "2026-07-17",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "骨に願いを、星に呪いを",
-    "platform": "一迅プラス",
-    "url": null,
-    "claimed": "2026-07-16",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -2316,15 +1726,6 @@
    },
    {
     "work": "運命のヤマダダダダダダダダダダ",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-16",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "運命のヤマダダダダダダダダダダ",
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/72312",
     "claimed": "2026-07-16",
@@ -2344,27 +1745,9 @@
    {
     "work": "新刊100億冊ください",
     "platform": "コミックDAYS",
-    "url": null,
-    "claimed": "2026-07-16",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "新刊100億冊ください",
-    "platform": "コミックDAYS",
     "url": "https://comic-days.com/episode/2550912965415315207",
     "claimed": "2026-07-16",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "好都合セミフレンド",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-16",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -2376,15 +1759,6 @@
     "source": "webcomics.jp",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "大室家",
-    "platform": "一迅プラス",
-    "url": null,
-    "claimed": "2026-07-16",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "attested within 2 days — the same event, dated differently"
    },
    {
     "work": "大室家",
@@ -2407,15 +1781,6 @@
    {
     "work": "ゆるゆり",
     "platform": "一迅プラス",
-    "url": null,
-    "claimed": "2026-07-16",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "attested within 2 days — the same event, dated differently"
-   },
-   {
-    "work": "ゆるゆり",
-    "platform": "一迅プラス",
     "url": "https://ichicomi.com/episode/2550912965923204125",
     "claimed": "2026-07-16",
     "source": "webcomics.jp",
@@ -2432,25 +1797,14 @@
     "why": "attested within 2 days — the same event, dated differently"
    },
    {
-    "work": "きみとボドゲが作りたい！",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-16",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "GURU",
     "platform": "マガポケ",
     "url": "https://pocket.shonenmagazine.com/title/03068",
     "claimed": "2026-07-16",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-07-02"
    },
    {
     "work": "田所さん",
@@ -2462,29 +1816,11 @@
     "why": "attested within 2 days — the same event, dated differently"
    },
    {
-    "work": "大崎さんと小森さん",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-15",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "ガールズ×ヴァンパイア",
     "platform": "チャンピオンクロス",
     "url": "https://championcross.jp/series/f30e2f58bbbdf",
     "claimed": "2026-07-15",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "くちべた食堂",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-15",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -2496,18 +1832,6 @@
     "source": "webcomics.jp",
     "disposition": "undatable",
     "why": "this platform publishes no per-chapter dates — a reader on the site cannot see when a chapter appeared either, so there is nothing to check against"
-   },
-   {
-    "work": "球詠",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-14",
-    "source": "yurinavi",
-    "disposition": "open",
-    "why": "no URL reported, and no history held — nothing to trace to",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": false
    },
    {
     "work": "ハウリング・ブレイズ 葬焔の剣士と不死の魔女",
@@ -2528,35 +1852,15 @@
     "why": "the platform attests this work on this date"
    },
    {
-    "work": "ごきげんよう、一局いかが?",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-14",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "#ギャルとギャルの百合",
-    "platform": "サンデーうぇぶり",
-    "url": null,
-    "claimed": "2026-07-14",
-    "source": "yurinavi",
-    "disposition": "print-serialised",
-    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
-    "platform_latest": "2026-07-28"
-   },
-   {
     "work": "画家の肖像",
     "platform": "ゼノン編集部",
     "url": "https://comic-zenon.com/episode/12207421983944323781",
     "claimed": "2026-07-13",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
+    "disposition": "unsettleable",
+    "why": "we read this platform's own listing and it carries nothing dated here",
     "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "last_looked": "2026-08-03"
    },
    {
     "work": "散らないで菊",
@@ -2564,29 +1868,10 @@
     "url": "https://comic-zenon.com/episode/12207421983944323839",
     "claimed": "2026-07-13",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
+    "disposition": "unsettleable",
+    "why": "we read this platform's own listing and it carries nothing dated here",
     "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
-   },
-   {
-    "work": "堕天使そぷらのちゃんの復讐",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-13",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "わたしのために脱ぎなさいっ！",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-13",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "last_looked": "2026-08-03"
    },
    {
     "work": "わたしのために脱ぎなさいっ!",
@@ -2600,30 +1885,11 @@
    {
     "work": "どれが恋かがわからない",
     "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-13",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "どれが恋かがわからない",
-    "platform": "カドコミ",
     "url": "https://comic-walker.com/detail/KC_001190_S",
     "claimed": "2026-07-13",
     "source": "webcomics.jp",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "裏世界ピクニック",
-    "platform": "ガンガンONLINE",
-    "url": null,
-    "claimed": "2026-07-12",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "attested on this platform within a week — one event",
-    "platform_latest": "2026-08-02"
    },
    {
     "work": "白き乙女の人狼",
@@ -2635,27 +1901,6 @@
     "why": "attested within 2 days — the same event, dated differently"
    },
    {
-    "work": "彼氏の女友達がぐいぐい来る(私に)",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-12",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "阿佐ヶ谷サキュバス同人物語",
-    "platform": "チャンピオンクロス",
-    "url": null,
-    "claimed": "2026-07-11",
-    "source": "yurinavi",
-    "disposition": "open",
-    "why": "no URL reported, and no history held — nothing to trace to",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": false
-   },
-   {
     "work": "貴女へささげるサディスティック",
     "platform": "竹コミ‎‏‎",
     "url": "https://takecomic.jp/series/ae1cf555c8b01",
@@ -2665,52 +1910,15 @@
     "why": "attested within 2 days — the same event, dated differently"
    },
    {
-    "work": "聖女先生の魔法は進んでる！",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-11",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "笑顔のたえない職場です。",
-    "platform": "コミックDAYS",
-    "url": null,
-    "claimed": "2026-07-11",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "私を喰べたい、ひとでなし",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-11",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "私に天使が舞い降りた!",
     "platform": "マガポケ",
     "url": "https://pocket.shonenmagazine.com/title/01052",
     "claimed": "2026-07-11",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
-   },
-   {
-    "work": "子供部屋ドラゴン",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-11",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "we hold 5 chapters ending 2025-05-18, 419 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 5,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "子供部屋ドラゴン",
@@ -2731,38 +1939,11 @@
     "why": "attested within 2 days — the same event, dated differently"
    },
    {
-    "work": "このままモブじゃ終われない！",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-11",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "このままモブじゃ終われない!",
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/67095",
     "claimed": "2026-07-11",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "あたし達って付き合ってるよね!?",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-11",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "T.Tラバーズ。",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-11",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -2781,11 +1962,10 @@
     "url": "https://takecomic.jp/series/2706e9d937d5f",
     "claimed": "2026-07-10",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "we hold 1 chapters ending 2025-10-17, 266 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 1,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "限界OLさんは悪役令嬢さまに仕えたい",
@@ -2798,46 +1978,10 @@
    },
    {
     "work": "負けませんからと言い張る顔のいい女の子を、全力で屈服させる百合のお話",
-    "platform": "ニコニコ静画",
-    "url": null,
-    "claimed": "2026-07-10",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "負けませんからと言い張る顔のいい女の子を、全力で屈服させる百合のお話",
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/73060",
     "claimed": "2026-07-10",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "百合のはじまりは奴隷から",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-10",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "白き乙女の人狼",
-    "platform": "竹コミ！",
-    "url": null,
-    "claimed": "2026-07-10",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "猫に白鳥、蛍に小判",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-10",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -2847,38 +1991,10 @@
     "url": "https://feelweb.jp/episode/3269754496401056101",
     "claimed": "2026-07-10",
     "source": "webcomics.jp",
-    "disposition": "open",
+    "disposition": "unsettleable",
     "why": "we hold 1 chapters ending 2021-08-20, 1785 days before the claim — too far behind to argue the platform shows nothing",
     "chapters_held": 1,
-    "also_attested_elsewhere": false,
-    "traceable": true
-   },
-   {
-    "work": "春雷卓球",
-    "platform": "ジャンプ+",
-    "url": null,
-    "claimed": "2026-07-10",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "悪役令嬢のお嫁さま",
-    "platform": "Seasons",
-    "url": null,
-    "claimed": "2026-07-10",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "恋より青く",
-    "platform": "コミックオギャー!!",
-    "url": null,
-    "claimed": "2026-07-10",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "last_looked": "2026-08-03"
    },
    {
     "work": "恋より青く",
@@ -2895,11 +2011,10 @@
     "url": "https://ichicomi.com/episode/2551460910021695025",
     "claimed": "2026-07-10",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
+    "disposition": "unsettleable",
+    "why": "we read this platform's own listing and it carries nothing dated here",
     "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "last_looked": "2026-08-03"
    },
    {
     "work": "壊していいよ、すいかちゃん",
@@ -2907,24 +2022,6 @@
     "url": "https://comic.pixiv.net/works/13400",
     "claimed": "2026-07-10",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "作りたい女と食べたい女",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-10",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "クレアちゃん飼育日記―カブトムシ少女にお世話されてます―",
-    "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-10",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -2952,15 +2049,6 @@
     "url": "https://comic.pixiv.net/works/12886",
     "claimed": "2026-07-10",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "てくのぱにっくゆにばーす",
-    "platform": "サンデーうぇぶり",
-    "url": null,
-    "claimed": "2026-07-10",
-    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    },
@@ -3116,11 +2204,9 @@
     "url": "https://takecomic.jp/series/0e7fd362c2c11",
     "claimed": "2026-07-08",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-05-29"
    },
    {
     "work": "私に天使が舞い降りた!",
@@ -3201,11 +2287,10 @@
     "url": "https://takecomic.jp/series/de0a74a9b5715",
     "claimed": "2026-07-05",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "we hold 2 chapters ending 2026-02-07, 148 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 2,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "男装メイドは尽くしたい",
@@ -3213,11 +2298,10 @@
     "url": "https://hanayume.com/series/1191c17a3f374",
     "claimed": "2026-07-05",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "君になれたら",
@@ -3288,11 +2372,11 @@
     "url": "https://comic-y-ours.com/episode/2551460909791888785",
     "claimed": "2026-07-03",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "refuted",
+    "why": "we hold this platform's own history for this work and it lists nothing within a week of the claimed date",
+    "platform_latest": "2026-05-08",
+    "chapters_held": 4,
+    "gap_days": 56
    },
    {
     "work": "夢でフラれてはじまる百合",
@@ -3394,11 +2478,11 @@
     "url": "https://comic-growl.com/series/5ec689382839e",
     "claimed": "2026-07-02",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "refuted",
+    "why": "we hold this platform's own history for this work and it lists nothing within a week of the claimed date",
+    "platform_latest": "2026-04-04",
+    "chapters_held": 29,
+    "gap_days": 89
    },
    {
     "work": "キミが吠えるための歌を、",
@@ -3416,11 +2500,10 @@
     "url": "https://asacomi.jp/series/d67c4f256e18f",
     "claimed": "2026-07-02",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "カナリアは綺羅星の夢をみる",
@@ -3456,11 +2539,10 @@
     "url": "https://takecomic.jp/series/4e4bb1b935407",
     "claimed": "2026-07-01",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "only 2 chapter(s) held — a history of one is not a history",
+    "chapters_held": 2,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "フェアウェイの声をきかせて",
@@ -3468,11 +2550,10 @@
     "url": "https://championcross.jp/series/8178b4fc09df9",
     "claimed": "2026-07-01",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "we hold 37 chapters ending 2025-07-06, 360 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 37,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "転生王女と天才令嬢の魔法革命",
@@ -3553,11 +2634,10 @@
     "url": "https://comic.pixiv.net/works/11565",
     "claimed": "2026-06-27",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "we hold 2 chapters ending 2025-04-12, 441 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 2,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "アイドラトリィ",
@@ -3593,11 +2673,10 @@
     "url": "https://www.comic-ryu.jp/series/watashinotamashiiwotabetekudasai/",
     "claimed": "2026-06-26",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
+    "disposition": "unsettleable",
+    "why": "we read this platform's own listing and it carries nothing dated here",
     "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "last_looked": "2026-08-03"
    },
    {
     "work": "犬も歩けば姫に当たる",
@@ -3623,11 +2702,10 @@
     "url": "https://ynjn.jp/title/30352",
     "claimed": "2026-06-25",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
+    "disposition": "unsettleable",
+    "why": "we read this platform's own listing and it carries nothing dated here",
     "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "last_looked": "2026-08-03"
    },
    {
     "work": "天瀬ましろはイきたくない!",
@@ -3654,11 +2732,10 @@
     "url": "https://heros-web.com/series/696d291fa1769",
     "claimed": "2026-06-25",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "お菊さんはいちゃ憑きたい",
@@ -3720,11 +2797,10 @@
     "url": "https://ynjn.jp/title/16787",
     "claimed": "2026-06-22",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "we hold 2 chapters ending 2024-10-16, 614 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 2,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "ピアノを弾くカエルたち",
@@ -3750,11 +2826,10 @@
     "url": "https://comic.pixiv.net/works/7840",
     "claimed": "2026-06-20",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "we hold 3 chapters ending 2021-12-18, 1645 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 3,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "「触れたい」は恋の始まり",
@@ -3789,11 +2864,9 @@
     "url": "https://manga.nicovideo.jp/comic/76631",
     "claimed": "2026-06-18",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-05-18"
    },
    {
     "work": "誰かオオカミさんのしつけ方知りませんか!?",
@@ -3811,11 +2884,9 @@
     "url": "https://comic.pixiv.net/works/11664",
     "claimed": "2026-06-18",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-07-16"
    },
    {
     "work": "溺愛理想主義～岩見樹代子作品集～",
@@ -3870,11 +2941,10 @@
     "url": "https://kirapo.jp/meteor/titles/tuimie",
     "claimed": "2026-06-17",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
+    "disposition": "unsettleable",
+    "why": "we read this platform's own listing and it carries nothing dated here",
     "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "last_looked": "2026-08-03"
    },
    {
     "work": "あなたの未来を許さない",
@@ -3891,11 +2961,10 @@
     "url": "https://pocket.shonenmagazine.com/title/01646",
     "claimed": "2026-06-16",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "we hold 3 chapters ending 2025-09-18, 271 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 3,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "超深宇宙より愛をこめて",
@@ -3966,11 +3035,10 @@
     "url": "https://zerosumonline.com/detail/royaltailor",
     "claimed": "2026-06-12",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "unsettleable",
+    "why": "we hold 3 chapters ending 2022-02-04, 1589 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 3,
+    "last_looked": "2026-08-03"
    },
    {
     "work": "私の百合はお仕事です!",
@@ -4035,11 +3103,9 @@
     "url": "https://bigcomics.jp/series/2c1db177ce231",
     "claimed": "2026-06-07",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-05-22"
    },
    {
     "work": "飴色紅茶館歓談",
@@ -4165,6 +3231,896 @@
     "url": "https://comic-walker.com/detail/KC_005553_S",
     "claimed": "2026-06-02",
     "source": "webcomics.jp",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "リリィズコンプレックス",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-08-01",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "フルボイス！",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-08-01",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "カムパネルラの塔",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-08-01",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "この湯で、あなたと",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-08-01",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "おちこぼれフルーツタルト",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-08-01",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "君となら、明日を歌えるの",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-31",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "わたしが恋人になれるわけないじゃん、ムリムリ！（※ムリじゃなかった!?）",
+    "platform": "ニコニコ静画",
+    "url": null,
+    "claimed": "2026-07-31",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "忍者と殺し屋のふたりぐらし",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-30",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "スライム倒して300年、知らないうちにレベルMAXになってました 森田季節/シバユウスケ",
+    "platform": "ガンガンONLINE",
+    "url": null,
+    "claimed": "2026-07-30",
+    "source": "yurinavi",
+    "disposition": "undatable",
+    "why": "this platform publishes no per-chapter dates — a reader on the site cannot see when a chapter appeared either, so there is nothing to check against"
+   },
+   {
+    "work": "彼女のカノジョと不純な初恋",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-28",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "上伊那ぼたん、酔へる姿は百合の花",
+    "platform": "チャンピオンクロス",
+    "url": null,
+    "claimed": "2026-07-28",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "ばっどがーる",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-28",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "月はタピオカみたいに",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-27",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "或いは、私の名探偵",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-27",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "モブヘブン",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-27",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "フレンドガールフレンド",
+    "platform": "花とゆめ＋",
+    "url": null,
+    "claimed": "2026-07-27",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "バカに告白",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-27",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "この恋、一旦持ち帰らせていただきます！",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-27",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "きょうはなにしよう？",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-27",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "エイティエイトを２でわって",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-25",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "attested within 2 days — the same event, dated differently"
+   },
+   {
+    "work": "ぬるめた",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-25",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "しあわせ鳥見んぐ",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-25",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "機動戦士ガンダム 水星の魔女 青春フロンティア",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-24",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "ウィキッドスポット",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-24",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "イジめてイジられて",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-24",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "魔法少女201",
+    "platform": "ニコニコ静画",
+    "url": null,
+    "claimed": "2026-07-23",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "魔女まじょS-WITCH",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-23",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "超深宇宙より愛をこめて",
+    "platform": "一迅プラス",
+    "url": null,
+    "claimed": "2026-07-23",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "attested on this platform within a week — one event",
+    "platform_latest": "2026-07-16"
+   },
+   {
+    "work": "拝啓、在りし日に咲く花たちへ",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-23",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "押しかけ女房、コドモ付き！",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-23",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "妄執女と芥川",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-23",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "君のせいなんだから、責任とってよね。",
+    "platform": "一迅プラス",
+    "url": null,
+    "claimed": "2026-07-23",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "attested on this platform within a week — one event",
+    "platform_latest": "2026-07-16"
+   },
+   {
+    "work": "マユノウタ",
+    "platform": "一迅プラス",
+    "url": null,
+    "claimed": "2026-07-23",
+    "source": "yurinavi",
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-06-17"
+   },
+   {
+    "work": "ひなちゃんが生きてるなら",
+    "platform": "一迅プラス",
+    "url": null,
+    "claimed": "2026-07-23",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "attested on this platform within a week — one event",
+    "platform_latest": "2026-07-16"
+   },
+   {
+    "work": "たゆたう恋の散り際に",
+    "platform": "一迅プラス",
+    "url": null,
+    "claimed": "2026-07-23",
+    "source": "yurinavi",
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-06-17"
+   },
+   {
+    "work": "魔女とくゅらす",
+    "platform": "コミプレ",
+    "url": null,
+    "claimed": "2026-07-22",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "咲きそめコンプレックス",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-22",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "らぶぶいっ！",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-22",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "英雄少女と呪われの銀姫",
+    "platform": "となりのヤングジャンプ",
+    "url": null,
+    "claimed": "2026-07-21",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "創る庭",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-21",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "一畳間まんきつ暮らし！",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-21",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "ユリノコ",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-21",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "なとりとしずは",
+    "platform": "サンデーうぇぶり",
+    "url": null,
+    "claimed": "2026-07-21",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "晴れ晴れ日和",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-20",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "安達としまむら",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-20",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "ボイタボイネ",
+    "platform": "pixivコミック",
+    "url": null,
+    "claimed": "2026-07-20",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "バクガタリzzZ",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-20",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "ケイヤクシマイ",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-20",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "お姉さまと巨人 ～お嬢さまが異世界転生～",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-20",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "雨夜の月",
+    "platform": "コミックDAYS",
+    "url": null,
+    "claimed": "2026-07-18",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "星屑テレパス",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-18",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "怪異部～M県Y市の怪現象について～",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-18",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "十字トンボは空を飛ばない",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-18",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "ダメ犬彼女",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-18",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "DOUBLE HELIX BLOSSOM",
+    "platform": "週刊コロコロ",
+    "url": null,
+    "claimed": "2026-07-18",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "魔法少女にあこがれて",
+    "platform": "竹コミ！",
+    "url": null,
+    "claimed": "2026-07-17",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "顔だけ良いクラスメイトが、やたらとグイグイ来る百合の話。",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-17",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "明日ちゃんのセーラー服",
+    "platform": "となりのヤングジャンプ",
+    "url": "https://tonarinoyj.jp/episode/13932016480028986061",
+    "claimed": "2026-07-17",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "壊していいよ、すいかちゃん",
+    "platform": "COMIC OGYAAA!!",
+    "url": null,
+    "claimed": "2026-07-17",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "令嬢VTuberはメイドの夜食に蹂躙される～禁断ご飯で食レポ生配信～",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-17",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "世界一可愛い私の幼馴染が隠れてVTuberをしているらしい",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-17",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "七限目は忍者修行です！",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-17",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "あの子とふたりで。",
+    "platform": "コミックオギャー!!",
+    "url": null,
+    "claimed": "2026-07-17",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "骨に願いを、星に呪いを",
+    "platform": "一迅プラス",
+    "url": null,
+    "claimed": "2026-07-16",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "運命のヤマダダダダダダダダダダ",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-16",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "新刊100億冊ください",
+    "platform": "コミックDAYS",
+    "url": null,
+    "claimed": "2026-07-16",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "好都合セミフレンド",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-16",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "大室家",
+    "platform": "一迅プラス",
+    "url": null,
+    "claimed": "2026-07-16",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "attested within 2 days — the same event, dated differently"
+   },
+   {
+    "work": "ゆるゆり",
+    "platform": "一迅プラス",
+    "url": null,
+    "claimed": "2026-07-16",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "attested within 2 days — the same event, dated differently"
+   },
+   {
+    "work": "きみとボドゲが作りたい！",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-16",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "大崎さんと小森さん",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-15",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "くちべた食堂",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-15",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "球詠",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-14",
+    "source": "yurinavi",
+    "disposition": "unsettleable",
+    "why": "no URL reported, and this platform carries works published elsewhere without an index we can enumerate, so there is no page to address",
+    "chapters_held": 0
+   },
+   {
+    "work": "ごきげんよう、一局いかが?",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-14",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "#ギャルとギャルの百合",
+    "platform": "サンデーうぇぶり",
+    "url": null,
+    "claimed": "2026-07-14",
+    "source": "yurinavi",
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-07-28"
+   },
+   {
+    "work": "堕天使そぷらのちゃんの復讐",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-13",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "わたしのために脱ぎなさいっ！",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-13",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "どれが恋かがわからない",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-13",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "裏世界ピクニック",
+    "platform": "ガンガンONLINE",
+    "url": null,
+    "claimed": "2026-07-12",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "attested on this platform within a week — one event",
+    "platform_latest": "2026-08-02"
+   },
+   {
+    "work": "彼氏の女友達がぐいぐい来る(私に)",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-12",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "阿佐ヶ谷サキュバス同人物語",
+    "platform": "チャンピオンクロス",
+    "url": "https://championcross.jp/episodes/c588f534a4870",
+    "claimed": "2026-07-11",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "聖女先生の魔法は進んでる！",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-11",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "笑顔のたえない職場です。",
+    "platform": "コミックDAYS",
+    "url": "https://comic-days.com/episode/10834108156652412315",
+    "claimed": "2026-07-11",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "私を喰べたい、ひとでなし",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-11",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "子供部屋ドラゴン",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-11",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "このままモブじゃ終われない！",
+    "platform": "きららベース",
+    "url": null,
+    "claimed": "2026-07-11",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "あたし達って付き合ってるよね!?",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-11",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "T.Tラバーズ。",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-11",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "負けませんからと言い張る顔のいい女の子を、全力で屈服させる百合のお話",
+    "platform": "ニコニコ静画",
+    "url": null,
+    "claimed": "2026-07-10",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "百合のはじまりは奴隷から",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-10",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "白き乙女の人狼",
+    "platform": "竹コミ！",
+    "url": null,
+    "claimed": "2026-07-10",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "猫に白鳥、蛍に小判",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-10",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "春雷卓球",
+    "platform": "ジャンプ+",
+    "url": null,
+    "claimed": "2026-07-10",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "悪役令嬢のお嫁さま",
+    "platform": "Seasons",
+    "url": null,
+    "claimed": "2026-07-10",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "恋より青く",
+    "platform": "コミックオギャー!!",
+    "url": null,
+    "claimed": "2026-07-10",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "作りたい女と食べたい女",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-10",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "クレアちゃん飼育日記―カブトムシ少女にお世話されてます―",
+    "platform": "カドコミ",
+    "url": null,
+    "claimed": "2026-07-10",
+    "source": "yurinavi",
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
+   },
+   {
+    "work": "てくのぱにっくゆにばーす",
+    "platform": "サンデーうぇぶり",
+    "url": null,
+    "claimed": "2026-07-10",
+    "source": "yurinavi",
     "disposition": "absorbed",
     "why": "the platform attests this work on this date"
    }
@@ -4457,15 +4413,15 @@
    },
    {
     "week": "2026-06-07",
-    "n": 77
+    "n": 78
    },
    {
     "week": "2026-06-14",
-    "n": 131
+    "n": 133
    },
    {
     "week": "2026-06-21",
-    "n": 131
+    "n": 132
    },
    {
     "week": "2026-06-28",
@@ -4473,19 +4429,19 @@
    },
    {
     "week": "2026-07-05",
-    "n": 225
+    "n": 226
    },
    {
     "week": "2026-07-12",
-    "n": 105
+    "n": 106
    },
    {
     "week": "2026-07-19",
-    "n": 116
+    "n": 117
    },
    {
     "week": "2026-07-26",
-    "n": 107
+    "n": 108
    },
    {
     "week": "2026-08-02",
@@ -4493,7 +4449,7 @@
    }
   ],
   "trimmed_weeks": 3,
-  "pre_tracking_releases": 1316,
+  "pre_tracking_releases": 1324,
   "tracking_from": "2026-08-01"
  },
  "access_modes": {
@@ -4502,14 +4458,15 @@
   "free-timed": 101
  },
  "update_kinds": {
-  "new-chapter": 1275,
+  "new-chapter": 1282,
   "final": 8,
   "new-series": 45,
   "oneshot": 21,
-  "other": 20
+  "other": 20,
+  "skipped": 1
  },
  "identification": {
-  "discovery-candidate": 1056,
+  "discovery-candidate": 1064,
   "platform-genre": 313
  },
  "collapsed": {
@@ -4519,7 +4476,7 @@
   "samples": 49
  },
  "filled": {
-  "author": 88,
+  "author": 94,
   "access": 66
  }
 }
