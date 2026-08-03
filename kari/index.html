@@ -1111,11 +1111,23 @@ function compactList(rows) {
       // others", and the reader either wants the list or wants the row. The row names the
       // instalment that ranks highest and links to the work, which is where the rest are.
       const anyFree = g.some(x => x.free);
+      // WHERE THE LINK GOES when a work drops several chapters at once. The row is NAMED after the
+      // instalment that ranks highest, which is a statement about what happened; the link is a
+      // place to send a reader, which is a different question. Picking both by kind meant a group
+      // holding eleven paid chapters and one free one could show 無料 and then open a paywall.
+      //
+      // Preference is free, then free-timed, then whatever the lead had. free-timed counts here
+      // because this project treats rate-limited free as free: it costs a reader nothing but a
+      // wait, which is more use than a chapter they cannot open at all.
+      const openable = g.find(x => x.url && x.free)
+                    || g.find(x => x.url && (x.access_modes || []).includes('free'))
+                    || g.find(x => x.url && (x.access_modes || []).includes('free-timed'));
+      const goTo = (openable && openable.url) || lead.url;
       // One complete row per language. Everything in it. The kind badge, the platform name, the
       // access badges: is rendered again on the English line rather than left in Japanese, which
       // is what 併記 asks for and what the previous "English title underneath" did not give.
       const line = () => `${kindTag(lead)}
-        <span class="ccell"><span class="cmain">${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${workLabel(lead)}</a>`
+        <span class="ccell"><span class="cmain">${goTo ? `<a href="${esc(goTo)}" target="_blank" rel="noopener noreferrer nofollow">${workLabel(lead)}</a>`
                    : `<span style="font-weight:600">${workLabel(lead)}</span>`}
         ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc((lead.pub || '').slice(5))}</span>` : ''}
         ${lead.title_unsplit ? `<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">${esc(T('作者未分離'))}</span>` : ''}
