@@ -431,6 +431,7 @@
               <button class="themebtn furibtn" id="furibtn"
                       title="ふりがな / show readings above kanji"><ruby>振仮名<rt>ふりがな</rt></ruby></button>
             </span>
+            <p class="morenote" id="furinote"></p>
           </div>
 
           <hr class="moresep">
@@ -523,7 +524,6 @@
   </div>
   <p class="count" id="fcount"></p>
   <p class="snapnote" id="fsnap" hidden></p>
-  <p class="snapnote" id="furinote" hidden></p>
   <div id="feed"></div>
   <p class="empty" id="fempty" hidden>該当なし / no matches</p>
   <!-- The select is the STATE. The picker above only sets it and fires `change`, so everything
@@ -1170,13 +1170,25 @@ function renderTrackNote() {
 /* Said once rather than stamped on every reading. While essentially all of them are machine
    guesses, a per-item mark states the default and tells a reader nothing; this states the actual
    situation and stops being needed when sourced readings outnumber guessed ones. */
+/* WHERE THE CONVENTION IS EXPLAINED, and where it is not. This used to be a paragraph above the
+   list, shown whenever furigana was on. It said in aggregate what the page already says per
+   reading: an unverified one is marked where it appears, which is better, because it names WHICH
+   are guesses rather than saying most of them are. Above the list it also stacked a third grey
+   line under the count and the period note.
+
+   It is still worth saying once, because the mark is quiet by design and a reader meeting it for
+   the first time has nothing to read it against. So it sits beside the control that turns the
+   readings on, like the spelling and precedence notes do, and it says the marks exist.
+
+   The MARK itself is untouched and is not up for tidying: FEATURES-INTERFACE §5 makes it the one
+   piece of our own uncertainty shown to readers, on purpose. */
 function renderFuriNote() {
   const n = el('furinote');
   if (!n) return;
-  n.hidden = !FURIGANA;
-  if (FURIGANA) n.textContent = T(
-    'ふりがなの大半は自動生成された推定であり、出典に基づくものではありません。',
-    'Most readings shown are generated automatically and are not taken from a source.');
+  n.textContent = T(
+    '大半は自動生成された推定で、出典に基づくものではありません。推定の読みには印がつきます。',
+    'Most are generated rather than taken from a source. The generated ones are marked where they '
+    + 'appear.');
 }
 
 /* A control that is not applicable keeps its space. Using [hidden] meant every language switch
