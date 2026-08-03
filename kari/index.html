@@ -90,6 +90,14 @@
     max-width:min(23rem, calc(100vw - 1.5rem));padding:.7rem .8rem;text-align:left;
     background:var(--bg);border:1px solid var(--line);border-radius:.5rem;
     box-shadow:0 6px 22px rgba(0,0,0,.18)}
+  /* A notch on the top edge, pointing at the button that opened the panel. Two triangles, the
+     outer one the border colour and the inner one the background, so the notch carries the panel's
+     own outline rather than floating free of it. Positioned from the RIGHT, because the panel is
+     right-aligned to its button and the button is therefore always at that end. */
+  .morepop::before, .morepop::after{content:"";position:absolute;bottom:100%;
+    width:0;height:0;border:7px solid transparent;pointer-events:none}
+  .morepop::before{right:7px;border-bottom-color:var(--line)}
+  .morepop::after{right:8px;border-width:6px;border-bottom-color:var(--bg);margin-bottom:-1px}
   .moregrp{margin:0 0 .85rem}
   .moregrp:last-child{margin-bottom:0}
   /* Divides what applies to the Japanese from what applies to the Latin. */
@@ -387,6 +395,13 @@
            cost three rows for six buttons; pairing the stable ones keeps it to two, which is the
            fewest that still lets the conditional pair appear and vanish without shifting them. -->
       <span class="ctlrow">
+      <span class="themebox" role="group" aria-label="配色 / colour theme" id="thbox">
+        <!-- Theme is not a language, so unlike the buttons above these follow the locale like
+             the rest of the chrome. data-i18n puts them through the same splitter. -->
+        <button class="themebtn" data-theme-set="auto"  data-i18n title="follow system">自動 / auto</button>
+        <button class="themebtn" data-theme-set="light" data-i18n title="light">明 / light</button>
+        <button class="themebtn" data-theme-set="dark"  data-i18n title="dark">暗 / dark</button>
+      </span>
       <span class="themebox" role="group" aria-label="表示言語 / interface language">
         <button class="themebtn" data-lang-set="ja"   title="日本語のみ">日本語</button>
         <button class="themebtn" data-lang-set="en"   title="English only">EN</button>
@@ -396,9 +411,6 @@
              this button serves. So it carries its gloss permanently rather than conditionally. -->
         <button class="themebtn" data-lang-set="both" title="both / 併記">両 both</button>
       </span>
-      <!-- Romanisation style. Taste, not correctness, so it is the reader's (NAMES-PLAN §8.1),
-           and it is meaningless while nothing Latin is on screen, so it appears only when EN does.
-           All three are rendered at build time from the same kana, so switching costs nothing. -->
       <span class="themebox langmore" role="group" aria-label="表示の詳細 / display detail">
         <button class="themebtn" id="morebtn" aria-haspopup="dialog" aria-expanded="false"
                 title="表示の詳細 / display detail">…</button>
@@ -450,18 +462,7 @@
           </div>
         </div>
       </span>
-      <span class="themebox" role="group" aria-label="配色 / colour theme" id="thbox">
-        <!-- Theme is not a language, so unlike the buttons above these follow the locale like
-             the rest of the chrome. data-i18n puts them through the same splitter. -->
-        <button class="themebtn" data-theme-set="auto"  data-i18n title="follow system">自動 / auto</button>
-        <button class="themebtn" data-theme-set="light" data-i18n title="light">明 / light</button>
-        <button class="themebtn" data-theme-set="dark"  data-i18n title="dark">暗 / dark</button>
       </span>
-      <!-- The language sub-options used to sit on a second row, where they were four controls
-           wide and appeared and vanished with the language. That row is now one button: they are
-           all refinements OF the language choice, so they belong behind it rather than beside it,
-           and the header keeps one row whatever the language is. -->
-            </span>
       </span>
   </div>
 </header>
@@ -707,11 +708,11 @@ function splitLang(s, lang) {
   // A platform name has no " / " to split on, so it falls through here. The filter dropdowns
   // are built from raw names. PLAT_EN is consulted alongside EN so those options localise too;
   // dataset.orig keeps the Japanese, which is what the filter actually matches on.
-  if (i < 0) return lang === 'en' ? respell(EN[s.trim()] || PLAT_EN[s.trim()] || s) : s;
+  if (i < 0) return lang === 'en' ? curly(respell(EN[s.trim()] || PLAT_EN[s.trim()] || s)) : s;
   // Respelt on the English half only. The Japanese half is untouched, and 併記 keeps both.
   return lang === 'ja' ? s.slice(0, i)
-       : lang === 'en' ? respell(s.slice(i + 3))
-       : s.slice(0, i) + ' / ' + respell(s.slice(i + 3));
+       : lang === 'en' ? curly(respell(s.slice(i + 3)))
+       : s.slice(0, i) + ' / ' + curly(respell(s.slice(i + 3)));
 }
 /* Bilingual strings built in JS, where there is no element to carry data-i18n.
    One argument is a badge: look it up in EN, and in 併記 mode show the Japanese alone, because
@@ -722,16 +723,16 @@ function splitLang(s, lang) {
 function T(ja, en) {
   const e = en !== undefined ? en : EN[ja];
   if (!e || e === ja) return ja;
-  if (LANG === 'en') return respell(e);
+  if (LANG === 'en') return curly(respell(e));
   if (LANG === 'ja') return ja;
-  return en !== undefined ? `${ja} / ${respell(e)}` : ja;
+  return en !== undefined ? `${ja} / ${curly(respell(e))}` : ja;
 }
 
 /* Label form: always ONE language, never both. Badges and the volume-count column have no room
    for "巻 / vols", and a two-language string in a 3-character cell reads as noise rather than as
    help. Use T() for prose, L() for anything that sits in a fixed-width slot. */
 function L(ja, en) {
-  return LANG === 'en' ? respell(en !== undefined ? en : EN[ja] || ja) : ja;
+  return LANG === 'en' ? curly(respell(en !== undefined ? en : EN[ja] || ja)) : ja;
 }
 
 
@@ -834,6 +835,28 @@ const SPELL_US = {
   plough:'plow', pyjamas:'pajamas', storey:'story', storeys:'stories',
 };
 let DIALECT = prefGet(PREF_DIALECT, 'gb');
+/* TYPOGRAPHY, applied at display time and never stored. Straight quotes are a typewriter
+   limitation, and the page has no reason to inherit one.
+
+   Applied to LICENSED and OFFICIAL titles too, unlike the spelling switch, because the shape of an
+   apostrophe is not part of a name the way its spelling is: There's and There’s are the same
+   title set in different type, where realise and realize are different words.
+
+   Display time rather than in the data, so the stored string stays ASCII. That is what the search
+   index is built from, so a reader typing an ordinary apostrophe still matches, and it keeps the
+   YAML greppable. */
+function curly(s) {
+  if (!s) return s;
+  return String(s)
+    .replace(/"([^"]*)"/g, '\u201c$1\u201d')
+    // PAIRS BEFORE APOSTROPHES. The other order turned the closing half of 'Manslayer' into an
+    // apostrophe, because a quote after a letter and before a space is exactly what the Eguchis'
+    // looks like. A pair is unambiguous, so it is claimed first and what is left is an apostrophe.
+    .replace(/(^|[\s(\[\u2014])'([^']+)'(?=[\s.,;:!?)\]\u2014]|$)/g, '$1\u2018$2\u2019')
+    .replace(/(\p{L})'(?=\p{L})/gu, '$1\u2019')
+    .replace(/(\p{L})'(?=\s|$|[,.;:!?)\]])/gu, '$1\u2019');
+}
+
 
 function respell(s) {
   if (DIALECT !== 'us' || !s) return s;
@@ -908,7 +931,9 @@ function enOf(rec) {
     if (!have[level]) continue;
     const ours = level === 'translated' || level === 'romaji';
     // Respelt only where it is ours to respell. See SPELL_US.
-    const text = ours ? respell(have[level]) : have[level];
+    // Spelling is ours to change; typography applies to every form, including a
+    // licensor's, because the shape of an apostrophe is not part of the name.
+    const text = curly(ours ? respell(have[level]) : have[level]);
     return { text, ours, unverified: !!rec.unverified, basis: level };
   }
   return null;
