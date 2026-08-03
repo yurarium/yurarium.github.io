@@ -57,7 +57,7 @@
   .yomi{color:var(--faint);font-size:.76rem;margin-left:.5rem;font-weight:400}
   .meta{color:var(--dim);font-size:.82rem}
   .num{color:var(--dim);font-size:.8rem;white-space:nowrap;text-align:right}
-  /* ONE badge. There were two families — .tag at .68rem and .k at .63rem — which met in the works
+  /* ONE badge. There were two families (.tag at .68rem and .k at .63rem) which met in the works
      tab, where the state badge is a .k and the access badge beside it is a .tag. Weight had drifted
      too: three classes were 600 and the rest normal, so "Paid early" came out bolder than "Free",
      emphasising a standing series fact over what the update actually did.
@@ -88,7 +88,7 @@
   .crow{display:grid;grid-template-columns:auto 1fr;gap:.35rem;align-items:baseline;
     padding:.14rem 0;line-height:1.55}
   /* One grid cell holding both parts. With .cmain and .cmeta as direct children of the row the
-     grid had three items against two columns, so the meta always wrapped to its own grid row —
+     grid had three items against two columns, so the meta always wrapped to its own grid row,
      stacked whether or not the title needed it. */
   .ccell{min-width:0;overflow-wrap:anywhere}
   .cmain,.cmeta{display:inline}
@@ -122,12 +122,12 @@
      .tag.q, .tag.warn. */
   .date-h{font-size:.78rem;color:var(--faint);font-weight:600;letter-spacing:.05em;
     padding:1rem 0 .3rem;border-bottom:1px solid var(--line)}
-  /* The weekday rides with the date but must not compete with it — it is orientation, not a label. */
+  /* The weekday rides with the date but must not compete with it. It is orientation, not a label. */
   .dow{font-weight:400;opacity:.72}
-  /* An English rendering that is OURS, or rests on an unverified reading, is marked — quietly.
+  /* An English rendering that is OURS, or rests on an unverified reading, is marked: quietly.
      A dotted underline says "this is a rendering" without competing with the name it sits under. */
   .en.ours{border-bottom:1px dotted currentColor}
-  /* The English line is the same row again, one step quieter — enough to read as a translation
+  /* The English line is the same row again, one step quieter: enough to read as a translation
      of the line above rather than as a second entry, which is what an equally-weighted duplicate
      looks like. */
   .bi{display:block}
@@ -135,9 +135,9 @@
   .bi-en .t,.bi-en a{font-weight:500}
   .crow .bi-en{font-size:.92em}
   /* The second line has to BREAK the line, and both places it appears are flex rows where
-     display:block does not do that — a flex item is blockified already and still sits in the row.
+     display:block does not do that. A flex item is blockified already and still sits in the row.
      flex-basis:100% is what forces the wrap; the .cmain case is inline flow, so it needs its own. */
-  /* Its own line, but AFTER the badge row rather than splitting it — forcing a flex break in the
+  /* Its own line, but AFTER the badge row rather than splitting it: forcing a flex break in the
      middle pushed the state and access badges onto a third line, so a 両-mode row cost two extra
      lines instead of one. */
   .ensecond{color:var(--dim);font-size:.82rem;font-weight:400;margin-top:.05rem;display:block}
@@ -147,7 +147,7 @@
   rt{font-size:.55em;color:var(--dim);font-weight:400;letter-spacing:0;overflow-wrap:anywhere}
   ruby{overflow-wrap:anywhere}
   /* NOT italic. Japanese typefaces have no true italic, so a browser synthesises an oblique slant
-     — a Latin convention applied to kana, which is why it looked wrong. And the mark was on 100% of
+      a Latin convention applied to kana, which is why it looked wrong. And the mark was on 100% of
      rendered furigana, because every reading that currently produces ruby is a machine guess: a
      distinction drawn on everything is not a distinction, it is noise that also looked broken.
      The per-item hook stays, because it becomes meaningful as sourced readings arrive; until then
@@ -156,7 +156,7 @@
   .unc{font-size:.62em;color:var(--warn-fg);margin-left:.1em;font-weight:600;cursor:help}
   .rel .t ruby, .crow ruby{line-height:2.1}
   /* The toggle carries ruby of its own, which needs the room a control does not normally give.
-     padding-top:0 put the rt hard against the border — ruby needs headroom above the line box, not
+     padding-top:0 put the rt hard against the border: ruby needs headroom above the line box, not
      just a taller line. */
   .furibtn{line-height:1.75;padding-top:.34rem;padding-bottom:.16rem}
   .furibtn rt{font-size:.48em;opacity:.75;line-height:1}
@@ -170,8 +170,8 @@
   .rel .ep{font-size:.88rem;color:var(--fg);opacity:.88;margin-top:.1rem;overflow-wrap:anywhere}
   .rel .pubnote{font-size:.75rem;color:var(--faint);margin-top:.1rem;font-variant-numeric:tabular-nums}
   .rel .line2{display:flex;flex-wrap:wrap;gap:.15rem .5rem;align-items:baseline;margin-top:.2rem}
-  /* A credit string can be longer than everything else in the row —
-     原作／宮澤伊織(早川書房刊)　作画／水野英多　キャラクター原案／shirakaba — and it was burying the
+  /* A credit string can be longer than everything else in the row:
+     原作／宮澤伊織(早川書房刊)　作画／水野英多　キャラクター原案／shirakaba, and it was burying the
      chapter. Clamped to one line at full size; the whole string stays available on hover and to a
      screen reader, and the row keeps its shape. */
   .rel .by{max-width:min(30rem,100%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -226,7 +226,7 @@
      A gap alone did not fix it, and the hairline I tried first landed in the wrong place: both
      boxes were float:right, so the one FIRST in source sits RIGHTMOST and its right border drew on
      the outer edge rather than between the groups.
-     So: one flex container, explicit order, and each group drawn as a single segmented control —
+     So: one flex container, explicit order, and each group drawn as a single segmented control:
      one outline around the group, dividers only between its own buttons. Two bordered objects read
      as two settings without needing a label on either. */
   /* wrap, and never shrink a group: without these the flex row squeezed the language box instead
@@ -237,12 +237,12 @@
   .ctlbar > .ctlrow{display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;flex:0 0 auto}
   .ctlrow > .themebox{flex:0 0 auto}
   /* The dependent row breaks to its own line and right-aligns under the rest. Needs the same
-     specificity as the rule above it — `.ctlbar > .ctlrow` beats a bare `.ctlrow-dep`, so the
+     specificity as the rule above it: `.ctlbar > .ctlrow` beats a bare `.ctlrow-dep`, so the
      flex-basis was being overridden and all three rows stayed on one line. */
   .ctlbar > .ctlrow-dep{flex-basis:100%;justify-content:flex-end;margin-top:.1rem}
   .conditional.inert{visibility:hidden;pointer-events:none}
-  /* The theme labels are the only ones that change length with the language — 自動 / auto / 自動 /
-     auto — and the language and romanisation groups are self-labelling, so they never move. Left
+  /* The theme labels are the only ones that change length with the language: 自動 / auto / 自動 /
+     auto, and the language and romanisation groups are self-labelling, so they never move. Left
      alone, that one group rewrapped the bar and the tab strip under it jumped on every switch.
      Reserving its widest state costs a little air in 日本語 and keeps everything below it still. */
   #thbox{min-width:12.6rem;justify-content:space-between}
@@ -260,7 +260,7 @@
     border:1px solid var(--line);background:var(--card);color:var(--dim);border-radius:4px}
   .themebtn[aria-pressed=true]{background:var(--accent-bg);color:var(--accent);
     border-color:var(--accent);font-weight:600}
-  /* Inside a segmented group the selected button is filled, not outlined — an outline would fight
+  /* Inside a segmented group the selected button is filled, not outlined. An outline would fight
      the group's own border. */
   .themebox .themebtn[aria-pressed=true]{border-left-color:var(--line)}
 </style>
@@ -279,12 +279,12 @@
         <button class="themebtn" data-lang-set="ja"   title="日本語のみ">日本語</button>
         <button class="themebtn" data-lang-set="en"   title="English only">EN</button>
         <!-- Each language button labels itself IN its own language, so they do not follow the
-             toggle — 日本語 and EN are legible to the reader who wants them. 両 alone is not: it
+             toggle: 日本語 and EN are legible to the reader who wants them. 両 alone is not: it
              says nothing to someone who does not read Japanese, which is exactly half the audience
              this button serves. So it carries its gloss permanently rather than conditionally. -->
         <button class="themebtn" data-lang-set="both" title="both / 併記">両 both</button>
       </span>
-      <!-- Romanisation style. Taste, not correctness, so it is the reader's (NAMES-PLAN §8.1) —
+      <!-- Romanisation style. Taste, not correctness, so it is the reader's (NAMES-PLAN §8.1),
            and it is meaningless while nothing Latin is on screen, so it appears only when EN does.
            All three are rendered at build time from the same kana, so switching costs nothing. -->
       <span class="themebox" role="group" aria-label="配色 / colour theme" id="thbox">
@@ -305,9 +305,9 @@
                 title="ふりがな / show readings above kanji"><ruby>振仮名<rt>ふりがな</rt></ruby></button>
       </span>
       <span class="themebox conditional" role="group" aria-label="ローマ字 / romanisation" id="rjbox">
-        <button class="themebtn" data-romaji-set="macron" title="macron — Tōkyō, Yūri">ō</button>
-        <button class="themebtn" data-romaji-set="double" title="doubled vowel — Toukyou, Yuuri">ou</button>
-        <button class="themebtn" data-romaji-set="plain"  title="plain — Tokyo, Yuri">o</button>
+        <button class="themebtn" data-romaji-set="macron" title="macron: Tōkyō, Yūri">ō</button>
+        <button class="themebtn" data-romaji-set="double" title="doubled vowel: Toukyou, Yuuri">ou</button>
+        <button class="themebtn" data-romaji-set="plain"  title="plain: Tokyo, Yuri">o</button>
       </span>
       </span>
       </span>
@@ -324,7 +324,7 @@
 <section id="tab-feed">
   
   <div class="controls" style="margin-top:.9rem">
-    <input type="search" id="fq" placeholder="検索 — 作品名・作者 / work, creator" autocomplete="off">
+    <input type="search" id="fq" placeholder="検索: 作品名・作者 / work, creator" autocomplete="off">
     <select id="fmodel" title="which updates count">
       <option value="all">すべての更新 / all updates</option>
       <option value="free">無料で読める更新 / free to read</option>
@@ -350,7 +350,7 @@
   <div id="feed"></div>
   <p class="empty" id="fempty" hidden>該当なし / no matches</p>
   <!-- The archive, at the bottom, where a reader who has finished the recent updates arrives. The
-       tab opens on a short window and this is the way further back — so it is out of the way of the
+       tab opens on a short window and this is the way further back, so it is out of the way of the
        common visit ("what is new") without being hidden from the uncommon one. -->
   <div class="archbar" id="archbar" hidden>
     <label for="fmonth" data-i18n>過去の更新 / earlier updates</label>
@@ -361,14 +361,14 @@
 <!-- ── CATALOGUE ──────────────────────────────────────────────────── -->
 <section id="tab-ser" hidden>
   <div class="controls">
-    <input type="search" id="sq" placeholder="検索 — 作品名・作者 / work, creator" autocomplete="off">
+    <input type="search" id="sq" placeholder="検索: 作品名・作者 / work, creator" autocomplete="off">
     <select id="sstate">
       <option value="">すべて / all</option>
-      <option value="active">更新中 — 45日以内 / updating</option>
+      <option value="active">更新中: 45日以内 / updating</option>
       <option value="oneshot">読切 / one-shots</option>
       <option value="completed">完結 / completed</option>
-      <option value="slow">停滞 — 1年以内 / slow</option>
-      <option value="dormant">休眠 — 1年超 / dormant</option>
+      <option value="slow">停滞: 1年以内 / slow</option>
+      <option value="dormant">休眠: 1年超 / dormant</option>
     </select>
     <select id="sfree">
       <option value="">課金状況を問わない / any access</option>
@@ -390,7 +390,7 @@
 <section id="tab-cat" hidden>
   
   <div class="controls" style="margin-top:.9rem">
-    <input type="search" id="q" placeholder="検索 — 題名・よみ・作者 / title, reading, creator" autocomplete="off">
+    <input type="search" id="q" placeholder="検索: 題名・よみ・作者 / title, reading, creator" autocomplete="off">
     <select id="sort">
       <option value="date">刊行順 / by date</option>
       <option value="date-desc">新しい順 / newest</option>
@@ -402,7 +402,7 @@
       <option value="">すべて / all works</option>
       <option value="multi">複数巻 / multi-volume</option>
       <option value="single">単巻 / single volume</option>
-      <!-- Was: 要確認 / unverified grouping — volumes gathered into a work by title match rather
+      <!-- Was: 要確認 / unverified grouping: volumes gathered into a work by title match rather
            than by an explicit series link (80 of 302). That is a statement about how WE grouped
            them, and no reader can adjudicate it. The count now lives on status.html. -->
     </select>
@@ -419,10 +419,10 @@
     Facts are not copyrightable; original classifications and notes are CC0. No cover art,
     synopses or manga are hosted here.</p>
   <p id="trackfrom" hidden></p>
-  <p>This site stores your display preferences — theme, tab and filters — in your own browser's
+  <p>This site stores your display preferences (theme, tab and filters) in your own browser's
     local storage, written only when you choose them. Nothing is transmitted and no cookies are
     set. <button id="clearprefs" class="themebtn" data-i18n>設定を消去 / clear</button></p>
-  <p><a href="status.html">内部状態 / build status</a> — what the last build did, which sources
+  <p><a href="status.html">内部状態 / build status</a>: what the last build did, which sources
     answered, and which reports are still untraced.</p>
 </footer>
 </div>
@@ -431,7 +431,7 @@
 /* Preference persistence (localStorage, never cookies).
    Cookies are sent to the server on every request; localStorage never leaves the browser, so
    nothing about the reader reaches GitHub or anyone else. Values are written only in response to
-   an explicit choice, and hold no identifier — see the note in the footer. */
+   an explicit choice, and hold no identifier: see the note in the footer. */
 const PREF_THEME = 'yurarium.pref.theme';
 const PREF_VIEW  = 'yurarium.pref.view';
 
@@ -456,7 +456,7 @@ document.querySelectorAll('.themebtn[data-theme-set]').forEach(b =>
     prefSet(PREF_THEME, b.dataset.themeSet);   // explicit action only
   }));
 
-// Search text is deliberately NOT persisted — restoring a stale query on load is surprising.
+// Search text is deliberately NOT persisted: restoring a stale query on load is surprising.
 const VIEW_FIELDS = ['fmodel', 'ftype', 'fview', 'fplat', 'sort', 'filter',
                      'sstate', 'sfree', 'splat', 'ssort'];
 function saveView() {
@@ -482,7 +482,7 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;
 
 let INDEX = [], FEED = null, SERIES = null, DETAIL = null, open = null;
 /* The updates tab is a 14-day window. Earlier months are separate files, fetched only when a reader
-   asks for one, and kept once fetched — going back and forth between two months should not re-cost
+   asks for one, and kept once fetched: going back and forth between two months should not re-cost
    the download. META is feed/meta.json: everything in the old feed.json that was not a release row,
    held once instead of repeated in every month. */
 let META = null;
@@ -491,18 +491,18 @@ const ARCH_PENDING = new Set(); // months being fetched, so a re-render does not
 let LANG = prefGet('lang', 'both');
 
 /* Split the "日本語 / english" strings the interface is already written in. Captured once into a
-   data attribute, so switching back and forth is lossless — re-splitting an already-split string
+   data attribute, so switching back and forth is lossless: re-splitting an already-split string
    would strip a further half each time. */
 function splitLang(s, lang) {
   const i = s.indexOf(' / ');
-  // A platform name has no " / " to split on, so it falls through here — the filter dropdowns
+  // A platform name has no " / " to split on, so it falls through here. The filter dropdowns
   // are built from raw names. PLAT_EN is consulted alongside EN so those options localise too;
   // dataset.orig keeps the Japanese, which is what the filter actually matches on.
   if (i < 0) return lang === 'en' ? (EN[s.trim()] || PLAT_EN[s.trim()] || s) : s;
   return lang === 'ja' ? s.slice(0, i) : lang === 'en' ? s.slice(i + 3) : s;
 }
 /* Bilingual strings built in JS, where there is no element to carry data-i18n.
-   One argument is a badge — look it up in EN, and in 併記 mode show the Japanese alone, because
+   One argument is a badge: look it up in EN, and in 併記 mode show the Japanese alone, because
    "話 / ch" is wider than the row it sits in. Two arguments is prose, which gets both. */
 function T(ja, en) {
   const e = en !== undefined ? en : EN[ja];
@@ -522,7 +522,7 @@ function L(ja, en) {
 
 
 /* ── 併記 as two complete lines ───────────────────────────────────────────────────────────────
-   併記 means "show both", and the first attempt read it as "add an English title underneath" —
+   併記 means "show both", and the first attempt read it as "add an English title underneath",
    which left a compact row at three lines (Japanese row / English title / platform) and every
    badge stubbornly Japanese. Taken at its word instead: render the WHOLE row once in each
    language and stack the two. Everything that can be translated is, on its own line, so the
@@ -546,7 +546,7 @@ function bilingual(render, cls) {
 
 /* ── English names and readings ──────────────────────────────────────────────────────────────
    The build ships a kana reading plus all three romanisation styles precomputed, because the
-   stored form is kana (NAMES-PLAN §8.1) and the style is the reader's choice — Yūri / Yuuri / Yuri
+   stored form is kana (NAMES-PLAN §8.1) and the style is the reader's choice: Yūri / Yuuri / Yuri
    are all derivable from kana and none from each other, so nothing is baked and no romanisation
    engine ships to the browser.
 
@@ -559,11 +559,11 @@ let FURIGANA     = prefGet(PREF_FURI, false);
 
 const HAS_KANJI = /[\u4e00-\u9fff]/;
 
-/* Whole-string ruby — NAMES-PLAN §5c level 1. Per-kanji alignment is level 2 and is not attempted
+/* Whole-string ruby: NAMES-PLAN §5c level 1. Per-kanji alignment is level 2 and is not attempted
    here: ruby over the wrong character is worse than none, and unlike a whole-string reading it is
    wrong in a specific, visible place. Suppressed when the title has no kanji, because furigana over
    ワインガールズ tells a reader nothing they cannot already read. */
-/* Ruby per KANJI RUN — the build ships spans aligned with the anchor algorithm, so 雨夜の月 gets
+/* Ruby per KANJI RUN. The build ships spans aligned with the anchor algorithm, so 雨夜の月 gets
    あまよ over 雨夜 and つき over 月, with の bare. The earlier version stacked the whole reading over
    the whole title, which is not how furigana works and broke the column on long titles.
    No length cap is needed any more: aligned ruby wraps with the text it annotates. */
@@ -596,12 +596,12 @@ function nameFor(kind, raw, existing) {
 function enOf(rec) {
   if (!rec) return null;
   const styled = rec.romaji && rec.romaji[ROMAJI_STYLE];
-  // An English NAME the work actually has outranks a romanisation — a name is a name whatever the
+  // An English NAME the work actually has outranks a romanisation. A name is a name whatever the
   // style toggle says, so official-jp, licensed and translated take `en` directly.
   if (rec.en && rec.basis !== 'romaji')
     return { text: rec.en, ours: rec.basis === 'translated',
              unverified: !!rec.unverified, basis: rec.basis };
-  // basis 'romaji' is a ROMANISATION, so render it from the kana whenever we hold the kana —
+  // basis 'romaji' is a ROMANISATION, so render it from the kana whenever we hold the kana.
   // otherwise the style control silently does nothing to it, which is exactly the failure §8.1
   // exists to prevent. Some records arrived as a romanised string with no reading behind it; those
   // fall back to the stored string and cannot follow the toggle. That is a property of the record,
@@ -613,11 +613,11 @@ function enOf(rec) {
 
 /* Marked when it is OURS or when the reading behind it is unverified; unmarked when it is the
    work's own English name or a licensor's. §5d: an unverified reading IS marked in the reader
-   interface, and that is not a return of 要確認 — it is a fact about the name, a reader who knows
+   interface, and that is not a return of 要確認. It is a fact about the name, a reader who knows
    Japanese can judge it on sight, and it stops a real person being authoritatively misnamed. */
 /* A reading we assembled character by character, because nothing could read the word. Marked
    visibly and separately from an ordinary guess: those are merely unsourced, this one is likely to
-   be WRONG in a specific way a reader can see — the isolated reading of a character is often not
+   be WRONG in a specific way a reader can see. The isolated reading of a character is often not
    its reading in a compound, so 抱き came out カカエ where it should be ダキ. The mark is the
    smallest thing that cannot be mistaken for part of the name. */
 function uncertainMark(rec) {
@@ -630,7 +630,7 @@ function enHtml(rec, cls) {
   const e = enOf(rec);
   if (!e) return '';
   const why = e.unverified
-    ? 'reading not confirmed against a source — this romanisation may be wrong'
+    ? 'reading not confirmed against a source. This romanisation may be wrong'
     : e.ours
       ? (e.basis === 'romaji' ? 'our romanisation of the Japanese, not an English title the work has'
                               : 'our translation, not an English title the work has')
@@ -640,11 +640,11 @@ function enHtml(rec, cls) {
 }
 
 /* Titles: EN replaces the Japanese, and in 併記 the whole ROW is rendered again in English by
-   bilingual() rather than a title being appended here — so this only ever produces one language. */
+   bilingual() rather than a title being appended here, so this only ever produces one language. */
 /* A collection is a work, so it gets a work's rendering. It was the one title-shaped string on the
    row that never went through the store. */
-/* Chapter names, collections and credit lines. Not titles — a chapter name is mostly structure
-   (第12話 -> Ch. 12) and a credit line is roles plus names — so they live in their own map, but
+/* Chapter names, collections and credit lines. Not titles. A chapter name is mostly structure
+   (第12話 -> Ch. 12) and a credit line is roles plus names, so they live in their own map, but
    they are looked up exactly the same way. Falls through to the Japanese when nothing is held. */
 function phraseOf(ja) {
   if (LANG !== 'en' || !ja || !NAMES || !NAMES.phrases) return ja;
@@ -664,7 +664,7 @@ function workLabel(r) {
   return ruby(r.work, rec) + (FURIGANA ? uncertainMark(rec) : '');
 }
 
-/* Authors likewise: one language, chosen by the caller's context — a romanisation and its Japanese are the same name
+/* Authors likewise: one language, chosen by the caller's context. A romanisation and its Japanese are the same name
    twice, so the toggle picks one (§5b). */
 function authorLabel(r) {
   const rec = nameFor('authors', (r.author || '').trim(), r.author_en);
@@ -674,18 +674,18 @@ function authorLabel(r) {
     return esc(ph);
   }
   if (LANG === 'en') {
-    // A credit line has no reading of its own — it is roles and several people — so it is rendered
+    // A credit line has no reading of its own (it is roles and several people) so it is rendered
     // as a phrase rather than a name, and only falls back to the name store for a single author.
     const ph = phraseOf((r.author || '').trim());
     if (ph !== (r.author || '').trim()) return esc(ph);
     return enHtml(rec, 'byen');
   }
-  // No 'both' branch any more. In 併記 this is called twice — once per line — so pairing the two
+  // No 'both' branch any more. In 併記 this is called twice (once per line) so pairing the two
   // scripts HERE would print the romanisation twice on the English line and once on the Japanese.
   return esc(r.author || '');
 }
 
-/* Weekday, short. Web serials run to a weekly slot far more than to a date — a reader tracking a
+/* Weekday, short. Web serials run to a weekly slot far more than to a date. A reader tracking a
    Saturday series reads the day before the number. Parsed as UTC so the label cannot slip a day on
    a browser west of Greenwich; these dates are calendar days, not instants. */
 const DOW_JA = ['日','月','火','水','木','金','土'];
@@ -697,8 +697,8 @@ function dow(d) {
 }
 
 /* Platform names in English.
-   Where the platform publishes its own Latin-script name — pixiv Comic, Comic Days, Sunday Webry,
-   KADOKOMI, Magazine Pocket — that name is used, because it is the one the platform answers to and
+   Where the platform publishes its own Latin-script name: pixiv Comic, Comic Days, Sunday Webry,
+   KADOKOMI, Magazine Pocket. That name is used, because it is the one the platform answers to and
    the one a reader will find. Where it publishes none, this is a romanisation and nothing more: a
    best-effort reading of the Japanese, marked as such rather than invented as a translation.
    Names already in Latin script are absent from the map and pass through untouched. */
@@ -723,7 +723,7 @@ const PLAT_EN = {
   'マイナビニュース':'Mynavi News', 'ヤンジャン+':'Yanjan+', 'コミックエッセイ劇場':'Comic Essay Gekijo',
 };
 /* Creator role markers, which arrive welded into the credit string: "[著]森永みるく",
-   "[漫画]東雲水生 / [脚本]駒尾真子". The NAME is a proper noun and stays as it is in every mode —
+   "[漫画]東雲水生 / [脚本]駒尾真子". The NAME is a proper noun and stays as it is in every mode:
    transliterating a mangaka is not translation, it is guessing. The bracketed ROLE is a label and
    is rendered. MADB's own vocabulary, so the set is small and closed. */
 const ROLE_EN = {
@@ -735,7 +735,7 @@ function credit(c) {
   return c.replace(/\[([^\]]+)\]/g, (m, r) => ROLE_EN[r] ? `[${ROLE_EN[r]}]` : m);
 }
 
-/* The source chips sit OUTSIDE bilingual() — they are links, and two sets of clickable chips to the
+/* The source chips sit OUTSIDE bilingual(). They are links, and two sets of clickable chips to the
    same platforms reads as a bug rather than a translation. But that left them Japanese-only in
    併記, where the whole point is to show both. So the chip carries both names on ONE link instead
    of the row carrying two links. */
@@ -747,8 +747,8 @@ function platBoth(n) {
 }
 
 function platName(n) {
-  // A name, not a phrase: shown as one or the other, never "ガンガンONLINE / GANGAN ONLINE" —
-  // that doubles the width of a meta line for no gain. Absent from the map means already Latin,
+  // A name, not a phrase: shown as one or the other, never "ガンガンONLINE / GANGAN ONLINE".
+  // That doubles the width of a meta line for no gain. Absent from the map means already Latin,
   // or no rendering worth asserting.
   return (LANG === 'en' && PLAT_EN[n]) || n || '';
 }
@@ -763,7 +763,7 @@ function renderTrackNote() {
     `更新の追跡開始は ${TRACK_FROM}。それ以前の日付は各プラットフォームの記載を一括で取り込んだもので、`
     + `既刊をまとめて同じ日付で登録するプラットフォームもあるため、公開日として正確とは限りません。`,
     `Update tracking began on ${TRACK_FROM}. Dates before then were imported in a single pass from
-     what each platform states about its own back catalogue — and some platforms date a whole back
+     what each platform states about its own back catalogue, and some platforms date a whole back
      catalogue to the day they listed it, so publication dates before ${TRACK_FROM} may not be
      reliable.`) + ` <a href="status.html">${T('内部状態', 'build status')}</a>`;
 }
@@ -781,7 +781,7 @@ function renderFuriNote() {
 }
 
 /* A control that is not applicable keeps its space. Using [hidden] meant every language switch
-   removed a group from the layout and the whole header — and the tab strip under it — jumped. The
+   removed a group from the layout and the whole header (and the tab strip under it) jumped. The
    space costs nothing; the jump costs the reader their place. Kept out of the tab order and the
    accessibility tree while inert, so it is only visually reserved. */
 function setApplicable(box, on) {
@@ -793,7 +793,7 @@ function setApplicable(box, on) {
 function applyRomajiVisibility() {
   const box = el('rjbox');
   if (box) {
-    // Not applicable in 日本語 mode — it would offer a choice about text that is not on the page.
+    // Not applicable in 日本語 mode. It would offer a choice about text that is not on the page.
     setApplicable(box, LANG !== 'ja');
     box.querySelectorAll('[data-romaji-set]').forEach(b =>
       b.setAttribute('aria-pressed', String(b.dataset.romajiSet === ROMAJI_STYLE)));
@@ -855,7 +855,7 @@ const TYPE_JA = { chapter:'話', oneshot:'読み切り', trial:'試し読み', e
                   unclassified:'未分類' };
 
 // De-emphasise only what is KNOWN not to advance the story. `unclassified` is not known either
-// way — dimming it would assert something the data does not support (REQUIREMENTS §6: unmatched
+// way: dimming it would assert something the data does not support (REQUIREMENTS §6: unmatched
 // values are quarantined, not coerced).
 const NON_STORY = new Set(['trial', 'notice', 'apology-art', 'republication']);
 
@@ -869,7 +869,7 @@ document.querySelectorAll('nav button').forEach(b => b.addEventListener('click',
 
 /* ── feed ─────────────────────────────────────────────── */
 
-/* A month is a name, not a phrase — same rule as a platform name, so L()/splitLang semantics apply:
+/* A month is a name, not a phrase: same rule as a platform name, so L()/splitLang semantics apply:
    one language, never both, because it sits in a count line beside a number. */
 const MONTH_EN = ['January','February','March','April','May','June',
                   'July','August','September','October','November','December'];
@@ -879,8 +879,8 @@ function monthLabel(m, lang) {
 }
 
 /* Which set the tab is showing: the recent window, or one archived month. Read off the control
-   rather than held in a variable of its own, so リセット — which clears every select to its first
-   option — cannot leave the state and the control disagreeing. */
+   rather than held in a variable of its own, so リセット, which clears every select to its first
+   option: cannot leave the state and the control disagreeing. */
 function activeRows() {
   const m = el('fmonth').value;
   if (!m) return FEED ? FEED.releases : [];
@@ -897,7 +897,7 @@ function loadMonth(m) {
     ARCHIVE.set(m, d);
     ARCH_PENDING.delete(m);
     // A month can carry platforms the recent window does not, and the reverse, so the filter is
-    // rebuilt against whatever is on screen — a dropdown offering platforms with nothing behind
+    // rebuilt against whatever is on screen. A dropdown offering platforms with nothing behind
     // them is a filter that does nothing, which is worse than a short list.
     setPlatOptions();
     renderFeed();
@@ -932,7 +932,7 @@ function renderFeed() {
   const month = el('fmonth').value;
   // An archived month is a snapshot: it was written when the month closed and is never rewritten,
   // so it says what was recorded then rather than what we know now. A reader is owed that in one
-  // line — NOT the machinery behind it. The write-once rule, the tracking-start date and the
+  // line: NOT the machinery behind it. The write-once rule, the tracking-start date and the
   // fourteen-day window are all on status.html, and none of them changes how to read the page.
   const snap = el('fsnap');
   snap.hidden = !month;
@@ -953,7 +953,7 @@ function renderFeed() {
     // paywall is news to a reader who has been waiting, where a normally-free release is not.
     if (model === 'free' && !r.free) return false;
     // The platform selector was populated, wired to re-render, and never read. A chapter carried
-    // in several places counts for each of them, so an alternative carrier matches too — filtering
+    // in several places counts for each of them, so an alternative carrier matches too: filtering
     // to マガポケ should not hide a chapter it carries merely because コミックDAYS is preferred.
     if (plat && (r.plat_name || r.plat) !== plat && !(r.also_on || []).includes(plat)) return false;
     if (f) return r.type === f;
@@ -966,7 +966,7 @@ function renderFeed() {
        : LANG === 'ja' ? `${rows.length} 件表示　·　${src.length} 件`
        : `${rows.length} 件 / shown　·　${src.length} 件 / total`);
   // Which set is on screen, said in the line that counts it. Without this an archived month and a
-  // quiet fortnight look identical — a number with nothing to say what it is a number of.
+  // quiet fortnight look identical. A number with nothing to say what it is a number of.
   el('fcount').textContent = month
     ? monthLabel(month) + (LANG === 'en' ? ' · ' : '　·　') + count
     : count;
@@ -983,10 +983,10 @@ function renderFeed() {
 function stackWrappedRows() {
   const rows = [...document.querySelectorAll('#feed .crow')];
   // Measure the whole cell, not just the title. 怪異部〜M県Y市の怪現象について〜 fits on one line
-  // and then pushes the source name onto the next, breaking it mid-word (カドコ / ミ) — the title
+  // and then pushes the source name onto the next, breaking it mid-word (カドコ / ミ): the title
   // had not wrapped but the row had, which is the case worth handling.
   // Height against line-height, not client rects. .ccell is a GRID ITEM, so it is blockified and
-  // reports a single box however many lines it occupies — measuring its rects said "never wrapped"
+  // reports a single box however many lines it occupies: measuring its rects said "never wrapped"
   // for rows that plainly had. Whether the title or the source name caused the wrap does not
   // matter; the row costs two lines either way, so the source may as well own the second.
   const wrapped = rows.filter(r => {
@@ -1001,7 +1001,7 @@ function stackWrappedRows() {
 /* ── interface language ───────────────────────────────────
    Most chrome is already written as "日本語 / english", so the switch splits those at the
    separator rather than duplicating every string in a table. What needs a table is the chrome that
-   is Japanese-only — tab names and the badges.
+   is Japanese-only: tab names and the badges.
 
    The DATA is never translated. Work titles, creator names and platform names are the record, and
    an English rendering of 百合ナビ or くずしろ would be an invention, not a translation. */
@@ -1018,7 +1018,7 @@ const EN = {
   /* tabs */
   '更新':'Updates', '作品':'Works', '単行本':'Volumes',
 
-  /* badges — initial capital */
+  /* badges: initial capital */
   '更新中':'Updating', '停滞':'Slow', '休眠':'Dormant', '不明':'Unknown', '完結':'Completed',
   '読切':'One-shot', '最終回':'Final', '新連載':'New', '新話':'Chapter', 'その他':'Other',
   '無料':'Free', '有料':'Paid', '無料（条件付）':'Free (paced)', '全話無料':'All free',
@@ -1027,7 +1027,7 @@ const EN = {
   '公開予定':'Announced', '既出':'Seen',
   '作者未分離':'Author not split', '有料先行':'Paid early', '先行':'Early',
 
-  /* words inside running text — lower case */
+  /* words inside running text: lower case */
   '話':'ch', '巻':'vols', '最新':'latest', '公開':'published', '根拠':'basis',
   '未設定':'not yet assigned', '他':'also',
 };
@@ -1054,7 +1054,7 @@ function kindTag(r) {
   // and this is simply the newest chapter we hold, rather than a title that says it is the last.
   const q = r.kind === 'final' && r.final_inferred;
   return `<span class="k ${cls}" title="${esc(why)}${
-    q ? ' — inferred: the series is marked 完結 and this is the newest chapter we hold, but no title states it is the last' : ''
+    q ? '. Inferred: the series is marked 完結 and this is the newest chapter we hold, but no title states it is the last' : ''
   }">${esc(T(label))}${q ? '?' : ''}</span>`;
 }
 
@@ -1075,7 +1075,7 @@ function byDate(rows) {
 // The free badge comes first. If an update put out a chapter anyone can read, that is the fact a
 // reader wants off the row, and it should not be queued behind anything.
 //
-// 有料先行 is a fact about the SERIES — how many chapters currently sit ahead of the free line —
+// 有料先行 is a fact about the SERIES (how many chapters currently sit ahead of the free line),
 // and it used to render as "有料先行 11" on an update row, which reads as a claim about this
 // update. It is not: all 58 rows carrying ahead_n also carry free:true, so the update added a FREE
 // chapter while the badge announced eleven paid ones.
@@ -1086,7 +1086,7 @@ function byDate(rows) {
 
 // A series dropping several instalments at once is one event to a reader, not N. Collapsed to a
 // single line with a count. Precedence: the start of a series outranks a further chapter, which
-// outranks a notice — so a new series arriving with several chapters still reads as 新連載.
+// outranks a notice, so a new series arriving with several chapters still reads as 新連載.
 // An ending outranks an ordinary chapter but not a new series: a series starting is the thing a
 // reader most wants surfaced, and a finale should not be shouting over it.
 const KIND_RANK = { 'new-series': 4, 'oneshot': 4, 'final': 3, 'new-chapter': 2, 'other': 1, 'unknown': 0 };
@@ -1105,14 +1105,14 @@ function compactList(rows) {
     for (const g of groups.values()) {
       const lead = g.reduce((a, b) =>
         (KIND_RANK[b.kind] ?? 0) > (KIND_RANK[a.kind] ?? 0) ? b : a);
-      // A work dropping several chapters at once is still ONE row — that has not changed. What is
+      // A work dropping several chapters at once is still ONE row. That has not changed. What is
       // gone is the "他 N 件 / also N" counter beside it. The number was a property of how this
       // page groups, not of the release: the platform published chapters, not "a chapter and 11
       // others", and the reader either wants the list or wants the row. The row names the
       // instalment that ranks highest and links to the work, which is where the rest are.
       const anyFree = g.some(x => x.free);
-      // One complete row per language. Everything in it — the kind badge, the platform name, the
-      // access badges — is rendered again on the English line rather than left in Japanese, which
+      // One complete row per language. Everything in it. The kind badge, the platform name, the
+      // access badges: is rendered again on the English line rather than left in Japanese, which
       // is what 併記 asks for and what the previous "English title underneath" did not give.
       const line = () => `${kindTag(lead)}
         <span class="ccell"><span class="cmain">${lead.url ? `<a href="${esc(lead.url)}" target="_blank" rel="noopener noreferrer nofollow">${workLabel(lead)}</a>`
@@ -1123,7 +1123,7 @@ function compactList(rows) {
         ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">${esc(T('転載'))}</span>` : ''}
         ${anyFree ? `<span class="k k-free">${esc(T('無料'))}</span>` : ''}
         ${(el('fmodel').value === 'all' && lead.ahead_n)
-          ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) of this series sit ahead of the free line, newest ${esc(lead.ahead_ep || '')} — readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}. A standing fact about the series, not a count of what this update added.">${esc(T('有料先行'))}</span>` : ''}
+          ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) of this series sit ahead of the free line, newest ${esc(lead.ahead_ep || '')}: readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}. A standing fact about the series, not a count of what this update added.">${esc(T('有料先行'))}</span>` : ''}
         </span></span>`;
       html += `<div class="crow">${bilingual(line)}</div>`;
     }
@@ -1135,7 +1135,7 @@ function compactList(rows) {
 /* ── detail row helpers ───────────────────────────────────
    This view is for a reader deciding what to open, so it answers four questions in order: what
    updated, can I read it now, where, and is there any reason to doubt it. Anything that is only
-   true of OUR processing — that we have not classified a work yet, the date we first saw a row —
+   true of OUR processing (that we have not classified a work yet, the date we first saw a row)
    is bookkeeping and is not shown. It stays in the data and in the coverage files, where it is
    for us. What survives here is only what changes what a reader should believe about the manga. */
 
@@ -1150,7 +1150,7 @@ function accessTag(r) {
   if (r.free) return `<span class="tag">${esc(T('無料'))}</span>`;
   const m = r.access_modes || [];
   if (m.includes('free-timed'))
-    return `<span class="tag" title="free, but paced — a daily ticket or a limited window. Every chapter marked this way can be read at no cost eventually; the systems differ by platform, the outcome does not.">${esc(T('無料（条件付）'))}</span>`;
+    return `<span class="tag" title="free, but paced. A daily ticket or a limited window. Every chapter marked this way can be read at no cost eventually; the systems differ by platform, the outcome does not.">${esc(T('無料（条件付）'))}</span>`;
   if (r.ahead_n)
     return `<span class="tag grey" title="this series runs chapters ahead of the free line, readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">${esc(T('先行'))}</span>`;
   if (m.includes('purchase')) return `<span class="tag grey">${esc(T('有料'))}</span>`;
@@ -1159,11 +1159,11 @@ function accessTag(r) {
 
 // Platforms routinely name a one-shot's episode after the work, so the detail view showed
 // 吸血少女とウンディーネ with 【読切】吸血少女とウンディーネ directly beneath it. Strip the repeat, and
-// the bracketed 読切 marker with it — the kind tag beside the title already says that.
+// the bracketed 読切 marker with it. The kind tag beside the title already says that.
 /* The rendered chapter name.
 
-   epLine() strips the work's name off the front of its own chapter name — 大室家の135 under the
-   work 大室家 becomes の135 — and that strip has to happen AFTER translation, not before. Stripping
+   epLine() strips the work's name off the front of its own chapter name: 大室家の135 under the
+   work 大室家 becomes の135, and that strip has to happen AFTER translation, not before. Stripping
    first left a fragment that was never a key in the store, so it fell through untranslated and put
    the one remaining piece of Japanese on the English page.
 
@@ -1174,7 +1174,7 @@ function epText(r) {
   if (!full) return '';
   const w = workTextOf(r.work);
   let ep = full;
-  if (w && ep.startsWith(w)) ep = ep.slice(w.length).replace(/^[\s:：・—-]+/, '');
+  if (w && ep.startsWith(w)) ep = ep.slice(w.length).replace(/^[\s:：・: -]+/, '');
   ep = ep.trim();
   // A remainder that is only a particle or a counter is a fragment, not a name.
   return (!ep || ep === w || /^(no|wa|ga|ni|de|to|Ch\.?)$/i.test(ep)) ? '' : ep;
@@ -1185,10 +1185,10 @@ function epLine(r) {
   if (!ep) return '';
   const stripped = ep.replace(/^[【\[]?(読切|読み切り|よみきり)[】\]]?\s*/, '');
   // Only take the stripped form if what is left still says something. 読み切り作品 reduces to 作品,
-  // which is a fragment, not a chapter name — better to show nothing than a leftover.
+  // which is a fragment, not a chapter name: better to show nothing than a leftover.
   if (stripped && !/^(作品|版|話|回)?$/.test(stripped.trim())) ep = stripped;
   const w = (r.work || '').trim();
-  if (w && ep.startsWith(w)) ep = ep.slice(w.length).replace(/^[\s:：・—-]+/, '');
+  if (w && ep.startsWith(w)) ep = ep.slice(w.length).replace(/^[\s:：・: -]+/, '');
   ep = ep.trim();
   return (ep === w || /^(作品|版|話|回)?$/.test(ep)) ? '' : ep;
 }
@@ -1196,13 +1196,13 @@ function epLine(r) {
 // One caveat survives, and only because it is a fact about the MANGA rather than about us: the
 // platform itself moved the publication date, and we keep the earliest.
 //
-// Removed: 要確認 (a listing site reported it, no platform confirmed) — a note about us, addressed
+// Removed: 要確認 (a listing site reported it, no platform confirmed). A note about us, addressed
 // to someone who cannot act on it; claims are traced by the build now and land on status.html.
-// Removed: 日付は推定 (the date was pattern-matched rather than stated) — it matched zero rows, so
+// Removed: 日付は推定 (the date was pattern-matched rather than stated). It matched zero rows, so
 // it was reassurance about a problem that no longer exists in the data.
 function caveats(r) {
   return r.moved
-    ? `<div class="datewarn">${T('公開日が変更された', 'publication date was moved')}（${esc(r.moved)}）—
+    ? `<div class="datewarn">${T('公開日が変更された', 'publication date was moved')}（${esc(r.moved)}） ·
        ${T('最も早い日付を保持', 'earliest date kept')}</div>` : '';
 }
 
@@ -1214,11 +1214,11 @@ function detailList(rows) {
     const d = (r.feed_date || r.pub || '').slice(0, 10);
     if (d !== day) {
       day = d;
-      // No badge here. This was 日付要確認, then 一括掲載 — each an improvement on the last and
+      // No badge here. This was 日付要確認, then 一括掲載: each an improvement on the last and
       // each still the wrong kind of thing to put in front of a reader, who can no more act on
-      // "the platform batched these" than on "we should check this". The general fact — that
+      // "the platform batched these" than on "we should check this". The general fact: that
       // update tracking starts on a known date and dates before it are the platforms' own,
-      // imported in one pass and only as good as each platform's back-catalogue dating — is a
+      // imported in one pass and only as good as each platform's back-catalogue dating: is a
       // single statement about the whole database. It belongs in the accompanying text, said once,
       // not re-asserted per day on the rows that happen to trip a heuristic.
       html += `<div class="date-h">${esc(d)} <span class="dow">${esc(dow(d))}</span></div>`;
@@ -1237,7 +1237,7 @@ function detailList(rows) {
       ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">${esc(T('公開'))} ${esc(r.pub)}</div>` : ''}
       <div class="line2">
         ${r.author ? `<span class="meta by">${authorLabel(r)}</span>` : ''}
-        ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection — the collection's genre label does not necessarily describe every instalment">${esc(workTextOf(r.collection))}</span>` : ''}
+        ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection. The collection's genre label does not necessarily describe every instalment">${esc(workTextOf(r.collection))}</span>` : ''}
         <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(platName(r.plat_name || r.plat))}</span>
         ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(platName(r.plat_name))}, not a platform of its own">${esc(r.channel_name)}</span>` : ''}
         ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">${esc(T('転載'))}</span>` : ''}
@@ -1258,11 +1258,11 @@ function detailList(rows) {
 const SSTATE = {
   active:    ['更新中', 'k-new', 'a chapter within the last 45 days'],
   // 103 works reach this state and there was no entry for it, so they fell through to `unknown`
-  // and were labelled 不明 — "the platform states no date we could read" — about series we know
+  // and were labelled 不明 ("the platform states no date we could read") about series we know
   // have ENDED, on the firmest evidence the build accepts (a 最終話 title, or the platform's own
   // serialisation status). The fallback made a confident finding look like a failure to look.
-  completed: ['完結', 'k-fin', 'the series has finished — a final chapter, or the platform says so'],
-  oneshot:   ['読切', 'k-one', 'complete in one instalment — finished, not dormant'],
+  completed: ['完結', 'k-fin', 'the series has finished. A final chapter, or the platform says so'],
+  oneshot:   ['読切', 'k-one', 'complete in one instalment: finished, not dormant'],
   slow:      ['停滞', 'k-ch',  'last chapter within a year'],
   dormant:   ['休眠', 'k-unk', 'nothing for over a year'],
   unknown:   ['不明', 'k-unk', 'the platform states no date we could read'],
@@ -1274,7 +1274,7 @@ function renderSeries() {
   const state = el('sstate').value, freeOnly = el('sfree').value, plat = el('splat').value;
   const sort = el('ssort').value;
   let rows = SERIES.series.filter(r => {
-    // 45 rows carry a title and a platform and nothing else — no chapters, no dates, no URL. They
+    // 45 rows carry a title and a platform and nothing else: no chapters, no dates, no URL. They
     // rendered as 不明 / Unknown, which is the interface admitting it has nothing rather than
     // telling the reader something. A work we cannot say one fact about is a lead, not an entry;
     // it belongs in the coverage gaps on status.html, where it is work to do.
@@ -1294,23 +1294,23 @@ function renderSeries() {
   el('sempty').hidden = rows.length > 0;
   el('serlist').innerHTML = rows.map(r => {
     const [lbl, cls, why] = SSTATE[r.state] || SSTATE.unknown;
-    // Free count is the reader's actual question — not "is it free" but "how much of it is".
-    // "全話無料" of a single chapter is a category error — there is no proportion to state, only
+    // Free count is the reader's actual question: not "is it free" but "how much of it is".
+    // "全話無料" of a single chapter is a category error. There is no proportion to state, only
     // whether the thing is free. A two-part 読切 is different: those genuinely differ in access
     // part to part, so the count is the useful answer there and the badge shows it.
     // NO access badge where there is no access data. This read 有料 for every row whose source
-    // states nothing — 293 of 1145, including all 261 カドコミ rows, whose adapter records no access
+    // states nothing: 293 of 1145, including all 261 カドコミ rows, whose adapter records no access
     // at all. オタクサキュバスの才能がありすぎる！ is free and was listed as paid on that basis. Zero
     // free chapters known is not the same fact as zero free chapters, and only the second is 有料.
     // "6話無料" of a ten-chapter series reads as "four are paid", which was wrong for
-    // 運命は役に立たない: nine of its ten are readable now — four outright, five on a 作品チケット or a
-    // 待てば無料 timer — and exactly one is behind a coin. Conditionally free IS free to a reader
+    // 運命は役に立たない: nine of its ten are readable now: four outright, five on a 作品チケット or a
+    // 待てば無料 timer, and exactly one is behind a coin. Conditionally free IS free to a reader
     // deciding what to open tonight, so it counts here, and the proportion is stated as N/M so the
     // denominator is visible rather than implied.
     const freeN = r.free + r.free_timed;
     const known = freeN + r.priced;
     // A FUNCTION, not a string. Computed once it would be evaluated under 併記, where T() returns
-    // Japanese, and the English line would carry 無料 — the badge that most needs translating being
+    // Japanese, and the English line would carry 無料. The badge that most needs translating being
     // the one that silently did not. Anything language-dependent has to be called inside
     // bilingual()'s callback, not captured before it.
     const acc = () => !r.chapters || !known ? ''
@@ -1318,7 +1318,7 @@ function renderSeries() {
                                   : `<span class="tag grey">${esc(T('有料'))}</span>`)
       : freeN >= r.chapters ? `<span class="tag">${esc(T('全話無料'))}</span>`
       : freeN ? `<span class="tag" title="${r.free} free now${
-            r.free_timed ? `, ${r.free_timed} free with a daily ticket — readable at no cost, just paced` : ''}${
+            r.free_timed ? `, ${r.free_timed} free with a daily ticket: readable at no cost, just paced` : ''}${
             r.priced ? `; ${r.priced} paid` : ''}">${freeN}/${r.chapters}${
             ' ' + esc(T('無料'))}</span>`
       : `<span class="tag grey">${esc(T('有料'))}</span>`;
@@ -1336,11 +1336,11 @@ function renderSeries() {
       ${r.url ? '</a>' : ''}
         <div class="srcs">${r.sources.map(s => {
           // Each source states its OWN coverage. コミックDAYS holds 121 chapters of 雨夜の月 and
-          // マガポケ 10 — that is what we can see on each, not two different lengths of one story,
+          // マガポケ 10. That is what we can see on each, not two different lengths of one story,
           // so the count is shown per source rather than rolled up or summed.
           //
           // And each is a LINK to that platform. A chip naming a place you can read something, that
-          // you cannot click, is a worse version of the row's single link — the whole reason to
+          // you cannot click, is a worse version of the row's single link. The whole reason to
           // list sources is so a reader can choose one.
           const f = s.free + s.free_timed;
           const tip = `${s.chapters}${s.partial ? '+' : ''} chapters held here${
@@ -1373,7 +1373,7 @@ function renderCat() {
   }).sort(by);
 
   el('count').textContent = rows.length === INDEX.length
-    // The count is a number followed by a unit, so only the UNIT is bilingual — translating the
+    // The count is a number followed by a unit, so only the UNIT is bilingual: translating the
     // whole phrase gave "302 作品 / 302 works", printing the figure twice.
     ? `${rows.length} ${T('作品', 'works')}`
     : `${rows.length} ${T('作品表示', 'shown')}　·　${INDEX.length} ${T('作品', 'works')}`;
@@ -1414,7 +1414,7 @@ async function detail(id, li) {
     <p><strong>marketing_label:</strong> ${esc(w.marketing_label || '—')} &nbsp;
        <strong>content_tier:</strong> ${w.content_tier ? esc(w.content_tier)
          : `<em>${esc(T('未設定'))}</em>`}</p>
-    <div class="basis"><strong>${esc(T('根拠'))}</strong> — ${esc(b.source || '?')}${
+    <div class="basis"><strong>${esc(T('根拠'))}</strong>: ${esc(b.source || '?')}${
       b.retrieved ? `, retrieved ${esc(b.retrieved)}` : ''}<br>${esc(b.note || '')}
       ${b.url ? `<br><a href="${esc(b.url)}" rel="noreferrer">${esc(b.url)}</a>` : ''}</div>
     <h3>出典 / sources</h3>
@@ -1468,30 +1468,30 @@ el('clearprefs').addEventListener('click', () => {
 // no-cache means REVALIDATE, not "don't cache": the browser still stores the file and the server
 // still answers 304 when it has not changed, so this costs a conditional request and not a
 // download. Without it the data is cached indefinitely and a reader keeps seeing the previous
-// build — 運命は役に立たない sat at a stale 6/10 through a hard reload while the file on disk said
+// build: 運命は役に立たない sat at a stale 6/10 through a hard reload while the file on disk said
 // 13. A bibliographic feed that silently serves yesterday is worse than one that loads slowly.
 const DATA = f => fetch('data/' + f, { cache: 'no-cache' }).then(r => r.json());
 Promise.all([
   DATA('index.json'),
   // Not feed.json. That file was 1.3 MB and every visitor downloaded all of it to render the first
-  // screen — at a year of accumulation, unloadable. current.json is the recent window the tab opens
+  // screen: at a year of accumulation, unloadable. current.json is the recent window the tab opens
   // on; the months behind it are separate files, fetched only if asked for.
   DATA('feed/current.json'),
   DATA('series.json').catch(() => null),
   DATA('feed/meta.json').catch(() => null),
-  // Names, keyed by folded title/author, joined onto rows at render time — see nameFor(). Shipped
+  // Names, keyed by folded title/author, joined onto rows at render time: see nameFor(). Shipped
   // apart from the rows so an archived month, which is never rewritten, still gets current ones.
   DATA('feed/names.json').catch(() => null),
 ]).then(([idx, feed, series, meta, names]) => {
   NAMES = names && names.titles ? names : null;
   INDEX = idx; FEED = feed; SERIES = series; META = meta;
-  // The header used to restate the totals — "1350 更新 · 302 作品 · 646 巻" and a release/platform
+  // The header used to restate the totals: "1350 更新 · 302 作品 · 646 巻" and a release/platform
   // count under it. The tabs already carry those numbers, next to the thing they count, and a
   // reader arriving wants the list rather than its size. Gone; the tab badges remain.
   el('n-cat').textContent   = idx.length;
 
   // The archive selector. Its first option is the recent window, so returning from a month is the
-  // same gesture as leaving it — there is no separate "back". The window length comes from the
+  // same gesture as leaving it. There is no separate "back". The window length comes from the
   // file rather than being written in, so it stays true if the build changes it.
   const days = feed.window_days || 14;
   const opts = [`<option value="">${esc(`直近${days}日 / last ${days} days`)}</option>`]
@@ -1499,11 +1499,11 @@ Promise.all([
       .map(m => `<option value="${esc(m)}">${esc(monthLabel(m, 'ja'))} / ${esc(monthLabel(m, 'en'))}</option>`));
   el('fmonth').innerHTML = opts.join('');
   // Only offer the way back if there is something behind. Months before update tracking began are
-  // not published as archives — they were imported in one pass from platform back catalogues and
-  // are not a record of updates as they happened — so early on there may be none.
+  // not published as archives. They were imported in one pass from platform back catalogues and
+  // are not a record of updates as they happened, so early on there may be none.
   el('archbar').hidden = !(meta && (meta.archive_months || []).length);
   // Said once, in the accompanying text, instead of per-row badges nobody can act on. Dates before
-  // this pipeline started watching are the platforms' own, imported in one pass — and a platform
+  // this pipeline started watching are the platforms' own, imported in one pass, and a platform
   // that stamps a whole back catalogue with the day it listed it gives a date that is real but is
   // not a publication date. The cutoff is read from run.json rather than written in, so it stays
   // true without anyone remembering to update it.
@@ -1521,7 +1521,7 @@ Promise.all([
     // Count what the tab actually lists. Rows with no chapters are filtered out of the view, so
     // counting the raw array promised 45 works that are not there when you open it.
     el('n-ser').textContent = SERIES.series.filter(r => r.chapters).length;
-    // From sources[], not a top-level r.platform — there is no such field. The series index became
+    // From sources[], not a top-level r.platform. There is no such field. The series index became
     // one row per WORK carrying a sources[] list when works on several platforms were collapsed
     // into one row; this line was not updated, so every value was undefined, filter(Boolean) threw
     // them all away and the dropdown rendered with only its "all platforms" placeholder. The

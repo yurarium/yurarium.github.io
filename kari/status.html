@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Yurarium — 内部状態 / build status</title>
+<title>Yurarium: 内部状態 / build status</title>
 <style>
   :root{
     color-scheme: light dark;
@@ -13,7 +13,7 @@
   /* Same two-rule shape as the main page: dark from the SYSTEM preference unless the reader has
      explicitly chosen light, and dark from data-theme when they have explicitly chosen dark.
      The media wrapper was missing here, so this page came out dark for everyone whatever their
-     system said — it only looked right because the author's system is dark. */
+     system said. It only looked right because the author's system is dark. */
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
            --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
@@ -55,17 +55,17 @@
 <script>
 /* The theme is chosen on the main page and stored under the same key; this page has no toggle of
    its own but must not contradict the choice. Inline and before the body so the attribute is set
-   before first paint — done at the end of the document it would flash the wrong theme first. */
+   before first paint: done at the end of the document it would flash the wrong theme first. */
 try {
   const m = JSON.parse(localStorage.getItem('yurarium.pref.theme') || '"auto"');
   if (m === 'light' || m === 'dark') document.documentElement.setAttribute('data-theme', m);
-} catch (e) { /* private mode or storage disabled — fall back to the system preference */ }
+} catch (e) { /* private mode or storage disabled: fall back to the system preference */ }
 </script>
 <div class="wrap">
 <a class="back" href="./">&larr; 一覧に戻る / back to the database</a>
 <h1>内部状態 / build status</h1>
 <p class="lede">What the last build did, what it could not reach, and what is outstanding.
-  This page is instrumentation — it is about the pipeline, not about manga. Nothing here needs a
+  This page is instrumentation. It is about the pipeline, not about manga. Nothing here needs a
   reader's attention; the database itself carries no “unverified” marks because no reader is in a
   position to verify them.</p>
 
@@ -76,7 +76,7 @@ try {
   versions put unconfirmed ones into the update feed marked 要確認, which asked readers to hold a
   question only this system can answer. Every claim now ends in one disposition, and only the
   <b>open</b> ones represent work outstanding.</p>
-<p class="note">A refutation is only recorded where our own capture is deep enough to support it —
+<p class="note">A refutation is only recorded where our own capture is deep enough to support it:
   at least three chapters of the platform's own history, and no long gap between the claim and the
   newest chapter we hold. Those two guards exist because “the platform lists nothing” and “our fetch
   came back thin” look identical from inside a build. Where a guard fails the claim stays open
@@ -89,11 +89,11 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 const DISPO = {
-  absorbed:  ['吸収', 'the platform attests it too — it is an ordinary row in the database now', 'ok'],
+  absorbed:  ['吸収', 'the platform attests it too. It is an ordinary row in the database now', 'ok'],
   refuted:   ['否認', 'traced to the publisher, which lists nothing there. Kept in case it needs revisiting', ''],
   undatable: ['日付なし', 'the platform publishes no per-chapter dates, so nothing can confirm or refute it', ''],
   phantom:   ['非作品', 'the reported name is not a work', ''],
-  open:      ['未追跡', 'not yet traced — this is the work outstanding', 'warn'],
+  open:      ['未追跡', 'not yet traced. This is the work outstanding', 'warn'],
   'print-serialised': ['雑誌掲載', 'dated to a magazine instalment. A publisher\u2019s web arm publishes '
                        + 'two to five weeks later, so its chapter dates can neither confirm nor refute it', ''],
 };
@@ -184,16 +184,16 @@ function render(d, checks) {
       <p class="note">This pipeline first retrieved anything on <b>${esc(from)}</b>. From that date
         a release is dated by what the platform said when we saw it, and the first sighting is
         written to a ledger and never revised.</p>
-      <p class="note">Everything earlier — ${before} of ${d.releases} releases — comes from what
+      <p class="note">Everything earlier (${before} of ${d.releases} releases) comes from what
         each platform states about its own back catalogue. That is usually the real publication
         date. Sometimes it is not: a run of chapters will share one exact timestamp. 一迅プラス
         answers <code>2026-06-05T02:00:00Z</code> for chapter 1 and chapter 12 of the same
-        twelve-chapter serial; 竹コミ gives 386 chapters — 77% of everything it holds — a single
+        twelve-chapter serial; 竹コミ gives 386 chapters (77% of everything it holds) a single
         day.</p>
       <p class="note">This is not a platform failing to record dates. The same platforms date
         chapters correctly week to week; 一迅プラス has 74 distinct dates across 197 works. Nor is
         there one explanation: a work arriving from another platform is re-dated on arrival, and so
-        is a whole catalogue at a relaunch — but it also happens to ordinary runs for no reason
+        is a whole catalogue at a relaunch, but it also happens to ordinary runs for no reason
         visible from outside. What can be said is only what is observable: on these dates the
         timestamp records when the chapter entered the platform's current system, not when it was
         published, and nothing on the page distinguishes the two. At least 13 of the platforms read
@@ -207,7 +207,7 @@ function render(d, checks) {
     const bad = checks.invariants.filter(i => i.violations);
     h += `<h2>不変条件 / invariants</h2>
       <p class="note">Statements that are either true or the data is broken. A failing one does not
-        stop the build — it degrades to a stated fallback and is counted here, because the site has
+        stop the build. It degrades to a stated fallback and is counted here, because the site has
         to keep updating. The same statement blocks a check-in, where someone is present to fix it.</p>`;
     h += bad.length
       ? `<div class="scroll"><table><tr><th>statement</th><th class="n">violations</th><th>example</th></tr>` +
@@ -233,7 +233,7 @@ function render(d, checks) {
       <p class="note">A run of chapters sharing one exact timestamp. Detected by comparing each
         (platform, date) against that platform's own median day, so it needs no per-platform
         configuration and catches new cases without anyone noticing them first. Nothing is altered:
-        the date is the platform's own statement and the chapter did become available then — it is
+        the date is the platform's own statement and the chapter did become available then: it is
         just not a per-chapter publication date.</p>
       <p class="note"><b>Read the works column, not the row count.</b> Many rows across ONE work is
         a back catalogue arriving at once; the same number spread over many works is a
@@ -255,7 +255,7 @@ function render(d, checks) {
   if (un.length) {
     h += `<h2>取りこぼし / known title, nothing captured (${un.length})</h2>
       <p class="note">A title and a platform, and no chapter, date or URL behind it. These used to
-        sit in the works list rendered 不明 — the interface admitting it had nothing, rather than
+        sit in the works list rendered 不明. The interface admitting it had nothing, rather than
         telling a reader anything. A work we cannot state one fact about is a lead, so it is listed
         as work to do instead.</p><div class="scroll"><table>
       <tr><th>work</th><th>platform</th></tr>` +
@@ -268,7 +268,7 @@ function render(d, checks) {
     h += `<h2>単行本のまとめ方 / how volumes were grouped (${tot})</h2>
       <p class="note">${linked} of ${tot} works have their volumes gathered by an explicit series
         link in the source data; the rest were matched on title. This was a filter in the volumes
-        tab labelled 要確認 — but no reader can adjudicate how we grouped them, so it is reported
+        tab labelled 要確認, but no reader can adjudicate how we grouped them, so it is reported
         here instead.</p><div class="scroll"><table>` +
       Object.entries(g.grouping).sort((a, b) => b[1] - a[1]).map(([k, v]) =>
         `<tr><td>${esc(k)}</td><td class="n">${v}</td></tr>`).join('') + `</table></div>`;
@@ -277,7 +277,7 @@ function render(d, checks) {
   // ── Sources ───────────────────────────────────────────────────────────────
   h += `<h2>取得元の鮮度 / source freshness</h2>
     <p class="note">A source that returned nothing looks exactly like a source with nothing to
-      return. This table is how the two are told apart — and it is what a refutation above rests on.</p>
+      return. This table is how the two are told apart, and it is what a refutation above rests on.</p>
     <div class="scroll"><table>
     <tr><th>source</th><th class="n">files</th><th class="n">works</th><th class="n">rows</th>
     <th class="n">retrieved</th><th></th></tr>`;
@@ -309,11 +309,11 @@ function render(d, checks) {
     const max = Math.max(...wkd.map(w => w.n));
     h += `<h2>公開の推移 / releases per week</h2>
       <p class="note">By the date the platform published, over the ${wkd.length} weeks the
-        collection window covers. This is the manga's own history, not ours — the run-by-run record
+        collection window covers. This is the manga's own history, not ours. The run-by-run record
         starts today, so there is nothing earlier to draw. The current week is still in progress.</p>
       <div class="bars">` +
       wkd.map(w => `<div style="height:${Math.round(w.n / max * 100)}%"
-                      title="${esc(w.week)} — ${w.n}"></div>`).join('') +
+                      title="${esc(w.week)}: ${w.n}"></div>`).join('') +
       `</div><div class="axis"><span>${esc(wkd[0].week)}</span>
        <span>peak ${max}/wk</span><span>${esc(wkd[wkd.length - 1].week)}</span></div>`;
   }
