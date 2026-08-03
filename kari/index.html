@@ -45,7 +45,19 @@
   input[type=search],select{font:inherit;font-size:.88rem;padding:.42rem .6rem;
     border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg)}
   input[type=search]{flex:1 1 15rem;min-width:0}
-  .controls{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center;margin-bottom:.9rem}
+  /* ONE HEIGHT for everything in a filter bar. There were four in a single row: buttons at 24.6px,
+     the picker wrapper at 26.1, the selects at 33.3 and the search input at 38.4, because an input,
+     a select and a button each size themselves differently from the same padding. A row of controls
+     that do not line up reads as several rows that happen to be adjacent.
+     Hierarchy is kept where it belongs, in weight and colour: `reset` is still quieter than the
+     filters, it is simply no longer shorter than them. */
+  .controls{display:flex;flex-wrap:wrap;gap:.55rem;align-items:stretch;margin-bottom:.9rem;
+    --ctl-h:2.15rem}
+  .controls > input[type=search], .controls > select,
+  .controls > button, .controls .monthpick > button{
+    height:var(--ctl-h);box-sizing:border-box;padding-top:0;padding-bottom:0;line-height:1}
+  /* The wrapper must not add height of its own, or the button inside it stops matching the row. */
+  .controls .monthpick{display:flex;align-items:stretch}
   .count{color:var(--dim);font-size:.83rem;margin:0 0 .7rem}
   ol,ul.plain{list-style:none;margin:0;padding:0}
   li{border-bottom:1px solid var(--line)}
@@ -213,6 +225,7 @@
            background:none;border:1px solid var(--line);border-radius:.35rem;
            padding:.32rem .5rem;color:inherit;font:inherit;cursor:pointer}
   .mrecent[aria-current=true]{border-color:var(--accent);color:var(--accent)}
+  .msub{color:var(--dim);font-size:.78rem;margin-left:.3rem}
   .mnav{display:flex;align-items:center;justify-content:space-between;margin-bottom:.35rem}
   .mnav button{background:none;border:0;color:inherit;font-size:1.1rem;cursor:pointer;
                padding:0 .45rem;line-height:1}
@@ -356,7 +369,8 @@
     <div class="monthpick">
       <button id="fmonthbtn" class="themebtn" aria-haspopup="dialog" aria-expanded="false"></button>
       <div id="fmonthpop" class="mpop" role="dialog" aria-label="period" hidden>
-        <button class="mrecent" id="mrecent"></button>
+          <button class="mrecent" id="mrecent"></button>
+        <button class="mrecent" id="msoon"></button>
         <div class="mnav">
           <button id="mprev" aria-label="previous year">‹</button>
           <span id="myear"></span>
@@ -1002,8 +1016,58 @@ function monthLabel(m, lang) {
 /* Which set the tab is showing: the recent window, or one archived month. Read off the control
    rather than held in a variable of its own, so リセット, which clears every select to its first
    option: cannot leave the state and the control disagreeing. */
+/* ── Predicted updates ────────────────────────────────────────────────────────────────────────
+   Everything else in this tab is a record of what a platform published. This is not: it is what a
+   series' own rhythm suggests comes next, and it is the only place the interface states something
+   that has not happened. It is marked as inferred at the top of the list for that reason, in the
+   same note style used for automatically generated readings.
+
+   The rhythm is the mean gap between chapters, which needs a span and at least three chapters to
+   mean anything: two chapters give one interval and no evidence it repeats.
+
+   THE WINDOW IS AHEAD, NOT BEHIND, and this is where it differs from adapters/schedule.py. That
+   module tolerates a prediction three intervals late, because being overdue is a reason to go and
+   LOOK. It is not a reason to tell a reader something is coming: the first version of this reused
+   that rule and offered a reader dates in November and January, one of them nine months past, on a
+   series whose interval was long enough to make the tolerance enormous. A prediction that has
+   already passed is not "coming soon", it is a series that has gone quiet. */
+const SOON_HORIZON_DAYS = 31;
+const SOON_MIN_CHAPTERS = 3;
+
+function predictedRows() {
+  if (!SERIES) return [];
+  // Compared as DATE STRINGS. Rounding a millisecond difference into whole days let a prediction
+  // for late yesterday round to zero and appear under tomorrow's heading, and `new Date('2026-01-01')`
+  // is UTC midnight while setHours(0,0,0,0) is local, so the two were being mixed. Strings have
+  // neither problem and are what the rows are keyed by anyway.
+  const iso = d => d.toISOString().slice(0, 10);
+  const todayISO = iso(new Date());
+  const horizonISO = iso(new Date(Date.now() + SOON_HORIZON_DAYS * 86400000));
+  const out = [];
+  for (const r of SERIES.series) {
+    if (!r.first || !r.latest || (r.chapters || 0) < SOON_MIN_CHAPTERS) continue;
+    if (r.state === 'completed' || r.state === 'oneshot') continue;
+    const first = new Date(r.first), latest = new Date(r.latest);
+    const span = (latest - first) / 86400000;
+    if (span <= 0) continue;
+    const every = span / (r.chapters - 1);
+    const next = new Date(latest.getTime() + every * 86400000);
+    const pub = iso(next);
+    if (pub < todayISO || pub > horizonISO) continue;
+    const src = (r.sources || [])[0] || {};
+    out.push({ work: r.work, work_en: r.work_en, author: r.author, author_en: r.author_en,
+               plat: src.platform, plat_name: src.platform, url: r.url || src.url,
+               pub, predicted: true, every: Math.round(every),
+               kind: 'expected',
+               kind_basis: `publishes about every ${Math.round(every)} days`,
+               type: 'chapter', provenance: 'predicted', access_modes: [] });
+  }
+  return out.sort((a, b) => a.pub.localeCompare(b.pub));
+}
+
 function activeRows() {
   const m = el('fmonth').value;
+  if (m === SOON) return predictedRows();
   if (!m) return FEED ? FEED.releases : [];
   const a = ARCHIVE.get(m);
   if (a) return a.releases || [];
@@ -1057,8 +1121,17 @@ function renderFeed() {
   // fourteen-day window are all on status.html, and none of them changes how to read the page.
   const snap = el('fsnap');
   snap.hidden = !month;
-  if (month) snap.textContent = T('これは当時記録された、この月のスナップショットです。',
-                                 'This is a snapshot of the month as it was recorded at the time.');
+  if (month === SOON) {
+    // The one place this tab states something that has not happened, so it says so before the list
+    // rather than after it.
+    snap.textContent = T(
+      '推定です。各作品のこれまでの更新間隔から算出したもので、出版社の予告ではありません。',
+      'Inferred. These dates are calculated from each series\u2019 own past interval, and are not '
+      + 'announcements from the publisher.');
+  } else if (month) {
+    snap.textContent = T('これは当時記録された、この月のスナップショットです。',
+                         'This is a snapshot of the month as it was recorded at the time.');
+  }
   const src = activeRows();
   if (src === null) {
     el('fcount').textContent = T('読み込み中', 'loading') + '…';
@@ -1088,8 +1161,9 @@ function renderFeed() {
        : `${rows.length} 件 / shown　·　${src.length} 件 / total`);
   // Which set is on screen, said in the line that counts it. Without this an archived month and a
   // quiet fortnight look identical. A number with nothing to say what it is a number of.
-  el('fcount').textContent = month
-    ? monthLabel(month) + (LANG === 'en' ? ' · ' : '　·　') + count
+  const periodFace = month === SOON ? soonLabel() : month ? monthLabel(month) : '';
+  el('fcount').textContent = periodFace
+    ? periodFace + (LANG === 'en' ? ' · ' : '　·　') + count
     : count;
   // The tab badge counts what the tab lists, which is now whichever set is showing.
   el('n-feed').textContent = src.filter(r => r.web !== 'promotional-sample-only').length;
@@ -1142,6 +1216,8 @@ const EN = {
   /* badges: initial capital */
   '更新中':'Updating', '停滞':'Slow', '休眠':'Dormant', '不明':'Unknown', '完結':'Completed',
   '読切':'One-shot', '最終回':'Final', '新連載':'New', '新話':'Chapter', 'その他':'Other',
+  '更新予定':'Expected',
+  '最新':'latest', '近日更新予定':'coming soon',
   '無料':'Free', '有料':'Paid', '無料（条件付）':'Free (paced)', '全話無料':'All free',
   '読み切り':'One-shot', '試し読み':'Preview', '番外編':'Extra', 'お知らせ':'Notice',
   'お詫び':'Apology', '再掲':'Reprint', '未分類':'Unclassified', '転載':'Syndicated',
@@ -1164,6 +1240,10 @@ const KIND = {
   'new-chapter': ['新話',   'k-ch',  'a later numbered chapter'],
   'other':       ['その他', 'k-oth', 'notice, trial, reprint or artwork'],
   'unknown':     ['—',      'k-unk', 'no chapter information available'],
+  // A prediction, and the only kind here that describes something which has not happened. It gets
+  // its own badge because reusing 新話 would state that a chapter exists, which is exactly the
+  // claim the note above the list exists to disclaim.
+  'expected':    ['更新予定', 'k-adv', 'expected from this series\u2019 own past interval; not announced'],
 };
 
 function kindTag(r) {
@@ -1210,7 +1290,7 @@ function byDate(rows) {
 // outranks a notice, so a new series arriving with several chapters still reads as 新連載.
 // An ending outranks an ordinary chapter but not a new series: a series starting is the thing a
 // reader most wants surfaced, and a finale should not be shouting over it.
-const KIND_RANK = { 'new-series': 4, 'oneshot': 4, 'final': 3, 'new-chapter': 2, 'other': 1, 'unknown': 0 };
+const KIND_RANK = { 'new-series': 4, 'oneshot': 4, 'final': 3, 'new-chapter': 2, 'expected': 2, 'other': 1, 'unknown': 0 };
 
 function compactList(rows) {
   let html = '';
@@ -1583,14 +1663,24 @@ function monthsAvailable() {
   return ((META && META.archive_months) || []).slice().sort();
 }
 
-function recentLabel() {
-  const days = (FEED && FEED.window_days) || 14;
-  return T(`直近${days}日`, `last ${days} days`);
-}
+const SOON = 'soon';                       // the sentinel period: predicted, not recorded
+
+function windowDays() { return (FEED && FEED.window_days) || 14; }
+
+// The BUTTON says what you are looking at; the POPOVER says what that means. "last 14 days" as a
+// permanent label spends the widest control in the bar on a number the reader rarely needs, and
+// reads as a filter rather than as the default view. The window length belongs where the choice
+// is made.
+function recentLabel() { return T('最新', 'latest'); }
+function recentSubLabel() { return T(`直近${windowDays()}日`, `last ${windowDays()} days`); }
+function soonLabel() { return T('近日更新予定', 'coming soon'); }
+function soonSubLabel() { return T('今後1か月まで', 'up to a month ahead'); }
 
 function monthBtnLabel() {
   const m = el('fmonth').value;
-  return (m ? `${monthLabel(m, LANG === 'en' ? 'en' : 'ja')}` : recentLabel()) + ' ▾';
+  const face = !m ? recentLabel() : m === SOON ? soonLabel()
+             : monthLabel(m, LANG === 'en' ? 'en' : 'ja');
+  return face + ' ▾';
 }
 
 function paintMonthPicker() {
@@ -1598,8 +1688,11 @@ function paintMonthPicker() {
   const cur = el('fmonth').value;
   el('fmonthbtn').textContent = monthBtnLabel();
   const rec = el('mrecent');
-  rec.textContent = recentLabel();
+  rec.innerHTML = `${esc(recentLabel())} <span class="msub">${esc(recentSubLabel())}</span>`;
   rec.setAttribute('aria-current', String(!cur));
+  const soon = el('msoon');
+  soon.innerHTML = `${esc(soonLabel())} <span class="msub">${esc(soonSubLabel())}</span>`;
+  soon.setAttribute('aria-current', String(cur === SOON));
   if (!avail.length) return;
 
   const years = [...new Set(avail.map(m => +m.slice(0, 4)))].sort();
@@ -1636,6 +1729,7 @@ function setMonth(v) {
 
 el('fmonthbtn').addEventListener('click', e => { e.stopPropagation(); openMonthPicker(); });
 el('mrecent').addEventListener('click', () => setMonth(''));
+el('msoon').addEventListener('click', () => setMonth(SOON));
 el('mprev').addEventListener('click', () => { MPYEAR--; paintMonthPicker(); });
 el('mnext').addEventListener('click', () => { MPYEAR++; paintMonthPicker(); });
 el('mgrid').addEventListener('click', e => {
@@ -1709,7 +1803,10 @@ Promise.all([
   // same gesture as leaving it. There is no separate "back". The window length comes from the
   // file rather than being written in, so it stays true if the build changes it.
   const days = feed.window_days || 14;
-  const opts = [`<option value="">${esc(`直近${days}日 / last ${days} days`)}</option>`]
+  // `soon` must exist as an OPTION or the select silently refuses the value: assigning a value a
+  // select has no option for leaves it at '', so the picker appeared to do nothing.
+  const opts = [`<option value="">${esc(`最新 / latest`)}</option>`,
+                `<option value="${SOON}">${esc('近日更新予定 / coming soon')}</option>`]
     .concat(((meta && meta.archive_months) || [])
       .map(m => `<option value="${esc(m)}">${esc(monthLabel(m, 'ja'))} / ${esc(monthLabel(m, 'en'))}</option>`));
   el('fmonth').innerHTML = opts.join('');
