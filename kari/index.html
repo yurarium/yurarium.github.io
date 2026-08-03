@@ -202,6 +202,30 @@
      given a card or a border of its own. */
   /* An aside, not a warning: an archived month is ordinary information that happens to be old. */
   .snapnote{color:var(--dim);font-size:.8rem;margin:-.3rem 0 .8rem}
+  /* MONTH PICKER. A popover rather than a long select: the option list grows twelve entries a
+     year, and a reader choosing a period thinks in a calendar rather than in a scrolling list. */
+  .monthpick{position:relative}
+  #fmonthbtn{white-space:nowrap}
+  .mpop{position:absolute;z-index:40;top:calc(100% + .35rem);left:0;min-width:15rem;
+        background:var(--card);border:1px solid var(--line);border-radius:.5rem;
+        padding:.55rem;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+  .mrecent{display:block;width:100%;text-align:left;margin-bottom:.45rem;
+           background:none;border:1px solid var(--line);border-radius:.35rem;
+           padding:.32rem .5rem;color:inherit;font:inherit;cursor:pointer}
+  .mrecent[aria-current=true]{border-color:var(--accent);color:var(--accent)}
+  .mnav{display:flex;align-items:center;justify-content:space-between;margin-bottom:.35rem}
+  .mnav button{background:none;border:0;color:inherit;font-size:1.1rem;cursor:pointer;
+               padding:0 .45rem;line-height:1}
+  .mnav button[disabled]{opacity:.28;cursor:default}
+  .mnav span{font-size:.85rem;font-variant-numeric:tabular-nums}
+  .mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:.3rem}
+  .mgrid button{background:none;border:1px solid transparent;border-radius:.35rem;
+                padding:.34rem .2rem;color:inherit;font:inherit;font-size:.82rem;cursor:pointer}
+  .mgrid button:hover:not([disabled]){border-color:var(--line)}
+  /* A month with no archive is shown and disabled rather than hidden: the gap is information,
+     and a grid that silently omits months reads as a bug in the calendar. */
+  .mgrid button[disabled]{opacity:.3;cursor:default}
+  .mgrid button[aria-current=true]{border-color:var(--accent);color:var(--accent)}
   .archbar{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center;
     margin-top:1.6rem;padding-top:1rem;border-top:1px solid var(--line);
     color:var(--dim);font-size:.83rem}
@@ -324,6 +348,23 @@
 <section id="tab-feed">
   
   <div class="controls" style="margin-top:.9rem">
+    <!-- WHICH PERIOD comes first, because it selects the body of data every other control then
+         narrows. It used to sit alone at the foot of the tab, below the list it governs, which
+         read as an afterthought and put the most navigational control furthest from the rest.
+         The grid is a calendar because a reader picking a period thinks in one, and because an
+         option list grows by twelve entries every year. -->
+    <div class="monthpick">
+      <button id="fmonthbtn" class="themebtn" aria-haspopup="dialog" aria-expanded="false"></button>
+      <div id="fmonthpop" class="mpop" role="dialog" aria-label="period" hidden>
+        <button class="mrecent" id="mrecent"></button>
+        <div class="mnav">
+          <button id="mprev" aria-label="previous year">‹</button>
+          <span id="myear"></span>
+          <button id="mnext" aria-label="next year">›</button>
+        </div>
+        <div class="mgrid" id="mgrid"></div>
+      </div>
+    </div>
     <input type="search" id="fq" placeholder="検索: 作品名・作者 / work, creator" autocomplete="off">
     <select id="fmodel" title="which updates count">
       <option value="all">すべての更新 / all updates</option>
@@ -349,13 +390,11 @@
   <p class="snapnote" id="furinote" hidden></p>
   <div id="feed"></div>
   <p class="empty" id="fempty" hidden>該当なし / no matches</p>
-  <!-- The archive, at the bottom, where a reader who has finished the recent updates arrives. The
-       tab opens on a short window and this is the way further back, so it is out of the way of the
-       common visit ("what is new") without being hidden from the uncommon one. -->
-  <div class="archbar" id="archbar" hidden>
-    <label for="fmonth" data-i18n>過去の更新 / earlier updates</label>
-    <select id="fmonth"></select>
-  </div>
+  <!-- The select is the STATE. The picker above only sets it and fires `change`, so everything
+       that reads el('fmonth').value, persists VIEW_FIELDS or resets filters is unchanged by the
+       move. One producer of the fact, one consumer path. -->
+  <select id="fmonth" hidden aria-hidden="true" tabindex="-1"></select>
+  <div class="archbar" id="archbar" hidden></div>
 </section>
 
 <!-- ── CATALOGUE ──────────────────────────────────────────────────── -->
@@ -845,6 +884,9 @@ function applyLang(lang) {
   });
   applyRomajiVisibility();
   renderTrackNote();
+  // The picker's button and grid are built in JS rather than from data-i18n text, so they need
+  // repainting on a language change like any other rendered thing.
+  if (typeof paintMonthPicker === 'function' && el('fmonthbtn')) paintMonthPicker();
   if (FEED) { renderFeed(); renderCat(); renderSeries(); }
 }
 document.querySelectorAll('[data-lang-set]').forEach(b =>
@@ -860,11 +902,90 @@ const TYPE_JA = { chapter:'話', oneshot:'読み切り', trial:'試し読み', e
 const NON_STORY = new Set(['trial', 'notice', 'apology-art', 'republication']);
 
 /* ── tabs ─────────────────────────────────────────────── */
+/* ── Where the browser's Back button goes ─────────────────────────────────────────────────────
+   NAVIGATION IS IN THE URL; PREFERENCE IS NOT. What moves a reader somewhere is the tab, the
+   period being read, and opening a work's record. Pressing Back after any of those should undo it,
+   and until now Back left the site entirely, because nothing here ever touched history.
+
+   Everything else stays out. Language, theme, romanisation, furigana and compact/detailed are
+   preferences: Back flipping a reader's language would be a bug, not a feature. Filters and sort
+   are deliberately not here yet either; see docs/FEATURES-INTERFACE.md for why the first step is
+   the navigational three alone.
+
+   The URL is also the only way to LINK to a view. Before this every address was identical, so
+   "the works tab, filtered to 一迅プラス" could not be sent to anyone.
+
+   PRECEDENCE. The URL wins over the saved view on load, and the saved view supplies only what the
+   URL leaves out. Without that rule a shared link silently picks up the recipient's stored tab and
+   shows them something other than what was sent. */
+let NAV_APPLYING = false;      // true while popstate is being applied, so we do not push a reply
+
+function navState() {
+  return { tab: document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'feed',
+           month: el('fmonth') ? el('fmonth').value : '',
+           work: open ? (open.parentElement?.dataset.id || '') : '' };
+}
+
+function navUrl(st) {
+  const q = new URLSearchParams();
+  if (st.tab && st.tab !== 'feed') q.set('tab', st.tab);
+  // The period only means anything on the updates tab, and an open record only on the volumes tab.
+  // Carrying either into a URL for a different tab describes something the recipient will not see,
+  // which is the opposite of what a shareable address is for. The DOM keeps the record open behind
+  // the scenes; the address simply stops claiming it.
+  if (st.month && st.tab === 'feed') q.set('month', st.month);
+  if (st.work && st.tab === 'cat') q.set('work', st.work);
+  const qs = q.toString();
+  return location.pathname + (qs ? '?' + qs : '');
+}
+
+function navSync(push) {
+  if (NAV_APPLYING) return;
+  const st = navState();
+  const url = navUrl(st);
+  if (url === location.pathname + location.search) {
+    history.replaceState(st, '', url);
+    return;
+  }
+  (push ? history.pushState : history.replaceState).call(history, st, '', url);
+}
+
+function navApply(st) {
+  NAV_APPLYING = true;
+  try {
+    const tab = st.tab || 'feed';
+    const btn = document.querySelector(`nav button[data-tab="${tab}"]`);
+    if (btn && btn.getAttribute('aria-selected') !== 'true') btn.click();
+    if (el('fmonth') && el('fmonth').value !== (st.month || '')) {
+      el('fmonth').value = st.month || '';
+      el('fmonth').dispatchEvent(new Event('change'));
+    }
+    // A work record is opened by clicking its row, which is also how it is closed, so the state is
+    // reached by asking for the difference rather than by re-running the handler.
+    const wantWork = st.work || '';
+    const haveWork = open ? (open.parentElement?.dataset.id || '') : '';
+    if (wantWork !== haveWork) {
+      if (open) open.click();
+      if (wantWork) document.querySelector(`li[data-id="${CSS.escape(wantWork)}"] .row`)?.click();
+    }
+  } finally {
+    NAV_APPLYING = false;
+  }
+}
+
+window.addEventListener('popstate', e => navApply(e.state || readNavUrl()));
+
+function readNavUrl() {
+  const q = new URLSearchParams(location.search);
+  return { tab: q.get('tab') || 'feed', month: q.get('month') || '', work: q.get('work') || '' };
+}
+
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('nav button').forEach(x =>
     x.setAttribute('aria-selected', String(x === b)));
   ['feed','ser','cat'].forEach(t => el('tab-'+t).hidden = (t !== b.dataset.tab));
   saveView();
+  navSync(true);
 }));
 
 /* ── feed ─────────────────────────────────────────────── */
@@ -1444,15 +1565,97 @@ el('list').addEventListener('click', e => {
   btn.setAttribute('aria-expanded', String(!wasOpen));
   if (wasOpen) { li.querySelector('.detail')?.remove(); open = null; }
   else { open = btn; detail(li.dataset.id, li); }
+  // Opening a record is going somewhere, so Back closes it. Closing is a move too, or a reader who
+  // opens, closes, then presses Back would jump past both and leave the site.
+  navSync(true);
 });
 
 ['fq','ftype','fplat','fmodel','fview'].forEach(i => el(i).addEventListener('input', renderFeed));
 // The selector sits at the BOTTOM of the tab and the list it changes is above it, so a reader who
 // picks a month would otherwise be left looking at the control they just used with no sign anything
 // happened. Send them back to the top of the list they asked for.
+/* ── The month picker ─────────────────────────────────────────────────────────────────────────
+   It drives the hidden <select id="fmonth">, which stays the one piece of state. Everything that
+   already read that value keeps working, and the picker is only a way of setting it. */
+let MPYEAR = null;                       // the year the grid is showing, not the year selected
+
+function monthsAvailable() {
+  return ((META && META.archive_months) || []).slice().sort();
+}
+
+function recentLabel() {
+  const days = (FEED && FEED.window_days) || 14;
+  return T(`直近${days}日`, `last ${days} days`);
+}
+
+function monthBtnLabel() {
+  const m = el('fmonth').value;
+  return (m ? `${monthLabel(m, LANG === 'en' ? 'en' : 'ja')}` : recentLabel()) + ' ▾';
+}
+
+function paintMonthPicker() {
+  const avail = monthsAvailable();
+  const cur = el('fmonth').value;
+  el('fmonthbtn').textContent = monthBtnLabel();
+  const rec = el('mrecent');
+  rec.textContent = recentLabel();
+  rec.setAttribute('aria-current', String(!cur));
+  if (!avail.length) return;
+
+  const years = [...new Set(avail.map(m => +m.slice(0, 4)))].sort();
+  if (MPYEAR == null) MPYEAR = cur ? +cur.slice(0, 4) : years[years.length - 1];
+  el('myear').textContent = MPYEAR;
+  el('mprev').disabled = MPYEAR <= years[0];
+  el('mnext').disabled = MPYEAR >= years[years.length - 1];
+
+  const names = LANG === 'en'
+    ? ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+  el('mgrid').innerHTML = names.map((n, i) => {
+    const key = `${MPYEAR}-${String(i + 1).padStart(2, '0')}`;
+    const has = avail.includes(key);
+    return `<button data-m="${key}"${has ? '' : ' disabled'}
+      aria-current="${String(key === cur)}">${esc(n)}</button>`;
+  }).join('');
+}
+
+function openMonthPicker(show) {
+  const pop = el('fmonthpop');
+  const want = show == null ? pop.hidden : show;
+  pop.hidden = !want;
+  el('fmonthbtn').setAttribute('aria-expanded', String(want));
+  if (want) paintMonthPicker();
+}
+
+function setMonth(v) {
+  if (el('fmonth').value === v) { openMonthPicker(false); return; }
+  el('fmonth').value = v;
+  el('fmonth').dispatchEvent(new Event('change'));
+  openMonthPicker(false);
+}
+
+el('fmonthbtn').addEventListener('click', e => { e.stopPropagation(); openMonthPicker(); });
+el('mrecent').addEventListener('click', () => setMonth(''));
+el('mprev').addEventListener('click', () => { MPYEAR--; paintMonthPicker(); });
+el('mnext').addEventListener('click', () => { MPYEAR++; paintMonthPicker(); });
+el('mgrid').addEventListener('click', e => {
+  const b = e.target.closest('button[data-m]');
+  if (b && !b.disabled) setMonth(b.dataset.m);
+});
+// Click-away and Escape, because a popover that only closes by re-clicking its own button traps a
+// reader who opened it by accident.
+document.addEventListener('click', e => {
+  if (!el('fmonthpop').hidden && !e.target.closest('.monthpick')) openMonthPicker(false);
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !el('fmonthpop').hidden) { openMonthPicker(false); el('fmonthbtn').focus(); }
+});
+
 el('fmonth').addEventListener('change', () => {
+  paintMonthPicker();
   setPlatOptions();
   renderFeed();
+  navSync(true);
   el('tab-feed').scrollIntoView({ block: 'start', behavior: 'smooth' });
 });
 ['sq','sstate','sfree','splat','ssort'].forEach(i => el(i).addEventListener('input', renderSeries));
@@ -1510,10 +1713,14 @@ Promise.all([
     .concat(((meta && meta.archive_months) || [])
       .map(m => `<option value="${esc(m)}">${esc(monthLabel(m, 'ja'))} / ${esc(monthLabel(m, 'en'))}</option>`));
   el('fmonth').innerHTML = opts.join('');
+  // The picker reads the same list. The button is hidden rather than the bar, since the control
+  // now sits among the filters and an empty gap there would read as a missing control.
+  el('fmonthbtn').hidden = !(meta && (meta.archive_months || []).length);
+  paintMonthPicker();
   // Only offer the way back if there is something behind. Months before update tracking began are
   // not published as archives. They were imported in one pass from platform back catalogues and
   // are not a record of updates as they happened, so early on there may be none.
-  el('archbar').hidden = !(meta && (meta.archive_months || []).length);
+  el('archbar').hidden = true;      // the bar is gone; the button above carries it now
   // Said once, in the accompanying text, instead of per-row badges nobody can act on. Dates before
   // this pipeline started watching are the platforms' own, imported in one pass, and a platform
   // that stamps a whole back catalogue with the day it listed it gives a date that is real but is
@@ -1543,9 +1750,25 @@ Promise.all([
     el('splat').insertAdjacentHTML('beforeend',
       sp.map(p => `<option value="${esc(p)}">${esc(p)}</option>`).join(''));
   }
-  restoreView();
+  // THE URL WINS, and the order below is the whole of how. Read the address FIRST: restoreView()
+  // clicks the saved tab, that click runs navSync, and navSync rewrites the address from whatever
+  // is on screen. Reading location.search afterwards therefore returns the view we just restored
+  // rather than the link that was followed, which silently destroyed every deep link. The restore
+  // is also run with NAV_APPLYING set, so it cannot push a history entry of its own before the
+  // reader has done anything.
+  const fromUrl = readNavUrl();
+  const hasUrlState = ['tab', 'month', 'work'].some(k => new URLSearchParams(location.search).has(k));
+  NAV_APPLYING = true;
+  try { restoreView(); } finally { NAV_APPLYING = false; }
+  if (hasUrlState) navApply(fromUrl);
   renderFeed(); renderCat(); renderSeries();
   applyLang(LANG);
+  // A work record is opened by clicking a row that only exists after the lists are rendered, so
+  // the deep link to one is applied here rather than above.
+  if (hasUrlState && fromUrl.work) navApply(fromUrl);
+  // Seed the first entry with the state actually on screen, so the first Back has somewhere to go
+  // that is not "off the site".
+  navSync(false);
 }).catch(() => {
   el('fcount').textContent = 'データを読み込めません / could not load data';
 });
