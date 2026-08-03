@@ -58,6 +58,18 @@
     height:var(--ctl-h);box-sizing:border-box;padding-top:0;padding-bottom:0;line-height:1}
   /* The wrapper must not add height of its own, or the button inside it stops matching the row. */
   .controls .monthpick{display:flex;align-items:stretch}
+  /* A control holding something other than its default. Slight on purpose: enough to find while
+     scanning the row, not enough to read as a warning. The accent is the same one used for the
+     current selection elsewhere, so it says "this is set" rather than "this is wrong". */
+  /* Two channels, not three. Border and weight carry it; the text colour stays as it is, because
+     border plus colour plus weight together read as an alert rather than as a mark, and colour on
+     its own would carry the meaning for nobody who cannot see it. */
+  .controls [data-active]{border-color:var(--accent)}
+  .controls select[data-active], .controls input[data-active],
+  .controls .monthpick > button[data-active]{font-weight:600}
+  /* The way out, lit at the same moment. Disabled when there is nothing to clear, which is most
+     of the time and is also how the two are learned as one idea. */
+  .controls button[disabled]{opacity:.4;cursor:default}
   .count{color:var(--dim);font-size:.83rem;margin:0 0 .7rem}
   ol,ul.plain{list-style:none;margin:0;padding:0}
   li{border-bottom:1px solid var(--line)}
@@ -1747,26 +1759,79 @@ document.addEventListener('keydown', e => {
 
 el('fmonth').addEventListener('change', () => {
   paintMonthPicker();
+  markActive();
   setPlatOptions();
   renderFeed();
   navSync(true);
   el('tab-feed').scrollIntoView({ block: 'start', behavior: 'smooth' });
 });
 ['sq','sstate','sfree','splat','ssort'].forEach(i => el(i).addEventListener('input', renderSeries));
-el('sreset').addEventListener('click', () => resetFilters(['sq','sstate','sfree','splat','ssort'], renderSeries));
+el('sreset').addEventListener('click', () => resetFilters(RESETS.ser, renderSeries));
 ['q','sort','filter'].forEach(i => el(i).addEventListener('input', renderCat));
 // Persist only the durable controls, and only when the reader changes one.
 VIEW_FIELDS.forEach(i => el(i)?.addEventListener('change', saveView));
+/* WHAT RESET CLEARS IS WHAT GETS HIGHLIGHTED, from one list per tab, so the two cannot drift.
+   Deriving the highlight from anything else would eventually mark a control the button does not
+   clear, or leave one lit that it does. Note fview is absent from all three: compact against
+   detailed is presentation, and a preference is not something a reader needs warning about. */
+const RESETS = {
+  feed: ['fq', 'fmodel', 'ftype', 'fplat', 'fmonth'],
+  ser:  ['sq', 'sstate', 'sfree', 'splat', 'ssort'],
+  cat:  ['q', 'sort', 'filter'],
+};
+
+function isOffDefault(e) {
+  if (!e) return false;
+  return e.tagName === 'SELECT' ? e.value !== e.options[0].value : e.value.trim() !== '';
+}
+
+/* WHY THIS IS WORTH DOING AT ALL. These filters persist in localStorage, so a reader returns days
+   later to a list already narrowed by a choice they have forgotten making. "Why are there only 38
+   works" has an answer sitting in a dropdown that looks exactly like the five beside it. State
+   that survives a reload and announces nothing is a trap, and the controls wrap on a narrow screen,
+   so the one that is set may not even be on the same line as the rest.
+
+   Kept slight on purpose: an accent border and a touch of weight. Colour alone does not carry the
+   meaning, since the option text differs too, and the reset button opposite goes live at the same
+   moment, which is the second cue and the way out. */
+function markActive() {
+  for (const [tab, ids] of Object.entries(RESETS)) {
+    let n = 0;
+    for (const id of ids) {
+      const e = el(id);
+      if (!e) continue;
+      const on = isOffDefault(e);
+      if (on) n++;
+      // fmonth is the hidden state holder; its visible face is the picker button.
+      const face = id === 'fmonth' ? el('fmonthbtn') : e;
+      if (face) face.toggleAttribute('data-active', on);
+    }
+    const btn = el(tab === 'feed' ? 'freset' : tab === 'ser' ? 'sreset' : 'creset');
+    if (btn) {
+      // Disabled when there is nothing to clear, which is also how a reader learns the highlight
+      // and the button are about the same thing.
+      btn.disabled = n === 0;
+      btn.title = n === 0 ? 'nothing to clear'
+                          : `clear ${n} active filter${n === 1 ? '' : 's'}`;
+    }
+  }
+}
+
 function resetFilters(ids, render) {
   ids.forEach(id => { const e = el(id); if (!e) return; e.value = e.tagName === 'SELECT' ? e.options[0].value : ''; });
-  saveView(); render();
+  saveView(); render(); markActive();
 }
 // fmonth is in the list: a reader who has gone back to an archived month and then asks for a clean
 // slate means the whole tab, not the filters within one month. Clearing it returns to the recent
 // window, and the platform options are rebuilt for it before anything is drawn.
 el('freset').addEventListener('click', () =>
-  resetFilters(['fq','fmodel','ftype','fplat','fmonth'], () => { setPlatOptions(); renderFeed(); }));
-el('creset').addEventListener('click', () => resetFilters(['q','sort','filter'], renderCat));
+  resetFilters(RESETS.feed, () => { setPlatOptions(); renderFeed(); }));
+el('creset').addEventListener('click', () => resetFilters(RESETS.cat, renderCat));
+// Every control that can move off its default keeps the marking current.
+Object.values(RESETS).flat().forEach(id => {
+  const e = el(id);
+  if (e) ['input', 'change'].forEach(ev => e.addEventListener(ev, markActive));
+});
 
 el('clearprefs').addEventListener('click', () => {
   try { localStorage.removeItem(PREF_THEME); localStorage.removeItem(PREF_VIEW); } catch (e) {}
@@ -1866,6 +1931,9 @@ Promise.all([
   // Seed the first entry with the state actually on screen, so the first Back has somewhere to go
   // that is not "off the site".
   navSync(false);
+  // After the restore, not before: the whole point is to show a reader the filters they are
+  // returning to, and those are applied by restoreView above.
+  markActive();
 }).catch(() => {
   el('fcount').textContent = 'データを読み込めません / could not load data';
 });
