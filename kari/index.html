@@ -300,7 +300,9 @@
            background:none;border:1px solid var(--line);border-radius:.35rem;
            padding:.32rem .5rem;color:inherit;font:inherit;cursor:pointer}
   .mrecent[aria-current=true]{border-color:var(--accent);color:var(--accent)}
-  .msub{color:var(--dim);font-size:.78rem;margin-left:.3rem}
+  /* The gloss wraps as a unit or not at all. Breaking inside it put "coming soon up to a month"
+     on one line and "ahead" on the next, which reads as a sentence the picker is not making. */
+  .msub{color:var(--dim);font-size:.78rem;margin-left:.3rem;white-space:nowrap}
   .mnav{display:flex;align-items:center;justify-content:space-between;margin-bottom:.35rem}
   .mnav button{background:none;border:0;color:inherit;font-size:1.1rem;cursor:pointer;
                padding:0 .45rem;line-height:1}
