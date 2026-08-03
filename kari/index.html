@@ -27,6 +27,11 @@
     font:15px/1.65 ui-sans-serif,system-ui,"Hiragino Sans","Noto Sans JP",sans-serif}
   .wrap{max-width:64rem;margin:0 auto;padding:1.4rem 1.1rem 4rem}
   h1{font-size:1.1rem;font-weight:600;margin:0 0 .2rem;letter-spacing:.02em}
+  /* The size lives on the WORD, not on the h1: the language and theme controls sit inside the
+     heading and would scale with it. At 1.1rem against a 15px body the title was eight per cent
+     larger than the text around it, which is not a heading so much as a bold first line. */
+  .brand{font-size:2rem;font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  #byline{margin:.15rem 0 0;color:var(--dim);font-size:.9rem;max-width:38rem}
   .sub{color:var(--dim);font-size:.85rem;margin:0}
   .note{background:var(--warn-bg);color:var(--warn-fg);border-radius:6px;
     padding:.55rem .8rem;font-size:.82rem;margin:.9rem 0 0}
@@ -282,8 +287,15 @@
   /* wrap, and never shrink a group: without these the flex row squeezed the language box instead
      of moving to a second line, and .themebox's overflow:hidden silently cut EN and 両 off. A
      control that is present but clipped is worse than one that wrapped. */
-  .ctlbar{float:right;display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;
-    justify-content:flex-end}
+  /* A flex row, not a float. The control bar used to sit INSIDE the h1 and float right, which
+     held together only while the heading was one small line: raising the title to 2rem dropped
+     the controls to their own row and left the byline flowing around them, 118px tall for one
+     line of text. The masthead is now two columns that wrap when there is no room. */
+  .masthead{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:flex-start;
+    justify-content:space-between}
+  .mast-text{min-width:0}
+  .ctlbar{display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;
+    justify-content:flex-end;margin-left:auto}
   .ctlbar > .ctlrow{display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;flex:0 0 auto}
   .ctlrow > .themebox{flex:0 0 auto}
   /* The dependent row breaks to its own line and right-aligns under the rest. Needs the same
@@ -302,7 +314,7 @@
   .themebox .themebtn{border:0;border-radius:0;border-left:1px solid var(--line);background:none}
   .themebox .themebtn:first-child{border-left:0}
   @media (max-width:34rem){
-    .ctlbar{float:none;justify-content:flex-end;margin-top:.45rem;gap:.6rem}
+    .ctlbar{justify-content:flex-end;margin-top:.45rem;gap:.6rem}
   }
   /* Labels gained a second word (両 both, 自動 / auto) and started breaking mid-label on a phone,
      which turns a three-button group into a six-line block. Let the GROUPS wrap instead. */
@@ -318,7 +330,13 @@
 <body>
 <div class="wrap">
 <header>
-  <h1>Yurarium <span class="tag" data-i18n>仮 / provisional</span>
+  <div class="masthead">
+   <div class="mast-text">
+    <h1><span class="brand">Yurarium</span> <span class="tag" data-i18n>仮 / provisional</span></h1>
+    <!-- The page opened on a title and a tab strip with nothing saying what it was. Rendered in
+        JS because it follows the language toggle like everything else. -->
+    <p id="byline"></p>
+   </div>
     <span class="ctlbar">
       <!-- Row 1: the controls that are ALWAYS applicable, so they never move.
            Row 2: the two that depend on the language. Splitting every group onto its own line
@@ -361,7 +379,7 @@
       </span>
       </span>
       </span>
-    </h1>
+  </div>
 </header>
 
 <nav role="tablist">
@@ -833,6 +851,11 @@ function ftLine(ja, en) {
   return `${ja}<span class="bi-en">${en}</span>`;
 }
 
+function renderByline() {
+  const p = el('byline');
+  if (p) p.innerHTML = ftLine('日本の百合漫画のデータベース', 'A database of Japanese yuri manga');
+}
+
 function renderFooter() {
   // EACH HALF IS BUILT WHOLE, in its own language, and T() then picks. Calling T() for the
   // database name and dropping the result into another T() nested the doubling: 併記 mode read
@@ -958,6 +981,7 @@ function applyLang(lang) {
   });
   applyRomajiVisibility();
   renderTrackNote();
+  renderByline();
   renderFooter();
   // The picker's button and grid are built in JS rather than from data-i18n text, so they need
   // repainting on a language change like any other rendered thing.
