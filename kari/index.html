@@ -156,6 +156,7 @@
      looks like. */
   .bi{display:block}
   .bi-en{display:block;opacity:.72;font-size:.94em;margin-top:.05rem}
+  .ftclear{display:block;margin-top:.4rem}
   .bi-en .t,.bi-en a{font-weight:500}
   .crow .bi-en{font-size:.92em}
   /* The second line has to BREAK the line, and both places it appears are flex rows where
@@ -478,17 +479,16 @@
 </section>
 
 <footer>
-  <p>Bibliographic facts from
-    <a href="https://mediaarts-db.artmuseums.go.jp/">文化庁メディア芸術データベース</a> (1.2.18)
-    and <a href="https://openbd.jp/">openBD</a>; release data from publishers' own feeds.
-    Facts are not copyrightable; original classifications and notes are CC0. No cover art,
-    synopses or manga are hosted here.</p>
+  <!-- Rendered in JS rather than written in the markup, because every line of it carries a link
+       and the data-i18n split works on plain text. The database's own name was the visible cost of
+       that: 文化庁メディア芸術データベース stayed Japanese in English mode because it sat inside an
+       anchor nothing translated. Order is sources, then the dating caveat, then where to read more,
+       and the storage note last: it is the least urgent thing here and the only one about the
+       reader rather than about the manga. -->
+  <p id="ftsource"></p>
   <p id="trackfrom" hidden></p>
-  <p>This site stores your display preferences (theme, tab and filters) in your own browser's
-    local storage, written only when you choose them. Nothing is transmitted and no cookies are
-    set. <button id="clearprefs" class="themebtn" data-i18n>設定を消去 / clear</button></p>
-  <p><a href="status.html">内部状態 / build status</a>: what the last build did, which sources
-    answered, and which reports are still untraced.</p>
+  <p id="ftstatus"></p>
+  <p id="ftprefs"></p>
 </footer>
 </div>
 
@@ -820,17 +820,65 @@ function platName(n) {
 
 /* Set once from run.json, re-rendered on every language change like the rest of the chrome. */
 let TRACK_FROM = null;
+/* The footer, in whichever language is showing. The reasoning behind the dating caveat and the
+   whole of the storage arrangement live on status.html; a footer states the consequence and points
+   there, rather than explaining the machinery to somebody who came to read about manga. */
+/* STACKED, NOT SLASHED. T() joins the two languages with " / ", which is right for a badge or a
+   count line where the pair is short. A footer paragraph is a sentence, and two sentences spliced
+   by a slash read as one long broken one. The rows already stack their English underneath in
+   .bi-en; the footer uses the same treatment so the page has one answer to this rather than two. */
+function ftLine(ja, en) {
+  if (LANG === 'ja') return ja;
+  if (LANG === 'en') return en;
+  return `${ja}<span class="bi-en">${en}</span>`;
+}
+
+function renderFooter() {
+  // EACH HALF IS BUILT WHOLE, in its own language, and T() then picks. Calling T() for the
+  // database name and dropping the result into another T() nested the doubling: 併記 mode read
+  // "文化庁メディア芸術データベース / Media Arts Database" inside the Japanese sentence AND inside
+  // the English one. A name is part of the sentence it sits in, not a separate decision.
+  const MADB_URL = 'https://mediaarts-db.artmuseums.go.jp/';
+  const OPENBD = '<a href="https://openbd.jp/">openBD</a>';
+  el('ftsource').innerHTML = ftLine(
+    `書誌情報は<a href="${MADB_URL}">文化庁メディア芸術データベース</a>（1.2.18）と${OPENBD}、`
+    + `更新情報は各プラットフォームの配信元から。事実に著作権はなく、独自の分類と注記は CC0。`
+    + `表紙画像・あらすじ・漫画本編は掲載していません。`,
+    `Bibliographic facts from <a href="${MADB_URL}">Media Arts Database</a> (1.2.18) and ${OPENBD};`
+    + ` release data from publishers' own feeds. Facts are not copyrightable; original`
+    + ` classifications and notes are CC0. No cover art, synopses or manga are hosted here.`);
+
+  // A link, not a paragraph. What the page contains is the page's business, and a footer that
+  // explains its own links is spending a reader's attention on navigation rather than on manga.
+  el('ftstatus').innerHTML =
+    `<a href="status.html">${T('内部状態', 'build status')}</a>`;
+
+  // The button follows the whole pair rather than riding on the English line, which is where a
+  // trailing concatenation would put it in 併記 mode. Its LABEL keeps the slash form, unlike the
+  // sentences above it: that is what every other control on the page does in 併記 (the tabs read
+  // "更新 / Updates"), and a two-word label is the case the slash was always for. Stacking a
+  // button's label would make the control two lines tall for no gain.
+  el('ftprefs').innerHTML = ftLine(
+    '表示設定（テーマ・タブ・絞り込み）はブラウザのローカルストレージに保存されます。'
+    + 'クッキーは使用せず、設定がインターネットに送信されることはありません。',
+    "This site stores your display preferences (theme, tab and filters) in your own browser's "
+    + 'local storage. No cookies are set, and no preferences are sent over the Internet.')
+    + `<span class="ftclear"><button id="clearprefs" class="themebtn">`
+    + `${T('設定を消去', 'clear preferences')}</button></span>`;
+  wireClearPrefs();
+}
+
+/* SAID ONCE. The dating caveat used to carry its own build-status link, and there was a second
+   paragraph carrying another one, so the footer pointed at the same page twice within four lines.
+   The caveat states the consequence; the reasoning is on status.html, which the line below links. */
 function renderTrackNote() {
   const p = el('trackfrom');
   if (!p || !TRACK_FROM) return;
   p.hidden = false;
-  p.innerHTML = T(
-    `更新の追跡開始は ${TRACK_FROM}。それ以前の日付は各プラットフォームの記載を一括で取り込んだもので、`
-    + `既刊をまとめて同じ日付で登録するプラットフォームもあるため、公開日として正確とは限りません。`,
-    `Update tracking began on ${TRACK_FROM}. Dates before then were imported in a single pass from
-     what each platform states about its own back catalogue, and some platforms date a whole back
-     catalogue to the day they listed it, so publication dates before ${TRACK_FROM} may not be
-     reliable.`) + ` <a href="status.html">${T('内部状態', 'build status')}</a>`;
+  p.innerHTML = ftLine(
+    `更新の追跡開始は ${TRACK_FROM}。それ以前のウェブ漫画の公開日は正確とは限りません。`,
+    `Update tracking began on ${TRACK_FROM}. Web manga publication dates before ${TRACK_FROM}`
+    + ` may not be reliable.`);
 }
 
 /* Said once rather than stamped on every reading. While essentially all of them are machine
@@ -910,6 +958,7 @@ function applyLang(lang) {
   });
   applyRomajiVisibility();
   renderTrackNote();
+  renderFooter();
   // The picker's button and grid are built in JS rather than from data-i18n text, so they need
   // repainting on a language change like any other rendered thing.
   if (typeof paintMonthPicker === 'function' && el('fmonthbtn')) paintMonthPicker();
@@ -1837,11 +1886,25 @@ Object.values(RESETS).flat().forEach(id => {
   if (e) ['input', 'change'].forEach(ev => e.addEventListener(ev, markActive));
 });
 
-el('clearprefs').addEventListener('click', () => {
-  try { localStorage.removeItem(PREF_THEME); localStorage.removeItem(PREF_VIEW); } catch (e) {}
-  applyTheme('auto');
-  location.reload();
-});
+/* Re-bound whenever the footer is rendered, because the button is created there now and a
+   listener attached at load time would have nothing to attach to. */
+function wireClearPrefs() {
+  const b = el('clearprefs');
+  if (!b) return;
+  b.addEventListener('click', () => {
+    // EVERY preference, not the two it used to remove. A button labelled "clear" that leaves the
+    // language, the romanisation style and the furigana setting behind has not cleared anything a
+    // reader would notice, and the ones it did remove were the ones they were least likely to mean.
+    try {
+      // 'lang' is stored unprefixed, unlike the four PREF_ keys. Checked against the browser
+      // rather than assumed: a guessed key removes nothing and fails silently.
+      [PREF_THEME, PREF_VIEW, PREF_ROMAJI, PREF_FURI, 'lang']
+        .forEach(k => localStorage.removeItem(k));
+    } catch (e) { /* private mode; nothing was stored to remove */ }
+    applyTheme('auto');
+    location.reload();
+  });
+}
 
 // no-cache means REVALIDATE, not "don't cache": the browser still stores the file and the server
 // still answers 304 when it has not changed, so this costs a conditional request and not a
