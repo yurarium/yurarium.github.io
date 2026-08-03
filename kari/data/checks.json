@@ -38,10 +38,8 @@
   },
   {
    "name": "no stock phrasing in public text",
-   "violations": 1,
-   "examples": [
-    "yurarium.github.io/kari/status.html:103: '—'"
-   ]
+   "violations": 0,
+   "examples": []
   },
   {
    "name": "content flags are accounted for",
@@ -91,7 +89,7 @@
   },
   {
    "name": "stock phrasing in comments",
-   "value": 897,
+   "value": 898,
    "budget": 897,
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage."
   },

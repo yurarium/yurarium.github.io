@@ -100,11 +100,13 @@
   "total": 434,
   "by_disposition": {
    "absorbed": 372,
-   "refuted": 3,
-   "print-serialised": 26,
-   "unsettleable": 29,
+   "open": 1,
+   "print-serialised": 25,
+   "unsettleable": 28,
    "phantom": 1,
-   "undatable": 3
+   "scheduled": 2,
+   "undatable": 3,
+   "refuted": 2
   },
   "trace": [
    {
@@ -122,11 +124,13 @@
     "url": "https://ynjn.jp/title/27600",
     "claimed": "2026-08-01",
     "source": "webcomics.jp",
-    "disposition": "refuted",
-    "why": "we hold this platform's own history for this work and it lists nothing within a week of the claimed date",
-    "platform_latest": "2026-07-21",
-    "chapters_held": 11,
-    "gap_days": 11
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "私を喰べたい、ひとでなし",
@@ -543,7 +547,7 @@
     "claimed": "2026-07-28",
     "source": "webcomics.jp",
     "disposition": "unsettleable",
-    "why": "HTTP 403",
+    "why": "rendered; the page yielded no DOM to read",
     "chapters_held": 0,
     "last_looked": "2026-08-03"
    },
@@ -726,7 +730,7 @@
     "source": "webcomics.jp",
     "disposition": "print-serialised",
     "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
-    "platform_latest": "2026-06-23"
+    "platform_latest": "2026-07-14"
    },
    {
     "work": "このままモブじゃ終われない!",
@@ -1135,8 +1139,8 @@
     "claimed": "2026-07-23",
     "source": "webcomics.jp",
     "disposition": "unsettleable",
-    "why": "we hold 74 chapters ending 2025-08-27, 330 days before the claim — too far behind to argue the platform shows nothing",
-    "chapters_held": 74,
+    "why": "we read this platform's own listing and it carries nothing dated here",
+    "chapters_held": 0,
     "last_looked": "2026-08-03"
    },
    {
@@ -1357,9 +1361,11 @@
     "claimed": "2026-07-21",
     "source": "webcomics.jp",
     "disposition": "unsettleable",
-    "why": "we hold 2 chapters ending 2024-03-01, 872 days before the claim — too far behind to argue the platform shows nothing",
-    "chapters_held": 2,
-    "last_looked": "2026-08-03"
+    "why": "we hold 1 chapters ending 2025-10-17, 277 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 1,
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "真先輩の前ではかっこつけられない!",
@@ -1623,10 +1629,10 @@
     "url": "https://pocket.shonenmagazine.com/title/02257",
     "claimed": "2026-07-17",
     "source": "webcomics.jp",
-    "disposition": "unsettleable",
-    "why": "we hold 23 chapters ending 2026-03-17, 122 days before the claim — too far behind to argue the platform shows nothing",
-    "chapters_held": 23,
-    "last_looked": "2026-08-03"
+    "disposition": "scheduled",
+    "why": "the platform states it updates 毎月第3金曜 and this date falls where that puts one; it announces the next for 2026-08-21",
+    "cadence": "毎月第3金曜",
+    "next_update": "2026-08-21"
    },
    {
     "work": "声に乗せてファンファーレ",
@@ -1666,7 +1672,9 @@
     "disposition": "unsettleable",
     "why": "we hold 1 chapters ending 2025-12-05, 224 days before the claim — too far behind to argue the platform shows nothing",
     "chapters_held": 1,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "バカ女26時",
@@ -1916,9 +1924,11 @@
     "claimed": "2026-07-11",
     "source": "webcomics.jp",
     "disposition": "unsettleable",
-    "why": "we hold 5 chapters ending 2025-05-18, 419 days before the claim — too far behind to argue the platform shows nothing",
+    "why": "we hold 5 chapters ending 2025-05-18, 419 days before the claim — too far behind to argue the platform shows nothing; the platform states it updates 毎月第1水曜",
     "chapters_held": 5,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": "毎月第1水曜",
+    "next_update": "2026-08-05"
    },
    {
     "work": "子供部屋ドラゴン",
@@ -1965,7 +1975,9 @@
     "disposition": "unsettleable",
     "why": "we hold 1 chapters ending 2025-10-17, 266 days before the claim — too far behind to argue the platform shows nothing",
     "chapters_held": 1,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "限界OLさんは悪役令嬢さまに仕えたい",
@@ -1994,7 +2006,9 @@
     "disposition": "unsettleable",
     "why": "we hold 1 chapters ending 2021-08-20, 1785 days before the claim — too far behind to argue the platform shows nothing",
     "chapters_held": 1,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "恋より青く",
@@ -2290,7 +2304,9 @@
     "disposition": "unsettleable",
     "why": "we hold 2 chapters ending 2026-02-07, 148 days before the claim — too far behind to argue the platform shows nothing",
     "chapters_held": 2,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "男装メイドは尽くしたい",
@@ -2301,7 +2317,9 @@
     "disposition": "unsettleable",
     "why": "only 1 chapter(s) held — a history of one is not a history",
     "chapters_held": 1,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "君になれたら",
@@ -2503,7 +2521,9 @@
     "disposition": "unsettleable",
     "why": "only 1 chapter(s) held — a history of one is not a history",
     "chapters_held": 1,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "カナリアは綺羅星の夢をみる",
@@ -2542,7 +2562,9 @@
     "disposition": "unsettleable",
     "why": "only 2 chapter(s) held — a history of one is not a history",
     "chapters_held": 2,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "フェアウェイの声をきかせて",
@@ -2553,7 +2575,9 @@
     "disposition": "unsettleable",
     "why": "we hold 37 chapters ending 2025-07-06, 360 days before the claim — too far behind to argue the platform shows nothing",
     "chapters_held": 37,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "転生王女と天才令嬢の魔法革命",
@@ -2637,7 +2661,9 @@
     "disposition": "unsettleable",
     "why": "we hold 2 chapters ending 2025-04-12, 441 days before the claim — too far behind to argue the platform shows nothing",
     "chapters_held": 2,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "アイドラトリィ",
@@ -2735,7 +2761,9 @@
     "disposition": "unsettleable",
     "why": "only 1 chapter(s) held — a history of one is not a history",
     "chapters_held": 1,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "お菊さんはいちゃ憑きたい",
@@ -2798,8 +2826,8 @@
     "claimed": "2026-06-22",
     "source": "webcomics.jp",
     "disposition": "unsettleable",
-    "why": "we hold 2 chapters ending 2024-10-16, 614 days before the claim — too far behind to argue the platform shows nothing",
-    "chapters_held": 2,
+    "why": "we read this platform's own listing and it carries nothing dated here",
+    "chapters_held": 0,
     "last_looked": "2026-08-03"
    },
    {
@@ -2829,7 +2857,9 @@
     "disposition": "unsettleable",
     "why": "we hold 3 chapters ending 2021-12-18, 1645 days before the claim — too far behind to argue the platform shows nothing",
     "chapters_held": 3,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "「触れたい」は恋の始まり",
@@ -2864,9 +2894,12 @@
     "url": "https://manga.nicovideo.jp/comic/76631",
     "claimed": "2026-06-18",
     "source": "webcomics.jp",
-    "disposition": "print-serialised",
-    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
-    "platform_latest": "2026-05-18"
+    "disposition": "unsettleable",
+    "why": "only 2 chapter(s) held — a history of one is not a history",
+    "chapters_held": 2,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "誰かオオカミさんのしつけ方知りませんか!?",
@@ -2961,10 +2994,10 @@
     "url": "https://pocket.shonenmagazine.com/title/01646",
     "claimed": "2026-06-16",
     "source": "webcomics.jp",
-    "disposition": "unsettleable",
-    "why": "we hold 3 chapters ending 2025-09-18, 271 days before the claim — too far behind to argue the platform shows nothing",
-    "chapters_held": 3,
-    "last_looked": "2026-08-03"
+    "disposition": "scheduled",
+    "why": "the platform states it updates 毎月第3火曜 and this date falls where that puts one; it announces the next for 2026-08-18",
+    "cadence": "毎月第3火曜",
+    "next_update": "2026-08-18"
    },
    {
     "work": "超深宇宙より愛をこめて",
@@ -3038,7 +3071,9 @@
     "disposition": "unsettleable",
     "why": "we hold 3 chapters ending 2022-02-04, 1589 days before the claim — too far behind to argue the platform shows nothing",
     "chapters_held": 3,
-    "last_looked": "2026-08-03"
+    "last_looked": "2026-08-03",
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "私の百合はお仕事です!",
