@@ -92,6 +92,8 @@
     box-shadow:0 6px 22px rgba(0,0,0,.18)}
   .moregrp{margin:0 0 .85rem}
   .moregrp:last-child{margin-bottom:0}
+  /* Divides what applies to the Japanese from what applies to the Latin. */
+  .moresep{border:0;border-top:1px solid var(--line);margin:0 0 .85rem}
   .morelab{display:block;font-size:.76rem;color:var(--dim);margin-bottom:.3rem}
   .morenote{font-size:.72rem;color:var(--dim);margin:.35rem 0 0;line-height:1.45}
   /* A group that cannot apply keeps its space and goes inert, the same rule the header row used:
@@ -397,32 +399,10 @@
       <!-- Romanisation style. Taste, not correctness, so it is the reader's (NAMES-PLAN §8.1),
            and it is meaningless while nothing Latin is on screen, so it appears only when EN does.
            All three are rendered at build time from the same kana, so switching costs nothing. -->
-      <span class="themebox" role="group" aria-label="配色 / colour theme" id="thbox">
-        <!-- Theme is not a language, so unlike the buttons above these follow the locale like
-             the rest of the chrome. data-i18n puts them through the same splitter. -->
-        <button class="themebtn" data-theme-set="auto"  data-i18n title="follow system">自動 / auto</button>
-        <button class="themebtn" data-theme-set="light" data-i18n title="light">明 / light</button>
-        <button class="themebtn" data-theme-set="dark"  data-i18n title="dark">暗 / dark</button>
-      </span>
-      <!-- The language sub-options used to sit on a second row, where they were four controls
-           wide and appeared and vanished with the language. That row is now one button: they are
-           all refinements OF the language choice, so they belong behind it rather than beside it,
-           and the header keeps one row whatever the language is. -->
       <span class="themebox langmore" role="group" aria-label="表示の詳細 / display detail">
         <button class="themebtn" id="morebtn" aria-haspopup="dialog" aria-expanded="false"
                 title="表示の詳細 / display detail">…</button>
         <div class="morepop" id="morepop" role="dialog" aria-label="表示の詳細 / display detail" hidden>
-
-          <!-- Romanisation style. Taste, not correctness, so it is the reader's (NAMES-PLAN §8.1).
-               All three are rendered at build time from the same kana, so switching costs nothing. -->
-          <div class="moregrp conditional" id="rjbox">
-            <span class="morelab" data-i18n>ローマ字 / romanisation</span>
-            <span class="themebox">
-              <button class="themebtn" data-romaji-set="macron" title="macron: Tōkyō, Yūri">ō</button>
-              <button class="themebtn" data-romaji-set="double" title="doubled vowel: Toukyou, Yuuri">ou</button>
-              <button class="themebtn" data-romaji-set="plain"  title="plain: Tokyo, Yuri">o</button>
-            </span>
-          </div>
 
           <!-- Furigana. Optional (§5c), off by default. The button demonstrates itself: 振仮名
                wearing its own furigana. A bare ふ said nothing to a reader who did not already know
@@ -434,6 +414,19 @@
                       title="ふりがな / show readings above kanji"><ruby>振仮名<rt>ふりがな</rt></ruby></button>
             </span>
           </div>
+
+          <hr class="moresep">
+          <!-- Romanisation style. Taste, not correctness, so it is the reader's (NAMES-PLAN §8.1).
+               All three are rendered at build time from the same kana, so switching costs nothing. -->
+          <div class="moregrp conditional" id="rjbox">
+            <span class="morelab" data-i18n>ローマ字 / romanisation</span>
+            <span class="themebox">
+              <button class="themebtn" data-romaji-set="macron" title="macron: Tōkyō, Yūri">ō</button>
+              <button class="themebtn" data-romaji-set="double" title="doubled vowel: Toukyou, Yuuri">ou</button>
+              <button class="themebtn" data-romaji-set="plain"  title="plain: Tokyo, Yuri">o</button>
+            </span>
+          </div>
+
 
           <!-- Which English a work is shown by, when it has more than one. The order was fixed
                here and is now the reader's: somebody who knows a series by what a licensor calls
@@ -457,7 +450,18 @@
           </div>
         </div>
       </span>
+      <span class="themebox" role="group" aria-label="配色 / colour theme" id="thbox">
+        <!-- Theme is not a language, so unlike the buttons above these follow the locale like
+             the rest of the chrome. data-i18n puts them through the same splitter. -->
+        <button class="themebtn" data-theme-set="auto"  data-i18n title="follow system">自動 / auto</button>
+        <button class="themebtn" data-theme-set="light" data-i18n title="light">明 / light</button>
+        <button class="themebtn" data-theme-set="dark"  data-i18n title="dark">暗 / dark</button>
       </span>
+      <!-- The language sub-options used to sit on a second row, where they were four controls
+           wide and appeared and vanished with the language. That row is now one button: they are
+           all refinements OF the language choice, so they belong behind it rather than beside it,
+           and the header keeps one row whatever the language is. -->
+            </span>
       </span>
   </div>
 </header>
@@ -703,25 +707,31 @@ function splitLang(s, lang) {
   // A platform name has no " / " to split on, so it falls through here. The filter dropdowns
   // are built from raw names. PLAT_EN is consulted alongside EN so those options localise too;
   // dataset.orig keeps the Japanese, which is what the filter actually matches on.
-  if (i < 0) return lang === 'en' ? (EN[s.trim()] || PLAT_EN[s.trim()] || s) : s;
-  return lang === 'ja' ? s.slice(0, i) : lang === 'en' ? s.slice(i + 3) : s;
+  if (i < 0) return lang === 'en' ? respell(EN[s.trim()] || PLAT_EN[s.trim()] || s) : s;
+  // Respelt on the English half only. The Japanese half is untouched, and 併記 keeps both.
+  return lang === 'ja' ? s.slice(0, i)
+       : lang === 'en' ? respell(s.slice(i + 3))
+       : s.slice(0, i) + ' / ' + respell(s.slice(i + 3));
 }
 /* Bilingual strings built in JS, where there is no element to carry data-i18n.
    One argument is a badge: look it up in EN, and in 併記 mode show the Japanese alone, because
    "話 / ch" is wider than the row it sits in. Two arguments is prose, which gets both. */
+/* The interface's own English is text we wrote, so it follows the spelling setting like the
+   translations do. Romanisation is itself one of the words the switch is about, and it is the
+   label on the control offering the switch, which is where the omission showed. */
 function T(ja, en) {
   const e = en !== undefined ? en : EN[ja];
   if (!e || e === ja) return ja;
-  if (LANG === 'en') return e;
+  if (LANG === 'en') return respell(e);
   if (LANG === 'ja') return ja;
-  return en !== undefined ? `${ja} / ${e}` : ja;
+  return en !== undefined ? `${ja} / ${respell(e)}` : ja;
 }
 
 /* Label form: always ONE language, never both. Badges and the volume-count column have no room
    for "巻 / vols", and a two-language string in a 3-character cell reads as noise rather than as
    help. Use T() for prose, L() for anything that sits in a fixed-width slot. */
 function L(ja, en) {
-  return LANG === 'en' ? (en !== undefined ? en : EN[ja] || ja) : ja;
+  return LANG === 'en' ? respell(en !== undefined ? en : EN[ja] || ja) : ja;
 }
 
 
@@ -808,7 +818,10 @@ const SPELL_US = {
   honour:'honor', honours:'honors', neighbour:'neighbor', neighbours:'neighbors',
   behaviour:'behavior', flavour:'flavor', flavours:'flavors', humour:'humor',
   rumour:'rumor', rumours:'rumors', savour:'savor', harbour:'harbor', labour:'labor',
+  romanisation:'romanization', romanise:'romanize', romanised:'romanized', romanising:'romanizing',
   realise:'realize', realised:'realized', realises:'realizes', realising:'realizing',
+  emphasise:'emphasize', normalise:'normalize', capitalise:'capitalize',
+  summarise:'summarize', analyse:'analyze', analysed:'analyzed', initialise:'initialize',
   recognise:'recognize', recognised:'recognized', apologise:'apologize',
   organise:'organize', organised:'organized', memorise:'memorize', memorised:'memorized',
   theatre:'theater', theatres:'theaters', centre:'center', centres:'centers',
@@ -1281,6 +1294,9 @@ document.addEventListener('DOMContentLoaded', () => {
     b.addEventListener('click', () => {
       DIALECT = b.dataset.dialectSet;
       prefSet(PREF_DIALECT, DIALECT);
+      // The markup-level strings are rewritten by the language pass and by nothing else, so the
+      // panel's own label kept saying romanisation after the reader asked for en-US.
+      applyLang(LANG);
       applyRomajiVisibility();
       if (FEED) { renderFeed(); renderCat(); renderSeries(); }
     }));
