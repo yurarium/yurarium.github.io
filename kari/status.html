@@ -94,6 +94,8 @@ const DISPO = {
   undatable: ['日付なし', 'the platform publishes no per-chapter dates, so nothing can confirm or refute it', ''],
   phantom:   ['非作品', 'the reported name is not a work', ''],
   open:      ['未追跡', 'not yet traced — this is the work outstanding', 'warn'],
+  'print-serialised': ['雑誌掲載', 'dated to a magazine instalment. A publisher\u2019s web arm publishes '
+                       + 'two to five weeks later, so its chapter dates can neither confirm nor refute it', ''],
 };
 
 const J = f => fetch('data/' + f, {cache:'no-cache'})
