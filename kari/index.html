@@ -126,6 +126,12 @@
   .enorow .mv{border:0;background:none;color:var(--dim);padding:0 .15rem;font-size:.85rem;
     line-height:1;cursor:pointer}
   .enorow .mv[disabled]{opacity:.25;cursor:default}
+  /* A section the reader opens rather than one they scroll past. The summary carries the count,
+     because the number is the reason to open it or leave it shut. */
+  .softlist{margin-top:1.1rem;border-top:1px solid var(--line);padding-top:.5rem}
+  .softlist > summary{cursor:pointer;color:var(--dim);font-size:.83rem;padding:.3rem 0;
+    list-style-position:outside}
+  .softlist[open] > summary{margin-bottom:.4rem}
   .count{color:var(--dim);font-size:.83rem;margin:0 0 .7rem}
   ol,ul.plain{list-style:none;margin:0;padding:0}
   li{border-bottom:1px solid var(--line)}
@@ -1583,25 +1589,35 @@ function predictedRows() {
   const horizonISO = iso(new Date(Date.now() + SOON_HORIZON_DAYS * 86400000));
   const out = [];
   for (const r of SERIES.series) {
-    if (r.state === 'completed' || r.state === 'oneshot') continue;
+    // Dormant joins them. Its interval keeps predicting a chapter that is not coming, which is
+    // most of what an overdue list fills up with if nothing stops it.
+    if (r.state === 'completed' || r.state === 'oneshot' || r.state === 'dormant') continue;
     const src = (r.sources || [])[0] || {};
     // ANNOUNCED BEATS AVERAGED, and says so. A platform printing 次回無料更新は8/21 has stated a
     // date; an interval worked out from past chapters is our arithmetic about its habits. Both
     // belong on this tab and they are not the same kind of claim, so the row carries which it is
     // and the two never merge into one undifferentiated "expected".
-    const stated = r.stated_next && r.stated_next.next_update;
+    const base = { work: r.work, work_en: r.work_en, author: r.author, author_en: r.author_en,
+                   url: r.url || src.url, predicted: true, type: 'chapter', access_modes: [] };
+    // A date the platform named, or the next one its stated rhythm falls on. The second is
+    // computed at build time, because turning 毎月第3金曜 into a date is logic that already exists
+    // and is tested, and a second copy of it here would be a second thing to keep right.
+    const sn = r.stated_next || {};
+    const stated = sn.next_update || sn.next_from_cadence;
     if (stated) {
-      if (stated < todayISO || stated > horizonISO) continue;
-      out.push({ work: r.work, work_en: r.work_en, author: r.author, author_en: r.author_en,
-                 plat: r.stated_next.platform || src.platform,
-                 plat_name: r.stated_next.platform || src.platform, url: r.url || src.url,
-                 pub: stated, predicted: true, announced: true,
-                 cadence: r.stated_next.cadence,
-                 kind: 'announced',
-                 kind_basis: r.stated_next.cadence
-                   ? `the platform states it updates ${r.stated_next.cadence}`
-                   : 'the platform announces this date',
-                 type: 'chapter', provenance: 'announced', access_modes: [] });
+      if (stated > horizonISO) continue;
+      // A DATE THE PLATFORM NAMED THAT HAS PASSED. It is the strongest thing we can hold short of
+      // a chapter, so a missed one belongs in front of the reader rather than dropped for being
+      // in the past: the platform said a day, the day went by, and nothing arrived.
+      const late = stated < todayISO;
+      out.push(Object.assign({}, base, {
+        plat: sn.platform || src.platform, plat_name: sn.platform || src.platform,
+        pub: stated, announced: true, overdue: late, cadence: sn.cadence,
+        kind: late ? 'overdue' : 'announced',
+        kind_basis: (sn.next_update ? 'the platform announces this date'
+                     : `the platform states it updates ${sn.cadence}`)
+                    + (late ? ', and it has passed with nothing since' : ''),
+        provenance: 'announced' }));
       continue;
     }
     if (!r.first || !r.latest || (r.chapters || 0) < SOON_MIN_CHAPTERS) continue;
@@ -1611,15 +1627,26 @@ function predictedRows() {
     const every = span / (r.chapters - 1);
     const next = new Date(latest.getTime() + every * 86400000);
     const pub = iso(next);
-    if (pub < todayISO || pub > horizonISO) continue;
-    out.push({ work: r.work, work_en: r.work_en, author: r.author, author_en: r.author_en,
-               plat: src.platform, plat_name: src.platform, url: r.url || src.url,
-               pub, predicted: true, every: Math.round(every),
-               kind: 'expected',
-               kind_basis: `publishes about every ${Math.round(every)} days`,
-               type: 'chapter', provenance: 'predicted', access_modes: [] });
+    if (pub > horizonISO) continue;
+    // An interval WE averaged, past its date. Kept, because a reader may want it, and folded away,
+    // because it is the weakest thing on the tab and there are a hundred of them: a platform
+    // serving a rolling window of free chapters yields a short apparent interval and a truncated
+    // latest at once, and both errors push a work into this list.
+    const late = pub < todayISO;
+    out.push(Object.assign({}, base, {
+      plat: src.platform, plat_name: src.platform,
+      pub, every: Math.round(every), overdue: late, inferredOverdue: late,
+      kind: late ? 'overdue-inferred' : 'expected',
+      kind_basis: `publishes about every ${Math.round(every)} days`
+                  + (late ? ', and that date has passed' : ''),
+      provenance: 'predicted' }));
   }
-  return out.sort((a, b) => a.pub.localeCompare(b.pub));
+  // Within a day, what the platform said comes before what we worked out. The tab is grouped by
+  // date, so this is the only ordering a reader sees inside a group, and the two are different
+  // kinds of claim rather than two instances of one.
+  const rank = r => (r.announced ? 0 : 1);
+  return out.sort((a, b) => a.pub.localeCompare(b.pub) || rank(a) - rank(b)
+                            || String(a.work).localeCompare(b.work));
 }
 
 function activeRows() {
@@ -1684,14 +1711,10 @@ function renderFeed() {
     // rather than after it.
     // Two kinds of row, and the note has to name both now. It used to say every date here was
     // inferred, which was true until platforms started being read for what they announce.
-    const ann = src0.filter(r => r.announced).length;
     snap.textContent = T(
-      ann ? `公式予告 ${ann} 件は各サイトの告知によるもの。残りは各作品のこれまでの更新間隔からの推定で、出版社の予告ではありません。`
-          : '推定です。各作品のこれまでの更新間隔から算出したもので、出版社の予告ではありません。',
-      ann ? `${ann} of these are dates the platform announces. The rest are calculated from each `
-            + 'series\u2019 own past interval and are not announcements from the publisher.'
-          : 'Inferred. These dates are calculated from each series\u2019 own past interval, and are not '
-            + 'announcements from the publisher.');
+      '「公式予告」は各サイトが告知した日。「更新予定」は各作品のこれまでの更新間隔からの推定です。',
+      '\u201cAnnounced\u201d is a date the platform states. \u201cExpected\u201d is estimated from '
+      + 'the series\u2019 own past update interval.');
   } else if (month) {
     snap.textContent = T('これは当時記録された、この月のスナップショットです。',
                          'This is a snapshot of the month as it was recorded at the time.');
@@ -1725,16 +1748,28 @@ function renderFeed() {
     : (LANG === 'en' ? `${rows.length} shown · ${src.length} total`
        : LANG === 'ja' ? `${rows.length} 件表示　·　${src.length} 件`
        : `${rows.length} 件 / shown　·　${src.length} 件 / total`);
-  // Which set is on screen, said in the line that counts it. Without this an archived month and a
-  // quiet fortnight look identical. A number with nothing to say what it is a number of.
-  const periodFace = month === SOON ? soonLabel() : month ? monthLabel(month) : '';
-  el('fcount').textContent = periodFace
-    ? periodFace + (LANG === 'en' ? ' · ' : '　·　') + count
-    : count;
+  // The count says how many, and nothing about which set: the picker sits directly above it and
+  // already carries the period on its own face. This line used to repeat it, which put 2026年7月
+  // on two consecutive lines. That was worth doing when the period selector lived at the FOOT of
+  // the tab and the count was the only thing near the list naming it.
+  el('fcount').textContent = count;
   // The tab badge counts what the tab lists, which is now whichever set is showing.
   el('n-feed').textContent = src.filter(r => r.web !== 'promotional-sample-only').length;
   el('fempty').hidden = rows.length > 0;
-  el('feed').innerHTML = view === 'compact' ? compactList(rows) : detailList(rows);
+  // THE WEAKEST ROWS, FOLDED AWAY. A date we averaged and then watched go by is worth keeping and
+  // is not worth a hundred lines at the top of the tab: it is our arithmetic about a series'
+  // habits, and where our capture of a platform is thin the same thinness both shortens the
+  // apparent interval and truncates the last date we hold. Behind a summary the reader can open.
+  const soft = month === SOON ? rows.filter(r => r.inferredOverdue) : [];
+  const firm = soft.length ? rows.filter(r => !r.inferredOverdue) : rows;
+  const list = view === 'compact' ? compactList : detailList;
+  el('feed').innerHTML = list(firm)
+    + (soft.length
+       ? `<details class="softlist"><summary>${esc(T(
+             `推定日を過ぎた作品 ${soft.length} 件（更新間隔からの推定）`,
+             `${soft.length} past a date estimated from their own update interval`))}</summary>`
+         + list(soft) + '</details>'
+       : '');
   if (view === 'compact') stackWrappedRows();
 }
 
@@ -1784,6 +1819,8 @@ const EN = {
   '読切':'One-shot', '最終回':'Final', '新連載':'New', '新話':'Chapter', 'その他':'Other',
   '更新予定':'Expected',
   '公式予告':'Announced',
+  '予告日超過':'Overdue',
+  '推定日超過':'Overdue (estimated)',
   '最新':'latest', '近日更新予定':'coming soon',
   '無料':'Free', '有料':'Paid', '無料（条件付）':'Free (paced)', '全話無料':'All free',
   '読み切り':'One-shot', '試し読み':'Preview', '番外編':'Extra', 'お知らせ':'Notice',
@@ -1814,6 +1851,10 @@ const KIND = {
   // A date the platform prints on its own page, as against one we worked out. Same slot, different
   // badge, because a reader deciding whether to go and look wants to know which they are reading.
   'announced':   ['公式予告', 'k-adv', 'the date the platform itself announces'],
+  // Past its date. Two of them, because what was missed matters: a day the platform named, or an
+  // average we took. The first is a fact about the platform, the second about our own arithmetic.
+  'overdue':          ['予告日超過', 'k-warn', 'the platform named this date and it has passed'],
+  'overdue-inferred': ['推定日超過', 'k-warn', 'past the date our own interval predicted'],
 };
 
 function kindTag(r) {
@@ -1860,7 +1901,7 @@ function byDate(rows) {
 // outranks a notice, so a new series arriving with several chapters still reads as 新連載.
 // An ending outranks an ordinary chapter but not a new series: a series starting is the thing a
 // reader most wants surfaced, and a finale should not be shouting over it.
-const KIND_RANK = { 'new-series': 4, 'oneshot': 4, 'final': 3, 'new-chapter': 2, 'announced': 2, 'expected': 2, 'other': 1, 'unknown': 0 };
+const KIND_RANK = { 'new-series': 4, 'oneshot': 4, 'final': 3, 'new-chapter': 2, 'announced': 2, 'overdue': 2, 'expected': 2, 'overdue-inferred': 2, 'other': 1, 'unknown': 0 };
 
 function compactList(rows) {
   let html = '';
