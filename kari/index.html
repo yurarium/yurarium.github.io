@@ -558,8 +558,50 @@ function restoreView() {
 }
 
 const KANA = 0x60;
+/* SEARCH FOLDING. NFKC, case, and hiragana to katakana, plus the macrons.
+   Diacritics are folded because a reader who sees Waingāruzu and cannot type ā will write
+   Waingaruzu, and ā is never anything but a long a, so the fold cannot lose a distinction.
+   ASCII doubles are deliberately NOT folded. Collapsing ou or ee looks symmetrical but titles mix
+   scripts: Yuri Fechi LIFE, IDOL×IDOL STORY！. Folding doubles turns Free into Fre, and it erases
+   a real difference, since ゆり and ゆうり are different words. The doubled romanisation is indexed
+   in full instead, which covers the same input without the damage. */
+const MACRONS = { 'ā':'a', 'ī':'i', 'ū':'u', 'ē':'e', 'ō':'o', 'â':'a', 'î':'i', 'û':'u', 'ê':'e', 'ô':'o' };
 const norm = s => String(s||'').normalize('NFKC').toLowerCase()
-  .replace(/[ぁ-ゖ]/g, c => String.fromCharCode(c.charCodeAt(0)+KANA));
+  .replace(/[ぁ-ゖ]/g, c => String.fromCharCode(c.charCodeAt(0)+KANA))
+  .replace(/[āīūēōâîûêô]/g, c => MACRONS[c] || c);
+
+/* Spacing is presentation, not identity, which is the judgement store.same_reading already makes
+   on the build side. Readings arrive word-separated (ハル ナツ アキ フユ) and a reader typing
+   ハルナツアキフユ means the same thing; equally "bloom into you" must still match when typed with
+   its spaces. Both sides are compared stripped as well as intact, in ONE place, so every field
+   gets the same treatment whether or not it came through searchIndex. */
+const bare = s => s.replace(/\s+/g, '');
+const hits = (index, q) => index.includes(q) || bare(index).includes(bare(q));
+
+/* Every form of a name, whichever one is on screen.
+
+   English mode showed romaji for 87% of the catalogue and searched none of it: the box matched the
+   stored Japanese only, so a reader could search only the text the interface was hiding
+   from them. Typing Yuri returned nothing.
+
+   All forms go in regardless of which is displayed. That matters most once a work HAS a
+   translation: the interface then shows the English name and hides the romanisation, so indexing
+   only what is shown would mean translating a title makes it unfindable by the romaji somebody
+   already knew it by. The kana reading is in too, so 百合の花 answers to ゆりのはな without the
+   reader knowing the kanji.
+
+   Built once per render rather than per keystroke, and independent of the style toggle: a
+   preference about display should not change which rows exist. */
+function searchIndex(kind, raw, existing) {
+  const rec = nameFor(kind, raw, existing);
+  const out = [raw];
+  if (rec) {
+    if (rec.reading) out.push(rec.reading);
+    if (rec.en) out.push(rec.en);
+    if (rec.romaji) out.push(rec.romaji.macron, rec.romaji.double, rec.romaji.plain);
+  }
+  return norm(out.filter(Boolean).join(' '));
+}
 const el = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
@@ -1224,7 +1266,9 @@ function renderFeed() {
     return;
   }
   const rows = src.filter(r => {
-    if (q && !norm(r.work).includes(q) && !norm(r.author).includes(q) && !norm(r.ep).includes(q))
+    if (q && !hits(searchIndex('titles', r.work, r.work_en), q)
+           && !hits(searchIndex('authors', (r.author || '').trim(), r.author_en), q)
+           && !hits(norm(r.ep), q) && !hits(norm(phraseOf(r.ep || '')), q))
       return false;
     // Two models of "update". Free includes rate-limited free and chapters that have flipped
     // out from behind a paywall, which is an update for a reader watching for free content.
@@ -1577,7 +1621,8 @@ function renderSeries() {
     // telling the reader something. A work we cannot say one fact about is a lead, not an entry;
     // it belongs in the coverage gaps on status.html, where it is work to do.
     if (!r.chapters) return false;
-    if (q && !norm(r.work).includes(q) && !norm(r.author).includes(q)) return false;
+    if (q && !hits(searchIndex('titles', r.work, r.work_en), q)
+           && !hits(searchIndex('authors', (r.author || '').trim(), r.author_en), q)) return false;
     if (state && r.state !== state) return false;
     if (plat && !r.sources.some(s => s.platform === plat)) return false;
     if (freeOnly && !(r.free + r.free_timed)) return false;   // unknown is not free either
@@ -1664,7 +1709,13 @@ function renderCat() {
     'vols':      (x,y) => y.n - x.n || (x.d||'').localeCompare(y.d||''),
   }[mode];
   const rows = INDEX.filter(w => {
-    if (q && !norm(w.t).includes(q) && !norm(w.y).includes(q) && !norm(w.c).includes(q)) return false;
+    // w.y is the YOMI, not the author: every print row carries MADB's reading, and the creator is
+    // w.c, a credit line with roles in it rather than a bare name. Passing the reading to the
+    // author index looked harmless because searchIndex returns the raw string either way, but it
+    // was asking the name store a question about the wrong kind of thing.
+    if (q && !hits(searchIndex('titles', w.t, null), q)
+           && !hits(norm(w.y), q)
+           && !hits(norm(w.c), q)) return false;
     if (f === 'multi') return w.n > 1;
     if (f === 'single') return w.n <= 1;
     return true;
