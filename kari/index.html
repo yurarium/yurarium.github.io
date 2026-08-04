@@ -1954,7 +1954,7 @@ function compactList(rows) {
     // THE YEAR, WHEN IT IS NOT THIS YEAR. A date two years old shown as 08-22 reads as the
     // twenty-second of this month, so an overdue row from 2024 looked like an upcoming one.
     // 頂のリヴィーツァ was announced for 2024-08-22 and displayed 08-22 beside 予告日超過.
-    const dlabel = d.slice(0, 4) === todayISO.slice(0, 4) ? d.slice(5) : d;
+    const dlabel = d.slice(0, 4) === String(new Date().getFullYear()) ? d.slice(5) : d;
     html += `<div class="cday"><div class="cday-d">${esc(dlabel)} <span class="dow"
       >${esc(dow(d))}</span></div><div class="cday-l">`;
     for (const g of groups.values()) {
