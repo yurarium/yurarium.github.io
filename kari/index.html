@@ -230,9 +230,26 @@
   .ensecond{color:var(--dim);font-size:.82rem;font-weight:400;margin-top:.05rem;display:block}
   .crow .ensecond{font-size:.76rem}
   /* Ruby needs room above the line or it collides with the row before it. */
-  ruby{ruby-position:over}
-  rt{font-size:.55em;color:var(--dim);font-weight:400;letter-spacing:0;overflow-wrap:anywhere}
-  ruby{overflow-wrap:anywhere}
+  /* WHY THE CHARACTERS WERE SEPARATING. A reading wider than the characters it annotates widens
+     the base with it, because the two share one column: 畳 with じょう over it was pushed to 1.56
+     times its own width, and its neighbours moved aside to make room. Measured over 1775 rendered
+     ruby units at 375px, 34 were stretched past 1.15.
+
+     The fix is to make the reading narrower, not to change how it is aligned. ruby-align governs
+     the reading inside its column and cannot shrink the column. Taking the reading out of flow
+     (position:absolute) does remove all 34, and was rejected: it lets neighbouring readings
+     overlap each other, which happened to 24 pairs, and unreadable is worse than wide.
+
+     At .48em with a little negative tracking, 3 remain and the worst is 1.31. The reading stays
+     large enough to read, which is the point of having it.
+
+     nowrap is a guard rather than a fix: no unit was observed breaking mid-compound, and a
+     reading stranded from half its characters is bad enough to be worth preventing anyway. */
+  ruby{ruby-position:over;ruby-align:center;white-space:nowrap}
+  rt{font-size:.48em;color:var(--dim);font-weight:400;letter-spacing:-.04em;white-space:nowrap}
+  /* The title as a whole still wraps: the unbreakable part is one base and its reading, not the
+     string. Long single runs are allowed to break rather than overflow the column. */
+  .rel .t, .crow .t, .wtitle{overflow-wrap:break-word}
   /* NOT italic. Japanese typefaces have no true italic, so a browser synthesises an oblique slant
       a Latin convention applied to kana, which is why it looked wrong. And the mark was on 100% of
      rendered furigana, because every reading that currently produces ruby is a machine guess: a
@@ -240,6 +257,10 @@
      The per-item hook stays, because it becomes meaningful as sourced readings arrive; until then
      the honest place to say "these are guesses" is once, above the list. */
   rt.rt-guess{opacity:.85}
+  /* A reading somebody looked up and wrote a note for. Not a guess, and not the source's own
+     word either, so it is marked as ours in the way a translation is: the reader can see that a
+     person decided it. Dotted rather than tinted, because tinting reads as a warning. */
+  rt.rt-said{opacity:1;border-bottom:1px dotted var(--dim)}
   .unc{font-size:.62em;color:var(--warn-fg);margin-left:.1em;font-weight:600;cursor:help}
   .rel .t ruby, .crow ruby{line-height:2.1}
   /* The toggle carries ruby of its own, which needs the room a control does not normally give.
@@ -890,7 +911,11 @@ const HAS_KANJI = /[\u4e00-\u9fff]/;
    No length cap is needed any more: aligned ruby wraps with the text it annotates. */
 function ruby(ja, rec) {
   if (!FURIGANA || !rec || !rec.ruby || !HAS_KANJI.test(ja)) return esc(ja);
-  const cls = rec.unverified ? ' class="rt-guess"' : '';
+  /* WHAT KIND OF READING THIS IS, not merely whether to doubt it. `researched` is a person's
+     decision with a reason recorded, which is the same standing a translation has on the English
+     side and deserves the same treatment: shown as ours, not as a machine's guess. */
+  const cls = rec.reading_basis === 'researched' ? ' class="rt-said"'
+            : rec.unverified ? ' class="rt-guess"' : '';
   return rec.ruby.map(([text, rd]) => rd
     ? `<ruby>${esc(text)}<rt${cls}>${esc(rd)}</rt></ruby>`
     : esc(text)).join('');
