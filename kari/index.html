@@ -1012,8 +1012,22 @@ function enOf(rec) {
 
    It matters most in English. A reader in Japanese who is shown no furigana still has the name
    itself; a reader in English has only this string and nothing to fall back on. */
-function uncertainMark(rec) {
-  const unattested = rec && (rec.uncertain || rec.unverified);
+function uncertainMark(rec, e) {
+  // THE DOUBT IS ABOUT THE READING, so it only reaches a string the reading produced. A
+  // romanisation is spelled out of the reading and inherits every doubt about it. A translation,
+  // an official English name and a licensor's name do not: "Bloom Into You" is no less right for
+  // our not knowing how the Japanese is pronounced. Marking on the reading alone put the mark on
+  // essentially every title, and a mark on everything is not a mark.
+  //
+  // ASYMMETRIC, BECAUSE THE TWO READERS ARE. In English the romanisation is all there is, so an
+  // unattested reading has to be marked. In Japanese the reader has the Japanese: the furigana is
+  // already styled as a guess where it is one, and the characters themselves are right whatever we
+  // think they sound like. Marking on the same rule there put 722 of these on one screen, which is
+  // the flood this mark exists to avoid. So Japanese keeps the narrow trigger it always had, the
+  // reading assembled character by character, which is the case worth interrupting a reader for.
+  const unattested = rec && (e
+    ? (e.basis === 'romaji' && (rec.uncertain || rec.unverified))
+    : rec.uncertain);
   return unattested
     ? `<sup class="unc" title="${esc('the reading this is romanised from is not attested by any source, and may be wrong')}">[?]</sup>`
     : '';
@@ -1033,7 +1047,7 @@ function enHtml(rec, cls, isPerson) {
                               : 'our translation, not an English title the work has')
       : 'the English name the work itself uses';
   const mark = (e.ours || e.unverified) ? ' ours' : '';
-  return `<span class="en${mark} ${cls || ''}" title="${esc(why)}">${esc(shown)}</span>${uncertainMark(rec)}`;
+  return `<span class="en${mark} ${cls || ''}" title="${esc(why)}">${esc(shown)}</span>${uncertainMark(rec, e)}`;
 }
 
 /* Titles: EN replaces the Japanese, and in 併記 the whole ROW is rendered again in English by
@@ -1056,7 +1070,7 @@ function workTextOf(ja) {
 function workLabel(r) {
   const e = enOf(nameFor('titles', r.work, r.work_en));
   const rec = nameFor('titles', r.work, r.work_en);
-  if (LANG === 'en' && e) return esc(e.text) + uncertainMark(rec);
+  if (LANG === 'en' && e) return esc(e.text) + uncertainMark(rec, e);
   if (LANG === 'en') { const ph = phraseOf(r.work); if (ph !== r.work) return esc(ph); }
   return ruby(r.work, rec) + (FURIGANA ? uncertainMark(rec) : '');
 }
@@ -1100,6 +1114,26 @@ function authorLabel(r) {
     const composedEarly = creditFromParts((r.author || '').trim());
     if (composedEarly) return esc(composedEarly);
   }
+  // A CREDIT LINE IS ANNOTATED PERSON BY PERSON. The line as a whole has no record, so it had no
+  // furigana at all even once every person in it had a sourced reading. The raw string is kept
+  // exactly as written, separators and roles included, and each name inside it is replaced by its
+  // own ruby: joining the parts with a comma would rewrite the credit as well as annotate it.
+  const rawJa = (r.author || '').trim();
+  const parts = NAMES && NAMES.credit_parts && NAMES.credit_parts[foldKey(rawJa)];
+  if (FURIGANA && parts && parts.length > 1) {
+    let out = '', rest = rawJa, any = false;
+    for (const nm of parts) {
+      const at = rest.indexOf(nm);
+      if (at < 0) continue;
+      const prec = nameFor('authors', nm, null);
+      const piece = ruby(nm, prec);
+      if (piece !== esc(nm)) any = true;
+      out += esc(rest.slice(0, at)) + piece;
+      rest = rest.slice(at + nm.length);
+    }
+    if (any) return out + esc(rest);
+  }
+
   if (!e) {
     const ph = phraseOf((r.author || '').trim());
     return esc(ph);

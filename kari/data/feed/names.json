@@ -7135,16 +7135,18 @@
    "unverified": true
   },
   "ゆりゾン": {
-   "reading": "ユリ ゾン",
+   "reading": "ユリゾン",
    "romaji": {
-    "macron": "Yuri Zon",
-    "double": "Yuri Zon",
-    "plain": "Yuri Zon"
+    "macron": "Yurizon",
+    "double": "Yurizon",
+    "plain": "Yurizon"
    },
-   "en": "Yurizon",
-   "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "en": "YURISON",
+   "basis": "official-jp",
+   "en_forms": {
+    "official-jp": "YURISON"
+   },
+   "reading_basis": "surface"
   },
   "ゆるゆり": {
    "reading": "ユルユリ",
@@ -37456,15 +37458,48 @@
    "unverified": true
   },
   "「真夜中ぱんチ」製作委員会": {
-   "reading": "「マヨナカ パン チ」 セイサク イインカイ",
+   "reading": "マヨナカパンチセイサクイインカイ",
+   "ruby": [
+    [
+     "「",
+     null
+    ],
+    [
+     "真夜中",
+     "まよなか"
+    ],
+    [
+     "ぱんチ」",
+     null
+    ],
+    [
+     "製",
+     "せい"
+    ],
+    [
+     "作",
+     "さく"
+    ],
+    [
+     "委",
+     "い"
+    ],
+    [
+     "員",
+     "いん"
+    ],
+    [
+     "会",
+     "かい"
+    ]
+   ],
    "romaji": {
-    "macron": "“Mayonaka Pan Chi” Seisaku Iinkai",
-    "double": "“Mayonaka Pan Chi” Seisaku Iinkai",
-    "plain": "“Mayonaka Pan Chi” Seisaku Inkai"
+    "macron": "Mayonakapanchiseisakuiinkai",
+    "double": "Mayonakapanchiseisakuiinkai",
+    "plain": "Mayonakapanchiseisakuinkai"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "あおたゆきこ": {
    "reading": "アオタユキコ",
@@ -37593,15 +37628,24 @@
    "reading_basis": "surface"
   },
   "あらおし悠": {
-   "reading": "アラ オシ ユウ",
+   "reading": "アラオシ ユウ",
+   "ruby": [
+    [
+     "あらおし",
+     null
+    ],
+    [
+     "悠",
+     "ゆう"
+    ]
+   ],
    "romaji": {
-    "macron": "Ara Oshi Yū",
-    "double": "Ara Oshi Yuu",
-    "plain": "Ara Oshi Yu"
+    "macron": "Araoshi Yū",
+    "double": "Araoshi Yuu",
+    "plain": "Araoshi Yu"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "あらた伊里": {
    "reading": "アラタ イリ",
@@ -38143,15 +38187,28 @@
    "reading_basis": "surface"
   },
   "さわやか鮫肌": {
-   "reading": "サワヤカ サメハダ",
+   "reading": "サワヤカサメハダ",
+   "ruby": [
+    [
+     "さわやか",
+     null
+    ],
+    [
+     "鮫",
+     "さめ"
+    ],
+    [
+     "肌",
+     "はだ"
+    ]
+   ],
    "romaji": {
-    "macron": "Sawayaka Samehada",
-    "double": "Sawayaka Samehada",
-    "plain": "Sawayaka Samehada"
+    "macron": "Sawayakasamehada",
+    "double": "Sawayakasamehada",
+    "plain": "Sawayakasamehada"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "しぃたけ": {
    "reading": "シィタケ",
@@ -38929,15 +38986,24 @@
    "reading_basis": "surface"
   },
   "ぴよぴよ丸": {
-   "reading": "ピヨピヨ マル",
+   "reading": "ピヨピヨマル",
+   "ruby": [
+    [
+     "ぴよぴよ",
+     null
+    ],
+    [
+     "丸",
+     "まる"
+    ]
+   ],
    "romaji": {
-    "macron": "Piyopiyo Maru",
-    "double": "Piyopiyo Maru",
-    "plain": "Piyopiyo Maru"
+    "macron": "Piyopiyomaru",
+    "double": "Piyopiyomaru",
+    "plain": "Piyopiyomaru"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "ふぁゆ瀬": {
    "reading": "ファユセ",
@@ -39500,6 +39566,20 @@
    "basis": "romaji",
    "reading_basis": "surface"
   },
+  "ゆりゾン": {
+   "reading": "ユリゾン",
+   "romaji": {
+    "macron": "Yurizon",
+    "double": "Yurizon",
+    "plain": "Yurizon"
+   },
+   "en": "YURISON",
+   "basis": "official-jp",
+   "en_forms": {
+    "official-jp": "YURISON"
+   },
+   "reading_basis": "surface"
+  },
   "よつば◎ますみ。": {
    "reading": "ヨツバ ◎ マスミ。",
    "romaji": {
@@ -39524,37 +39604,68 @@
    "reading_basis": "surface"
   },
   "りりうら世都": {
-   "reading": "リ リウラ セツ",
+   "reading": "リリウラ ヨミヤ",
+   "ruby": [
+    [
+     "りりうら",
+     null
+    ],
+    [
+     "世都",
+     "よみや"
+    ]
+   ],
    "romaji": {
-    "macron": "Ri Riura Setsu",
-    "double": "Ri Riura Setsu",
-    "plain": "Ri Riura Setsu"
+    "macron": "Ririura Yomiya",
+    "double": "Ririura Yomiya",
+    "plain": "Ririura Yomiya"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "りんご水": {
    "reading": "リンゴスイ",
+   "ruby": [
+    [
+     "りんご",
+     null
+    ],
+    [
+     "水",
+     "すい"
+    ]
+   ],
    "romaji": {
     "macron": "Ringosui",
     "double": "Ringosui",
     "plain": "Ringosui"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "りんご飴サード": {
-   "reading": "リンゴ アメ サード",
+   "reading": "リンゴアメ サード",
+   "ruby": [
+    [
+     "りんご",
+     null
+    ],
+    [
+     "飴",
+     "あめ"
+    ],
+    [
+     "サード",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Ringo Ame Sādo",
-    "double": "Ringo Ame Saado",
-    "plain": "Ringo Ame Sado"
+    "macron": "Ringoame Sādo",
+    "double": "Ringoame Saado",
+    "plain": "Ringoame Sado"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "るぅ1mm": {
    "reading": "ル ゥ イチ mm",
@@ -39951,14 +40062,27 @@
   },
   "サンクス仮面": {
    "reading": "サンクス カメン",
+   "ruby": [
+    [
+     "サンクス",
+     null
+    ],
+    [
+     "仮",
+     "か"
+    ],
+    [
+     "面",
+     "めん"
+    ]
+   ],
    "romaji": {
     "macron": "Sankusu Kamen",
     "double": "Sankusu Kamen",
     "plain": "Sankusu Kamen"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "ザシマ": {
    "reading": "ザシマ",
@@ -40175,15 +40299,32 @@
    "reading_basis": "surface"
   },
   "デス山ハナ子": {
-   "reading": "デスサン ハナコ",
+   "reading": "デスヤマ ハナコ",
+   "ruby": [
+    [
+     "デス",
+     null
+    ],
+    [
+     "山",
+     "やま"
+    ],
+    [
+     "ハナ",
+     null
+    ],
+    [
+     "子",
+     "こ"
+    ]
+   ],
    "romaji": {
-    "macron": "Desusan Hanako",
-    "double": "Desusan Hanako",
-    "plain": "Desusan Hanako"
+    "macron": "Desuyama Hanako",
+    "double": "Desuyama Hanako",
+    "plain": "Desuyama Hanako"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "トクヲツム": {
    "reading": "トクヲツム",
@@ -40337,15 +40478,24 @@
    "reading_basis": "surface"
   },
   "ピザ萬": {
-   "reading": "ピザ ヨロズ",
+   "reading": "ピザマン",
+   "ruby": [
+    [
+     "ピザ",
+     null
+    ],
+    [
+     "萬",
+     "まん"
+    ]
+   ],
    "romaji": {
-    "macron": "Piza Yorozu",
-    "double": "Piza Yorozu",
-    "plain": "Piza Yorozu"
+    "macron": "Pizaman",
+    "double": "Pizaman",
+    "plain": "Pizaman"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "ピロヤ": {
    "reading": "ピロヤ",
@@ -40643,16 +40793,20 @@
    "unverified": true
   },
   "七橋楽": {
-   "reading": "シチ ハシガク",
+   "reading": "ナナハシ ラク",
+   "ruby": [
+    [
+     "七橋楽",
+     "ななはしらく"
+    ]
+   ],
    "romaji": {
-    "macron": "Shichi Hashigaku",
-    "double": "Shichi Hashigaku",
-    "plain": "Shichi Hashigaku"
+    "macron": "Nanahashi Raku",
+    "double": "Nanahashi Raku",
+    "plain": "Nanahashi Raku"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true,
-   "uncertain": true
+   "reading_basis": "stated"
   },
   "七福あくび": {
    "reading": "シチフク アクビ",
@@ -40710,15 +40864,24 @@
    "unverified": true
   },
   "三弥カズトモ": {
-   "reading": "ミツヤ カズトモ",
+   "reading": "ミヤ カズトモ",
+   "ruby": [
+    [
+     "三弥",
+     "みや"
+    ],
+    [
+     "カズトモ",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Mitsuya Kazutomo",
-    "double": "Mitsuya Kazutomo",
-    "plain": "Mitsuya Kazutomo"
+    "macron": "Miya Kazutomo",
+    "double": "Miya Kazutomo",
+    "plain": "Miya Kazutomo"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "三本ひより": {
    "reading": "ミツモト ヒヨリ",
@@ -40745,15 +40908,24 @@
    "reading_basis": "stated"
   },
   "三河ごーすと": {
-   "reading": "ミカワ ゴー ストッ",
+   "reading": "ミカワ ゴースト",
+   "ruby": [
+    [
+     "三河",
+     "みかわ"
+    ],
+    [
+     "ごーすと",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Mikawa Gō Suto",
-    "double": "Mikawa Goo Suto",
-    "plain": "Mikawa Go Suto"
+    "macron": "Mikawa Gōsuto",
+    "double": "Mikawa Goosuto",
+    "plain": "Mikawa Gosuto"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "三芳イト": {
    "reading": "ミヨシ イト",
@@ -40917,15 +41089,24 @@
    "unverified": true
   },
   "久賀フーナ": {
-   "reading": "クカ 　 フーナ",
+   "reading": "クガ フーナ",
+   "ruby": [
+    [
+     "久賀",
+     "くが"
+    ],
+    [
+     "　フーナ",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Kuka Fūna",
-    "double": "Kuka Fuuna",
-    "plain": "Kuka Funa"
+    "macron": "Kuga Fūna",
+    "double": "Kuga Fuuna",
+    "plain": "Kuga Funa"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "乙川灯": {
    "reading": "オトカワ アカリ",
@@ -41001,15 +41182,28 @@
    "reading_basis": "stated"
   },
   "二三夏一": {
-   "reading": "ニサン 　 カイチ",
+   "reading": "フミ ナツイチ",
+   "ruby": [
+    [
+     "二三",
+     "ふ"
+    ],
+    [
+     "　",
+     null
+    ],
+    [
+     "夏一",
+     "みなついち"
+    ]
+   ],
    "romaji": {
-    "macron": "Nisan Kaichi",
-    "double": "Nisan Kaichi",
-    "plain": "Nisan Kaichi"
+    "macron": "Fumi Natsuichi",
+    "double": "Fumi Natsuichi",
+    "plain": "Fumi Natsuichi"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "五十嵐純": {
    "reading": "イガラシ ジュン",
@@ -41033,14 +41227,23 @@
   },
   "五色安未": {
    "reading": "ゴシキ アミ",
+   "ruby": [
+    [
+     "五色",
+     "ごしき"
+    ],
+    [
+     "安未",
+     "あみ"
+    ]
+   ],
    "romaji": {
     "macron": "Goshiki Ami",
     "double": "Goshiki Ami",
     "plain": "Goshiki Ami"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "井上とさず": {
    "reading": "イノウエ トサズ",
@@ -41146,15 +41349,20 @@
    "reading_basis": "stated"
   },
   "今安": {
-   "reading": "イマヤス",
+   "reading": "ジンアン",
+   "ruby": [
+    [
+     "今安",
+     "じんあん"
+    ]
+   ],
    "romaji": {
-    "macron": "Imayasu",
-    "double": "Imayasu",
-    "plain": "Imayasu"
+    "macron": "Jin'an",
+    "double": "Jin'an",
+    "plain": "Jin'an"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "今東ともよ": {
    "reading": "コンドウ トモヨ",
@@ -41242,14 +41450,7 @@
    "reading_basis": "stated"
   },
   "伊実": {
-   "reading": "コレザネ",
-   "romaji": {
-    "macron": "Korezane",
-    "double": "Korezane",
-    "plain": "Korezane"
-   },
    "basis": "romaji",
-   "reading_basis": "analyser",
    "unverified": true
   },
   "伊月クロ": {
@@ -41327,14 +41528,23 @@
   },
   "伍長": {
    "reading": "ゴチョウ",
+   "ruby": [
+    [
+     "伍",
+     "ご"
+    ],
+    [
+     "長",
+     "ちょう"
+    ]
+   ],
    "romaji": {
     "macron": "Gochō",
     "double": "Gochou",
     "plain": "Gocho"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "伏見ダイキ": {
    "reading": "フシミ ダイキ",
@@ -41398,16 +41608,21 @@
    "reading_basis": "stated"
   },
   "佐島勤": {
-   "reading": "サジマ ツトム",
+   "reading": "サトウ ツトム",
+   "ruby": [
+    [
+     "佐島勤",
+     "さとうつとむ"
+    ]
+   ],
    "romaji": {
-    "macron": "Sajima Tsutomu",
-    "double": "Sajima Tsutomu",
-    "plain": "Sajima Tsutomu"
+    "macron": "Satō Tsutomu",
+    "double": "Satou Tsutomu",
+    "plain": "Sato Tsutomu"
    },
    "en": "Tsutomu Satō",
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "俵之七十郎": {
    "reading": "タワラ ノ シチジュウロウ",
@@ -41422,36 +41637,75 @@
   },
   "倉瀬しの": {
    "reading": "クラセ シノ",
+   "ruby": [
+    [
+     "倉",
+     "くら"
+    ],
+    [
+     "瀬",
+     "せ"
+    ],
+    [
+     "しの",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Kurase Shino",
     "double": "Kurase Shino",
     "plain": "Kurase Shino"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "倉田英之": {
    "reading": "クラタ ヒデユキ",
+   "ruby": [
+    [
+     "倉",
+     "くら"
+    ],
+    [
+     "田",
+     "た"
+    ],
+    [
+     "英之",
+     "ひでゆき"
+    ]
+   ],
    "romaji": {
     "macron": "Kurata Hideyuki",
     "double": "Kurata Hideyuki",
     "plain": "Kurata Hideyuki"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "倫理きよ": {
-   "reading": "リンリキ ヨ",
+   "reading": "リンリ キヨ",
+   "ruby": [
+    [
+     "倫",
+     "りん"
+    ],
+    [
+     "理",
+     "り"
+    ],
+    [
+     "きよ",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Rinriki Yo",
-    "double": "Rinriki Yo",
-    "plain": "Rinriki Yo"
+    "macron": "Rinri Kiyo",
+    "double": "Rinri Kiyo",
+    "plain": "Rinri Kiyo"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "傲岸不遜": {
    "reading": "ゴウガン フソン",
@@ -41627,15 +41881,40 @@
    "unverified": true
   },
   "動画投稿少女": {
-   "reading": "ドウガ トウコウ ショウジョ",
+   "reading": "ドウガトウコウショウジョ",
+   "ruby": [
+    [
+     "動",
+     "どう"
+    ],
+    [
+     "画",
+     "が"
+    ],
+    [
+     "投",
+     "とう"
+    ],
+    [
+     "稿",
+     "こう"
+    ],
+    [
+     "少",
+     "しょう"
+    ],
+    [
+     "女",
+     "じょ"
+    ]
+   ],
    "romaji": {
-    "macron": "Dōga Tōkō Shōjo",
-    "double": "Douga Toukou Shoujo",
-    "plain": "Doga Toko Shojo"
+    "macron": "Dōgatōkōshōjo",
+    "double": "Dougatoukoushoujo",
+    "plain": "Dogatokoshojo"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "北尾タキ": {
    "reading": "キタオ タキ",
@@ -41820,16 +42099,21 @@
    "unverified": true
   },
   "南方純": {
-   "reading": "ミナカタ ジュン",
+   "reading": "ミナカタ スナオ",
+   "ruby": [
+    [
+     "南方純",
+     "みなかたすなお"
+    ]
+   ],
    "romaji": {
-    "macron": "Minakata Jun",
-    "double": "Minakata Jun",
-    "plain": "Minakata Jun"
+    "macron": "Minakata Sunao",
+    "double": "Minakata Sunao",
+    "plain": "Minakata Sunao"
    },
    "en": "Sunao Minakata",
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "南瓜かぷちー": {
    "reading": "ミナミウリ カプチー",
@@ -41857,14 +42141,27 @@
   },
   "南部くまこ": {
    "reading": "ナンブ クマコ",
+   "ruby": [
+    [
+     "南",
+     "なん"
+    ],
+    [
+     "部",
+     "ぶ"
+    ],
+    [
+     "くまこ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Nanbu Kumako",
     "double": "Nanbu Kumako",
     "plain": "Nanbu Kumako"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "南郷晃太": {
    "reading": "ナンゴウ コウタ",
@@ -41891,16 +42188,21 @@
    "reading_basis": "stated"
   },
   "南高春告": {
-   "reading": "ナンコウ ハルツゲ",
+   "reading": "ナダカ ハルツグ",
+   "ruby": [
+    [
+     "南高春告",
+     "なだかはるつぐ"
+    ]
+   ],
    "romaji": {
-    "macron": "Nankō Harutsuge",
-    "double": "Nankou Harutsuge",
-    "plain": "Nanko Harutsuge"
+    "macron": "Nadaka Harutsugu",
+    "double": "Nadaka Harutsugu",
+    "plain": "Nadaka Harutsugu"
    },
    "en": "Harutsugu Nadaka",
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "博": {
    "reading": "ヒロ",
@@ -42090,14 +42392,23 @@
   },
   "古田朋大": {
    "reading": "フルタ トモヒロ",
+   "ruby": [
+    [
+     "古田",
+     "ふるた"
+    ],
+    [
+     "朋大",
+     "ともひろ"
+    ]
+   ],
    "romaji": {
     "macron": "Furuta Tomohiro",
     "double": "Furuta Tomohiro",
     "plain": "Furuta Tomohiro"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "古目印箱": {
    "reading": "フル メジルシ バコ",
@@ -42194,25 +42505,43 @@
   },
   "右腹": {
    "reading": "ミギハラ",
+   "ruby": [
+    [
+     "右",
+     "みぎ"
+    ],
+    [
+     "腹",
+     "はら"
+    ]
+   ],
    "romaji": {
     "macron": "Migihara",
     "double": "Migihara",
     "plain": "Migihara"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "司馬漬け": {
-   "reading": "シバツケ",
+   "reading": "シバズケ",
+   "ruby": [
+    [
+     "司馬漬",
+     "しばず"
+    ],
+    [
+     "け",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Shibatsuke",
-    "double": "Shibatsuke",
-    "plain": "Shibatsuke"
+    "macron": "Shibazuke",
+    "double": "Shibazuke",
+    "plain": "Shibazuke"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "吉富昭仁": {
    "reading": "ヨシトミ アキヒト",
@@ -42328,15 +42657,24 @@
    "unverified": true
   },
   "和ふー": {
-   "reading": "ワ フー",
+   "reading": "ワフー",
+   "ruby": [
+    [
+     "和",
+     "わ"
+    ],
+    [
+     "ふー",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Wa Fū",
-    "double": "Wa Fuu",
-    "plain": "Wa Fu"
+    "macron": "Wafū",
+    "double": "Wafuu",
+    "plain": "Wafu"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "和郷梓": {
    "reading": "カズサト シ",
@@ -42481,14 +42819,23 @@
   },
   "塩こうじ": {
    "reading": "シオコウジ",
+   "ruby": [
+    [
+     "塩",
+     "しお"
+    ],
+    [
+     "こうじ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Shiokōji",
     "double": "Shiokouji",
     "plain": "Shiokoji"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "塩士標": {
    "reading": "シオシ ヒョウ",
@@ -42672,26 +43019,52 @@
    "reading_basis": "stated"
   },
   "夜の羊雲": {
-   "reading": "ヨル ノ ヒツジグモ",
+   "reading": "ヨルノヒツジグモ",
+   "ruby": [
+    [
+     "夜",
+     "よる"
+    ],
+    [
+     "の",
+     null
+    ],
+    [
+     "羊",
+     "ひつじ"
+    ],
+    [
+     "雲",
+     "ぐも"
+    ]
+   ],
    "romaji": {
-    "macron": "Yoru No Hitsujigumo",
-    "double": "Yoru No Hitsujigumo",
-    "plain": "Yoru No Hitsujigumo"
+    "macron": "Yorunohitsujigumo",
+    "double": "Yorunohitsujigumo",
+    "plain": "Yorunohitsujigumo"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "大倉ナタ": {
    "reading": "オオクラ ナタ",
+   "ruby": [
+    [
+     "大倉",
+     "おおくら"
+    ],
+    [
+     "ナタ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Ōkura Nata",
     "double": "Ookura Nata",
     "plain": "Okura Nata"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "大刃堂寿": {
    "reading": "オオバ ドウズ",
@@ -42819,14 +43192,23 @@
   },
   "大鷹シン": {
    "reading": "オオタカ シン",
+   "ruby": [
+    [
+     "大鷹",
+     "おおたか"
+    ],
+    [
+     "シン",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Ōtaka Shin",
     "double": "Ootaka Shin",
     "plain": "Otaka Shin"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "天海杏菜": {
    "reading": "アマミ アンナ",
@@ -42931,15 +43313,20 @@
    "unverified": true
   },
   "娘太丸": {
-   "reading": "ムスメ タマル",
+   "reading": "コタマル",
+   "ruby": [
+    [
+     "娘太丸",
+     "こたまる"
+    ]
+   ],
    "romaji": {
-    "macron": "Musume Tamaru",
-    "double": "Musume Tamaru",
-    "plain": "Musume Tamaru"
+    "macron": "Kotamaru",
+    "double": "Kotamaru",
+    "plain": "Kotamaru"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "宇宙鍋": {
    "reading": "ウチュウ ナベ",
@@ -43282,14 +43669,27 @@
   },
   "小林湖底": {
    "reading": "コバヤシ コテイ",
+   "ruby": [
+    [
+     "小林",
+     "こばやし"
+    ],
+    [
+     "湖",
+     "こ"
+    ],
+    [
+     "底",
+     "てい"
+    ]
+   ],
    "romaji": {
     "macron": "Kobayashi Kotei",
     "double": "Kobayashi Kotei",
     "plain": "Kobayashi Kotei"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "小森モコ": {
    "reading": "コモリ モコ",
@@ -43404,15 +43804,36 @@
    "reading_basis": "stated"
   },
   "尾花沢軒栄": {
-   "reading": "オバナザワケン サカエ",
+   "reading": "オバナザワ ケンエイ",
+   "ruby": [
+    [
+     "尾",
+     "お"
+    ],
+    [
+     "花",
+     "ばな"
+    ],
+    [
+     "沢",
+     "ざわ"
+    ],
+    [
+     "軒",
+     "けん"
+    ],
+    [
+     "栄",
+     "えい"
+    ]
+   ],
    "romaji": {
-    "macron": "Obanazawaken Sakae",
-    "double": "Obanazawaken Sakae",
-    "plain": "Obanazawaken Sakae"
+    "macron": "Obanazawa Ken'ei",
+    "double": "Obanazawa Ken'ei",
+    "plain": "Obanazawa Ken'ei"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "尾野凛": {
    "reading": "オノ リン",
@@ -43596,14 +44017,31 @@
   },
   "岡野く仔": {
    "reading": "オカノ クコ",
+   "ruby": [
+    [
+     "岡",
+     "おか"
+    ],
+    [
+     "野",
+     "の"
+    ],
+    [
+     "く",
+     null
+    ],
+    [
+     "仔",
+     "こ"
+    ]
+   ],
    "romaji": {
     "macron": "Okano Kuko",
     "double": "Okano Kuko",
     "plain": "Okano Kuko"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "岡野トニー": {
    "reading": "オカノ トニー",
@@ -43788,14 +44226,31 @@
   },
   "島崎無印": {
    "reading": "シマザキ ムジルシ",
+   "ruby": [
+    [
+     "島",
+     "しま"
+    ],
+    [
+     "崎",
+     "ざき"
+    ],
+    [
+     "無",
+     "む"
+    ],
+    [
+     "印",
+     "じるし"
+    ]
+   ],
    "romaji": {
     "macron": "Shimazaki Mujirushi",
     "double": "Shimazaki Mujirushi",
     "plain": "Shimazaki Mujirushi"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "嶋原翌": {
    "reading": "シマバラ ヨク",
@@ -43820,15 +44275,24 @@
    "unverified": true
   },
   "川上しをん": {
-   "reading": "カワカミ シヲン",
+   "reading": "カワカミ シオン",
+   "ruby": [
+    [
+     "川上",
+     "かわかみ"
+    ],
+    [
+     "しをん",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Kawakami Shion",
     "double": "Kawakami Shion",
     "plain": "Kawakami Shion"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "川澄圭": {
    "reading": "カワスミ ケイ",
@@ -43842,15 +44306,20 @@
    "unverified": true
   },
   "川田暁生": {
-   "reading": "カワタ アキオ",
+   "reading": "カワダ アキオ",
+   "ruby": [
+    [
+     "川田暁生",
+     "かわだあきお"
+    ]
+   ],
    "romaji": {
-    "macron": "Kawata Akio",
-    "double": "Kawata Akio",
-    "plain": "Kawata Akio"
+    "macron": "Kawada Akio",
+    "double": "Kawada Akio",
+    "plain": "Kawada Akio"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "工藤える": {
    "reading": "クドウ エル",
@@ -44008,15 +44477,20 @@
    "unverified": true
   },
   "彩乃浦助": {
-   "reading": "アヤノ ウラ スケ",
+   "reading": "アヤノ ウラスケ",
+   "ruby": [
+    [
+     "彩乃浦助",
+     "あやのうらすけ"
+    ]
+   ],
    "romaji": {
-    "macron": "Ayano Ura Suke",
-    "double": "Ayano Ura Suke",
-    "plain": "Ayano Ura Suke"
+    "macron": "Ayano Urasuke",
+    "double": "Ayano Urasuke",
+    "plain": "Ayano Urasuke"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "彩島ふう": {
    "reading": "アヤトウフウ",
@@ -44059,15 +44533,20 @@
    "reading_basis": "stated"
   },
   "後谷戸隆": {
-   "reading": "アト タニト タカシ",
+   "reading": "ウシロヤト タカシ",
+   "ruby": [
+    [
+     "後谷戸隆",
+     "うしろやとたかし"
+    ]
+   ],
    "romaji": {
-    "macron": "Ato Tanito Takashi",
-    "double": "Ato Tanito Takashi",
-    "plain": "Ato Tanito Takashi"
+    "macron": "Ushiroyato Takashi",
+    "double": "Ushiroyato Takashi",
+    "plain": "Ushiroyato Takashi"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "得能正太郎": {
    "reading": "トクノウ ショウタロウ",
@@ -44156,48 +44635,72 @@
    "reading_basis": "stated"
   },
   "志瑞祐": {
-   "reading": "ココロザシ ズイ ユウ",
+   "reading": "シミズ ユウ",
+   "ruby": [
+    [
+     "志瑞祐",
+     "しみずゆう"
+    ]
+   ],
    "romaji": {
-    "macron": "Kokorozashi Zui Yū",
-    "double": "Kokorozashi Zui Yuu",
-    "plain": "Kokorozashi Zui Yu"
+    "macron": "Shimizu Yū",
+    "double": "Shimizu Yuu",
+    "plain": "Shimizu Yu"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "志田": {
-   "reading": "シダ",
+   "reading": "サネダ",
+   "ruby": [
+    [
+     "志田",
+     "さねだ"
+    ]
+   ],
    "romaji": {
-    "macron": "Shida",
-    "double": "Shida",
-    "plain": "Shida"
+    "macron": "Saneda",
+    "double": "Saneda",
+    "plain": "Saneda"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "恥谷きゆう": {
-   "reading": "ハジ タニ キユ ウ",
+   "reading": "ハジタニ キユウ",
+   "ruby": [
+    [
+     "恥谷",
+     "はじたに"
+    ],
+    [
+     "きゆう",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Haji Tani Kiyu U",
-    "double": "Haji Tani Kiyu U",
-    "plain": "Haji Tani Kiyu U"
+    "macron": "Hajitani Kiyū",
+    "double": "Hajitani Kiyuu",
+    "plain": "Hajitani Kiyu"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "恵茂田喜々": {
-   "reading": "エモタ キキ",
+   "reading": "エモダ キキ",
+   "ruby": [
+    [
+     "恵茂田喜々",
+     "えもだきき"
+    ]
+   ],
    "romaji": {
-    "macron": "Emota Kiki",
-    "double": "Emota Kiki",
-    "plain": "Emota Kiki"
+    "macron": "Emoda Kiki",
+    "double": "Emoda Kiki",
+    "plain": "Emoda Kiki"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "戌井だいじ": {
    "reading": "イヌイダイジ",
@@ -44253,15 +44756,20 @@
    "reading_basis": "stated"
   },
   "我孫子楽人": {
-   "reading": "アビコ ガクジン",
+   "reading": "アビコ カナト",
+   "ruby": [
+    [
+     "我孫子楽人",
+     "あびこかなと"
+    ]
+   ],
    "romaji": {
-    "macron": "Abiko Gakujin",
-    "double": "Abiko Gakujin",
-    "plain": "Abiko Gakujin"
+    "macron": "Abiko Kanato",
+    "double": "Abiko Kanato",
+    "plain": "Abiko Kanato"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "教祖れい": {
    "reading": "キョウソ レイ",
@@ -44363,15 +44871,20 @@
    "unverified": true
   },
   "新城一": {
-   "reading": "シンシロ イチ",
+   "reading": "シンジョウ ハジメ",
+   "ruby": [
+    [
+     "新城一",
+     "しんじょうはじめ"
+    ]
+   ],
    "romaji": {
-    "macron": "Shinshiro Ichi",
-    "double": "Shinshiro Ichi",
-    "plain": "Shinshiro Ichi"
+    "macron": "Shinjō Hajime",
+    "double": "Shinjou Hajime",
+    "plain": "Shinjo Hajime"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "新太そう": {
    "reading": "アラタソウ",
@@ -44395,25 +44908,43 @@
   },
   "新島あん": {
    "reading": "ニイジマ アン",
+   "ruby": [
+    [
+     "新島",
+     "にいじま"
+    ],
+    [
+     "あん",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Niijima An",
     "double": "Niijima An",
     "plain": "Nijima An"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "日之下あかめ": {
-   "reading": "ヒ ノ シタ アカメ",
+   "reading": "ヒノシタ アカメ",
+   "ruby": [
+    [
+     "日之下",
+     "ひのした"
+    ],
+    [
+     "あかめ",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Hi No Shita Akame",
-    "double": "Hi No Shita Akame",
-    "plain": "Hi No Shita Akame"
+    "macron": "Hinoshita Akame",
+    "double": "Hinoshita Akame",
+    "plain": "Hinoshita Akame"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "日野アラシ": {
    "reading": "ヒノ アラシ",
@@ -44515,14 +45046,27 @@
   },
   "星崎崑": {
    "reading": "ホシザキ コン",
+   "ruby": [
+    [
+     "星",
+     "ほし"
+    ],
+    [
+     "崎",
+     "ざき"
+    ],
+    [
+     "崑",
+     "こん"
+    ]
+   ],
    "romaji": {
     "macron": "Hoshizaki Kon",
     "double": "Hoshizaki Kon",
     "plain": "Hoshizaki Kon"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "星文ろの": {
    "reading": "ホシフミ ロノ",
@@ -44636,14 +45180,23 @@
   },
   "時任せつな": {
    "reading": "トキトウ セツナ",
+   "ruby": [
+    [
+     "時任",
+     "ときとう"
+    ],
+    [
+     "せつな",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Tokitō Setsuna",
     "double": "Tokitou Setsuna",
     "plain": "Tokito Setsuna"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "晩野": {
    "reading": "バンノ",
@@ -44753,26 +45306,44 @@
    "reading_basis": "stated"
   },
   "月並甲介": {
-   "reading": "ツキナミ コウ スケ",
+   "reading": "ツキナミ コウスケ",
+   "ruby": [
+    [
+     "月並甲介",
+     "つきなみこうすけ"
+    ]
+   ],
    "romaji": {
-    "macron": "Tsukinami Kō Suke",
-    "double": "Tsukinami Kou Suke",
-    "plain": "Tsukinami Ko Suke"
+    "macron": "Tsukinami Kōsuke",
+    "double": "Tsukinami Kousuke",
+    "plain": "Tsukinami Kosuke"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "月夜涙": {
-   "reading": "ツキヨ   ナミダ",
+   "reading": "ツキヨ ルイ",
+   "ruby": [
+    [
+     "月夜",
+     "つ"
+    ],
+    [
+     " ",
+     null
+    ],
+    [
+     "涙",
+     "きよるい"
+    ]
+   ],
    "romaji": {
-    "macron": "Tsukiyo Namida",
-    "double": "Tsukiyo Namida",
-    "plain": "Tsukiyo Namida"
+    "macron": "Tsukiyo Rui",
+    "double": "Tsukiyo Rui",
+    "plain": "Tsukiyo Rui"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "月足透水": {
    "reading": "ツキアシ トオミ",
@@ -44834,14 +45405,23 @@
   },
   "望月けい": {
    "reading": "モチヅキ ケイ",
+   "ruby": [
+    [
+     "望月",
+     "もちづき"
+    ],
+    [
+     "けい",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Mochizuki Kei",
     "double": "Mochizuki Kei",
     "plain": "Mochizuki Kei"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "朝井いしう": {
    "reading": "アサイ イシ ウ",
@@ -44924,15 +45504,28 @@
    "reading_basis": "stated"
   },
   "朝霧咲": {
-   "reading": "アサギリ サキ",
+   "reading": "アサギリ サク",
+   "ruby": [
+    [
+     "朝",
+     "あさ"
+    ],
+    [
+     "霧",
+     "ぎり"
+    ],
+    [
+     "咲",
+     "さく"
+    ]
+   ],
    "romaji": {
-    "macron": "Asagiri Saki",
-    "double": "Asagiri Saki",
-    "plain": "Asagiri Saki"
+    "macron": "Asagiri Saku",
+    "double": "Asagiri Saku",
+    "plain": "Asagiri Saku"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "木村享平": {
    "reading": "キムラ キョウヘイ",
@@ -44992,14 +45585,23 @@
   },
   "本間リョウタ": {
    "reading": "ホンマ リョウタ",
+   "ruby": [
+    [
+     "本間",
+     "ほんま"
+    ],
+    [
+     "リョウタ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Honma Ryōta",
     "double": "Honma Ryouta",
     "plain": "Honma Ryota"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "朱子すず": {
    "reading": "アケコ スズ",
@@ -45022,15 +45624,28 @@
    "reading_basis": "stated"
   },
   "朱白あおい": {
-   "reading": "シュ ハク アオイ",
+   "reading": "アカシロ アオイ",
+   "ruby": [
+    [
+     "朱",
+     "あか"
+    ],
+    [
+     "白",
+     "しろ"
+    ],
+    [
+     "あおい",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Shu Haku Aoi",
-    "double": "Shu Haku Aoi",
-    "plain": "Shu Haku Aoi"
+    "macron": "Akashiro Aoi",
+    "double": "Akashiro Aoi",
+    "plain": "Akashiro Aoi"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "杉谷ユカリ": {
    "reading": "スギヤ ユカリ",
@@ -45147,15 +45762,20 @@
    "reading_basis": "stated"
   },
   "東方Project": {
-   "reading": "トウホウ Project",
+   "reading": "トウホウプロジェクト",
+   "ruby": [
+    [
+     "東方Project",
+     "とうほうぷろじぇくと"
+    ]
+   ],
    "romaji": {
-    "macron": "Tōhō Project",
-    "double": "Touhou Project",
-    "plain": "Toho Project"
+    "macron": "Tōhōpurojekuto",
+    "double": "Touhoupurojekuto",
+    "plain": "Tohopurojekuto"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "東河みそ": {
    "reading": "ヒガシカワ ミソ",
@@ -45272,15 +45892,20 @@
    "reading_basis": "stated"
   },
   "林星悟": {
-   "reading": "ハヤシ ホシ サトル",
+   "reading": "ハヤシ ショウゴ",
+   "ruby": [
+    [
+     "林星悟",
+     "はやししょうご"
+    ]
+   ],
    "romaji": {
-    "macron": "Hayashi Hoshi Satoru",
-    "double": "Hayashi Hoshi Satoru",
-    "plain": "Hayashi Hoshi Satoru"
+    "macron": "Hayashi Shōgo",
+    "double": "Hayashi Shougo",
+    "plain": "Hayashi Shogo"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "柊ゆたか": {
    "reading": "ヒイラギ ユタカ",
@@ -45303,26 +45928,44 @@
    "reading_basis": "stated"
   },
   "柚原もけ": {
-   "reading": "ユハラ モ ケ",
+   "reading": "ユズハラ モケ",
+   "ruby": [
+    [
+     "柚",
+     "ゆず"
+    ],
+    [
+     "原",
+     "はら"
+    ],
+    [
+     "もけ",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Yuhara Mo Ke",
-    "double": "Yuhara Mo Ke",
-    "plain": "Yuhara Mo Ke"
+    "macron": "Yuzuhara Moke",
+    "double": "Yuzuhara Moke",
+    "plain": "Yuzuhara Moke"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "柚子桃": {
-   "reading": "ユズ モモ",
+   "reading": "ユズモモ",
+   "ruby": [
+    [
+     "柚子桃",
+     "ゆずもも"
+    ]
+   ],
    "romaji": {
-    "macron": "Yuzu Momo",
-    "double": "Yuzu Momo",
-    "plain": "Yuzu Momo"
+    "macron": "Yuzumomo",
+    "double": "Yuzumomo",
+    "plain": "Yuzumomo"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "柚木涼太": {
    "reading": "ユズキ リョウタ",
@@ -45355,6 +45998,16 @@
   },
   "柳井伸彦": {
    "reading": "ヤナイ ノブヒコ",
+   "ruby": [
+    [
+     "柳井",
+     "やない"
+    ],
+    [
+     "伸彦",
+     "のぶひこ"
+    ]
+   ],
    "romaji": {
     "macron": "Yanai Nobuhiko",
     "double": "Yanai Nobuhiko",
@@ -45362,8 +46015,7 @@
    },
    "en": "Nobuhiko Yanai",
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "柴田康平": {
    "reading": "シバタ コウヘイ",
@@ -45507,25 +46159,51 @@
   },
   "桃田ロウ": {
    "reading": "モモタ ロウ",
+   "ruby": [
+    [
+     "桃",
+     "もも"
+    ],
+    [
+     "田",
+     "た"
+    ],
+    [
+     "ロウ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Momota Rō",
     "double": "Momota Rou",
     "plain": "Momota Ro"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "桐原のん": {
    "reading": "キリハラ ノン",
+   "ruby": [
+    [
+     "桐",
+     "きり"
+    ],
+    [
+     "原",
+     "はら"
+    ],
+    [
+     "のん",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Kirihara Non",
     "double": "Kirihara Non",
     "plain": "Kirihara Non"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "桐原小鳥": {
    "reading": "キリハラ コトリ",
@@ -45649,15 +46327,28 @@
    "reading_basis": "stated"
   },
   "桜河ゆう": {
-   "reading": "サクラガワ ユウ",
+   "reading": "オウカワ ユウ",
+   "ruby": [
+    [
+     "桜",
+     "おう"
+    ],
+    [
+     "河",
+     "かわ"
+    ],
+    [
+     "ゆう",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Sakuragawa Yū",
-    "double": "Sakuragawa Yuu",
-    "plain": "Sakuragawa Yu"
+    "macron": "Ōkawa Yū",
+    "double": "Oukawa Yuu",
+    "plain": "Okawa Yu"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "梨尾": {
    "reading": "ナシオ",
@@ -45794,14 +46485,27 @@
   },
   "森山大輔": {
    "reading": "モリヤマ ダイスケ",
+   "ruby": [
+    [
+     "森",
+     "もり"
+    ],
+    [
+     "山",
+     "やま"
+    ],
+    [
+     "大輔",
+     "だいすけ"
+    ]
+   ],
    "romaji": {
     "macron": "Moriyama Daisuke",
     "double": "Moriyama Daisuke",
     "plain": "Moriyama Daisuke"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "森島明子": {
    "reading": "モリシマ アキコ",
@@ -46491,15 +47195,24 @@
    "reading_basis": "stated"
   },
   "泉乃せん": {
-   "reading": "ミズノ セン",
+   "reading": "イズミノ セン",
+   "ruby": [
+    [
+     "泉乃",
+     "いずみの"
+    ],
+    [
+     "せん",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Mizuno Sen",
-    "double": "Mizuno Sen",
-    "plain": "Mizuno Sen"
+    "macron": "Izumino Sen",
+    "double": "Izumino Sen",
+    "plain": "Izumino Sen"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "波": {
    "reading": "ナミ",
@@ -46514,25 +47227,43 @@
   },
   "波多ヒロ": {
    "reading": "ハタ ヒロ",
+   "ruby": [
+    [
+     "波",
+     "は"
+    ],
+    [
+     "多",
+     "た"
+    ],
+    [
+     "ヒロ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Hata Hiro",
     "double": "Hata Hiro",
     "plain": "Hata Hiro"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "洲央": {
-   "reading": "シマ ヒロシ",
+   "reading": "スオウ",
+   "ruby": [
+    [
+     "洲央",
+     "すおう"
+    ]
+   ],
    "romaji": {
-    "macron": "Shima Hiroshi",
-    "double": "Shima Hiroshi",
-    "plain": "Shima Hiroshi"
+    "macron": "Suō",
+    "double": "Suou",
+    "plain": "Suo"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "流出": {
    "reading": "リュウシュツ",
@@ -46582,14 +47313,23 @@
   },
   "浅野龍哉": {
    "reading": "アサノ タツヤ",
+   "ruby": [
+    [
+     "浅野",
+     "あさの"
+    ],
+    [
+     "龍哉",
+     "たつや"
+    ]
+   ],
    "romaji": {
     "macron": "Asano Tatsuya",
     "double": "Asano Tatsuya",
     "plain": "Asano Tatsuya"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "浜弓場双": {
    "reading": "ハマユミバ ソウ",
@@ -46700,14 +47440,19 @@
   },
   "深津": {
    "reading": "フカツ",
+   "ruby": [
+    [
+     "深津",
+     "ふかつ"
+    ]
+   ],
    "romaji": {
     "macron": "Fukatsu",
     "double": "Fukatsu",
     "plain": "Fukatsu"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "深海紺": {
    "reading": "フカウミ コン",
@@ -46760,14 +47505,23 @@
   },
   "渡辺零": {
    "reading": "ワタナベ レイ",
+   "ruby": [
+    [
+     "渡辺",
+     "わたなべ"
+    ],
+    [
+     "零",
+     "れい"
+    ]
+   ],
    "romaji": {
     "macron": "Watanabe Rei",
     "double": "Watanabe Rei",
     "plain": "Watanabe Rei"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "湖山智月": {
    "reading": "コザン チゲツ",
@@ -46792,15 +47546,20 @@
    "unverified": true
   },
   "潮一葉": {
-   "reading": "ウシオ イチヨウ",
+   "reading": "ウシオ ヒトハ",
+   "ruby": [
+    [
+     "潮一葉",
+     "うしおひとは"
+    ]
+   ],
    "romaji": {
-    "macron": "Ushio Ichiyō",
-    "double": "Ushio Ichiyou",
-    "plain": "Ushio Ichiyo"
+    "macron": "Ushio Hitoha",
+    "double": "Ushio Hitoha",
+    "plain": "Ushio Hitoha"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "濱田みふみ": {
    "reading": "ハマダ ミフミ",
@@ -46913,15 +47672,32 @@
    "reading_basis": "stated"
   },
   "煮ル果実": {
-   "reading": "ニ ル カジツ",
+   "reading": "ニル カジツ",
+   "ruby": [
+    [
+     "煮",
+     "に"
+    ],
+    [
+     "ル",
+     null
+    ],
+    [
+     "果",
+     "か"
+    ],
+    [
+     "実",
+     "じつ"
+    ]
+   ],
    "romaji": {
-    "macron": "Ni Ru Kajitsu",
-    "double": "Ni Ru Kajitsu",
-    "plain": "Ni Ru Kajitsu"
+    "macron": "Niru Kajitsu",
+    "double": "Niru Kajitsu",
+    "plain": "Niru Kajitsu"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "爽穂詩三駈": {
    "reading": "アキオ シ サン ク",
@@ -46986,14 +47762,23 @@
   },
   "犬甘あんず": {
    "reading": "イヌカイ アンズ",
+   "ruby": [
+    [
+     "犬甘",
+     "いぬかい"
+    ],
+    [
+     "あんず",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Inukai Anzu",
     "double": "Inukai Anzu",
     "plain": "Inukai Anzu"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "狐ヶ崎": {
    "reading": "キツネガサキ",
@@ -47008,16 +47793,25 @@
    "unverified": true
   },
   "狐印": {
-   "reading": "キツネ シルシ",
+   "reading": "コイン",
+   "ruby": [
+    [
+     "狐",
+     "こ"
+    ],
+    [
+     "印",
+     "いん"
+    ]
+   ],
    "romaji": {
-    "macron": "Kitsune Shirushi",
-    "double": "Kitsune Shirushi",
-    "plain": "Kitsune Shirushi"
+    "macron": "Koin",
+    "double": "Koin",
+    "plain": "Koin"
    },
    "en": "Koin",
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "狗之餌廃狼": {
    "reading": "イヌノエサ ハイロウ",
@@ -47055,15 +47849,24 @@
    "unverified": true
   },
   "猫屋敷ぷしお": {
-   "reading": "ネコヤシキプ シオ",
+   "reading": "ネコヤシキ プシオ",
+   "ruby": [
+    [
+     "猫屋敷",
+     "ねこやしき"
+    ],
+    [
+     "ぷしお",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Nekoyashikipu Shio",
-    "double": "Nekoyashikipu Shio",
-    "plain": "Nekoyashikipu Shio"
+    "macron": "Nekoyashiki Pushio",
+    "double": "Nekoyashiki Pushio",
+    "plain": "Nekoyashiki Pushio"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "猫柳ユウタ": {
    "reading": "ネコヤナギ ユウタ",
@@ -47149,15 +47952,24 @@
    "reading_basis": "stated"
   },
   "王月よう": {
-   "reading": "オウ ゲツヨウ",
+   "reading": "オウズキ ヨウ",
+   "ruby": [
+    [
+     "王月",
+     "おうずき"
+    ],
+    [
+     "よう",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Ō Getsuyō",
-    "double": "Ou Getsuyou",
-    "plain": "O Getsuyo"
+    "macron": "Ōzuki Yō",
+    "double": "Ouzuki You",
+    "plain": "Ozuki Yo"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "玖珂ツニヤ": {
    "reading": "クガ ツニヤ",
@@ -47181,14 +47993,23 @@
   },
   "珠樹みつね": {
    "reading": "タマキ ミツネ",
+   "ruby": [
+    [
+     "珠樹",
+     "たまき"
+    ],
+    [
+     "みつね",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Tamaki Mitsune",
     "double": "Tamaki Mitsune",
     "plain": "Tamaki Mitsune"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "琢磨美友": {
    "reading": "タクマ ミユウ",
@@ -47289,25 +48110,51 @@
   },
   "田中まさみ": {
    "reading": "タナカ マサミ",
+   "ruby": [
+    [
+     "田",
+     "た"
+    ],
+    [
+     "中",
+     "なか"
+    ],
+    [
+     "まさみ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Tanaka Masami",
     "double": "Tanaka Masami",
     "plain": "Tanaka Masami"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "田中天": {
    "reading": "タナカ タカシ",
+   "ruby": [
+    [
+     "田",
+     "た"
+    ],
+    [
+     "中",
+     "なか"
+    ],
+    [
+     "天",
+     "たかし"
+    ]
+   ],
    "romaji": {
     "macron": "Tanaka Takashi",
     "double": "Tanaka Takashi",
     "plain": "Tanaka Takashi"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "田中火蛾": {
    "reading": "タナカ カガ",
@@ -47654,15 +48501,20 @@
    "unverified": true
   },
   "矢立肇": {
-   "reading": "ヤタテ ハジメ",
+   "reading": "ヤダテ ハジメ",
+   "ruby": [
+    [
+     "矢立肇",
+     "やだてはじめ"
+    ]
+   ],
    "romaji": {
-    "macron": "Yatate Hajime",
-    "double": "Yatate Hajime",
-    "plain": "Yatate Hajime"
+    "macron": "Yadate Hajime",
+    "double": "Yadate Hajime",
+    "plain": "Yadate Hajime"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "石ト悠良": {
    "reading": "イシト ユラ",
@@ -47754,15 +48606,28 @@
    "reading_basis": "stated"
   },
   "破賀ミチル": {
-   "reading": "ハ ガ ミチル",
+   "reading": "ハガ ミチル",
+   "ruby": [
+    [
+     "破",
+     "は"
+    ],
+    [
+     "賀",
+     "が"
+    ],
+    [
+     "ミチル",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Ha Ga Michiru",
-    "double": "Ha Ga Michiru",
-    "plain": "Ha Ga Michiru"
+    "macron": "Haga Michiru",
+    "double": "Haga Michiru",
+    "plain": "Haga Michiru"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "神戸いちご": {
    "reading": "コウベ イチゴ",
@@ -47797,15 +48662,20 @@
    "reading_basis": "stated"
   },
   "神無月羽兎": {
-   "reading": "カンナヅキワ ウサギ",
+   "reading": "カンナヅキ ハト",
+   "ruby": [
+    [
+     "神無月羽兎",
+     "かんなづきはと"
+    ]
+   ],
    "romaji": {
-    "macron": "Kannazukiwa Usagi",
-    "double": "Kannazukiwa Usagi",
-    "plain": "Kannazukiwa Usagi"
+    "macron": "Kannazuki Hato",
+    "double": "Kannazuki Hato",
+    "plain": "Kannazuki Hato"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "神谷回る": {
    "reading": "カミヤ マワル",
@@ -47897,14 +48767,23 @@
   },
   "空山トキ": {
    "reading": "ソラヤマ トキ",
+   "ruby": [
+    [
+     "空山",
+     "そらやま"
+    ],
+    [
+     "トキ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Sorayama Toki",
     "double": "Sorayama Toki",
     "plain": "Sorayama Toki"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "空木帆子": {
    "reading": "ウツギ ホコ",
@@ -48057,16 +48936,32 @@
    "reading_basis": "stated"
   },
   "笹塔五郎": {
-   "reading": "ササ トウ ゴロウ",
+   "reading": "ササ トウゴロウ",
+   "ruby": [
+    [
+     "笹",
+     "ささ"
+    ],
+    [
+     "塔",
+     "とう"
+    ],
+    [
+     "五",
+     "ご"
+    ],
+    [
+     "郎",
+     "ろう"
+    ]
+   ],
    "romaji": {
-    "macron": "Sasa Tō Gorō",
-    "double": "Sasa Tou Gorou",
-    "plain": "Sasa To Goro"
+    "macron": "Sasa Tōgorō",
+    "double": "Sasa Tougorou",
+    "plain": "Sasa Togoro"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true,
-   "uncertain": true
+   "reading_basis": "stated"
   },
   "筒井いつき": {
    "reading": "ツツイ イツキ",
@@ -48094,14 +48989,27 @@
   },
   "筒井テツ": {
    "reading": "ツツイ テツ",
+   "ruby": [
+    [
+     "筒",
+     "つつ"
+    ],
+    [
+     "井",
+     "い"
+    ],
+    [
+     "テツ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Tsutsui Tetsu",
     "double": "Tsutsui Tetsu",
     "plain": "Tsutsui Tetsu"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "箕田海道": {
    "reading": "ミノダ カイドウ",
@@ -48167,14 +49075,23 @@
   },
   "米田タロウ": {
    "reading": "ヨネダ タロウ",
+   "ruby": [
+    [
+     "米田",
+     "よねだ"
+    ],
+    [
+     "タロウ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Yoneda Tarō",
     "double": "Yoneda Tarou",
     "plain": "Yoneda Taro"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "米麹ぽっぽ": {
    "reading": "コメコウジ ポッポ",
@@ -48189,14 +49106,23 @@
   },
   "糀もろみ": {
    "reading": "コウジ モロミ",
+   "ruby": [
+    [
+     "糀",
+     "こうじ"
+    ],
+    [
+     "もろみ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Kōji Moromi",
     "double": "Kouji Moromi",
     "plain": "Koji Moromi"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "純玲": {
    "reading": "スミレ",
@@ -48210,15 +49136,24 @@
    "unverified": true
   },
   "紗嶋": {
-   "reading": "シャ シマ",
+   "reading": "サジマ",
+   "ruby": [
+    [
+     "紗",
+     "さ"
+    ],
+    [
+     "嶋",
+     "じま"
+    ]
+   ],
    "romaji": {
-    "macron": "Sha Shima",
-    "double": "Sha Shima",
-    "plain": "Sha Shima"
+    "macron": "Sajima",
+    "double": "Sajima",
+    "plain": "Sajima"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "紫のあ": {
    "reading": "シノア",
@@ -48301,6 +49236,20 @@
   },
   "絵本奈央": {
    "reading": "エモト ナオ",
+   "ruby": [
+    [
+     "絵",
+     "え"
+    ],
+    [
+     "本",
+     "もと"
+    ],
+    [
+     "奈央",
+     "なお"
+    ]
+   ],
    "romaji": {
     "macron": "Emoto Nao",
     "double": "Emoto Nao",
@@ -48308,8 +49257,7 @@
    },
    "en": "Nao Emoto",
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "絵茶漬け": {
    "reading": "エチャズケ",
@@ -48465,47 +49413,91 @@
   },
   "羽柴実里": {
    "reading": "ハシバ ミサト",
+   "ruby": [
+    [
+     "羽",
+     "は"
+    ],
+    [
+     "柴",
+     "しば"
+    ],
+    [
+     "実",
+     "み"
+    ],
+    [
+     "里",
+     "さと"
+    ]
+   ],
    "romaji": {
     "macron": "Hashiba Misato",
     "double": "Hashiba Misato",
     "plain": "Hashiba Misato"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "羽流木はない": {
-   "reading": "ハル キ ワ ナイ",
+   "reading": "ワルギ ハナイ",
+   "ruby": [
+    [
+     "羽流木",
+     "わるぎ"
+    ],
+    [
+     "はない",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Haru Ki Wa Nai",
-    "double": "Haru Ki Wa Nai",
-    "plain": "Haru Ki Wa Nai"
+    "macron": "Warugi Hanai",
+    "double": "Warugi Hanai",
+    "plain": "Warugi Hanai"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "羽田宇佐": {
-   "reading": "ハタ   ウサ",
+   "reading": "ハネダ ウサ",
+   "ruby": [
+    [
+     "羽田",
+     "は"
+    ],
+    [
+     " ",
+     null
+    ],
+    [
+     "宇佐",
+     "ねだうさ"
+    ]
+   ],
    "romaji": {
-    "macron": "Hata Usa",
-    "double": "Hata Usa",
-    "plain": "Hata Usa"
+    "macron": "Haneda Usa",
+    "double": "Haneda Usa",
+    "plain": "Haneda Usa"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "羽田遼亮": {
-   "reading": "ハタ リョウ リョウ",
+   "reading": "ハタ リョウスケ",
+   "ruby": [
+    [
+     "羽田遼亮",
+     "はたりょうすけ"
+    ]
+   ],
    "romaji": {
-    "macron": "Hata Ryō Ryō",
-    "double": "Hata Ryou Ryou",
-    "plain": "Hata Ryo Ryo"
+    "macron": "Hata Ryōsuke",
+    "double": "Hata Ryousuke",
+    "plain": "Hata Ryosuke"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "羽田遼亮中島零潮一葉赤衣丸歩郎": {
    "reading": "ハタ リョウスケ / ナカジマ レイ / ウシオ ヒトハ / アカイ マルボロウ",
@@ -48559,15 +49551,24 @@
    "unverified": true
   },
   "耳式": {
-   "reading": "ジ シキ",
+   "reading": "ミミシキ",
+   "ruby": [
+    [
+     "耳",
+     "みみ"
+    ],
+    [
+     "式",
+     "しき"
+    ]
+   ],
    "romaji": {
-    "macron": "Ji Shiki",
-    "double": "Ji Shiki",
-    "plain": "Ji Shiki"
+    "macron": "Mimishiki",
+    "double": "Mimishiki",
+    "plain": "Mimishiki"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "肉丸": {
    "reading": "ニクマル",
@@ -48599,14 +49600,23 @@
   },
   "能代リョウ": {
    "reading": "ノシロ リョウ",
+   "ruby": [
+    [
+     "能代",
+     "のしろ"
+    ],
+    [
+     "リョウ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Noshiro Ryō",
     "double": "Noshiro Ryou",
     "plain": "Noshiro Ryo"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "臓内ニガツ": {
    "reading": "クラウチ ニガツ",
@@ -48630,14 +49640,27 @@
   },
   "臼井ともみ": {
    "reading": "ウスイ トモミ",
+   "ruby": [
+    [
+     "臼",
+     "うす"
+    ],
+    [
+     "井",
+     "い"
+    ],
+    [
+     "ともみ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Usui Tomomi",
     "double": "Usui Tomomi",
     "plain": "Usui Tomomi"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "舟本絵理歌": {
    "reading": "フナモト エリカ",
@@ -48697,28 +49720,54 @@
    "reading_basis": "stated"
   },
   "花ヶ田": {
-   "reading": "ハナ ガ タ",
+   "reading": "ハナガタ",
+   "ruby": [
+    [
+     "花",
+     "はな"
+    ],
+    [
+     "ヶ",
+     null
+    ],
+    [
+     "田",
+     "た"
+    ]
+   ],
    "romaji": {
-    "macron": "Hana Ga Ta",
-    "double": "Hana Ga Ta",
-    "plain": "Hana Ga Ta"
+    "macron": "Hanagata",
+    "double": "Hanagata",
+    "plain": "Hanagata"
    },
    "en": "Hanagata",
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "花宮みぃ": {
-   "reading": "ハナミヤミ ィ",
+   "reading": "ハナミヤ ミィ",
+   "ruby": [
+    [
+     "花",
+     "はな"
+    ],
+    [
+     "宮",
+     "みや"
+    ],
+    [
+     "みぃ",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Hanamiyami I",
-    "double": "Hanamiyami I",
-    "plain": "Hanamiyami I"
+    "macron": "Hanamiya Mii",
+    "double": "Hanamiya Mii",
+    "plain": "Hanamiya Mii"
    },
    "en": "Mee Hanamiya",
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "花影あると": {
    "reading": "ハナカゲ アルト",
@@ -48982,14 +50031,23 @@
   },
   "菅原こゆび": {
    "reading": "スガワラ コユビ",
+   "ruby": [
+    [
+     "菅原",
+     "すがわら"
+    ],
+    [
+     "こゆび",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Sugawara Koyubi",
     "double": "Sugawara Koyubi",
     "plain": "Sugawara Koyubi"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "菅野マナミ": {
    "reading": "スガノ マナミ",
@@ -49089,14 +50147,27 @@
   },
   "蔵王大志": {
    "reading": "ザオウ タイシ",
+   "ruby": [
+    [
+     "蔵王",
+     "ざおう"
+    ],
+    [
+     "大",
+     "たい"
+    ],
+    [
+     "志",
+     "し"
+    ]
+   ],
    "romaji": {
     "macron": "Zaō Taishi",
     "double": "Zaou Taishi",
     "plain": "Zao Taishi"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "薊瑞貴": {
    "reading": "アザミ ミズキ",
@@ -49133,14 +50204,23 @@
   },
   "藤居にこ": {
    "reading": "フジイ ニコ",
+   "ruby": [
+    [
+     "藤居",
+     "ふじい"
+    ],
+    [
+     "にこ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Fujii Niko",
     "double": "Fujii Niko",
     "plain": "Fuji Niko"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "藤崎ろと": {
    "reading": "フジサキ ロト",
@@ -49167,15 +50247,32 @@
    "reading_basis": "stated"
   },
   "藤川よつ葉": {
-   "reading": "フジカワ ヨツハ",
+   "reading": "フジカワ ヨツバ",
+   "ruby": [
+    [
+     "藤",
+     "ふじ"
+    ],
+    [
+     "川",
+     "かわ"
+    ],
+    [
+     "よつ",
+     null
+    ],
+    [
+     "葉",
+     "ば"
+    ]
+   ],
    "romaji": {
-    "macron": "Fujikawa Yotsuha",
-    "double": "Fujikawa Yotsuha",
-    "plain": "Fujikawa Yotsuha"
+    "macron": "Fujikawa Yotsuba",
+    "double": "Fujikawa Yotsuba",
+    "plain": "Fujikawa Yotsuba"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "藤本れもち": {
    "reading": "フジモト レモチ",
@@ -49369,26 +50466,52 @@
    "reading_basis": "stated"
   },
   "蛙田あめこ": {
-   "reading": "カエダ ア メコ",
+   "reading": "カエルダ アメコ",
+   "ruby": [
+    [
+     "蛙",
+     "かえる"
+    ],
+    [
+     "田",
+     "だ"
+    ],
+    [
+     "あめこ",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Kaeda A Meko",
-    "double": "Kaeda A Meko",
-    "plain": "Kaeda A Meko"
+    "macron": "Kaeruda Ameko",
+    "double": "Kaeruda Ameko",
+    "plain": "Kaeruda Ameko"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "蛙田アメコ": {
-   "reading": "カエダ アメコ",
+   "reading": "カエルダ アメコ",
+   "ruby": [
+    [
+     "蛙",
+     "かえる"
+    ],
+    [
+     "田",
+     "だ"
+    ],
+    [
+     "アメコ",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Kaeda Ameko",
-    "double": "Kaeda Ameko",
-    "plain": "Kaeda Ameko"
+    "macron": "Kaeruda Ameko",
+    "double": "Kaeruda Ameko",
+    "plain": "Kaeruda Ameko"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "蝦夷リス": {
    "reading": "エゾ リス",
@@ -49444,16 +50567,28 @@
    "reading_basis": "stated"
   },
   "裏海マユ": {
-   "reading": "ウラカイ マユ",
+   "reading": "リガイ マユ",
+   "ruby": [
+    [
+     "裏",
+     "り"
+    ],
+    [
+     "海",
+     "がい"
+    ],
+    [
+     "マユ",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Urakai Mayu",
-    "double": "Urakai Mayu",
-    "plain": "Urakai Mayu"
+    "macron": "Rigai Mayu",
+    "double": "Rigai Mayu",
+    "plain": "Rigai Mayu"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true,
-   "uncertain": true
+   "reading_basis": "stated"
   },
   "西ひるめ": {
    "reading": "ニシ ヒルメ",
@@ -49526,15 +50661,24 @@
    "reading_basis": "stated"
   },
   "西馬ごめゆき": {
-   "reading": "サイバ ゴメ ユキ",
+   "reading": "ニシマ ゴメユキ",
+   "ruby": [
+    [
+     "西馬",
+     "にしま"
+    ],
+    [
+     "ごめゆき",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Saiba Gome Yuki",
-    "double": "Saiba Gome Yuki",
-    "plain": "Saiba Gome Yuki"
+    "macron": "Nishima Gomeyuki",
+    "double": "Nishima Gomeyuki",
+    "plain": "Nishima Gomeyuki"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "観乃ふみ": {
    "reading": "カンノ フミ",
@@ -49557,14 +50701,7 @@
    "reading_basis": "stated"
   },
   "角川青羽": {
-   "reading": "カドカワ アオバ",
-   "romaji": {
-    "macron": "Kadokawa Aoba",
-    "double": "Kadokawa Aoba",
-    "plain": "Kadokawa Aoba"
-   },
    "basis": "romaji",
-   "reading_basis": "analyser",
    "unverified": true
   },
   "誇大逸": {
@@ -49840,15 +50977,24 @@
    "reading_basis": "stated"
   },
   "遠野めざ": {
-   "reading": "トオノメザ",
+   "reading": "トオノ メザ",
+   "ruby": [
+    [
+     "遠野",
+     "とおの"
+    ],
+    [
+     "めざ",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Tōnomeza",
-    "double": "Toonomeza",
-    "plain": "Tonomeza"
+    "macron": "Tōno Meza",
+    "double": "Toono Meza",
+    "plain": "Tono Meza"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "遮二無二": {
    "reading": "シャニムニ",
@@ -50078,15 +51224,24 @@
    "reading_basis": "stated"
   },
   "鈴音れな": {
-   "reading": "スズネ レナ",
+   "reading": "スズノネ レナ",
+   "ruby": [
+    [
+     "鈴音",
+     "すずのね"
+    ],
+    [
+     "れな",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Suzune Rena",
-    "double": "Suzune Rena",
-    "plain": "Suzune Rena"
+    "macron": "Suzunone Rena",
+    "double": "Suzunone Rena",
+    "plain": "Suzunone Rena"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "鉄一": {
    "reading": "テツカズ",
@@ -50120,27 +51275,40 @@
    "reading_basis": "stated"
   },
   "銃爺": {
-   "reading": "ジュウヤ",
+   "reading": "ガンジイ",
+   "ruby": [
+    [
+     "銃爺",
+     "がんじい"
+    ]
+   ],
    "romaji": {
-    "macron": "Jūya",
-    "double": "Juuya",
-    "plain": "Juya"
+    "macron": "Ganjii",
+    "double": "Ganjii",
+    "plain": "Ganji"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "錫江": {
-   "reading": "スズコウ",
+   "reading": "スズエ",
+   "ruby": [
+    [
+     "錫",
+     "すず"
+    ],
+    [
+     "江",
+     "え"
+    ]
+   ],
    "romaji": {
-    "macron": "Suzukō",
-    "double": "Suzukou",
-    "plain": "Suzuko"
+    "macron": "Suzue",
+    "double": "Suzue",
+    "plain": "Suzue"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true,
-   "uncertain": true
+   "reading_basis": "stated"
   },
   "鍵穴": {
    "reading": "カギアナ",
@@ -50236,26 +51404,64 @@
    "reading_basis": "stated"
   },
   "阿羅本景": {
-   "reading": "アラ モトカゲ",
+   "reading": "アラモト ケイ",
+   "ruby": [
+    [
+     "阿",
+     "あ"
+    ],
+    [
+     "羅",
+     "ら"
+    ],
+    [
+     "本",
+     "もと"
+    ],
+    [
+     "景",
+     "けい"
+    ]
+   ],
    "romaji": {
-    "macron": "Ara Motokage",
-    "double": "Ara Motokage",
-    "plain": "Ara Motokage"
+    "macron": "Aramoto Kei",
+    "double": "Aramoto Kei",
+    "plain": "Aramoto Kei"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "陣ノ内康暉": {
    "reading": "ジンノウチ コウキ",
+   "ruby": [
+    [
+     "陣",
+     "じん"
+    ],
+    [
+     "ノ",
+     null
+    ],
+    [
+     "内",
+     "うち"
+    ],
+    [
+     "康",
+     "こう"
+    ],
+    [
+     "暉",
+     "き"
+    ]
+   ],
    "romaji": {
     "macron": "Jinnōchi Kōki",
     "double": "Jinnouchi Kouki",
     "plain": "Jinnochi Koki"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "陳巧蓉": {
    "en": "Chen Chiao-Jung",
@@ -50388,15 +51594,32 @@
    "unverified": true
   },
   "電撃G'sマガジン": {
-   "reading": "デンゲキ G ' s マガジン",
+   "reading": "デンゲキジーズマガジン",
+   "ruby": [
+    [
+     "電撃G",
+     "で"
+    ],
+    [
+     "'",
+     null
+    ],
+    [
+     "s",
+     "んげきじーず"
+    ],
+    [
+     "マガジン",
+     null
+    ]
+   ],
    "romaji": {
-    "macron": "Dengeki G ' S Magajin",
-    "double": "Dengeki G ' S Magajin",
-    "plain": "Dengeki G ' S Magajin"
+    "macron": "Dengekijīzumagajin",
+    "double": "Dengekijiizumagajin",
+    "plain": "Dengekijizumagajin"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "霞ヨスガ": {
    "reading": "カスミ ヨスガ",
@@ -50410,15 +51633,20 @@
    "unverified": true
   },
   "青乃下": {
-   "reading": "アオ ノ シタ",
+   "reading": "アオノ シモ",
+   "ruby": [
+    [
+     "青乃下",
+     "あおのしも"
+    ]
+   ],
    "romaji": {
-    "macron": "Ao No Shita",
-    "double": "Ao No Shita",
-    "plain": "Ao No Shita"
+    "macron": "Aono Shimo",
+    "double": "Aono Shimo",
+    "plain": "Aono Shimo"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "青木ミズ": {
    "reading": "アオキ ミズ",
@@ -50542,15 +51770,20 @@
    "reading_basis": "stated"
   },
   "駿馬京": {
-   "reading": "シュンバ キョウ",
+   "reading": "シュンメ ケイ",
+   "ruby": [
+    [
+     "駿馬京",
+     "しゅんめけい"
+    ]
+   ],
    "romaji": {
-    "macron": "Shunba Kyō",
-    "double": "Shunba Kyou",
-    "plain": "Shunba Kyo"
+    "macron": "Shunme Kei",
+    "double": "Shunme Kei",
+    "plain": "Shunme Kei"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "高橋哲哉": {
    "reading": "タカハシ テツヤ",
@@ -50748,14 +51981,23 @@
   },
   "鴉ぴえろ": {
    "reading": "カラス ピエロ",
+   "ruby": [
+    [
+     "鴉",
+     "からす"
+    ],
+    [
+     "ぴえろ",
+     null
+    ]
+   ],
    "romaji": {
     "macron": "Karasu Piero",
     "double": "Karasu Piero",
     "plain": "Karasu Piero"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "鴻巣覚": {
    "reading": "コウノス サトリ",
@@ -50808,15 +52050,28 @@
    "reading_basis": "stated"
   },
   "黒イ森": {
-   "reading": "クロ イ モリ",
+   "reading": "クロイ モリ",
+   "ruby": [
+    [
+     "黒",
+     "くろ"
+    ],
+    [
+     "イ",
+     null
+    ],
+    [
+     "森",
+     "もり"
+    ]
+   ],
    "romaji": {
-    "macron": "Kuro I Mori",
-    "double": "Kuro I Mori",
-    "plain": "Kuro I Mori"
+    "macron": "Kuroi Mori",
+    "double": "Kuroi Mori",
+    "plain": "Kuroi Mori"
    },
    "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated"
   },
   "黒井真白": {
    "reading": "クロイ マッシロ",
@@ -52645,8 +53900,8 @@
   "98.第92話なのはのれんあいそうだんしつ": "Ch. 98 . Dai 92Wa Na no wa no Ren Ai Sōdanshitsu",
   "99.第93話なにげないひとこと": "Ch. 99 . Dai 93Wa Nanige Nai Hitokoto",
   "9話": "Ch. 9",
-  "Akeo/花宮みぃ/塩こうじ": "Akeo, Hanamiyami I, Shiokōji",
-  "Akeo,花宮みぃ,塩こうじ": "Akeo, Hanamiyami I, Shiokōji",
+  "Akeo/花宮みぃ/塩こうじ": "Akeo, Hanamiya Mii, Shiokōji",
+  "Akeo,花宮みぃ,塩こうじ": "Akeo, Hanamiya Mii, Shiokōji",
   "Areyou\"mine\"?": "Are you \"mine\"?",
   "Ayster/遠井音": "Ayster, Tōi Oto",
   "CHALLENGE10.5": "CHALLENGE10.5",
@@ -52683,8 +53938,8 @@
   "JKとともだちのオカン": "JK to Tomodachi no Okan",
   "JSさんとOLちゃん": "JSsan to OLchan",
   "Killer♡Twinkle~アンチはステージに上がれません♡~": "Killer ♡ Twinkle ~ Anchi wa Sutēji ni Agaremasen ♡ ~",
-  "La-na/佐島勤/石田可奈": "La-na, Sajima Tsutomu, Ishida Kana",
-  "La-na,佐島勤,石田可奈": "La-na, Sajima Tsutomu, Ishida Kana",
+  "La-na/佐島勤/石田可奈": "La-na, Satō Tsutomu, Ishida Kana",
+  "La-na,佐島勤,石田可奈": "La-na, Satō Tsutomu, Ishida Kana",
   "Memory2(前編)": "Memory 2 ( Zenpen )",
   "Memory2(後編)": "Memory 2 ( Kōhen )",
   "Memory3(前編)": "Memory 3 ( Zenpen )",
@@ -52695,13 +53950,13 @@
   "OLVtuberと推しJKちゃん": "OL Vtuber to Oshi JKchan",
   "QueentopiaProject【タテスク】": "Queentopia Project [Tatesuku]",
   "QyootieQ!―麒麟娘と婚約事情―": "Qyootie Q ! — Kirin Musume to Kon'yaku Jijō —",
-  "Ru/宮原都": "Ru, Miyahara To",
+  "Ru/宮原都": "Ru, Miyahara Miyako",
   "SHWD《シュード》": "SHWD <Shūdo>",
   "SSSオフショット89": "SSS Ofushotto 89",
   "SSSオフショット90": "SSS Ofushotto 90",
   "SSSオフショット91": "SSS Ofushotto 91",
   "SSSオフショット92": "SSS Ofushotto 92",
-  "SWAV/アサウラ/西馬ごめゆき": "SWAV, Asaura, Saiba Gome Yuki",
+  "SWAV/アサウラ/西馬ごめゆき": "SWAV, Asaura, Nishima Gomeyuki",
   "SlipStream!": "Slip Stream!",
   "Step.131": "Step.131",
   "Step.132": "Step.132",
@@ -52792,11 +54047,11 @@
   "[連載終了のお知らせ]100日後に×××する女社長と新入社員": "[ Rensai Shūryō no Oshirase ] 100 Nichigo ni x x x Suru Onna Shachō to Shinnyūshain",
   "ep.final(2)": "ep.final(2)",
   "episode:28勝利と契約のグランドフィナーレ": "episode:28, Shōri to Keiyaku no Gurando Fināre",
-  "koko/志瑞祐/遠坂あさぎ": "koko, Kokorozashi Zui Yū, Tōsaka Asagi",
-  "koko,志瑞祐,遠坂あさぎ": "koko, Kokorozashi Zui Yū, Tōsaka Asagi",
+  "koko/志瑞祐/遠坂あさぎ": "koko, Shimizu Yū, Tōsaka Asagi",
+  "koko,志瑞祐,遠坂あさぎ": "koko, Shimizu Yū, Tōsaka Asagi",
   "sasa熊": "Sasa Kuma",
   "track1ストレンジカメレオン(1)": "Track 1 Sutorenji Kamereon ( 1 )",
-  "tsuke/いのり。/花ヶ田": "tsuke, Inori., Hana Ga Ta",
+  "tsuke/いのり。/花ヶ田": "tsuke, Inori., Hanagata",
   "x0o0x_/筒井いつき": "x0o0x_, Tsutsui Itsuki",
   "yrhm百合姫20thアンソロジー【試し読み】": "Yrhm Yuri Hime 20Th Ansorojī [Tameshiyomi]",
   "†でぃすてにぃ・ふれんず†": "† de I Sute Nii, Fu Renzu †",
@@ -52969,7 +54224,7 @@
   "あゆみとあいか1": "Ayumi to Ai Ka 1",
   "あゆみとあいか2": "Ayumi to Ai Ka 2",
   "あらた伊里": "Arata Iri",
-  "あらた伊里/アトハ/狐印": "Arata Iri, Atoha, Kitsune Shirushi",
+  "あらた伊里/アトハ/狐印": "Arata Iri, Atoha, Koin",
   "あらやかわい": "Ara Ya Kawai",
   "あんすこ": "An Suko",
   "あんたが悪い": "Anta ga Warui",
@@ -53097,7 +54352,7 @@
   "さきゅりふぁいす!": "Saki Yuri Faisu !",
   "ささた汐": "Sasata Shio",
   "ささやくように恋を唄う": "Sasayaku Yōni Koi o Utau",
-  "さとうしほ/恵茂田喜々": "Satōshiho, Emota Kiki",
+  "さとうしほ/恵茂田喜々": "Satōshiho, Emoda Kiki",
   "さにぬねの": "Sa ni Nu Ne no",
   "さよなら": "Sayonara",
   "さよならミュージアム": "Sayonara Myūjiamu",
@@ -53144,7 +54399,7 @@
   "その花の名はキラキラ": "Sono Hana no Na wa Kirakira",
   "その4": "Sono Yon",
   "そめちめ": "Some Chime",
-  "そめちめ/洲央": "Somechime, Shima Hiroshi",
+  "そめちめ/洲央": "Somechime, Suō",
   "それが君になる": "Sore ga Kimi ni Naru",
   "それはただの夏の一日": "Sore wa Tada no Natsu no Tsuitachi",
   "たいぼく": "Tai Boku",
@@ -53221,8 +54476,8 @@
   "はなれないよ": "Wa Narenai Yo",
   "はな羽芽": "Hana Ume",
   "はるい駈歩": "Haru I Kakeashi",
-  "ばたっち/星崎崑/志田": "Batatchi, Hoshizaki Kon, Shida",
-  "ばたっち,星崎崑,志田": "Batatchi, Hoshizaki Kon, Shida",
+  "ばたっち/星崎崑/志田": "Batatchi, Hoshizaki Kon, Saneda",
+  "ばたっち,星崎崑,志田": "Batatchi, Hoshizaki Kon, Saneda",
   "ばったん": "Battan",
   "ばっどがーる": "Ba Do Gāru",
   "ぱぺっときゃすと!": "Pa Pettokyasu to!",
@@ -53232,7 +54487,7 @@
   "ひきこまり吸血姫の悶々": "Hikikomari Kyūketsu Hime no Monmon",
   "ひさまくまこ": "Hisa Maku Mako",
   "ひたひたキャット/25年12月期JUMP新世界漫画賞/週刊少年ジャンプ": "Hitahita Kyatto, 25 Nen 12 Gatsu Ki JUMP Shinsekai Manga Shō, Shūkan Shōnen Janpu",
-  "ひつじたかこ,神楽坂淳,紗嶋": "Hitsujitakako, Kagurazaka Atsushi, Sha Shima",
+  "ひつじたかこ,神楽坂淳,紗嶋": "Hitsujitakako, Kagurazaka Atsushi, Sajima",
   "ひとつぶの海": "Hito Tsubu no Umi",
   "ひとりみです": "Hitori Midesu",
   "ひなちゃんが生きてるなら": "Hinachan ga Ikiterunara",
@@ -53260,8 +54515,8 @@
   "ぶり大根": "Buri Daikon",
   "ぷえぶろ": "Pue Buro",
   "ぷらぱ": "Pura Pa",
-  "ぷらぱ/アサクラネル/さわやか鮫肌": "Purapa, Asakuraneru, Sawayaka Samehada",
-  "ぷらぱ,アサクラネル,さわやか鮫肌": "Purapa, Asakuraneru, Sawayaka Samehada",
+  "ぷらぱ/アサクラネル/さわやか鮫肌": "Purapa, Asakuraneru, Sawayakasamehada",
+  "ぷらぱ,アサクラネル,さわやか鮫肌": "Purapa, Asakuraneru, Sawayakasamehada",
   "ぷれいめ~と": "Pureime ~ to",
   "ほうかご再テンセイ!": "Hō Ka Go Sai Tensei!",
   "ほぐして、癒衣さん。": "Hogushite, Ie Koromosan.",
@@ -53292,15 +54547,15 @@
   "みだれた二人のやられめし": "Midareta Futari no Yarare Meshi",
   "みちくさ": "Michikusa",
   "みなみ": "Minami",
-  "みもと/デス山ハナ子": "Mimoto, Desusan Hanako",
-  "みもと,デス山ハナ子": "Mimoto, Desusan Hanako",
+  "みもと/デス山ハナ子": "Mimoto, Desuyama Hanako",
+  "みもと,デス山ハナ子": "Mimoto, Desuyama Hanako",
   "みやしろ": "Miyashiro",
   "みゆきは志津香のとくべつ": "Miyuki wa Shizuka no Tokubetsu",
   "みら": "Mira",
   "むく": "Muku",
   "むちむち漫画家の完全勝利メシ最強ボディで余命も担当編集もぶっ飛ばす!": "Muchimuchi Mangaka no Kanzen Shōri Meshi, Saikyō Bodi de Yomei mo Tantō Henshū mo Buttobasu !",
   "むちゃ": "Mucha",
-  "むとうやすゆき/錫江": "Mutō Yasuyuki, Suzukō",
+  "むとうやすゆき/錫江": "Mutō Yasuyuki, Suzue",
   "めいねー": "Mei Nē",
   "めぐみとあおい1": "Megumi to Aoi 1",
   "めぐみとあおい2": "Megumi to Aoi 2",
@@ -53340,8 +54595,8 @@
   "よわいものクラブ": "Yowai Mono Kurabu",
   "らぶあんどぴーす": "Rabu Ando Pīsu",
   "らぶぶいっ!": "Rabu Bu I!",
-  "りんご水,林星悟,餡こたく": "Ringosui, Hayashi Hoshi Satoru, Ankotaku",
-  "りんご飴サード,川田暁生": "Ringo Ame Sādo, Kawata Akio",
+  "りんご水,林星悟,餡こたく": "Ringosui, Hayashi Shōgo, Ankotaku",
+  "りんご飴サード,川田暁生": "Ringoame Sādo, Kawada Akio",
   "るぅ1mm": "Ru U Ichi Mm",
   "れーこ": "Rē Ko",
   "ろここ": "Ro Koko",
@@ -53370,7 +54625,7 @@
   "アサルトリリィLeagueofGardens-fullbloom-": "Asarutoririi, League, of, Gardens, -full, bloom-",
   "アシダカヲズ": "Ashidakaozu",
   "アジイチ": "Ajiichi",
-  "アジイチ,王月よう": "Ajiichi, Ō Getsuyō",
+  "アジイチ,王月よう": "Ajiichi, Ōzuki Yō",
   "アダとエイヴァ": "Ada to Eiva",
   "アネモネは熱を帯びる": "Anemone wa Netsu o Obiru",
   "アフタヌーンティーはいかがですか?私と先輩の、不純で一途なふたり暮らし": "Afutanūn Tī wa Ikagadesu Ka?, Watashi to Senpai no, Fujunde Ichizuna Futari Kurashi",
@@ -53524,7 +54779,7 @@
   "ストライク・オア・ガター": "Sutoraiku, Oa, Gatā",
   "ストロベリークォーツ": "Sutoroberī Kuōtsu",
   "スピカをつかまえて": "Supika o Tsukamaete",
-  "スメラギ,笹塔五郎,ミユキルリア": "Sumeragi, Sasa Tō Gorō, Miyukiruria",
+  "スメラギ,笹塔五郎,ミユキルリア": "Sumeragi, Sasa Tōgorō, Miyukiruria",
   "スロー・ステップ!": "Surō, Suteppu!",
   "スーサイドエイジ": "Sūsaidoeiji",
   "スーパーナックルお嬢様/25年9月期JUMP新世界漫画賞/週刊少年ジャンプ": "Sūpā Nakkuru Ojōsama, 25 Nen 9 Gatsu Ki JUMP Shinsekai Manga Shō, Shūkan Shōnen Janpu",
@@ -53612,7 +54867,7 @@
   "ヒーローさんと元女幹部さん": "Hīrōsan to Gannyo Kanbusan",
   "ビタースイートナイトシェード": "Bitā Suīto Naito Shēdo",
   "ピアノを弾くカエルたち": "Piano o Hiku Kaerutachi",
-  "ピザ萬/田中まさみ": "Piza Yorozu, Tanaka Masami",
+  "ピザ萬/田中まさみ": "Pizaman, Tanaka Masami",
   "ファイティングガールズ": "Faitingu Gāruzu",
   "ファインダーの先に": "Faindā no Saki ni",
   "ファタールゲーム": "Fatāru Gēmu",
@@ -53717,7 +54972,7 @@
   "一条ヒヨコはピアノだけ": "Ichijō Hiyoko wa Piano Dake",
   "一畳間まんきつ暮らし!": "Ichi Jōkan Mankitsu Kurashi!",
   "七月冬至": "Nana Gatsu Tōji",
-  "七橋楽/半田畔/にゅむ": "Shichi Hashigaku, Handa Hotori, Nyumu",
+  "七橋楽/半田畔/にゅむ": "Nanahashi Raku, Handa Hotori, Nyumu",
   "七福あくび": "Shichifuku Akubi",
   "七路ゆうき": "Nanaro Yūki",
   "七路ゆうき/みかみてれん": "Nanaji Yūki, Mikamiteren",
@@ -53824,7 +55079,7 @@
   "修羅の箱庭": "Shura no Hakoniwa",
   "俵之七十郎": "Tawara no Shichijūrō",
   "倉田英之/森山大輔": "Kurata Hideyuki, Moriyama Daisuke",
-  "倫理きよ,Syousa.,jimao": "Rinriki Yo, Syousa., jimao",
+  "倫理きよ,Syousa.,jimao": "Rinri Kiyo, Syousa., jimao",
   "偏愛至上主義~岩見樹代子作品集~": "Hen'ai Shijō Shugi ~ Iwami Kiyoko Sakuhinshū ~",
   "偽りのマリィゴールド": "Itsuwari no Marii Gōrudo",
   "傲岸不遜": "Gōgan Fuson",
@@ -53874,13 +55129,13 @@
   "半熟女子": "Hanjuku Joshi",
   "南山除妖録": "Nanzan Jo Ayakashiroku",
   "南川めぐる": "Minami Kawa Meguru",
-  "南方純,kiki,キンタ": "Minakata Jun, kiki, Kinta",
+  "南方純,kiki,キンタ": "Minakata Sunao, kiki, Kinta",
   "南瓜かぷちー": "Kabocha Kapu Chī",
   "南部くまこ/春木やちか": "Nanbu Kumako, Haruki Yachi Ka",
   "南部くまこ,春木やちか": "Nanbu Kumako, Haruki Yachi Ka",
   "南郷晃太": "Nangō Kōta",
-  "南高春告/鴉ぴえろ/きさらぎゆり": "Nankō Harutsuge, Karasu Piero, Kisaragiyuri",
-  "南高春告,鴉ぴえろ,きさらぎゆり": "Nankō Harutsuge, Karasu Piero, Kisaragiyuri",
+  "南高春告/鴉ぴえろ/きさらぎゆり": "Nadaka Harutsugu, Karasu Piero, Kisaragiyuri",
+  "南高春告,鴉ぴえろ,きさらぎゆり": "Nadaka Harutsugu, Karasu Piero, Kisaragiyuri",
   "単行本発売!": "Tankōbon Hatsubai!",
   "博(ひろ)": "Hiroshi",
   "卯崎遥": "Usaki Haruka",
@@ -53888,13 +55143,13 @@
   "卯花りりか": "Ukari Rika",
   "原作/大鷹シン漫画/ホマレ": "Ōtaka Shin, Homare",
   "原作/渡辺零・駿馬京漫画/くわばらたもつ": "Watanabe (story), Rei, Shunba, Kyō, Kuwabara Tamotsu (manga)",
-  "原作:朝霧咲,漫画:おにぎり": "Asagiri Saki, Onigiri",
-  "原作:渡辺零・駿馬京/漫画:くわばらたもつ": "Watanabe Rei, Shunba Kyō, Kuwabaratamotsu",
+  "原作:朝霧咲,漫画:おにぎり": "Asagiri Saku, Onigiri",
+  "原作:渡辺零・駿馬京/漫画:くわばらたもつ": "Watanabe Rei, Shunme Kei, Kuwabaratamotsu",
   "原作/宮澤伊織(早川書房刊)作画/水野英多キャラクター原案/shirakaba": "Miyazawa Iori, Mizuno Eita, shirakaba",
   "原作/小林湖底(GA文庫/SBクリエイティブ刊)キャラクター原案・漫画/りいちゅ": "Kobayashi Kotei, Riichu",
   "原作:渡辺零/漫画:いとう階": "Watanabe Rei, Itō Kai",
   "原作:羽柴実里作画:zinbei": "Hashiba Misato, zinbei",
-  "原作:遠野めざ,作画:彩乃浦助": "Tōnomeza, Ayano Ura Suke",
+  "原作:遠野めざ,作画:彩乃浦助": "Tōno Meza, Ayano Urasuke",
   "原川ユキ": "Harakawa Yuki",
   "原案:士郎正宗漫画:六道神士": "Shirō Masamune, Rikudō Kōshi",
   "原田重光/蘇募ロウ": "Harada Shigemitsu, Soborō",
@@ -53914,7 +55169,7 @@
   "古部亮": "Kobe Suke",
   "古鉢るか": "Ko Bachiru Ka",
   "史織": "Shiori",
-  "右腹,羽田宇佐,U35": "Migihara, Hata Usa, U35",
+  "右腹,羽田宇佐,U35": "Migihara, Haneda Usa, U35",
   "吉富昭仁": "Yoshitomi Akihito",
   "吉村佳": "Yoshimura Kei",
   "吉沢タクマ": "Yoshizawa Takuma",
@@ -53959,8 +55214,8 @@
   "地球滅亡立7日前高校普通科": "Chikyū Metsubōritsu 7Ka Mae Kōkō Futsūka",
   "地雷系地縛霊の美智子ちゃん": "Jiraikei Jibakurei no Michikochan",
   "坂南加": "Sakaminami Ka",
-  "坂南加/三河ごーすと/kappe": "Sakaminami Ka, Mikawa Gō Suto, kappe",
-  "坂南加,三河ごーすと,kappe": "Sakaminami Ka, Mikawa Gō Suto, kappe",
+  "坂南加/三河ごーすと/kappe": "Sakaminami Ka, Mikawa Gōsuto, kappe",
+  "坂南加,三河ごーすと,kappe": "Sakaminami Ka, Mikawa Gōsuto, kappe",
   "坂城": "Sakaki",
   "坂本遊帆": "Sakamoto Asobu Ho",
   "堕天使そぷらのちゃんの復讐": "Datenshi So Pura Nochan no Fukushū",
@@ -53989,9 +55244,9 @@
   "多重夢": "Tajūmu",
   "夜と海": "Yoru to Umi",
   "夜のクラゲは泳げない": "Yoru no Kurage wa Oyogenai",
-  "夜の羊雲/東崎惟子/ソノフワン": "Yoru No Hitsujigumo, Agarizaki Yuiko, Sonofuwan",
-  "夜の羊雲,東崎惟子,ソノフワン": "Yoru No Hitsujigumo, Agarizaki Yuiko, Sonofuwan",
-  "夜の羊雲/遠井音": "Yoru No Hitsujigumo, Tōi Oto",
+  "夜の羊雲/東崎惟子/ソノフワン": "Yorunohitsujigumo, Agarizaki Yuiko, Sonofuwan",
+  "夜の羊雲,東崎惟子,ソノフワン": "Yorunohitsujigumo, Agarizaki Yuiko, Sonofuwan",
+  "夜の羊雲/遠井音": "Yorunohitsujigumo, Tōi Oto",
   "夜嵐にわらう": "Yoarashi ni Warau",
   "夜明けのアリス": "Yoake no Arisu",
   "夜明け前が一番暗いとかドヤ顔するヤツ絶対殺す": "Yoake Mae ga Ichiban Kurai to Ka Doya Kao Suru Yatsu Zettai Korosu",
@@ -54046,8 +55301,8 @@
   "姫海月スグル": "Himeka Tsuki Suguru",
   "姫神の巫女": "Himegami no Miko",
   "娘が彼女を連れてきた話": "Musume ga Kanojo o Tsurete Kita Hanashi",
-  "娘太丸/Project2H/タカヒロ(みなとそふと)/BUNBUN": "Musume Tamaru, Project2H, Takahiro, BUNBUN",
-  "娘太丸/タカヒロ(みなとそふと)/BUNBUN": "Musume Tamaru, Takahiro, BUNBUN",
+  "娘太丸/Project2H/タカヒロ(みなとそふと)/BUNBUN": "Kotamaru, Project2H, Takahiro, BUNBUN",
+  "娘太丸/タカヒロ(みなとそふと)/BUNBUN": "Kotamaru, Takahiro, BUNBUN",
   "嫌われ魔女令嬢と男装皇子の婚約": "Kiraware Majo Reijō to Dansō Miko no Kon'yaku",
   "子供部屋ドラゴン": "Kodomobeya Doragon",
   "宇宙人だった君へ": "Uchūnindatta Kimi e",
@@ -54064,7 +55319,7 @@
   "宝石を飼う": "Hōseki o Kau",
   "実乃莉ちゃんのカメラ": "Minorichan no Kamera",
   "宮原都": "Miyahara to",
-  "宮澤伊織,ぴよぴよ丸,今井哲也": "Miyazawa Iori, Piyopiyo Maru, Imai Tetsuya",
+  "宮澤伊織,ぴよぴよ丸,今井哲也": "Miyazawa Iori, Piyopiyomaru, Imai Tetsuya",
   "宮部サチ": "Miyabe Sachi",
   "宵子の肖像": "Yoiko no Shōzō",
   "寂しすぎる女社長がレズ風俗嬢に秒で落ちる話": "Sabishi Sugiru Onna Shachō ga Rezu Fūzoku Jō ni Byō de Ochiru Hanashi",
@@ -54081,8 +55336,8 @@
   "小柳ちゃんの守り方!": "Koyanagichan no Mamorikata!",
   "小森モコ": "Komori Moko",
   "小畠泪": "Obata Namida",
-  "小畠泪/今安": "Obata Rui, Imayasu",
-  "小畠泪,今安": "Obata Rui, Imayasu",
+  "小畠泪/今安": "Obata Rui, Jin'an",
+  "小畠泪,今安": "Obata Rui, Jin'an",
   "小野中彰大": "Shō Nonaka Akihiro",
   "小野亮汰/小野正太郎": "Ono Ryōta, Ono Shōtarō",
   "小雨日和": "Kosame Hiyori",
@@ -54112,13 +55367,13 @@
   "岸根まくま": "Kishine Ma Kuma",
   "岸虎次郎": "Kishi Torajirō",
   "島": "Shima",
-  "島崎無印/黒イ森": "Shimazaki Mujirushi, Kuro I Mori",
+  "島崎無印/黒イ森": "Shimazaki Mujirushi, Kuroi Mori",
   "崖っぷち令嬢は黒騎士様を惚れさせたい!": "Gakeppuchi Reijō wa Kuro Kishisama o Horesasetai!",
   "崩れる前のわたしでいさせて": "Kuzureru Mae no Watashide Isasete",
   "嶋原翌": "Shimabara Yoku",
   "嶋鳥ひとり": "Shima Tori Hitori",
-  "川上しをん/入間人間/猫屋敷ぷしお": "Kawakami Shion, Iruma Hitoma, Nekoyashikipu Shio",
-  "川上しをん,入間人間,猫屋敷ぷしお": "Kawakami Shion, Iruma Hitoma, Nekoyashikipu Shio",
+  "川上しをん/入間人間/猫屋敷ぷしお": "Kawakami Shion, Iruma Hitoma, Nekoyashiki Pushio",
+  "川上しをん,入間人間,猫屋敷ぷしお": "Kawakami Shion, Iruma Hitoma, Nekoyashiki Pushio",
   "川澄圭": "Kawasumi Kei",
   "工藤える": "Kudō Eru",
   "巻舌ひっち": "Makijita Hi Chi",
@@ -54157,7 +55412,7 @@
   "彼氏の女友達がぐいぐい来る(私に)": "Kareshi no Onnatomodachi ga Guigui Kuru (Watashi ni)",
   "待望のコミックス第1巻絶賛発売中!!": "Taibō no Komikkusu Dai 1 Kan Zessan Hatsubaichū ! !",
   "後編": "Part 2",
-  "後谷戸隆/我孫子楽人": "Ato Tanito Takashi, Abiko Gakujin",
+  "後谷戸隆/我孫子楽人": "Ushiroyato Takashi, Abiko Kanato",
   "徒然日和": "Tsurezure Hiyori",
   "徒花の約束": "Adabana no Yakusoku",
   "得能正太郎": "Tokunō Shōtarō",
@@ -54243,8 +55498,8 @@
   "新・魔法科高校の劣等生キグナスの乙女たち": "Shin, Mahōka Kōkō no Rettōsei, Kigunasu no Otometachi",
   "新井すみこ": "Arai Sumiko",
   "新刊100億冊ください": "Shinkan Ichireireiokusatsu Kudasai",
-  "新城一/二三夏一/久賀フーナ": "Shinshiro Ichi, Nisan Kaichi, Kuka Fūna",
-  "新城一,二三夏一,久賀フーナ": "Shinshiro Ichi, Nisan Kaichi, Kuka Fūna",
+  "新城一/二三夏一/久賀フーナ": "Shinjō Hajime, Fumi Natsuichi, Kuga Fūna",
+  "新城一,二三夏一,久賀フーナ": "Shinjō Hajime, Fumi Natsuichi, Kuga Fūna",
   "新太そう": "Shin Futo Sō",
   "新米勇者のおしながき~乃木若葉は勇者であるすぴんあうと4コマ~": "Shinmai Yūsha no o Shinagaki ~ Nogi Wakaba wa Yūshade Aru, Su Pin Auto Yon Koma ~",
   "新米姉妹のふたりごはん": "Shinmai Shimai no Futari Gohan",
@@ -54323,8 +55578,8 @@
   "月のお寿司を抱えてねむる": "Tsuki no o Sushi o Kakaete Nemuru",
   "月はタピオカみたいに": "Tsuki wa Tapioka Mitaini",
   "月はヒツジを数えない": "Tsuki wa Hitsuji o Kazoenai",
-  "月並甲介/阿羅本景/尾花沢軒栄/桜木さやか/シャフト": "Tsukinami Kō Suke, Ara Motokage, Obanazawaken Sakae, Sakuragi Sayaka, Shafuto",
-  "月夜涙/ヤマダソーダ/にじまあるく": "Tsukiyo Namida, Yamadasōda, Nijimāruku",
+  "月並甲介/阿羅本景/尾花沢軒栄/桜木さやか/シャフト": "Tsukinami Kōsuke, Aramoto Kei, Obanazawa Ken'ei, Sakuragi Sayaka, Shafuto",
+  "月夜涙/ヤマダソーダ/にじまあるく": "Tsukiyo Rui, Yamadasōda, Nijimāruku",
   "月足透水": "Tsukiashi Tōsui",
   "月野和青": "Tsukinowa Ao",
   "有美の言う通り": "Yumi no Iu Tōri",
@@ -54341,14 +55596,14 @@
   "本間リョウタ(FiFS)/曽我部修司(FiFS)/ののかなこ(FiFS)": "Honma Ryōta, Sogabe Shūji, Nonokanako",
   "本間リョウタ(FiFS),曽我部修司(FiFS),ののかなこ(FiFS)": "Honma Ryōta, Sogabe Shūji, Nonokanako",
   "朱子すず": "Shushi Suzu",
-  "朱白あおい,糀もろみ,村田真哉,柳井伸彦": "Shu Haku Aoi, Kōji Moromi, Murata Shin'ya, Yanai Nobuhiko",
+  "朱白あおい,糀もろみ,村田真哉,柳井伸彦": "Akashiro Aoi, Kōji Moromi, Murata Shin'ya, Yanai Nobuhiko",
   "杉谷ユカリ": "Sugitani Yukari",
   "村岡ユウ": "Muraoka Yū",
   "杜若彩": "Kakitsubata Aya",
   "来航怪異の音がする~横濱外来妖対策局~": "Raikō Kaii no Oto ga Suru ~ Yokohama Gairai Ayakashi Taisaku Kyoku ~",
   "東山千": "Higashiyama Sen",
-  "東方Project/水山めろ": "Tōhō Project, Mizuyama Mero",
-  "東方Project,水山めろ": "Tōhō Project, Mizuyama Mero",
+  "東方Project/水山めろ": "Tōhōpurojekuto, Mizuyama Mero",
+  "東方Project,水山めろ": "Tōhōpurojekuto, Mizuyama Mero",
   "東河みそ": "Tōga Miso",
   "東洋トタン": "Tōyō Totan",
   "東野トシ": "Tōno Toshi",
@@ -54356,10 +55611,10 @@
   "東雲もづく": "Shinonome mo Zuku",
   "松井琳": "Matsui Rin",
   "柊ゆたか": "Hiiragi Yutaka",
-  "柚原もけ/入間人間/のん": "Yuhara Mo Ke, Iruma Hitoma, Non",
+  "柚原もけ/入間人間/のん": "Yuzuhara Moke, Iruma Hitoma, Non",
   "柚原もけ(漫画)入間人間(原作)のん(キャラクターデザイン)": "Yuhara mo Ke ( Manga ), Iruma Ningen ( Gensaku ), Non ( Kyarakutā Dezain )",
-  "柚原もけ,入間人間,のん": "Yuhara Mo Ke, Iruma Hitoma, Non",
-  "柚子桃/司馬漬け": "Yuzu Momo, Shibatsuke",
+  "柚原もけ,入間人間,のん": "Yuzuhara Moke, Iruma Hitoma, Non",
+  "柚子桃/司馬漬け": "Yuzumomo, Shibazuke",
   "柚木涼太": "Yuzuki Ryōta",
   "柴田康平": "Shibata Kōhei",
   "柴田橋": "Shibata Hashi",
@@ -54455,7 +55710,7 @@
   "泡沫": "Hōmatsu",
   "波": "Nami",
   "波多ヒロ/HISADAKE": "Hata Hiro, HISADAKE",
-  "波多ヒロ,HISADAKE,矢立肇・富野由悠季": "Hata Hiro, HISADAKE, Yatate Hajime, Tomino Yoshiyuki",
+  "波多ヒロ,HISADAKE,矢立肇・富野由悠季": "Hata Hiro, HISADAKE, Yadate Hajime, Tomino Yoshiyuki",
   "泣き虫王子(♀)のいずもくんは女子高の王子様と百合になるかもしれない": "Nakimushi Ōji (♀), Noizu mo Kun wa Joshikō no Ōjisama to Yuri ni Naru Ka mo Shirenai",
   "流出": "Ryūshutsu",
   "流星のエントロピー": "Ryūsei no Entoropī",
@@ -54474,8 +55729,8 @@
   "涼海来夏": "Suzuka Raika",
   "涼風そら": "Suzukaze Sora",
   "深川可純": "Fukagawa Kasumi",
-  "深津/煮ル果実/WOOMA": "Fukatsu, Ni Ru Kajitsu, WOOMA",
-  "深津,煮ル果実,WOOMA": "Fukatsu, Ni Ru Kajitsu, WOOMA",
+  "深津/煮ル果実/WOOMA": "Fukatsu, Niru Kajitsu, WOOMA",
+  "深津,煮ル果実,WOOMA": "Fukatsu, Niru Kajitsu, WOOMA",
   "深海紺": "Shinkai Kon",
   "清田さんは汚されたい!?": "Kiyotasan wa Yogosaretai ! ?",
   "清田さんを汚したい": "Kiyotasan o Yogoshitai",
@@ -54489,9 +55744,9 @@
   "漫画/倉崎もろこ原作/みかみてれんキャラクター原案/未幡": "Kurasaki Moroko (manga), Mi Kami Teren (story), Mi Hata (character design)",
   "漫画:でかいるか/原作:エリーゼ/キャラクター原案:がわこ": "Dekairuka, Erīze, Gawako",
   "漫画:ふえふき": "Fuefuki (manga)",
-  "漫画:りんご水,原作:林星悟,キャラクター原案:餡こたく": "Ringosui, Hayashi Hoshi Satoru, Ankotaku",
+  "漫画:りんご水,原作:林星悟,キャラクター原案:餡こたく": "Ringosui, Hayashi Shōgo, Ankotaku",
   "漫画:サンクス仮面": "Sankusu Kamen (manga)",
-  "漫画:宮原都,原作:Ru": "Miyahara To, Ru",
+  "漫画:宮原都,原作:Ru": "Miyahara Miyako, Ru",
   "漫画:寄北光": "Kikita Hikari (manga)",
   "漫画:日之下あかめ": "Hi no Shita Akame (manga)",
   "潤海そら": "Umi Sora",
@@ -54551,8 +55806,8 @@
   "玉置勉強": "Tamaki Benkyō",
   "王の由縁": "Ō no Yuen",
   "玖珂ツニヤ": "Kuga Tsuniya",
-  "珠樹みつね/恥谷きゆう/桜河ゆう": "Tamaki Mitsune, Haji Tani Kiyu U, Sakuragawa Yū",
-  "珠樹みつね,恥谷きゆう,桜河ゆう": "Tamaki Mitsune, Haji Tani Kiyu U, Sakuragawa Yū",
+  "珠樹みつね/恥谷きゆう/桜河ゆう": "Tamaki Mitsune, Hajitani Kiyū, Ōkawa Yū",
+  "珠樹みつね,恥谷きゆう,桜河ゆう": "Tamaki Mitsune, Hajitani Kiyū, Ōkawa Yū",
   "現実世界でも幸せにしてくださいね?": "Genjitsusekai de mo Shiawaseni Shite Kudasai Ne?",
   "球詠": "Tamaei",
   "琢磨美友": "Takuma Miyu",
@@ -54568,7 +55823,7 @@
   "田中こめ": "Tanaka Kome",
   "田中火蛾": "Tanaka Ka ga",
   "田口囁一": "Taguchi Shōichi",
-  "田口囁一/羽流木はない": "Taguchi Shōichi, Haru Ki Wa Nai",
+  "田口囁一/羽流木はない": "Taguchi Shōichi, Warugi Hanai",
   "田所さん": "Tadokorosan",
   "由花緒リニューアル": "Yuka Itoguchi Rinyūaru",
   "甲斐冬雪": "Kai Fuyu",
@@ -54630,22 +55885,22 @@
   "睦月一": "Mutsuki Ichi",
   "矢坂しゅう": "Yasaka Shū",
   "矢田ネドコ": "Yata Nedoko",
-  "矢立肇/公野櫻子/田中天/つむみ": "Yatate Hajime, Kimino Sakurako, Tanaka Takashi, Tsumumi",
+  "矢立肇/公野櫻子/田中天/つむみ": "Yadate Hajime, Kimino Sakurako, Tanaka Takashi, Tsumumi",
   "知らないあなた": "Shiranai Anata",
   "石ト悠良": "Ishi to Yura",
   "石川兼心": "Ishikawa Kenshin",
   "砂泉文": "Suna Izumi Bun",
   "研究棟の真夜中ごはん": "Kenkyū Mune no Mayonaka Gohan",
   "破賀ミチル": "Ha ga Michiru",
-  "破賀ミチル/1冊目:叔母さんは神絵師": "Ha Ga Michiru, Ichisatsume : Obasan Wa Kamieshi",
+  "破賀ミチル/1冊目:叔母さんは神絵師": "Haga Michiru, Ichisatsume : Obasan Wa Kamieshi",
   "硝子の体温": "Garasu no Taion",
   "神の右手": "Kamino Migite",
   "神ゲーってそういうことですか": "Kamigē Tte Sō Iu Kotodesu Ka",
   "神戸いちご": "Kōbe Ichigo",
   "神様の手": "Kamisama no Te",
   "神様やめらんない": "Kamisama Yamerannai",
-  "神無月羽兎/和ふー/Tobi": "Kannazukiwa Usagi, Wa Fū, Tobi",
-  "神無月羽兎,和ふー,Tobi": "Kannazukiwa Usagi, Wa Fū, Tobi",
+  "神無月羽兎/和ふー/Tobi": "Kannazuki Hato, Wafū, Tobi",
+  "神無月羽兎,和ふー,Tobi": "Kannazuki Hato, Wafū, Tobi",
   "神谷回る": "Kamiya Mawaru",
   "福井セイ": "Fukui Sei",
   "福井遥香": "Fukui Haruka",
@@ -54678,7 +55933,7 @@
   "程遠い君の星まで": "Hodotōi Kimi no Hoshi made",
   "稲葉みのり": "Inaba Minori",
   "空坂めまう": "Sora Sakame Ma U",
-  "空山トキ/五色安未/泉乃せん/伍長": "Sorayama Toki, Goshiki Ami, Mizuno Sen, Gochō",
+  "空山トキ/五色安未/泉乃せん/伍長": "Sorayama Toki, Goshiki Ami, Izumino Sen, Gochō",
   "空木帆子": "Utsugi Hoko",
   "空田佑": "Sorata Yū",
   "窓口基": "Madoguchi Moto",
@@ -55242,12 +56497,12 @@
   "羨望と白百合の君へ。": "Senbō to Shirayuri no Kimi e.",
   "羽柴実里,zinbei": "Hashiba Misato, zinbei",
   "羽柴実里/銀ねづ": "Hashiba Misato, Ginnezu",
-  "羽流木はない/田口囁一": "Haru Ki Wa Nai, Taguchi Shōichi",
+  "羽流木はない/田口囁一": "Warugi Hanai, Taguchi Shōichi",
   "羽流木はない(原作)篠月しのぶ(漫画)": "Haru Ki wa Nai (Gensaku), Shino Tsuki Shinobu (Manga)",
   "羽田遼亮中島零潮一葉赤衣丸歩郎": "Hata Ryō Ryō Nakajima Rei Ushio Ichiyō Akaginumaru Fu Rō",
-  "羽田遼亮/中島零/潮一葉/赤衣丸歩郎": "Hata Ryō Ryō, Nakajima Rei, Ushio Ichiyō, Akai Maruborō",
+  "羽田遼亮/中島零/潮一葉/赤衣丸歩郎": "Hata Ryōsuke, Nakajima Rei, Ushio Hitoha, Akai Maruborō",
   "老田ヒビキ": "Oita Hibiki",
-  "耳式/鴉ぴえろ": "Ji Shiki, Karasu Piero",
+  "耳式/鴉ぴえろ": "Mimishiki, Karasu Piero",
   "聖さまの思うままに": "Kiyoshisama no Omō Mama ni",
   "聖夜のアガペー": "Seiya no Agapē",
   "聖女先生の魔法は進んでる!": "Seijo Sensei no Mahō wa Susunderu!",
@@ -55263,7 +56518,7 @@
   "臨死": "Rinshi",
   "自動車の妖精パッソちゃんの恩返し": "Jidōsha no Yōsei Passochan no Ongaeshi",
   "自販機": "Jihanki",
-  "臼井ともみ/動画投稿少女/「真夜中ぱんチ」製作委員会": "Usui Tomomi, Dōga Tōkō Shōjo, “Mayonaka Pan Chi” Seisaku Iinkai",
+  "臼井ともみ/動画投稿少女/「真夜中ぱんチ」製作委員会": "Usui Tomomi, Dōgatōkōshōjo, Mayonakapanchiseisakuiinkai",
   "舟本絵理歌": "Funamoto Erika",
   "色んな女の子とキスをしていたら、百合キスに目覚めてしまいました...。": "Ironna Onnanoko to Kisu o Shite Itara, Yuri Kisu ni Mezamete Shimaimashita......",
   "色知らぬ黒は青に触れる": "Iro Shiranu Kuro wa Ao ni Fureru",
@@ -55301,7 +56556,7 @@
   "薬缶": "Yakan",
   "藤塚まる": "Fujitsuka Maru",
   "藤崎ろと": "Fujisaki Ro to",
-  "藤川よつ葉/かかとぶし": "Fujikawa Yotsuha, Kakatobushi",
+  "藤川よつ葉/かかとぶし": "Fujikawa Yotsuba, Kakatobushi",
   "藤本れもち": "Fujimotoremochi",
   "藤本セツナ": "Fujimoto Setsuna",
   "藤松盟": "Fujimatsu Mei",
@@ -55310,8 +56565,8 @@
   "藤秋すばる": "Fuji Aki Subaru",
   "虫歯": "Mushiba",
   "蚊帳りく": "Kaya Riku",
-  "蛙田あめこ/りりうら世都/三弥カズトモ": "Kaeda A Meko, Ri Riura Setsu, Mitsuya Kazutomo",
-  "蛙田アメコ/ヨリフジ": "Kaeda Ameko, Yorifuji",
+  "蛙田あめこ/りりうら世都/三弥カズトモ": "Kaeruda Ameko, Ririura Yomiya, Miya Kazutomo",
+  "蛙田アメコ/ヨリフジ": "Kaeruda Ameko, Yorifuji",
   "蜘蛛の糸": "Kumo no Ito",
   "蝦夷リス": "Ezo Risu",
   "蝶と帝国": "Chō to Teikoku",
@@ -55321,7 +56576,7 @@
   "袴田めら": "Hakamada Mera",
   "袴田めら/新島あん": "Hakamada Mera, Niijima An",
   "裏世界ピクニック": "Ura Sekai Pikunikku",
-  "裏海マユ,ちょきんぎょ。": "Urakai Mayu, Chokingyo.",
+  "裏海マユ,ちょきんぎょ。": "Rigai Mayu, Chokingyo.",
   "西ひるめ": "Nishi Hirume",
   "西之瀬イトマ": "Nishino Se Itoma",
   "西尾青": "Nishio Ao",
@@ -55401,7 +56656,7 @@
   "鈴木マ球": "Suzuki Ma Tama",
   "鈴木二三江": "Suzuki Fumie",
   "鈴野スケ": "Suzuno Suke",
-  "鈴音れな,あらおし悠": "Suzune Rena, Ara Oshi Yū",
+  "鈴音れな,あらおし悠": "Suzunone Rena, Araoshi Yū",
   "鉄一": "Tetsukazu",
   "銀ねづ": "Gin Nezu",
   "銀の河に星の城": "Gin no Kawa ni Hoshi no Shiro",
@@ -55440,11 +56695,11 @@
   "雪見とおる": "Yukimi to Oru",
   "雪解けとアガパンサス": "Yukidoke to Agapansasu",
   "電子コミックス本日発売!": "Denshi Komikkusu Honjitsu Hatsubai!",
-  "電撃G'sマガジン/オーガスト": "Dengeki G ' S Magajin, Ōgasuto",
+  "電撃G'sマガジン/オーガスト": "Dengekijīzumagajin, Ōgasuto",
   "電波系Xエンカウント": "Denpakei X Enka Unto",
   "霞ヨスガ": "Kasumi Yosuga",
   "青乃下": "Ao no Shita",
-  "青乃下/いのり。/花ヶ田": "Ao No Shita, Inori., Hana Ga Ta",
+  "青乃下/いのり。/花ヶ田": "Aono Shimo, Inori., Hanagata",
   "青春CONTINUE?": "Seishun CONTINUE?",
   "青春、ときどき不老不死": "Seishun, Tokidoki Furōfushi",
   "青木ミズ": "Aoki Mizu",
