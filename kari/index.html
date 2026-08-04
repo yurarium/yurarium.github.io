@@ -230,23 +230,23 @@
   .ensecond{color:var(--dim);font-size:.82rem;font-weight:400;margin-top:.05rem;display:block}
   .crow .ensecond{font-size:.76rem}
   /* Ruby needs room above the line or it collides with the row before it. */
-  /* WHY THE CHARACTERS WERE SEPARATING. A reading wider than the characters it annotates widens
-     the base with it, because the two share one column: 畳 with じょう over it was pushed to 1.56
-     times its own width, and its neighbours moved aside to make room. Measured over 1775 rendered
-     ruby units at 375px, 34 were stretched past 1.15.
+  /* HALF SIZE, which is the rule: "the size of characters of the ruby annotation is by default
+     set to half of the size of characters of the ruby base" (W3C Simple Ruby, after JIS X 4051).
+     Ours was .55em, which is oversized, and the base was being widened to fit the overhang.
 
-     The fix is to make the reading narrower, not to change how it is aligned. ruby-align governs
-     the reading inside its column and cannot shrink the column. Taking the reading out of flow
-     (position:absolute) does remove all 34, and was rejected: it lets neighbouring readings
-     overlap each other, which happened to 24 pairs, and unreadable is worse than wide.
+     A base widened by a longer reading is NOT a defect. The same rules prescribe it: for a single
+     character the space goes around the base, and for a group the space goes into the base. So
+     畳 sitting wider than its own width, under じょう, is correct typesetting and is left alone.
 
-     At .48em with a little negative tracking, 3 remain and the worst is 1.31. The reading stays
-     large enough to read, which is the point of having it.
+     Overhanging the neighbours would avoid it and is disallowed for kanji and kana alike, on the
+     grounds that it invites misreading; it is permitted only into the blank of adjacent
+     punctuation. Tested anyway: it removes every widened base and makes 24 pairs of neighbouring
+     readings overlap, so the rule is right.
 
-     nowrap is a guard rather than a fix: no unit was observed breaking mid-compound, and a
-     reading stranded from half its characters is bad enough to be worth preventing anyway. */
-  ruby{ruby-position:over;ruby-align:center;white-space:nowrap}
-  rt{font-size:.48em;color:var(--dim);font-weight:400;letter-spacing:-.04em;white-space:nowrap}
+     nowrap holds one base and its reading together. With jukugo-ruby a base is a single character,
+     and the line may break between characters, which is exactly what the rules allow. */
+  ruby{ruby-position:over;white-space:nowrap}
+  rt{font-size:.5em;color:var(--dim);font-weight:400;letter-spacing:0;white-space:nowrap}
   /* The title as a whole still wraps: the unbreakable part is one base and its reading, not the
      string. Long single runs are allowed to break rather than overflow the column. */
   .rel .t, .crow .t, .wtitle{overflow-wrap:break-word}
