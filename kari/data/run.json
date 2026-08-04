@@ -1,9 +1,9 @@
 {
  "generated": "2026-08-04",
- "releases": 1368,
+ "releases": 1359,
  "platforms": 22,
  "works": 302,
- "series_rows": 986,
+ "series_rows": 982,
  "sources": [
   {
    "source": "comicfuz",
@@ -99,8 +99,8 @@
  "claims": {
   "total": 434,
   "by_disposition": {
-   "absorbed": 372,
-   "open": 1,
+   "absorbed": 370,
+   "open": 3,
    "print-serialised": 25,
    "unsettleable": 28,
    "phantom": 1,
@@ -492,8 +492,13 @@
     "url": "https://comic-gardo.com/episode/2550912966011803878",
     "claimed": "2026-07-28",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": false,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "球詠",
@@ -1491,9 +1496,13 @@
     "url": "https://youngchampion.jp/series/86c1162f34a04",
     "claimed": "2026-07-19",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "attested on this platform within a week — one event",
-    "platform_latest": "2026-07-15"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": false,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "ギャラクシーぷーちゃん 宇宙のはじっこでこんにちは",
@@ -4471,7 +4480,7 @@
   "weeks": [
    {
     "week": "2026-05-31",
-    "n": 317
+    "n": 316
    },
    {
     "week": "2026-06-07",
@@ -4483,27 +4492,27 @@
    },
    {
     "week": "2026-06-21",
-    "n": 132
+    "n": 131
    },
    {
     "week": "2026-06-28",
-    "n": 110
+    "n": 109
    },
    {
     "week": "2026-07-05",
-    "n": 226
+    "n": 225
    },
    {
     "week": "2026-07-12",
-    "n": 106
+    "n": 105
    },
    {
     "week": "2026-07-19",
-    "n": 117
+    "n": 114
    },
    {
     "week": "2026-07-26",
-    "n": 108
+    "n": 107
    },
    {
     "week": "2026-08-02",
@@ -4511,30 +4520,30 @@
    }
   ],
   "trimmed_weeks": 3,
-  "pre_tracking_releases": 1315,
+  "pre_tracking_releases": 1306,
   "tracking_from": "2026-08-01"
  },
  "access_modes": {
-  "purchase": 564,
-  "free": 681,
+  "purchase": 562,
+  "free": 674,
   "free-timed": 99
  },
  "update_kinds": {
-  "new-chapter": 1273,
+  "new-chapter": 1265,
   "final": 8,
-  "new-series": 45,
+  "new-series": 44,
   "oneshot": 21,
   "other": 20,
   "skipped": 1
  },
  "identification": {
-  "discovery-candidate": 1055,
+  "discovery-candidate": 1046,
   "platform-genre": 313
  },
  "collapsed": {
-  "duplicate_chapters": 48,
+  "duplicate_chapters": 50,
   "thin_sitemap": 8,
-  "resolver": 47,
+  "resolver": 54,
   "samples": 49
  },
  "filled": {
