@@ -283,6 +283,14 @@
      chapter. Clamped to one line at full size; the whole string stays available on hover and to a
      screen reader, and the row keeps its shape. */
   .rel .by{max-width:min(30rem,100%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  /* A NAME CARRYING FURIGANA CANNOT BE CLIPPED. The ellipsis above needs overflow:hidden, and a
+     ruby annotation sits above the line box rather than inside it, so its top row of pixels lands
+     exactly on the clip edge and is shaved: おおくま over 大熊 came out with its tops cut. Padding
+     does not help, because the annotation overflows the line box whatever the box does.
+     So the line is given the height to hold it and the clipping is dropped, for these rows only.
+     The ellipsis is not lost where it matters: it exists for long credit lines naming several
+     people, and those have no reading of their own, so :has(ruby) never matches them. */
+  .rel .by:has(ruby){line-height:2.1;overflow:visible;white-space:normal}
   /* An anthology instalment belongs to a collection but is its own work by its own author, so the
      collection is shown as context rather than as the title. */
   .rel .coll{color:var(--faint);font-size:.78rem}
