@@ -1043,7 +1043,12 @@ function authorLabel(r) {
   }
   // No 'both' branch any more. In 併記 this is called twice (once per line) so pairing the two
   // scripts HERE would print the romanisation twice on the English line and once on the Japanese.
-  return esc(r.author || '');
+  //
+  // FURIGANA OVER THE NAME, where the build shipped any. It only ships spans for a reading a
+  // source states, so a name whose reading is a machine's guess arrives without them and falls
+  // through to the plain string. A credit line naming several people has no record of its own and
+  // does the same. ruby() applies the same test it applies to a title.
+  return ruby(r.author || '', rec);
 }
 
 /* Weekday, short. Web serials run to a weekly slot far more than to a date. A reader tracking a
