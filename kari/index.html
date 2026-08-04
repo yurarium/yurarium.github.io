@@ -477,6 +477,18 @@
             </span>
           </div>
 
+          <!-- NAME ORDER. A Japanese name is written family first, and English-language practice
+               is split: a library catalogue keeps the Japanese order, a bookshop usually reverses
+               it. Both are right and the reader knows which they want, so it is theirs. It shows
+               only in English, where a romanisation is what stands in for the name. -->
+          <div class="moregrp conditional" id="norderbox">
+            <span class="morelab" data-i18n>人名の順序 / name order</span>
+            <span class="themebox">
+              <button class="themebtn" data-nameorder-set="family" title="family name first, as written in Japanese: Iruma Hitoma">姓→名</button>
+              <button class="themebtn" data-nameorder-set="given"  title="given name first, as usual in English: Hitoma Iruma">名→姓</button>
+            </span>
+          </div>
+
 
           <!-- Which English a work is shown by, when it has more than one. The order was fixed
                here and is now the reader's: somebody who knows a series by what a licensor calls
@@ -810,6 +822,9 @@ const PREF_FURI   = 'yurarium.pref.furigana';
 const PREF_ENORDER = 'yurarium.pref.enorder';
 const PREF_DIALECT = 'yurarium.pref.dialect';
 let ROMAJI_STYLE = prefGet(PREF_ROMAJI, 'macron');
+const PREF_NORDER = 'yurarium.pref.nameorder';
+/* Family first by default: it is how the name is written, and this is a Japanese database. */
+let NAME_ORDER = prefGet(PREF_NORDER, 'family');
 let FURIGANA     = prefGet(PREF_FURI, false);
 
 /* WHICH ENGLISH, IN WHAT ORDER. The build ships every English form it holds for a work under
@@ -989,15 +1004,28 @@ function enOf(rec) {
    be WRONG in a specific way a reader can see. The isolated reading of a character is often not
    its reading in a compound, so 抱き came out カカエ where it should be ダキ. The mark is the
    smallest thing that cannot be mistaken for part of the name. */
+/* THE READING IS ATTESTED OR IT IS NOT, and that is the whole of what a reader can act on. There
+   were three states here: our romanisation of a sourced reading, our romanisation of a guessed
+   one, and a reading assembled character by character. The last two differ in how the guess was
+   arrived at, which is our problem and not the reader's, and the first two looked identical.
+   One mark now, on the binary.
+
+   It matters most in English. A reader in Japanese who is shown no furigana still has the name
+   itself; a reader in English has only this string and nothing to fall back on. */
 function uncertainMark(rec) {
-  return rec && rec.uncertain
-    ? `<sup class="unc" title="${esc('this reading was assembled character by character and may well be wrong')}">[?]</sup>`
+  const unattested = rec && (rec.uncertain || rec.unverified);
+  return unattested
+    ? `<sup class="unc" title="${esc('the reading this is romanised from is not attested by any source, and may be wrong')}">[?]</sup>`
     : '';
 }
 
-function enHtml(rec, cls) {
+function enHtml(rec, cls, isPerson) {
   const e = enOf(rec);
   if (!e) return '';
+  // A person's name follows the reader's order. Done here rather than at the call site so the
+  // mark and the tooltip come with it: a swapped name that lost its [?] would be worse than one
+  // in the wrong order.
+  const shown = (isPerson && personName(rec)) || e.text;
   const why = e.unverified
     ? 'reading not confirmed against a source. This romanisation may be wrong'
     : e.ours
@@ -1005,7 +1033,7 @@ function enHtml(rec, cls) {
                               : 'our translation, not an English title the work has')
       : 'the English name the work itself uses';
   const mark = (e.ours || e.unverified) ? ' ours' : '';
-  return `<span class="en${mark} ${cls || ''}" title="${esc(why)}">${esc(e.text)}</span>${uncertainMark(rec)}`;
+  return `<span class="en${mark} ${cls || ''}" title="${esc(why)}">${esc(shown)}</span>${uncertainMark(rec)}`;
 }
 
 /* Titles: EN replaces the Japanese, and in 併記 the whole ROW is rendered again in English by
@@ -1035,19 +1063,64 @@ function workLabel(r) {
 
 /* Authors likewise: one language, chosen by the caller's context. A romanisation and its Japanese are the same name
    twice, so the toggle picks one (§5b). */
+/* A person's romanisation in the reader's chosen order. The stored form is family first, as the
+   name is written; `given` swaps the two halves. Only a two-part name can be swapped: a single
+   token is one name and reversing it would invent a structure the name does not have. */
+function personName(rec) {
+  const rj = rec && rec.romaji && rec.romaji[ROMAJI_STYLE];
+  if (!rj) return null;
+  if (NAME_ORDER !== 'given') return rj;
+  const bits = rj.split(' ').filter(Boolean);
+  return bits.length === 2 ? `${bits[1]} ${bits[0]}` : rj;
+}
+
+/* A credit line built from the people in it, so it follows the same choices a single name does.
+   Null where any of them is unknown to the store: half a line composed and half romanised whole
+   reads as neither, and a reader cannot tell which half to trust. */
+function creditFromParts(ja) {
+  const parts = NAMES && NAMES.credit_parts && NAMES.credit_parts[foldKey(ja)];
+  if (!parts || parts.length < 2) return null;
+  const out = [];
+  for (const n of parts) {
+    const shown = personName(nameFor('authors', n, null));
+    if (!shown) return null;
+    out.push(shown);
+  }
+  return out.join(', ');
+}
+
 function authorLabel(r) {
   const rec = nameFor('authors', (r.author || '').trim(), r.author_en);
   const e = enOf(rec);
+  // COMPOSED FIRST, because a credit line usually has no record of its own and the early return
+  // below would hand it to the phrase map before anything else got a look. That is what kept
+  // 入間人間's line reading "Iruma Ningen" while the name itself was right, and what stopped the
+  // name-order choice reaching a line at all.
+  if (LANG === 'en') {
+    const composedEarly = creditFromParts((r.author || '').trim());
+    if (composedEarly) return esc(composedEarly);
+  }
   if (!e) {
     const ph = phraseOf((r.author || '').trim());
     return esc(ph);
   }
   if (LANG === 'en') {
-    // A credit line has no reading of its own (it is roles and several people) so it is rendered
-    // as a phrase rather than a name, and only falls back to the name store for a single author.
-    const ph = phraseOf((r.author || '').trim());
-    if (ph !== (r.author || '').trim()) return esc(ph);
-    return enHtml(rec, 'byen');
+    // A CREDIT LINE is roles and several people, and the phrase map renders those: the roles
+    // translate and the names inside are romanised together. A SINGLE NAME is a name, and the
+    // store holds its reading.
+    //
+    // Preferring the phrase for both published a frozen romanisation that no correction could
+    // reach, because the phrase map is written once per string and never revisited. 大熊らすこ
+    // stayed "Ōkumara Suko" after its reading was sourced as オオクマ ラスコ, and 涼海来夏 stayed
+    // "Suzuka Raika" after スズミ ライカ. It also dropped the mark: the phrase path returns a plain
+    // string, so a romanisation resting on a guess was shown to an English reader with nothing to
+    // say so, and an English reader has no Japanese to fall back on.
+    const raw = (r.author || '').trim();
+    if (/[\/／,、･・]|原作|作画|漫画|構成|脚本|企画/.test(raw)) {
+      const ph = phraseOf(raw);
+      if (ph !== raw) return esc(ph);
+    }
+    return enHtml(rec, 'byen', true);
   }
   // No 'both' branch any more. In 併記 this is called twice (once per line) so pairing the two
   // scripts HERE would print the romanisation twice on the English line and once on the Japanese.
@@ -1264,6 +1337,13 @@ function applyRomajiVisibility() {
     el('furibtn').setAttribute('aria-pressed', String(!!FURIGANA));
   }
   setGroupApplicable(el('enorderbox'), LANG !== 'ja');
+  const nb = el('norderbox');
+  if (nb) {
+    // Only in English. In 日本語 the name is shown as written and there is no order to choose.
+    setGroupApplicable(nb, LANG !== 'ja');
+    nb.querySelectorAll('[data-nameorder-set]').forEach(b =>
+      b.setAttribute('aria-pressed', String(b.dataset.nameorderSet === NAME_ORDER)));
+  }
   const db = el('dialbox');
   if (db) {
     setGroupApplicable(db, LANG !== 'ja');
@@ -1382,6 +1462,13 @@ document.addEventListener('DOMContentLoaded', () => {
     b.addEventListener('click', () => {
       ROMAJI_STYLE = b.dataset.romajiSet;
       prefSet(PREF_ROMAJI, ROMAJI_STYLE);
+      applyRomajiVisibility();
+      if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+    }));
+  document.querySelectorAll('[data-nameorder-set]').forEach(b =>
+    b.addEventListener('click', () => {
+      NAME_ORDER = b.dataset.nameorderSet;
+      prefSet(PREF_NORDER, NAME_ORDER);
       applyRomajiVisibility();
       if (FEED) { renderFeed(); renderCat(); renderSeries(); }
     }));
