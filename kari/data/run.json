@@ -1,9 +1,9 @@
 {
- "generated": "2026-08-04",
- "releases": 1362,
+ "generated": "2026-08-05",
+ "releases": 1064,
  "platforms": 22,
  "works": 302,
- "series_rows": 993,
+ "series_rows": 1002,
  "sources": [
   {
    "source": "comicfuz",
@@ -11,7 +11,7 @@
    "works": 43,
    "rows": 2389,
    "retrieved": "2026-08-03",
-   "age_days": 1,
+   "age_days": 2,
    "in_scope": true,
    "empty": false
   },
@@ -21,7 +21,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-04",
-   "age_days": 0,
+   "age_days": 1,
    "in_scope": true,
    "empty": false
   },
@@ -31,7 +31,7 @@
    "works": 687,
    "rows": 8069,
    "retrieved": "2026-08-03",
-   "age_days": 1,
+   "age_days": 2,
    "in_scope": true,
    "empty": false
   },
@@ -41,7 +41,7 @@
    "works": 765,
    "rows": 5441,
    "retrieved": "2026-08-03",
-   "age_days": 1,
+   "age_days": 2,
    "in_scope": true,
    "empty": false
   },
@@ -51,7 +51,7 @@
    "works": 302,
    "rows": 646,
    "retrieved": "2026-08-01",
-   "age_days": 3,
+   "age_days": 4,
    "in_scope": true,
    "empty": false
   },
@@ -61,7 +61,7 @@
    "works": 190,
    "rows": 190,
    "retrieved": "2026-08-03",
-   "age_days": 1,
+   "age_days": 2,
    "in_scope": true,
    "empty": false
   },
@@ -71,7 +71,7 @@
    "works": 252,
    "rows": 498,
    "retrieved": "2026-08-01",
-   "age_days": 3,
+   "age_days": 4,
    "in_scope": true,
    "empty": false
   },
@@ -81,17 +81,17 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false
   },
   {
    "source": "webpages",
-   "files": 36,
-   "works": 450,
-   "rows": 5738,
+   "files": 37,
+   "works": 487,
+   "rows": 7687,
    "retrieved": "2026-08-04",
-   "age_days": 0,
+   "age_days": 1,
    "in_scope": true,
    "empty": false
   }
@@ -99,11 +99,11 @@
  "claims": {
   "total": 434,
   "by_disposition": {
-   "absorbed": 370,
-   "open": 3,
-   "print-serialised": 25,
-   "unsettleable": 28,
+   "absorbed": 360,
+   "open": 4,
+   "unsettleable": 38,
    "phantom": 1,
+   "print-serialised": 24,
    "scheduled": 2,
    "undatable": 3,
    "refuted": 2
@@ -174,9 +174,9 @@
     "url": "https://pocket.shonenmagazine.com/title/03282",
     "claimed": "2026-08-01",
     "source": "webcomics.jp",
-    "disposition": "print-serialised",
-    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
-    "platform_latest": "2026-07-22"
+    "disposition": "absorbed",
+    "why": "attested on this platform within a week — one event",
+    "platform_latest": "2026-08-05"
    },
    {
     "work": "この湯で、あなたと",
@@ -1933,8 +1933,8 @@
     "claimed": "2026-07-11",
     "source": "webcomics.jp",
     "disposition": "unsettleable",
-    "why": "we hold 5 chapters ending 2025-05-18, 419 days before the claim — too far behind to argue the platform shows nothing; the platform states it updates 毎月第1水曜",
-    "chapters_held": 5,
+    "why": "we hold 61 chapters ending 2025-05-18, 419 days before the claim — too far behind to argue the platform shows nothing; the platform states it updates 毎月第1水曜",
+    "chapters_held": 61,
     "last_looked": "2026-08-03",
     "cadence": "毎月第1水曜",
     "next_update": "2026-08-05"
@@ -3157,8 +3157,12 @@
     "url": "https://ichicomi.com/episode/12207421983774027772",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "見える子ちゃん",
@@ -3166,8 +3170,13 @@
     "url": "https://manga.nicovideo.jp/comic/37662",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": false,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "恋愛遺伝子XX 完全版",
@@ -3175,8 +3184,12 @@
     "url": "https://ichicomi.com/episode/12207421983782041919",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "女の子合わせ",
@@ -3184,8 +3197,12 @@
     "url": "https://ichicomi.com/episode/12207421983782265302",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "半熟女子",
@@ -3193,8 +3210,12 @@
     "url": "https://ichicomi.com/episode/12207421983782244654",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "会長と副会長",
@@ -3202,8 +3223,12 @@
     "url": "https://ichicomi.com/episode/12207421983782306950",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "レンアイ♥女子課",
@@ -3211,8 +3236,12 @@
     "url": "https://ichicomi.com/episode/12207421983782047505",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "たとえとどかぬ糸だとしても",
@@ -3220,8 +3249,12 @@
     "url": "https://ichicomi.com/episode/2550912965923204597",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "only 2 chapter(s) held — a history of one is not a history",
+    "chapters_held": 2,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "それが君になる",
@@ -3229,8 +3262,12 @@
     "url": "https://ichicomi.com/episode/12207421983782291889",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "この願いが叶うなら",
@@ -3238,8 +3275,12 @@
     "url": "https://ichicomi.com/episode/12207421983782300804",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "いとしこいし",
@@ -3247,8 +3288,12 @@
     "url": "https://ichicomi.com/episode/12207421983774250544",
     "claimed": "2026-06-05",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "only 1 chapter(s) held — a history of one is not a history",
+    "chapters_held": 1,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "映しちゃダメな顔",
@@ -4221,19 +4266,11 @@
  },
  "bulk_dated": [
   {
-   "platform": "一迅プラス",
-   "date": "2026-06-05",
-   "releases": 277,
-   "distinct_works": 16,
-   "median_per_day": 3,
-   "example_work": "2DK、Gペン、目覚まし時計。"
-  },
-  {
    "platform": "サンデーうぇぶり",
    "date": "2026-07-09",
    "releases": 123,
    "distinct_works": 1,
-   "median_per_day": 1.0,
+   "median_per_day": 1,
    "example_work": "はなにあらし"
   },
   {
@@ -4241,7 +4278,7 @@
    "date": "2026-08-03",
    "releases": 33,
    "distinct_works": 3,
-   "median_per_day": 1.0,
+   "median_per_day": 1,
    "example_work": "IDOL×IDOL STORY！"
   }
  ],
@@ -4479,16 +4516,12 @@
  "weekly": {
   "weeks": [
    {
-    "week": "2026-05-31",
-    "n": 316
-   },
-   {
     "week": "2026-06-07",
-    "n": 78
+    "n": 80
    },
    {
     "week": "2026-06-14",
-    "n": 133
+    "n": 127
    },
    {
     "week": "2026-06-21",
@@ -4496,11 +4529,11 @@
    },
    {
     "week": "2026-06-28",
-    "n": 109
+    "n": 122
    },
    {
     "week": "2026-07-05",
-    "n": 224
+    "n": 221
    },
    {
     "week": "2026-07-12",
@@ -4508,7 +4541,7 @@
    },
    {
     "week": "2026-07-19",
-    "n": 114
+    "n": 111
    },
    {
     "week": "2026-07-26",
@@ -4516,38 +4549,38 @@
    },
    {
     "week": "2026-08-02",
-    "n": 42
+    "n": 48
    }
   ],
-  "trimmed_weeks": 3,
-  "pre_tracking_releases": 1305,
+  "trimmed_weeks": 4,
+  "pre_tracking_releases": 1001,
   "tracking_from": "2026-08-01"
  },
  "access_modes": {
-  "purchase": 564,
-  "free": 675,
-  "free-timed": 99
+  "purchase": 294,
+  "free": 641,
+  "free-timed": 96
  },
  "update_kinds": {
-  "new-chapter": 1268,
-  "final": 8,
-  "new-series": 44,
+  "new-chapter": 985,
+  "final": 6,
+  "new-series": 32,
   "oneshot": 21,
-  "other": 20,
+  "other": 19,
   "skipped": 1
  },
  "identification": {
-  "discovery-candidate": 1049,
-  "platform-genre": 313
+  "discovery-candidate": 768,
+  "platform-genre": 296
  },
  "collapsed": {
-  "duplicate_chapters": 50,
+  "duplicate_chapters": 91,
   "thin_sitemap": 8,
   "resolver": 54,
   "samples": 49
  },
  "filled": {
-  "author": 94,
-  "access": 66
+  "author": 92,
+  "access": 127
  }
 }

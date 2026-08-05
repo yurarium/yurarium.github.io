@@ -1,0 +1,408 @@
+  :root{
+    color-scheme: light dark;
+    --bg:#fbfaf9; --fg:#2a2725; --dim:#6b625c; --faint:#968d87;
+    --line:#e4dfda; --card:#fff; --accent:#8b5e83; --accent-bg:#f3ecf1;
+    --warn-bg:#f7f0e6; --warn-fg:#7a5c2e; --queue-bg:#eef1f4; --queue-fg:#4a5a68;
+  }
+  /* Dark applies from the system preference unless the reader has explicitly chosen light,
+     and from data-theme when they have explicitly chosen dark. */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
+           --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
+           --warn-bg:#2c2416; --warn-fg:#c9a86a; --queue-bg:#1c222a; --queue-fg:#8ea6b8; }
+  }
+  :root[data-theme="dark"]{ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
+           --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
+           --warn-bg:#2c2416; --warn-fg:#c9a86a; --queue-bg:#1c222a; --queue-fg:#8ea6b8; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:15px/1.65 ui-sans-serif,system-ui,"Hiragino Sans","Noto Sans JP",sans-serif}
+  .wrap{max-width:64rem;margin:0 auto;padding:1.4rem 1.1rem 4rem}
+  h1{font-size:1.1rem;font-weight:600;margin:0 0 .2rem;letter-spacing:.02em}
+  /* The size lives on the WORD, not on the h1: the language and theme controls sit inside the
+     heading and would scale with it. At 1.1rem against a 15px body the title was eight per cent
+     larger than the text around it, which is not a heading so much as a bold first line. */
+  .brand{font-size:2rem;font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  #byline{margin:.15rem 0 0;color:var(--dim);font-size:.9rem;max-width:38rem}
+  .sub{color:var(--dim);font-size:.85rem;margin:0}
+  .note{background:var(--warn-bg);color:var(--warn-fg);border-radius:6px;
+    padding:.55rem .8rem;font-size:.82rem;margin:.9rem 0 0}
+  /* The notes ran to more than a full screen on a phone, so the feed began below the fold.
+     Collapsed by default; the coverage line above it stays visible. */
+  .legend summary{cursor:pointer;margin-top:.5rem;font-weight:600;opacity:.85}
+  .legend[open] summary{margin-bottom:.5rem}
+  /* clear: the control bar floats right, and a third group made it tall enough that the tab strip
+     flowed alongside it and was squeezed to one character per line. */
+  nav{display:flex;gap:.3rem;border-bottom:1px solid var(--line);margin:1.1rem 0 1.1rem;clear:both}
+  nav button{white-space:nowrap}
+  nav button{font:inherit;font-size:.88rem;background:none;border:0;border-bottom:2px solid transparent;
+    padding:.5rem .8rem;color:var(--dim);cursor:pointer;margin-bottom:-1px}
+  nav button[aria-selected=true]{color:var(--fg);border-bottom-color:var(--accent);font-weight:600}
+  nav .n{color:var(--faint);font-size:.76rem;margin-left:.3rem}
+  input[type=search],select{font:inherit;font-size:.88rem;padding:.42rem .6rem;
+    border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg)}
+  input[type=search]{flex:1 1 15rem;min-width:0}
+  /* ONE HEIGHT for everything in a filter bar. There were four in a single row: buttons at 24.6px,
+     the picker wrapper at 26.1, the selects at 33.3 and the search input at 38.4, because an input,
+     a select and a button each size themselves differently from the same padding. A row of controls
+     that do not line up reads as several rows that happen to be adjacent.
+     Hierarchy is kept where it belongs, in weight and colour: `reset` is still quieter than the
+     filters, it is simply no longer shorter than them. */
+  .controls{display:flex;flex-wrap:wrap;gap:.55rem;align-items:stretch;margin-bottom:.9rem;
+    --ctl-h:2.15rem}
+  .controls > input[type=search], .controls > select,
+  .controls > button, .controls .monthpick > button{
+    height:var(--ctl-h);box-sizing:border-box;padding-top:0;padding-bottom:0;line-height:1}
+  /* The wrapper must not add height of its own, or the button inside it stops matching the row. */
+  .controls .monthpick{display:flex;align-items:stretch}
+  /* A control holding something other than its default. Slight on purpose: enough to find while
+     scanning the row, not enough to read as a warning. The accent is the same one used for the
+     current selection elsewhere, so it says "this is set" rather than "this is wrong". */
+  /* Two channels, not three. Border and weight carry it; the text colour stays as it is, because
+     border plus colour plus weight together read as an alert rather than as a mark, and colour on
+     its own would carry the meaning for nobody who cannot see it. */
+  .controls [data-active]{border-color:var(--accent)}
+  .controls select[data-active], .controls input[data-active],
+  .controls .monthpick > button[data-active]{font-weight:600}
+  /* The way out, lit at the same moment. Disabled when there is nothing to clear, which is most
+     of the time and is also how the two are learned as one idea. */
+  .controls button[disabled]{opacity:.4;cursor:default}
+  /* THE DISPLAY-DETAIL POPUP. Anchored to its own button rather than to the bar, so it opens
+     under the control that summoned it wherever the header has wrapped it to. Right-aligned,
+     because the button sits at the end of the row and a left-aligned panel would leave the page. */
+  /* overflow:visible undoes .themebox, which clips to its own rounded corners so the buttons
+     inside a group square off against them. That clipping removed the whole panel: it reported
+     itself open, on screen and 272px wide, and nothing was drawn. This group holds one button and
+     has no corners to defend. */
+  /* Both classes in the selector, not just .langmore: .themebox is declared further down and the
+     two would otherwise tie on specificity, with the later rule winning and the panel staying
+     clipped. It reported itself open, on screen and 272px wide, and nothing was drawn. */
+  .themebox.langmore{position:relative;overflow:visible}
+  .morepop{position:absolute;top:calc(100% + .35rem);right:0;z-index:60;min-width:17rem;
+    max-width:min(23rem, calc(100vw - 1.5rem));padding:.7rem .8rem;text-align:left;
+    background:var(--bg);border:1px solid var(--line);border-radius:.5rem;
+    box-shadow:0 6px 22px rgba(0,0,0,.18)}
+  /* A notch on the top edge, pointing at the button that opened the panel. Two triangles, the
+     outer one the border colour and the inner one the background, so the notch carries the panel's
+     own outline rather than floating free of it. Positioned from the RIGHT, because the panel is
+     right-aligned to its button and the button is therefore always at that end. */
+  .morepop::before, .morepop::after{content:"";position:absolute;bottom:100%;
+    width:0;height:0;border:7px solid transparent;pointer-events:none}
+  .morepop::before{right:7px;border-bottom-color:var(--line)}
+  .morepop::after{right:8px;border-width:6px;border-bottom-color:var(--bg);margin-bottom:-1px}
+  .moregrp{margin:0 0 .85rem}
+  .moregrp:last-child{margin-bottom:0}
+  /* Divides what applies to the Japanese from what applies to the Latin. */
+  .moresep{border:0;border-top:1px solid var(--line);margin:0 0 .85rem}
+  .morelab{display:block;font-size:.76rem;color:var(--dim);margin-bottom:.3rem}
+  .morenote{font-size:.72rem;color:var(--dim);margin:.35rem 0 0;line-height:1.45}
+  /* A group that cannot apply keeps its space and goes inert, the same rule the header row used:
+     a control vanishing reflows the panel and the reader loses their place. */
+  .moregrp[data-inert]{opacity:.4}
+  .moregrp[data-inert] button, .moregrp[data-inert] .enorow{pointer-events:none}
+
+  /* THE ORDER LIST. Draggable rows, and each also carries its own move buttons, because drag is
+     unavailable to a keyboard and awkward on a touch screen, and this is a preference rather than
+     a flourish. */
+  .enorder{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.25rem}
+  .enorow{display:flex;align-items:center;gap:.4rem;padding:.3rem .4rem;cursor:grab;
+    border:1px solid var(--line);border-radius:.35rem;background:var(--bg);font-size:.82rem}
+  .enorow[aria-grabbed="true"]{opacity:.45;cursor:grabbing}
+  .enorow.over{border-color:var(--accent)}
+  .enorow .grip{color:var(--dim);cursor:grab;line-height:1}
+  .enorow .nm{flex:1;min-width:0}
+  .enorow .ct{color:var(--dim);font-size:.72rem;white-space:nowrap}
+  /* Ordered below a form every work has, so it can never be reached. Struck through rather than
+     hidden: the reader put it there, and it has to stay visible to be dragged back out. */
+  .enorow[data-dead] .nm{text-decoration:line-through;color:var(--dim)}
+  .enorow .mv{border:0;background:none;color:var(--dim);padding:0 .15rem;font-size:.85rem;
+    line-height:1;cursor:pointer}
+  .enorow .mv[disabled]{opacity:.25;cursor:default}
+  /* A section the reader opens rather than one they scroll past. The summary carries the count,
+     because the number is the reason to open it or leave it shut. */
+  .softlist{margin-top:1.1rem;border-top:1px solid var(--line);padding-top:.5rem}
+  .softlist > summary{cursor:pointer;color:var(--dim);font-size:.83rem;padding:.3rem 0;
+    list-style-position:outside}
+  .softlist[open] > summary{margin-bottom:.4rem}
+  .count{color:var(--dim);font-size:.83rem;margin:0 0 .7rem}
+  ol,ul.plain{list-style:none;margin:0;padding:0}
+  li{border-bottom:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;align-items:baseline;
+    padding:.62rem .2rem;cursor:pointer;background:none;border:0;width:100%;
+    text-align:left;font:inherit;color:inherit}
+  .row:hover{background:var(--accent-bg)}
+  .t{font-weight:600;font-size:.97rem}
+  .yomi{color:var(--faint);font-size:.76rem;margin-left:.5rem;font-weight:400}
+  .meta{color:var(--dim);font-size:.82rem}
+  .num{color:var(--dim);font-size:.8rem;white-space:nowrap;text-align:right}
+  /* ONE badge. There were two families (.tag at .68rem and .k at .63rem) which met in the works
+     tab, where the state badge is a .k and the access badge beside it is a .tag. Weight had drifted
+     too: three classes were 600 and the rest normal, so "Paid early" came out bolder than "Free",
+     emphasising a standing series fact over what the update actually did.
+     Size and weight now say nothing. COLOUR is the only variable, because it is the only one that
+     carries meaning: accent = readable, grey = neutral, queue = ended, warn = costs something. */
+  .tag,.k{display:inline-block;font-size:.66rem;font-weight:500;padding:.06rem .36rem;
+    border-radius:3px;letter-spacing:.02em;white-space:nowrap;vertical-align:.08em;
+    background:var(--accent-bg);color:var(--accent)}
+  h1 .tag{margin-left:.45rem}
+  .tag.grey{background:var(--line);color:var(--dim)}
+  .datewarn{color:var(--warn-fg);font-size:.75rem;margin-top:.2rem;line-height:1.45}
+  /* Compact list: one line per update, in the spirit of 百合ナビ's date-grouped table. */
+  .cday{display:grid;grid-template-columns:5.7rem 1fr;gap:0 .8rem;
+    border-top:1px solid var(--line);padding:.5rem 0}
+  .cday-d{font-size:.78rem;color:var(--faint);font-weight:600;padding-top:.15rem;
+    font-variant-numeric:tabular-nums}
+  /* On a narrow screen a fixed date column costs ~25% of the width for two digits and a slash,
+     and titles are what the space is for. Below 34rem the date becomes its own line instead. */
+  @media (max-width:34rem){
+    .cday{grid-template-columns:1fr;gap:.15rem}
+    .cday-d{padding-top:0}
+  }
+  .cday-l{min-width:0}
+  /* Two columns: the kind badge, then everything else as INLINE content. Inline flow means a long
+     title wraps within its own column and continues under itself rather than under the badge, and
+     the trailing platform name and badges stay attached to the text they belong to. A flex row
+     wrapped them into unindented lines that read as separate entries. */
+  .crow{display:grid;grid-template-columns:auto 1fr;gap:.35rem;align-items:baseline;
+    padding:.14rem 0;line-height:1.55}
+  /* One grid cell holding both parts. With .cmain and .cmeta as direct children of the row the
+     grid had three items against two columns, so the meta always wrapped to its own grid row,
+     stacked whether or not the title needed it. */
+  .ccell{min-width:0;overflow-wrap:anywhere}
+  .cmain,.cmeta{display:inline}
+  .cmain{min-width:0;overflow-wrap:anywhere}
+  .cmain > *{margin-right:.35rem}
+  .cmeta > *{margin-right:.35rem}
+  /* A source name is a name: breaking カドコミ across lines makes it unreadable. */
+  .cmeta .m{white-space:nowrap}
+  /* When the title has already wrapped, the source name and state badges trail off the end of the
+     last line and read as part of the title. Given the row costs a second line anyway, they are
+     better off owning it: `.stacked` is set by measurement after render, because whether a title
+     wraps depends on the text and the viewport and CSS alone cannot ask. */
+  .crow.stacked .cmeta{display:block;margin-top:.1rem}
+  .crow.stacked .cmeta > :first-child{margin-left:0}
+  /* Wrapped rows need to be told apart from their neighbours once they are more than one line. */
+  @media (max-width:34rem){
+    .crow{padding:.3rem 0;border-bottom:1px dotted var(--line)}
+    .crow:last-child{border-bottom:0}
+  }
+  .crow a{color:inherit;text-decoration:none;font-weight:600;font-size:.92rem}
+  .crow a:hover{color:var(--accent);text-decoration:underline}
+  .crow .m{color:var(--dim);font-size:.78rem}
+  .k-new,.k-one,.k-free{background:var(--accent-bg);color:var(--accent)}
+  .k-ch{background:var(--line);color:var(--dim)}
+  .k-fin{background:var(--queue-bg);color:var(--queue-fg)}
+  .k-oth,.k-adv{background:var(--warn-bg);color:var(--warn-fg)}
+  /* The one shape difference kept: no fill, so it needs an edge to read as a badge at all. Drawn
+     as an inset shadow rather than a border so it does not sit 2px wider than its neighbours. */
+  .k-unk{background:transparent;color:var(--faint);box-shadow:inset 0 0 0 1px var(--line)}
+  /* Removed with their last user: .k-claim (claims no longer reach this page), .k-newfree,
+     .tag.q, .tag.warn. */
+  .date-h{font-size:.78rem;color:var(--faint);font-weight:600;letter-spacing:.05em;
+    padding:1rem 0 .3rem;border-bottom:1px solid var(--line)}
+  /* The weekday rides with the date but must not compete with it. It is orientation, not a label. */
+  .dow{font-weight:400;opacity:.72}
+  /* An English rendering that is OURS, or rests on an unverified reading, is marked: quietly.
+     A dotted underline says "this is a rendering" without competing with the name it sits under. */
+  .en.ours{border-bottom:1px dotted currentColor}
+  /* The English line is the same row again, one step quieter: enough to read as a translation
+     of the line above rather than as a second entry, which is what an equally-weighted duplicate
+     looks like. */
+  .bi{display:block}
+  .bi-en{display:block;opacity:.72;font-size:.94em;margin-top:.05rem}
+  .ftclear{display:block;margin-top:.4rem}
+  .bi-en .t,.bi-en a{font-weight:500}
+  .crow .bi-en{font-size:.92em}
+  /* The second line has to BREAK the line, and both places it appears are flex rows where
+     display:block does not do that. A flex item is blockified already and still sits in the row.
+     flex-basis:100% is what forces the wrap; the .cmain case is inline flow, so it needs its own. */
+  /* Its own line, but AFTER the badge row rather than splitting it: forcing a flex break in the
+     middle pushed the state and access badges onto a third line, so a 両-mode row cost two extra
+     lines instead of one. */
+  .ensecond{color:var(--dim);font-size:.82rem;font-weight:400;margin-top:.05rem;display:block}
+  .crow .ensecond{font-size:.76rem}
+  /* Ruby needs room above the line or it collides with the row before it. */
+  /* HALF SIZE, which is the rule: "the size of characters of the ruby annotation is by default
+     set to half of the size of characters of the ruby base" (W3C Simple Ruby, after JIS X 4051).
+     Ours was .55em, which is oversized, and the base was being widened to fit the overhang.
+
+     A base widened by a longer reading is NOT a defect. The same rules prescribe it: for a single
+     character the space goes around the base, and for a group the space goes into the base. So
+     畳 sitting wider than its own width, under じょう, is correct typesetting and is left alone.
+
+     Overhanging the neighbours would avoid it and is disallowed for kanji and kana alike, on the
+     grounds that it invites misreading; it is permitted only into the blank of adjacent
+     punctuation. Tested anyway: it removes every widened base and makes 24 pairs of neighbouring
+     readings overlap, so the rule is right.
+
+     nowrap holds one base and its reading together. With jukugo-ruby a base is a single character,
+     and the line may break between characters, which is exactly what the rules allow. */
+  ruby{ruby-position:over;white-space:nowrap}
+  rt{font-size:.5em;color:var(--dim);font-weight:400;letter-spacing:0;white-space:nowrap}
+  /* The title as a whole still wraps: the unbreakable part is one base and its reading, not the
+     string. Long single runs are allowed to break rather than overflow the column. */
+  .rel .t, .crow .t, .wtitle{overflow-wrap:break-word}
+  /* NOT italic. Japanese typefaces have no true italic, so a browser synthesises an oblique slant
+      a Latin convention applied to kana, which is why it looked wrong. And the mark was on 100% of
+     rendered furigana, because every reading that currently produces ruby is a machine guess: a
+     distinction drawn on everything is not a distinction, it is noise that also looked broken.
+     The per-item hook stays, because it becomes meaningful as sourced readings arrive; until then
+     the honest place to say "these are guesses" is once, above the list. */
+  rt.rt-guess{opacity:.85}
+  /* A reading somebody looked up and wrote a note for. Not a guess, and not the source's own
+     word either, so it is marked as ours in the way a translation is: the reader can see that a
+     person decided it. Dotted rather than tinted, because tinting reads as a warning. */
+  rt.rt-said{opacity:1;border-bottom:1px dotted var(--dim)}
+  .unc{font-size:.62em;color:var(--warn-fg);margin-left:.1em;font-weight:600;cursor:help}
+  .rel .t ruby, .crow ruby{line-height:2.1}
+  /* The toggle carries ruby of its own, which needs the room a control does not normally give.
+     padding-top:0 put the rt hard against the border: ruby needs headroom above the line box, not
+     just a taller line. */
+  .furibtn{line-height:1.75;padding-top:.34rem;padding-bottom:.16rem}
+  .furibtn rt{font-size:.48em;opacity:.75;line-height:1}
+  .rel{padding:.6rem .2rem;border-bottom:1px solid var(--line)}
+  .rel a{color:inherit;text-decoration:none}
+  .rel a:hover .t{color:var(--accent);text-decoration:underline}
+  /* Three tiers, so the eye has somewhere to land: the work, then the chapter, then who and where.
+     Before this they were all near-equal weight and the row read as a paragraph. */
+  .rel .relhead{display:flex;flex-wrap:wrap;gap:.3rem;align-items:baseline}
+  .rel .relhead .tag,.rel .relhead .k{margin-left:0}
+  .rel .ep{font-size:.88rem;color:var(--fg);opacity:.88;margin-top:.1rem;overflow-wrap:anywhere}
+  .rel .pubnote{font-size:.75rem;color:var(--faint);margin-top:.1rem;font-variant-numeric:tabular-nums}
+  .rel .line2{display:flex;flex-wrap:wrap;gap:.15rem .5rem;align-items:baseline;margin-top:.2rem}
+  /* A credit string can be longer than everything else in the row:
+     原作／宮澤伊織(早川書房刊)　作画／水野英多　キャラクター原案／shirakaba, and it was burying the
+     chapter. Clamped to one line at full size; the whole string stays available on hover and to a
+     screen reader, and the row keeps its shape. */
+  .rel .by{max-width:min(30rem,100%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  /* A NAME CARRYING FURIGANA CANNOT BE CLIPPED. The ellipsis above needs overflow:hidden, and a
+     ruby annotation sits above the line box rather than inside it, so its top row of pixels lands
+     exactly on the clip edge and is shaved: おおくま over 大熊 came out with its tops cut. Padding
+     does not help, because the annotation overflows the line box whatever the box does.
+     So the line is given the height to hold it and the clipping is dropped, for these rows only.
+     The ellipsis is not lost where it matters: it exists for long credit lines naming several
+     people, and those have no reading of their own, so :has(ruby) never matches them. */
+  .rel .by:has(ruby){line-height:2.1;overflow:visible;white-space:normal}
+  /* An anthology instalment belongs to a collection but is its own work by its own author, so the
+     collection is shown as context rather than as the title. */
+  .rel .coll{color:var(--faint);font-size:.78rem}
+  .rel .coll::before{content:"／ "}
+  .rel .plat{color:var(--faint)}
+  /* A channel sits inside its host, so it reads as a qualifier on the platform rather than beside
+     it as an equal. */
+  .rel .chan{color:var(--faint);font-size:.76rem}
+  .rel .chan::before{content:"／"}
+  /* Sources are ways in to one work, not competing entries, so they read as a row of small chips
+     under it rather than as another title-weight line. */
+  .srcs{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.25rem}
+  .src{font-size:.75rem;color:var(--dim);background:var(--line);border-radius:3px;
+    padding:.05rem .4rem;white-space:nowrap;text-decoration:none}
+  a.src:hover{background:var(--accent-bg);color:var(--accent)}
+  .src .srcn{color:var(--faint);margin-left:.3rem;font-variant-numeric:tabular-nums}
+  .src .fmt{color:var(--accent);font-weight:600}
+  .rel .plat::before{content:"· ";color:var(--faint)}
+  @media (max-width:34rem){
+    .rel .by{max-width:100%}
+    .rel .line2{gap:.1rem .4rem}
+  }
+  /* The way back through the archive. Deliberately not a nav element: it is the end of the list,
+     read once the recent updates run out, so it sits on the page's own hairline rather than being
+     given a card or a border of its own. */
+  /* An aside, not a warning: an archived month is ordinary information that happens to be old. */
+  .snapnote{color:var(--dim);font-size:.8rem;margin:-.3rem 0 .8rem}
+  /* MONTH PICKER. A popover rather than a long select: the option list grows twelve entries a
+     year, and a reader choosing a period thinks in a calendar rather than in a scrolling list. */
+  .monthpick{position:relative}
+  #fmonthbtn{white-space:nowrap}
+  .mpop{position:absolute;z-index:40;top:calc(100% + .35rem);left:0;min-width:15rem;
+        background:var(--card);border:1px solid var(--line);border-radius:.5rem;
+        padding:.55rem;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+  .mrecent{display:block;width:100%;text-align:left;margin-bottom:.45rem;
+           background:none;border:1px solid var(--line);border-radius:.35rem;
+           padding:.32rem .5rem;color:inherit;font:inherit;cursor:pointer}
+  .mrecent[aria-current=true]{border-color:var(--accent);color:var(--accent)}
+  /* The gloss wraps as a unit or not at all. Breaking inside it put "coming soon up to a month"
+     on one line and "ahead" on the next, which reads as a sentence the picker is not making. */
+  .msub{color:var(--dim);font-size:.78rem;margin-left:.3rem;white-space:nowrap}
+  .mnav{display:flex;align-items:center;justify-content:space-between;margin-bottom:.35rem}
+  .mnav button{background:none;border:0;color:inherit;font-size:1.1rem;cursor:pointer;
+               padding:0 .45rem;line-height:1}
+  .mnav button[disabled]{opacity:.28;cursor:default}
+  .mnav span{font-size:.85rem;font-variant-numeric:tabular-nums}
+  .mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:.3rem}
+  .mgrid button{background:none;border:1px solid transparent;border-radius:.35rem;
+                padding:.34rem .2rem;color:inherit;font:inherit;font-size:.82rem;cursor:pointer}
+  .mgrid button:hover:not([disabled]){border-color:var(--line)}
+  /* A month with no archive is shown and disabled rather than hidden: the gap is information,
+     and a grid that silently omits months reads as a bug in the calendar. */
+  .mgrid button[disabled]{opacity:.3;cursor:default}
+  .mgrid button[aria-current=true]{border-color:var(--accent);color:var(--accent)}
+  .archbar{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center;
+    margin-top:1.6rem;padding-top:1rem;border-top:1px solid var(--line);
+    color:var(--dim);font-size:.83rem}
+  .quiet{opacity:.62}
+  .detail{padding:.3rem .2rem 1.1rem;font-size:.86rem}
+  .detail h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--faint);margin:1rem 0 .35rem;font-weight:600}
+  .vols{width:100%;border-collapse:collapse;font-size:.82rem}
+  .vols th{text-align:left;color:var(--faint);font-weight:500;padding:.2rem .5rem .2rem 0}
+  .vols td{padding:.18rem .5rem .18rem 0;border-top:1px solid var(--line);
+    font-variant-numeric:tabular-nums}
+  .basis{background:var(--card);border:1px solid var(--line);border-radius:6px;
+    padding:.6rem .75rem;color:var(--dim);font-size:.82rem}
+  .basis a{color:var(--accent)}
+  .scroll{overflow-x:auto}
+  .empty{color:var(--dim);padding:2rem 0;text-align:center}
+  footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);
+    color:var(--faint);font-size:.78rem}
+  footer a{color:var(--accent)}
+  [hidden]{display:none !important}
+  /* Language and theme are two separate settings and were reading as one strip of six buttons.
+     A gap alone did not fix it, and the hairline I tried first landed in the wrong place: both
+     boxes were float:right, so the one FIRST in source sits RIGHTMOST and its right border drew on
+     the outer edge rather than between the groups.
+     So: one flex container, explicit order, and each group drawn as a single segmented control:
+     one outline around the group, dividers only between its own buttons. Two bordered objects read
+     as two settings without needing a label on either. */
+  /* wrap, and never shrink a group: without these the flex row squeezed the language box instead
+     of moving to a second line, and .themebox's overflow:hidden silently cut EN and 両 off. A
+     control that is present but clipped is worse than one that wrapped. */
+  /* A flex row, not a float. The control bar used to sit INSIDE the h1 and float right, which
+     held together only while the heading was one small line: raising the title to 2rem dropped
+     the controls to their own row and left the byline flowing around them, 118px tall for one
+     line of text. The masthead is now two columns that wrap when there is no room. */
+  .masthead{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:flex-start;
+    justify-content:space-between}
+  .mast-text{min-width:0}
+  .ctlbar{display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;
+    justify-content:flex-end;margin-left:auto}
+  /* `flex:0 1 auto`, not `0 0 auto`. The row may not shrink was true while it held exactly what
+     fitted; adding the "…" button took it past 375px and, unable to narrow, it overflowed to the
+     LEFT and put 日本語 off the edge of the screen. A row that cannot shrink cannot wrap either,
+     because its own wrapping needs a width to wrap within. */
+  .ctlbar > .ctlrow{display:flex;flex-wrap:wrap;gap:.5rem .85rem;align-items:center;
+    flex:0 1 auto;max-width:100%;justify-content:flex-end}
+  .ctlrow > .themebox{flex:0 0 auto}
+  .conditional.inert{visibility:hidden;pointer-events:none}
+  /* The theme labels are the only ones that change length with the language: 自動 / auto / 自動 /
+     auto, and the language and romanisation groups are self-labelling, so they never move. Left
+     alone, that one group rewrapped the bar and the tab strip under it jumped on every switch.
+     Reserving its widest state costs a little air in 日本語 and keeps everything below it still. */
+  #thbox{min-width:12.6rem;justify-content:space-between}
+  #thbox .themebtn{flex:1;text-align:center}
+  .themebox{display:inline-flex;border:1px solid var(--line);border-radius:5px;overflow:hidden;
+    background:var(--card)}
+  .themebox .themebtn{border:0;border-radius:0;border-left:1px solid var(--line);background:none}
+  .themebox .themebtn:first-child{border-left:0}
+  @media (max-width:34rem){
+    .ctlbar{justify-content:flex-end;margin-top:.45rem;gap:.6rem}
+  }
+  /* Labels gained a second word (両 both, 自動 / auto) and started breaking mid-label on a phone,
+     which turns a three-button group into a six-line block. Let the GROUPS wrap instead. */
+  .themebtn{font:inherit;font-size:.72rem;padding:.12rem .45rem;cursor:pointer;white-space:nowrap;
+    border:1px solid var(--line);background:var(--card);color:var(--dim);border-radius:4px}
+  .themebtn[aria-pressed=true]{background:var(--accent-bg);color:var(--accent);
+    border-color:var(--accent);font-weight:600}
+  /* Inside a segmented group the selected button is filled, not outlined. An outline would fight
+     the group's own border. */
+  .themebox .themebtn[aria-pressed=true]{border-left-color:var(--line)}
