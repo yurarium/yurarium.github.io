@@ -436,3 +436,17 @@
 nav button .n:empty { display: none; }
 .relvn { font-weight: 600; margin-left: .4rem; }
 .relvt a { color: inherit; }
+
+/* A release row's title is a link and reads as one from its weight, not from an underline. The
+   rest of the site does not underline in running text and this was the only place that did. */
+.relvt a { color: inherit; text-decoration: none; }
+.relvt a:hover { text-decoration: underline; }
+
+/* A work's own page, over the list rather than inside it. */
+#workpage { padding: .3rem 0 2rem; }
+.wp-back { margin: 0 0 .9rem; font-size: .9em; }
+.wp-back a { color: inherit; opacity: .7; text-decoration: none; }
+.wp-back a:hover { opacity: 1; text-decoration: underline; }
+.wp-title { font-size: 1.35rem; margin: 0 0 .5rem; line-height: 1.35; }
+.wp-detail { display: block !important; margin-top: 1rem; }
+.wp-detail .dk { min-width: 7rem; }

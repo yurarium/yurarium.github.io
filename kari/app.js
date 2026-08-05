@@ -400,14 +400,24 @@ function enHtml(rec, cls, isPerson) {
   // mark and the tooltip come with it: a swapped name that lost its [?] would be worse than one
   // in the wrong order.
   const shown = (isPerson && personName(rec)) || e.text;
+  // A PERSON HAS NO TITLE. The same note was reaching a name and telling a reader that
+  // "Tsumugi Meme" is "not an English title the work has", which is a sentence about a work said
+  // about a person. isPerson is already known here, so it decides the wording too.
+  const thing = isPerson ? 'name' : 'title';
   const why = e.unverified
     ? 'reading not confirmed against a source. This romanisation may be wrong'
     : e.ours
-      ? (e.basis === 'romaji' ? 'our romanisation of the Japanese, not an English title the work has'
-                              : 'our translation, not an English title the work has')
-      : 'the English name the work itself uses';
-  const mark = (e.ours || e.unverified) ? ' ours' : '';
-  return `<span class="en${mark} ${cls || ''}" title="${esc(why)}">${esc(shown)}</span>${uncertainMark(rec, e)}`;
+      ? (e.basis === 'romaji'
+          ? `our romanisation of the Japanese, not a Latin ${thing} they use`
+          : `our translation, not an English ${thing} the ${isPerson ? 'person' : 'work'} uses`)
+      : `the English ${thing} the ${isPerson ? 'person' : 'work'} itself uses`;
+  // A NOTE ON EVERYTHING IS A NOTE ON NOTHING. Every name carried one, including the ones whose
+  // note said only that the name is the one the work or person uses, which a reader can assume.
+  // Annotate what is OURS; say nothing about what is theirs.
+  const ours = e.ours || e.unverified;
+  const mark = ours ? ' ours' : '';
+  const tip = ours ? ` title="${esc(why)}"` : '';
+  return `<span class="en${mark} ${cls || ''}"${tip}>${esc(shown)}</span>${uncertainMark(rec, e)}`;
 }
 
 /* Titles: EN replaces the Japanese, and in 併記 the whole ROW is rendered again in English by
@@ -1165,11 +1175,70 @@ function workDetail(r) {
 document.addEventListener('click', ev => {
   const row = ev.target.closest('.rel[data-work]');
   if (!row || ev.target.closest('a')) return;   // a link is a link, not a disclosure
-  const nowOpen = !row.classList.contains('here');
-  document.querySelectorAll('.rel.here').forEach(n => n.classList.remove('here'));
-  if (nowOpen) row.classList.add('here');
-  navSync(true);
+  // THE WORKS TAB OPENS THE WORK'S PAGE. A row expanding in place made the record a footnote to
+  // the list it came from, and a reader who wanted the work got a taller row. The list is a
+  // finding aid and the page is the destination.
+  openWorkPage(row.dataset.work);
 });
+
+/* A work's own page, rendered over the list rather than inside it. The address is the one the
+   pre-rendered stub sits at, so a reader who arrives from outside and one who clicks a row end up
+   looking at the same thing at the same URL. */
+let PAGE_WORK = null;
+
+function openWorkPage(id) {
+  if (!id) return;
+  PAGE_WORK = id;
+  renderWorkPage();
+  history.pushState({ work: id, tab: 'ser' }, '', BASE + 'work/' + id + '/');
+}
+
+function closeWorkPage(push) {
+  PAGE_WORK = null;
+  el('workpage').hidden = true;
+  el('tab-ser').hidden = false;
+  document.querySelector('nav').hidden = false;
+  if (push) history.pushState({ tab: 'ser' }, '', BASE + '?tab=ser');
+}
+
+function renderWorkPage() {
+  const r = (SERIES.series || []).find(x => x.id === PAGE_WORK);
+  const box = el('workpage');
+  if (!r || !box) return;
+  document.querySelector('nav').hidden = true;
+  el('tab-ser').hidden = true;
+  el('tab-feed').hidden = true;
+  el('tab-rel').hidden = true;
+  box.hidden = false;
+  const src = (r.sources || []).map(s => s.url
+    ? `<a class="src" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer nofollow"
+         >${esc(platBoth(s.platform))}<span class="srcn">${esc(s.chapters)}${s.partial ? '+' : ''}</span></a>`
+    : `<span class="src">${esc(platBoth(s.platform))}</span>`).join('');
+  const rows = [];
+  const add = (k, v) => { if (v) rows.push(`<div class="dl"><span class="dk">${esc(k)}</span><span class="dv">${v}</span></div>`); };
+  add(T('作者', 'Author'), r.author ? authorLabel(r) : '');
+  add(T('話数', 'Chapters'), r.chapters ? esc(String(r.chapters) + (r.partial ? '+' : '')) : '');
+  add(T('最新', 'Latest'), r.latest ? esc(fmtDate(r.latest, { year: true })) : '');
+  add(T('初出', 'First'), r.first ? esc(fmtDate(r.first, { year: true })) : '');
+  (r.print || []).forEach(pr => add(T('単行本', 'In print'),
+    esc([pr.volumes ? pr.volumes + T(' 巻', ' vol') : '', pr.publisher, pr.imprint, pr.first]
+      .filter(Boolean).join(' · '))));
+  add(T('状態', 'State'), esc(stateLabel(r)));
+  add(T('根拠', 'Basis'), esc(r.completed_basis || r.state_basis || ''));
+  add('ID', `<span class="mono">${esc(r.id || '')}</span>`);
+  box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=ser" id="wp-back">${
+      esc(T('← 作品一覧', '← All works'))}</a></p>
+    <h2 class="wp-title">${workLabel(r)}</h2>
+    <div class="srcs">${src}</div>
+    <div class="detail wp-detail">${rows.join('')}</div>`;
+  el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeWorkPage(true); });
+  window.scrollTo(0, 0);
+}
+
+function stateLabel(r) {
+  const k = SSTATE[r.state];
+  return k ? splitLang(k[0] + ' / ' + k[2], LANG === 'both' ? 'ja' : LANG) : (r.state || '');
+}
 
 
 /* ── releases ─────────────────────────────────────────────
