@@ -1059,8 +1059,10 @@ function workDetail(r) {
   const why = r.completed_basis || r.state_basis;
   if (why) bits.push(`<div class="dl"><span class="dk">${T('\u6839\u62E0', 'Basis')}</span>` +
     `<span class="dv">${esc(why)}</span></div>`);
-  if (r.id) bits.push(`<div class="dl"><span class="dk">${T('ID', 'ID')}</span>` +
-    `<span class="dv mono">${esc(r.id)}</span></div>`);
+  // The work's own page. It has existed since the identifiers landed and nothing pointed at it,
+  // so the address was reachable only by typing it.
+  if (r.id) bits.push(`<div class="dl"><span class="dk">${T('固定リンク', 'Permalink')}</span>` +
+    `<span class="dv"><a class="mono" href="${esc(BASE)}work/${esc(r.id)}/">${esc(r.id)}</a></span></div>`);
   return bits.length ? `<div class="detail">${bits.join('')}</div>` : '';
 }
 
@@ -1092,9 +1094,15 @@ async function renderReleases() {
   const WORKS = await DETAIL;
   if (el('rel-list').dataset.done === '1') return;
   el('rel-list').dataset.done = '1';
+  // works.json knows a work by its MADB id; the minted identifier that addresses a work page is
+  // on the series row that joined them. Without this map a release links nowhere.
+  const byMadb = new Map();
+  (SERIES?.series || []).forEach(r => (r.print || []).forEach(pr => {
+    if (r.id && pr.work_id) byMadb.set(pr.work_id, r.id);
+  }));
   const rows = [];
   (WORKS.works || []).forEach(w => (w.volumes || []).forEach(v => {
-    if (v.published) rows.push({ d: String(v.published), w });
+    if (v.published) rows.push({ d: String(v.published), w, n: v.number, isbn: v.isbn });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
   const byMonth = new Map();
@@ -1117,7 +1125,13 @@ async function renderReleases() {
       const people = String(w.creator || '').split('/').map(x => strip(x.trim()))
         .filter(Boolean).join(' / ');
       const who = [strip(w.publisher), strip(w.imprint)].filter(Boolean).join(' · ');
-      return `<div class="relv"><div class="relvt">${esc(w.title.ja)}</div>` +
+      // A release is of a VOLUME, so the row says which. 471 of 646 are numbered in the record
+      // and the rest say nothing rather than being numbered by their position in a sorted list.
+      const vol = r.n ? `<span class="relvn">${esc(T('第' + r.n + '巻', 'vol. ' + r.n))}</span>` : '';
+      const wid = byMadb.get(w.work_id);
+      const href = wid ? `${BASE}work/${esc(wid)}/` : '';
+      const name = href ? `<a href="${href}">${esc(w.title.ja)}</a>` : esc(w.title.ja);
+      return `<div class="relv"><div class="relvt">${name} ${vol}</div>` +
         `<div class="relvm">${esc([people, who].filter(Boolean).join(' · '))}</div></div>`;
     }).join('');
     return `<div class="relmonth"><h3>${esc(m)}</h3>${items}</div>`;
@@ -2207,6 +2221,10 @@ Promise.all([
     // counting the raw array promised 45 works that are not there when you open it.
     el('n-ser').textContent =
       SERIES.series.filter(r => r.chapters || (r.print || []).length).length;
+    // Releases reads works.json, which is fetched lazily so the first screen is not waiting on it.
+    // Kicking it off here rather than on the first click means the count is simply there, like the
+    // others. A number that appears only because somebody clicked is a number they cannot trust.
+    renderReleases();
     // From sources[], not a top-level r.platform. There is no such field. The series index became
     // one row per WORK carrying a sources[] list when works on several platforms were collapsed
     // into one row; this line was not updated, so every value was undefined, filter(Boolean) threw
