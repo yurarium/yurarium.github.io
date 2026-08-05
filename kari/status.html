@@ -1,375 +1,68 @@
 <!doctype html>
+<html lang="ja">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <title>Yurarium: 内部状態 / build status</title>
+<link rel="stylesheet" href="app.css">
 <style>
-  :root{
-    color-scheme: light dark;
-    --bg:#fbfaf9; --fg:#2a2725; --dim:#6b625c; --faint:#968d87;
-    --line:#e4dfda; --card:#fff; --accent:#8b5e83; --accent-bg:#f3ecf1;
-    --warn-bg:#f7f0e6; --warn-fg:#7a5c2e; --ok-bg:#eaf1ea; --ok-fg:#3f6042;
-  }
-  /* Same two-rule shape as the main page: dark from the SYSTEM preference unless the reader has
-     explicitly chosen light, and dark from data-theme when they have explicitly chosen dark.
-     The media wrapper was missing here, so this page came out dark for everyone whatever their
-     system said. It only looked right because the author's system is dark. */
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
-           --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
-           --warn-bg:#2c2416; --warn-fg:#c9a86a; --ok-bg:#1b241c; --ok-fg:#8fb094; }
-  }
-  :root[data-theme="dark"]{ --bg:#17151a; --fg:#e6e1dd; --dim:#9a918b; --faint:#6f6660;
-         --line:#2e2a32; --card:#1e1b22; --accent:#c79bbd; --accent-bg:#2a2130;
-         --warn-bg:#2c2416; --warn-fg:#c9a86a; --ok-bg:#1b241c; --ok-fg:#8fb094; }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--fg);
-       font:15px/1.6 system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}
-  .wrap{max-width:60rem;margin:0 auto;padding:1.5rem 1rem 4rem}
-  h1{font-size:1.3rem;margin:0 0 .2rem}
-  h2{font-size:1rem;margin:2.2rem 0 .5rem;padding-bottom:.3rem;border-bottom:1px solid var(--line)}
-  .lede{color:var(--dim);margin:.2rem 0 1.4rem;font-size:.9rem;max-width:46rem}
-  .back{color:var(--accent);text-decoration:none;font-size:.85rem}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.6rem}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:.4rem;padding:.7rem .8rem}
-  .card b{display:block;font-size:1.5rem;font-weight:600;line-height:1.2}
-  .card span{color:var(--dim);font-size:.78rem}
-  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  table{border-collapse:collapse;width:100%;font-size:.85rem;min-width:34rem}
-  th,td{text-align:left;padding:.35rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
-  th{color:var(--dim);font-weight:600;white-space:nowrap}
-  td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-  .pill{display:inline-block;padding:.05rem .45rem;border-radius:.7rem;font-size:.72rem;
-        background:var(--accent-bg);color:var(--accent);white-space:nowrap}
-  .pill.warn{background:var(--warn-bg);color:var(--warn-fg)}
-  .pill.ok{background:var(--ok-bg);color:var(--ok-fg)}
-  .why{color:var(--dim);font-size:.8rem}
-  .note{color:var(--dim);font-size:.83rem;margin:.4rem 0 1rem;max-width:46rem}
-  .bars{display:flex;align-items:flex-end;gap:3px;height:5.5rem;margin:.6rem 0 .2rem}
-  .bars div{flex:1;background:var(--accent);opacity:.75;border-radius:2px 2px 0 0;min-height:1px}
-  .bars div:hover{opacity:1}
-  .axis{display:flex;justify-content:space-between;color:var(--faint);font-size:.72rem}
-  details{margin:.5rem 0}
-  summary{cursor:pointer;color:var(--accent);font-size:.85rem}
+  /* This page's own furniture only. Everything else comes from app.css, which is the point: it is
+     a page of the site rather than a report that happens to live beside it. */
+  .st-sec { margin: 1.7rem 0; }
+  .st-sec > h2 { font-size: 1.02rem; margin: 0 0 .35rem; }
+  .st-lede { margin: 0 0 .55rem; line-height: 1.65; }
+  .st-sec details { border-top: 1px solid rgba(128,128,128,.22); padding-top: .45rem; }
+  .st-sec summary { cursor: pointer; font-size: .87em; opacity: .66; }
+  .st-sec summary:hover { opacity: 1; }
+  table.st { border-collapse: collapse; width: 100%; font-size: .87em; margin-top: .5rem; }
+  table.st th, table.st td { text-align: left; padding: .22rem .55rem .22rem 0; vertical-align: top;
+                             border-bottom: 1px solid rgba(128,128,128,.14); }
+  table.st th { font-weight: 600; opacity: .64; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .st-kind { font-size: .76em; padding: .05rem .38rem; border-radius: .6rem;
+             background: rgba(128,128,128,.17); white-space: nowrap; }
+  .st-rows { max-height: 17rem; overflow: auto; font-size: .85em; line-height: 1.75;
+             margin-top: .4rem; }
+  .st-head { display: flex; gap: .6rem; align-items: baseline; flex-wrap: wrap;
+             margin-bottom: 1.4rem; }
+  .st-head h1 { font-size: 1.5rem; margin: 0; }
+  .st-head a { color: inherit; }
+  .st-sub { opacity: .68; margin: .1rem 0 .9rem; line-height: 1.6; }
+  .prefsrow { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: .4rem; }
 </style>
-<script>
-/* The theme is chosen on the main page and stored under the same key; this page has no toggle of
-   its own but must not contradict the choice. Inline and before the body so the attribute is set
-   before first paint: done at the end of the document it would flash the wrong theme first. */
-try {
-  const m = JSON.parse(localStorage.getItem('yurarium.pref.theme') || '"auto"');
-  if (m === 'light' || m === 'dark') document.documentElement.setAttribute('data-theme', m);
-} catch (e) { /* private mode or storage disabled: fall back to the system preference */ }
-</script>
+</head>
+<body>
 <div class="wrap">
-<a class="back" href="./">&larr; 一覧に戻る / back to the database</a>
-<h1>内部状態 / build status</h1>
-<p class="lede">What the last build did, what it could not reach, and what is outstanding.
-  This page is instrumentation. It is about the pipeline, not about manga. Nothing here needs a
-  reader's attention; the database itself carries no “unverified” marks because no reader is in a
-  position to verify them.</p>
+<header>
+  <div class="masthead">
+   <div class="mast-text">
+    <h1><span class="brand"><a href="./">Yurarium</a></span> <span class="tag" data-i18n>内部状態 / build status</span></h1>
+    <p id="byline" data-i18n>このデータベース自体について。作品についての事実は本編に。 / About this database itself. Facts about the manga are on the site.</p>
+   </div>
+   <!-- The controls sit where they sit everywhere else, in the masthead, using the same wrappers
+        so app.css positions them without this page restating any of it. The page used to inherit a
+        theme chosen elsewhere and offer nothing of its own. -->
+   <span class="ctlbar">
+     <span class="ctlrow">
+       <span class="themebox" role="group" aria-label="配色 / colour theme">
+         <button class="themebtn" data-theme-set="auto"  data-i18n title="follow system">自動 / auto</button>
+         <button class="themebtn" data-theme-set="light" data-i18n title="light">明 / light</button>
+         <button class="themebtn" data-theme-set="dark"  data-i18n title="dark">暗 / dark</button>
+       </span>
+       <span class="themebox" role="group" aria-label="表示言語 / interface language">
+         <button class="themebtn" data-lang-set="ja"   title="日本語のみ">日本語</button>
+         <button class="themebtn" data-lang-set="en"   title="English only">EN</button>
+         <button class="themebtn" data-lang-set="both" title="both / 併記">両 both</button>
+       </span>
+     </span>
+   </span>
+  </div>
+</header>
 
-<div id="body">読み込み中…</div>
-
-<h2>なぜこの画面があるか / why this page exists</h2>
-<p class="note">Listing sites report that a work updated. Those reports are <em>inputs</em>. Earlier
-  versions put unconfirmed ones into the update feed marked 要確認, which asked readers to hold a
-  question only this system can answer. Every claim now ends in one disposition, and only the
-  <b>open</b> ones represent work outstanding. A claim we have traced and cannot settle is a
-  finished state, not a queue: the platform's own listing may be partial, may be far behind, or
-  may not be shown to us at all, and looking again will not change that.</p>
-<p class="note">A refutation is only recorded where our own capture is deep enough to support it:
-  at least three chapters of the platform's own history, and no long gap between the claim and the
-  newest chapter we hold. Those two guards exist because “the platform lists nothing” and “our fetch
-  came back thin” look identical from inside a build. Where a guard fails the claim stays open
-  rather than being written off, and the source freshness table above is what makes the difference
-  checkable.</p>
+<main id="st"><p data-i18n>読み込み中 / loading</p></main>
 </div>
 
-<script>
-const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
-  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-
-const DISPO = {
-  absorbed:  ['吸収', 'the platform attests it too. It is an ordinary row in the database now', 'ok'],
-  refuted:   ['否認', 'traced to the publisher, which lists nothing there. Kept in case it needs revisiting', ''],
-  undatable: ['日付なし', 'the platform publishes no per-chapter dates, so nothing can confirm or refute it', ''],
-  phantom:   ['非作品', 'the reported name is not a work', ''],
-  open:      ['未追跡', 'not yet traced. This is the work outstanding', 'warn'],
-  // TRACED, AND STILL UNSETTLED. We read the platform's own listing and it cannot settle the
-  // claim: it is partial, or too far behind, or empty, or the platform will not show it to us at
-  // all. No amount of looking again changes any of those, so this is a finished state and not a
-  // queue. It used to be counted as outstanding, which asked somebody to go and do a thing that
-  // had already been done: the same category error as 要確認, in a different place.
-  unsettleable: ['照合不能', 'we read the platform\u2019s own listing and it cannot confirm or refute this', ''],
-  'print-serialised': ['雑誌掲載', 'dated to a magazine instalment. A publisher\u2019s web arm publishes '
-                       + 'two to five weeks later, so its chapter dates can neither confirm nor refute it', ''],
-};
-
-const J = f => fetch('data/' + f, {cache:'no-cache'})
-                 .then(r => r.ok ? r.json() : Promise.reject(f + ' ' + r.status));
-
-// run.json only. This page used to fetch feed.json as well, to bucket releases into weeks and to
-// count what predates the record. It cannot any more: the published feed is a 14-day window plus
-// one file per archived month, and reassembling a whole history from those would mean downloading
-// every month to draw one bar chart. Both figures are small, so build.py computes them and they
-// arrive in run.json with everything else this page shows.
-Promise.all([J('run.json'), J('checks.json').catch(() => null)])
-  .then(([run, checks]) => render(run, checks))
-  .catch(e => { document.getElementById('body').innerHTML =
-    `<p class="note">run.json could not be loaded (${esc(e)}). It is written by build.py; a
-     deployment that predates it will not have one.</p>`; });
-
-function render(d, checks) {
-  const c = d.claims.by_disposition || {};
-  const open = (d.claims.trace || []).filter(t => t.disposition === 'open');
-  const refuted = (d.claims.trace || []).filter(t => t.disposition === 'refuted');
-  let h = '';
-
-  // The works card counts what the database LISTS, not how many rows exist, so it agrees with the
-  // 作品 tab. The difference is the uncaptured leads, and they get their own count rather than
-  // being quietly folded into a larger, friendlier number.
-  const un0 = (d.gaps || {}).uncaptured_works || [];
-  h += `<div class="cards">
-    ${card(d.releases, '更新 / releases')}
-    ${card(d.series_rows - un0.length, '作品 / works listed')}
-    ${card(d.works, '書誌 / bibliographic')}
-    ${card(open.length, '未追跡の報告 / open claims')}
-  </div>
-  <p class="note">Built ${esc(d.generated)}. ${d.series_rows} work rows held,
-    ${un0.length} of them with nothing captured behind the title and so not listed.</p>`;
-
-  // ── Content flags ─────────────────────────────────────────────────────────
-  // A source flagged these on content grounds. They are listed rather than counted, because a
-  // number cannot be reviewed and the reason this block exists is that a register was written
-  // from the first run, read by nothing, and every work in it published regardless.
-  const cf = d.content_flags;
-  if (cf && cf.total) {
-    h += `<h2>内容フラグ / content flags</h2>
-      <p class="note">${cf.total} work(s) carry a content flag from their source.
-      ${cf.published} published, ${cf.withheld} held back.
-      Every platform here is a commercial publisher's own web arm, so a flag does not withhold by
-      itself; it is recorded so a less obvious case cannot pass unnoticed.</p>
-      <div class="scroll"><table><tr><th>work</th><th>source</th><th>state</th><th>flag</th></tr>`;
-    for (const r of cf.rows) {
-      h += `<tr><td>${esc(r.title)}</td><td>${esc(r.source)}</td>
-            <td><span class="pill ${r.withheld ? 'warn' : 'ok'}">${r.withheld ? '非公開 withheld' : '公開 published'}</span></td>
-            <td class="why">${esc(r.reason || '')}</td></tr>`;
-    }
-    h += `</table></div>`;
-  }
-
-  // ── Claims ────────────────────────────────────────────────────────────────
-  h += `<h2>報告の追跡 / claim tracing</h2>
-    <p class="note">${d.claims.total} reports from listing sites, each ending in exactly one state.</p>
-    <div class="scroll"><table><tr><th>state</th><th class="n">n</th><th>meaning</th></tr>`;
-  for (const [k, v] of Object.entries(c).sort((a, b) => b[1] - a[1])) {
-    const [ja, why, cls] = DISPO[k] || [k, '', ''];
-    h += `<tr><td><span class="pill ${cls}">${esc(ja)} ${esc(k)}</span></td>
-          <td class="n">${v}</td><td class="why">${esc(why)}</td></tr>`;
-  }
-  h += `</table></div>`;
-
-  if (open.length) {
-    h += `<h2>未追跡 / outstanding (${open.length})</h2>
-      <p class="note">Work to do, not a caveat. Each row is a report we have not yet traced to the
-        publisher, with the reason it could not be traced this run.</p>
-      <div class="scroll"><table>
-      <tr><th>work</th><th>platform</th><th class="n">claimed</th><th>why not traced</th></tr>`;
-    for (const t of open) {
-      h += `<tr><td>${t.url ? `<a href="${esc(t.url)}" rel="noopener nofollow">${esc(t.work)}</a>`
-                            : esc(t.work)}</td>
-            <td>${esc(t.platform || '?')}</td><td class="n">${esc(t.claimed)}</td>
-            <td class="why">${esc(t.why)}</td></tr>`;
-    }
-    h += `</table></div>`;
-  }
-
-  if (refuted.length) {
-    h += `<details><summary>否認された報告 / refuted, on record (${refuted.length})</summary>
-      <p class="note">Traced to the publisher, which lists nothing at or near the claimed date.
-        The evidence that licensed each refutation is shown, so it can be revisited.</p>
-      <div class="scroll"><table>
-      <tr><th>work</th><th>platform</th><th class="n">claimed</th><th class="n">our newest</th>
-      <th class="n">held</th><th class="n">gap</th></tr>`;
-    for (const t of refuted) {
-      h += `<tr><td>${esc(t.work)}</td><td>${esc(t.platform || '?')}</td>
-            <td class="n">${esc(t.claimed)}</td><td class="n">${esc(t.platform_latest)}</td>
-            <td class="n">${esc(t.chapters_held)}</td><td class="n">${esc(t.gap_days)}d</td></tr>`;
-    }
-    h += `</table></div></details>`;
-  }
-
-  // ── When the record starts ────────────────────────────────────────────────
-  // The one honest statement about date quality, made once. It replaces a per-row badge that went
-  // 日付要確認 → 一括掲載 → nothing: each wording was truer than the last and all three asked a
-  // reader to hold a caveat they cannot act on.
-  const from = (d.weekly || {}).tracking_from
-            || (d.sources || []).map(s => s.retrieved).filter(Boolean).sort()[0];
-  if (from) {
-    const before = (d.weekly || {}).pre_tracking_releases ?? 0;
-    h += `<h2>記録の開始 / when the record starts</h2>
-      <p class="note">This pipeline first retrieved anything on <b>${esc(from)}</b>. From that date
-        a release is dated by what the platform said when we saw it, and the first sighting is
-        written to a ledger and never revised.</p>
-      <p class="note">Everything earlier (${before} of ${d.releases} releases) comes from what
-        each platform states about its own back catalogue. That is usually the real publication
-        date. Sometimes it is not: a run of chapters will share one exact timestamp. 一迅プラス
-        answers <code>2026-06-05T02:00:00Z</code> for chapter 1 and chapter 12 of the same
-        twelve-chapter serial; 竹コミ gives 386 chapters (77% of everything it holds) a single
-        day.</p>
-      <p class="note">This is not a platform failing to record dates. The same platforms date
-        chapters correctly week to week; 一迅プラス has 74 distinct dates across 197 works. Nor is
-        there one explanation: a work arriving from another platform is re-dated on arrival, and so
-        is a whole catalogue at a relaunch, but it also happens to ordinary runs for no reason
-        visible from outside. What can be said is only what is observable: on these dates the
-        timestamp records when the chapter entered the platform's current system, not when it was
-        published, and nothing on the page distinguishes the two. At least 13 of the platforms read
-        here show it.</p>`;
-  }
-
-  // ── Invariants and budgets ────────────────────────────────────────────────
-  // What the build checked about itself on the run that produced this data. Facts about our own
-  // process, which is exactly what this page is for and what the reader-facing pages must not carry.
-  if (checks && checks.invariants) {
-    const bad = checks.invariants.filter(i => i.violations);
-    h += `<h2>不変条件 / invariants</h2>
-      <p class="note">Statements that are either true or the data is broken. A failing one does not
-        stop the build. It degrades to a stated fallback and is counted here, because the site has
-        to keep updating. The same statement blocks a check-in, where someone is present to fix it.</p>`;
-    h += bad.length
-      ? `<div class="scroll"><table><tr><th>statement</th><th class="n">violations</th><th>example</th></tr>` +
-        bad.map(i => `<tr><td>${esc(i.name)}</td><td class="n">${i.violations}</td>
-          <td class="why">${esc((i.examples || [])[0] || '')}</td></tr>`).join('') + `</table></div>`
-      : `<p class="note"><span class="pill ok">all ${checks.invariants.length} hold</span></p>`;
-
-    h += `<h2>予算 / budgets</h2>
-      <p class="note">Counts with no correct value, only a direction. They tighten automatically on
-        a clean check-in and loosen only by a hand edit, which puts the reason in a commit
-        message.</p>
-      <div class="scroll"><table><tr><th>count</th><th class="n">now</th><th class="n">budget</th>
-      <th>what a rise would mean</th></tr>` +
-      (checks.budgets || []).map(b => `<tr><td>${esc(b.name)}</td><td class="n">${b.value}</td>
-        <td class="n">${b.budget == null ? '—' : b.budget}</td>
-        <td class="why">${esc(b.means || '')}</td></tr>`).join('') + `</table></div>`;
-  }
-
-  // ── Bulk re-dating ────────────────────────────────────────────────────────
-  const bulk = d.bulk_dated || [];
-  if (bulk.length) {
-    h += `<h2>一括再日付 / bulk re-dating (${bulk.length})</h2>
-      <p class="note">A run of chapters sharing one exact timestamp. Detected by comparing each
-        (platform, date) against that platform's own median day, so it needs no per-platform
-        configuration and catches new cases without anyone noticing them first. Nothing is altered:
-        the date is the platform's own statement and the chapter did become available then: it is
-        just not a per-chapter publication date.</p>
-      <p class="note"><b>Read the works column, not the row count.</b> Many rows across ONE work is
-        a back catalogue arriving at once; the same number spread over many works is a
-        platform-wide restamp. The two look identical by volume and are different events.</p>
-      <div class="scroll"><table>
-      <tr><th>platform</th><th class="n">date</th><th class="n">rows</th><th class="n">works</th>
-      <th class="n">median/day</th><th>example</th></tr>` +
-      bulk.map(b => `<tr><td>${esc(b.platform)}</td><td class="n">${esc(b.date)}</td>
-        <td class="n">${b.releases}</td><td class="n">${b.distinct_works}</td>
-        <td class="n">${b.median_per_day}</td><td>${esc(b.example_work || '')}</td></tr>`).join('') +
-      `</table></div>`;
-  }
-
-  // ── Coverage gaps ─────────────────────────────────────────────────────────
-  // Cases the main interface used to render as doubt (不明, 要確認 grouping). They are decided now
-  // and they live here, because they are facts about our coverage rather than about any manga.
-  const g = d.gaps || {};
-  const un = g.uncaptured_works || [];
-  if (un.length) {
-    h += `<h2>取りこぼし / known title, nothing captured (${un.length})</h2>
-      <p class="note">A title and a platform, and no chapter, date or URL behind it. These used to
-        sit in the works list rendered 不明. The interface admitting it had nothing, rather than
-        telling a reader anything. A work we cannot state one fact about is a lead, so it is listed
-        as work to do instead.</p><div class="scroll"><table>
-      <tr><th>work</th><th>platform</th></tr>` +
-      un.map(w => `<tr><td>${esc(w.work)}</td><td>${esc(w.platform || '?')}</td></tr>`).join('') +
-      `</table></div>`;
-  }
-  if (g.grouping) {
-    const tot = Object.values(g.grouping).reduce((a, b) => a + b, 0);
-    const linked = g.grouping['series-link'] || 0;
-    h += `<h2>単行本のまとめ方 / how volumes were grouped (${tot})</h2>
-      <p class="note">${linked} of ${tot} works have their volumes gathered by an explicit series
-        link in the source data; the rest were matched on title. This was a filter in the volumes
-        tab labelled 要確認, but no reader can adjudicate how we grouped them, so it is reported
-        here instead.</p><div class="scroll"><table>` +
-      Object.entries(g.grouping).sort((a, b) => b[1] - a[1]).map(([k, v]) =>
-        `<tr><td>${esc(k)}</td><td class="n">${v}</td></tr>`).join('') + `</table></div>`;
-  }
-
-  // ── Sources ───────────────────────────────────────────────────────────────
-  h += `<h2>取得元の鮮度 / source freshness</h2>
-    <p class="note">A source that returned nothing looks exactly like a source with nothing to
-      return. This table is how the two are told apart, and it is what a refutation above rests on.</p>
-    <div class="scroll"><table>
-    <tr><th>source</th><th class="n">files</th><th class="n">works</th><th class="n">rows</th>
-    <th class="n">retrieved</th><th></th></tr>`;
-  for (const s of (d.sources || []).sort((a, b) => (b.rows || 0) - (a.rows || 0))) {
-    const stale = s.age_days == null || s.age_days > 40;
-    h += `<tr><td>${esc(s.source)}</td><td class="n">${s.files}</td>
-          <td class="n">${s.works}</td><td class="n">${s.rows}</td>
-          <td class="n">${esc(s.retrieved || '—')}</td>
-          <td>${s.empty ? '<span class="pill warn">empty</span>'
-              : stale ? `<span class="pill warn">${s.age_days == null ? 'undated'
-                                                  : s.age_days + 'd old'}</span>`
-              : '<span class="pill ok">fresh</span>'}</td></tr>`;
-  }
-  h += `</table></div>`;
-
-  // ── Publication over time ─────────────────────────────────────────────────
-  // Publication dates, NOT run history. The distinction matters: no run before today was ever
-  // recorded, so a "changes per run" graph would have to invent its own past. This graph is made
-  // only of dates the platforms themselves stated, and it starts where the collection window
-  // starts rather than pretending to reach further back than it does.
-  //
-  // The bucketing and the leading-edge trim moved into build.py, unchanged: the source layer holds
-  // a rolling ~60 days, so the earliest weeks carry two or three late discoveries against a typical
-  // two hundred, and drawn as bars they read as a collapse in publishing rather than as thinness in
-  // our own record. A bar chart cannot caption itself, so those weeks come off. `weeks` arrives
-  // already trimmed; `trimmed_weeks` is how many were dropped.
-  const wkd = (d.weekly || {}).weeks || [];
-  if (wkd.length > 1) {
-    const max = Math.max(...wkd.map(w => w.n));
-    h += `<h2>公開の推移 / releases per week</h2>
-      <p class="note">By the date the platform published, over the ${wkd.length} weeks the
-        collection window covers. This is the manga's own history, not ours. The run-by-run record
-        starts today, so there is nothing earlier to draw. The current week is still in progress.</p>
-      <div class="bars">` +
-      wkd.map(w => `<div style="height:${Math.round(w.n / max * 100)}%"
-                      title="${esc(w.week)}: ${w.n}"></div>`).join('') +
-      `</div><div class="axis"><span>${esc(wkd[0].week)}</span>
-       <span>peak ${max}/wk</span><span>${esc(wkd[wkd.length - 1].week)}</span></div>`;
-  }
-
-  // ── Composition ───────────────────────────────────────────────────────────
-  h += `<h2>更新の内訳 / what the releases are</h2><div class="scroll"><table>`;
-  h += rowsOf('種別 / kind', d.update_kinds);
-  h += rowsOf('閲覧 / access', d.access_modes);
-  h += rowsOf('同定 / identification', d.identification);
-  h += `</table></div>`;
-
-  const col = d.collapsed || {};
-  h += `<p class="note">Collapsed during the build:
-    ${col.duplicate_chapters} duplicate chapters, ${col.thin_sitemap} thin sitemap rows,
-    ${col.resolver} superseded resolver rows, ${col.samples} promotional samples.
-    Fields carried between records: ${(d.filled || {}).author} author,
-    ${(d.filled || {}).access} access.</p>`;
-
-  document.getElementById('body').innerHTML = h;
-}
-
-function card(n, label) {
-  return `<div class="card"><b>${n ?? '—'}</b><span>${esc(label)}</span></div>`;
-}
-function rowsOf(head, obj) {
-  const e = Object.entries(obj || {}).sort((a, b) => b[1] - a[1]);
-  if (!e.length) return '';
-  return `<tr><th colspan="2">${esc(head)}</th></tr>` +
-    e.map(([k, v]) => `<tr><td>${esc(k)}</td><td class="n">${v}</td></tr>`).join('');
-}
-</script>
+<script src="app-status.js"></script>
+</body>
+</html>
