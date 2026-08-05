@@ -27,7 +27,9 @@
   .st-head { display: flex; gap: .6rem; align-items: baseline; flex-wrap: wrap;
              margin-bottom: 1.4rem; }
   .st-head h1 { font-size: 1.5rem; margin: 0; }
-  .st-head a { color: inherit; }
+  /* The brand reads as the brand, not as a link somebody added. Same weight and colour as the
+     main page; it happens to be clickable. */
+  h1 a.brand { color: inherit; text-decoration: none; }
   .st-sub { opacity: .68; margin: .1rem 0 .9rem; line-height: 1.6; }
   .prefsrow { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: .4rem; }
 </style>
@@ -37,8 +39,8 @@
 <header>
   <div class="masthead">
    <div class="mast-text">
-    <h1><span class="brand"><a href="./">Yurarium</a></span> <span class="tag" data-i18n>内部状態 / build status</span></h1>
-    <p id="byline" data-i18n>このデータベース自体について。作品についての事実は本編に。 / About this database itself. Facts about the manga are on the site.</p>
+    <h1><a class="brand" href="./">Yurarium</a> <span class="tag" data-i18n>内部状態 / build status</span></h1>
+    <p id="byline" data-i18n>直近の更新、取得の鮮度、残っている作業、そして収蔵の規模。 / What the last update changed, how current each source is, what work remains, and what the database holds.</p>
    </div>
    <!-- The controls sit where they sit everywhere else, in the masthead, using the same wrappers
         so app.css positions them without this page restating any of it. The page used to inherit a

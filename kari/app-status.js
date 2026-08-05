@@ -13,7 +13,9 @@
    any other. The splitter is the same rule app.js uses: text reads "日本語 / English" and the
    preference decides which half survives. */
 
-const PREF = { theme: 'yurarium.pref.theme', lang: 'yurarium.pref.lang' };
+// app.js stores the language under a bare 'lang' and the theme under a prefixed key. Using the
+// prefixed one here meant this page kept the theme a reader had chosen and ignored the language.
+const PREF = { theme: 'yurarium.pref.theme', lang: 'lang' };
 const get = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
 const set = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode */ } };
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
@@ -102,20 +104,26 @@ function connectors(d) {
   // WHAT IS, NOT WHAT IS NOT. The sentence states the newest and oldest capture rather than
   // announcing an absence of failures, which is a claim this page cannot yet support.
   const oldest = c[0] || {};
+  const mal = c.reduce((n, x) => n + (x.malformed || 0), 0);
   const lede = esc(T(
     `${c.length} 系統のソースを読み込み。最も古い取得は ${oldest.source}（${oldest.age_days} 日前）。`,
     `${c.length} sources were read. The oldest capture is ${oldest.source}, ${oldest.age_days} days old.`))
     + (stale.length ? ' ' + esc(T(`${stale.length} 件が 7 日を超過。`, `${stale.length} are over a week old.`)) : '')
     + (empty.length ? ' ' + esc(T(`${empty.length} 件が空。`, `${empty.length} returned nothing.`)) : '')
+    + ' ' + esc(mal
+        ? T(`${mal} 行が宣言した形と異なる。`, `${mal} rows differ from the shape declared for their source.`)
+        : T('取得した行はいずれも宣言した形どおり。', 'Every captured row matches the shape declared for its source.'))
     + `<br><span class="dim">${esc(T(
-        '部分的な失敗はまだ検出できない。前回との差分が必要で、その台帳は未作成。',
-        'Partial failure is not detectable yet. It needs a comparison against the previous run, and that ledger does not exist.'))}</span>`;
+        '取得量が前回より落ちた場合の検出には前回との差分が必要で、その台帳は未作成。',
+        'Spotting a source that returned less than last time needs a comparison against the previous run, and that ledger does not exist.'))}</span>`;
   return section(T('取得の状態', 'Connector health'), lede, T('ソース一覧', 'Every source'),
     table([{ h: T('ソース', 'source'), cell: x => esc(x.source) },
            { h: T('取得日', 'retrieved'), cell: x => `<span class="${(x.age_days||0) > 7 ? 'st-old' : ''}">${esc(x.retrieved)}</span>` },
            { h: T('日数', 'age'), num: true, cell: x => esc(x.age_days) },
            { h: T('作品', 'works'), num: true, cell: x => esc(x.works) },
-           { h: T('行', 'rows'), num: true, cell: x => esc(x.rows) }], c));
+           { h: T('行', 'rows'), num: true, cell: x => esc(x.rows) },
+           { h: T('相違', 'differs'), num: true,
+             cell: x => x.checked_rows ? `<span class="${x.malformed ? 'st-old' : ''}">${esc(x.malformed)}</span>` : '—' }], c));
 }
 
 const KIND = {
