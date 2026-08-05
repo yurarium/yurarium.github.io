@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-05T22:27:43+00:00",
+ "generated": "2026-08-05T23:39:08+00:00",
  "since_last": {
-  "at": "2026-08-05T22:15:56+00:00",
+  "at": "2026-08-05T23:32:09+00:00",
   "statistics": {}
  },
  "means": {
@@ -21,20 +21,20 @@
   "with_identifier": "works carrying an identifier"
  },
  "last_run": {
-  "at": "2026-08-05",
-  "releases": 1061,
+  "at": "2026-08-06",
+  "releases": 1081,
   "works": 598,
   "platforms": 22,
-  "series_rows": 1472,
+  "series_rows": 1480,
   "identification": {
-   "discovery-candidate": 765,
-   "platform-genre": 296
+   "platform-genre": 319,
+   "discovery-candidate": 762
   },
   "collapsed": {
-   "duplicate_chapters": 82,
+   "duplicate_chapters": 78,
    "thin_sitemap": 8,
-   "resolver": 54,
-   "samples": 49
+   "resolver": 53,
+   "samples": 36
   }
  },
  "gate": {
@@ -149,7 +149,7 @@
    "works": 252,
    "rows": 498,
    "retrieved": "2026-08-01",
-   "age_days": 4,
+   "age_days": 5,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -163,7 +163,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 3,
+   "age_days": 4,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -177,25 +177,11 @@
    "works": 43,
    "rows": 2389,
    "retrieved": "2026-08-03",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 2384,
    "well_formed": 2384,
-   "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "gigaviewer",
-   "files": 69,
-   "works": 687,
-   "rows": 8069,
-   "retrieved": "2026-08-03",
-   "age_days": 2,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 7994,
-   "well_formed": 7994,
    "malformed": 0,
    "drop": null
   },
@@ -205,7 +191,7 @@
    "works": 765,
    "rows": 5441,
    "retrieved": "2026-08-03",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 4927,
@@ -219,7 +205,7 @@
    "works": 190,
    "rows": 190,
    "retrieved": "2026-08-03",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -233,7 +219,7 @@
    "works": 482,
    "rows": 7663,
    "retrieved": "2026-08-04",
-   "age_days": 1,
+   "age_days": 2,
    "in_scope": true,
    "empty": false,
    "checked_rows": 7661,
@@ -247,7 +233,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 0,
+   "age_days": 1,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -261,18 +247,32 @@
    "works": 598,
    "rows": 1310,
    "retrieved": "2026-08-05",
-   "age_days": 0,
+   "age_days": 1,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
    "well_formed": 0,
    "malformed": 0,
    "drop": null
+  },
+  {
+   "source": "gigaviewer",
+   "files": 69,
+   "works": 661,
+   "rows": 7712,
+   "retrieved": "2026-08-06",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 7637,
+   "well_formed": 7637,
+   "malformed": 0,
+   "drop": null
   }
  ],
  "ledger": {
-  "runs_held": 22,
-  "previous_at": "2026-08-05T22:15:29+00:00",
+  "runs_held": 25,
+  "previous_at": "2026-08-05T23:31:43+00:00",
   "drops": []
  },
  "outstanding": [
@@ -589,9 +589,9 @@
   }
  ],
  "statistics": {
-  "works": 1472,
+  "works": 1480,
   "states": {
-   "print": 469,
+   "print": 477,
    "oneshot": 400,
    "completed": 260,
    "active": 196,
@@ -600,16 +600,16 @@
    "slow": 40
   },
   "english_basis": {
-   "translated": 1071,
+   "translated": 1077,
    "romaji": 256,
-   "licensed": 63,
+   "licensed": 65,
    "official-jp": 50,
    "none": 32
   },
   "print_works": 596,
-  "print_only": 469,
+  "print_only": 477,
   "volumes": 1310,
-  "with_identifier": 1472,
-  "chapters": 16846
+  "with_identifier": 1480,
+  "chapters": 17151
  }
 }
