@@ -403,20 +403,26 @@ function enHtml(rec, cls, isPerson) {
   // A PERSON HAS NO TITLE. The same note was reaching a name and telling a reader that
   // "Tsumugi Meme" is "not an English title the work has", which is a sentence about a work said
   // about a person. isPerson is already known here, so it decides the wording too.
+  // TWO DIFFERENT CLAIMS, and they were sharing a sentence. `unverified` says the READING behind
+  // the Latin is unconfirmed, so the pronunciation itself is in doubt. `ours` with a romaji basis
+  // says the reading IS attested and only the spelling is ours, where "not confirmed" would be
+  // false. A translation is a third thing again: nothing about it is a pronunciation claim.
   const thing = isPerson ? 'name' : 'title';
+  const who = isPerson ? 'person' : 'work';
+  // A ROMANISATION OF A CONFIRMED READING NEEDS NO NOTE. Transliterating attested kana is
+  // mechanical, not a judgement, and a note saying we did it tells a reader nothing they can act
+  // on. What is worth saying is that a pronunciation is UNCONFIRMED, and that a title is our
+  // English invention rather than one the work publishes. Silence everywhere else.
   const why = e.unverified
-    ? 'reading not confirmed against a source. This romanisation may be wrong'
-    : e.ours
-      ? (e.basis === 'romaji'
-          ? `our romanisation of the Japanese, not a Latin ${thing} they use`
-          : `our translation, not an English ${thing} the ${isPerson ? 'person' : 'work'} uses`)
-      : `the English ${thing} the ${isPerson ? 'person' : 'work'} itself uses`;
+    ? `The pronunciation of this ${thing} has not been confirmed.`
+    : (e.ours && e.basis !== 'romaji')
+      ? `Translated by us. The ${who} publishes no English ${thing}.`
+      : '';
   // A NOTE ON EVERYTHING IS A NOTE ON NOTHING. Every name carried one, including the ones whose
   // note said only that the name is the one the work or person uses, which a reader can assume.
   // Annotate what is OURS; say nothing about what is theirs.
-  const ours = e.ours || e.unverified;
-  const mark = ours ? ' ours' : '';
-  const tip = ours ? ` title="${esc(why)}"` : '';
+  const mark = (e.ours || e.unverified) ? ' ours' : '';
+  const tip = why ? ` title="${esc(why)}"` : '';
   return `<span class="en${mark} ${cls || ''}"${tip}>${esc(shown)}</span>${uncertainMark(rec, e)}`;
 }
 
