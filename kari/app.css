@@ -183,6 +183,22 @@
   .outbox [data-active]{border-color:var(--accent);font-weight:600}
   .viewbox .themebtn{font-size:.72rem}
 
+  /* THE VOLUME LIST on a work's page. A row is a number, a date and an ISBN, and any of the three
+     may be missing without the row collapsing, so the columns are fixed rather than flowed. */
+  .wp-sub{font-size:.92rem;margin:1.4rem 0 .5rem;font-weight:600}
+  .wp-n{color:var(--faint);font-weight:400;font-size:.8rem}
+  .vols{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .vol{display:grid;grid-template-columns:5.5rem auto 1fr;gap:.2rem .8rem;align-items:baseline;
+    padding:.4rem .2rem;border-bottom:1px solid var(--line);font-size:.85rem}
+  .voln{font-weight:600}
+  /* Stated absence, not an empty cell. A date we do not hold is a fact about the record. */
+  .vnod{color:var(--faint);font-size:.8rem}
+  .visbn{color:var(--dim);font-size:.78rem;justify-self:end}
+  @media (max-width:30rem){
+    .vol{grid-template-columns:4.6rem 1fr}
+    .visbn{grid-column:1 / -1;justify-self:start}
+  }
+
   /* DENSITY IS ONE PREFERENCE, applied by a class on each list. Compact drops what a reader
      scanning for a title does not read; nothing is re-rendered to switch. */
   #serlist.compact .line2, #serlist.compact .srcs{display:none}

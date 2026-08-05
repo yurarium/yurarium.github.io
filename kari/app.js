@@ -932,7 +932,7 @@ function setEnOrder(next) {
   prefSet(PREF_ENORDER, EN_ORDER);
   renderEnOrder();
   markMoreActive();
-  if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
+  repaintAll();
 }
 
 function moveLevel(from, to) {
@@ -947,28 +947,28 @@ document.addEventListener('DOMContentLoaded', () => {
     FURIGANA = !FURIGANA;
     prefSet(PREF_FURI, FURIGANA);
     applyRomajiVisibility();
-    if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
+    repaintAll();
   });
   document.querySelectorAll('[data-romaji-set]').forEach(b =>
     b.addEventListener('click', () => {
       ROMAJI_STYLE = b.dataset.romajiSet;
       prefSet(PREF_ROMAJI, ROMAJI_STYLE);
       applyRomajiVisibility();
-      if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
+      repaintAll();
     }));
   document.querySelectorAll('[data-nameorder-set]').forEach(b =>
     b.addEventListener('click', () => {
       NAME_ORDER = b.dataset.nameorderSet;
       prefSet(PREF_NORDER, NAME_ORDER);
       applyRomajiVisibility();
-      if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
+      repaintAll();
     }));
   document.querySelectorAll('[data-datefmt-set]').forEach(b =>
     b.addEventListener('click', () => {
       DATEFMT = b.dataset.datefmtSet;
       prefSet(PREF_DATEFMT, DATEFMT);
       applyRomajiVisibility();
-      if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
+      repaintAll();
     }));
   document.querySelectorAll('[data-dialect-set]').forEach(b =>
     b.addEventListener('click', () => {
@@ -978,7 +978,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // panel's own label kept saying romanisation after the reader asked for en-US.
       applyLang(LANG);
       applyRomajiVisibility();
-      if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
+      repaintAll();
     }));
 
   // THE POPUP. Same open/close contract as the month picker: the button toggles, a click outside
@@ -1078,7 +1078,7 @@ function applyLang(lang) {
   // The picker's button and grid are built in JS rather than from data-i18n text, so they need
   // repainting on a language change like any other rendered thing.
   if (typeof paintMonthPicker === 'function' && el('fmonthbtn')) paintMonthPicker();
-  if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
+  repaintAll();
   // The chips and the density buttons are written in JS, so the data-i18n pass above never reaches
   // them. markActive is what rewrites the chips; applyView repaints the pressed state.
   markActive();
@@ -1159,6 +1159,18 @@ function navSync(push) {
 // its state. INTERFACE-PLAN §4. Evidence is not uncertainty: "four volumes from 幻冬舎コミックス,
 // and the shop marks the series finished" is a statement about the world and belongs here. What we
 // are unsure of belongs on status.html and is not rendered.
+/* EVERY VIEW A PREFERENCE TOUCHES, in one place.
+
+   This line existed seven times, once beside each control that changes how something reads, and
+   the work page was in none of them: a reader who changed the date format or the romanisation
+   while looking at a work kept the old rendering until they navigated away and came back. Seven
+   copies of a list is seven chances to forget the eighth view, which is what happened. */
+function repaintAll() {
+  if (!FEED) return;
+  renderFeed(); renderCat(); renderSeries(); renderReleases();
+  if (PAGE_WORK) renderWorkPage();
+}
+
 function workDetail(r) {
   const bits = [];
   (r.print || []).forEach(p => {
@@ -1197,6 +1209,49 @@ document.addEventListener('click', ev => {
    pre-rendered stub sits at, so a reader who arrives from outside and one who clicks a row end up
    looking at the same thing at the same URL. */
 let PAGE_WORK = null;
+
+/* THE VOLUMES THEMSELVES, which the page has been summarising rather than listing.
+
+   `series.json` carries a count and a span, because the works list needs one line per work. The
+   volume records are in `works.json`, keyed by the MADB id the print edition already names, and
+   the releases tab fetches that file anyway. 1,311 volumes are held across 598 works, every one
+   with an ISBN.
+
+   Loaded after the page is painted, never before it. The file is the largest thing here and a
+   work with no print edition must not wait on it to show what it does have.
+
+   A VOLUME NOBODY NUMBERED SAYS NOTHING. 982 of 1,311 carry a number in the record; the rest are
+   left blank rather than numbered by their position in a sorted list, which would be the interface
+   inventing a fact about the edition. Same rule the releases tab follows. */
+async function paintVolumes(r) {
+  const ids = (r.print || []).map(p => p.work_id).filter(Boolean);
+  const box = el('wp-vols');
+  if (!box || !ids.length) return;
+  if (!DETAIL) DETAIL = fetch('data/works.json', { cache: 'no-cache' }).then(x => x.json());
+  const WORKS = await DETAIL;
+  // The reader may have left, or opened another work, while the file was in flight.
+  if (PAGE_WORK !== r.id || !el('wp-vols')) return;
+  const rows = [];
+  (WORKS.works || []).forEach(w => {
+    if (!ids.includes(w.work_id)) return;
+    (w.volumes || []).forEach(v => rows.push(v));
+  });
+  if (!rows.length) return;
+  rows.sort((a, b) => String(a.published || '9999').localeCompare(String(b.published || '9999'))
+                   || String(a.number || '').localeCompare(String(b.number || ''), 'ja'));
+  el('wp-vols').innerHTML =
+    `<h3 class="wp-sub">${esc(T('収録巻', 'Volumes'))} <span class="wp-n">${rows.length}</span></h3>` +
+    '<ol class="vols">' + rows.map(v => {
+      const n = v.number ? `<span class="voln">${esc(T('第' + v.number + '巻', 'vol. ' + v.number))}</span>` : '';
+      const d = v.published
+        ? `<time datetime="${esc(v.published)}">${esc(fmtDate(v.published, { year: true }))}</time>`
+        : `<span class="vnod">${esc(T('刊行日不明', 'no date recorded'))}</span>`;
+      // The ISBN is why most of these works are here at all: it is what a shop stated and what the
+      // bibliography answered. A bibliographic record should show its identifier.
+      const i = v.isbn ? `<span class="mono visbn">${esc(v.isbn)}</span>` : '';
+      return `<li class="vol">${n}${d}${i}</li>`;
+    }).join('') + '</ol>';
+}
 
 function openWorkPage(id) {
   if (!id) return;
@@ -1242,8 +1297,10 @@ function renderWorkPage() {
       esc(T('← 作品一覧', '← All works'))}</a></p>
     <h2 class="wp-title">${workLabel(r)}</h2>
     <div class="srcs">${src}</div>
-    <div class="detail wp-detail">${rows.join('')}</div>`;
+    <div class="detail wp-detail">${rows.join('')}</div>
+    <div id="wp-vols"></div>`;
   el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeWorkPage(true); });
+  paintVolumes(r);
   window.scrollTo(0, 0);
 }
 
