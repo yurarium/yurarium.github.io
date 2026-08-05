@@ -183,6 +183,37 @@
   .outbox [data-active]{border-color:var(--accent);font-weight:600}
   .viewbox .themebtn{font-size:.72rem}
 
+  /* ── A WORK'S PAGE ──────────────────────────────────────────────────────────────────────────
+     The page was a flat run of label-and-value rows at one weight, so a work with a lot of data
+     read as a wall and a work with little read as a fragment of the same wall. Three bands now:
+     who and what, where to read it, and the facts. Each is allowed to be absent. */
+  .wp-head{margin:0 0 .7rem}
+  .wp-title{font-size:1.5rem;line-height:1.25;margin:0 0 .35rem;font-weight:600}
+  .wp-badges{margin:0;display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+  .wp-srcs{margin:0 0 1rem}
+  /* A GRID, not a column of rows. At one column per 13rem a work with four facts fills a line and
+     a work with eight fills two, instead of either running down the page or stranding a lone value
+     beside a wide empty column. */
+  .wp-facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));
+    gap:.75rem 1.4rem;margin:0 0 1.2rem;padding:.9rem 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .wp-facts .wf{margin:0;min-width:0}
+  .wp-facts dt{font-size:.72rem;color:var(--dim);letter-spacing:.04em;margin:0 0 .1rem}
+  .wp-facts dd{margin:0;font-size:.95rem;overflow-wrap:anywhere}
+  /* The qualifier under a fact: the publisher under a volume count, what is free under a chapter
+     count, which platform announced a date. Subordinate because it answers "says who" rather than
+     "what", and a reader scanning for the number should not have to step over it. */
+  .wf-sub{display:block;font-size:.76rem;color:var(--dim);line-height:1.45;margin-top:.1rem}
+  /* Evidence reads as a sentence, so it is allowed to be one and to span the grid. */
+  .wp-facts .wf:has(.wf-basis){grid-column:1 / -1}
+  .wf-basis{font-size:.82rem;color:var(--dim);font-weight:400}
+  /* Provenance, at the foot: a question about us, answered after the ones about the manga. */
+  .wp-prov{font-size:.76rem;color:var(--faint);margin:1.2rem 0 0;
+    display:flex;flex-wrap:wrap;gap:.4rem;align-items:baseline}
+  .wp-prov:empty{display:none}
+  .wp-prov a{color:var(--dim)}
+  .wp-dot{opacity:.5}
+
   /* THE VOLUME LIST on a work's page. A row is a number, a date and an ISBN, and any of the three
      may be missing without the row collapsing, so the columns are fixed rather than flowed. */
   /* A slot the volume loader fills once the data lands. display:contents so the rows inside it
@@ -202,9 +233,13 @@
   /* Stated absence, not an empty cell. A date we do not hold is a fact about the record. */
   .vnod{color:var(--faint);font-size:.8rem}
   .visbn{color:var(--dim);font-size:.78rem;justify-self:end}
+  /* On a phone the ISBN was taking a line of its own, which turned a 27-volume work into 2,200px
+     of list. It is the least-scanned thing on the row and the first to give way: the row becomes
+     one line of number and date, and the ISBN follows on the same line where it fits. */
   @media (max-width:30rem){
-    .vol{grid-template-columns:4.6rem 1fr}
-    .visbn{grid-column:1 / -1;justify-self:start}
+    .vol{display:flex;flex-wrap:wrap;align-items:baseline;gap:.15rem .6rem;padding:.32rem .2rem}
+    .voln{flex:0 0 auto}
+    .visbn{font-size:.72rem;margin-left:auto}
   }
 
   /* DENSITY IS ONE PREFERENCE, applied by a class on each list. Compact drops what a reader

@@ -1196,6 +1196,38 @@ const VOLPART = { '上': 1, '中': 2, '下': 3 };
 
 // A count and its unit are one phrase. `6 ${T('巻','vol')}` renders "6 巻 / vol" in 併記, which is
 // the number once and the units run together, and it has no plural.
+/* ONE SPELLING OF AN IMPRINT, wherever it is shown.
+
+   MADB catalogues 百合姫 at least six ways: "IDコミックス", "コミック百合姫", "IDコミックス.
+   Yurihime comics = コミック百合姫", "IDコミックス／Yuri-hime comics", "Yuri-hime comics", with
+   half and full-width separators. Six spellings in one list read as six imprints, which is the
+   opposite of what an imprint is for. The "A = B" form gives two names for one thing, so the
+   Japanese side is taken and the Latin alias maps onto it.
+
+   It lived inside the releases renderer and the work page showed the raw string beside it, so one
+   work read "アフタヌーンKC" in one place and "IDコミックス. Yurihime comics" in another. */
+const IMPRINT_ALIAS = { 'yurihimecomics': 'コミック百合姫', 'yurihimecomic': 'コミック百合姫',
+                        'コミック百合姫': 'コミック百合姫', '百合姫コミックス': 'コミック百合姫' };
+
+function imprintOf(s) {
+  const bare = String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '');
+  const segs = bare.split(/[=／\/.．]/).map(x => x.trim()).filter(Boolean);
+  for (const seg of segs.slice().reverse()) {
+    const k = seg.toLowerCase().replace(/[\s\u30fb-]/g, '');
+    if (IMPRINT_ALIAS[k] || IMPRINT_ALIAS[seg]) return IMPRINT_ALIAS[k] || IMPRINT_ALIAS[seg];
+  }
+  // Nothing recognised: the most specific segment, which is the last that is not the umbrella line
+  // every Ichijinsha comic carries.
+  const named = segs.filter(x => x !== 'IDコミックス');
+  return (named.length ? named[named.length - 1] : segs[0]) || '';
+}
+
+// A publisher without the cataloguing around it: MADB writes a distributor as `[頒布]講談社` and a
+// trailing `(発売)`, and neither is part of the name a reader is being shown.
+function publisherOf(s) {
+  return String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '').replace(/\s*[（(][^）)]*[）)]\s*$/, '').trim();
+}
+
 function volCount(n) {
   return T(n + '巻', n + (n === 1 ? ' volume' : ' volumes'));
 }
@@ -1350,15 +1382,20 @@ async function paintVolumes(r) {
   // The bibliography's own record, where there is one. A synthetic id is ours, grouped by title
   // and standing for no page anybody else publishes, so it links nowhere.
   const cat = ids.filter(i => /^C\d+$/.test(String(i)))
-    .map(i => `<a class="src" href="https://mediaarts-db.artmuseums.go.jp/id/${esc(i)}"
-        target="_blank" rel="noopener noreferrer nofollow">${esc(T('メディア芸術DB', 'MADB'))}</a>`);
+    .map(i => `<a href="https://mediaarts-db.artmuseums.go.jp/id/${esc(i)}"
+        target="_blank" rel="noopener noreferrer nofollow">${
+        esc(T('メディア芸術データベース', 'Media Arts Database'))}</a>`);
+  /* WHERE THE RECORD COMES FROM, at the foot and quietly. §2 wants a reader able to tell whether a
+     work is here because a publisher called it yuri or because a shop shelved it there, and that
+     is worth stating and not worth stating first: it answers a question about US, asked after the
+     ones about the manga. */
   const extra = [];
-  if (cat.length) extra.push(`<div class="dl"><span class="dk">${esc(T('書誌', 'Catalogue'))}</span><span class="dv">${cat.join(' ')}</span></div>`);
-  if (said.length) extra.push(`<div class="dl"><span class="dk">${esc(T('収録根拠', 'Listed by'))}</span><span class="dv">${esc(said.join(' · '))}</span></div>`);
+  if (said.length) extra.push(`<span>${esc(said.join(' · '))}</span>`);
+  if (cat.length) extra.push(cat.join(' '));
   // REPLACED, NOT APPENDED. Two renders of the same work each start this, and both resolve after
   // the last one has rebuilt the page, so appending wrote the catalogue and the admission twice.
   const slot = el('wp-extra');
-  if (slot) slot.innerHTML = extra.join('');
+  if (slot) slot.innerHTML = extra.length ? extra.join('<span class="wp-dot">·</span>') : '';
 
   if (!rows.length) return;
   rows.sort(byVolume);
@@ -1411,48 +1448,145 @@ function showSelectedTab() {
   if (!PAGE_WORK) el('workpage').hidden = true;
 }
 
+/* A WORK'S PAGE, ARRANGED BY WHAT A READER ASKS.
+
+   It was a flat list of every field the row carried, in the order the code happened to add them,
+   with our own identifier at the bottom and the phrase "in what we hold" in the middle. A reader
+   arrives asking four things and they are not equally weighted: what is this, is it still going,
+   where do I read it, and how much is there. So the page answers them in that order and stops.
+
+   WHAT CAME OFF. The minted identifier, which is the address of the page it sat on and told a
+   reader nothing they could not read in the URL bar. And any basis phrased about our own capture:
+   "every chapter we hold arrived on the day a platform imported the series" is a statement about
+   this project, and a reader can act on none of it. Evidence about the WORLD stays, because
+   "the platform marks the serialisation finished" is why the badge above it says what it says.
+
+   WHAT WENT ON. What the platform says about the next chapter, on 117 works, which is the single
+   most useful fact for anybody following a running series and was in the data unread. How much of
+   it is free, which the list has always shown and the page did not. And the newest chapter's own
+   title, so 最新 is a chapter rather than a date. */
+
+// A basis worth showing is one about the manga. These describe our own coverage instead, and a
+// reader can do nothing with them.
+const ABOUT_US = /in what we hold|we hold|nothing here says|this capture|we could read/i;
+// And evidence that carries no information. "no chapter for 0 days" is the sentence a template
+// produces when the newest chapter arrived today, and it tells a reader nothing the date above it
+// has not already said.
+const SAYS_NOTHING = /for 0 days/i;
+
+// Local, not UTC: a reader in Japan asking whether a chapter is still to come means their today.
+function todayISO() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+function readerBasis(r) {
+  const b = r.completed_basis || r.state_basis || '';
+  return (ABOUT_US.test(b) || SAYS_NOTHING.test(b)) ? '' : b;
+}
+
+function accessLine(r) {
+  const free = (r.free || 0) + (r.free_timed || 0);
+  const known = free + (r.priced || 0);
+  if (!r.chapters || !known) return '';
+  if (free >= r.chapters) return T('全話無料', 'all free to read');
+  if (!free) return T('有料', 'paid');
+  const tip = r.free_timed
+    ? T(`${r.free}話が無料、${r.free_timed}話が待てば無料`,
+        `${r.free} free now, ${r.free_timed} free with a daily ticket`)
+    : '';
+  return T(`${free}/${r.chapters}話が無料`, `${free} of ${r.chapters} free`) + (tip ? ` (${tip})` : '');
+}
+
 function renderWorkPage() {
   const r = (SERIES.series || []).find(x => x.id === PAGE_WORK);
   const box = el('workpage');
   if (!r || !box) return;
   document.querySelector('nav').hidden = true;
-  el('tab-ser').hidden = true;
-  el('tab-feed').hidden = true;
-  el('tab-rel').hidden = true;
+  ['ser', 'feed', 'rel', 'cat'].forEach(x => { const s = el('tab-' + x); if (s) s.hidden = true; });
   box.hidden = false;
-  const src = (r.sources || []).map(s => s.url
-    ? `<a class="src" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer nofollow"
-         >${esc(platBoth(s.platform))}<span class="srcn">${esc(s.chapters)}${s.partial ? '+' : ''}</span></a>`
-    : `<span class="src">${esc(platBoth(s.platform))}</span>`).join('');
-  const rows = [];
-  const add = (k, v) => { if (v) rows.push(`<div class="dl"><span class="dk">${esc(k)}</span><span class="dv">${v}</span></div>`); };
-  add(T('作者', 'Author'), r.author ? authorLabel(r) : '');
-  add(T('話数', 'Chapters'), r.chapters ? esc(String(r.chapters) + (r.partial ? '+' : '')) : '');
-  add(T('最新', 'Latest'), r.latest ? esc(fmtDate(r.latest, { year: true })) : '');
-  add(T('初出', 'First'), r.first ? esc(fmtDate(r.first, { year: true })) : '');
-  // The count carried both units after one number in 併記 mode: "6 巻 / vol". A count and its unit
-  // are one phrase and have to be built as one, plural included.
-  (r.print || []).forEach(pr => add(T('単行本', 'In print'),
-    esc([pr.volumes ? volCount(pr.volumes) : '', pr.publisher, pr.imprint]
-      .filter(Boolean).join(' · '))));
-  // The first date is on 初出 above and on the first row of the volume list below, so it is not
-  // repeated here.
-  add(T('状態', 'State'), esc(stateLabel(r))
-      + (r.state === 'print' && r.completed_claim ? ' ' + completedTag(r.completed_claim) : ''));
-  add(T('根拠', 'Basis'), esc(r.completed_basis || r.state_basis || ''));
-  add('ID', `<span class="mono">${esc(r.id || '')}</span>`);
-  // The way back names where it goes. A work page opens from the updates tab as well as the works
-  // list now, and "All works" was the wrong promise on half of them.
+
+  // ── who and what, and whether it is still going ──────────────────────────────────────────────
+  const why = readerBasis(r);
+  // THE BADGE IS THE LABEL; THE SENTENCE IS THE TOOLTIP. stateLabel joins the two for a value in a
+  // list of values, and used as a badge it put "published in volumes; no web serialisation we
+  // track" where 単行本 belongs, which is an explanation of our own wearing the place of a name.
+  const [slbl, scls, sdesc] = SSTATE[r.state] || SSTATE.unknown;
+  const badges = [`<span class="k ${scls}" title="${esc(sdesc)}">${esc(T(slbl))}</span>`];
+  if (r.state === 'print' && r.completed_claim) badges.push(completedTag(r.completed_claim));
+
+  // ── where to read it, with what each source actually holds ───────────────────────────────────
+  const src = (r.sources || []).map(s => {
+    const f = (s.free || 0) + (s.free_timed || 0);
+    const n = `<span class="srcn">${esc(s.chapters)}${s.partial ? '+' : ''}</span>`;
+    const tip = T(`${s.chapters}話をここで確認${f ? `、うち${f}話が無料` : ''}`,
+                  `${s.chapters} chapters here${f ? `, ${f} of them free` : ''}`);
+    const body = `${esc(platBoth(s.platform))}${n}`;
+    return s.url
+      ? `<a class="src" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer nofollow"
+           title="${esc(tip)}">${body}</a>`
+      : `<span class="src" title="${esc(tip)}">${body}</span>`;
+  }).join('');
+
+  // ── the facts, as pairs, in one grid rather than one row each ────────────────────────────────
+  const facts = [];
+  const fact = (k, v) => { if (v) facts.push(`<div class="wf"><dt>${esc(k)}</dt><dd>${v}</dd></div>`); };
+  fact(T('作者', 'Author'), r.author ? authorLabel(r) : '');
+  // The newest chapter is a chapter, not a date. `latest_ep` was in the row and shown only in the
+  // list, so the page said less about the same fact than the line that led to it.
+  /* THESE THREE ARE ABOUT CHAPTERS, and the page below them lists volumes, so they say which.
+     `first` is not even the same fact on every work: on a serialisation it is the first chapter,
+     and on a work published only in volumes it is the first volume, so it is labelled for what it
+     is rather than given one word that is right half the time. */
+  const web = (r.chapters || 0) > 0;
+  fact(web ? T('最新話', 'Latest chapter') : T('最新', 'Latest'), r.latest
+    ? esc(fmtDate(r.latest, { year: true }))
+      + (phraseOf(r.latest_ep) ? `<span class="wf-sub">${esc(phraseOf(r.latest_ep))}</span>` : '')
+    : '');
+  // What the platform says comes next. Marked as the platform's statement, because it is a date
+  // for something that has not happened.
+  /* A DATE FOR SOMETHING THAT HAS NOT HAPPENED has to still be in the future. アイドラトリィ
+     carried a next-update date equal to the day its newest chapter arrived, so the page announced
+     a chapter that was already on the shelf below it. Shown only when it is later than both the
+     newest chapter and today. */
+  const nx = (r.stated_next || {}).next_update || '';
+  if (nx && nx > String(r.latest || '') && nx >= todayISO()) {
+    fact(T('次の話', 'Next chapter'), `${esc(fmtDate(nx, { year: true }))}`
+      + `<span class="wf-sub">${esc(T(`${platName(r.stated_next.platform)}の予告`,
+                                      `announced by ${platName(r.stated_next.platform)}`))}</span>`);
+  }
+  fact(web ? T('初回掲載', 'First chapter') : T('初刊', 'First volume'),
+       r.first ? esc(fmtDate(r.first, { year: true })) : '');
+  fact(T('話数', 'Chapters'), r.chapters
+    ? esc(String(r.chapters) + (r.partial ? '+' : ''))
+      + (accessLine(r) ? `<span class="wf-sub">${esc(accessLine(r))}</span>` : '')
+    : '');
+  (r.print || []).forEach(pr => fact(T('単行本', 'In print'),
+    (pr.volumes ? esc(volCount(pr.volumes)) : '')
+    + (() => {
+        const who = [pubBoth(publisherOf(pr.publisher)), pubBoth(imprintOf(pr.imprint))]
+          .filter(Boolean).join(' · ');
+        return who ? `<span class="wf-sub">${esc(who)}</span>` : '';
+      })()));
+  if (r.collection && r.collection !== r.work) {
+    fact(T('収録', 'Part of'), esc(workTextOf(r.collection)));
+  }
+  if (why) fact(T('根拠', 'Basis'), `<span class="wf-basis">${esc(why)}</span>`);
+
   const from = document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'ser';
   const backTo = from === 'feed' ? T('← 更新一覧', '← All updates')
                : from === 'rel' ? T('← 発売一覧', '← All releases')
                : T('← 作品一覧', '← All works');
   box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=${esc(from)}" id="wp-back">${
       esc(backTo)}</a></p>
-    <h2 class="wp-title">${workLabel(r)}</h2>
-    <div class="srcs">${src}</div>
-    <div class="detail wp-detail" id="wp-detail">${rows.join('')}<div id="wp-extra"></div></div>
-    <div id="wp-vols"></div>`;
+    <header class="wp-head">
+      <h2 class="wp-title">${workLabel(r)}</h2>
+      <p class="wp-badges">${badges.join('')}</p>
+    </header>
+    ${src ? `<div class="srcs wp-srcs">${src}</div>` : ''}
+    <dl class="wp-facts">${facts.join('')}</dl>
+    <div id="wp-vols"></div>
+    <div class="wp-prov" id="wp-extra"></div>`;
   el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeWorkPage(true); });
   paintVolumes(r);
   window.scrollTo(0, 0);
@@ -1502,7 +1636,7 @@ async function renderReleases() {
   // MADB records a distributor role in a trailing bracket: "講談社 (発売)" beside "講談社". That is
   // a fact about who put the volume in shops, not a second publisher, and a filter offering both
   // is offering the reader a distinction they did not ask for and cannot act on.
-  const pubOf = s => pubBoth(strip(s).replace(/\s*[（(][^）)]*[）)]\s*$/, ''));
+  const pubOf = s => pubBoth(publisherOf(s));
   /* Each row is rendered ONCE, into a string, and the controls only choose which strings are
      joined. The alternative is re-running the creator and imprint normalisation below for 640
      volumes on every keystroke, and that work depends on the display preferences rather than on
@@ -1533,20 +1667,7 @@ async function renderReleases() {
       // sorted by date read as six different imprints, which is the opposite of what an imprint is
       // for. The segments are split apart and the most specific one kept; a Latin spelling of a
       // series that has a Japanese name maps onto it.
-      const ALIAS = { 'yurihimecomics': 'コミック百合姫', 'yurihimecomic': 'コミック百合姫',
-                      'コミック百合姫': 'コミック百合姫', '百合姫コミックス': 'コミック百合姫' };
-      const imprint = s => {
-        const segs = strip(s || '').split(/[=／\/.．]/).map(x => x.trim()).filter(Boolean);
-        for (const seg of segs.slice().reverse()) {
-          const k = seg.toLowerCase().replace(/[\s\u30fb-]/g, '');
-          if (ALIAS[k] || ALIAS[seg]) return ALIAS[k] || ALIAS[seg];
-        }
-        // Nothing recognised: the most specific segment, which is the last that is not the
-        // umbrella line every Ichijinsha comic carries.
-        const named = segs.filter(x => x !== 'IDコミックス');
-        return (named.length ? named[named.length - 1] : segs[0]) || '';
-      };
-      const who = [pubOf(w.publisher), pubBoth(imprint(w.imprint))]
+      const who = [pubOf(w.publisher), pubBoth(imprintOf(w.imprint))]
         .filter(Boolean).join(' · ');
       // A release is of a VOLUME, so the row says which. 471 of 646 are numbered in the record
       // and the rest say nothing rather than being numbered by their position in a sorted list.
