@@ -589,13 +589,17 @@ function fmtDate(iso, opts) {
   return w + day + (yr ? ` ${y}` : '');
 }
 
-/* THE YEAR RULE. A day heading in the current month needs no year: everything around it is this
-   month. One in any other month does, and the feed's archive goes back through completed months
-   where "05 Aug" alone says nothing about which August. Applies to both settings, because the ISO
-   form had the same gap. */
+/* THE YEAR RULE. Within the current year a month and day are unambiguous, so the year is left off.
+   Outside it the year is shown, because the archive goes back through completed months where "05
+   Aug" alone says nothing about which August.
+
+   NOT "not the current month", which is what this said first. The updates window is fourteen days
+   and crosses a month boundary twice a month, so late July sat beside early August with a year on
+   one of them, days apart. The rule the feed already had before this setting existed was the year
+   one, and it was right. */
 function needsYear(iso) {
   const s = String(iso || '');
-  return s.slice(0, 7) !== new Date().toISOString().slice(0, 7);
+  return s.slice(0, 4) !== String(new Date().getFullYear());
 }
 
 /* Platform names in English.
