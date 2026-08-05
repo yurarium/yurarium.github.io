@@ -828,7 +828,7 @@ function setEnOrder(next) {
   prefSet(PREF_ENORDER, EN_ORDER);
   renderEnOrder();
   markMoreActive();
-  if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+  if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
 }
 
 function moveLevel(from, to) {
@@ -843,21 +843,21 @@ document.addEventListener('DOMContentLoaded', () => {
     FURIGANA = !FURIGANA;
     prefSet(PREF_FURI, FURIGANA);
     applyRomajiVisibility();
-    if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+    if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
   });
   document.querySelectorAll('[data-romaji-set]').forEach(b =>
     b.addEventListener('click', () => {
       ROMAJI_STYLE = b.dataset.romajiSet;
       prefSet(PREF_ROMAJI, ROMAJI_STYLE);
       applyRomajiVisibility();
-      if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+      if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
     }));
   document.querySelectorAll('[data-nameorder-set]').forEach(b =>
     b.addEventListener('click', () => {
       NAME_ORDER = b.dataset.nameorderSet;
       prefSet(PREF_NORDER, NAME_ORDER);
       applyRomajiVisibility();
-      if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+      if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
     }));
   document.querySelectorAll('[data-dialect-set]').forEach(b =>
     b.addEventListener('click', () => {
@@ -867,7 +867,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // panel's own label kept saying romanisation after the reader asked for en-US.
       applyLang(LANG);
       applyRomajiVisibility();
-      if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+      if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
     }));
 
   // THE POPUP. Same open/close contract as the month picker: the button toggles, a click outside
@@ -967,7 +967,7 @@ function applyLang(lang) {
   // The picker's button and grid are built in JS rather than from data-i18n text, so they need
   // repainting on a language change like any other rendered thing.
   if (typeof paintMonthPicker === 'function' && el('fmonthbtn')) paintMonthPicker();
-  if (FEED) { renderFeed(); renderCat(); renderSeries(); }
+  if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
 }
 document.querySelectorAll('[data-lang-set]').forEach(b =>
   b.addEventListener('click', () => applyLang(b.dataset.langSet)));
@@ -1092,8 +1092,10 @@ async function renderReleases() {
   // works.json is the same file the volumes tab opens a record from, fetched once and shared.
   if (!DETAIL) DETAIL = fetch('data/works.json', { cache: 'no-cache' }).then(r => r.json());
   const WORKS = await DETAIL;
-  if (el('rel-list').dataset.done === '1') return;
-  el('rel-list').dataset.done = '1';
+  // Drawn once per language. The guard is there so a tab click does not rebuild 640 rows,
+  // and keying it on the language is what lets a language change rebuild them.
+  if (el('rel-list').dataset.drawn === LANG) return;
+  el('rel-list').dataset.drawn = LANG;
   // works.json knows a work by its MADB id; the minted identifier that addresses a work page is
   // on the series row that joined them. Without this map a release links nowhere.
   const byMadb = new Map();
@@ -1122,17 +1124,52 @@ async function renderReleases() {
       // MADB writes a role before each name, [著] and [作画] among them, and joins creators
       // with a slash that survives even when one side is empty. Both are cataloguing
       // notation, not the credit a reader is being shown.
-      const people = String(w.creator || '').split('/').map(x => strip(x.trim()))
-        .filter(Boolean).join(' / ');
-      const who = [strip(w.publisher), strip(w.imprint)].filter(Boolean).join(' · ');
+      // MADB writes ONE creator as "紬めめ / ツムギメメ", the name beside its reading, and writes
+      // several as "[作画]A / [原作]B". Splitting on the slash alone turned the reading into a
+      // second person, so English read "Tsumugi Meme / ツムギメメ". A trailing part that is all
+      // kana and follows a part that is not is the reading of it.
+      const parts = String(w.creator || '').split('/').map(x => strip(x.trim())).filter(Boolean);
+      // The reading is written in KATAKANA and the name is not written only in katakana. あまね
+      // reads アマネ, so requiring the name to be non-kana missed every hiragana pen name.
+      const kata = s => /^[\u30a0-\u30ff\u30fb\u30fc\s]+$/.test(s);
+      const named = (parts.length === 2 && kata(parts[1]) && !kata(parts[0]))
+        ? [parts[0]] : parts;
+      const people = named.map(x => authorLabel({ author: x })).join(' / ');
+      // MADB catalogues one imprint three ways: "IDコミックス. Yurihime comics = コミック百合姫",
+      // "IDコミックス. コミック百合姫" and "IDコミックス. Yurihime comics". The "A = B" form gives
+      // two names for one thing, so the Japanese side is taken and the Latin alias maps onto it.
+      // Three spellings of 百合姫 in a list sorted by date read as three different imprints.
+      // MADB catalogues one imprint at least six ways: "IDコミックス", "コミック百合姫",
+      // "IDコミックス. Yurihime comics = コミック百合姫", "IDコミックス／Yuri-hime comics",
+      // "Yuri-hime comics", with half and full-width separators. Six spellings of 百合姫 in a list
+      // sorted by date read as six different imprints, which is the opposite of what an imprint is
+      // for. The segments are split apart and the most specific one kept; a Latin spelling of a
+      // series that has a Japanese name maps onto it.
+      const ALIAS = { 'yurihimecomics': 'コミック百合姫', 'yurihimecomic': 'コミック百合姫',
+                      'コミック百合姫': 'コミック百合姫', '百合姫コミックス': 'コミック百合姫' };
+      const imprint = s => {
+        const segs = strip(s || '').split(/[=／\/.．]/).map(x => x.trim()).filter(Boolean);
+        for (const seg of segs.slice().reverse()) {
+          const k = seg.toLowerCase().replace(/[\s\u30fb-]/g, '');
+          if (ALIAS[k] || ALIAS[seg]) return ALIAS[k] || ALIAS[seg];
+        }
+        // Nothing recognised: the most specific segment, which is the last that is not the
+        // umbrella line every Ichijinsha comic carries.
+        const named = segs.filter(x => x !== 'IDコミックス');
+        return (named.length ? named[named.length - 1] : segs[0]) || '';
+      };
+      const who = [strip(w.publisher), imprint(w.imprint)].filter(Boolean).join(' · ');
       // A release is of a VOLUME, so the row says which. 471 of 646 are numbered in the record
       // and the rest say nothing rather than being numbered by their position in a sorted list.
       const vol = r.n ? `<span class="relvn">${esc(T('第' + r.n + '巻', 'vol. ' + r.n))}</span>` : '';
       const wid = byMadb.get(w.work_id);
       const href = wid ? `${BASE}work/${esc(wid)}/` : '';
-      const name = href ? `<a href="${href}">${esc(w.title.ja)}</a>` : esc(w.title.ja);
+      // The same rule the rest of the site uses. Printing w.title.ja left every release in
+      // Japanese however a reader had set the language, which the works tab beside it does not do.
+      const label = workLabel({ work: w.title.ja });
+      const name = href ? `<a href="${href}">${label}</a>` : label;
       return `<div class="relv"><div class="relvt">${name} ${vol}</div>` +
-        `<div class="relvm">${esc([people, who].filter(Boolean).join(' · '))}</div></div>`;
+        `<div class="relvm">${[people, esc(who)].filter(Boolean).join(' · ')}</div></div>`;
     }).join('');
     return `<div class="relmonth"><h3>${esc(m)}</h3>${items}</div>`;
   }).join('');

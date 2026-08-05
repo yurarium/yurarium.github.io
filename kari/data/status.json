@@ -1,8 +1,10 @@
 {
- "generated": "2026-08-05T09:35:48+00:00",
+ "generated": "2026-08-05T10:18:52+00:00",
  "since_last": {
-  "at": "2026-08-05T09:29:57+00:00",
-  "statistics": {}
+  "at": "2026-08-05T09:48:37+00:00",
+  "statistics": {
+   "chapters": -3
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -22,16 +24,16 @@
  },
  "last_run": {
   "at": "2026-08-05",
-  "releases": 1064,
+  "releases": 1061,
   "works": 302,
   "platforms": 22,
   "series_rows": 1234,
   "identification": {
-   "discovery-candidate": 768,
+   "discovery-candidate": 765,
    "platform-genre": 296
   },
   "collapsed": {
-   "duplicate_chapters": 91,
+   "duplicate_chapters": 82,
    "thin_sitemap": 8,
    "resolver": 54,
    "samples": 49
@@ -112,8 +114,8 @@
    },
    {
     "name": "incomplete attested rows",
-    "value": 20,
-    "budget": 20,
+    "value": 17,
+    "budget": 17,
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector — the adapter still returns rows, just emptier ones."
    },
    {
@@ -245,22 +247,22 @@
   },
   {
    "source": "webpages",
-   "files": 37,
-   "works": 487,
-   "rows": 7687,
+   "files": 36,
+   "works": 482,
+   "rows": 7663,
    "retrieved": "2026-08-04",
    "age_days": 1,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7685,
-   "well_formed": 7685,
+   "checked_rows": 7661,
+   "well_formed": 7661,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
-  "runs_held": 8,
-  "previous_at": "2026-08-05T09:21:38+00:00",
+  "runs_held": 10,
+  "previous_at": "2026-08-05T09:48:25+00:00",
   "drops": []
  },
  "outstanding": [
@@ -332,7 +334,7 @@
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "captures with no floor": 11,
-    "incomplete attested rows": 20,
+    "incomplete attested rows": 17,
     "scraped counters in chapter names": 1,
     "uncertain readings": 13,
     "works showing a romanisation": 53,
@@ -362,6 +364,6 @@
   "print_only": 232,
   "volumes": 646,
   "with_identifier": 1234,
-  "chapters": 16846
+  "chapters": 16843
  }
 }
