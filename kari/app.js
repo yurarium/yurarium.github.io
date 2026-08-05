@@ -1200,7 +1200,11 @@ function volOrder(n) {
   const raw = String(n == null ? '' : n).trim();
   const m = raw.match(VOLNUM);
   if (m) return [0, +m[1], ''];
-  if (VOLPART[raw]) return [0, VOLPART[raw], ''];
+  // Written 上 and 下 on eight works and 上巻 and 下巻 on 最後の制服, whose two volumes share a
+  // publication month and so were ordered by the collator, backwards. One rule covers both
+  // spellings rather than two entries that can be added to singly.
+  const part = VOLPART[raw] || VOLPART[raw.replace(/巻$/, '')];
+  if (part) return [0, part, ''];
   return [1, 0, raw];
 }
 
