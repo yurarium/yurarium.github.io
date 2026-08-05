@@ -1032,6 +1032,43 @@ function navSync(push) {
   (push ? history.pushState : history.replaceState).call(history, st, '', url);
 }
 
+
+// The detail a row cannot carry: the work's other publication, and why we say what we say about
+// its state. INTERFACE-PLAN §4. Evidence is not uncertainty: "four volumes from 幻冬舎コミックス,
+// and the shop marks the series finished" is a statement about the world and belongs here. What we
+// are unsure of belongs on status.html and is not rendered.
+function workDetail(r) {
+  const bits = [];
+  (r.print || []).forEach(p => {
+    const span = [p.first, p.last].filter(Boolean).join(' \u2013 ');
+    // MADB prefixes a publisher with its role, [頒布] for the distributor. That is cataloguing
+    // notation and not part of the name a reader is being shown.
+    const strip = s => String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '');
+    const who = [strip(p.publisher), strip(p.imprint)].filter(Boolean).join(' \u00b7 ');
+    bits.push(`<div class="dl"><span class="dk">${T('\u5358\u884c\u672c', 'In print')}</span>` +
+      `<span class="dv">${esc([p.volumes ? p.volumes + (T(' \u5DFB', ' vol')) : '', who, span]
+        .filter(Boolean).join(' \u00b7 '))}</span></div>`);
+  });
+  const why = r.completed_basis || r.state_basis;
+  if (why) bits.push(`<div class="dl"><span class="dk">${T('\u6839\u62E0', 'Basis')}</span>` +
+    `<span class="dv">${esc(why)}</span></div>`);
+  if (r.id) bits.push(`<div class="dl"><span class="dk">${T('ID', 'ID')}</span>` +
+    `<span class="dv mono">${esc(r.id)}</span></div>`);
+  return bits.length ? `<div class="detail">${bits.join('')}</div>` : '';
+}
+
+
+// A works row opens its own detail. Delegated, because the list is redrawn on every filter change
+// and a handler bound to a row would not survive that.
+document.addEventListener('click', ev => {
+  const row = ev.target.closest('.rel[data-work]');
+  if (!row || ev.target.closest('a')) return;   // a link is a link, not a disclosure
+  const nowOpen = !row.classList.contains('here');
+  document.querySelectorAll('.rel.here').forEach(n => n.classList.remove('here'));
+  if (nowOpen) row.classList.add('here');
+  navSync(true);
+});
+
 function navApply(st) {
   NAV_APPLYING = true;
   try {
@@ -1725,7 +1762,7 @@ function renderSeries() {
           return s.url
             ? `<a class="src" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer nofollow" title="${tip}">${body}</a>`
             : `<span class="src" title="${tip}">${body}</span>`;
-        }).join('')}</div>
+        }).join('')}</div>${workDetail(r)}
     </div>`;
   }).join('');
 }

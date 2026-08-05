@@ -410,3 +410,13 @@
 /* The work an address named. A list of a thousand rows scrolled to an unmarked position leaves a
    reader guessing which row the link meant, so the one asked for says so. */
 .rel.here { box-shadow: inset 3px 0 0 var(--accent, #b07cc6); padding-left: .6rem; }
+
+/* The detail a row cannot carry. Shown only for the work an address named or a reader opened, so
+   the list stays a list. */
+.rel .detail { display: none; }
+.rel.here .detail { display: block; margin: .45rem 0 .1rem; padding-left: .1rem; }
+.rel .detail .dl { display: flex; gap: .55rem; align-items: baseline; margin: .18rem 0;
+                   font-size: .88em; line-height: 1.5; }
+.rel .detail .dk { flex: 0 0 auto; min-width: 5.2rem; opacity: .62; }
+.rel .detail .dv { flex: 1 1 auto; }
+.rel .detail .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; opacity: .7; }
