@@ -112,8 +112,8 @@
   },
   {
    "name": "unreadable bookwalker rows",
-   "value": 258,
-   "budget": 258,
+   "value": 33,
+   "budget": 33,
    "means": "rows admitted from BOOK☆WALKER's shelf with no first publication VENUE, which is what §6's scope test turns on since the 2026-08-05 amendment. A row without one has not been fetched yet, or its series page listed nothing readable. Falls as adapters/recon/bookwalker_volumes.py works through the queue, and reaches zero when it finishes. The date is deliberately not what is counted: 1,500 of these titles are digital-only, have no print edition anywhere, and are complete records without one."
   },
   {

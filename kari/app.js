@@ -1200,6 +1200,31 @@ function volCount(n) {
   return T(n + '巻', n + (n === 1 ? ' volume' : ' volumes'));
 }
 
+/* THE VOLUME THAT ENDED THE SERIES. A claim and labelled as one: a shop said the series is
+   complete and said how many volumes it has, and that many were read. The tooltip names the shop,
+   because a reader deciding whether to trust it is owed the source. */
+/* THE SERIES FINISHED, on a shop's say-so. 258 works published only in volumes had no completion
+   information from any source, and the shop that told us which editions they are also says whether
+   they are done. Shown as its own badge beside 単行本 rather than replacing it: one says how the
+   work is published and the other says whether it is still coming. */
+function completedTag(basis) {
+  if (!basis) return '';
+  const tip = `${basis.source} lists this series as complete`
+            + (basis.volumes ? ` in ${basis.volumes} volume(s)` : '')
+            + ". The shop's claim, not the publisher's statement.";
+  return `<span class="k k-fin" title="${esc(tip)}">${esc(T('完結', 'complete'))}</span>`;
+}
+
+function finalTag(basis) {
+  // A one-volume work has no final volume: the volume is the work, and calling it the last of a
+  // series says something about a series that never existed.
+  if (!basis || (basis.volumes || 0) < 2) return '';
+  const who = (basis && basis.source) || '';
+  const tip = `${who} lists this series as complete in ${basis && basis.volumes} volume(s), `
+            + 'and this is the last of them. The shop\'s claim, not the publisher\'s statement.';
+  return ` <span class="k k-fin" title="${esc(tip)}">${esc(T('完結巻', 'final volume'))}</span>`;
+}
+
 function volLabel(n) {
   const raw = String(n == null ? '' : n).trim();
   if (!raw) return '';
@@ -1347,7 +1372,8 @@ async function paintVolumes(r) {
       // The ISBN is why most of these works are here at all: it is what a shop stated and what the
       // bibliography answered. A bibliographic record should show its identifier.
       const i = v.isbn ? `<span class="mono visbn">${esc(v.isbn)}</span>` : '';
-      return `<li class="vol">${n}${d}${i}</li>`;
+      const f = v.final_volume ? finalTag(v.final_volume_basis) : '';
+      return `<li class="vol">${n}${d}${i}${f}</li>`;
     }).join('') + '</ol>';
 }
 
@@ -1411,7 +1437,8 @@ function renderWorkPage() {
       .filter(Boolean).join(' · '))));
   // The first date is on 初出 above and on the first row of the volume list below, so it is not
   // repeated here.
-  add(T('状態', 'State'), esc(stateLabel(r)));
+  add(T('状態', 'State'), esc(stateLabel(r))
+      + (r.state === 'print' && r.completed_claim ? ' ' + completedTag(r.completed_claim) : ''));
   add(T('根拠', 'Basis'), esc(r.completed_basis || r.state_basis || ''));
   add('ID', `<span class="mono">${esc(r.id || '')}</span>`);
   // The way back names where it goes. A work page opens from the updates tab as well as the works
@@ -1466,7 +1493,8 @@ async function renderReleases() {
   }));
   const rows = [];
   (WORKS.works || []).forEach(w => (w.volumes || []).forEach(v => {
-    if (v.published) rows.push({ d: String(v.published), w, n: v.number, isbn: v.isbn });
+    if (v.published) rows.push({ d: String(v.published), w, n: v.number, isbn: v.isbn,
+                                 fin: v.final_volume ? v.final_volume_basis : null });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
   el('n-rel').textContent = rows.length;
@@ -1525,6 +1553,10 @@ async function renderReleases() {
       // Same rule as the work page, from the same function: the releases tab was printing
       // `第vol. 8巻` for every volume MADB numbered in words.
       const vol = r.n ? `<span class="relvn">${esc(volLabel(r.n))}</span>` : '';
+      // The volume that ended the series, where a shop states both that it ended and how long it
+      // is. The updates tab marks a final chapter the same way; a volume carries no such marking
+      // of its own, so this says whose claim it is.
+      const fin = r.fin ? finalTag(r.fin) : '';
       const wid = byMadb.get(w.work_id);
       const href = wid ? `${BASE}work/${esc(wid)}/` : '';
       // The same rule the rest of the site uses. Printing w.title.ja left every release in
@@ -1538,7 +1570,7 @@ async function renderReleases() {
       // typing a romanisation must reach a work the interface is showing them in romaji.
       key: searchIndex('titles', w.title.ja, w.title && w.title.en) + ' ' +
            norm(String(w.creator || '')),
-      html: `<div class="relv"><div class="relvt">${name} ${vol}</div>` +
+      html: `<div class="relv"><div class="relvt">${name} ${vol}${fin}</div>` +
         `<div class="relvm">${[people, esc(who)].filter(Boolean).join(' · ')}</div></div>`,
     };
   });
@@ -2308,6 +2340,7 @@ function renderSeries() {
         ${bilingual(() => `<div class="relhead">
           <span class="t">${workLabel(r)}</span>
           <span class="k ${cls}" title="${esc(why)}">${esc(T(lbl))}</span>
+          ${r.state === 'print' ? completedTag(r.completed_claim) : ''}
           ${acc()}
         </div>
         <div class="ep">${r.state === 'print'

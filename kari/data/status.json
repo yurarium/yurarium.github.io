@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-05T20:55:50+00:00",
+ "generated": "2026-08-05T21:48:45+00:00",
  "since_last": {
-  "at": "2026-08-05T20:47:03+00:00",
+  "at": "2026-08-05T21:34:54+00:00",
   "statistics": {}
  },
  "means": {
@@ -25,7 +25,7 @@
   "releases": 1061,
   "works": 598,
   "platforms": 22,
-  "series_rows": 1473,
+  "series_rows": 1472,
   "identification": {
    "discovery-candidate": 765,
    "platform-genre": 296
@@ -124,8 +124,8 @@
    },
    {
     "name": "unreadable bookwalker rows",
-    "value": 262,
-    "budget": 263,
+    "value": 35,
+    "budget": 38,
     "means": "rows admitted from BOOK☆WALKER's shelf with no first publication VENUE, which is what §6's scope test turns on since the 2026-08-05 amendment. A row without one has not been fetched yet, or its series page listed nothing readable. Falls as adapters/recon/bookwalker_volumes.py works through the queue, and reaches zero when it finishes. The date is deliberately not what is counted: 1,500 of these titles are digital-only, have no print edition anywhere, and are complete records without one."
    },
    {
@@ -228,20 +228,6 @@
    "drop": null
   },
   {
-   "source": "comparators",
-   "files": 4,
-   "works": 9,
-   "rows": 9,
-   "retrieved": "2026-08-04",
-   "age_days": 1,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 0,
-   "well_formed": 0,
-   "malformed": 0,
-   "drop": null
-  },
-  {
    "source": "webpages",
    "files": 36,
    "works": 482,
@@ -256,10 +242,24 @@
    "drop": null
   },
   {
+   "source": "comparators",
+   "files": 5,
+   "works": 9,
+   "rows": 9,
+   "retrieved": "2026-08-05",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 0,
+   "well_formed": 0,
+   "malformed": 0,
+   "drop": null
+  },
+  {
    "source": "madb",
    "files": 598,
    "works": 598,
-   "rows": 1311,
+   "rows": 1310,
    "retrieved": "2026-08-05",
    "age_days": 0,
    "in_scope": true,
@@ -271,8 +271,8 @@
   }
  ],
  "ledger": {
-  "runs_held": 15,
-  "previous_at": "2026-08-05T20:46:38+00:00",
+  "runs_held": 19,
+  "previous_at": "2026-08-05T21:34:27+00:00",
   "drops": []
  },
  "outstanding": [
@@ -582,16 +582,16 @@
     "scraped counters in chapter names": 1,
     "uncertain readings": 22,
     "undated cmoa candidates": 1681,
-    "unreadable bookwalker rows": 263,
+    "unreadable bookwalker rows": 38,
     "works showing a romanisation": 288,
     "works without English": 20
    }
   }
  ],
  "statistics": {
-  "works": 1473,
+  "works": 1472,
   "states": {
-   "print": 470,
+   "print": 469,
    "oneshot": 400,
    "completed": 260,
    "active": 196,
@@ -600,16 +600,16 @@
    "slow": 40
   },
   "english_basis": {
-   "translated": 1072,
+   "translated": 1071,
    "romaji": 256,
    "licensed": 63,
    "official-jp": 50,
    "none": 32
   },
   "print_works": 596,
-  "print_only": 470,
-  "volumes": 1311,
-  "with_identifier": 1473,
+  "print_only": 469,
+  "volumes": 1310,
+  "with_identifier": 1472,
   "chapters": 16846
  }
 }
