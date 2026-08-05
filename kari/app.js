@@ -242,6 +242,11 @@ const SPELL_US = {
 let DIALECT = prefGet(PREF_DIALECT, 'gb');
 const PREF_DATEFMT = 'yurarium.pref.datefmt';
 let DATEFMT = prefGet(PREF_DATEFMT, 'iso');
+
+/* Every preference that changes what a render produces. Anything cached on a render must key on
+   this rather than on a hand-picked subset: a cache that names four of six settings serves a
+   stale view for the other two, which reads to a reader as the feature being broken. */
+const RENDER_PREFS = () => [LANG, FURIGANA, ROMAJI_STYLE, NAME_ORDER, DIALECT, DATEFMT, EN_ORDER];
 /* TYPOGRAPHY, applied at display time and never stored. Straight quotes are a typewriter
    limitation, and the page has no reason to inherit one.
 
@@ -1180,11 +1185,12 @@ async function renderReleases() {
   // works.json is the same file the volumes tab opens a record from, fetched once and shared.
   if (!DETAIL) DETAIL = fetch('data/works.json', { cache: 'no-cache' }).then(r => r.json());
   const WORKS = await DETAIL;
-  // Drawn once per SETTING, not once per language. The guard exists so a tab click does not
-  // rebuild 640 rows, and it must name every preference the render reads or the tab keeps a stale
-  // one until something else forces a redraw. Keying it on the language alone left furigana off
-  // until a reader clicked around enough to trigger one, which looked like furigana being broken.
-  const drawnKey = [LANG, FURIGANA, ROMAJI_STYLE, NAME_ORDER].join('|');
+  // Drawn once per SETTING. The guard exists so a tab click does not rebuild 640 rows, and it has
+  // to name EVERY preference the render reads. Naming a subset is how this goes wrong twice: first
+  // it named nothing and kept the language it was born in, then it named four of the six and a
+  // date-format or spelling change left the tab stale. The list is built from the same place the
+  // preferences live so a new one cannot be forgotten here without being forgotten there too.
+  const drawnKey = RENDER_PREFS().join('|');
   if (el('rel-list').dataset.drawn === drawnKey) return;
   el('rel-list').dataset.drawn = drawnKey;
   // works.json knows a work by its MADB id; the minted identifier that addresses a work page is
