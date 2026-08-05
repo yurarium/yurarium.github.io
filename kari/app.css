@@ -434,5 +434,5 @@
 /* A tab's count is filled when its data is. Releases loads works.json on first open, so until
    then the counter has nothing to say and should not say it with an empty space. */
 nav button .n:empty { display: none; }
-.relvn { font-size: .82em; opacity: .6; font-weight: 400; margin-left: .3rem; }
+.relvn { font-weight: 600; margin-left: .4rem; }
 .relvt a { color: inherit; }

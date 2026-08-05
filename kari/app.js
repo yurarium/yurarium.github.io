@@ -585,6 +585,24 @@ function credit(c) {
    same platforms reads as a bug rather than a translation. But that left them Japanese-only in
    併記, where the whole point is to show both. So the chip carries both names on ONE link instead
    of the row carrying two links. */
+/* Publishers and imprints are names, and were the only names on the releases tab left untranslated:
+   a reader in English met "講談社 · コミック百合姫" beside an English title. Same rule as a platform
+   name, and the same fallback: where there is no English the Japanese stands, because a name we
+   cannot render is still the name. The corpus holds four publishers and a handful of imprints, so
+   this is a list rather than a lookup. It belongs in data beside platforms.yaml. */
+const PUB_EN = {
+  '一迅社': 'Ichijinsha', '講談社': 'Kodansha', '講談社 (発売)': 'Kodansha',
+  'コミック百合姫': 'Comic Yuri Hime', 'IDコミックス': 'ID Comics',
+  '百合姫books': 'Yurihime Books', '百合姫コミックス': 'Comic Yuri Hime',
+};
+
+function pubBoth(n) {
+  if (!n) return '';
+  const en = PUB_EN[n];
+  if (!en || en === n) return n;
+  return LANG === 'en' ? en : LANG === 'ja' ? n : `${n} / ${en}`;
+}
+
 function platBoth(n) {
   if (!n) return '';
   const en = PLAT_EN[n];
@@ -1092,10 +1110,13 @@ async function renderReleases() {
   // works.json is the same file the volumes tab opens a record from, fetched once and shared.
   if (!DETAIL) DETAIL = fetch('data/works.json', { cache: 'no-cache' }).then(r => r.json());
   const WORKS = await DETAIL;
-  // Drawn once per language. The guard is there so a tab click does not rebuild 640 rows,
-  // and keying it on the language is what lets a language change rebuild them.
-  if (el('rel-list').dataset.drawn === LANG) return;
-  el('rel-list').dataset.drawn = LANG;
+  // Drawn once per SETTING, not once per language. The guard exists so a tab click does not
+  // rebuild 640 rows, and it must name every preference the render reads or the tab keeps a stale
+  // one until something else forces a redraw. Keying it on the language alone left furigana off
+  // until a reader clicked around enough to trigger one, which looked like furigana being broken.
+  const drawnKey = [LANG, FURIGANA, ROMAJI_STYLE, NAME_ORDER].join('|');
+  if (el('rel-list').dataset.drawn === drawnKey) return;
+  el('rel-list').dataset.drawn = drawnKey;
   // works.json knows a work by its MADB id; the minted identifier that addresses a work page is
   // on the series row that joined them. Without this map a release links nowhere.
   const byMadb = new Map();
@@ -1158,7 +1179,8 @@ async function renderReleases() {
         const named = segs.filter(x => x !== 'IDコミックス');
         return (named.length ? named[named.length - 1] : segs[0]) || '';
       };
-      const who = [strip(w.publisher), imprint(w.imprint)].filter(Boolean).join(' · ');
+      const who = [pubBoth(strip(w.publisher)), pubBoth(imprint(w.imprint))]
+        .filter(Boolean).join(' · ');
       // A release is of a VOLUME, so the row says which. 471 of 646 are numbered in the record
       // and the rest say nothing rather than being numbered by their position in a sorted list.
       const vol = r.n ? `<span class="relvn">${esc(T('第' + r.n + '巻', 'vol. ' + r.n))}</span>` : '';
