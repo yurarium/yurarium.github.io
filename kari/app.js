@@ -240,6 +240,8 @@ const SPELL_US = {
   plough:'plow', pyjamas:'pajamas', storey:'story', storeys:'stories',
 };
 let DIALECT = prefGet(PREF_DIALECT, 'gb');
+const PREF_DATEFMT = 'yurarium.pref.datefmt';
+let DATEFMT = prefGet(PREF_DATEFMT, 'iso');
 /* TYPOGRAPHY, applied at display time and never stored. Straight quotes are a typewriter
    limitation, and the page has no reason to inherit one.
 
@@ -542,6 +544,60 @@ function dow(d) {
   return LANG === 'en' ? DOW_EN[n] : LANG === 'ja' ? DOW_JA[n] : `${DOW_JA[n]} ${DOW_EN[n]}`;
 }
 
+const MON_EN = ['January','February','March','April','May','June',
+                'July','August','September','October','November','December'];
+
+/* ISO or the reader's own convention, and ISO is the default because it sorts, it is unambiguous,
+   and it is what somebody selecting text off the page should get.
+
+   THE TWO CONVENTIONS ARE NOT ONE TEMPLATE REORDERED. English puts the weekday in front, "Wed 5
+   Aug"; Japanese puts it after, in parentheses, 8月5日（水）. So this resolves against the language
+   rather than shuffling tokens, and 併記 takes the Japanese form, because both-mode already puts
+   Japanese first everywhere and a date is not a name to be shown twice.
+
+   Day order inside English follows DIALECT, which already exists and already decides spelling, so
+   a reader who has chosen American gets "Wed Aug 5" without a second control that could disagree
+   with the first.
+
+   PRECISION IS NEVER INVENTED. A record catalogued to the month renders as a month. Handing a
+   month to a date formatter and taking the first of it would be the interface asserting a day the
+   record does not have, which is the same fault as a day-level release calendar. */
+function fmtDate(iso, opts) {
+  const s = String(iso || '');
+  const o = opts || {};
+  const md = /^(\d{4})-(\d\d)-(\d\d)/.exec(s);
+  const mm = /^(\d{4})-(\d\d)$/.exec(s);
+  if (!md && !mm) return s;
+  const [y, m, d] = md ? [md[1], md[2], md[3]] : [mm[1], mm[2], null];
+  const yr = o.year ? y : null;
+
+  if (DATEFMT !== 'local') {
+    // The ISO form, with the year where the rule asks for it and the weekday where there is a day.
+    const core = d ? (yr ? `${y}-${m}-${d}` : `${m}-${d}`) : `${y}-${m}`;
+    return d && o.dow ? `${core} ${dow(s)}` : core;
+  }
+
+  const ja = LANG !== 'en';                      // 併記 takes the Japanese form
+  if (!d) return ja ? `${y}年${+m}月` : `${MON_EN[+m - 1]} ${y}`;
+  if (ja) {
+    const w = o.dow ? `（${DOW_JA[new Date(s.slice(0, 10) + 'T00:00:00Z').getUTCDay()]}）` : '';
+    return (yr ? `${y}年` : '') + `${+m}月${+d}日${w}`;
+  }
+  const mon = MON_EN[+m - 1].slice(0, 3);
+  const day = DIALECT === 'us' ? `${mon} ${+d}` : `${String(+d).padStart(2, '0')} ${mon}`;
+  const w = o.dow ? DOW_EN[new Date(s.slice(0, 10) + 'T00:00:00Z').getUTCDay()] + ' ' : '';
+  return w + day + (yr ? ` ${y}` : '');
+}
+
+/* THE YEAR RULE. A day heading in the current month needs no year: everything around it is this
+   month. One in any other month does, and the feed's archive goes back through completed months
+   where "05 Aug" alone says nothing about which August. Applies to both settings, because the ISO
+   form had the same gap. */
+function needsYear(iso) {
+  const s = String(iso || '');
+  return s.slice(0, 7) !== new Date().toISOString().slice(0, 7);
+}
+
 /* Platform names in English.
    Where the platform publishes its own Latin-script name: pixiv Comic, Comic Days, Sunday Webry,
    KADOKOMI, Magazine Pocket. That name is used, because it is the one the platform answers to and
@@ -749,6 +805,9 @@ function applyRomajiVisibility() {
     nb.querySelectorAll('[data-nameorder-set]').forEach(b =>
       b.setAttribute('aria-pressed', String(b.dataset.nameorderSet === NAME_ORDER)));
   }
+  const fb2 = el('datebox');
+  if (fb2) fb2.querySelectorAll('[data-datefmt-set]').forEach(b =>
+    b.setAttribute('aria-pressed', String(b.dataset.datefmtSet === DATEFMT)));
   const db = el('dialbox');
   if (db) {
     setGroupApplicable(db, LANG !== 'ja');
@@ -874,6 +933,13 @@ document.addEventListener('DOMContentLoaded', () => {
     b.addEventListener('click', () => {
       NAME_ORDER = b.dataset.nameorderSet;
       prefSet(PREF_NORDER, NAME_ORDER);
+      applyRomajiVisibility();
+      if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
+    }));
+  document.querySelectorAll('[data-datefmt-set]').forEach(b =>
+    b.addEventListener('click', () => {
+      DATEFMT = b.dataset.datefmtSet;
+      prefSet(PREF_DATEFMT, DATEFMT);
       applyRomajiVisibility();
       if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
     }));
@@ -1190,7 +1256,8 @@ async function renderReleases() {
       return `<div class="relv"><div class="relvt">${name} ${vol}</div>` +
         `<div class="relvm">${[people, esc(who)].filter(Boolean).join(' · ')}</div></div>`;
     }).join('');
-    return `<div class="relmonth"><h3>${esc(m)}</h3>${items}</div>`;
+    return `<div class="relmonth"><h3><time datetime="${esc(m)}">${
+      esc(fmtDate(m))}</time></h3>${items}</div>`;
   }).join('');
 }
 
@@ -1637,9 +1704,8 @@ function compactList(rows) {
     // THE YEAR, WHEN IT IS NOT THIS YEAR. A date two years old shown as 08-22 reads as the
     // twenty-second of this month, so an overdue row from 2024 looked like an upcoming one.
     // 頂のリヴィーツァ was announced for 2024-08-22 and displayed 08-22 beside 予告日超過.
-    const dlabel = d.slice(0, 4) === String(new Date().getFullYear()) ? d.slice(5) : d;
-    html += `<div class="cday"><div class="cday-d">${esc(dlabel)} <span class="dow"
-      >${esc(dow(d))}</span></div><div class="cday-l">`;
+    html += `<div class="cday"><div class="cday-d"><time datetime="${esc(d)}">${
+      esc(fmtDate(d, { dow: true, year: needsYear(d) }))}</time></div><div class="cday-l">`;
     for (const g of groups.values()) {
       const lead = g.reduce((a, b) =>
         (KIND_RANK[b.kind] ?? 0) > (KIND_RANK[a.kind] ?? 0) ? b : a);
@@ -1771,7 +1837,8 @@ function detailList(rows) {
       // imported in one pass and only as good as each platform's back-catalogue dating: is a
       // single statement about the whole database. It belongs in the accompanying text, said once,
       // not re-asserted per day on the rows that happen to trip a heuristic.
-      html += `<div class="date-h">${esc(d)} <span class="dow">${esc(dow(d))}</span></div>`;
+      html += `<div class="date-h"><time datetime="${esc(d)}">${
+        esc(fmtDate(d, { dow: true, year: needsYear(d) }))}</time></div>`;
     }
     // The whole row again in the other language, not an English title bolted under a Japanese
     // row: kind, type, access, author, platform and syndication all re-render.
@@ -1892,7 +1959,7 @@ function renderSeries() {
           ? `${(r.print || []).reduce((n, p) => n + (p.volumes || 0), 0)} ${esc(T('巻'))}${
               r.first ? ` · ${esc(r.first)}` : ''}`
           : `${r.chapters}${r.partial ? '+' : ''} ${esc(T('話'))}${
-            r.latest ? ` · ${esc(T('最新'))} ${esc(r.latest)}${
+            r.latest ? ` · ${esc(T('最新'))} ${esc(fmtDate(r.latest, { year: true }))}${
               r.latest_ep ? ' ' + esc(phraseOf(r.latest_ep)) : ''}` : ''}`}</div>
         ${r.author ? `<div class="line2"><span class="meta by">${authorLabel(r)}</span></div>` : ''}`)}
       ${r.url ? '</a>' : ''}

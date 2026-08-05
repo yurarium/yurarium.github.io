@@ -101,6 +101,19 @@
             </span>
             <p class="morenote" id="dialnote"></p>
           </div>
+
+          <!-- Dates. Unlike furigana and romanisation this applies in every language, so it is not
+               conditional. ISO is the default because it sorts, it is unambiguous, and it is what
+               a reader selecting text off the page should get. -->
+          <div class="moregrp" id="datebox">
+            <span class="morelab" data-i18n>日付 / dates</span>
+            <span class="themebox">
+              <button class="themebtn" data-datefmt-set="iso" title="2026-08-05">ISO</button>
+              <button class="themebtn" data-datefmt-set="local" data-i18n
+                      title="8月5日（水） / Wed 05 Aug">現地 / local</button>
+            </span>
+            <p class="morenote" id="datenote"></p>
+          </div>
         </div>
       </span>
       </span>
@@ -245,6 +258,6 @@
 </footer>
 </div>
 
-<script src="app.js?v=8590a3aa"></script>
+<script src="app.js?v=ce679552"></script>
 </body>
 </html>
