@@ -1746,6 +1746,10 @@ const SSTATE = {
   slow:      ['停滞', 'k-ch',  'last chapter within a year'],
   dormant:   ['休眠', 'k-unk', 'nothing for over a year'],
   unknown:   ['不明', 'k-unk', 'the platform states no date we could read'],
+  // A work published in volumes and not online. Not a serialisation that went quiet: there is
+  // no serialisation here to have a state, and saying 不明 about one would be the interface
+  // reporting a gap in itself as a fact about the manga.
+  print:     ['単行本', 'k-fin', 'published in volumes; no web serialisation we track'],
 };
 
 function renderSeries() {
@@ -1758,7 +1762,9 @@ function renderSeries() {
     // rendered as 不明 / Unknown, which is the interface admitting it has nothing rather than
     // telling the reader something. A work we cannot say one fact about is a lead, not an entry;
     // it belongs in the coverage gaps on status.html, where it is work to do.
-    if (!r.chapters) return false;
+    // A print-only work has no chapters and is still a work. What the rule excludes is a row
+    // we can say nothing about, not one published in volumes rather than online.
+    if (!r.chapters && !(r.print || []).length) return false;
     if (q && !hits(searchIndex('titles', r.work, r.work_en), q)
            && !hits(searchIndex('authors', (r.author || '').trim(), r.author_en), q)) return false;
     if (state && r.state !== state) return false;
@@ -1812,9 +1818,12 @@ function renderSeries() {
           <span class="k ${cls}" title="${esc(why)}">${esc(T(lbl))}</span>
           ${acc()}
         </div>
-        <div class="ep">${r.chapters}${r.partial ? '+' : ''} ${esc(T('話'))}${
-          r.latest ? ` · ${esc(T('最新'))} ${esc(r.latest)}${
-            r.latest_ep ? ' ' + esc(phraseOf(r.latest_ep)) : ''}` : ''}</div>
+        <div class="ep">${r.state === 'print'
+          ? `${(r.print || []).reduce((n, p) => n + (p.volumes || 0), 0)} ${esc(T('巻'))}${
+              r.first ? ` · ${esc(r.first)}` : ''}`
+          : `${r.chapters}${r.partial ? '+' : ''} ${esc(T('話'))}${
+            r.latest ? ` · ${esc(T('最新'))} ${esc(r.latest)}${
+              r.latest_ep ? ' ' + esc(phraseOf(r.latest_ep)) : ''}` : ''}`}</div>
         ${r.author ? `<div class="line2"><span class="meta by">${authorLabel(r)}</span></div>` : ''}`)}
       ${r.url ? '</a>' : ''}
         <div class="srcs">${r.sources.map(s => {
@@ -2196,7 +2205,8 @@ Promise.all([
   if (SERIES) {
     // Count what the tab actually lists. Rows with no chapters are filtered out of the view, so
     // counting the raw array promised 45 works that are not there when you open it.
-    el('n-ser').textContent = SERIES.series.filter(r => r.chapters).length;
+    el('n-ser').textContent =
+      SERIES.series.filter(r => r.chapters || (r.print || []).length).length;
     // From sources[], not a top-level r.platform. There is no such field. The series index became
     // one row per WORK carrying a sources[] list when works on several platforms were collapsed
     // into one row; this line was not updated, so every value was undefined, filter(Boolean) threw

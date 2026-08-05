@@ -111,8 +111,10 @@
 <nav role="tablist">
   <button role="tab" aria-selected="true"  data-tab="feed">更新 <span class="n" id="n-feed"></span></button>
   <button role="tab" aria-selected="false" data-tab="ser">作品 <span class="n" id="n-ser"></span></button>
-  <button role="tab" aria-selected="false" data-tab="cat">単行本 <span class="n" id="n-cat"></span></button>
   <button role="tab" aria-selected="false" data-tab="rel">発売 <span class="n" id="n-rel"></span></button>
+  <!-- The volumes tab is gone: print works live in 作品 now. Its counter stays in the DOM
+       because the load handler writes to it, and a tab bar is not the place to discover that. -->
+  <span id="n-cat" hidden></span>
 </nav>
 
 <!-- ── FEED ───────────────────────────────────────────────────────── -->
@@ -205,7 +207,7 @@
   <div id="rel-list"></div>
 </section>
 
-<section id="tab-cat" hidden>
+<section id="tab-cat" hidden aria-hidden="true">
   
   <div class="controls" style="margin-top:.9rem">
     <input type="search" id="q" placeholder="検索: 題名・よみ・作者 / title, reading, creator" autocomplete="off">
@@ -244,6 +246,6 @@
 </footer>
 </div>
 
-<script src="app.js?v=f873b28e"></script>
+<script src="app.js?v=c09ffc5e"></script>
 </body>
 </html>
