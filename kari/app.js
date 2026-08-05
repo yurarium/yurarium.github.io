@@ -1116,11 +1116,14 @@ const NON_STORY = new Set(['trial', 'notice', 'apology-art', 'republication']);
 let NAV_APPLYING = false;      // true while popstate is being applied, so we do not push a reply
 
 function navState() {
-  return { tab: document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'feed',
-           month: el('fmonth') ? el('fmonth').value : '',
-           work: (document.querySelector('nav button[aria-selected=true]')?.dataset.tab === 'ser')
-                   ? (document.querySelector('.rel.here')?.dataset.work || '')
-                   : (open ? (open.parentElement?.dataset.id || '') : '') };
+  const tab = document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'feed';
+  // PAGE_WORK IS WHICH WORK IS OPEN. This read `.rel.here`, a class the list stopped carrying when
+  // the work page replaced the in-list panel, so any control calling navSync while a work was open
+  // computed "no work" and rewrote the address back to the bare list.
+  return { tab, month: el('fmonth') ? el('fmonth').value : '',
+           work: tab === 'ser' ? (PAGE_WORK || '')
+               : tab === 'cat' ? (open ? (open.parentElement?.dataset.id || '') : '')
+               : '' };
 }
 
 function navUrl(st) {
@@ -1186,6 +1189,12 @@ const VOLNUM = /^\s*(?:第\s*)?(?:v(?:ol)?(?:ume)?\s*\.?\s*)?(\d+)\s*(?:巻)?\s*
 // way and `localeCompare(…, 'ja')` sorts by reading, which puts 下 first.
 const VOLPART = { '上': 1, '中': 2, '下': 3 };
 
+// A count and its unit are one phrase. `6 ${T('巻','vol')}` renders "6 巻 / vol" in 併記, which is
+// the number once and the units run together, and it has no plural.
+function volCount(n) {
+  return T(n + '巻', n + (n === 1 ? ' volume' : ' volumes'));
+}
+
 function volLabel(n) {
   const raw = String(n == null ? '' : n).trim();
   if (!raw) return '';
@@ -1238,14 +1247,20 @@ function workDetail(r) {
 }
 
 
-// A works row opens its own detail. Delegated, because the list is redrawn on every filter change
-// and a handler bound to a row would not survive that.
+/* A works row opens the work's page. Delegated, because the list is redrawn on every filter
+   change and a handler bound to a row would not survive that.
+
+   The title is a real link to `work/<id>/`, so this intercepts it and renders in place instead of
+   letting the browser fetch the stub, which would only redirect back here. A click carrying a
+   modifier, or any button other than the left one, is left alone: a reader asking for a new tab
+   is asking for the address, and the address works. */
 document.addEventListener('click', ev => {
   const row = ev.target.closest('.rel[data-work]');
-  if (!row || ev.target.closest('a')) return;   // a link is a link, not a disclosure
-  // THE WORKS TAB OPENS THE WORK'S PAGE. A row expanding in place made the record a footnote to
-  // the list it came from, and a reader who wanted the work got a taller row. The list is a
-  // finding aid and the page is the destination.
+  if (!row) return;
+  const a = ev.target.closest('a');
+  if (a && !a.classList.contains('wlink')) return;   // a source chip goes where it says
+  if (ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+  ev.preventDefault();
   openWorkPage(row.dataset.work);
 });
 
@@ -1280,6 +1295,30 @@ async function paintVolumes(r) {
     if (!ids.includes(w.work_id)) return;
     (w.volumes || []).forEach(v => rows.push(v));
   });
+  // WHY THIS WORK IS HERE, which §2 requires a reader to be able to tell. 296 works were admitted
+  // because a licensed retailer shelved them under 百合, and the record names the shop and the
+  // shelf. The page showed neither, so a reader could not tell that from a publisher's own label.
+  const said = [];
+  (WORKS.works || []).forEach(w => {
+    if (!ids.includes(w.work_id)) return;
+    (w.admitted_by || []).forEach(a => {
+      const line = T(`${a.comparator} の${a.shelf}に収録`, `listed on ${a.comparator} ${a.shelf}`);
+      if (!said.includes(line)) said.push(line);
+    });
+  });
+  // The bibliography's own record, where there is one. A synthetic id is ours, grouped by title
+  // and standing for no page anybody else publishes, so it links nowhere.
+  const cat = ids.filter(i => /^C\d+$/.test(String(i)))
+    .map(i => `<a class="src" href="https://mediaarts-db.artmuseums.go.jp/id/${esc(i)}"
+        target="_blank" rel="noopener noreferrer nofollow">${esc(T('メディア芸術DB', 'MADB'))}</a>`);
+  const extra = [];
+  if (cat.length) extra.push(`<div class="dl"><span class="dk">${esc(T('書誌', 'Catalogue'))}</span><span class="dv">${cat.join(' ')}</span></div>`);
+  if (said.length) extra.push(`<div class="dl"><span class="dk">${esc(T('収録根拠', 'Listed by'))}</span><span class="dv">${esc(said.join(' · '))}</span></div>`);
+  // REPLACED, NOT APPENDED. Two renders of the same work each start this, and both resolve after
+  // the last one has rebuilt the page, so appending wrote the catalogue and the admission twice.
+  const slot = el('wp-extra');
+  if (slot) slot.innerHTML = extra.join('');
+
   if (!rows.length) return;
   rows.sort(byVolume);
   el('wp-vols').innerHTML =
@@ -1296,19 +1335,38 @@ async function paintVolumes(r) {
     }).join('') + '</ol>';
 }
 
-function openWorkPage(id) {
+/* OPENING AND CLOSING ARE STATE CHANGES; THE ADDRESS FOLLOWS FROM THE STATE.
+
+   These two used to push URLs they built themselves, beside navUrl building the same addresses a
+   different way. Two producers of one fact, and they disagreed: navUrl gives a work the path form
+   and these gave it whatever the literal above said. Now they set PAGE_WORK and call navSync, so
+   there is one function that knows what a work's address is. */
+function openWorkPage(id, push = true) {
   if (!id) return;
   PAGE_WORK = id;
   renderWorkPage();
-  history.pushState({ work: id, tab: 'ser' }, '', BASE + 'work/' + id + '/');
+  navSync(push);
 }
 
 function closeWorkPage(push) {
   PAGE_WORK = null;
   el('workpage').hidden = true;
-  el('tab-ser').hidden = false;
+  // Back to whichever tab is selected, which is not always the works tab: a release row links to a
+  // work page, and closing it used to drop the reader onto a list they had not been looking at.
+  showSelectedTab();
   document.querySelector('nav').hidden = false;
-  if (push) history.pushState({ tab: 'ser' }, '', BASE + '?tab=ser');
+  navSync(push);
+}
+
+/* WHICH SECTION IS ON SCREEN, from the tab strip, in one place.
+
+   The tab handler hid the four tab sections and never hid #workpage, so switching tabs with a work
+   open left the page stacked over the list it had just drawn. Every caller now goes through here
+   and cannot forget the fifth section. */
+function showSelectedTab() {
+  const tab = document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'feed';
+  ['feed', 'ser', 'cat', 'rel'].forEach(t => { const s = el('tab-' + t); if (s) s.hidden = t !== tab; });
+  if (!PAGE_WORK) el('workpage').hidden = true;
 }
 
 function renderWorkPage() {
@@ -1330,9 +1388,13 @@ function renderWorkPage() {
   add(T('話数', 'Chapters'), r.chapters ? esc(String(r.chapters) + (r.partial ? '+' : '')) : '');
   add(T('最新', 'Latest'), r.latest ? esc(fmtDate(r.latest, { year: true })) : '');
   add(T('初出', 'First'), r.first ? esc(fmtDate(r.first, { year: true })) : '');
+  // The count carried both units after one number in 併記 mode: "6 巻 / vol". A count and its unit
+  // are one phrase and have to be built as one, plural included.
   (r.print || []).forEach(pr => add(T('単行本', 'In print'),
-    esc([pr.volumes ? pr.volumes + T(' 巻', ' vol') : '', pr.publisher, pr.imprint, pr.first]
+    esc([pr.volumes ? volCount(pr.volumes) : '', pr.publisher, pr.imprint]
       .filter(Boolean).join(' · '))));
+  // The first date is on 初出 above and on the first row of the volume list below, so it is not
+  // repeated here.
   add(T('状態', 'State'), esc(stateLabel(r)));
   add(T('根拠', 'Basis'), esc(r.completed_basis || r.state_basis || ''));
   add('ID', `<span class="mono">${esc(r.id || '')}</span>`);
@@ -1340,7 +1402,7 @@ function renderWorkPage() {
       esc(T('← 作品一覧', '← All works'))}</a></p>
     <h2 class="wp-title">${workLabel(r)}</h2>
     <div class="srcs">${src}</div>
-    <div class="detail wp-detail">${rows.join('')}</div>
+    <div class="detail wp-detail" id="wp-detail">${rows.join('')}<div id="wp-extra"></div></div>
     <div id="wp-vols"></div>`;
   el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeWorkPage(true); });
   paintVolumes(r);
@@ -1529,20 +1591,15 @@ function navApply(st) {
     // A work record is opened by clicking its row, which is also how it is closed, so the state is
     // reached by asking for the difference rather than by re-running the handler.
     const wantWork = st.work || '';
-    // The works tab addresses a work by its own identifier and has no panel to open, so arriving
-    // at one means bringing it into view and saying which row was asked for. Marking it is not
-    // decoration: a list of a thousand rows scrolled to an unmarked position leaves a reader
-    // guessing which of the visible rows the link meant.
     if (tab === 'ser') {
-      document.querySelectorAll('.rel.here').forEach(n => n.classList.remove('here'));
-      if (wantWork) {
-        const node = document.querySelector(`.rel[data-work="${CSS.escape(wantWork)}"]`);
-        if (node) {
-          node.classList.add('here');
-          node.scrollIntoView({ block: 'center' });
-        }
-      }
+      // THE WORK PAGE IS THE DESTINATION. This marked a row in the list and scrolled to it, which
+      // was right before work pages existed and survived them: arriving at a work's address showed
+      // the list with a highlighted row and the old in-list panel, and every pre-rendered stub
+      // sends its reader here, so that was the state a citation resolved to.
+      if (wantWork && wantWork !== PAGE_WORK) openWorkPage(wantWork, false);
+      else if (!wantWork && PAGE_WORK) closeWorkPage(false);
     } else {
+      if (PAGE_WORK) closeWorkPage(false);
       const haveWork = open ? (open.parentElement?.dataset.id || '') : '';
       if (wantWork !== haveWork) {
         if (open) open.click();
@@ -1580,7 +1637,10 @@ function readNavUrl() {
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('nav button').forEach(x =>
     x.setAttribute('aria-selected', String(x === b)));
-  ['feed','ser','cat','rel'].forEach(t => el('tab-'+t).hidden = (t !== b.dataset.tab));
+  // Choosing a tab leaves a work page, because a tab is a place and so is a work.
+  PAGE_WORK = null;
+  showSelectedTab();
+  document.querySelector('nav').hidden = false;
   if (b.dataset.tab === 'rel') renderReleases();
   saveView();
   navSync(true);
@@ -2201,10 +2261,17 @@ function renderSeries() {
             r.priced ? `; ${r.priced} paid` : ''}">${freeN}/${r.chapters}${
             ' ' + esc(T('無料'))}</span>`
       : `<span class="tag grey">${esc(T('有料'))}</span>`;
-    // Every work carries its identifier, so it has an address. Minted in
-    // adapters/identity.py and stable across title corrections, which a slug would not be.
+    /* THE TITLE OPENS THE WORK'S PAGE. It used to be a link off to whichever platform serialises
+       the work, so the one thing on the row that looked like a link led away from the database,
+       and the page a reader wanted was reachable only by clicking the parts that did not.
+       Going off-site is still one click, on the named source chips below, which say where they
+       go. The updates tab keeps the opposite arrangement, because there the point is to open
+       what has just been published.
+
+       An href, not a click handler: a work page is a place, so it must be openable in a new tab
+       and copyable from the context menu like any other address. */
     return `<div class="rel" data-work="${esc(r.id || '')}">
-      ${r.url ? `<a class="wlink" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">` : ''}
+      ${r.id ? `<a class="wlink" href="${esc(BASE)}work/${esc(r.id)}/">` : ''}
         ${bilingual(() => `<div class="relhead">
           <span class="t">${workLabel(r)}</span>
           <span class="k ${cls}" title="${esc(why)}">${esc(T(lbl))}</span>
@@ -2217,7 +2284,7 @@ function renderSeries() {
             r.latest ? ` · ${esc(T('最新'))} ${esc(fmtDate(r.latest, { year: true }))}${
               r.latest_ep ? ' ' + esc(phraseOf(r.latest_ep)) : ''}` : ''}`}</div>
         ${r.author ? `<div class="line2"><span class="meta by">${authorLabel(r)}</span></div>` : ''}`)}
-      ${r.url ? '</a>' : ''}
+      ${r.id ? '</a>' : ''}
         <div class="srcs">${r.sources.map(s => {
           // Each source states its OWN coverage. コミックDAYS holds 121 chapters of 雨夜の月 and
           // マガポケ 10. That is what we can see on each, not two different lengths of one story,
@@ -2235,7 +2302,7 @@ function renderSeries() {
           return s.url
             ? `<a class="src" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer nofollow" title="${tip}">${body}</a>`
             : `<span class="src" title="${tip}">${body}</span>`;
-        }).join('')}</div>${workDetail(r)}
+        }).join('')}</div>
     </div>`;
   }).join('');
 }

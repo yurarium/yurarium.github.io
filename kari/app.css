@@ -185,6 +185,9 @@
 
   /* THE VOLUME LIST on a work's page. A row is a number, a date and an ISBN, and any of the three
      may be missing without the row collapsing, so the columns are fixed rather than flowed. */
+  /* A slot the volume loader fills once the data lands. display:contents so the rows inside it
+     lay out as if they were direct children of the list, which is what they are. */
+  #wp-extra{display:contents}
   .wp-sub{font-size:.92rem;margin:1.4rem 0 .5rem;font-weight:600}
   .wp-n{color:var(--faint);font-weight:400;font-size:.8rem}
   .vols{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
@@ -491,8 +494,9 @@
 
 /* The detail a row cannot carry. Shown only for the work an address named or a reader opened, so
    the list stays a list. */
-.rel .detail { display: none; }
-.rel.here .detail { display: block; margin: .45rem 0 .1rem; padding-left: .1rem; }
+/* The in-list panel is gone. A row that expanded in place made the record a footnote to the list
+   it came from; the work page is the destination and the row is a way to it. `.rel .detail` stays
+   styled because the work page uses the same .dl/.dk/.dv rows. */
 .rel .detail .dl { display: flex; gap: .55rem; align-items: baseline; margin: .18rem 0;
                    font-size: .88em; line-height: 1.5; }
 .rel .detail .dk { flex: 0 0 auto; min-width: 5.2rem; opacity: .62; }

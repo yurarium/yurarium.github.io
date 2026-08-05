@@ -1,12 +1,8 @@
 {
- "generated": "2026-08-05T19:12:23+00:00",
+ "generated": "2026-08-05T20:16:30+00:00",
  "since_last": {
-  "at": "2026-08-05T19:07:53+00:00",
-  "statistics": {
-   "works": -58,
-   "print_only": -58,
-   "with_identifier": 239
-  }
+  "at": "2026-08-05T19:12:23+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -98,20 +94,20 @@
   "budgets": [
    {
     "name": "uncertain readings",
-    "value": 17,
-    "budget": 13,
+    "value": 22,
+    "budget": 17,
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes."
    },
    {
     "name": "works without English",
     "value": 20,
-    "budget": 12,
+    "budget": 20,
     "means": "works that render in Japanese in English-only mode. Should be 0; a rise means the automatic naming pass stopped covering something it used to."
    },
    {
     "name": "works showing a romanisation",
     "value": 288,
-    "budget": 53,
+    "budget": 288,
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage."
    },
    {
@@ -128,8 +124,8 @@
    },
    {
     "name": "unreadable bookwalker rows",
-    "value": 680,
-    "budget": 680,
+    "value": 419,
+    "budget": 419,
     "means": "rows admitted from BOOK☆WALKER's shelf with no first publication VENUE, which is what §6's scope test turns on since the 2026-08-05 amendment. A row without one has not been fetched yet, or its series page listed nothing readable. Falls as adapters/recon/bookwalker_volumes.py works through the queue, and reaches zero when it finishes. The date is deliberately not what is counted: 1,500 of these titles are digital-only, have no print edition anywhere, and are complete records without one."
    },
    {
@@ -275,8 +271,8 @@
   }
  ],
  "ledger": {
-  "runs_held": 12,
-  "previous_at": "2026-08-05T19:07:29+00:00",
+  "runs_held": 13,
+  "previous_at": "2026-08-05T19:11:59+00:00",
   "drops": []
  },
  "outstanding": [
@@ -584,11 +580,11 @@
     "captures with no floor": 11,
     "incomplete attested rows": 17,
     "scraped counters in chapter names": 1,
-    "uncertain readings": 13,
+    "uncertain readings": 17,
     "undated cmoa candidates": 1681,
-    "unreadable bookwalker rows": 680,
-    "works showing a romanisation": 53,
-    "works without English": 12
+    "unreadable bookwalker rows": 419,
+    "works showing a romanisation": 288,
+    "works without English": 20
    }
   }
  ],
