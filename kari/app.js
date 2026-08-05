@@ -1135,9 +1135,6 @@ async function renderReleases() {
     byMonth.get(m).push(r);
   });
   el('n-rel').textContent = rows.length;
-  el('rel-note').textContent = T(
-    '単行本の発売。カタログの日付は月単位。',
-    'Volume releases. Catalogued to the month, which is the precision the record carries.');
   const strip = s => String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '');
   el('rel-list').innerHTML = [...byMonth.entries()].map(([m, list]) => {
     const items = list.map(r => {
