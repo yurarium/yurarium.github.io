@@ -1121,9 +1121,11 @@ function navState() {
   // the work page replaced the in-list panel, so any control calling navSync while a work was open
   // computed "no work" and rewrote the address back to the bare list.
   return { tab, month: el('fmonth') ? el('fmonth').value : '',
-           work: tab === 'ser' ? (PAGE_WORK || '')
-               : tab === 'cat' ? (open ? (open.parentElement?.dataset.id || '') : '')
-               : '' };
+           // A WORK PAGE IS ITS OWN PLACE, reachable from the updates tab as well as the works
+           // list, so which tab is selected does not decide whether a work is open. The tab is
+           // still carried, because it is where Back goes.
+           work: PAGE_WORK
+               || (tab === 'cat' && open ? (open.parentElement?.dataset.id || '') : '') };
 }
 
 function navUrl(st) {
@@ -1138,9 +1140,12 @@ function navUrl(st) {
   const qs = q.toString();
   // A work on the works tab gets a path of its own. BASE is the app's directory, so this works
   // whether it is served at /kari/ or anywhere else.
-  if (st.work && st.tab === 'ser') {
-    q.delete('work'); q.delete('tab');
-    const rest = q.toString();
+  // A work gets a path of its own whatever tab it was opened from, and the tab rides along so
+  // that leaving the page returns the reader to the list they were reading.
+  if (st.work && st.tab !== 'cat') {
+    const q2 = new URLSearchParams();
+    if (st.tab && st.tab !== 'ser') q2.set('tab', st.tab);
+    const rest = q2.toString();
     return BASE + 'work/' + st.work + '/' + (rest ? '?' + rest : '');
   }
   return BASE + (qs ? '?' + qs : '');
@@ -1254,6 +1259,17 @@ function workDetail(r) {
    letting the browser fetch the stub, which would only redirect back here. A click carrying a
    modifier, or any button other than the left one, is left alone: a reader asking for a new tab
    is asking for the address, and the address works. */
+/* The updates tab's subsidiary link to a work's record. Its own handler, because a feed row is
+   keyed by chapter and carries no data-work of its own. */
+document.addEventListener('click', ev => {
+  const wl = ev.target.closest('a.wplink');
+  if (!wl) return;
+  if (ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+  ev.preventDefault();
+  const m = wl.getAttribute('href').match(/work\/([A-Za-z0-9_-]+)\//);
+  if (m) openWorkPage(m[1]);
+});
+
 document.addEventListener('click', ev => {
   const row = ev.target.closest('.rel[data-work]');
   if (!row) return;
@@ -1398,8 +1414,14 @@ function renderWorkPage() {
   add(T('状態', 'State'), esc(stateLabel(r)));
   add(T('根拠', 'Basis'), esc(r.completed_basis || r.state_basis || ''));
   add('ID', `<span class="mono">${esc(r.id || '')}</span>`);
-  box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=ser" id="wp-back">${
-      esc(T('← 作品一覧', '← All works'))}</a></p>
+  // The way back names where it goes. A work page opens from the updates tab as well as the works
+  // list now, and "All works" was the wrong promise on half of them.
+  const from = document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'ser';
+  const backTo = from === 'feed' ? T('← 更新一覧', '← All updates')
+               : from === 'rel' ? T('← 発売一覧', '← All releases')
+               : T('← 作品一覧', '← All works');
+  box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=${esc(from)}" id="wp-back">${
+      esc(backTo)}</a></p>
     <h2 class="wp-title">${workLabel(r)}</h2>
     <div class="srcs">${src}</div>
     <div class="detail wp-detail" id="wp-detail">${rows.join('')}<div id="wp-extra"></div></div>
@@ -1591,7 +1613,7 @@ function navApply(st) {
     // A work record is opened by clicking its row, which is also how it is closed, so the state is
     // reached by asking for the difference rather than by re-running the handler.
     const wantWork = st.work || '';
-    if (tab === 'ser') {
+    if (tab !== 'cat') {
       // THE WORK PAGE IS THE DESTINATION. This marked a row in the list and scrolled to it, which
       // was right before work pages existed and survived them: arriving at a work's address showed
       // the list with a highlighted row and the old in-list panel, and every pre-rendered stub
@@ -1630,7 +1652,9 @@ function readNavUrl() {
   // A path names a work and implies the tab it lives on. Arriving at a pre-rendered stub is
   // exactly this case, and it must reach the same view a click would have produced.
   const onPath = workFromPath();
-  if (onPath) return { tab: 'ser', month: '', work: onPath };
+  // The tab rides in the query beside the path, so a work opened from the updates tab is left by
+  // going back to the updates tab. Absent, it means the works list, which is where most arrive.
+  if (onPath) return { tab: q.get('tab') || 'ser', month: '', work: onPath };
   return { tab: q.get('tab') || 'feed', month: q.get('month') || '', work: q.get('work') || '' };
 }
 
@@ -2176,9 +2200,18 @@ function detailList(rows) {
         ${(r.also_on && r.also_on.length) ? `<span class="meta">${LANG === 'en' ? '· ' : '・'}${esc(L('他', 'also on'))} ${esc(r.also_on.map(platName).join(LANG === 'en' ? ', ' : '、'))}</span>` : ''}
       </div>
       ${caveats(r)}`);
+    /* OUTSIDE the anchor, not inside it. The whole row is wrapped in a link to the platform,
+       because opening what has just been published is what this tab is for, and an anchor inside
+       an anchor is not a thing a browser will render.
+
+       Detailed only. Compact is a scanning view and the row's own link is the point of it. */
+    const wp = r.wid
+      ? `<div class="wpline"><a class="wplink" href="${esc(BASE)}work/${esc(r.wid)}/?tab=feed"
+           >${esc(T('この作品の記録', 'record for this work'))}</a></div>`
+      : '';
     html += `<div class="rel${NON_STORY.has(r.type) ? ' quiet' : ''}">${
       r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">${inner}</a>` : inner
-    }</div>`;
+    }${wp}</div>`;
   }
   return html;
 }

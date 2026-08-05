@@ -188,6 +188,11 @@
   /* A slot the volume loader fills once the data lands. display:contents so the rows inside it
      lay out as if they were direct children of the list, which is what they are. */
   #wp-extra{display:contents}
+  /* The subsidiary route from an update to the record of the work it belongs to. Quiet: the row's
+     own link is to the chapter, which is what a reader of this tab came for. */
+  .wpline{margin:.15rem 0 .1rem}
+  .wplink{font-size:.76rem;color:var(--dim);text-decoration:none;border-bottom:1px dotted var(--line)}
+  .wplink:hover{color:var(--accent);border-bottom-color:var(--accent)}
   .wp-sub{font-size:.92rem;margin:1.4rem 0 .5rem;font-weight:600}
   .wp-n{color:var(--faint);font-weight:400;font-size:.8rem}
   .vols{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
