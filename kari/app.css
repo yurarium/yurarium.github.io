@@ -406,3 +406,7 @@
   /* Inside a segmented group the selected button is filled, not outlined. An outline would fight
      the group's own border. */
   .themebox .themebtn[aria-pressed=true]{border-left-color:var(--line)}
+
+/* The work an address named. A list of a thousand rows scrolled to an unmarked position leaves a
+   reader guessing which row the link meant, so the one asked for says so. */
+.rel.here { box-shadow: inset 3px 0 0 var(--accent, #b07cc6); padding-left: .6rem; }

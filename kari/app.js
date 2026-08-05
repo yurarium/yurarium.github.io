@@ -1003,7 +1003,9 @@ let NAV_APPLYING = false;      // true while popstate is being applied, so we do
 function navState() {
   return { tab: document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'feed',
            month: el('fmonth') ? el('fmonth').value : '',
-           work: open ? (open.parentElement?.dataset.id || '') : '' };
+           work: (document.querySelector('nav button[aria-selected=true]')?.dataset.tab === 'ser')
+                   ? (document.querySelector('.rel.here')?.dataset.work || '')
+                   : (open ? (open.parentElement?.dataset.id || '') : '') };
 }
 
 function navUrl(st) {
@@ -1014,7 +1016,7 @@ function navUrl(st) {
   // which is the opposite of what a shareable address is for. The DOM keeps the record open behind
   // the scenes; the address simply stops claiming it.
   if (st.month && st.tab === 'feed') q.set('month', st.month);
-  if (st.work && st.tab === 'cat') q.set('work', st.work);
+  if (st.work && (st.tab === 'cat' || st.tab === 'ser')) q.set('work', st.work);
   const qs = q.toString();
   return location.pathname + (qs ? '?' + qs : '');
 }
@@ -1043,10 +1045,25 @@ function navApply(st) {
     // A work record is opened by clicking its row, which is also how it is closed, so the state is
     // reached by asking for the difference rather than by re-running the handler.
     const wantWork = st.work || '';
-    const haveWork = open ? (open.parentElement?.dataset.id || '') : '';
-    if (wantWork !== haveWork) {
-      if (open) open.click();
-      if (wantWork) document.querySelector(`li[data-id="${CSS.escape(wantWork)}"] .row`)?.click();
+    // The works tab addresses a work by its own identifier and has no panel to open, so arriving
+    // at one means bringing it into view and saying which row was asked for. Marking it is not
+    // decoration: a list of a thousand rows scrolled to an unmarked position leaves a reader
+    // guessing which of the visible rows the link meant.
+    if (tab === 'ser') {
+      document.querySelectorAll('.rel.here').forEach(n => n.classList.remove('here'));
+      if (wantWork) {
+        const node = document.querySelector(`.rel[data-work="${CSS.escape(wantWork)}"]`);
+        if (node) {
+          node.classList.add('here');
+          node.scrollIntoView({ block: 'center' });
+        }
+      }
+    } else {
+      const haveWork = open ? (open.parentElement?.dataset.id || '') : '';
+      if (wantWork !== haveWork) {
+        if (open) open.click();
+        if (wantWork) document.querySelector(`li[data-id="${CSS.escape(wantWork)}"] .row`)?.click();
+      }
     }
   } finally {
     NAV_APPLYING = false;
@@ -1677,7 +1694,9 @@ function renderSeries() {
             r.priced ? `; ${r.priced} paid` : ''}">${freeN}/${r.chapters}${
             ' ' + esc(T('無料'))}</span>`
       : `<span class="tag grey">${esc(T('有料'))}</span>`;
-    return `<div class="rel">
+    // Every work carries its identifier, so it has an address. Minted in
+    // adapters/identity.py and stable across title corrections, which a slug would not be.
+    return `<div class="rel" data-work="${esc(r.id || '')}">
       ${r.url ? `<a class="wlink" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">` : ''}
         ${bilingual(() => `<div class="relhead">
           <span class="t">${workLabel(r)}</span>
