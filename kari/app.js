@@ -93,6 +93,8 @@ const el = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 let INDEX = [], FEED = null, SERIES = null, DETAIL = null, open = null;
+// The releases tab's rows, rendered once and then only filtered. See renderReleases.
+let REL_ROWS = [];
 /* The updates tab is a 14-day window. Earlier months are separate files, fetched only when a reader
    asks for one, and kept once fetched: going back and forth between two months should not re-cost
    the download. META is feed/meta.json: everything in the old feed.json that was not a release row,
@@ -1077,6 +1079,10 @@ function applyLang(lang) {
   // repainting on a language change like any other rendered thing.
   if (typeof paintMonthPicker === 'function' && el('fmonthbtn')) paintMonthPicker();
   if (FEED) { renderFeed(); renderCat(); renderSeries(); renderReleases(); }
+  // The chips and the density buttons are written in JS, so the data-i18n pass above never reaches
+  // them. markActive is what rewrites the chips; applyView repaints the pressed state.
+  markActive();
+  applyView();
 }
 document.querySelectorAll('[data-lang-set]').forEach(b =>
   b.addEventListener('click', () => applyLang(b.dataset.langSet)));
@@ -1279,16 +1285,17 @@ async function renderReleases() {
     if (v.published) rows.push({ d: String(v.published), w, n: v.number, isbn: v.isbn });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
-  const byMonth = new Map();
-  rows.forEach(r => {
-    const m = r.d.slice(0, 7);
-    if (!byMonth.has(m)) byMonth.set(m, []);
-    byMonth.get(m).push(r);
-  });
   el('n-rel').textContent = rows.length;
   const strip = s => String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '');
-  el('rel-list').innerHTML = [...byMonth.entries()].map(([m, list]) => {
-    const items = list.map(r => {
+  // MADB records a distributor role in a trailing bracket: "講談社 (発売)" beside "講談社". That is
+  // a fact about who put the volume in shops, not a second publisher, and a filter offering both
+  // is offering the reader a distinction they did not ask for and cannot act on.
+  const pubOf = s => pubBoth(strip(s).replace(/\s*[（(][^）)]*[）)]\s*$/, ''));
+  /* Each row is rendered ONCE, into a string, and the controls only choose which strings are
+     joined. The alternative is re-running the creator and imprint normalisation below for 640
+     volumes on every keystroke, and that work depends on the display preferences rather than on
+     the query: the same reason drawnKey guards this whole function. */
+  REL_ROWS = rows.map(r => {
       const w = r.w;
       // MADB writes a role before each name, [著] and [作画] among them, and joins creators
       // with a slash that survives even when one side is empty. Both are cataloguing
@@ -1327,7 +1334,7 @@ async function renderReleases() {
         const named = segs.filter(x => x !== 'IDコミックス');
         return (named.length ? named[named.length - 1] : segs[0]) || '';
       };
-      const who = [pubBoth(strip(w.publisher)), pubBoth(imprint(w.imprint))]
+      const who = [pubOf(w.publisher), pubBoth(imprint(w.imprint))]
         .filter(Boolean).join(' · ');
       // A release is of a VOLUME, so the row says which. 471 of 646 are numbered in the record
       // and the rest say nothing rather than being numbered by their position in a sorted list.
@@ -1338,12 +1345,73 @@ async function renderReleases() {
       // Japanese however a reader had set the language, which the works tab beside it does not do.
       const label = workLabel({ work: w.title.ja });
       const name = href ? `<a href="${href}">${label}</a>` : label;
-      return `<div class="relv"><div class="relvt">${name} ${vol}</div>` +
-        `<div class="relvm">${[people, esc(who)].filter(Boolean).join(' · ')}</div></div>`;
-    }).join('');
-    return `<div class="relmonth"><h3><time datetime="${esc(m)}">${
-      esc(fmtDate(m))}</time></h3>${items}</div>`;
-  }).join('');
+    return {
+      d: r.d, m: r.d.slice(0, 7),
+      pub: pubOf(w.publisher) || '',
+      // Searched on every form of the name, the same rule the other two tabs follow: a reader
+      // typing a romanisation must reach a work the interface is showing them in romaji.
+      key: searchIndex('titles', w.title.ja, w.title && w.title.en) + ' ' +
+           norm(String(w.creator || '')),
+      html: `<div class="relv"><div class="relvt">${name} ${vol}</div>` +
+        `<div class="relvm">${[people, esc(who)].filter(Boolean).join(' · ')}</div></div>`,
+    };
+  });
+  setRelOptions();
+  paintReleases();
+}
+
+/* The publishers actually present, and the years actually present. Built from the rows rather
+   than written down, so a filter can never offer a value that matches nothing. */
+function setRelOptions() {
+  const keep = (id, opts) => {
+    const s = el(id);
+    if (!s) return;
+    const was = s.value;
+    s.innerHTML = opts.join('');
+    s.value = [...s.options].some(o => o.value === was) ? was : s.options[0].value;
+  };
+  const pubs = [...new Set(REL_ROWS.map(r => r.pub).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ja'));
+  keep('rpub', [`<option value="">${esc(T('全出版社', 'all publishers'))}</option>`]
+    .concat(pubs.map(p => `<option value="${esc(p)}">${esc(p)}</option>`)));
+  const years = [...new Set(REL_ROWS.map(r => r.d.slice(0, 4)))].sort().reverse();
+  keep('rperiod', [`<option value="">${esc(T('直近12か月', 'last 12 months'))}</option>`,
+                   `<option value="all">${esc(T('全期間', 'all time'))}</option>`]
+    .concat(years.map(y => `<option value="${esc(y)}">${esc(T(y + '年', y))}</option>`)));
+}
+
+/* WHAT THE DEFAULT PERIOD IS FOR. This tab answers "what has just come out and what is coming",
+   so it opens on the last twelve months. The full 640 volumes are one menu entry away, and the
+   count line says which of the two is on screen. */
+function relWindow() {
+  const now = new Date();
+  const from = new Date(Date.UTC(now.getUTCFullYear() - 1, now.getUTCMonth(), 1));
+  return from.toISOString().slice(0, 10);
+}
+
+function paintReleases() {
+  if (!REL_ROWS.length) return;
+  const q = norm(el('rq').value.trim()), pub = el('rpub').value, per = el('rperiod').value;
+  const from = per === '' ? relWindow() : '';
+  const rows = REL_ROWS.filter(r => {
+    if (q && !hits(r.key, q)) return false;
+    if (pub && r.pub !== pub) return false;
+    if (from && r.d < from) return false;
+    if (per && per !== 'all' && r.d.slice(0, 4) !== per) return false;
+    return true;
+  });
+  const byMonth = new Map();
+  rows.forEach(r => {
+    if (!byMonth.has(r.m)) byMonth.set(r.m, []);
+    byMonth.get(r.m).push(r);
+  });
+  // The unit is 巻, because what is listed is volumes and several of them may belong to one work.
+  el('rcount').textContent = rows.length === REL_ROWS.length
+    ? `${rows.length} ${T('巻', 'volumes')}`
+    : `${rows.length} ${T('巻表示', 'shown')}　·　${REL_ROWS.length} ${T('巻', 'volumes')}`;
+  el('rempty').hidden = rows.length > 0;
+  el('rel-list').innerHTML = [...byMonth.entries()].map(([m, list]) =>
+    `<div class="relmonth"><h3><time datetime="${esc(m)}">${
+      esc(fmtDate(m))}</time></h3>${list.map(r => r.html).join('')}</div>`).join('');
 }
 
 function navApply(st) {
@@ -2158,6 +2226,7 @@ el('list').addEventListener('click', e => {
 });
 
 ['fq','ftype','fplat','fmodel','fview'].forEach(i => el(i).addEventListener('input', renderFeed));
+['rq','rpub','rperiod'].forEach(i => el(i).addEventListener('input', paintReleases));
 // The selector sits at the BOTTOM of the tab and the list it changes is above it, so a reader who
 // picks a month would otherwise be left looking at the control they just used with no sign anything
 // happened. Send them back to the top of the list they asked for.
@@ -2186,9 +2255,10 @@ function soonSubLabel() { return T('今後1か月', 'in the next month'); }
 
 function monthBtnLabel() {
   const m = el('fmonth').value;
-  const face = !m ? recentLabel() : m === SOON ? soonLabel()
-             : monthLabel(m);      // follows the mode, including 併記
-  return face + ' ▾';
+  // The chevron is drawn by .chipmenu in CSS, because that is what marks this as the one chip
+  // that opens a menu rather than carrying a cross. Appending one here too gave it two.
+  return !m ? recentLabel() : m === SOON ? soonLabel()
+       : monthLabel(m);            // follows the mode, including 併記
 }
 
 function paintMonthPicker() {
@@ -2267,6 +2337,7 @@ el('fmonth').addEventListener('change', () => {
 });
 ['sq','sstate','sfree','splat','ssort'].forEach(i => el(i).addEventListener('input', renderSeries));
 el('sreset').addEventListener('click', () => resetFilters(RESETS.ser, renderSeries));
+el('rreset').addEventListener('click', () => resetFilters(RESETS.rel, paintReleases));
 ['q','sort','filter'].forEach(i => el(i).addEventListener('input', renderCat));
 // Persist only the durable controls, and only when the reader changes one.
 VIEW_FIELDS.forEach(i => el(i)?.addEventListener('change', saveView));
@@ -2277,12 +2348,97 @@ VIEW_FIELDS.forEach(i => el(i)?.addEventListener('change', saveView));
 const RESETS = {
   feed: ['fq', 'fmodel', 'ftype', 'fplat', 'fmonth'],
   ser:  ['sq', 'sstate', 'sfree', 'splat', 'ssort'],
+  rel:  ['rq', 'rpub', 'rperiod'],
   cat:  ['q', 'sort', 'filter'],
 };
 
+/* ── ONE BAR, THREE TABS ──────────────────────────────────────────────────────────────────────
+   The tabs had grown three different interfaces over the same idea. Updates carried a period, a
+   search box, three filters and a layout select; Works carried a search box and four selects;
+   Releases carried nothing at all, over 640 volumes. Each tab now has a search box, a disclosure
+   holding its filters, a chip row saying what is set, and a result line with the controls that
+   arrange the output.
+
+   WHY THE CHIPS ARE NOT DECORATION. The filters are collapsed by default, and these preferences
+   persist in localStorage, so without them a reader returns days later to a narrowed list with
+   nothing on screen saying so. A collapsed panel may hide a control; it must not hide a fact. */
+const BARS = {
+  feed: { pane: 'ffilt', btn: 'ffiltbtn', gen: 'fchipgen', chipped: ['fmodel', 'ftype', 'fplat'] },
+  ser:  { pane: 'sfilt', btn: 'sfiltbtn', gen: 'schipgen', chipped: ['sstate', 'sfree', 'splat'] },
+  // rperiod is IN the chip row already, as a menu chip: a period always has a value, so it is the
+  // one thing here that cannot be removed and it is not generated as a removable chip.
+  rel:  { pane: 'rfilt', btn: 'rfiltbtn', gen: 'rchipgen', chipped: ['rpub'] },
+};
+
+/* The chip says what the reader chose, in the language they are reading. `data-chip` on an option
+   is a shorter form for the cases where the dropdown wording only reads as a sentence inside the
+   dropdown: "無料で読める話がある" is the right label for an option and too long for a chip. */
+function chipLabel(sel) {
+  const o = sel.options[sel.selectedIndex];
+  if (!o) return '';
+  // dataset.orig holds the bilingual source once applyLang has run; before that the text still is
+  // the source. splitLang is right either way, which is why neither branch is special-cased.
+  return splitLang(o.dataset.chip || sel.dataset.chip || o.dataset.orig || o.textContent, LANG);
+}
+
+function renderChips(tab) {
+  const b = BARS[tab];
+  if (!b || !el(b.gen)) return;
+  el(b.gen).innerHTML = b.chipped.map(id => {
+    const s = el(id);
+    if (!s || !isOffDefault(s)) return '';
+    return `<button class="chip chipx" data-clear="${esc(id)}" title="${esc(T('この条件を外す', 'remove this filter'))}">${esc(chipLabel(s))}</button>`;
+  }).join('');
+}
+
+// Delegated, because the chips are rewritten on every change and a listener bound to one would be
+// bound to an element that no longer exists.
+document.addEventListener('click', e => {
+  const c = e.target.closest('.chip[data-clear]');
+  if (!c) return;
+  const s = el(c.dataset.clear);
+  if (!s) return;
+  s.value = s.options[0].value;
+  // `input` is what the renders listen on and `change` is what persists the choice. Setting
+  // .value fires neither.
+  s.dispatchEvent(new Event('input', { bubbles: true }));
+  s.dispatchEvent(new Event('change', { bubbles: true }));
+});
+
+Object.values(BARS).forEach(b => {
+  const btn = el(b.btn), pane = el(b.pane);
+  if (!btn || !pane) return;
+  btn.addEventListener('click', () => {
+    const open = pane.hidden;
+    pane.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+  });
+});
+
+/* DENSITY IS ONE PREFERENCE. It reads as a property of the reader rather than of the tab, so the
+   three segmented controls are faces on a single hidden <select>, the same arrangement the month
+   picker uses. Switching costs no render: the lists carry both and CSS drops what compact omits. */
+function applyView() {
+  const v = el('fview').value;
+  document.querySelectorAll('[data-view-set]').forEach(b =>
+    b.setAttribute('aria-pressed', String(b.dataset.viewSet === v)));
+  el('serlist')?.classList.toggle('compact', v === 'compact');
+  el('rel-list')?.classList.toggle('compact', v === 'compact');
+}
+document.querySelectorAll('[data-view-set]').forEach(b => b.addEventListener('click', () => {
+  if (el('fview').value === b.dataset.viewSet) return;
+  el('fview').value = b.dataset.viewSet;
+  el('fview').dispatchEvent(new Event('input', { bubbles: true }));
+  el('fview').dispatchEvent(new Event('change', { bubbles: true }));
+}));
+el('fview').addEventListener('input', applyView);
+
 function isOffDefault(e) {
   if (!e) return false;
-  return e.tagName === 'SELECT' ? e.value !== e.options[0].value : e.value.trim() !== '';
+  // A select whose options are built from the data has none until the data lands, and comparing
+  // against options[0] of an empty select made every one of them look set.
+  if (e.tagName === 'SELECT') return e.options.length ? e.value !== e.options[0].value : false;
+  return e.value.trim() !== '';
 }
 
 /* WHY THIS IS WORTH DOING AT ALL. These filters persist in localStorage, so a reader returns days
@@ -2306,7 +2462,8 @@ function markActive() {
       const face = id === 'fmonth' ? el('fmonthbtn') : e;
       if (face) face.toggleAttribute('data-active', on);
     }
-    const btn = el(tab === 'feed' ? 'freset' : tab === 'ser' ? 'sreset' : 'creset');
+    renderChips(tab);
+    const btn = el({ feed: 'freset', ser: 'sreset', rel: 'rreset', cat: 'creset' }[tab]);
     if (btn) {
       // Disabled when there is nothing to clear, which is also how a reader learns the highlight
       // and the button are about the same thing.
@@ -2327,7 +2484,11 @@ const FACE_PAINTERS = {
 };
 
 function resetFilters(ids, render) {
-  ids.forEach(id => { const e = el(id); if (!e) return; e.value = e.tagName === 'SELECT' ? e.options[0].value : ''; });
+  ids.forEach(id => {
+    const e = el(id);
+    if (!e) return;
+    e.value = e.tagName === 'SELECT' ? (e.options[0] ? e.options[0].value : '') : '';
+  });
   ids.forEach(id => { if (FACE_PAINTERS[id]) FACE_PAINTERS[id](); });
   saveView(); render(); markActive();
 }
@@ -2465,6 +2626,9 @@ Promise.all([
   // After the restore, not before: the whole point is to show a reader the filters they are
   // returning to, and those are applied by restoreView above.
   markActive();
+  // The density control is a face on a stored select, so it starts out saying whatever it was
+  // born with rather than what the reader last chose.
+  applyView();
 }).catch(() => {
   el('fcount').textContent = 'データを読み込めません / could not load data';
 });

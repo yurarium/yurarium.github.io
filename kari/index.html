@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <title>Yurarium 仮</title>
-<link rel="stylesheet" href="app.css?v=f4b2d979">
+<link rel="stylesheet" href="app.css?v=1deac8a1">
 </head>
 <body>
 <div class="wrap">
@@ -133,14 +133,35 @@
 <!-- ── FEED ───────────────────────────────────────────────────────── -->
 <section id="tab-feed">
   
-  <div class="controls" style="margin-top:.9rem">
-    <!-- WHICH PERIOD comes first, because it selects the body of data every other control then
-         narrows. It used to sit alone at the foot of the tab, below the list it governs, which
-         read as an afterthought and put the most navigational control furthest from the rest.
-         The grid is a calendar because a reader picking a period thinks in one, and because an
+  <!-- ONE BAR ON EVERY TAB. Search and the way into the filters, and nothing else. Six controls in
+       a row made each tab look like a different instrument and put the most-used thing (the search
+       box) at whatever width was left over. What is actually set shows underneath as chips, so a
+       collapsed panel never hides a narrowing the reader has forgotten making. -->
+  <div class="bar" style="margin-top:.9rem">
+    <input type="search" id="fq" placeholder="検索: 作品名・作者 / work, creator" autocomplete="off">
+    <button class="themebtn filtbtn" id="ffiltbtn" aria-expanded="false" aria-controls="ffilt"
+            data-i18n title="show the filters">絞り込み / filters</button>
+  </div>
+  <div class="filt" id="ffilt" hidden>
+    <select id="fmodel" title="which updates count" data-chip="無料のみ / free only">
+      <option value="all">すべての更新 / all updates</option>
+      <option value="free">無料で読める更新 / free to read</option>
+    </select>
+    <select id="ftype">
+      <option value="">すべての種類 / all kinds</option>
+      <option value="chapter">話 / chapters</option>
+      <option value="oneshot">読み切り / one-shots</option>
+    </select>
+    <select id="fplat"><option value="">全プラットフォーム / all platforms</option></select>
+  </div>
+  <!-- THE CHIP ROW. The period sits here permanently and the others appear as they are set. It is
+       the one chip that can never be removed, because a period always has a value, so it opens a
+       menu where the rest carry a cross. The calendar and the chevron are what say so. -->
+  <div class="chips" id="fchips">
+    <!-- The grid is a calendar because a reader picking a period thinks in one, and because an
          option list grows by twelve entries every year. -->
-    <div class="monthpick">
-      <button id="fmonthbtn" class="themebtn" aria-haspopup="dialog" aria-expanded="false"></button>
+    <span class="monthpick">
+      <button id="fmonthbtn" class="chip chipmenu" aria-haspopup="dialog" aria-expanded="false"></button>
       <div id="fmonthpop" class="mpop" role="dialog" aria-label="period" hidden>
           <button class="mrecent" id="mrecent"></button>
         <button class="mrecent" id="msoon"></button>
@@ -151,28 +172,28 @@
         </div>
         <div class="mgrid" id="mgrid"></div>
       </div>
-    </div>
-    <input type="search" id="fq" placeholder="検索: 作品名・作者 / work, creator" autocomplete="off">
-    <select id="fmodel" title="which updates count">
-      <option value="all">すべての更新 / all updates</option>
-      <option value="free">無料で読める更新 / free to read</option>
-    </select>
-    <select id="ftype">
-      <option value="">すべての種類 / all kinds</option>
-      <option value="chapter">話 / chapters</option>
-      <option value="oneshot">読み切り / one-shots</option>
-    </select>
-    <select id="fplat"><option value="">全プラットフォーム / all platforms</option></select>
-    <!-- 表示 is the odd one out: the three above narrow WHICH updates are listed, this one only
-         changes how they look. It sat third, splitting the filters around it. Now the filters run
-         together and the presentation control sits at the end, against the reset button. -->
-    <select id="fview" title="layout" style="margin-left:auto">
-      <option value="compact">簡易 / compact</option>
-      <option value="detail">詳細 / detailed</option>
-    </select>
-    <button id="freset" class="themebtn" data-i18n title="clear search and all filters">リセット / reset</button>
+    </span>
+    <span class="chipgen" id="fchipgen"></span>
+    <button id="freset" class="chipclear" data-i18n title="clear search and all filters">条件を消す / clear</button>
   </div>
-  <p class="count" id="fcount"></p>
+  <!-- Count on the left, and opposite it the controls that arrange the output rather than select
+       it. 簡易/詳細 spent years in the filter row looking like a filter; it belongs with the
+       results it formats. -->
+  <div class="resrow">
+    <p class="count" id="fcount"></p>
+    <span class="outbox">
+      <span class="themebox viewbox" role="group" aria-label="表示 / layout">
+        <button class="themebtn" data-view-set="compact" data-i18n>簡易 / compact</button>
+        <button class="themebtn" data-view-set="detail" data-i18n>詳細 / detailed</button>
+      </span>
+    </span>
+  </div>
+  <!-- The select is the STATE, shared by all three tabs: density is one preference about the
+       reader, not three about the tabs. The segmented controls are only faces on it. -->
+  <select id="fview" hidden aria-hidden="true" tabindex="-1">
+    <option value="compact">簡易 / compact</option>
+    <option value="detail">詳細 / detailed</option>
+  </select>
   <p class="snapnote" id="fsnap" hidden></p>
   <div id="feed"></div>
   <p class="empty" id="fempty" hidden>該当なし / no matches</p>
@@ -185,8 +206,12 @@
 
 <!-- ── CATALOGUE ──────────────────────────────────────────────────── -->
 <section id="tab-ser" hidden>
-  <div class="controls">
+  <div class="bar">
     <input type="search" id="sq" placeholder="検索: 作品名・作者 / work, creator" autocomplete="off">
+    <button class="themebtn filtbtn" id="sfiltbtn" aria-expanded="false" aria-controls="sfilt"
+            data-i18n title="show the filters">絞り込み / filters</button>
+  </div>
+  <div class="filt" id="sfilt" hidden>
     <select id="sstate">
       <option value="">すべて / all</option>
       <option value="active">更新中: 45日以内 / updating</option>
@@ -195,19 +220,33 @@
       <option value="slow">停滞: 1年以内 / slow</option>
       <option value="dormant">休眠: 1年超 / dormant</option>
     </select>
-    <select id="sfree">
+    <select id="sfree" data-chip="無料あり / has free">
       <option value="">課金状況を問わない / any access</option>
       <option value="free">無料で読める話がある / has free chapters</option>
     </select>
     <select id="splat"><option value="">全プラットフォーム / all platforms</option></select>
-    <select id="ssort">
-      <option value="latest">最終更新順 / last updated</option>
-      <option value="chapters">話数順 / chapter count</option>
-      <option value="work">作品名順 / title</option>
-    </select>
-    <button id="sreset" class="themebtn" data-i18n title="clear search and all filters">リセット / reset</button>
   </div>
-  <p class="count" id="scount"></p>
+  <!-- Works has no period: there is no scope to state, so the row starts empty and fills as
+       filters are set. -->
+  <div class="chips" id="schips">
+    <span class="chipgen" id="schipgen"></span>
+    <button id="sreset" class="chipclear" data-i18n title="clear search and all filters">条件を消す / clear</button>
+  </div>
+  <div class="resrow">
+    <p class="count" id="scount"></p>
+    <!-- Sort joins the density control, because both arrange the output and neither selects it. -->
+    <span class="outbox">
+      <select id="ssort" class="sortsel">
+        <option value="latest">最終更新順 / last updated</option>
+        <option value="chapters">話数順 / chapter count</option>
+        <option value="work">作品名順 / title</option>
+      </select>
+      <span class="themebox viewbox" role="group" aria-label="表示 / layout">
+        <button class="themebtn" data-view-set="compact" data-i18n>簡易 / compact</button>
+        <button class="themebtn" data-view-set="detail" data-i18n>詳細 / detailed</button>
+      </span>
+    </span>
+  </div>
   <div id="serlist"></div>
   <p class="empty" id="sempty" hidden>該当なし / no matches</p>
 </section>
@@ -219,8 +258,34 @@
 <section id="tab-rel" hidden>
   <!-- Print releases, newest first. Volume dates are month-precision because that is what the
        cataloguing carries; openBD supplies almost no covers for this corpus, so this is a list
-       and not a cover grid. See docs/MADB.md. -->
+       and not a cover grid. See docs/MADB.md.
+       It had no controls at all: 640 volumes and no way to look for one. The bar is the same as
+       the other two tabs, and the period here is a plain menu because a release list runs by year
+       and there is no month archive behind it to walk. -->
+  <div class="bar">
+    <input type="search" id="rq" placeholder="検索: 作品名・作者 / work, creator" autocomplete="off">
+    <button class="themebtn filtbtn" id="rfiltbtn" aria-expanded="false" aria-controls="rfilt"
+            data-i18n title="show the filters">絞り込み / filters</button>
+  </div>
+  <div class="filt" id="rfilt" hidden>
+    <select id="rpub"><option value="">全出版社 / all publishers</option></select>
+  </div>
+  <div class="chips" id="rchips">
+    <select id="rperiod" class="chip chipsel" title="period"></select>
+    <span class="chipgen" id="rchipgen"></span>
+    <button id="rreset" class="chipclear" data-i18n title="clear search and all filters">条件を消す / clear</button>
+  </div>
+  <div class="resrow">
+    <p class="count" id="rcount"></p>
+    <span class="outbox">
+      <span class="themebox viewbox" role="group" aria-label="表示 / layout">
+        <button class="themebtn" data-view-set="compact" data-i18n>簡易 / compact</button>
+        <button class="themebtn" data-view-set="detail" data-i18n>詳細 / detailed</button>
+      </span>
+    </span>
+  </div>
   <div id="rel-list"></div>
+  <p class="empty" id="rempty" hidden>該当なし / no matches</p>
 </section>
 
 <section id="tab-cat" hidden aria-hidden="true">
@@ -262,6 +327,6 @@
 </footer>
 </div>
 
-<script src="app.js?v=a690df29"></script>
+<script src="app.js?v=e2a5f2c7"></script>
 </body>
 </html>

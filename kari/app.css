@@ -125,6 +125,68 @@
     list-style-position:outside}
   .softlist[open] > summary{margin-bottom:.4rem}
   .count{color:var(--dim);font-size:.83rem;margin:0 0 .7rem}
+
+  /* ── THE CONTROL BAR ───────────────────────────────────────────────────────────────────────
+     Three tabs, one shape. A search box that gets the width, a disclosure holding everything
+     else, the chips saying what is currently set, and then a row that pairs the count with the
+     controls arranging the output. Filtering happens above the line; arranging happens on it. */
+  .bar{display:flex;gap:.55rem;align-items:stretch;margin-bottom:.55rem;--ctl-h:2.15rem}
+  .bar > input[type=search]{flex:1 1 12rem;min-width:0}
+  .bar > input[type=search], .bar > button{
+    height:var(--ctl-h);box-sizing:border-box;padding-top:0;padding-bottom:0;line-height:1}
+  .filtbtn{padding-left:.75rem;padding-right:.75rem}
+  .filtbtn[aria-expanded=true]{background:var(--accent-bg);color:var(--accent);
+    border-color:var(--accent)}
+  .filtbtn::after{content:' ▾';font-size:.8em}
+  .filtbtn[aria-expanded=true]::after{content:' ▴'}
+  /* Opened, not revealed in place: the panel sits between the bar that summons it and the chips
+     that report it, so setting a filter and watching its chip appear is one movement. */
+  .filt{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 .55rem;padding:.6rem;
+    border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+  .filt > select{flex:1 1 11rem;min-width:0;height:2rem;box-sizing:border-box;
+    padding-top:0;padding-bottom:0;line-height:1}
+
+  .chips{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin:0 0 .55rem}
+  .chips:empty{display:none}
+  .chipgen{display:contents}
+  .chip{font:inherit;font-size:.75rem;line-height:1.5;padding:.14rem .5rem;cursor:pointer;
+    border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--dim);
+    white-space:nowrap}
+  .chip:hover{border-color:var(--accent)}
+  /* Set, as against holding its default. The accent is the same one the rest of the page uses for
+     a current selection, so it reads as "this is what you asked for" and not as a warning. */
+  .chip[data-active], .chipx{background:var(--accent-bg);color:var(--accent);
+    border-color:var(--accent)}
+  /* The period can never be removed, because a period always has a value. So it opens a menu and
+     the others carry a cross, and the chevron is what says which kind of chip this is. */
+  .chipmenu::after{content:' ▾';opacity:.7}
+  .chipx::after{content:' ✕';opacity:.75;font-size:.9em}
+  select.chipsel{-webkit-appearance:none;appearance:none;padding-right:1.2rem;
+    background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),
+      linear-gradient(135deg,currentColor 50%,transparent 50%);
+    background-position:calc(100% - .55rem) 55%, calc(100% - .35rem) 55%;
+    background-size:.25rem .25rem;background-repeat:no-repeat}
+  /* Hidden rather than dimmed when there is nothing to clear: a permanently visible way out of a
+     state you are not in is noise, and the chips beside it are already the ones that matter. */
+  .chipclear{font:inherit;font-size:.75rem;padding:.14rem .4rem;cursor:pointer;border:0;
+    background:none;color:var(--dim);text-decoration:underline;text-underline-offset:2px}
+  .chipclear:hover{color:var(--accent)}
+  .chipclear[disabled]{display:none}
+
+  .resrow{display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+    flex-wrap:wrap;margin-bottom:.5rem}
+  .resrow .count{margin:0}
+  .outbox{display:flex;align-items:center;gap:.4rem}
+  .sortsel{font-size:.75rem;height:1.55rem;box-sizing:border-box;padding:0 .3rem;line-height:1}
+  /* Sort arranges rather than selects, so it gets no chip. It still says when it is off its
+     default, by the same two channels every other control here uses. */
+  .outbox [data-active]{border-color:var(--accent);font-weight:600}
+  .viewbox .themebtn{font-size:.72rem}
+
+  /* DENSITY IS ONE PREFERENCE, applied by a class on each list. Compact drops what a reader
+     scanning for a title does not read; nothing is re-rendered to switch. */
+  #serlist.compact .line2, #serlist.compact .srcs{display:none}
+  #rel-list.compact .relvm{display:none}
   ol,ul.plain{list-style:none;margin:0;padding:0}
   li{border-bottom:1px solid var(--line)}
   .row{display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;align-items:baseline;
@@ -312,7 +374,7 @@
   .snapnote{color:var(--dim);font-size:.8rem;margin:-.3rem 0 .8rem}
   /* MONTH PICKER. A popover rather than a long select: the option list grows twelve entries a
      year, and a reader choosing a period thinks in a calendar rather than in a scrolling list. */
-  .monthpick{position:relative}
+  .monthpick{position:relative;display:inline-flex}
   #fmonthbtn{white-space:nowrap}
   .mpop{position:absolute;z-index:40;top:calc(100% + .35rem);left:0;min-width:15rem;
         background:var(--card);border:1px solid var(--line);border-radius:.5rem;
