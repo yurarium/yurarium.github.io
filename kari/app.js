@@ -1171,6 +1171,46 @@ function repaintAll() {
   if (PAGE_WORK) renderWorkPage();
 }
 
+/* WHAT VOLUME THIS IS, out of the twelve ways MADB writes it.
+
+   889 volumes carry a bare `1`. The rest carry `vol. 8`, `vol.2`, `volume 1`, `Volume1`,
+   `volume.2`, `Vol. 1`, `v.1` or `第1巻`, and the page was printing the notation inside its own:
+   `第v.1巻 / vol. v.1`. The number is the fact; the word in front of it is the cataloguer's.
+
+   上 and 下 are NOT numbers. They are the designation of a two-volume set and they are passed
+   through as written, because rendering them as 1 and 2 would be the interface deciding something
+   the record does not say. */
+const VOLNUM = /^\s*(?:第\s*)?(?:v(?:ol)?(?:ume)?\s*\.?\s*)?(\d+)\s*(?:巻)?\s*$/i;
+
+// 上 before 下, which no collator will tell you. Japanese orders a two or three volume set this
+// way and `localeCompare(…, 'ja')` sorts by reading, which puts 下 first.
+const VOLPART = { '上': 1, '中': 2, '下': 3 };
+
+function volLabel(n) {
+  const raw = String(n == null ? '' : n).trim();
+  if (!raw) return '';
+  const m = raw.match(VOLNUM);
+  return m ? T('第' + m[1] + '巻', 'vol. ' + m[1]) : raw;
+}
+
+/* Where a volume sits in its work. A NUMBER, not the text of one: sorted as strings, volume 10
+   comes before volume 9, and it only takes two volumes sharing a publication month for that to
+   show. Anything neither numbered nor part of a 上中下 set sorts last, by its own text. */
+function volOrder(n) {
+  const raw = String(n == null ? '' : n).trim();
+  const m = raw.match(VOLNUM);
+  if (m) return [0, +m[1], ''];
+  if (VOLPART[raw]) return [0, VOLPART[raw], ''];
+  return [1, 0, raw];
+}
+
+function byVolume(a, b) {
+  const da = String(a.published || '9999'), db = String(b.published || '9999');
+  if (da !== db) return da.localeCompare(db);
+  const [ka, na, ta] = volOrder(a.number), [kb, nb, tb] = volOrder(b.number);
+  return ka - kb || na - nb || ta.localeCompare(tb, 'ja');
+}
+
 function workDetail(r) {
   const bits = [];
   (r.print || []).forEach(p => {
@@ -1237,12 +1277,11 @@ async function paintVolumes(r) {
     (w.volumes || []).forEach(v => rows.push(v));
   });
   if (!rows.length) return;
-  rows.sort((a, b) => String(a.published || '9999').localeCompare(String(b.published || '9999'))
-                   || String(a.number || '').localeCompare(String(b.number || ''), 'ja'));
+  rows.sort(byVolume);
   el('wp-vols').innerHTML =
     `<h3 class="wp-sub">${esc(T('収録巻', 'Volumes'))} <span class="wp-n">${rows.length}</span></h3>` +
     '<ol class="vols">' + rows.map(v => {
-      const n = v.number ? `<span class="voln">${esc(T('第' + v.number + '巻', 'vol. ' + v.number))}</span>` : '';
+      const n = v.number ? `<span class="voln">${esc(volLabel(v.number))}</span>` : '';
       const d = v.published
         ? `<time datetime="${esc(v.published)}">${esc(fmtDate(v.published, { year: true }))}</time>`
         : `<span class="vnod">${esc(T('刊行日不明', 'no date recorded'))}</span>`;
@@ -1395,7 +1434,9 @@ async function renderReleases() {
         .filter(Boolean).join(' · ');
       // A release is of a VOLUME, so the row says which. 471 of 646 are numbered in the record
       // and the rest say nothing rather than being numbered by their position in a sorted list.
-      const vol = r.n ? `<span class="relvn">${esc(T('第' + r.n + '巻', 'vol. ' + r.n))}</span>` : '';
+      // Same rule as the work page, from the same function: the releases tab was printing
+      // `第vol. 8巻` for every volume MADB numbered in words.
+      const vol = r.n ? `<span class="relvn">${esc(volLabel(r.n))}</span>` : '';
       const wid = byMadb.get(w.work_id);
       const href = wid ? `${BASE}work/${esc(wid)}/` : '';
       // The same rule the rest of the site uses. Printing w.title.ja left every release in
