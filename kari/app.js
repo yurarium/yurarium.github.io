@@ -1076,6 +1076,54 @@ document.addEventListener('click', ev => {
   navSync(true);
 });
 
+
+/* ── releases ─────────────────────────────────────────────
+   Print releases, newest first. This is what the corpus actually holds: MADB and openBD catalogue
+   a volume to the MONTH, so the calendar the plan imagined is a month list, and openBD supplies
+   almost no covers for these publishers, so it is a list rather than a grid. Saying so plainly is
+   better than a grid of placeholders pretending at art we do not have.
+
+   Forthcoming releases are not here. Nothing we hold is prospective: BOOK☆WALKER's 新着 listing is
+   two weeks AFTER a release by its own definition, and the future dates on it are free-trial
+   expiries. Announcing those as release dates would be a confident wrong answer. */
+async function renderReleases() {
+  // works.json is the same file the volumes tab opens a record from, fetched once and shared.
+  if (!DETAIL) DETAIL = fetch('data/works.json', { cache: 'no-cache' }).then(r => r.json());
+  const WORKS = await DETAIL;
+  if (el('rel-list').dataset.done === '1') return;
+  el('rel-list').dataset.done = '1';
+  const rows = [];
+  (WORKS.works || []).forEach(w => (w.volumes || []).forEach(v => {
+    if (v.published) rows.push({ d: String(v.published), w });
+  }));
+  rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
+  const byMonth = new Map();
+  rows.forEach(r => {
+    const m = r.d.slice(0, 7);
+    if (!byMonth.has(m)) byMonth.set(m, []);
+    byMonth.get(m).push(r);
+  });
+  el('n-rel').textContent = rows.length;
+  el('rel-note').textContent = T(
+    '単行本の発売。カタログの日付は月単位。',
+    'Volume releases. Catalogued to the month, which is the precision the record carries.');
+  const strip = s => String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '');
+  el('rel-list').innerHTML = [...byMonth.entries()].map(([m, list]) => {
+    const items = list.map(r => {
+      const w = r.w;
+      // MADB writes a role before each name, [著] and [作画] among them, and joins creators
+      // with a slash that survives even when one side is empty. Both are cataloguing
+      // notation, not the credit a reader is being shown.
+      const people = String(w.creator || '').split('/').map(x => strip(x.trim()))
+        .filter(Boolean).join(' / ');
+      const who = [strip(w.publisher), strip(w.imprint)].filter(Boolean).join(' · ');
+      return `<div class="relv"><div class="relvt">${esc(w.title.ja)}</div>` +
+        `<div class="relvm">${esc([people, who].filter(Boolean).join(' · '))}</div></div>`;
+    }).join('');
+    return `<div class="relmonth"><h3>${esc(m)}</h3>${items}</div>`;
+  }).join('');
+}
+
 function navApply(st) {
   NAV_APPLYING = true;
   try {
@@ -1140,7 +1188,8 @@ function readNavUrl() {
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('nav button').forEach(x =>
     x.setAttribute('aria-selected', String(x === b)));
-  ['feed','ser','cat'].forEach(t => el('tab-'+t).hidden = (t !== b.dataset.tab));
+  ['feed','ser','cat','rel'].forEach(t => el('tab-'+t).hidden = (t !== b.dataset.tab));
+  if (b.dataset.tab === 'rel') renderReleases();
   saveView();
   navSync(true);
 }));

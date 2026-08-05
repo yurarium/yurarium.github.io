@@ -420,3 +420,13 @@
 .rel .detail .dk { flex: 0 0 auto; min-width: 5.2rem; opacity: .62; }
 .rel .detail .dv { flex: 1 1 auto; }
 .rel .detail .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; opacity: .7; }
+
+/* Releases. A month list, because a volume is catalogued to the month and openBD supplies almost
+   no covers for these publishers: a grid of placeholders would pretend at art we do not have. */
+.relmonth { margin: 1.1rem 0 .4rem; }
+.relmonth h3 { font-size: .95rem; font-weight: 600; opacity: .72; margin: 0 0 .35rem;
+               border-bottom: 1px solid currentColor; padding-bottom: .2rem; }
+.relv { padding: .3rem 0; border-bottom: 1px solid rgba(128,128,128,.16); }
+.relvt { font-weight: 600; }
+.relvm { font-size: .87em; opacity: .66; }
+#rel-note { opacity: .7; font-size: .9em; }

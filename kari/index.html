@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <title>Yurarium 仮</title>
-<link rel="stylesheet" href="app.css?v=19266cc0">
+<link rel="stylesheet" href="app.css?v=7a328957">
 </head>
 <body>
 <div class="wrap">
@@ -112,6 +112,7 @@
   <button role="tab" aria-selected="true"  data-tab="feed">更新 <span class="n" id="n-feed"></span></button>
   <button role="tab" aria-selected="false" data-tab="ser">作品 <span class="n" id="n-ser"></span></button>
   <button role="tab" aria-selected="false" data-tab="cat">単行本 <span class="n" id="n-cat"></span></button>
+  <button role="tab" aria-selected="false" data-tab="rel">発売 <span class="n" id="n-rel"></span></button>
 </nav>
 
 <!-- ── FEED ───────────────────────────────────────────────────────── -->
@@ -196,6 +197,14 @@
   <p class="empty" id="sempty" hidden>該当なし / no matches</p>
 </section>
 
+<section id="tab-rel" hidden>
+  <!-- Print releases, newest first. Volume dates are month-precision because that is what the
+       cataloguing carries; openBD supplies almost no covers for this corpus, so this is a list
+       and not a cover grid. See docs/MADB.md. -->
+  <p class="note" id="rel-note"></p>
+  <div id="rel-list"></div>
+</section>
+
 <section id="tab-cat" hidden>
   
   <div class="controls" style="margin-top:.9rem">
@@ -235,6 +244,6 @@
 </footer>
 </div>
 
-<script src="app.js?v=82b3c79a"></script>
+<script src="app.js?v=f873b28e"></script>
 </body>
 </html>
