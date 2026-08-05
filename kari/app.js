@@ -1480,9 +1480,16 @@ function todayISO() {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
+/* THE READER'S LANGUAGE, where the build wrote one. Every one of these sentences was English, so
+   the one place the interface explains itself was unusable to half the audience it is written for.
+   The English is what the filters above are applied to, because it is the sentence that exists on
+   every row; the Japanese is shown when there is one and the reader is reading Japanese. */
 function readerBasis(r) {
-  const b = r.completed_basis || r.state_basis || '';
-  return (ABOUT_US.test(b) || SAYS_NOTHING.test(b)) ? '' : b;
+  const en = r.completed_basis || r.state_basis || '';
+  if (!en || ABOUT_US.test(en) || SAYS_NOTHING.test(en)) return '';
+  const ja = r.completed_basis_ja || r.state_basis_ja || '';
+  if (LANG === 'en' || !ja) return en;
+  return LANG === 'ja' ? ja : `${ja} / ${en}`;
 }
 
 function accessLine(r) {
