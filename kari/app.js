@@ -423,7 +423,10 @@ function enHtml(rec, cls, isPerson) {
   // A NOTE ON EVERYTHING IS A NOTE ON NOTHING. Every name carried one, including the ones whose
   // note said only that the name is the one the work or person uses, which a reader can assume.
   // Annotate what is OURS; say nothing about what is theirs.
-  const mark = (e.ours || e.unverified) ? ' ours' : '';
+  // THE MARK GOES WITH THE NOTE, not with the category. `ours` was set on every name we spelt,
+  // including a plain romanisation of an attested reading, which has nothing to say. That put a
+  // dotted underline under a name and offered no tooltip when a reader went looking for one.
+  const mark = why ? ' ours' : '';
   const tip = why ? ` title="${esc(why)}"` : '';
   return `<span class="en${mark} ${cls || ''}"${tip}>${esc(shown)}</span>${uncertainMark(rec, e)}`;
 }
@@ -1363,7 +1366,7 @@ async function paintVolumes(r) {
   const WORKS = await DETAIL;
   // The reader may have left, or opened another work, while the file was in flight.
   if (PAGE_WORK !== r.id || !el('wp-vols')) return;
-  const rows = [];
+  let rows = [];
   (WORKS.works || []).forEach(w => {
     if (!ids.includes(w.work_id)) return;
     (w.volumes || []).forEach(v => rows.push(v));
@@ -1399,6 +1402,23 @@ async function paintVolumes(r) {
 
   if (!rows.length) return;
   rows.sort(byVolume);
+  /* ONE ROW PER VOLUME, however many editions of it exist.
+
+     ささやくように恋を唄う holds volumes 9 to 12 twice, with different ISBNs, the same date and
+     the same title, which is a standard and a special edition of one volume. MADB gives no way to
+     tell which is which: the two records differ in the ISBN and in nothing else. So they are one
+     row saying both, instead of four apparent duplicates a reader has to guess about. Merged only
+     where the number AND the date agree, so a genuine reissue years later stays its own row. */
+  const merged = [];
+  for (const v of rows) {
+    const prev = merged[merged.length - 1];
+    if (prev && v.number && prev.number === v.number && prev.published === v.published) {
+      prev.editions = (prev.editions || [prev.isbn]).concat(v.isbn ? [v.isbn] : []);
+      continue;
+    }
+    merged.push({ ...v });
+  }
+  rows = merged;
   el('wp-vols').innerHTML =
     `<h3 class="wp-sub">${esc(T('収録巻', 'Volumes'))} <span class="wp-n">${rows.length}</span></h3>` +
     '<ol class="vols">' + rows.map(v => {
@@ -1408,7 +1428,13 @@ async function paintVolumes(r) {
         : `<span class="vnod">${esc(T('刊行日不明', 'no date recorded'))}</span>`;
       // The ISBN is why most of these works are here at all: it is what a shop stated and what the
       // bibliography answered. A bibliographic record should show its identifier.
-      const i = v.isbn ? `<span class="mono visbn">${esc(v.isbn)}</span>` : '';
+      const eds = (v.editions || []).filter(Boolean);
+      const i = eds.length > 1
+        ? `<span class="mono visbn" title="${esc(T(
+            `この巻には${eds.length}種類の版があり、どちらがどれかは書誌からは判別できない`,
+            `${eds.length} editions of this volume, which the catalogue does not tell apart`))}"
+            >${esc(eds.join(' · '))}</span>`
+        : (v.isbn ? `<span class="mono visbn">${esc(v.isbn)}</span>` : '');
       const f = v.final_volume ? finalTag(v.final_volume_basis) : '';
       return `<li class="vol">${n}${d}${i}${f}</li>`;
     }).join('') + '</ol>';
@@ -1492,17 +1518,32 @@ function readerBasis(r) {
   return LANG === 'ja' ? ja : `${ja} / ${en}`;
 }
 
+/* HOW MUCH OF IT COSTS NOTHING, as one sentence per language.
+
+   It was assembled from nested T() calls, so 併記 interleaved the two: "7/58話が無料 / 7 of 58 free
+   (5話が無料、2話が待てば無料 / 5 free now, 2 free with a daily ticket)". Each language is built
+   whole here and the pair is joined once.
+
+   AND A TIMER IS NOT FREE NOW. 21 of 21 chapters counted as free where 19 of them need a daily
+   ticket, and the line read "all free to read" to a reader who can open two. Conditionally free is
+   still free, which is why it counts, and it is not the same thing, which is why it is said. */
 function accessLine(r) {
-  const free = (r.free || 0) + (r.free_timed || 0);
-  const known = free + (r.priced || 0);
-  if (!r.chapters || !known) return '';
-  if (free >= r.chapters) return T('全話無料', 'all free to read');
-  if (!free) return T('有料', 'paid');
-  const tip = r.free_timed
-    ? T(`${r.free}話が無料、${r.free_timed}話が待てば無料`,
-        `${r.free} free now, ${r.free_timed} free with a daily ticket`)
-    : '';
-  return T(`${free}/${r.chapters}話が無料`, `${free} of ${r.chapters} free`) + (tip ? ` (${tip})` : '');
+  const now = r.free || 0, timed = r.free_timed || 0;
+  const free = now + timed;
+  if (!r.chapters || !(free + (r.priced || 0))) return '';
+  const say = (ja) => {
+    if (!free) return ja ? '有料' : 'paid';
+    if (free >= r.chapters) {
+      if (!timed) return ja ? '全話無料' : 'all free to read';
+      return ja ? `全話無料（うち${timed}話は待てば無料）`
+                : `all free (${timed} of them with a daily ticket)`;
+    }
+    const head = ja ? `${free}/${r.chapters}話が無料` : `${free} of ${r.chapters} free`;
+    if (!timed) return head;
+    return ja ? `${head}（${now}話がすぐに、${timed}話は待てば）`
+              : `${head} (${now} now, ${timed} with a daily ticket)`;
+  };
+  return LANG === 'ja' ? say(true) : LANG === 'en' ? say(false) : `${say(true)} / ${say(false)}`;
 }
 
 function renderWorkPage() {
@@ -1578,7 +1619,7 @@ function renderWorkPage() {
   if (r.collection && r.collection !== r.work) {
     fact(T('収録', 'Part of'), esc(workTextOf(r.collection)));
   }
-  if (why) fact(T('根拠', 'Basis'), `<span class="wf-basis">${esc(why)}</span>`);
+
 
   const from = document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'ser';
   const backTo = from === 'feed' ? T('← 更新一覧', '← All updates')
@@ -1589,6 +1630,7 @@ function renderWorkPage() {
     <header class="wp-head">
       <h2 class="wp-title">${workLabel(r)}</h2>
       <p class="wp-badges">${badges.join('')}</p>
+      ${why ? `<p class="wp-why">${esc(why)}</p>` : ''}
     </header>
     ${src ? `<div class="srcs wp-srcs">${src}</div>` : ''}
     <dl class="wp-facts">${facts.join('')}</dl>

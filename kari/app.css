@@ -190,6 +190,10 @@
   .wp-head{margin:0 0 .7rem}
   .wp-title{font-size:1.5rem;line-height:1.25;margin:0 0 .35rem;font-weight:600}
   .wp-badges{margin:0;display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+  /* WHY THE BADGE SAYS WHAT IT SAYS, under the badge. It was a row called "根拠 / Basis" among the
+     facts, which named what it was the basis of nowhere, so a reader asking why a work reads 停滞
+     found the answer beside the question rather than attached to it. */
+  .wp-why{margin:.35rem 0 0;font-size:.8rem;color:var(--dim);max-width:44rem;line-height:1.5}
   .wp-srcs{margin:0 0 1rem}
   /* A GRID, not a column of rows. At one column per 13rem a work with four facts fills a line and
      a work with eight fills two, instead of either running down the page or stranding a lone value
@@ -325,6 +329,8 @@
   .dow{font-weight:400;opacity:.72}
   /* An English rendering that is OURS, or rests on an unverified reading, is marked: quietly.
      A dotted underline says "this is a rendering" without competing with the name it sits under. */
+  /* Marked because there is something to read, not because of where the name came from: the class
+     is set only where a note exists, so the dotted line always has a tooltip behind it. */
   .en.ours{border-bottom:1px dotted currentColor}
   /* The English line is the same row again, one step quieter: enough to read as a translation
      of the line above rather than as a second entry, which is what an equally-weighted duplicate
