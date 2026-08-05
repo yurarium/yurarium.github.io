@@ -1018,7 +1018,14 @@ function navUrl(st) {
   if (st.month && st.tab === 'feed') q.set('month', st.month);
   if (st.work && (st.tab === 'cat' || st.tab === 'ser')) q.set('work', st.work);
   const qs = q.toString();
-  return location.pathname + (qs ? '?' + qs : '');
+  // A work on the works tab gets a path of its own. BASE is the app's directory, so this works
+  // whether it is served at /kari/ or anywhere else.
+  if (st.work && st.tab === 'ser') {
+    q.delete('work'); q.delete('tab');
+    const rest = q.toString();
+    return BASE + 'work/' + st.work + '/' + (rest ? '?' + rest : '');
+  }
+  return BASE + (qs ? '?' + qs : '');
 }
 
 function navSync(push) {
@@ -1109,8 +1116,24 @@ function navApply(st) {
 
 window.addEventListener('popstate', e => navApply(e.state || readNavUrl()));
 
+// A work may be addressed by a real path, /kari/work/<id>/, which is what the pre-rendered stubs
+// sit at and what a citation should look like. The query form still works, because links to it are
+// already out there and an address published once has to keep resolving.
+// The app's own directory. A stub sits two levels below it, so an address cannot be built from
+// location.pathname alone.
+const BASE = location.pathname.replace(/(?:work\/[A-Za-z0-9_-]+\/?|index\.html)?$/, '');
+
+function workFromPath() {
+  const m = location.pathname.match(/\/work\/([A-Za-z0-9_-]+)\/?$/);
+  return m ? m[1] : '';
+}
+
 function readNavUrl() {
   const q = new URLSearchParams(location.search);
+  // A path names a work and implies the tab it lives on. Arriving at a pre-rendered stub is
+  // exactly this case, and it must reach the same view a click would have produced.
+  const onPath = workFromPath();
+  if (onPath) return { tab: 'ser', month: '', work: onPath };
   return { tab: q.get('tab') || 'feed', month: q.get('month') || '', work: q.get('work') || '' };
 }
 
