@@ -105,6 +105,8 @@ function connectors(d) {
   // announcing an absence of failures, which is a claim this page cannot yet support.
   const oldest = c[0] || {};
   const mal = c.reduce((n, x) => n + (x.malformed || 0), 0);
+  const drops = c.filter(x => x.drop);
+  const led = d.ledger || {};
   const lede = esc(T(
     `${c.length} 系統のソースを読み込み。最も古い取得は ${oldest.source}（${oldest.age_days} 日前）。`,
     `${c.length} sources were read. The oldest capture is ${oldest.source}, ${oldest.age_days} days old.`))
@@ -113,15 +115,21 @@ function connectors(d) {
     + ' ' + esc(mal
         ? T(`${mal} 行が宣言した形と異なる。`, `${mal} rows differ from the shape declared for their source.`)
         : T('取得した行はいずれも宣言した形どおり。', 'Every captured row matches the shape declared for its source.'))
+    + ' ' + esc(drops.length
+        ? T(`${drops.length} 系統が再取得で大きく減少。`,
+            `${drops.length} returned materially less on a re-fetch.`)
+        : T('再取得で大きく減った系統はない。', 'No source returned materially less on a re-fetch.'))
     + `<br><span class="dim">${esc(T(
-        '取得量が前回より落ちた場合の検出には前回との差分が必要で、その台帳は未作成。',
-        'Spotting a source that returned less than last time needs a comparison against the previous run, and that ledger does not exist.'))}</span>`;
+        `${led.runs_held || 0} 回分の記録と比較。取得できなかった系統は比較しない。ファイルは前回の良好な取得のまま。`,
+        `Compared against ${led.runs_held || 0} recorded runs. A source that could not be fetched is not compared: its file still holds the last good capture.`))}</span>`;
   return section(T('取得の状態', 'Connector health'), lede, T('ソース一覧', 'Every source'),
     table([{ h: T('ソース', 'source'), cell: x => esc(x.source) },
            { h: T('取得日', 'retrieved'), cell: x => `<span class="${(x.age_days||0) > 7 ? 'st-old' : ''}">${esc(x.retrieved)}</span>` },
            { h: T('日数', 'age'), num: true, cell: x => esc(x.age_days) },
            { h: T('作品', 'works'), num: true, cell: x => esc(x.works) },
            { h: T('行', 'rows'), num: true, cell: x => esc(x.rows) },
+           { h: T('前回比', 'vs last'), cell: x => x.drop
+               ? `<span class="st-old">${esc(x.drop.was)} \u2192 ${esc(x.drop.now)}</span>` : '' },
            { h: T('相違', 'differs'), num: true,
              cell: x => x.checked_rows ? `<span class="${x.malformed ? 'st-old' : ''}">${esc(x.malformed)}</span>` : '—' }], c));
 }
