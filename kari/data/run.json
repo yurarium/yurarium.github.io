@@ -2,8 +2,8 @@
  "generated": "2026-08-05",
  "releases": 1061,
  "platforms": 22,
- "works": 302,
- "series_rows": 1234,
+ "works": 598,
+ "series_rows": 1473,
  "sources": [
   {
    "source": "comicfuz",
@@ -47,11 +47,11 @@
   },
   {
    "source": "madb",
-   "files": 302,
-   "works": 302,
-   "rows": 646,
-   "retrieved": "2026-08-01",
-   "age_days": 4,
+   "files": 598,
+   "works": 598,
+   "rows": 1311,
+   "retrieved": "2026-08-05",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -103,10 +103,9 @@
    "open": 4,
    "unsettleable": 38,
    "phantom": 1,
-   "print-serialised": 24,
+   "print-serialised": 26,
    "scheduled": 2,
-   "undatable": 3,
-   "refuted": 2
+   "undatable": 3
   },
   "trace": [
    {
@@ -2399,11 +2398,9 @@
     "url": "https://comic-y-ours.com/episode/2551460909791888785",
     "claimed": "2026-07-03",
     "source": "webcomics.jp",
-    "disposition": "refuted",
-    "why": "we hold this platform's own history for this work and it lists nothing within a week of the claimed date",
-    "platform_latest": "2026-05-08",
-    "chapters_held": 4,
-    "gap_days": 56
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-05-08"
    },
    {
     "work": "夢でフラれてはじまる百合",
@@ -2505,11 +2502,9 @@
     "url": "https://comic-growl.com/series/5ec689382839e",
     "claimed": "2026-07-02",
     "source": "webcomics.jp",
-    "disposition": "refuted",
-    "why": "we hold this platform's own history for this work and it lists nothing within a week of the claimed date",
-    "platform_latest": "2026-04-04",
-    "chapters_held": 29,
-    "gap_days": 89
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-04-04"
    },
    {
     "work": "キミが吠えるための歌を、",
@@ -4216,10 +4211,17 @@
   ]
  },
  "content_flags": {
-  "total": 9,
+  "total": 11,
   "withheld": 0,
-  "published": 9,
+  "published": 11,
   "rows": [
+   {
+    "title": "SM百合えっちアンソロジー",
+    "source": "marketing signal",
+    "reason": "adult-marketed collection; §7 explicit, not pornography",
+    "withheld": false,
+    "published": true
+   },
    {
     "title": "この湯で、あなたと",
     "source": "kadokomi",
@@ -4231,6 +4233,13 @@
     "title": "イジめてイジられて",
     "source": "kadokomi",
     "reason": "ratingLevel='adult' — review against DEFINITIONS §7 before publishing",
+    "withheld": false,
+    "published": true
+   },
+   {
+    "title": "コスプレ百合えっちアンソロジー",
+    "source": "marketing signal",
+    "reason": "adult-marketed collection; §7 explicit, not pornography",
     "withheld": false,
     "published": true
    },
@@ -4306,11 +4315,219 @@
  "gaps": {
   "uncaptured_works": [
    {
+    "work": "2週間のアバンチュール",
+    "platform": null
+   },
+   {
     "work": "春夏秋冬",
     "platform": null
    },
    {
+    "work": "オクターヴ",
+    "platform": null
+   },
+   {
     "work": "百合姫selection",
+    "platform": null
+   },
+   {
+    "work": "すきなひと",
+    "platform": null
+   },
+   {
+    "work": "トワ・エ・モア",
+    "platform": null
+   },
+   {
+    "work": "ゆりてつ",
+    "platform": null
+   },
+   {
+    "work": "メバエ",
+    "platform": null
+   },
+   {
+    "work": "ストレッチ",
+    "platform": null
+   },
+   {
+    "work": "Green.",
+    "platform": null
+   },
+   {
+    "work": "くらいもり、しろいみち",
+    "platform": null
+   },
+   {
+    "work": "くろよめ",
+    "platform": null
+   },
+   {
+    "work": "しまいずむ",
+    "platform": null
+   },
+   {
+    "work": "ふたり",
+    "platform": null
+   },
+   {
+    "work": "むすんでひらいて",
+    "platform": null
+   },
+   {
+    "work": "ゆめよりすてきな",
+    "platform": null
+   },
+   {
+    "work": "エデンの東戸塚",
+    "platform": null
+   },
+   {
+    "work": "エビスさんとホテイさん",
+    "platform": null
+   },
+   {
+    "work": "ガールズライド",
+    "platform": null
+   },
+   {
+    "work": "トラにツバサ",
+    "platform": null
+   },
+   {
+    "work": "ベツキス",
+    "platform": null
+   },
+   {
+    "work": "二輪乃花",
+    "platform": null
+   },
+   {
+    "work": "前略、百合の園より",
+    "platform": null
+   },
+   {
+    "work": "少女サテライト",
+    "platform": null
+   },
+   {
+    "work": "恋は秘かに実らせるもの",
+    "platform": null
+   },
+   {
+    "work": "桜Trick",
+    "platform": null
+   },
+   {
+    "work": "神さまばかり恋をする",
+    "platform": null
+   },
+   {
+    "work": "銭湯ハワイ",
+    "platform": null
+   },
+   {
+    "work": "魚の見る夢",
+    "platform": null
+   },
+   {
+    "work": "MURCIELAGO",
+    "platform": null
+   },
+   {
+    "work": "くちびるためいきさくらいろ",
+    "platform": null
+   },
+   {
+    "work": "悪戯ちょうちょ",
+    "platform": null
+   },
+   {
+    "work": "あの娘にキスと白百合を",
+    "platform": null
+   },
+   {
+    "work": "虹晴の従姉",
+    "platform": null
+   },
+   {
+    "work": "とろとろ姫あわせ",
+    "platform": null
+   },
+   {
+    "work": "あさがおと加瀬さん。",
+    "platform": null
+   },
+   {
+    "work": "おべんとうと加瀬さん。",
+    "platform": null
+   },
+   {
+    "work": "きらきらのなつ",
+    "platform": null
+   },
+   {
+    "work": "きれいなあのこ",
+    "platform": null
+   },
+   {
+    "work": "さらば友よ",
+    "platform": null
+   },
+   {
+    "work": "ライカ、パブロフ、ポチハチ公",
+    "platform": null
+   },
+   {
+    "work": "女の子の設計図",
+    "platform": null
+   },
+   {
+    "work": "彼女×彼女",
+    "platform": null
+   },
+   {
+    "work": "星をふたりで",
+    "platform": null
+   },
+   {
+    "work": "箱庭コスモス",
+    "platform": null
+   },
+   {
+    "work": "終電にはかえします",
+    "platform": null
+   },
+   {
+    "work": "購買のプロキオン",
+    "platform": null
+   },
+   {
+    "work": "モモイロデイズ",
+    "platform": null
+   },
+   {
+    "work": "となりのロボット",
+    "platform": null
+   },
+   {
+    "work": "間宮さんといっしょ",
+    "platform": null
+   },
+   {
+    "work": "まんがの作り方",
+    "platform": null
+   },
+   {
+    "work": "この世にただひとり",
+    "platform": null
+   },
+   {
+    "work": "理由もなく悲しくなるの",
+    "platform": null
+   },
+   {
+    "work": "アフターアワーズ",
     "platform": null
    },
    {
@@ -4322,7 +4539,27 @@
     "platform": null
    },
    {
+    "work": "プアプアLIPS",
+    "platform": null
+   },
+   {
+    "work": "GIRL FRIENDS",
+    "platform": null
+   },
+   {
+    "work": "ぷあーなんてもうしまい",
+    "platform": null
+   },
+   {
+    "work": "小百合さんの妹は天使",
+    "platform": null
+   },
+   {
     "work": "オトメキカングレーテル",
+    "platform": null
+   },
+   {
+    "work": "満腹百合",
     "platform": null
    },
    {
@@ -4443,6 +4680,10 @@
    },
    {
     "work": "ゆりゆり",
+    "platform": null
+   },
+   {
+    "work": "ゆるゆり コミックアンソロジー",
     "platform": null
    },
    {
@@ -4670,6 +4911,58 @@
     "platform": null
    },
    {
+    "work": "お姫様のひみつ",
+    "platform": null
+   },
+   {
+    "work": "さようならむつきちゃん",
+    "platform": null
+   },
+   {
+    "work": "ほんとのかのじょ",
+    "platform": null
+   },
+   {
+    "work": "もうひとつのユリトピア",
+    "platform": null
+   },
+   {
+    "work": "仲良しクイズ",
+    "platform": null
+   },
+   {
+    "work": "ショートケーキと加瀬さん。",
+    "platform": null
+   },
+   {
+    "work": "傷心",
+    "platform": null
+   },
+   {
+    "work": "妹ができました。",
+    "platform": null
+   },
+   {
+    "work": "演劇部の魔女と騎士",
+    "platform": null
+   },
+   {
+    "work": "私の嫌いなおともだち",
+    "platform": null
+   },
+   {
+    "work": "聖純少女パラダイム",
+    "platform": null
+   },
+   {
+    "work": "まんがで綴る百合な日々",
+    "platform": null
+   },
+   {
+    "work": "たくのみ。",
+    "platform": null
+   },
+   {
     "work": "×××したいくらい可愛い君が",
     "platform": null
    },
@@ -4766,6 +5059,10 @@
     "platform": null
    },
    {
+    "work": "エクレア",
+    "platform": null
+   },
+   {
     "work": "リンケージ",
     "platform": null
    },
@@ -4775,6 +5072,10 @@
    },
    {
     "work": "さよならフォークロア",
+    "platform": null
+   },
+   {
+    "work": "ひみつ。",
     "platform": null
    },
    {
@@ -4790,6 +5091,10 @@
     "platform": null
    },
    {
+    "work": "共鳴するエコー",
+    "platform": null
+   },
+   {
     "work": "少女薄命",
     "platform": null
    },
@@ -4799,6 +5104,14 @@
    },
    {
     "work": "初恋テクトニクス",
+    "platform": null
+   },
+   {
+    "work": "女の子のナイショの話",
+    "platform": null
+   },
+   {
+    "work": "SIS",
     "platform": null
    },
    {
@@ -4830,7 +5143,23 @@
     "platform": null
    },
    {
+    "work": "柚子森さん",
+    "platform": null
+   },
+   {
+    "work": "私と彼女のお泊まり映画",
+    "platform": null
+   },
+   {
     "work": "さくら文通",
+    "platform": null
+   },
+   {
+    "work": "明るい記憶喪失",
+    "platform": null
+   },
+   {
+    "work": "エプロンと加瀬さん。",
     "platform": null
    },
    {
@@ -4842,7 +5171,27 @@
     "platform": null
    },
    {
+    "work": "吾妻さんと板倉先輩は恋をする。",
+    "platform": null
+   },
+   {
+    "work": "総合タワーリシチ",
+    "platform": null
+   },
+   {
+    "work": "Avalon : Towards the happiness,with you. : 幸福を紡ぐ百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "Avalon～bitter～ : Desire is a sweet and beautiful curse. : 幸福を望む百合アンソロジー",
+    "platform": null
+   },
+   {
     "work": "Shibuyaギャル百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "いちゃらぶしかない百合アンソロジーコミック",
     "platform": null
    },
    {
@@ -4858,6 +5207,38 @@
     "platform": null
    },
    {
+    "work": "ユリキュール : アルコール百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "レズ風俗アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "百合 + カノジョ",
+    "platform": null
+   },
+   {
+    "work": "百合 + カノジョ : ヒロイン同士のハッピーエンド",
+    "platform": null
+   },
+   {
+    "work": "百合 + カノジョ : 好きになってもいい?",
+    "platform": null
+   },
+   {
+    "work": "百合 + カノジョ : 友達は昨日まで",
+    "platform": null
+   },
+   {
+    "work": "百合ドリル",
+    "platform": null
+   },
+   {
+    "work": "フィダンツァートのためいき : 完全版",
+    "platform": null
+   },
+   {
     "work": "茜色のキスは屋上で",
     "platform": null
    },
@@ -4870,7 +5251,15 @@
     "platform": null
    },
    {
+    "work": "まめコーデ",
+    "platform": null
+   },
+   {
     "work": "あとで姉妹ます。",
+    "platform": null
+   },
+   {
+    "work": "もふかのポプリ",
     "platform": null
    },
    {
@@ -4886,6 +5275,10 @@
     "platform": null
    },
    {
+    "work": "かなえて!ゆりようせい",
+    "platform": null
+   },
+   {
     "work": "少女² (shoujo no jijou) : 完全版",
     "platform": null
    },
@@ -4898,7 +5291,27 @@
     "platform": null
    },
    {
+    "work": "シナモン = Cinnamon : 人外×人間百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "サンストーン",
+    "platform": null
+   },
+   {
+    "work": "ゆたさんはままならない!",
+    "platform": null
+   },
+   {
     "work": "しおりを探すページたち",
+    "platform": null
+   },
+   {
+    "work": "キャッチャー・イン・ザ・ライム",
+    "platform": null
+   },
+   {
+    "work": "同棲生活",
     "platform": null
    },
    {
@@ -4915,6 +5328,10 @@
    },
    {
     "work": "終電で帰さない、たった1つの方法",
+    "platform": null
+   },
+   {
+    "work": "ぼっち怪物と盲目少女",
     "platform": null
    },
    {
@@ -4966,7 +5383,23 @@
     "platform": null
    },
    {
+    "work": "サジちゃんの病み日記",
+    "platform": null
+   },
+   {
+    "work": "突然の百合 : collected short girls-love stories",
+    "platform": null
+   },
+   {
     "work": "女子高生と王子ちゃん",
+    "platform": null
+   },
+   {
+    "work": "セイキマツブルー = Seikimatsu Blue",
+    "platform": null
+   },
+   {
+    "work": "好きなのは女の子 : エクレアSpecial : 北尾タキ百合作品傑作選",
     "platform": null
    },
    {
@@ -4998,6 +5431,38 @@
     "platform": null
    },
    {
+    "work": "定時にあがれたら",
+    "platform": null
+   },
+   {
+    "work": "毒百合乙女童話",
+    "platform": null
+   },
+   {
+    "work": "あーとかうーしか言えない",
+    "platform": null
+   },
+   {
+    "work": "リリィシステム = LILY SYSTEM",
+    "platform": null
+   },
+   {
+    "work": "シロップ = syrup : 社会人百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "おやすみシェヘラザード = Nighty night,Sheherazade",
+    "platform": null
+   },
+   {
+    "work": "マザーグール",
+    "platform": null
+   },
+   {
+    "work": "旧約マザーグール",
+    "platform": null
+   },
+   {
     "work": "みらいのふうふですけど?",
     "platform": null
    },
@@ -5014,11 +5479,31 @@
     "platform": null
    },
    {
+    "work": "まぶしさの向こう側",
+    "platform": null
+   },
+   {
     "work": "恋愛ログ",
     "platform": null
    },
    {
+    "work": "Citrusコミックアンソロジー",
+    "platform": null
+   },
+   {
+    "work": "推しが武道館いってくれたら死ぬ",
+    "platform": null
+   },
+   {
+    "work": "アラーニァ : murciélago byproduct",
+    "platform": null
+   },
+   {
     "work": "夢の中で君を探して",
+    "platform": null
+   },
+   {
+    "work": "あの娘と目が合うたび私は",
     "platform": null
    },
    {
@@ -5030,11 +5515,19 @@
     "platform": null
    },
    {
+    "work": "さくらと加瀬さん。",
+    "platform": null
+   },
+   {
     "work": "ストロベリーシェイクsweet",
     "platform": null
    },
    {
     "work": "ときめく、はじめての。",
+    "platform": null
+   },
+   {
+    "work": "ふあふわ白書",
     "platform": null
    },
    {
@@ -5046,7 +5539,19 @@
     "platform": null
    },
    {
+    "work": "貝とオルタナロック",
+    "platform": null
+   },
+   {
+    "work": "女の子のいちばんやわらかいところ。",
+    "platform": null
+   },
+   {
     "work": "昼下がりに、また。",
+    "platform": null
+   },
+   {
+    "work": "百合鍵",
     "platform": null
    },
    {
@@ -5058,11 +5563,35 @@
     "platform": null
    },
    {
+    "work": "最後の制服",
+    "platform": null
+   },
+   {
+    "work": "仕事の後は恋しよう = LET'S FALL IN LOVE AFTER WORK",
+    "platform": null
+   },
+   {
+    "work": "NTR : 寝取られ百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "ゆるゆり : アンソロジー10周年記念ver",
+    "platform": null
+   },
+   {
     "work": "カヌレ : スール百合アンソロジー",
     "platform": null
    },
    {
+    "work": "月と恋は満ちれば欠ける。",
+    "platform": null
+   },
+   {
     "work": "サラダボウル",
+    "platform": null
+   },
+   {
+    "work": "神絵師JKとOL腐女子",
     "platform": null
    },
    {
@@ -5082,7 +5611,19 @@
     "platform": null
    },
    {
+    "work": "すれ違い巨大感情百合アンソロジー",
+    "platform": null
+   },
+   {
     "work": "ガラスの靴を脱ぎ捨てて",
+    "platform": null
+   },
+   {
+    "work": "イブのおくすり",
+    "platform": null
+   },
+   {
+    "work": "山田と加瀬さん。",
     "platform": null
    },
    {
@@ -5090,7 +5631,55 @@
     "platform": null
    },
    {
+    "work": "杉並区立魔法女学園平和維持部 = peace keeping club of suginami municipal school for witches",
+    "platform": null
+   },
+   {
+    "work": "異世界転生百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "ゆりでなる♡えすぽわーる",
+    "platform": null
+   },
+   {
+    "work": "教師×生徒の百合アンソロジーコミック",
+    "platform": null
+   },
+   {
+    "work": "Avalon Alter～karma～ : Do not pass anyone this crave,because only our sin. : 幸福を求める百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "Avalon～bloom～ : Ringing bloom,the brilliant days of life. : 幸福を迎える百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "ヴァンピアーズ : VAMPEERZ,MY PEER VAMPIRES",
+    "platform": null
+   },
+   {
+    "work": "包帯少女期間 = Bandage Girls Period.",
+    "platform": null
+   },
+   {
+    "work": "レゾナントブルー : Girl's Best Time.",
+    "platform": null
+   },
+   {
     "work": "ゆめぐりゆりめぐり",
+    "platform": null
+   },
+   {
+    "work": "それは、春の嵐のように",
+    "platform": null
+   },
+   {
+    "work": "奏 : 青春バンド百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "百合な片想いちゃん",
     "platform": null
    },
    {
@@ -5098,7 +5687,35 @@
     "platform": null
    },
    {
+    "work": "きみのために世界はある",
+    "platform": null
+   },
+   {
+    "work": "桃源郷で待ち合わせ",
+    "platform": null
+   },
+   {
+    "work": "一端の子",
+    "platform": null
+   },
+   {
+    "work": "Qualia",
+    "platform": null
+   },
+   {
+    "work": "ローダンセ = Rhodanthe : 主従百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "愛に愛らし愛しいあなた = Love,Love,Love My Sweet!",
+    "platform": null
+   },
+   {
     "work": "ぽちゃクライム!",
+    "platform": null
+   },
+   {
+    "work": "アイドル総選挙4位だった私が魔王を倒すんですか?",
     "platform": null
    },
    {
@@ -5106,7 +5723,15 @@
     "platform": null
    },
    {
+    "work": "カノジョと秘密と恋もよう",
+    "platform": null
+   },
+   {
     "work": "ゆりづくしの教室で",
+    "platform": null
+   },
+   {
+    "work": "やわらかな命日",
     "platform": null
    },
    {
@@ -5114,11 +5739,87 @@
     "platform": null
    },
    {
+    "work": "今日から未来",
+    "platform": null
+   },
+   {
+    "work": "ファインダー越しのあの子",
+    "platform": null
+   },
+   {
+    "work": "あなたと私の周波数",
+    "platform": null
+   },
+   {
+    "work": "フォーゲット・ミー・ノット",
+    "platform": null
+   },
+   {
+    "work": "終末世界百合アンソロジー",
+    "platform": null
+   },
+   {
     "work": "乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…girls patch",
     "platform": null
    },
    {
+    "work": "橘館CeLebらいふ",
+    "platform": null
+   },
+   {
+    "work": "悪役令嬢ですが、ヒロインに攻略されてますわ!? : アンソロジーコミック",
+    "platform": null
+   },
+   {
     "work": "パルフェ : おねロリ百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "夜鷹、廻る",
+    "platform": null
+   },
+   {
+    "work": "君に紡ぐ傍白",
+    "platform": null
+   },
+   {
+    "work": "お姫様のお姫様 = Princess of the Princess",
+    "platform": null
+   },
+   {
+    "work": "乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった… : 絶体絶命! 破滅寸前編",
+    "platform": null
+   },
+   {
+    "work": "ガールズインザヘル",
+    "platform": null
+   },
+   {
+    "work": "これはよい抱き枕 : 水瀬るるう百合作品集",
+    "platform": null
+   },
+   {
+    "work": "みーちゃんとアイリ = Mi-chan and Airi",
+    "platform": null
+   },
+   {
+    "work": "元ヤンちゃんとゆるふわ彼女",
+    "platform": null
+   },
+   {
+    "work": "猫とシュガーポット",
+    "platform": null
+   },
+   {
+    "work": "魔女が恋する5秒前",
+    "platform": null
+   },
+   {
+    "work": "ネイルちゃんと深爪さん。 : アンソロジーコミック",
+    "platform": null
+   },
+   {
+    "work": "元カノに幻想を抱くなバーカ : 西沢5ミリ短編集",
     "platform": null
    },
    {
@@ -5134,7 +5835,51 @@
     "platform": null
    },
    {
+    "work": "女の子同士で付き合ってます。",
+    "platform": null
+   },
+   {
+    "work": "殺し屋やめたい! = I wanna be fired!",
+    "platform": null
+   },
+   {
+    "work": "恋の好奇心",
+    "platform": null
+   },
+   {
+    "work": "JKとともだちのオカン",
+    "platform": null
+   },
+   {
+    "work": "いえない秘密の愛し方",
+    "platform": null
+   },
+   {
+    "work": "彩香ちゃんは弘子先輩に恋してる = AYAKA is in LOVE×LOVE×LOVE with HIROKO",
+    "platform": null
+   },
+   {
+    "work": "来陽と青梅",
+    "platform": null
+   },
+   {
+    "work": "ストロング! : アルコール百合アンソロジー",
+    "platform": null
+   },
+   {
     "work": "ツン姫さまとダメ王子ちゃん",
+    "platform": null
+   },
+   {
+    "work": "マッチングアプリ : 百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "終電逃したOLさんたちのちょっとアブナイ夜な百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "同人女百合アンソロジー",
     "platform": null
    },
    {
@@ -5142,11 +5887,39 @@
     "platform": null
    },
    {
+    "work": "アップルパルフェ : おねロリ百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "今日の授業は恋愛です!",
+    "platform": null
+   },
+   {
+    "work": "同級生の推し作家に百合妄想がバレた結果",
+    "platform": null
+   },
+   {
+    "work": "ネイルちゃんと深爪さん。",
+    "platform": null
+   },
+   {
     "work": "2DK、Gペン、アフタータイム。 : 大沢やよい短編集",
     "platform": null
    },
    {
+    "work": "お下がりのオンナ",
+    "platform": null
+   },
+   {
+    "work": "みんな私のはらのなか",
+    "platform": null
+   },
+   {
     "work": "伽藍の姫",
+    "platform": null
+   },
+   {
+    "work": "ステラ★レコード = STELLA★RECORD",
     "platform": null
    },
    {
@@ -5158,11 +5931,67 @@
     "platform": null
    },
    {
+    "work": "ゆりぐらし : No Love,No Life!",
+    "platform": null
+   },
+   {
+    "work": "冷たくて柔らか : PiNKY CANDY KiSS",
+    "platform": null
+   },
+   {
+    "work": "忘れえぬ魔女の物語",
+    "platform": null
+   },
+   {
     "work": "Yrhm百合姫20thアンソロジー",
     "platform": null
    },
    {
+    "work": "仕事の後はぬくもりを",
+    "platform": null
+   },
+   {
     "work": "ロンリーガールに花束を",
+    "platform": null
+   },
+   {
+    "work": "ラブかライクか分からない!",
+    "platform": null
+   },
+   {
+    "work": "同じ所で眠るまで待って = Wait until I sleep in the same place with you",
+    "platform": null
+   },
+   {
+    "work": "新人女性漫画家がネットセックスに沼ってVTuberになった話",
+    "platform": null
+   },
+   {
+    "work": "バニーズクエスト = BUNNIE'S QUEST",
+    "platform": null
+   },
+   {
+    "work": "嘘から始まる恋の夏",
+    "platform": null
+   },
+   {
+    "work": "東の空が白むころ",
+    "platform": null
+   },
+   {
+    "work": "私たちの恋が花開くとき",
+    "platform": null
+   },
+   {
+    "work": "フツーの恋って何?",
+    "platform": null
+   },
+   {
+    "work": "百合にはさまる男は死ねばいい!?",
+    "platform": null
+   },
+   {
+    "work": "幼馴染の異常可愛い妹ちゃん",
     "platform": null
    },
    {
@@ -5174,11 +6003,47 @@
     "platform": null
    },
    {
+    "work": "世界でいちばん美しいひと",
+    "platform": null
+   },
+   {
+    "work": "隣の席が好きな人だった : 学生百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "保健室の鍵閉めてっ",
+    "platform": null
+   },
+   {
+    "work": "プロジェクト・ユリフォーミング!",
+    "platform": null
+   },
+   {
+    "work": "ご主人様には吸わせません!",
+    "platform": null
+   },
+   {
+    "work": "友達が私を理解らせにくるので勝利の女神の力を借りてこっちも理解らせにいきます。",
+    "platform": null
+   },
+   {
     "work": "ギャルメイドと悪役令嬢",
     "platform": null
    },
    {
+    "work": "らぶあんどぴーす = LOVE & PEACE",
+    "platform": null
+   },
+   {
     "work": "昨日シたのに覚えてないの?",
+    "platform": null
+   },
+   {
+    "work": "SAL : Stories About Love",
+    "platform": null
+   },
+   {
+    "work": "抱かれたい女(ひと) = person who wants to be embraced : JDだけどアラサー女子に買われています",
     "platform": null
    },
    {
@@ -5190,7 +6055,19 @@
     "platform": null
    },
    {
+    "work": "囿者は懼れず",
+    "platform": null
+   },
+   {
+    "work": "Roaming",
+    "platform": null
+   },
+   {
     "work": "晴れの国のあっぱれ団",
+    "platform": null
+   },
+   {
+    "work": "仕事の後は抱きしめて",
     "platform": null
    },
    {
@@ -5202,7 +6079,43 @@
     "platform": null
    },
    {
+    "work": "指先から滑り落ちるバレッタ",
+    "platform": null
+   },
+   {
+    "work": "TS転生した私が所属するVTuber事務所のライバーを全員堕としにいく話",
+    "platform": null
+   },
+   {
+    "work": "SM百合えっちアンソロジー",
+    "platform": null
+   },
+   {
+    "work": "百合のあいだは悩ましい",
+    "platform": null
+   },
+   {
+    "work": "サチとユーカ = SACHI and YUUKA",
+    "platform": null
+   },
+   {
+    "work": "どうしたら幼馴染♀の彼女になれますか!?",
+    "platform": null
+   },
+   {
+    "work": "ノス&ザクロ",
+    "platform": null
+   },
+   {
+    "work": "ラストサマー・バケーション = LAST SUMMER VACATION",
+    "platform": null
+   },
+   {
     "work": "無力聖女と無能王女",
+    "platform": null
+   },
+   {
+    "work": "鮮血王女、皆殺す : 家族に裏切られ、処刑された少女は蘇り、『死神』となって復讐する",
     "platform": null
    },
    {
@@ -5210,7 +6123,19 @@
     "platform": null
    },
    {
+    "work": "ハラスメントが怖いマキ先輩!",
+    "platform": null
+   },
+   {
     "work": "サルビアのブーケ",
+    "platform": null
+   },
+   {
+    "work": "きもちわるいから君がすき",
+    "platform": null
+   },
+   {
+    "work": "コスプレ百合えっちアンソロジー",
     "platform": null
    },
    {
@@ -5222,7 +6147,23 @@
     "platform": null
    },
    {
+    "work": "Killer Twinkle",
+    "platform": null
+   },
+   {
     "work": "幼なじみが絶対に結ばれる百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった… : 公式アンソロジーコミック : スウィートメモリーズ",
+    "platform": null
+   },
+   {
+    "work": "運命のヤマダダダダダダダダダダ",
+    "platform": null
+   },
+   {
+    "work": "泣き顔百合アンソロジー",
     "platform": null
    },
    {
@@ -5230,15 +6171,35 @@
     "platform": null
    },
    {
+    "work": "妄想アカデミズム",
+    "platform": null
+   },
+   {
+    "work": "ちみどろアイスクリーム",
+    "platform": null
+   },
+   {
+    "work": "メイドさんと百合についてのアンソロジー",
+    "platform": null
+   },
+   {
     "work": "週末なにしにいこう?",
+    "platform": null
+   },
+   {
+    "work": "ワンナイト百合アンソロジー",
+    "platform": null
+   },
+   {
+    "work": "会って食べると書きまして。",
     "platform": null
    }
   ],
   "grouping": {
-   "series-link": 222,
-   "title-match": 15,
-   "mixed": 12,
-   "title-only": 53
+   "series-link": 400,
+   "title-match": 22,
+   "mixed": 36,
+   "title-only": 140
   },
   "catalogue_listings": [
    {
@@ -5272,6 +6233,11 @@
     "platform": "カドコミ"
    },
    {
+    "work": "あの娘にキスと白百合を",
+    "why": "a カドコミ shop listing for a work it does not serialise",
+    "platform": "カドコミ"
+   },
+   {
     "work": "クラスのアイドルは今日も推せない",
     "why": "a カドコミ shop listing for a work it does not serialise",
     "platform": "カドコミ"
@@ -5283,6 +6249,11 @@
    },
    {
     "work": "JKとともだちのオカン",
+    "why": "a カドコミ shop listing for a work it does not serialise",
+    "platform": "カドコミ"
+   },
+   {
+    "work": "同棲生活",
     "why": "a カドコミ shop listing for a work it does not serialise",
     "platform": "カドコミ"
    },
@@ -5372,6 +6343,11 @@
     "platform": "カドコミ"
    },
    {
+    "work": "奏 青春バンド百合アンソロジー",
+    "why": "a カドコミ shop listing for a work it does not serialise",
+    "platform": "カドコミ"
+   },
+   {
     "work": "病月",
     "why": "a カドコミ shop listing for a work it does not serialise",
     "platform": "カドコミ"
@@ -5408,6 +6384,11 @@
    },
    {
     "work": "性別不明な中性僕っ子とお姉さん",
+    "why": "a カドコミ shop listing for a work it does not serialise",
+    "platform": "カドコミ"
+   },
+   {
+    "work": "明るい記憶喪失",
     "why": "a カドコミ shop listing for a work it does not serialise",
     "platform": "カドコミ"
    },
