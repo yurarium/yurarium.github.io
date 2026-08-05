@@ -430,3 +430,7 @@
 .relvt { font-weight: 600; }
 .relvm { font-size: .87em; opacity: .66; }
 #rel-note { opacity: .7; font-size: .9em; }
+
+/* A tab's count is filled when its data is. Releases loads works.json on first open, so until
+   then the counter has nothing to say and should not say it with an empty space. */
+nav button .n:empty { display: none; }

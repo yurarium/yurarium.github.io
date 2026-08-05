@@ -1464,7 +1464,7 @@ function stackWrappedRows() {
    the error in the other direction. */
 const EN = {
   /* tabs */
-  '更新':'Updates', '作品':'Works', '単行本':'Volumes',
+  '更新':'Updates', '作品':'Works', '単行本':'Volumes', '発売':'Releases',
 
   /* badges: initial capital */
   '更新中':'Updating', '停滞':'Slow', '休眠':'Dormant', '不明':'Unknown', '完結':'Completed',
