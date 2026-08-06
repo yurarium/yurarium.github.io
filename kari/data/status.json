@@ -1,8 +1,12 @@
 {
- "generated": "2026-08-05T23:39:08+00:00",
+ "generated": "2026-08-06T01:08:21+00:00",
  "since_last": {
-  "at": "2026-08-05T23:32:09+00:00",
-  "statistics": {}
+  "at": "2026-08-06T00:19:40+00:00",
+  "statistics": {
+   "works": 2,
+   "with_identifier": -1,
+   "chapters": 187
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -22,13 +26,13 @@
  },
  "last_run": {
   "at": "2026-08-06",
-  "releases": 1081,
+  "releases": 1067,
   "works": 598,
   "platforms": 22,
-  "series_rows": 1480,
+  "series_rows": 1482,
   "identification": {
-   "platform-genre": 319,
-   "discovery-candidate": 762
+   "discovery-candidate": 763,
+   "platform-genre": 304
   },
   "collapsed": {
    "duplicate_chapters": 78,
@@ -106,7 +110,7 @@
    },
    {
     "name": "works showing a romanisation",
-    "value": 288,
+    "value": 290,
     "budget": 288,
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage."
    },
@@ -186,20 +190,6 @@
    "drop": null
   },
   {
-   "source": "kadokomi",
-   "files": 5,
-   "works": 765,
-   "rows": 5441,
-   "retrieved": "2026-08-03",
-   "age_days": 3,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 4927,
-   "well_formed": 4927,
-   "malformed": 0,
-   "drop": null
-  },
-  {
    "source": "nicovideo",
    "files": 2,
    "works": 190,
@@ -268,11 +258,25 @@
    "well_formed": 7637,
    "malformed": 0,
    "drop": null
+  },
+  {
+   "source": "kadokomi",
+   "files": 5,
+   "works": 769,
+   "rows": 5473,
+   "retrieved": "2026-08-06",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 4958,
+   "well_formed": 4634,
+   "malformed": 324,
+   "drop": null
   }
  ],
  "ledger": {
-  "runs_held": 25,
-  "previous_at": "2026-08-05T23:31:43+00:00",
+  "runs_held": 27,
+  "previous_at": "2026-08-06T00:19:14+00:00",
   "drops": []
  },
  "outstanding": [
@@ -285,7 +289,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 269,
+   "count": 271,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2週間のアバンチュール",
@@ -428,6 +432,7 @@
     "プアプアLIPS",
     "プロジェクト・ユリフォーミング!",
     "ベツキス",
+    "ボドカン！",
     "マザーグール",
     "マッチングアプリ : 百合アンソロジー",
     "メイドさんと百合についてのアンソロジー",
@@ -493,6 +498,7 @@
     "幼馴染の異常可愛い妹ちゃん",
     "彩香ちゃんは弘子先輩に恋してる = AYAKA is in LOVE×LOVE×LOVE with HIROKO",
     "彼女×彼女",
+    "彼女は私の顔もわからない【タテスク】",
     "忘れえぬ魔女の物語",
     "恋の好奇心",
     "恋は秘かに実らせるもの",
@@ -589,27 +595,27 @@
   }
  ],
  "statistics": {
-  "works": 1480,
+  "works": 1482,
   "states": {
    "print": 477,
-   "oneshot": 400,
+   "oneshot": 401,
    "completed": 260,
-   "active": 196,
+   "active": 198,
    "dormant": 57,
-   "unknown": 50,
+   "unknown": 49,
    "slow": 40
   },
   "english_basis": {
    "translated": 1077,
-   "romaji": 256,
+   "romaji": 257,
    "licensed": 65,
    "official-jp": 50,
-   "none": 32
+   "none": 33
   },
   "print_works": 596,
   "print_only": 477,
   "volumes": 1310,
-  "with_identifier": 1480,
-  "chapters": 17151
+  "with_identifier": 1479,
+  "chapters": 17338
  }
 }

@@ -82,7 +82,7 @@
   },
   {
    "name": "works showing a romanisation",
-   "value": 288,
+   "value": 290,
    "budget": 288,
    "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage."
   },
@@ -94,8 +94,8 @@
   },
   {
    "name": "stock phrasing in comments",
-   "value": 897,
-   "budget": 897,
+   "value": 896,
+   "budget": 896,
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage."
   },
   {

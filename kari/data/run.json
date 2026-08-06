@@ -1,9 +1,9 @@
 {
  "generated": "2026-08-06",
- "releases": 1081,
+ "releases": 1067,
  "platforms": 22,
  "works": 598,
- "series_rows": 1480,
+ "series_rows": 1482,
  "sources": [
   {
    "source": "comicfuz",
@@ -38,10 +38,10 @@
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 765,
-   "rows": 5441,
-   "retrieved": "2026-08-03",
-   "age_days": 3,
+   "works": 769,
+   "rows": 5473,
+   "retrieved": "2026-08-06",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -99,11 +99,11 @@
  "claims": {
   "total": 434,
   "by_disposition": {
-   "absorbed": 360,
+   "absorbed": 359,
    "open": 4,
    "unsettleable": 38,
    "phantom": 1,
-   "print-serialised": 26,
+   "print-serialised": 27,
    "scheduled": 2,
    "undatable": 3
   },
@@ -2589,9 +2589,9 @@
     "url": "https://comic-walker.com/detail/KC_003176_S",
     "claimed": "2026-06-30",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "attested on this platform within a week — one event",
-    "platform_latest": "2026-06-26"
+    "disposition": "print-serialised",
+    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
+    "platform_latest": "2026-05-02"
    },
    {
     "work": "ぷれいめ～と",
@@ -6436,12 +6436,12 @@
     "platform": "カドコミ"
    },
    {
-    "work": "ジャック・ジャンク・ジャンキー",
+    "work": "となりの吸血鬼さん",
     "why": "a カドコミ shop listing for a work it does not serialise",
     "platform": "カドコミ"
    },
    {
-    "work": "異世界女子監獄",
+    "work": "ジャック・ジャンク・ジャンキー",
     "why": "a カドコミ shop listing for a work it does not serialise",
     "platform": "カドコミ"
    },
@@ -6457,6 +6457,11 @@
    },
    {
     "work": "猫のまにまに",
+    "why": "a カドコミ shop listing for a work it does not serialise",
+    "platform": "カドコミ"
+   },
+   {
+    "work": "異世界女子監獄",
     "why": "a カドコミ shop listing for a work it does not serialise",
     "platform": "カドコミ"
    },
@@ -6484,7 +6489,7 @@
    },
    {
     "week": "2026-06-21",
-    "n": 131
+    "n": 130
    },
    {
     "week": "2026-06-28",
@@ -6508,20 +6513,20 @@
    },
    {
     "week": "2026-08-02",
-    "n": 74
+    "n": 61
    }
   ],
   "trimmed_weeks": 3,
-  "pre_tracking_releases": 992,
+  "pre_tracking_releases": 991,
   "tracking_from": "2026-08-01"
  },
  "access_modes": {
-  "free": 662,
   "purchase": 313,
+  "free": 648,
   "free-timed": 78
  },
  "update_kinds": {
-  "new-chapter": 1002,
+  "new-chapter": 988,
   "final": 6,
   "new-series": 32,
   "oneshot": 21,
@@ -6529,8 +6534,8 @@
   "skipped": 1
  },
  "identification": {
-  "platform-genre": 319,
-  "discovery-candidate": 762
+  "discovery-candidate": 763,
+  "platform-genre": 304
  },
  "collapsed": {
   "duplicate_chapters": 78,
