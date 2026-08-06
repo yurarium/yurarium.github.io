@@ -1446,8 +1446,29 @@ async function paintVolumes(r) {
    different way. Two producers of one fact, and they disagreed: navUrl gives a work the path form
    and these gave it whatever the literal above said. Now they set PAGE_WORK and call navSync, so
    there is one function that knows what a work's address is. */
+/* WHERE A RETIRED IDENTIFIER WENT.
+
+   Two records turning out to be one work retires an id, and the registry has recorded where it
+   went since the beginning. Nothing outside identity.py read it, so a work page asked for a retired
+   id found no row and rendered a blank page: 20 of 26 retired ids were addresses that resolved in
+   the morning and resolved nowhere by the evening, which is the failure an opaque minted id exists
+   to prevent.
+
+   A chain is followed to whatever is live now, because A into B into C must land on C. */
+function liveId(id) {
+  const map = (SERIES && SERIES.merged) || {};
+  const rows = (SERIES && SERIES.series) || [];
+  let cur = id, seen = new Set([id]);
+  while (cur && !rows.some(r => r.id === cur) && map[cur] && !seen.has(map[cur])) {
+    cur = map[cur];
+    seen.add(cur);
+  }
+  return cur;
+}
+
 function openWorkPage(id, push = true) {
   if (!id) return;
+  id = liveId(id);
   PAGE_WORK = id;
   renderWorkPage();
   navSync(push);

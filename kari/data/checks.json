@@ -65,6 +65,11 @@
    "name": "state agrees with its own date",
    "violations": 0,
    "examples": []
+  },
+  {
+   "name": "undated works say where and why",
+   "violations": 0,
+   "examples": []
   }
  ],
  "budgets": [
@@ -76,14 +81,14 @@
   },
   {
    "name": "works without English",
-   "value": 84,
-   "budget": 81,
+   "value": 109,
+   "budget": 109,
    "means": "works that render in Japanese in English-only mode. Should be 0; a rise means the automatic naming pass stopped covering something it used to."
   },
   {
    "name": "works showing a romanisation",
-   "value": 1980,
-   "budget": 1948,
+   "value": 1191,
+   "budget": 1191,
    "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage."
   },
   {
@@ -117,9 +122,15 @@
    "means": "rows admitted from BOOK☆WALKER's shelf with no first publication VENUE, which is what §6's scope test turns on since the 2026-08-05 amendment. A row without one has not been fetched yet, or its series page listed nothing readable. Falls as adapters/recon/bookwalker_volumes.py works through the queue, and reaches zero when it finishes. The date is deliberately not what is counted: 1,500 of these titles are digital-only, have no print edition anywhere, and are complete records without one."
   },
   {
+   "name": "bookwalker series unread",
+   "value": 16,
+   "budget": 16,
+   "means": "BOOK☆WALKER rows whose series listing has not been read to the end, so their volume list and the first publication drawn from it rest on whichever volumes were fetched. The shelf linked one volume for 1,175 of them and this module read only page one of a paginated listing for a few more. Falls as adapters/recon/bookwalker_volumes.py --follow-series works through them, and reaches zero, because every row counted here names a series to fetch."
+  },
+  {
    "name": "undated cmoa candidates",
-   "value": 1681,
-   "budget": 1681,
+   "value": 1271,
+   "budget": 1271,
    "means": "the same count for the コミックシーモア half of the queue, falling as adapters/cmoa_volumes.py works through it. Its floor is high and known: cmoa states an ISBN or an 出版年月 only where a volume was printed, and 754 of the 1,844 rows come from two digital distributors whose pages carry neither."
   },
   {

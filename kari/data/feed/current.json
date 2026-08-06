@@ -590,7 +590,11 @@
      "double": "Akirakani Nenrei o Sashou Shite Iru Joshikousei VTuber",
      "plain": "Akirakani Nenrei o Sasho Shite Iru Joshikosei VTuber"
     },
-    "basis": "romaji",
+    "en": "High school girl VTuber who clearly lies about her age",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "High school girl VTuber who clearly lies about her age"
+    },
     "reading_basis": "analyser",
     "unverified": true
    },
@@ -6513,7 +6517,11 @@
      "double": "Reijou VTuber wa Meido no Yashoku ni Juurin Sareru ~ Kindan Gohan de Shoku Reposei Haishin ~",
      "plain": "Reijo VTuber wa Meido no Yashoku ni Jurin Sareru ~ Kindan Gohan de Shoku Reposei Haishin ~"
     },
-    "basis": "romaji",
+    "en": "The Young Lady VTuber Is Overwhelmed by Her Maid's Midnight Snacks: Forbidden Food, Reviewed Live",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Young Lady VTuber Is Overwhelmed by Her Maid's Midnight Snacks: Forbidden Food, Reviewed Live"
+    },
     "reading_basis": "analyser",
     "unverified": true
    },
@@ -6630,7 +6638,11 @@
      "double": "Sekaiichi Kawaii Watashi no Osananajimi ga Kakurete VTuber o Shite Irurashii",
      "plain": "Sekaichi Kawai Watashi no Osananajimi ga Kakurete VTuber o Shite Irurashi"
     },
-    "basis": "romaji",
+    "en": "Apparently My Childhood Friend, the Cutest in the World, Is Secretly a VTuber",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Apparently My Childhood Friend, the Cutest in the World, Is Secretly a VTuber"
+    },
     "reading_basis": "analyser",
     "unverified": true
    },
@@ -8143,7 +8155,11 @@
      "double": "Akirakani Nenrei o Sashou Shite Iru Joshikousei VTuber",
      "plain": "Akirakani Nenrei o Sasho Shite Iru Joshikosei VTuber"
     },
-    "basis": "romaji",
+    "en": "High school girl VTuber who clearly lies about her age",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "High school girl VTuber who clearly lies about her age"
+    },
     "reading_basis": "analyser",
     "unverified": true
    },
@@ -10722,7 +10738,11 @@
      "double": "Bakugatari ZzZ",
      "plain": "Bakugatari ZzZ"
     },
-    "basis": "romaji",
+    "en": "Baku Tales zzZ",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Baku Tales zzZ"
+    },
     "reading_basis": "analyser",
     "unverified": true
    },
@@ -10936,7 +10956,8 @@
     "en": "Touma",
     "basis": "romaji",
     "reading_basis": "stated"
-   }
+   },
+   "wid": "w00067"
   },
   {
    "late_discovered": false,
@@ -11201,7 +11222,8 @@
     },
     "basis": "romaji",
     "reading_basis": "stated"
-   }
+   },
+   "wid": "w00056"
   },
   {
    "late_discovered": false,
@@ -11294,7 +11316,8 @@
     "en": "KUWABARA Tamotsu",
     "basis": "romaji",
     "reading_basis": "surface"
-   }
+   },
+   "wid": "w00055"
   },
   {
    "late_discovered": false,
@@ -11684,8 +11707,9 @@
      "plain": "Baddogaru"
     },
     "en": "Bad Girl",
-    "basis": "translated",
+    "basis": "licensed",
     "en_forms": {
+     "licensed": "Bad Girl",
      "translated": "Bad Girl"
     },
     "reading_basis": "surface"
@@ -15588,7 +15612,11 @@
      "double": "Sekaiichi Kawaii Watashi no Osananajimi ga Kakurete VTuber o Shite Irurashii",
      "plain": "Sekaichi Kawai Watashi no Osananajimi ga Kakurete VTuber o Shite Irurashi"
     },
-    "basis": "romaji",
+    "en": "Apparently My Childhood Friend, the Cutest in the World, Is Secretly a VTuber",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Apparently My Childhood Friend, the Cutest in the World, Is Secretly a VTuber"
+    },
     "reading_basis": "analyser",
     "unverified": true
    },
@@ -16267,16 +16295,29 @@
     "reading_basis": "researched"
    },
    "author_en": {
-    "reading": "ウ テモ",
+    "reading": "ユウテモ",
+    "ruby": [
+     [
+      "U",
+      "ゆ"
+     ],
+     [
+      "-",
+      null
+     ],
+     [
+      "temo",
+      "うても"
+     ]
+    ],
     "romaji": {
-     "macron": "U Temo",
-     "double": "U Temo",
-     "plain": "U Temo"
+     "macron": "Yūtemo",
+     "double": "Yuutemo",
+     "plain": "Yutemo"
     },
     "en": "U-temo",
     "basis": "stated",
-    "reading_basis": "back-converted",
-    "unverified": true
+    "reading_basis": "stated"
    },
    "wid": "w00105"
   },
