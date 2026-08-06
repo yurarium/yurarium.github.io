@@ -230,7 +230,10 @@
   .wplink:hover{color:var(--accent);border-bottom-color:var(--accent)}
   .wp-sub{font-size:.92rem;margin:1.4rem 0 .5rem;font-weight:600}
   .wp-n{color:var(--faint);font-weight:400;font-size:.8rem}
+  /* What the list does not enumerate, because the rows would be identical and empty. */
+  .vnone{font-size:.8rem;color:var(--dim);margin:0 0 .5rem}
   .vols{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .vols:empty{display:none}
   .vol{display:grid;grid-template-columns:5.5rem auto 1fr;gap:.2rem .8rem;align-items:baseline;
     padding:.4rem .2rem;border-bottom:1px solid var(--line);font-size:.85rem}
   .voln{font-weight:600}

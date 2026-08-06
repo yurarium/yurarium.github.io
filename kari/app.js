@@ -1419,9 +1419,20 @@ async function paintVolumes(r) {
     merged.push({ ...v });
   }
   rows = merged;
+  /* A ROW THAT SAYS NOTHING, SAID 133 TIMES, IS NOT A LIST.
+     付き合ってあげてもいいかな【単話】 holds 133 releases and BOOK☆WALKER dates none of them, so
+     the page ran to 17,501px of identical lines reading 刊行日不明. A volume carrying no date, no
+     number and no ISBN distinguishes itself from its neighbours in nothing, and counting them is
+     the whole of what there is to say. So they are counted, and the ones that carry something are
+     listed. */
+  const says = v => v.published || v.isbn || v.number || (v.editions || []).length;
+  const told = rows.filter(says), silent = rows.length - told.length;
   el('wp-vols').innerHTML =
     `<h3 class="wp-sub">${esc(T('収録巻', 'Volumes'))} <span class="wp-n">${rows.length}</span></h3>` +
-    '<ol class="vols">' + rows.map(v => {
+    (silent ? `<p class="vnone">${esc(T(
+        `${silent}巻は刊行日も書誌情報も記録がない`,
+        `${silent} with no date and nothing else recorded`))}</p>` : '') +
+    '<ol class="vols">' + told.map(v => {
       const n = v.number ? `<span class="voln">${esc(volLabel(v.number))}</span>` : '';
       const d = v.published
         ? `<time datetime="${esc(v.published)}">${esc(fmtDate(v.published, { year: true }))}</time>`
