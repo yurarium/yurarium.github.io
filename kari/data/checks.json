@@ -70,20 +70,20 @@
  "budgets": [
   {
    "name": "uncertain readings",
-   "value": 22,
-   "budget": 22,
+   "value": 64,
+   "budget": 64,
    "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes."
   },
   {
    "name": "works without English",
-   "value": 20,
-   "budget": 20,
+   "value": 84,
+   "budget": 81,
    "means": "works that render in Japanese in English-only mode. Should be 0; a rise means the automatic naming pass stopped covering something it used to."
   },
   {
    "name": "works showing a romanisation",
-   "value": 290,
-   "budget": 290,
+   "value": 1980,
+   "budget": 1948,
    "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage."
   },
   {
