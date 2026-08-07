@@ -581,3 +581,25 @@ nav button .n:empty { display: none; }
 .wp-title { font-size: 1.35rem; margin: 0 0 .5rem; line-height: 1.35; }
 .wp-detail { display: block !important; margin-top: 1rem; }
 .wp-detail .dk { min-width: 7rem; }
+
+  /* WORK PAGE SECTIONS. A statement about a serialisation and a statement about a printed book
+     are different kinds of fact, and they used to share one grid. The rule above each heading is
+     what separates them; the heading itself is small because it labels a group rather than
+     announcing one. The work needs no heading of its own: the page is the work. */
+  .wp-sect{border-top:1px solid var(--line);margin-top:1.4rem;padding-top:.85rem}
+  .wp-sect h3{font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--dim);
+    margin:0 0 .6rem;font-weight:600}
+  .wp-scroll{overflow-x:auto}
+  .wp-rows{width:100%;border-collapse:collapse;font-size:.9rem}
+  .wp-rows td,.wp-rows th{text-align:left;padding:.34rem .6rem .34rem 0;
+    border-bottom:1px solid var(--line);vertical-align:top}
+  .wp-rows th{color:var(--dim);font-weight:500;font-size:.78rem;letter-spacing:.03em}
+  .wp-next{color:var(--dim);font-size:.86rem;margin:.5rem 0 0}
+  .wp-next .wf-sub{margin-left:.4rem}
+  /* Collapsed by default: most readers want the book, and the ones who want the provenance want
+     all of it rather than a summary of it. */
+  .wp-src{border-top:1px solid var(--line);margin-top:1.4rem;padding-top:.85rem}
+  .wp-src summary{cursor:pointer;font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--dim);font-weight:600}
+  .wp-basis{font-size:.9rem;color:var(--fg);border-left:2px solid var(--line);
+    padding-left:.8rem;margin:.75rem 0}

@@ -1635,39 +1635,108 @@ function renderWorkPage() {
      and on a work published only in volumes it is the first volume, so it is labelled for what it
      is rather than given one word that is right half the time. */
   const web = (r.chapters || 0) > 0;
-  fact(web ? T('最新話', 'Latest chapter') : T('最新', 'Latest'), r.latest
-    ? esc(fmtDate(r.latest, { year: true }))
-      + (phraseOf(r.latest_ep) ? `<span class="wf-sub">${esc(phraseOf(r.latest_ep))}</span>` : '')
-    : '');
+  const hasPrint = (r.print || []).length > 0;
+  /* WHEN THE WORK RAN, as one span rather than two facts a reader has to subtract. The end of it
+     is the latest thing that happened of either kind, which is what `latest_any` carries; `latest`
+     is the serialisation's own date and stays where it decides the state. */
+  const ran = [r.first ? fmtDate(r.first, { year: true }) : '',
+               r.latest_any ? fmtDate(r.latest_any, { year: true }) : '']
+    .filter(Boolean);
+  fact(T('刊行', 'Published'),
+       ran.length === 2 && ran[0] !== ran[1] ? esc(ran.join(' – ')) : esc(ran[0] || ''));
+  /* LENGTH IS THE WORK'S SIZE, not our coverage of it. Chapters is a floor, so it is written as
+     one; volumes is a count the bibliography states outright. */
+  const len = [];
+  if (r.chapters) {
+    len.push(T(`${r.chapters}話以上`, `at least ${r.chapters} chapters`));
+  }
+  (r.print || []).forEach(pr => { if (pr.volumes) len.push(volCount(pr.volumes)); });
+  fact(T('分量', 'Length'), esc(len.join(T('・', ' · '))));
+  /* WHAT FORM IT EXISTS IN. Every row can answer this and it had to be inferred from which
+     sections happened to be populated. */
+  fact(T('形態', 'Available as'), esc(
+    web && hasPrint ? T('ウェブ連載と単行本', 'web serialisation and collected volumes')
+    : web ? T('ウェブ連載', 'web serialisation')
+    : hasPrint ? T('単行本', 'collected volumes') : ''));
   // What the platform says comes next. Marked as the platform's statement, because it is a date
   // for something that has not happened.
   /* A DATE FOR SOMETHING THAT HAS NOT HAPPENED has to still be in the future. アイドラトリィ
      carried a next-update date equal to the day its newest chapter arrived, so the page announced
      a chapter that was already on the shelf below it. Shown only when it is later than both the
      newest chapter and today. */
+  /* A DATE FOR SOMETHING THAT HAS NOT HAPPENED has to still be in the future. アイドラトリィ
+     carried a next-update date equal to the day its newest chapter arrived, so the page announced
+     a chapter already on the shelf below it. Shown only when it is later than both the newest
+     chapter and today, and it sits with the serialisation because it is a platform's statement. */
   const nx = (r.stated_next || {}).next_update || '';
-  if (nx && nx > String(r.latest || '') && nx >= todayISO()) {
-    fact(T('次の話', 'Next chapter'), `${esc(fmtDate(nx, { year: true }))}`
-      + `<span class="wf-sub">${esc(T(`${platName(r.stated_next.platform)}の予告`,
-                                      `announced by ${platName(r.stated_next.platform)}`))}</span>`);
-  }
-  fact(web ? T('初回掲載', 'First chapter') : T('初刊', 'First volume'),
-       r.first ? esc(fmtDate(r.first, { year: true })) : '');
-  fact(T('話数', 'Chapters'), r.chapters
-    ? esc(String(r.chapters) + (r.partial ? '+' : ''))
-      + (accessLine(r) ? `<span class="wf-sub">${esc(accessLine(r))}</span>` : '')
-    : '');
-  (r.print || []).forEach(pr => fact(T('単行本', 'In print'),
-    (pr.volumes ? esc(volCount(pr.volumes)) : '')
-    + (() => {
-        const who = [pubBoth(publisherOf(pr.publisher)), pubBoth(imprintOf(pr.imprint))]
-          .filter(Boolean).join(' · ');
-        return who ? `<span class="wf-sub">${esc(who)}</span>` : '';
-      })()));
+  const nextLine = nx && nx > String(r.latest || '') && nx >= todayISO()
+    ? `<p class="wp-next">${esc(T('次回更新：', 'Next chapter: '))}${
+        esc(fmtDate(nx, { year: true }))}<span class="wf-sub">${
+        esc(platName(r.stated_next.platform))}</span></p>`
+    : '';
   if (r.collection && r.collection !== r.work) {
     fact(T('収録', 'Part of'), esc(workTextOf(r.collection)));
   }
 
+
+  /* THE PAGE IS THE WORK, SO THE WORK NEEDS NO HEADING. What follows it does: a reader has to be
+     able to tell a statement about a serialisation from a statement about a printed book, and the
+     old page ran both through one grid where 話数 sat beside 単行本 as though they were the same
+     kind of fact. Only the sections that could be mistaken for each other are named. */
+  const sect = (title, body) => body
+    ? `<section class="wp-sect"><h3>${esc(title)}</h3>${body}</section>` : '';
+
+  /* WEB SERIALISATION. One row per platform, because what a platform holds, what it charges for
+     and when it last updated are all properties of that platform's offer and not of the work.
+     "12 of 99" rather than "12" keeps our coverage and the work's length apart, which is the same
+     conflation the works list carries. */
+  const chapRows = (r.sources || []).map(s => {
+    const f = (s.free || 0) + (s.free_timed || 0);
+    const held = r.chapters && s.chapters && r.chapters > s.chapters
+      ? T(`${r.chapters}話中${s.chapters}話`, `${s.chapters} listed of ${r.chapters}`)
+      : String(s.chapters || '') + (s.partial ? '+' : '');
+    const money = [f ? T(`${f}話無料`, `${f} free`) : '',
+                   s.priced ? T(`${s.priced}話有料`, `${s.priced} to buy`) : '']
+      .filter(Boolean).join(T('・', ' · '));
+    const nm = s.url
+      ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer nofollow">${
+           esc(platBoth(s.platform))}</a>`
+      : esc(platBoth(s.platform));
+    return `<tr><td>${nm}</td><td>${esc(held)}</td><td>${esc(money)}</td><td>${
+      s.latest ? esc(fmtDate(s.latest, { year: true })) : ''}</td></tr>`;
+  }).join('');
+  const webBody = chapRows ? `<div class="wp-scroll"><table class="wp-rows">
+      <tr><th>${esc(T('掲載サイト', 'Platform'))}</th><th>${esc(T('話数', 'Chapters'))}</th>
+          <th>${esc(T('閲覧', 'Reading'))}</th><th>${esc(T('最新', 'Newest'))}</th></tr>
+      ${chapRows}</table></div>${nextLine}` : '';
+
+  /* COLLECTED VOLUMES. paintVolumes fills #wp-vols and is left where it is; what it lists belongs
+     under this heading rather than after an undifferentiated run of facts. Seller links are NOT
+     here yet: shop_url is on the source records and reaches no build output. */
+  const printBody = (r.print || []).map(pr => {
+    const who = [pubBoth(publisherOf(pr.publisher)), pubBoth(imprintOf(pr.imprint))]
+      .filter(Boolean).join(' · ');
+    return `<dl class="wp-facts"><div class="wf"><dt>${esc(T('出版社', 'Publisher'))}</dt>
+      <dd>${esc(who || '')}</dd></div><div class="wf"><dt>${esc(T('巻数', 'Volumes'))}</dt>
+      <dd>${pr.volumes ? esc(volCount(pr.volumes)) : ''}${
+        pr.first ? `<span class="wf-sub">${esc(T('初刊 ', 'from '))}${
+          esc(fmtDate(pr.first, { year: true }))}</span>` : ''}</dd></div></dl>`;
+  }).join('');
+
+  /* SOURCES OF INFORMATION, collapsed. Most readers want the book; the ones who want the
+     provenance want all of it. What can be shown today is why the work is held and how its state
+     was decided. The evidence table the mockup carries, one row per source with the term it filed
+     the work under and the date it was read, needs those fields emitted into series.json and is
+     deliberately not faked from what is here. */
+  const basis = [];
+  if (why) basis.push(`<p class="wp-basis">${esc(why)}</p>`);
+  if (r.state_basis || r.state_basis_ja) {
+    basis.push(`<p class="wp-basis">${esc(T(r.state_basis_ja || r.state_basis,
+                                            r.state_basis || r.state_basis_ja))}</p>`);
+  }
+  const srcBody = basis.length
+    ? `<details class="wp-src"><summary>${esc(T('出典', 'Sources of information'))}</summary>
+         ${basis.join('')}</details>` : '';
 
   const from = document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'ser';
   const backTo = from === 'feed' ? T('← 更新一覧', '← All updates')
@@ -1678,11 +1747,11 @@ function renderWorkPage() {
     <header class="wp-head">
       <h2 class="wp-title">${workLabel(r)}</h2>
       <p class="wp-badges">${badges.join('')}</p>
-      ${why ? `<p class="wp-why">${esc(why)}</p>` : ''}
     </header>
-    ${src ? `<div class="srcs wp-srcs">${src}</div>` : ''}
     <dl class="wp-facts">${facts.join('')}</dl>
-    <div id="wp-vols"></div>
+    ${sect(T('ウェブ連載', 'Web serialisation'), webBody)}
+    ${sect(T('単行本', 'Collected volumes'), printBody + '<div id="wp-vols"></div>')}
+    ${srcBody}
     <div class="wp-prov" id="wp-extra"></div>`;
   el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeWorkPage(true); });
   paintVolumes(r);
