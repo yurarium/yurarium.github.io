@@ -742,6 +742,19 @@ const EV_HOLDS = {
 const evType = k => (EV_TYPE[k] ? T(EV_TYPE[k][0], EV_TYPE[k][1]) : (k || ''));
 const evHolds = k => (EV_HOLDS[k] ? T(EV_HOLDS[k][0], EV_HOLDS[k][1]) : (k || ''));
 
+/* A PUBLISHER AND AN IMPRINT ARRIVE AS CATALOGUING, and the volumes section above already knows
+   what to do about it. MADB writes a distributor as `[頒布]講談社` and spells one imprint at least
+   six ways, `IDコミックス. Yurihime comics = コミック百合姫` among them. Six spellings of 百合姫
+   in one table read as six different imprints, which is the opposite of what an imprint is for.
+
+   THE TERM IS STILL THE SOURCE'S CLAIM. What is dropped is the notation around it, not the word:
+   `imprintOf` picks the most specific segment and maps a Latin spelling onto the Japanese name of
+   the same line, so a reader sees the imprint the publisher prints rather than the string a
+   cataloguer typed. Same function the volumes section uses, so the two cannot drift. */
+const evSource = e => ((e.type === 'publisher' || e.type === 'magazine')
+  ? pubBoth(publisherOf(e.source)) : sourceBoth(e.source));
+const evTerm = e => (e.kind === 'imprint' ? imprintOf(e.term) : e.term);
+
 /* THE CUE IS A SHAPE, NOT A COLOUR, so it carries for a reader who cannot tell two colours apart.
    Three segments over five ranks: the publisher's own imprint fills all three, its other §4
    labelling fills two, and a comparator fills one. That is the line the documents actually draw,
@@ -758,6 +771,25 @@ const rankCue = rank => `<span class="wp-bars" aria-hidden="true">${
    imprint is the publisher's act recorded by the national bibliography, so a link under 一迅社
    would take a reader to mediaarts-db. Putting it on the date says what it is, and the same
    mistake in the other direction put the bibliography under a heading reading "Sold at". */
+/* Rows of rendered cells to table markup, keeping the first of any two that READ alike and the
+   order they arrived in. Two rows a reader cannot tell apart are one row.
+
+   Compared on the text and not on the markup, which is the whole point. Two editions of one work
+   have two catalogue records, so the same imprint claim arrives twice with a different address
+   behind the date, and comparing the markup left both rows standing and the table saying the same
+   thing twice. The reader is being shown one claim; the first address stands for it. */
+function onceEach(rows) {
+  const seen = new Set(), out = [];
+  for (const cells of rows) {
+    const html = cells.join('');
+    const key = html.replace(/<[^>]*>/g, '');
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(`<tr>${html}</tr>`);
+  }
+  return out.join('');
+}
+
 function readCell(x) {
   const d = x.read ? esc(fmtDate(x.read, { year: true })) : '';
   if (!d || !x.url) return d;
@@ -1434,34 +1466,13 @@ async function paintVolumes(r) {
     if (!ids.includes(w.work_id)) return;
     (w.volumes || []).forEach(v => rows.push(v));
   });
-  // WHY THIS WORK IS HERE, which §2 requires a reader to be able to tell. 296 works were admitted
-  // because a licensed retailer shelved them under 百合, and the record names the shop and the
-  // shelf. The page showed neither, so a reader could not tell that from a publisher's own label.
-  const said = [];
-  (WORKS.works || []).forEach(w => {
-    if (!ids.includes(w.work_id)) return;
-    (w.admitted_by || []).forEach(a => {
-      const line = T(`${a.comparator} の${a.shelf}に収録`, `listed on ${a.comparator} ${a.shelf}`);
-      if (!said.includes(line)) said.push(line);
-    });
-  });
-  // The bibliography's own record, where there is one. A synthetic id is ours, grouped by title
-  // and standing for no page anybody else publishes, so it links nowhere.
-  const cat = ids.filter(i => /^C\d+$/.test(String(i)))
-    .map(i => `<a href="https://mediaarts-db.artmuseums.go.jp/id/${esc(i)}"
-        target="_blank" rel="noopener noreferrer nofollow">${
-        esc(T('メディア芸術データベース', 'Media Arts Database'))}</a>`);
-  /* WHERE THE RECORD COMES FROM, at the foot and quietly. §2 wants a reader able to tell whether a
-     work is here because a publisher called it yuri or because a shop shelved it there, and that
-     is worth stating and not worth stating first: it answers a question about US, asked after the
-     ones about the manga. */
-  const extra = [];
-  if (said.length) extra.push(`<span>${esc(said.join(' · '))}</span>`);
-  if (cat.length) extra.push(cat.join(' '));
-  // REPLACED, NOT APPENDED. Two renders of the same work each start this, and both resolve after
-  // the last one has rebuilt the page, so appending wrote the catalogue and the admission twice.
-  const slot = el('wp-extra');
-  if (slot) slot.innerHTML = extra.length ? extra.join('<span class="wp-dot">·</span>') : '';
+  /* THE ADMISSION AND THE CATALOGUE LINK USED TO BE ASSEMBLED HERE, as a line of prose at the
+     foot of the page: which comparator shelved the work, and a link to its bibliography record.
+     Both are rows in the sources tables now, with the shelf's own word quoted and the day each
+     source was read beside it, so this said the same thing a second time in a weaker form. Two
+     producers of one fact is the shape behind most of the bugs in this project, and the table is
+     the better producer: it is built from `evidence` and `sourced_from`, which build.py derives
+     from the source records rather than from whatever happens to be in works.json. */
 
   if (!rows.length) return;
   rows.sort(byVolume);
@@ -1815,12 +1826,17 @@ function renderWorkPage() {
      name are visibly different claims, and a reader weighs them without a sentence of ours
      explaining which is stronger. An earlier draft wrote that sentence per row and it needed two
      authored strings per work per source. */
-  const evRows = (r.evidence || []).map(e => `<tr>
-      <td class="wp-cue">${rankCue(e.rank)}</td>
-      <td>${esc(sourceBoth(e.source))}</td>
-      <td class="wp-kind">${esc(evType(e.type))}</td>
-      <td><span class="wp-term">${esc(e.term)}</span></td>
-      <td class="wp-read">${readCell(e)}</td></tr>`).join('');
+  /* DEDUPED AFTER RENDERING, NOT BEFORE. build.py drops rows that repeat, and it compares the
+     strings MADB stored: 一迅社 spells one imprint `IDコミックス. Yurihime comics` on one edition
+     of a work and `IDコミックス　／　Yuri-hime comics` on the next, so two rows survive that. Both
+     then normalise to コミック百合姫 here and the table said the same thing twice on two works.
+     What makes two rows one is what a reader sees, so the comparison belongs where that is made. */
+  const evRows = onceEach((r.evidence || []).map(e => [
+      `<td class="wp-cue">${rankCue(e.rank)}</td>`,
+      `<td>${esc(evSource(e))}</td>`,
+      `<td class="wp-kind">${esc(evType(e.type))}</td>`,
+      `<td><span class="wp-term">${esc(evTerm(e))}</span></td>`,
+      `<td class="wp-read">${readCell(e)}</td>`]));
   /* EVERYTHING ELSE WE READ A SOURCE FOR, kept in its own table on purpose. A volume count and a
      chapter count say nothing about whether a work is yuri, and running them into the table above
      would pad the classification case with rows answering a different question, which would make
@@ -1828,13 +1844,12 @@ function renderWorkPage() {
   /* The platform half is read off `sources`, which already states each platform, when it was read
      and where. series.json carries it once and this joins it here; copying it into a second list
      would be the same fact with two producers, and a megabyte of the works index besides. */
-  const heldRows = (r.sourced_from || []).concat(
+  const heldRows = onceEach((r.sourced_from || []).concat(
       (r.sources || []).map(s => ({ source: s.platform, holds: 'chapters',
                                     read: s.retrieved, url: s.url })))
-    .map(x => `<tr>
-      <td>${esc(sourceBoth(x.source))}</td>
-      <td>${esc(evHolds(x.holds))}</td>
-      <td class="wp-read">${readCell(x)}</td></tr>`).join('');
+    .map(x => [`<td>${esc(sourceBoth(x.source))}</td>`,
+               `<td>${esc(evHolds(x.holds))}</td>`,
+               `<td class="wp-read">${readCell(x)}</td>`]));
   const evTable = evRows ? `<h4 class="wp-subh">${esc(T('百合分類の根拠（根拠の強さ順）',
         'Basis for classification as yuri, by strength of evidence'))}</h4>
       <div class="wp-scroll"><table class="wp-rows wp-ev">
@@ -1871,8 +1886,7 @@ function renderWorkPage() {
     <dl class="wp-facts">${facts.join('')}</dl>
     ${sect(T('ウェブ連載', 'Web serialisation'), webBody)}
     ${sect(T('単行本', 'Collected volumes'), printBody + '<div id="wp-vols"></div>')}
-    ${srcBody}
-    <div class="wp-prov" id="wp-extra"></div>`;
+    ${srcBody}`;
   el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeWorkPage(true); });
   paintVolumes(r);
   window.scrollTo(0, 0);
