@@ -7,6 +7,16 @@
    "examples": []
   },
   {
+   "name": "one row per identifier",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "first date precedes its editions",
+   "violations": 0,
+   "examples": []
+  },
+  {
    "name": "no ruby over bare Latin",
    "violations": 0,
    "examples": []
@@ -78,6 +88,12 @@
   }
  ],
  "budgets": [
+  {
+   "name": "implausible ruby spans",
+   "means": "furigana runs holding fewer kana than they have kanji. A rise means the aligner placed a boundary somewhere no reading could fall, which the spelling check cannot see.",
+   "budget": 13,
+   "value": 13
+  },
   {
    "name": "uncertain readings",
    "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
