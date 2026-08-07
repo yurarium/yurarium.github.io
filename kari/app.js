@@ -451,10 +451,34 @@ function workTextOf(ja) {
   return (LANG === 'en' && e) ? e.text : phraseOf(ja);
 }
 
+/* An edition marker a catalogue appends to a title. A small closed set, so it is glossed rather
+   than left to strand an otherwise translated title in Japanese. */
+const EDITION_EN = {
+  '完全版': 'Complete Edition', '電子単行本': 'Digital Edition', '新装版': 'New Edition',
+  '合本版': 'Omnibus Edition', '分冊版': 'Serialised Edition', '雑誌掲載版': 'Magazine Edition',
+};
+const EDITION_TAIL = /\s*[:：]\s*(完全版|新装版|合本版)\s*$|\s*【\s*([^】]+?)\s*】\s*$/;
+
+/* A TITLE PLUS AN EDITION MARKER IS THE SAME WORK. 恋愛遺伝子XX is "The Romance Gene XX" and
+   恋愛遺伝子XX : 完全版 had no English at all, so a translated title was stranded in Japanese by a
+   two-character suffix. The base is asked for its name and the marker is glossed beside it. Only
+   markers in the set above qualify: a subtitle is part of a title and is not guessed at. */
+function editionLabel(work) {
+  const m = EDITION_TAIL.exec(work || '');
+  if (!m) return null;
+  const marker = (m[1] || m[2] || '').trim();
+  const en = EDITION_EN[marker];
+  if (!en) return null;
+  const base = work.slice(0, m.index).trim();
+  const e = enOf(nameFor('titles', base, null));
+  return e ? `${e.text} (${en})` : null;
+}
+
 function workLabel(r) {
   const e = enOf(nameFor('titles', r.work, r.work_en));
   const rec = nameFor('titles', r.work, r.work_en);
   if (LANG === 'en' && e) return esc(e.text) + uncertainMark(rec, e);
+  if (LANG === 'en') { const ed = editionLabel(r.work); if (ed) return esc(ed); }
   if (LANG === 'en') { const ph = phraseOf(r.work); if (ph !== r.work) return esc(ph); }
   return ruby(r.work, rec) + (FURIGANA ? uncertainMark(rec) : '');
 }
@@ -678,9 +702,22 @@ const ROLE_EN = {
   '著':'author', '原作':'story', '漫画':'art', '作画':'art', '脚本':'script',
   'キャラクターデザイン原案':'character design',
 };
+/* A CREDIT LINE IS ROLES AND PEOPLE, and this translated only the roles. `[著]やまじえびね` became
+   `[author]やまじえびね`, which is an English label welded to a Japanese name and reads worse than
+   either language alone. The names go through the store the rest of the site uses, so a person
+   already rendered elsewhere is rendered the same way here.
+
+   A NAME THE STORE DOES NOT HOLD IS LEFT AS IT IS. Dropping it would lose the credit, and
+   romanising it here would put a second producer of a romanisation beside the one in the store. */
 function credit(c) {
   if (LANG !== 'en' || !c) return c || '';
-  return c.replace(/\[([^\]]+)\]/g, (m, r) => ROLE_EN[r] ? `[${ROLE_EN[r]}]` : m);
+  const roled = c.replace(/\[([^\]]+)\]/g, (m, r) => ROLE_EN[r] ? `[${ROLE_EN[r]}]` : m);
+  return roled.replace(/[^\[\]\/、,]+/g, seg => {
+    const name = seg.trim();
+    if (!name || !/[\u3040-\u30ff\u3400-\u9fff]/.test(name)) return seg;
+    const shown = personName(nameFor('authors', name, null));
+    return shown ? seg.replace(name, shown) : seg;
+  });
 }
 
 /* The source chips sit OUTSIDE bilingual(). They are links, and two sets of clickable chips to the
@@ -3032,11 +3069,18 @@ function renderCat() {
     ? `${rows.length} ${T('作品', 'works')}`
     : `${rows.length} ${T('作品表示', 'shown')}　·　${INDEX.length} ${T('作品', 'works')}`;
   el('empty').hidden = rows.length > 0;
+  /* THE TITLE GOES THROUGH THE NAME STORE, LIKE EVERY OTHER LIST. This one printed index.json's
+     raw `t`, so パロスの剣 stayed Japanese in English-only mode while its row held en "The Sword of
+     Paros" and workLabel returned that on demand. An index row is compact and carries no work_en,
+     so the title is the key and the store answers from it.
+
+     The yomi is a reading aid for Japanese and has no place on an English page. */
   el('list').innerHTML = rows.map(w => `
     <li data-id="${esc(w.id)}">
       <button class="row" aria-expanded="false">
         <span>
-          <span class="t">${esc(w.t)}</span>${w.y ? `<span class="yomi">${esc(w.y)}</span>` : ''}
+          <span class="t">${workLabel({ work: w.t })}</span>${
+            w.y && LANG !== 'en' ? `<span class="yomi">${esc(w.y)}</span>` : ''}
           <br><span class="meta">${esc(credit(w.c) || '—')}</span>
         </span>
         <span class="num">${esc(w.d || '—')}<br>${w.n} ${esc(L('巻', w.n === 1 ? 'vol' : 'vols'))}</span>
