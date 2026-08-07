@@ -2,6 +2,11 @@
  "generated": "",
  "invariants": [
   {
+   "name": "curated values reach the store",
+   "violations": 0,
+   "examples": []
+  },
+  {
    "name": "ruby spells the reading",
    "violations": 0,
    "examples": []
@@ -91,14 +96,14 @@
   {
    "name": "credits that are a reading",
    "means": "author fields where one credit is the reading of another, so one person is counted twice. A rise means a route wrote a name and its reading into one field as two credits.",
-   "budget": 18,
-   "value": 18
+   "budget": 0,
+   "value": 0
   },
   {
    "name": "credits that are not people",
    "means": "author fields holding a credit made only of digits or markup. A rise means a parser folded something that is not a name into a byline.",
-   "budget": 4,
-   "value": 4
+   "budget": 0,
+   "value": 0
   },
   {
    "name": "implausible ruby spans",
