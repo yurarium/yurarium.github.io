@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-07T15:13:36+00:00",
+ "generated": "2026-08-07T17:22:21+00:00",
  "since_last": {
-  "at": "2026-08-07T14:29:45+00:00",
+  "at": "2026-08-07T17:17:52+00:00",
   "statistics": {}
  },
  "means": {
@@ -23,9 +23,9 @@
  "last_run": {
   "at": "2026-08-07",
   "releases": 1166,
-  "works": 2468,
+  "works": 2471,
   "platforms": 22,
-  "series_rows": 3076,
+  "series_rows": 3079,
   "identification": {
    "discovery-candidate": 853,
    "platform-genre": 313
@@ -38,7 +38,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 17,
+  "invariants_passing": 18,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -124,20 +124,31 @@
     "name": "per-book dates cite their page",
     "violations": 0,
     "examples": []
+   },
+   {
+    "name": "a publisher is a name, not a role",
+    "violations": 0,
+    "examples": []
    }
   ],
   "budgets": [
    {
+    "name": "labels with nothing to quote",
+    "means": "records carrying a publisher-side yuri label whose imprint holds no term saying so, which is a label the work page cannot show a reader the evidence for. A rise means a pass has gone back to storing a field from a record other than the one that justified the label.",
+    "budget": 0,
+    "value": 0
+   },
+   {
     "name": "publishers with no English",
     "means": "distinct publisher and imprint names that render as Japanese in English-only mode. A rise means new publishers entered the corpus faster than their names were rendered.",
-    "budget": 301,
-    "value": 301
+    "budget": 263,
+    "value": 263
    },
    {
     "name": "renderings with nothing to show",
     "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-    "budget": 150,
-    "value": 150
+    "budget": 49,
+    "value": 49
    },
    {
     "name": "credits that restate a name",
@@ -160,14 +171,14 @@
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 75,
-    "value": 75
+    "budget": 74,
+    "value": 74
    },
    {
     "name": "works without English",
     "means": "works that render in Japanese in English-only mode. Should be 0; a rise means the automatic naming pass stopped covering something it used to.",
-    "budget": 104,
-    "value": 104
+    "budget": 105,
+    "value": 105
    },
    {
     "name": "works showing a romanisation",
@@ -355,9 +366,9 @@
   },
   {
    "source": "madb",
-   "files": 824,
-   "works": 824,
-   "rows": 1947,
+   "files": 827,
+   "works": 827,
+   "rows": 1950,
    "retrieved": "2026-08-07",
    "age_days": 0,
    "in_scope": true,
@@ -398,7 +409,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-07T14:29:44+00:00",
+  "previous_at": "2026-08-07T17:17:51+00:00",
   "drops": []
  },
  "outstanding": [
@@ -411,7 +422,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 158,
+   "count": 154,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -437,6 +448,7 @@
     "Epicurean",
     "Flower fizz",
     "Frag",
+    "Free soul",
     "GARROTE",
     "GIRL FRIENDS",
     "GIRLS IN THE DARK",
@@ -540,22 +552,17 @@
     "よぬりめ",
     "わくとこまこ",
     "アイドル総選挙4位だった私が魔王を倒すんですか？（Lilie comics）",
-    "ウェイバーズ",
     "エデンの処女（おとめ）",
-    "オグナンジェ",
     "キマシ!",
-    "サナトクラマ",
     "セイキマツブルー = Seikimatsu Blue",
     "ナチュリーズ",
     "ハクせつシリーズ",
-    "ハナヤマタ",
+    "ハニー＆ハニー",
     "ファインダー越しのあの子（Lilie comics）",
-    "フリコフリークフリースタイル",
     "ボドカン！",
-    "ミコレイログ",
     "ヤンキー×ジャーキー",
-    "ユリメデルブ",
     "リンリンサイド！！",
+    "レンズのむこう",
     "一端の子",
     "京アミ！",
     "冬馬くん",
@@ -599,22 +606,23 @@
     "credits that restate a name": 0,
     "implausible ruby spans": 0,
     "incomplete attested rows": 16,
-    "publishers with no English": 301,
-    "renderings with nothing to show": 150,
+    "labels with nothing to quote": 0,
+    "publishers with no English": 263,
+    "renderings with nothing to show": 49,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
-    "uncertain readings": 75,
+    "uncertain readings": 74,
     "undated cmoa candidates": 1220,
     "unreadable bookwalker rows": 15,
     "works showing a romanisation": 176,
-    "works without English": 104
+    "works without English": 105
    }
   }
  ],
  "statistics": {
-  "works": 3076,
+  "works": 3079,
   "states": {
-   "print": 1724,
+   "print": 1727,
    "oneshot": 401,
    "unknown": 311,
    "completed": 283,
@@ -625,13 +633,13 @@
   "english_basis": {
    "translated": 2679,
    "licensed": 113,
-   "official-jp": 108,
-   "none": 108,
-   "romaji": 68
+   "official-jp": 111,
+   "none": 109,
+   "romaji": 67
   },
-  "print_works": 2431,
-  "print_only": 1724,
-  "volumes": 5861,
+  "print_works": 2434,
+  "print_only": 1727,
+  "volumes": 5864,
   "with_identifier": 3076,
   "chapters": 26903
  }

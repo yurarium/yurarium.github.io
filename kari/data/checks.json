@@ -100,20 +100,31 @@
    "name": "per-book dates cite their page",
    "violations": 0,
    "examples": []
+  },
+  {
+   "name": "a publisher is a name, not a role",
+   "violations": 0,
+   "examples": []
   }
  ],
  "budgets": [
   {
+   "name": "labels with nothing to quote",
+   "means": "records carrying a publisher-side yuri label whose imprint holds no term saying so, which is a label the work page cannot show a reader the evidence for. A rise means a pass has gone back to storing a field from a record other than the one that justified the label.",
+   "budget": 0,
+   "value": 0
+  },
+  {
    "name": "publishers with no English",
    "means": "distinct publisher and imprint names that render as Japanese in English-only mode. A rise means new publishers entered the corpus faster than their names were rendered.",
-   "budget": 301,
-   "value": 301
+   "budget": 263,
+   "value": 263
   },
   {
    "name": "renderings with nothing to show",
    "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-   "budget": 150,
-   "value": 150
+   "budget": 49,
+   "value": 49
   },
   {
    "name": "credits that restate a name",
@@ -136,14 +147,14 @@
   {
    "name": "uncertain readings",
    "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-   "budget": 75,
-   "value": 75
+   "budget": 74,
+   "value": 74
   },
   {
    "name": "works without English",
    "means": "works that render in Japanese in English-only mode. Should be 0; a rise means the automatic naming pass stopped covering something it used to.",
-   "budget": 104,
-   "value": 104
+   "budget": 105,
+   "value": 105
   },
   {
    "name": "works showing a romanisation",
@@ -160,7 +171,7 @@
   {
    "name": "stock phrasing in comments",
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
-   "budget": 891,
+   "budget": 903,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },
