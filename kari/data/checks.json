@@ -89,6 +89,18 @@
  ],
  "budgets": [
   {
+   "name": "credits that are a reading",
+   "means": "author fields where one credit is the reading of another, so one person is counted twice. A rise means a route wrote a name and its reading into one field as two credits.",
+   "budget": 18,
+   "value": 18
+  },
+  {
+   "name": "credits that are not people",
+   "means": "author fields holding a credit made only of digits or markup. A rise means a parser folded something that is not a name into a byline.",
+   "budget": 4,
+   "value": 4
+  },
+  {
    "name": "implausible ruby spans",
    "means": "furigana runs holding fewer kana than they have kanji. A rise means the aligner placed a boundary somewhere no reading could fall, which the spelling check cannot see.",
    "budget": 8,
@@ -97,20 +109,20 @@
   {
    "name": "uncertain readings",
    "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-   "budget": 54,
-   "value": 54
+   "budget": 56,
+   "value": 56
   },
   {
    "name": "works without English",
    "means": "works that render in Japanese in English-only mode. Should be 0; a rise means the automatic naming pass stopped covering something it used to.",
-   "budget": 105,
-   "value": 105
+   "budget": 104,
+   "value": 104
   },
   {
    "name": "works showing a romanisation",
    "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-   "budget": 159,
-   "value": 159
+   "budget": 176,
+   "value": 176
   },
   {
    "name": "incomplete attested rows",
