@@ -502,9 +502,15 @@ function authorLabel(r) {
   // furigana at all even once every person in it had a sourced reading. The raw string is kept
   // exactly as written, separators and roles included, and each name inside it is replaced by its
   // own ruby: joining the parts with a comma would rewrite the credit as well as annotate it.
+  //
+  // NEVER IN ENGLISH-ONLY MODE. Furigana annotates Japanese, so this branch returns Japanese, and
+  // it ran before the English one: a line whose composition failed on a single name fell through
+  // to here and printed 倫理きよ, Syousa., jimao with ruby, under an English heading, while
+  // `author_en` held Rinri Kiyo, Syousa., jimao all along. The composition is allowed to fail; the
+  // fallback has to be the romanisation and not the surface.
   const rawJa = (r.author || '').trim();
   const parts = NAMES && NAMES.credit_parts && NAMES.credit_parts[foldKey(rawJa)];
-  if (FURIGANA && parts && parts.length > 1) {
+  if (LANG !== 'en' && FURIGANA && parts && parts.length > 1) {
     let out = '', rest = rawJa, any = false;
     for (const nm of parts) {
       const at = rest.indexOf(nm);
