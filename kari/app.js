@@ -674,17 +674,28 @@ function credit(c) {
 /* Publishers and imprints are names, and were the only names on the releases tab left untranslated:
    a reader in English met "講談社 · コミック百合姫" beside an English title. Same rule as a platform
    name, and the same fallback: where there is no English the Japanese stands, because a name we
-   cannot render is still the name. The corpus holds four publishers and a handful of imprints, so
-   this is a list rather than a lookup. It belongs in data beside platforms.yaml. */
-const PUB_EN = {
-  '一迅社': 'Ichijinsha', '講談社': 'Kodansha', '講談社 (発売)': 'Kodansha',
-  'コミック百合姫': 'Comic Yuri Hime', 'IDコミックス': 'ID Comics',
-  '百合姫books': 'Yurihime Books', '百合姫コミックス': 'Comic Yuri Hime',
-};
+   cannot render is still the name.
+
+   READ FROM DATA. This was `PUB_EN`, seven names typed here, under a comment saying the corpus
+   holds four publishers and a handful of imprints. It holds 389, so 301 of them fell through the
+   map and rendered as Japanese beside an English title, and a longer literal would have made the
+   same mistake at a larger size. Publisher names live in data/names now, with the basis for each
+   rendering and the page it was read from beside it, exactly as titles and authors do.
+
+   KEYED BOTH WAYS, by the string the catalogue holds and by the string this file shows, because
+   the cataloguing is stripped in two places: `publisherOf` here and `publisher_of` in the
+   generator. Two implementations of one rule can drift, and a raw key means a drift costs a lookup
+   the other key still answers rather than a publisher silently going back to Japanese. */
+let PUBS = null;
+
+function pubEn(n) {
+  const rec = PUBS && (PUBS[n] || PUBS[String(n || '').normalize('NFKC')]);
+  return (rec && rec.en) || null;
+}
 
 function pubBoth(n) {
   if (!n) return '';
-  const en = PUB_EN[n];
+  const en = pubEn(n);
   if (!en || en === n) return n;
   return LANG === 'en' ? en : LANG === 'ja' ? n : `${n} / ${en}`;
 }
@@ -721,7 +732,7 @@ const SRC_EN = {
 
 function sourceBoth(n) {
   if (!n) return '';
-  const en = SRC_EN[n] || PUB_EN[n] || PLAT_EN[n];
+  const en = SRC_EN[n] || pubEn(n) || PLAT_EN[n];
   if (!en || en === n) return n;
   return LANG === 'en' ? en : LANG === 'ja' ? n : `${n} / ${en}`;
 }
@@ -3210,8 +3221,13 @@ Promise.all([
   // Names, keyed by folded title/author, joined onto rows at render time: see nameFor(). Shipped
   // apart from the rows so an archived month, which is never rewritten, still gets current ones.
   DATA('feed/names.json').catch(() => null),
-]).then(([idx, feed, series, meta, names]) => {
+  // Publisher and imprint names, the same join one step further out: a company name is a name, and
+  // it is the last one this file held as a literal. Absent means every publisher renders as
+  // Japanese, which is the fallback the whole naming design already takes.
+  DATA('feed/publishers.json').catch(() => null),
+]).then(([idx, feed, series, meta, names, pubs]) => {
   NAMES = names && names.titles ? names : null;
+  PUBS = (pubs && pubs.names) || null;
   INDEX = idx; FEED = feed; SERIES = series; META = meta;
   // The header used to restate the totals: "1350 更新 · 302 作品 · 646 巻" and a release/platform
   // count under it. The tabs already carry those numbers, next to the thing they count, and a
