@@ -819,6 +819,9 @@ const EV_TYPE = {
 const EV_HOLDS = {
   volumes: ['巻数・刊行日', 'volume counts and dates'],
   chapters: ['話数・公開状況', 'chapters and availability'],
+  // What a platform says about whether the serialisation is still going. `state_claims` carries
+  // the platform's own word for it, so the row quotes that and this only names the subject.
+  'serialisation-status': ['連載状況', 'serialisation status'],
 };
 const evType = k => (EV_TYPE[k] ? T(EV_TYPE[k][0], EV_TYPE[k][1]) : (k || ''));
 const evHolds = k => (EV_HOLDS[k] ? T(EV_HOLDS[k][0], EV_HOLDS[k][1]) : (k || ''));
@@ -1909,12 +1912,16 @@ function renderWorkPage() {
 
   /* SOURCES OF INFORMATION, collapsed. Most readers want the book; the ones who want the
      provenance want all of it, so this opens onto every source rather than a summary of them. */
+  /* THE STATE BASIS WAS THE LAST LOOSE SENTENCE HERE, and it was two facts welded together: what
+     a platform said, and how old the newest chapter we hold is. The first is a source statement and
+     belongs in the table below with every other one, quoting the platform's own term. The second is
+     our own coverage and is already on the page as a date, so repeating it in prose said nothing
+     twice. `state_basis` stays in the row because the badge tooltip reads it. */
   const basis = [];
-  if (why) basis.push(`<p class="wp-basis">${esc(why)}</p>`);
-  if (r.state_basis || r.state_basis_ja) {
-    basis.push(`<p class="wp-basis">${esc(T(r.state_basis_ja || r.state_basis,
-                                            r.state_basis || r.state_basis_ja))}</p>`);
-  }
+  /* `why` falls back to state_basis, which the table below now carries as a row, so only the
+     completion basis is prose here. That one has no structured equivalent: it is a short capture,
+     a run of skipped slots, or a hand review's verdict, and each says something different. */
+  if (r.completed_basis) basis.push(`<p class="wp-basis">${esc(r.completed_basis)}</p>`);
   /* WHY THE WORK IS FILED AS YURI, one row per source, strongest first.
 
      THE ORDER IS DECIDED IN build.py AND THIS ONLY SORTS BY IT. Which evidence outranks which
@@ -1946,9 +1953,12 @@ function renderWorkPage() {
      would be the same fact with two producers, and a megabyte of the works index besides. */
   const heldRows = onceEach((r.sourced_from || []).concat(
       (r.sources || []).map(s => ({ source: s.platform, holds: 'chapters',
-                                    read: s.retrieved, url: s.url })))
+                                    read: s.retrieved, url: s.url })),
+      (r.state_claims || []).map(c => ({ source: c.source, holds: 'serialisation-status',
+                                         term: c.term, read: c.read, url: c.url })))
     .map(x => [`<td>${esc(sourceBoth(x.source))}</td>`,
-               `<td>${esc(evHolds(x.holds))}</td>`,
+               `<td>${esc(evHolds(x.holds))}${x.term
+                  ? `<span class="wf-sub">${esc(x.term)}</span>` : ''}</td>`,
                `<td class="wp-read">${readCell(x)}</td>`]));
   const evTable = evRows ? `<h4 class="wp-subh">${esc(T('百合分類の根拠（根拠の強さ順）',
         'Basis for classification as yuri, by strength of evidence'))}</h4>
