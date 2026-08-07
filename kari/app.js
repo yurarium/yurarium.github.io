@@ -2405,7 +2405,17 @@ function predictedRows() {
     // date; an interval worked out from past chapters is our arithmetic about its habits. Both
     // belong on this tab and they are not the same kind of claim, so the row carries which it is
     // and the two never merge into one undifferentiated "expected".
+    // A PREDICTED ROW IS ABOUT A WORK WE HOLD, so it carries the same identity a recorded one does.
+    // Without `wid` the row rendered without its work-page link, so every entry under `coming soon`
+    // was a dead end while every entry under `latest` led somewhere. `also_on` is likewise a fact
+    // about the series that is true today, and the platform filter reads it.
+    //
+    // WHAT IS NOT COPIED HERE IS THE POINT. A chapter that has not appeared has no episode name and
+    // no access terms, so `ep` and `free` stay absent and the row shows neither. Filling them from
+    // the last chapter would be describing a different chapter, and the free filter treating an
+    // unknown as not-free is the existing considered answer.
     const base = { work: r.work, work_en: r.work_en, author: r.author, author_en: r.author_en,
+                   wid: r.id, also_on: (r.sources || []).slice(1).map(s => s.platform).filter(Boolean),
                    url: r.url || src.url, predicted: true, type: 'chapter', access_modes: [] };
     // A date the platform named, or the next one its stated rhythm falls on. The second is
     // computed at build time, because turning 毎月第3金曜 into a date is logic that already exists
