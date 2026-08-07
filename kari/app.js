@@ -1472,10 +1472,18 @@ function volOrder(n) {
   return [1, 0, raw];
 }
 
+/* THE NUMBER IS THE ORDER, AND THE DATE IS EVIDENCE ABOUT PUBLICATION. Sorting on the date first
+   put an undated volume last, because a missing date was read as '9999': 私を喰べたい、ひとでなし
+   listed eleven volumes starting at vol. 2, with vol. 1 at the bottom. A volume set numbers itself
+   and that numbering does not depend on what dates we happen to hold.
+
+   The date still decides where a set has no numbering to go on, which is the case volOrder returns
+   kind 1 for: 難問編 and 前夜 are section titles and nothing about them says which came first. */
 function byVolume(a, b) {
+  const [ka, na, ta] = volOrder(a.number), [kb, nb, tb] = volOrder(b.number);
+  if (ka === 0 && kb === 0) return na - nb || ta.localeCompare(tb, 'ja');
   const da = String(a.published || '9999'), db = String(b.published || '9999');
   if (da !== db) return da.localeCompare(db);
-  const [ka, na, ta] = volOrder(a.number), [kb, nb, tb] = volOrder(b.number);
   return ka - kb || na - nb || ta.localeCompare(tb, 'ja');
 }
 
