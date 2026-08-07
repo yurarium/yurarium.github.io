@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-07T13:46:06+00:00",
+ "generated": "2026-08-07T14:29:45+00:00",
  "since_last": {
-  "at": "2026-08-07T12:37:36+00:00",
+  "at": "2026-08-07T14:03:05+00:00",
   "statistics": {}
  },
  "means": {
@@ -130,14 +130,14 @@
    {
     "name": "renderings with nothing to show",
     "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-    "budget": 177,
-    "value": 177
+    "budget": 154,
+    "value": 154
    },
    {
     "name": "credits that restate a name",
     "means": "author fields where one credit is the reading of another, so one person is counted twice. A rise means a route wrote a name and its reading into one field as two credits.",
-    "budget": 2,
-    "value": 2
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "credits matching a chapter",
@@ -154,8 +154,8 @@
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 56,
-    "value": 56
+    "budget": 75,
+    "value": 75
    },
    {
     "name": "works without English",
@@ -209,7 +209,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": 1
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "rows with a moving address",
@@ -391,7 +392,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-07T12:37:35+00:00",
+  "previous_at": "2026-08-07T14:26:06+00:00",
   "drops": []
  },
  "outstanding": [
@@ -582,20 +583,20 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 10,
+   "count": 9,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
     "credits matching a chapter": 0,
-    "credits that restate a name": 2,
+    "credits that restate a name": 0,
     "implausible ruby spans": 0,
     "incomplete attested rows": 16,
-    "renderings with nothing to show": 177,
+    "renderings with nothing to show": 154,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
-    "uncertain readings": 56,
+    "uncertain readings": 75,
     "undated cmoa candidates": 1220,
     "unreadable bookwalker rows": 15,
     "works showing a romanisation": 176,
