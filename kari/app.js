@@ -1716,11 +1716,21 @@ function renderWorkPage() {
   const printBody = (r.print || []).map(pr => {
     const who = [pubBoth(publisherOf(pr.publisher)), pubBoth(imprintOf(pr.imprint))]
       .filter(Boolean).join(' · ');
+    /* WHERE TO BUY IT, beside the volumes it describes, which parallels the platform links the
+       serialisation carries. A retailer is a Tier C source and its shelf is never a marketing
+       label, so this says only that the shop sells the book. */
+    const shop = pr.shop_url
+      ? `<div class="wf"><dt>${esc(T('取扱', 'Sold at'))}</dt><dd><a href="${esc(pr.shop_url)}"
+           target="_blank" rel="noopener noreferrer nofollow">${
+           esc(pr.shop_url.includes('bookwalker') ? 'BOOK\u2606WALKER'
+               : pr.shop_url.includes('cmoa') ? T('コミックシーモア', 'Comic Cmoa')
+               : T('販売ページ', 'Shop page'))}</a></dd></div>`
+      : '';
     return `<dl class="wp-facts"><div class="wf"><dt>${esc(T('出版社', 'Publisher'))}</dt>
       <dd>${esc(who || '')}</dd></div><div class="wf"><dt>${esc(T('巻数', 'Volumes'))}</dt>
       <dd>${pr.volumes ? esc(volCount(pr.volumes)) : ''}${
         pr.first ? `<span class="wf-sub">${esc(T('初刊 ', 'from '))}${
-          esc(fmtDate(pr.first, { year: true }))}</span>` : ''}</dd></div></dl>`;
+          esc(fmtDate(pr.first, { year: true }))}</span>` : ''}</dd></div>${shop}</dl>`;
   }).join('');
 
   /* SOURCES OF INFORMATION, collapsed. Most readers want the book; the ones who want the
