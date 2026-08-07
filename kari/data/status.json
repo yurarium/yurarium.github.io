@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-07T11:49:27+00:00",
+ "generated": "2026-08-07T12:02:49+00:00",
  "since_last": {
-  "at": "2026-08-07T11:45:21+00:00",
+  "at": "2026-08-07T11:49:27+00:00",
   "statistics": {}
  },
  "means": {
@@ -132,8 +132,8 @@
    {
     "name": "implausible ruby spans",
     "means": "furigana runs holding fewer kana than they have kanji. A rise means the aligner placed a boundary somewhere no reading could fall, which the spelling check cannot see.",
-    "budget": 8,
-    "value": 8
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "uncertain readings",
@@ -370,7 +370,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-07T11:45:20+00:00",
+  "previous_at": "2026-08-07T11:49:26+00:00",
   "drops": []
  },
  "outstanding": [
@@ -561,7 +561,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 9,
+   "count": 8,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "bookwalker listings unconfirmed": 0,
@@ -569,7 +569,7 @@
     "captures with no floor": 11,
     "credits that are a reading": 0,
     "credits that are not people": 0,
-    "implausible ruby spans": 8,
+    "implausible ruby spans": 0,
     "incomplete attested rows": 16,
     "scraped counters in chapter names": 1,
     "uncertain readings": 56,
