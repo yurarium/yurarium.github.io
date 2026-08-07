@@ -475,14 +475,21 @@ function personName(rec) {
 /* A credit line built from the people in it, so it follows the same choices a single name does.
    Null where any of them is unknown to the store: half a line composed and half romanised whole
    reads as neither, and a reader cannot tell which half to trust. */
+// Kana and kanji. A credit with none of these is already Latin and is its own English form.
+const JA_TEXT = /[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff]/;
+
 function creditFromParts(ja) {
   const parts = NAMES && NAMES.credit_parts && NAMES.credit_parts[foldKey(ja)];
   if (!parts || parts.length < 2) return null;
   const out = [];
   for (const n of parts) {
     const shown = personName(nameFor('authors', n, null));
-    if (!shown) return null;
-    out.push(shown);
+    if (shown) { out.push(shown); continue; }
+    /* A NAME ALREADY IN LATIN NEEDS NO RECORD. `倫理きよ, Syousa., jimao` composed nothing because
+       Syousa. and jimao are not in the store, having no reading to hold, so the whole line fell
+       through to the Japanese. A part with no Japanese in it is its own English form. */
+    if (!JA_TEXT.test(n)) { out.push(n); continue; }
+    return null;
   }
   return out.join(', ');
 }
@@ -843,7 +850,27 @@ const evHolds = k => (EV_HOLDS[k] ? T(EV_HOLDS[k][0], EV_HOLDS[k][1]) : (k || ''
    cataloguer typed. Same function the volumes section uses, so the two cannot drift. */
 const evSource = e => ((e.type === 'publisher' || e.type === 'magazine')
   ? pubBoth(publisherOf(e.source)) : sourceBoth(e.source));
-const evTerm = e => (e.kind === 'imprint' ? imprintOf(e.term) : e.term);
+/* A GENRE WORD IS A SHORT CONTROLLED VOCABULARY, and a shop uses a handful of them. Quoting the
+   source is the point of this column, so the Japanese is what the row means, and an English-only
+   reader was still being shown 百合 with no way in. The English is given and the source's own word
+   is kept on the title, so the quotation survives and the page carries no untranslated Japanese.
+
+   An imprint is a NAME and goes through imprintOf, which is the publisher store's job and not a
+   glossary's. Nothing here invents an English form for one. */
+const TERM_EN = {
+  '百合': 'yuri', '百合・GL': 'yuri and GL', 'GL': 'GL', 'ゆり': 'yuri',
+  'ongoing': 'ongoing', '連載中': 'ongoing', 'finished': 'finished', '完結': 'finished',
+};
+const evTerm = e => {
+  // AN IMPRINT IS A NAME AND THE PUBLISHER STORE HOLDS ITS ENGLISH. imprintOf normalises the six
+  // spellings MADB uses onto one Japanese name, which is a different job from rendering it, so ten
+  // terms reached an English page reading IDコミックス. The volumes section already pairs the two.
+  if (e.kind === 'imprint') return pubBoth(imprintOf(e.term));
+  const en = TERM_EN[e.term];
+  return (LANG === 'en' && en) ? en : e.term;
+};
+const evTermTitle = e => ((LANG === 'en' && TERM_EN[e.term] && TERM_EN[e.term] !== e.term)
+  ? e.term : '');
 
 /* THE CUE IS A SHAPE, NOT A COLOUR, so it carries for a reader who cannot tell two colours apart.
    Three segments over five ranks: the publisher's own imprint fills all three, its other §4
@@ -1943,7 +1970,9 @@ function renderWorkPage() {
      out here would put a documented judgement in the one place with no access to the records.
      `rank` is emitted per row; `adapters/classify/credence.py` holds the reasoning.
 
-     `Listed as` IS A QUOTATION and is therefore never translated. 百合・GL and 百合 and an imprint
+     `Listed as` IS A QUOTATION. A genre word is a short controlled vocabulary and is glossed in
+     English with the source's own word kept on the title, so nothing untranslated reaches an
+     English page. 百合・GL and 百合 and an imprint
      name are visibly different claims, and a reader weighs them without a sentence of ours
      explaining which is stronger. An earlier draft wrote that sentence per row and it needed two
      authored strings per work per source. */
@@ -1956,7 +1985,8 @@ function renderWorkPage() {
       `<td class="wp-cue">${rankCue(e.rank)}</td>`,
       `<td>${esc(evSource(e))}</td>`,
       `<td class="wp-kind">${esc(evType(e.type))}</td>`,
-      `<td><span class="wp-term">${esc(evTerm(e))}</span></td>`,
+      `<td><span class="wp-term"${evTermTitle(e) ? ` title="${esc(evTermTitle(e))}"` : ''
+        }>${esc(evTerm(e))}</span></td>`,
       `<td class="wp-read">${readCell(e)}</td>`]));
   /* EVERYTHING ELSE WE READ A SOURCE FOR, kept in its own table on purpose. A volume count and a
      chapter count say nothing about whether a work is yuri, and running them into the table above
@@ -1972,7 +2002,8 @@ function renderWorkPage() {
                                          term: c.term, read: c.read, url: c.url })))
     .map(x => [`<td>${esc(sourceBoth(x.source))}</td>`,
                `<td>${esc(evHolds(x.holds))}${x.term
-                  ? `<span class="wf-sub">${esc(x.term)}</span>` : ''}</td>`,
+                  ? `<span class="wf-sub"${evTermTitle(x) ? ` title="${esc(evTermTitle(x))}"` : ''
+                    }>${esc(evTerm(x))}</span>` : ''}</td>`,
                `<td class="wp-read">${readCell(x)}</td>`]));
   const evTable = evRows ? `<h4 class="wp-subh">${esc(T('百合分類の根拠（根拠の強さ順）',
         'Basis for classification as yuri, by strength of evidence'))}</h4>
