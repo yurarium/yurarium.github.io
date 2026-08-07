@@ -3519,6 +3519,12 @@ function resetFilters(ids, render) {
   });
   ids.forEach(id => { if (FACE_PAINTERS[id]) FACE_PAINTERS[id](); });
   saveView(); render(); markActive();
+  // THE ADDRESS IS STATE TOO. These values are assigned directly, so no `change` fires and the
+  // handlers that would have called navSync never run. The period is the one filter the URL
+  // carries, so clearing it left `month=soon` in the address: the list cleared, and reloading
+  // brought the period back from a URL that had never been told. Pushed rather than replaced,
+  // because clearing the filters is somewhere a reader can sensibly go Back from.
+  navSync(true);
 }
 // fmonth is in the list: a reader who has gone back to an archived month and then asks for a clean
 // slate means the whole tab, not the filters within one month. Clearing it returns to the recent
