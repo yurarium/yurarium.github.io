@@ -703,6 +703,69 @@ function platName(n) {
   return (LANG === 'en' && PLAT_EN[n]) || n || '';
 }
 
+/* ── the sources table on a work page ─────────────────────────────────────────────────────────
+
+   A SOURCE NAME IS A PROPER NOUN and needs no translation, which is why the sources section
+   authors so few strings: the column headers, five words for what kind of party a source is, and
+   two for what it was read for. Everything else in those tables is a name or a quotation.
+
+   Some of those proper nouns have an English form all the same, and one function has to find it
+   wherever it lives. A shop is neither a publisher nor a platform, so it fits neither map already
+   here; a bibliography is neither either. Reading all three in one place keeps "what is this
+   source called in English" a single question with a single answer. */
+const SRC_EN = {
+  'コミックシーモア': 'Comic Cmoa',
+  'メディア芸術データベース': 'Media Arts Database',
+  '国立国会図書館サーチ': 'NDL Search',
+};
+
+function sourceBoth(n) {
+  if (!n) return '';
+  const en = SRC_EN[n] || PUB_EN[n] || PLAT_EN[n];
+  if (!en || en === n) return n;
+  return LANG === 'en' ? en : LANG === 'ja' ? n : `${n} / ${en}`;
+}
+
+/* WHAT KIND OF PARTY IS SPEAKING, in words, because the table shows strength as an ordering and a
+   reader still needs to know who each row is. The enum is credence.py's and is closed. */
+const EV_TYPE = {
+  publisher: ['出版社', 'publisher'],
+  platform: ['掲載サイト', 'platform'],
+  magazine: ['掲載誌', 'magazine'],
+  retailer: ['書店', 'retailer'],
+  listing: ['情報サイト', 'listing site'],
+};
+const EV_HOLDS = {
+  volumes: ['巻数・刊行日', 'volume counts and dates'],
+  chapters: ['話数・公開状況', 'chapters and availability'],
+};
+const evType = k => (EV_TYPE[k] ? T(EV_TYPE[k][0], EV_TYPE[k][1]) : (k || ''));
+const evHolds = k => (EV_HOLDS[k] ? T(EV_HOLDS[k][0], EV_HOLDS[k][1]) : (k || ''));
+
+/* THE CUE IS A SHAPE, NOT A COLOUR, so it carries for a reader who cannot tell two colours apart.
+   Three segments over five ranks: the publisher's own imprint fills all three, its other §4
+   labelling fills two, and a comparator fills one. That is the line the documents actually draw,
+   and grouping to it beats inventing five gradations nobody decided.
+
+   It is hidden from assistive technology on purpose. The rows are sorted strongest first and the
+   heading says so, so a bar repeating that in a language nobody wrote would be noise. */
+const RANK_BARS = { 1: 3, 2: 2, 3: 2, 4: 1, 5: 1 };
+const rankCue = rank => `<span class="wp-bars" aria-hidden="true">${
+  [1, 2, 3].map(i => `<i${i <= (RANK_BARS[rank] || 1) ? ' class="on"' : ''}></i>`).join('')}</span>`;
+
+/* THE DATE IS THE LINK, and the source name is not. What we hold is the page a claim was READ
+   from, and that page belongs to whoever served it rather than to whoever made the claim: an
+   imprint is the publisher's act recorded by the national bibliography, so a link under 一迅社
+   would take a reader to mediaarts-db. Putting it on the date says what it is, and the same
+   mistake in the other direction put the bibliography under a heading reading "Sold at". */
+function readCell(x) {
+  const d = x.read ? esc(fmtDate(x.read, { year: true })) : '';
+  if (!d || !x.url) return d;
+  const host = String(x.url).replace(/^https?:\/\//, '').split('/')[0];
+  return `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer nofollow"
+     title="${esc(host)}">${d}</a>`;
+}
+
 /* Set once from run.json, re-rendered on every language change like the rest of the chrome. */
 let TRACK_FROM = null;
 /* The footer, in whichever language is showing. The reasoning behind the dating caveat and the
@@ -1734,19 +1797,66 @@ function renderWorkPage() {
   }).join('');
 
   /* SOURCES OF INFORMATION, collapsed. Most readers want the book; the ones who want the
-     provenance want all of it. What can be shown today is why the work is held and how its state
-     was decided. The evidence table the mockup carries, one row per source with the term it filed
-     the work under and the date it was read, needs those fields emitted into series.json and is
-     deliberately not faked from what is here. */
+     provenance want all of it, so this opens onto every source rather than a summary of them. */
   const basis = [];
   if (why) basis.push(`<p class="wp-basis">${esc(why)}</p>`);
   if (r.state_basis || r.state_basis_ja) {
     basis.push(`<p class="wp-basis">${esc(T(r.state_basis_ja || r.state_basis,
                                             r.state_basis || r.state_basis_ja))}</p>`);
   }
-  const srcBody = basis.length
+  /* WHY THE WORK IS FILED AS YURI, one row per source, strongest first.
+
+     THE ORDER IS DECIDED IN build.py AND THIS ONLY SORTS BY IT. Which evidence outranks which
+     follows from DEFINITIONS §2 and §4 and the source tiers in REQUIREMENTS §1, and working it
+     out here would put a documented judgement in the one place with no access to the records.
+     `rank` is emitted per row; `adapters/classify/credence.py` holds the reasoning.
+
+     `Listed as` IS A QUOTATION and is therefore never translated. 百合・GL and 百合 and an imprint
+     name are visibly different claims, and a reader weighs them without a sentence of ours
+     explaining which is stronger. An earlier draft wrote that sentence per row and it needed two
+     authored strings per work per source. */
+  const evRows = (r.evidence || []).map(e => `<tr>
+      <td class="wp-cue">${rankCue(e.rank)}</td>
+      <td>${esc(sourceBoth(e.source))}</td>
+      <td class="wp-kind">${esc(evType(e.type))}</td>
+      <td><span class="wp-term">${esc(e.term)}</span></td>
+      <td class="wp-read">${readCell(e)}</td></tr>`).join('');
+  /* EVERYTHING ELSE WE READ A SOURCE FOR, kept in its own table on purpose. A volume count and a
+     chapter count say nothing about whether a work is yuri, and running them into the table above
+     would pad the classification case with rows answering a different question, which would make
+     it look better supported than it is. */
+  /* The platform half is read off `sources`, which already states each platform, when it was read
+     and where. series.json carries it once and this joins it here; copying it into a second list
+     would be the same fact with two producers, and a megabyte of the works index besides. */
+  const heldRows = (r.sourced_from || []).concat(
+      (r.sources || []).map(s => ({ source: s.platform, holds: 'chapters',
+                                    read: s.retrieved, url: s.url })))
+    .map(x => `<tr>
+      <td>${esc(sourceBoth(x.source))}</td>
+      <td>${esc(evHolds(x.holds))}</td>
+      <td class="wp-read">${readCell(x)}</td></tr>`).join('');
+  const evTable = evRows ? `<h4 class="wp-subh">${esc(T('百合分類の根拠（根拠の強さ順）',
+        'Basis for classification as yuri, by strength of evidence'))}</h4>
+      <div class="wp-scroll"><table class="wp-rows wp-ev">
+        <tr><th class="wp-cue"></th><th>${esc(T('出典', 'Source'))}</th>
+            <th>${esc(T('種別', 'Type'))}</th><th>${esc(T('表記', 'Listed as'))}</th>
+            <th>${esc(T('取得日', 'Read'))}</th></tr>
+        ${evRows}</table></div>` : '';
+  const heldTable = heldRows ? `<h4 class="wp-subh">${esc(T('その他の情報', 'Other data'))}</h4>
+      <div class="wp-scroll"><table class="wp-rows">
+        <tr><th>${esc(T('出典', 'Source'))}</th><th>${esc(T('内容', 'For'))}</th>
+            <th>${esc(T('取得日', 'Read'))}</th></tr>
+        ${heldRows}</table></div>` : '';
+  /* REQUIREMENTS §4: a work's publication is a historical fact and no source dropping it takes it
+     back. Nothing on this page carries a withdrawal marker today, because the only reachability
+     sweep we run points at chapter pages and has never been pointed at these. Each row states the
+     day it was read and claims nothing about today. */
+  const keepLine = (evTable || heldTable)
+    ? `<p class="wp-keep">${esc(T('出典が削除された場合も記録を保持し、その旨を示す。',
+        'Entries are retained after a source is withdrawn, and marked as such'))}</p>` : '';
+  const srcBody = (basis.length || evTable || heldTable)
     ? `<details class="wp-src"><summary>${esc(T('出典', 'Sources of information'))}</summary>
-         ${basis.join('')}</details>` : '';
+         ${basis.join('')}${evTable}${heldTable}${keepLine}</details>` : '';
 
   const from = document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'ser';
   const backTo = from === 'feed' ? T('← 更新一覧', '← All updates')

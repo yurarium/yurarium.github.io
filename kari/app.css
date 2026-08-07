@@ -603,3 +603,27 @@ nav button .n:empty { display: none; }
     color:var(--dim);font-weight:600}
   .wp-basis{font-size:.9rem;color:var(--fg);border-left:2px solid var(--line);
     padding-left:.8rem;margin:.75rem 0}
+  /* THE TWO TABLES INSIDE THE COLLAPSED SECTION. Classification evidence first, everything else
+     under its own heading, because a volume count is not evidence about whether a work is yuri
+     and the two must not read as one list. The headings sit a step below the section headings
+     above them: they label a table inside a group that is already labelled. */
+  .wp-subh{font-size:.72rem;letter-spacing:.05em;color:var(--dim);font-weight:600;
+    margin:1.1rem 0 .45rem}
+  .wp-src .wp-scroll{overflow-x:auto}
+  .wp-ev td,.wp-ev th{padding-right:.7rem}
+  /* Three segments, filled or empty. Shape carries the meaning, so this reads the same to anyone
+     who cannot tell two colours apart, and the column takes no header because the heading above
+     the table already says the rows are strongest first. */
+  .wp-cue{width:1.9rem;padding-right:.5rem}
+  .wp-bars{display:inline-flex;gap:2px;align-items:center;height:1em}
+  .wp-bars i{display:block;width:.34rem;height:.62rem;border-radius:1px;
+    background:var(--line);border:1px solid var(--line)}
+  .wp-bars i.on{background:var(--dim);border-color:var(--dim)}
+  /* THE SOURCE'S OWN WORD, quoted. Marked as a quotation so a reader can see that 百合・GL and
+     百合 are two shops' wordings and not ours, which is also why neither is translated. */
+  .wp-term{background:var(--line);border-radius:3px;padding:.05rem .32rem;
+    font-size:.92em;overflow-wrap:anywhere}
+  .wp-kind{color:var(--dim);white-space:nowrap}
+  .wp-read{white-space:nowrap;color:var(--dim)}
+  .wp-read a{color:var(--dim)}
+  .wp-keep{font-size:.76rem;color:var(--faint);margin:.9rem 0 0;line-height:1.5}

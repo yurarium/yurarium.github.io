@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-07T12:37:36+00:00",
+ "generated": "2026-08-07T13:46:06+00:00",
  "since_last": {
-  "at": "2026-08-07T12:27:57+00:00",
+  "at": "2026-08-07T12:37:36+00:00",
   "statistics": {}
  },
  "means": {
@@ -38,8 +38,18 @@
   }
  },
  "gate": {
-  "invariants_passing": 15,
+  "invariants_passing": 17,
   "invariants": [
+   {
+    "name": "ruby covers its surface",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "dates within a row are ordered",
+    "violations": 0,
+    "examples": []
+   },
    {
     "name": "curated values reach the store",
     "violations": 0,
@@ -118,13 +128,19 @@
   ],
   "budgets": [
    {
-    "name": "credits that are a reading",
-    "means": "author fields where one credit is the reading of another, so one person is counted twice. A rise means a route wrote a name and its reading into one field as two credits.",
-    "budget": 0,
-    "value": 0
+    "name": "renderings with nothing to show",
+    "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
+    "budget": 177,
+    "value": 177
    },
    {
-    "name": "credits that are not people",
+    "name": "credits that restate a name",
+    "means": "author fields where one credit is the reading of another, so one person is counted twice. A rise means a route wrote a name and its reading into one field as two credits.",
+    "budget": 2,
+    "value": 2
+   },
+   {
+    "name": "credits matching a chapter",
     "means": "author fields holding a credit made only of digits or markup. A rise means a parser folded something that is not a name into a byline.",
     "budget": 0,
     "value": 0
@@ -194,6 +210,12 @@
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
     "value": 1
+   },
+   {
+    "name": "rows with a moving address",
+    "means": "rows anchored on a chapter address whose identifier holds no work-level address on the same host. A chapter address moves when the work publishes, so a rise means a work has arrived whose address nobody has read yet and which would be minted a second identifier the next time it updates. Run adapters/gigaviewer/workaddress.py and apply what it writes with identity.py --attachments.",
+    "budget": 0,
+    "value": 0
    }
   ]
  },
@@ -369,7 +391,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-07T12:27:56+00:00",
+  "previous_at": "2026-08-07T12:37:35+00:00",
   "drops": []
  },
  "outstanding": [
@@ -560,16 +582,18 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 8,
+   "count": 10,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
-    "credits that are a reading": 0,
-    "credits that are not people": 0,
+    "credits matching a chapter": 0,
+    "credits that restate a name": 2,
     "implausible ruby spans": 0,
     "incomplete attested rows": 16,
+    "renderings with nothing to show": 177,
+    "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
     "uncertain readings": 56,
     "undated cmoa candidates": 1220,
