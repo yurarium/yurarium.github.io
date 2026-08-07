@@ -1286,7 +1286,9 @@ function repaintAll() {
    上 and 下 are NOT numbers. They are the designation of a two-volume set and they are passed
    through as written, because rendering them as 1 and 2 would be the interface deciding something
    the record does not say. */
-const VOLNUM = /^\s*(?:第\s*)?(?:v(?:ol)?(?:ume)?\s*\.?\s*)?(\d+)\s*(?:巻)?\s*$/i;
+// 巻 and 集 are both volume counters. 集 was missing, so `3集` fell past every branch below and
+// reached the page as it was written: "Holy Girl Apocalypse: Despair 3集" in English-only mode.
+const VOLNUM = /^\s*(?:第\s*)?(?:v(?:ol)?(?:ume)?\s*\.?\s*)?(\d+)\s*(?:巻|集)?\s*$/i;
 
 // 上 before 下, which no collator will tell you. Japanese orders a two or three volume set this
 // way and `localeCompare(…, 'ja')` sorts by reading, which puts 下 first.
@@ -1359,7 +1361,16 @@ function volLabel(n) {
   const raw = String(n == null ? '' : n).trim();
   if (!raw) return '';
   const m = raw.match(VOLNUM);
-  return m ? T('第' + m[1] + '巻', 'vol. ' + m[1]) : raw;
+  if (m) return T('第' + m[1] + '巻', 'vol. ' + m[1]);
+  /* A TWO OR THREE VOLUME SET IS NUMBERED 上 中 下, NOT 1 2 3. VOLPART already orders them and
+     nothing rendered them, so 17 volumes reached an English page as a bare 上 or 下巻. English
+     publishing calls these parts, and the number is the position the set puts them in. */
+  const part = VOLPART[raw] || VOLPART[raw.replace(/巻$/, '')];
+  if (part) return T(raw, 'part ' + part);
+  /* Anything else is a NAMED part, 難問編 or 前夜, which is a section title and not a counter.
+     Seven of them, and they want translating the way a chapter name does. Shown as written until
+     they are, because inventing an English name for a section is worse than showing its own. */
+  return raw;
 }
 
 /* Where a volume sits in its work. A NUMBER, not the text of one: sorted as strings, volume 10

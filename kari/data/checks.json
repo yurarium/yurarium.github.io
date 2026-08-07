@@ -104,10 +104,16 @@
  ],
  "budgets": [
   {
+   "name": "publishers with no English",
+   "means": "distinct publisher and imprint names that render as Japanese in English-only mode. A rise means new publishers entered the corpus faster than their names were rendered.",
+   "budget": 301,
+   "value": 301
+  },
+  {
    "name": "renderings with nothing to show",
    "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-   "budget": 154,
-   "value": 154
+   "budget": 150,
+   "value": 150
   },
   {
    "name": "credits that restate a name",
@@ -154,7 +160,7 @@
   {
    "name": "stock phrasing in comments",
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
-   "budget": 896,
+   "budget": 891,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },

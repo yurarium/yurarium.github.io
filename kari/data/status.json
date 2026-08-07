@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-07T14:29:45+00:00",
+ "generated": "2026-08-07T15:13:36+00:00",
  "since_last": {
-  "at": "2026-08-07T14:03:05+00:00",
+  "at": "2026-08-07T14:29:45+00:00",
   "statistics": {}
  },
  "means": {
@@ -128,10 +128,16 @@
   ],
   "budgets": [
    {
+    "name": "publishers with no English",
+    "means": "distinct publisher and imprint names that render as Japanese in English-only mode. A rise means new publishers entered the corpus faster than their names were rendered.",
+    "budget": 301,
+    "value": 301
+   },
+   {
     "name": "renderings with nothing to show",
     "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-    "budget": 154,
-    "value": 154
+    "budget": 150,
+    "value": 150
    },
    {
     "name": "credits that restate a name",
@@ -392,7 +398,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-07T14:26:06+00:00",
+  "previous_at": "2026-08-07T14:29:44+00:00",
   "drops": []
  },
  "outstanding": [
@@ -583,7 +589,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 9,
+   "count": 10,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "bookwalker listings unconfirmed": 0,
@@ -593,7 +599,8 @@
     "credits that restate a name": 0,
     "implausible ruby spans": 0,
     "incomplete attested rows": 16,
-    "renderings with nothing to show": 154,
+    "publishers with no English": 301,
+    "renderings with nothing to show": 150,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
     "uncertain readings": 75,
