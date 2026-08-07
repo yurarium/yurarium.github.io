@@ -28,7 +28,7 @@ document.querySelectorAll('.themebtn[data-theme-set]').forEach(b =>
 
 // Search text is deliberately NOT persisted: restoring a stale query on load is surprising.
 const VIEW_FIELDS = ['fmodel', 'ftype', 'fview', 'fplat', 'sort', 'filter',
-                     'sstate', 'sfree', 'splat', 'ssort'];
+                     'sstate', 'sfree', 'splat', 'ssort', 'fvis', 'svis', 'rvis'];
 function saveView() {
   const v = { tab: document.querySelector('nav button[aria-selected=true]')?.dataset.tab };
   VIEW_FIELDS.forEach(id => { const e = el(id); if (e) v[id] = e.value; });
@@ -42,6 +42,9 @@ function restoreView() {
     if (e && v[id] != null && [...e.options].some(o => o.value === v[id])) e.value = v[id];
   });
   if (v.tab) document.querySelector(`nav button[data-tab="${v.tab}"]`)?.click();
+  // The three visibility selects hold one value between them, and this sets element values
+  // directly rather than going through the change handler that keeps them in step.
+  if (typeof syncVis === 'function') syncVis();
 }
 
 const KANA = 0x60;
@@ -712,6 +715,73 @@ function platName(n) {
   // That doubles the width of a meta line for no gain. Absent from the map means already Latin,
   // or no rendering worth asserting.
   return (LANG === 'en' && PLAT_EN[n]) || n || '';
+}
+
+/* ── WORKS HELD OUT OF THE DEFAULT LISTING ────────────────────────────────────────────────────
+
+   DEFINITIONS §2 admits a work a comparator lists and calls that admission presumptive and
+   rebuttable. `visibility` on a series row is the rebuttal, and it is NOT a deletion: the work
+   keeps its record, its identifier and its page, and the page has to go on answering. What changes
+   is the listing, because the two errors are not the same size. A work wrongly present is visible
+   and can be argued with; a work wrongly absent is invisible, and the reader who needed it never
+   learns it was ever there.
+
+   TWO VALUES AND THEY DO NOT MEAN THE SAME THING, which is why a reader who opts in is shown
+   which is which. `rebutted` is a source disagreeing with a source: the publisher's own platform
+   declined a designation a shop applied, and DEFINITIONS §4 says which of the two speaks for the
+   publisher. `marginal` is the operator declining to decide, which DEFINITIONS §9 says is where
+   this database stops rather than a gap in it.
+
+   §15 SAYS WHAT KIND OF CONTROL THIS IS. It narrows the body already on screen, so it is a filter:
+   it sits with the other filters, it persists like them, and it is not in history, so Back never
+   changes what a reader can see. That is deliberately unlike the language and theme controls,
+   which are preferences, and unlike the tab, which is navigation. */
+const VIS_LABEL = {
+  rebutted: ['異議あり', 'rebutted'],
+  marginal: ['判断保留', 'marginal'],
+};
+const VIS_WHY = {
+  rebutted: 'A source disagrees with a source: the publisher\u2019s own platform declines the '
+          + 'designation a listing applied. The work is kept, and its page answers as usual.',
+  marginal: 'The operator has declined to decide. The work is kept, and its page answers as usual.',
+};
+
+/* The row-level answer, wherever the row came from. `visibility` is put on the SERIES row and on
+   nothing else, so a release row and a feed row have to be joined back to it: by work id where the
+   row carries one, and by title where it does not. Built once, from SERIES, so the three lists
+   cannot come to different conclusions about the same work. */
+let VIS_BY_ID = new Map(), VIS_BY_WORK = new Map();
+function indexVisibility() {
+  VIS_BY_ID = new Map(); VIS_BY_WORK = new Map();
+  ((SERIES && SERIES.series) || []).forEach(r => {
+    if (!r.visibility) return;
+    if (r.id) VIS_BY_ID.set(r.id, r.visibility);
+    if (r.work) VIS_BY_WORK.set(foldKey(r.work), r.visibility);
+    (r.print || []).forEach(pr => pr.work_id && VIS_BY_ID.set(pr.work_id, r.visibility));
+  });
+}
+
+function visOf(row) {
+  if (!row) return null;
+  if (row.visibility) return row.visibility;
+  return (row.id && VIS_BY_ID.get(row.id))
+      || (row.work_id && VIS_BY_ID.get(row.work_id))
+      || (row.work && VIS_BY_WORK.get(foldKey(row.work)))
+      || null;
+}
+
+// Whether the reader has asked to see them. One value behind three controls, because the three
+// lists are three views of one decision and a reader who opted in on one has opted in.
+let VIS_SHOW = false;
+function visShown(row) { return VIS_SHOW || !visOf(row); }
+
+/* The mark a row carries when it is on screen BECAUSE the reader asked. A reader who opted in is
+   owed which ones they opted into, and the two dispositions are different claims. */
+function visTag(row) {
+  const how = visOf(row);
+  if (!how || !VIS_SHOW) return '';
+  const [ja, en] = VIS_LABEL[how] || [how, how];
+  return `<span class="k k-vis" title="${esc(VIS_WHY[how] || '')}">${esc(T(ja, en))}</span>`;
 }
 
 /* ── the sources table on a work page ─────────────────────────────────────────────────────────
@@ -1701,7 +1771,15 @@ function renderWorkPage() {
   // list of values, and used as a badge it put "published in volumes; no web serialisation we
   // track" where 単行本 belongs, which is an explanation of our own wearing the place of a name.
   const [slbl, scls, sdesc] = SSTATE[r.state] || SSTATE.unknown;
-  const badges = [`<span class="k ${scls}" title="${esc(sdesc)}">${esc(T(slbl))}</span>`];
+  // THE PAGE ALWAYS SAYS SO, whether or not the reader has opted the listing back in. A citation
+  // resolves here directly, and arriving at a work with no idea why it is not in the list is worse
+  // than being told. `visTag` is silent unless the reader opted in, so the mark is built here.
+  const vhow = visOf(r);
+  const badges = vhow
+    ? [`<span class="k k-vis" title="${esc(VIS_WHY[vhow] || '')}">${
+         esc(T(...(VIS_LABEL[vhow] || [vhow, vhow])))}</span>`]
+    : [];
+  badges.push(`<span class="k ${scls}" title="${esc(sdesc)}">${esc(T(slbl))}</span>`);
   if (r.state === 'print' && r.completed_claim) badges.push(completedTag(r.completed_claim));
 
   // ── where to read it, with what each source actually holds ───────────────────────────────────
@@ -1953,7 +2031,6 @@ async function renderReleases() {
                                  fin: v.final_volume ? v.final_volume_basis : null });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
-  el('n-rel').textContent = rows.length;
   const strip = s => String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '');
   // MADB records a distributor role in a trailing bracket: "講談社 (発売)" beside "講談社". That is
   // a fact about who put the volume in shops, not a second publisher, and a filter offering both
@@ -2008,12 +2085,18 @@ async function renderReleases() {
       const name = href ? `<a href="${href}">${label}</a>` : label;
     return {
       d: r.d, m: r.d.slice(0, 7),
+      // The identifier the series row is keyed on, so visOf() can ask whether this work is held
+      // out of the default listing. works.json knows the work by its MADB id and nothing else.
+      id: wid, work_id: w.work_id,
       pub: pubOf(w.publisher) || '',
       // Searched on every form of the name, the same rule the other two tabs follow: a reader
       // typing a romanisation must reach a work the interface is showing them in romaji.
       key: searchIndex('titles', w.title.ja, w.title && w.title.en) + ' ' +
            norm(String(w.creator || '')),
-      html: `<div class="relv"><div class="relvt">${name} ${vol}${fin}</div>` +
+      // A PLACEHOLDER, because the row's html is built once per display preference and the
+      // held-out control is a filter rather than a preference: flipping it must not rebuild 3,191
+      // rows, and the mark it adds has to appear without one.
+      html: `<div class="relv"><div class="relvt">${name} ${vol}${fin}<!--vis--></div>` +
         `<div class="relvm">${[people, esc(who)].filter(Boolean).join(' · ')}</div></div>`,
     };
   });
@@ -2054,6 +2137,7 @@ function paintReleases() {
   const q = norm(el('rq').value.trim()), pub = el('rpub').value, per = el('rperiod').value;
   const from = per === '' ? relWindow() : '';
   const rows = REL_ROWS.filter(r => {
+    if (!visShown(r)) return false;
     if (q && !hits(r.key, q)) return false;
     if (pub && r.pub !== pub) return false;
     if (from && r.d < from) return false;
@@ -2066,13 +2150,19 @@ function paintReleases() {
     byMonth.get(r.m).push(r);
   });
   // The unit is 巻, because what is listed is volumes and several of them may belong to one work.
-  el('rcount').textContent = rows.length === REL_ROWS.length
+  // THE DENOMINATOR IS THE BODY, not everything ever built. A volume held out of the default
+  // listing is not part of "3191 volumes" while it is held out, and counting it there would put a
+  // number on screen that no setting of the controls can reach.
+  const body = REL_ROWS.filter(visShown);
+  el('n-rel').textContent = body.length;
+  el('rcount').textContent = rows.length === body.length
     ? `${rows.length} ${T('巻', 'volumes')}`
-    : `${rows.length} ${T('巻表示', 'shown')}　·　${REL_ROWS.length} ${T('巻', 'volumes')}`;
+    : `${rows.length} ${T('巻表示', 'shown')}　·　${body.length} ${T('巻', 'volumes')}`;
   el('rempty').hidden = rows.length > 0;
   el('rel-list').innerHTML = [...byMonth.entries()].map(([m, list]) =>
     `<div class="relmonth"><h3><time datetime="${esc(m)}">${
-      esc(fmtDate(m))}</time></h3>${list.map(r => r.html).join('')}</div>`).join('');
+      esc(fmtDate(m))}</time></h3>${
+      list.map(r => r.html.replace('<!--vis-->', visTag(r))).join('')}</div>`).join('');
 }
 
 function navApply(st) {
@@ -2329,6 +2419,10 @@ function renderFeed() {
     return;
   }
   const rows = src.filter(r => {
+    // A feed row carries no `visibility` of its own: the field is on the series row, and this is
+    // the same work. An ARCHIVED MONTH IS NEVER REWRITTEN, so the file on disk still holds the row
+    // and only the listing hides it, which is what keeps `archives are unchanged` true.
+    if (!visShown(r)) return false;
     if (q && !hits(searchIndex('titles', r.work, r.work_en), q)
            && !hits(searchIndex('authors', (r.author || '').trim(), r.author_en), q)
            && !hits(norm(r.ep), q) && !hits(norm(phraseOf(r.ep || '')), q))
@@ -2346,18 +2440,23 @@ function renderFeed() {
     return true;
   });
 
-  const count = rows.length === src.length
+  // THE DENOMINATOR IS THE BODY THE READER IS LOOKING AT. Works held out of the default listing
+  // are not part of it while they are held out, so counting them there would put a number on
+  // screen that no state of the controls can reach, and the tab badge below would disagree with
+  // the line under it.
+  const body = src.filter(visShown);
+  const count = rows.length === body.length
     ? nTotal(rows.length)
-    : (LANG === 'en' ? `${rows.length} shown · ${src.length} total`
-       : LANG === 'ja' ? `${rows.length} 件表示　·　${src.length} 件`
-       : `${rows.length} 件 / shown　·　${src.length} 件 / total`);
+    : (LANG === 'en' ? `${rows.length} shown · ${body.length} total`
+       : LANG === 'ja' ? `${rows.length} 件表示　·　${body.length} 件`
+       : `${rows.length} 件 / shown　·　${body.length} 件 / total`);
   // The count says how many, and nothing about which set: the picker sits directly above it and
   // already carries the period on its own face. This line used to repeat it, which put 2026年7月
   // on two consecutive lines. That was worth doing when the period selector lived at the FOOT of
   // the tab and the count was the only thing near the list naming it.
   el('fcount').textContent = count;
   // The tab badge counts what the tab lists, which is now whichever set is showing.
-  el('n-feed').textContent = src.filter(r => r.web !== 'promotional-sample-only').length;
+  el('n-feed').textContent = body.filter(r => r.web !== 'promotional-sample-only').length;
   el('fempty').hidden = rows.length > 0;
   // THE WEAKEST ROWS, FOLDED AWAY. A date we averaged and then watched go by is worth keeping and
   // is not worth a hundred lines at the top of the tab: it is our arithmetic about a series'
@@ -2659,6 +2758,7 @@ function detailList(rows) {
     const inner = bilingual(() => `
       <div class="relhead">
         <span class="t">${workLabel(r)}</span>
+        ${visTag(r)}
         ${kindTag(r)}
         ${redundantType(r) ? '' : `<span class="tag grey">${esc(T(TYPE_JA[r.type] || r.type))}</span>`}
         ${accessTag(r)}
@@ -2725,6 +2825,9 @@ function renderSeries() {
     // A print-only work has no chapters and is still a work. What the rule excludes is a row
     // we can say nothing about, not one published in volumes rather than online.
     if (!r.chapters && !(r.print || []).length) return false;
+    // Held out of the default listing, and kept: see visOf(). Applied FIRST so the tab badge below
+    // counts the same body the list draws from.
+    if (!visShown(r)) return false;
     if (q && !hits(searchIndex('titles', r.work, r.work_en), q)
            && !hits(searchIndex('authors', (r.author || '').trim(), r.author_en), q)) return false;
     if (state && r.state !== state) return false;
@@ -2738,6 +2841,12 @@ function renderSeries() {
     : (a, b) => (b.latest || '').localeCompare(a.latest || ''));
 
   el('scount').textContent = nTotal(rows.length);
+  // THE BADGE COUNTS WHAT THE TAB LISTS. It was assigned once from index.json, which was the same
+  // number right up until some rows stopped being listed by default; then the tab said 3076 and
+  // the line under it said 3072. A count that disagrees with the list beside it is the failure the
+  // chapter count already taught this interface once.
+  el('n-cat').textContent = SERIES.series.filter(
+    r => (r.chapters || (r.print || []).length) && visShown(r)).length;
   el('sempty').hidden = rows.length > 0;
   el('serlist').innerHTML = rows.map(r => {
     const [lbl, cls, why] = SSTATE[r.state] || SSTATE.unknown;
@@ -2782,6 +2891,7 @@ function renderSeries() {
       ${r.id ? `<a class="wlink" href="${esc(BASE)}work/${esc(r.id)}/">` : ''}
         ${bilingual(() => `<div class="relhead">
           <span class="t">${workLabel(r)}</span>
+          ${visTag(r)}
           <span class="k ${cls}" title="${esc(why)}">${esc(T(lbl))}</span>
           ${r.state === 'print' ? completedTag(r.completed_claim) : ''}
           ${acc()}
@@ -3041,12 +3151,68 @@ const RESETS = {
    persist in localStorage, so without them a reader returns days later to a narrowed list with
    nothing on screen saying so. A collapsed panel may hide a control; it must not hide a fact. */
 const BARS = {
-  feed: { pane: 'ffilt', btn: 'ffiltbtn', gen: 'fchipgen', chipped: ['fmodel', 'ftype', 'fplat'] },
-  ser:  { pane: 'sfilt', btn: 'sfiltbtn', gen: 'schipgen', chipped: ['sstate', 'sfree', 'splat'] },
+  feed: { pane: 'ffilt', btn: 'ffiltbtn', gen: 'fchipgen',
+          chipped: ['fmodel', 'ftype', 'fplat', 'fvis'] },
+  ser:  { pane: 'sfilt', btn: 'sfiltbtn', gen: 'schipgen',
+          chipped: ['sstate', 'sfree', 'splat', 'svis'] },
   // rperiod is IN the chip row already, as a menu chip: a period always has a value, so it is the
   // one thing here that cannot be removed and it is not generated as a removable chip.
-  rel:  { pane: 'rfilt', btn: 'rfiltbtn', gen: 'rchipgen', chipped: ['rpub'] },
+  rel:  { pane: 'rfilt', btn: 'rfiltbtn', gen: 'rchipgen', chipped: ['rpub', 'rvis'] },
 };
+
+/* THE CONTROL IS BUILT HERE RATHER THAN WRITTEN IN index.html, and that is a compromise worth
+   naming: the markup belongs in the document with the other selects, and this file is the half of
+   the interface this change owns. Three selects and not one, because each tab's filters are its
+   own disclosure and a control that narrows THIS list has to sit with the controls that narrow it.
+   They share one value: the three lists are three views of one decision, and a reader who opted in
+   on one has opted in.
+
+   `data-chip` gives the chip a shorter wording than the option, the same as 無料あり does: inside
+   the dropdown the option has to read as a sentence, and on a chip it has to read as a label. */
+const VIS_SELECTS = { ffilt: 'fvis', sfilt: 'svis', rfilt: 'rvis' };
+function buildVisControls() {
+  Object.entries(VIS_SELECTS).forEach(([pane, id]) => {
+    if (el(id) || !el(pane)) return;
+    const s = document.createElement('select');
+    s.id = id;
+    s.dataset.chip = '異議・保留も表示 / including held-out';
+    s.innerHTML =
+      `<option value="">${'指定に異議のあるものを除く / excluding held-out entries'}</option>`
+      + `<option value="all">${'異議・判断保留のものも含める / include held-out entries'}</option>`;
+    el(pane).appendChild(s);
+    // saveView is bound to every VIEW_FIELD at parse time, and these do not exist then, so the
+    // binding is done here. Without it the choice was applied and never remembered, which is the
+    // half-wired state a filter can be in while looking entirely correct.
+    s.addEventListener('change', saveView);
+  });
+  syncVis();
+}
+
+// One value behind three controls. Whichever the reader touched decides, and the other two follow,
+// so a chip cleared on one tab does not leave another tab silently narrowed.
+function syncVis(from) {
+  const ids = Object.values(VIS_SELECTS);
+  if (from) ids.forEach(id => { if (el(id) && id !== from) el(id).value = el(from).value; });
+  VIS_SHOW = ids.some(id => el(id) && el(id).value === 'all');
+  ids.forEach(id => { if (el(id)) el(id).value = VIS_SHOW ? 'all' : ''; });
+}
+
+function repaintLists() {
+  renderFeed();
+  renderSeries();
+  paintReleases();
+  renderChips(document.querySelector('nav button[aria-selected=true]')?.dataset.tab);
+}
+
+// One listener for all three, because they hold one value. `change` is what persists (saveView is
+// bound to it for every VIEW_FIELD) and `input` is what the ordinary renders listen on, so this
+// takes the same route the hand-written selects take and adds only the syncing.
+['change', 'input'].forEach(ev => document.addEventListener(ev, e => {
+  const id = e.target && e.target.id;
+  if (!Object.values(VIS_SELECTS).includes(id)) return;
+  syncVis(id);
+  repaintLists();
+}));
 
 /* The chip says what the reader chose, in the language they are reading. `data-chip` on an option
    is a shorter form for the cases where the dropdown wording only reads as a sentence inside the
@@ -3293,6 +3459,10 @@ Promise.all([
   // rather than the link that was followed, which silently destroyed every deep link. The restore
   // is also run with NAV_APPLYING set, so it cannot push a history entry of its own before the
   // reader has done anything.
+  // BEFORE restoreView, so a saved value has a control to land in, and before the first render,
+  // so no list is drawn without knowing which rows are held out.
+  indexVisibility();
+  buildVisControls();
   const fromUrl = readNavUrl();
   const hasUrlState = ['tab', 'month', 'work'].some(k => new URLSearchParams(location.search).has(k));
   NAV_APPLYING = true;
