@@ -2,8 +2,8 @@
  "generated": "2026-08-07",
  "releases": 1062,
  "platforms": 22,
- "works": 2242,
- "series_rows": 3096,
+ "works": 2468,
+ "series_rows": 3083,
  "sources": [
   {
    "source": "bookwalker",
@@ -32,6 +32,16 @@
    "rows": 9,
    "retrieved": "2026-08-05",
    "age_days": 2,
+   "in_scope": true,
+   "empty": false
+  },
+  {
+   "source": "editions",
+   "files": 1,
+   "works": 4,
+   "rows": 4,
+   "retrieved": "2026-08-07",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -67,11 +77,11 @@
   },
   {
    "source": "madb",
-   "files": 598,
-   "works": 598,
-   "rows": 1310,
-   "retrieved": "2026-08-05",
-   "age_days": 2,
+   "files": 824,
+   "works": 824,
+   "rows": 1947,
+   "retrieved": "2026-08-07",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -4231,10 +4241,17 @@
   ]
  },
  "content_flags": {
-  "total": 23,
+  "total": 27,
   "withheld": 0,
-  "published": 23,
+  "published": 27,
   "rows": [
+   {
+    "title": "Qyootie Q! ―麒麟娘と婚約事情―",
+    "source": "editions",
+    "reason": "published on ヤングアンリアルコミックス, an adult imprint",
+    "withheld": false,
+    "published": true
+   },
    {
     "title": "SM百合えっちアンソロジー",
     "source": "marketing signal",
@@ -4334,9 +4351,23 @@
     "published": true
    },
    {
+    "title": "サキュバスじゃないモン!",
+    "source": "editions",
+    "reason": "published on ヤングアンリアルコミックス, an adult imprint",
+    "withheld": false,
+    "published": true
+   },
+   {
     "title": "セフレ沼から抜け出せないっ！百合えっちアンソロジー",
     "source": "marketing signal",
     "reason": "adult-marketed collection; §7 explicit, not pornography",
+    "withheld": false,
+    "published": true
+   },
+   {
+    "title": "タコと天使たち",
+    "source": "editions",
+    "reason": "published on ヤングアンリアルコミックス, an adult imprint",
     "withheld": false,
     "published": true
    },
@@ -4365,6 +4396,13 @@
     "title": "姉妹傭兵",
     "source": "kadokomi",
     "reason": "ratingLevel='adult' — review against DEFINITIONS §7 before publishing",
+    "withheld": false,
+    "published": true
+   },
+   {
+    "title": "悪魔のモカちゃん",
+    "source": "editions",
+    "reason": "published on ヤングアンリアルコミックス, an adult imprint",
     "withheld": false,
     "published": true
    },
@@ -6675,10 +6713,6 @@
     "platform": null
    },
    {
-    "work": "おやすみシェヘラザード",
-    "platform": null
-   },
-   {
     "work": "監獄街へようこそ!",
     "platform": null
    },
@@ -6943,10 +6977,6 @@
     "platform": null
    },
    {
-    "work": "愛に愛らし愛しいあなた",
-    "platform": null
-   },
-   {
     "work": "みかん氏短編集　ハッピーエンドはいらない",
     "platform": null
    },
@@ -7040,10 +7070,6 @@
    },
    {
     "work": "とびっきりデコレーション！",
-    "platform": null
-   },
-   {
-    "work": "ゆりでなるｖえすぽわーる",
     "platform": null
    },
    {
@@ -7395,10 +7421,6 @@
     "platform": null
    },
    {
-    "work": "お姫様のお姫様",
-    "platform": null
-   },
-   {
     "work": "金星のリヴェール",
     "platform": null
    },
@@ -7500,10 +7522,6 @@
    },
    {
     "work": "ユスリカ",
-    "platform": null
-   },
-   {
-    "work": "みーちゃんとアイリ",
     "platform": null
    },
    {
@@ -9059,10 +9077,6 @@
     "platform": null
    },
    {
-    "work": "レゾナントブルー",
-    "platform": null
-   },
-   {
     "work": "【한국어 ver.】사이좋은 조장들 - 組長達のなかよし",
     "platform": null
    },
@@ -9851,10 +9865,6 @@
     "platform": null
    },
    {
-    "work": "仕事の後は恋しよう",
-    "platform": null
-   },
-   {
     "work": "社会人百合スゥとアメ【合併版】",
     "platform": null
    },
@@ -10255,10 +10265,6 @@
     "platform": null
    },
    {
-    "work": "突然の百合",
-    "platform": null
-   },
-   {
     "work": "まりさのなつやすみ",
     "platform": null
    },
@@ -10360,10 +10366,6 @@
    },
    {
     "work": "同じクラスの先輩",
-    "platform": null
-   },
-   {
-    "work": "包帯少女期間",
     "platform": null
    },
    {
@@ -11076,10 +11078,6 @@
    },
    {
     "work": "SM百合えっちアンソロジー『待てない彼女の躾け方』【単話】",
-    "platform": null
-   },
-   {
-    "work": "リリィシステム",
     "platform": null
    },
    {
@@ -12467,19 +12465,11 @@
     "platform": null
    },
    {
-    "work": "ステラ★レコード = STELLA★RECORD",
-    "platform": null
-   },
-   {
     "work": "ふたりエスケープ公式コミックアンソロジー",
     "platform": null
    },
    {
     "work": "クダンノフォークロア = FOLKLORE OF KUDAN",
-    "platform": null
-   },
-   {
-    "work": "ゆりぐらし : No Love,No Life!",
     "platform": null
    },
    {
@@ -12504,10 +12494,6 @@
    },
    {
     "work": "ラブかライクか分からない!",
-    "platform": null
-   },
-   {
-    "work": "同じ所で眠るまで待って = Wait until I sleep in the same place with you",
     "platform": null
    },
    {
@@ -12728,11 +12714,11 @@
    }
   ],
   "grouping": {
-   "series-link": 400,
-   "title-match": 21,
-   "mixed": 36,
+   "series-link": 416,
+   "title-match": 33,
+   "mixed": 55,
    "unknown": 1644,
-   "title-only": 141
+   "title-only": 320
   },
   "catalogue_listings": [
    {

@@ -81,8 +81,8 @@
   {
    "name": "uncertain readings",
    "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-   "budget": 52,
-   "value": 52
+   "budget": 54,
+   "value": 54
   },
   {
    "name": "works without English",
@@ -93,8 +93,8 @@
   {
    "name": "works showing a romanisation",
    "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-   "budget": 160,
-   "value": 160
+   "budget": 159,
+   "value": 159
   },
   {
    "name": "incomplete attested rows",
@@ -137,8 +137,8 @@
   {
    "name": "bookwalker listings unconfirmed",
    "means": "BOOK☆WALKER rows whose series listing was read before the reader compared what it read against the shop's own 全N件. Until 2026-08-06 the last row of a listing swallowed the markup printed underneath it and was identified by the related-series link in there, so it was dropped; a listing is sorted newest first, so the row dropped is the OLDEST volume and `first_publication` is the earliest date across the volumes read. Falls as adapters/recon/bookwalker_volumes.py --follow-series re-reads them, and reaches zero, because every row counted here names a series to fetch.",
-   "budget": 563,
-   "value": 557
+   "budget": 0,
+   "value": 0
   },
   {
    "name": "undated cmoa candidates",

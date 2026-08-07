@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-07T00:17:15+00:00",
+ "generated": "2026-08-07T07:38:49+00:00",
  "since_last": {
-  "at": "2026-08-06T23:09:38+00:00",
+  "at": "2026-08-07T02:49:16+00:00",
   "statistics": {}
  },
  "means": {
@@ -23,9 +23,9 @@
  "last_run": {
   "at": "2026-08-07",
   "releases": 1062,
-  "works": 2242,
+  "works": 2468,
   "platforms": 22,
-  "series_rows": 3096,
+  "series_rows": 3083,
   "identification": {
    "discovery-candidate": 758,
    "platform-genre": 304
@@ -105,8 +105,8 @@
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 52,
-    "value": 52
+    "budget": 54,
+    "value": 54
    },
    {
     "name": "works without English",
@@ -117,8 +117,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 160,
-    "value": 160
+    "budget": 159,
+    "value": 159
    },
    {
     "name": "incomplete attested rows",
@@ -147,8 +147,8 @@
    {
     "name": "bookwalker listings unconfirmed",
     "means": "BOOK☆WALKER rows whose series listing was read before the reader compared what it read against the shop's own 全N件. Until 2026-08-06 the last row of a listing swallowed the markup printed underneath it and was identified by the related-series link in there, so it was dropped; a listing is sorted newest first, so the row dropped is the OLDEST volume and `first_publication` is the earliest date across the volumes read. Falls as adapters/recon/bookwalker_volumes.py --follow-series re-reads them, and reaches zero, because every row counted here names a series to fetch.",
-    "budget": 581,
-    "value": 575
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "undated cmoa candidates",
@@ -236,20 +236,6 @@
    "drop": null
   },
   {
-   "source": "madb",
-   "files": 598,
-   "works": 598,
-   "rows": 1310,
-   "retrieved": "2026-08-05",
-   "age_days": 2,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 0,
-   "well_formed": 0,
-   "malformed": 0,
-   "drop": null
-  },
-  {
    "source": "gigaviewer",
    "files": 69,
    "works": 661,
@@ -306,6 +292,34 @@
    "drop": null
   },
   {
+   "source": "editions",
+   "files": 1,
+   "works": 4,
+   "rows": 4,
+   "retrieved": "2026-08-07",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 0,
+   "well_formed": 0,
+   "malformed": 0,
+   "drop": null
+  },
+  {
+   "source": "madb",
+   "files": 824,
+   "works": 824,
+   "rows": 1947,
+   "retrieved": "2026-08-07",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 0,
+   "well_formed": 0,
+   "malformed": 0,
+   "drop": null
+  },
+  {
    "source": "webpages",
    "files": 37,
    "works": 531,
@@ -322,7 +336,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-06T23:09:29+00:00",
+  "previous_at": "2026-08-07T02:49:15+00:00",
   "drops": []
  },
  "outstanding": [
@@ -335,7 +349,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 142,
+   "count": 141,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -455,7 +469,6 @@
     "ゆずせん",
     "ゆゆ式",
     "ゆりでなる♡えすぽわーる",
-    "ゆりでなるｖえすぽわーる",
     "ゆりゆり",
     "よぬりめ",
     "わくとこまこ",
@@ -497,26 +510,26 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 9,
+   "count": 8,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
-    "bookwalker listings unconfirmed": 581,
+    "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
     "incomplete attested rows": 16,
     "scraped counters in chapter names": 1,
-    "uncertain readings": 52,
+    "uncertain readings": 54,
     "undated cmoa candidates": 1220,
     "unreadable bookwalker rows": 15,
-    "works showing a romanisation": 160,
+    "works showing a romanisation": 159,
     "works without English": 105
    }
   }
  ],
  "statistics": {
-  "works": 3096,
+  "works": 3083,
   "states": {
-   "print": 2076,
+   "print": 2063,
    "oneshot": 401,
    "completed": 270,
    "active": 198,
@@ -525,16 +538,16 @@
    "slow": 42
   },
   "english_basis": {
-   "translated": 2706,
-   "official-jp": 115,
-   "licensed": 115,
+   "translated": 2702,
+   "licensed": 114,
    "none": 109,
-   "romaji": 51
+   "official-jp": 108,
+   "romaji": 50
   },
-  "print_works": 2234,
-  "print_only": 2076,
-  "volumes": 5224,
-  "with_identifier": 3096,
+  "print_works": 2435,
+  "print_only": 2063,
+  "volumes": 5861,
+  "with_identifier": 3083,
   "chapters": 17680
  }
 }
