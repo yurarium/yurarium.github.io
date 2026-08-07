@@ -735,10 +735,11 @@ function credit(c) {
    same mistake at a larger size. Publisher names live in data/names now, with the basis for each
    rendering and the page it was read from beside it, exactly as titles and authors do.
 
-   KEYED BOTH WAYS, by the string the catalogue holds and by the string this file shows, because
-   the cataloguing is stripped in two places: `publisherOf` here and `publisher_of` in the
-   generator. Two implementations of one rule can drift, and a raw key means a drift costs a lookup
-   the other key still answers rather than a publisher silently going back to Japanese.
+   KEYED BOTH WAYS, by the string the catalogue holds and by the string this file shows. That was
+   written when the cataloguing was stripped here as well as in the generator, and a drift between
+   the two cost a lookup the other key still answered. Nothing strips it here now, so the second
+   key is a fallback for a name that reaches the shipped data unresolved rather than a hedge
+   against two implementations of one rule.
 
    READ OUT OF feed/names.json, under `publishers`. It was a file of its own, fetched separately
    and written by a script that ran after the build; the map is now one key beside titles and
@@ -880,17 +881,25 @@ const EV_HOLDS = {
 const evType = k => (EV_TYPE[k] ? T(EV_TYPE[k][0], EV_TYPE[k][1]) : (k || ''));
 const evHolds = k => (EV_HOLDS[k] ? T(EV_HOLDS[k][0], EV_HOLDS[k][1]) : (k || ''));
 
-/* A PUBLISHER AND AN IMPRINT ARRIVE AS CATALOGUING, and the volumes section above already knows
-   what to do about it. MADB writes a distributor as `[頒布]講談社` and spells one imprint at least
-   six ways, `IDコミックス. Yurihime comics = コミック百合姫` among them. Six spellings of 百合姫
-   in one table read as six different imprints, which is the opposite of what an imprint is for.
+/* WHO MADE THE CLAIM. The row names the party, and for an imprint row that party is the publisher
+   whose imprint it is, which `adapters/classify/credence.py` reads off the record's `publisher`
+   field and nothing else.
 
-   THE TERM IS STILL THE SOURCE'S CLAIM. What is dropped is the notation around it, not the word:
-   `imprintOf` picks the most specific segment and maps a Latin spelling onto the Japanese name of
-   the same line, so a reader sees the imprint the publisher prints rather than the string a
-   cataloguer typed. Same function the volumes section uses, so the two cannot drift. */
+   THIS COLUMN CARRIED THE SAME FAULT AS THE VOLUMES SECTION, one layer removed and worse for it.
+   The evidence table exists to say who is claiming a work is yuri, and while the record stored
+   `[発売]講談社` this cell took the bracket off and printed 講談社: the table stated that 講談社
+   had filed 132 works as yuri under a 一迅社 imprint. It agreed with the volumes section, which
+   was the intent, and both were wrong about the same field. The record separates the two roles
+   now, so neither reading has anything left to strip and the agreement is on a fact instead of on
+   a habit.
+
+   AN IMPRINT IS STILL NORMALISED, and that is a different job. MADB spells one imprint at least
+   six ways, `IDコミックス. Yurihime comics = コミック百合姫` among them, and six spellings of
+   百合姫 in one table read as six different imprints. `imprintOf` picks the most specific segment
+   and maps a Latin spelling onto the Japanese name of the same line, which drops notation and
+   never a term. Same function the volumes section uses, so the two cannot drift. */
 const evSource = e => ((e.type === 'publisher' || e.type === 'magazine')
-  ? pubBoth(publisherOf(e.source)) : sourceBoth(e.source));
+  ? pubBoth(e.source) : sourceBoth(e.source));
 /* A GENRE WORD IS A SHORT CONTROLLED VOCABULARY, and a shop uses a handful of them. Quoting the
    source is the point of this column, so the Japanese is what the row means, and an English-only
    reader was still being shown 百合 with no way in. The English is given and the source's own word
@@ -1480,10 +1489,53 @@ function imprintOf(s) {
   return (named.length ? named[named.length - 1] : segs[0]) || '';
 }
 
-// A publisher without the cataloguing around it: MADB writes a distributor as `[頒布]講談社` and a
-// trailing `(発売)`, and neither is part of the name a reader is being shown.
-function publisherOf(s) {
-  return String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '').replace(/\s*[（(][^）)]*[）)]\s*$/, '').trim();
+/* A PUBLISHER ARRIVES AS A NAME AND IS SHOWN AS ONE. There was a `publisherOf` here that took a
+   leading `[頒布]` and a trailing `(発売)` off the string, because MADB writes the distributor and
+   the publisher into one field and the record stored whichever came first. It has gone, and what
+   replaced it is upstream: `adapters/madb/extract.py` reads the role out of the bracket, stores
+   the publisher, the distributor and the raw string in fields of their own, and `check.py`'s
+   `a publisher is a name, not a role` blocks check-in on a stored name that still holds notation
+   or was lifted out of it.
+
+   THIS IS THE POINT OF THE WHOLE CHANGE and not a tidy-up. Stripping the bracket here made the
+   page agree with itself while both halves were wrong: the volumes section and the evidence table
+   each took the same field, each took the same bracket off, and each named 講談社 as the publisher
+   of 132 works 一迅社 published. A renderer cannot tell a distributor from a publisher by looking
+   at the string, so it must not be the thing deciding (STANDING-INSTRUCTIONS §3).
+
+   The two strippers had already drifted, which is what that costs. `publisherOf` returned an empty
+   string for `[Shueisha]`, a publisher MADB brackets because the bracket is how it writes a name
+   from a Latin catalogue, while `stripRole` in the volumes section kept it. One field, two
+   renderings, and one of them printing nobody. */
+
+/* WHAT A PRINT ROW SAYS ABOUT WHO MADE THE BOOK, in one place because the works list, the work
+   page and the evidence table all ask it and had three answers between them.
+
+   `publisher_basis` IS SHOWN AND NOT SWALLOWED. Where MADB names only a distributor the publisher
+   is unknown, and an empty cell reads as a field nobody has filled in. Naming the distributor and
+   saying it is one is the honest row; guessing 一迅社 from a 百合姫 imprint would be the database
+   inventing a fact, which is what the source layer refuses to do (DEFINITIONS §5). */
+const PUB_UNKNOWN = {
+  'not-stated': ['出版社の記載なし', 'publisher not stated'],
+  'unknown-to-source': ['出版者不明', 'publisher unknown'],
+  absent: ['出版社の記載なし', 'publisher not stated'],
+};
+
+function publisherParts(p) {
+  const out = [];
+  if (p.publisher) out.push(pubBoth(p.publisher));
+  else if (p.publisher_basis) {
+    const w = PUB_UNKNOWN[p.publisher_basis] || PUB_UNKNOWN.absent;
+    out.push(T(w[0], w[1]));
+  }
+  // A distributor put the book into shops and did not publish it, so the row says which it is.
+  // 講談社 has handled 発売 for 一迅社 since it bought the house in 2016, and a reader shown the
+  // name alone has no way to tell that from 講談社 publishing the book.
+  if (p.distributor) {
+    out.push(T(`${pubBoth(p.distributor)}（発売）`, `${pubBoth(p.distributor)} (distributor)`));
+  }
+  if (p.imprint) out.push(pubBoth(imprintOf(p.imprint)));
+  return out.filter(Boolean);
 }
 
 /* THE ROLE IN FRONT OF A NAME, taken off however many of them there are.
@@ -1585,10 +1637,11 @@ function workDetail(r) {
   const bits = [];
   (r.print || []).forEach(p => {
     const span = [p.first, p.last].filter(Boolean).join(' \u2013 ');
-    // MADB prefixes a publisher with its role, [頒布] for the distributor. That is cataloguing
-    // notation and not part of the name a reader is being shown. stripRole() takes however many
-    // of them a record carries.
-    const who = [stripRole(p.publisher), stripRole(p.imprint)].filter(Boolean).join(' \u00b7 ');
+    // WHO PUBLISHED IT, WHO DELIVERED IT, AND UNDER WHAT IMPRINT. This row used to run the
+    // publisher field through stripRole() and print whatever came out, which is how a distributor
+    // got named as the publisher here and in two other places besides. One reader of those fields
+    // now, so the works list and the work page cannot disagree about one book.
+    const who = publisherParts(p).join(' \u00b7 ');
     bits.push(`<div class="dl"><span class="dk">${T('\u5358\u884c\u672c', 'In print')}</span>` +
       `<span class="dv">${esc([p.volumes ? p.volumes + (T(' \u5DFB', ' vol')) : '', who, span]
         .filter(Boolean).join(' \u00b7 '))}</span></div>`);
@@ -1993,8 +2046,7 @@ function renderWorkPage() {
      under this heading rather than after an undifferentiated run of facts. Seller links are NOT
      here yet: shop_url is on the source records and reaches no build output. */
   const printBody = (r.print || []).map(pr => {
-    const who = [pubBoth(publisherOf(pr.publisher)), pubBoth(imprintOf(pr.imprint))]
-      .filter(Boolean).join(' · ');
+    const who = publisherParts(pr).join(' · ');
     /* WHERE TO BUY IT, beside the volumes it describes, which parallels the platform links the
        serialisation carries. A retailer is a Tier C source and its shelf is never a marketing
        label, so this says only that the shop sells the book. */
@@ -2147,10 +2199,11 @@ async function renderReleases() {
                                  fin: v.final_volume ? v.final_volume_basis : null });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
-  // MADB records a distributor role in a trailing bracket: "講談社 (発売)" beside "講談社". That is
-  // a fact about who put the volume in shops, not a second publisher, and a filter offering both
-  // is offering the reader a distinction they did not ask for and cannot act on.
-  const pubOf = s => pubBoth(publisherOf(s));
+  // THE FILTER OFFERS PUBLISHERS AND NOT DISTRIBUTORS. The two are separate fields on the record
+  // now, and a reader narrowing the releases list to 一迅社 wants the books 一迅社 published, not
+  // every book 講談社 happened to deliver for it. The row still names the distributor; only the
+  // filter is publisher-only, because that is the question the control asks.
+  const pubOf = s => pubBoth(s);
   /* Each row is rendered ONCE, into a string, and the controls only choose which strings are
      joined. The alternative is re-running the creator and imprint normalisation below for 640
      volumes on every keystroke, and that work depends on the display preferences rather than on
@@ -2181,8 +2234,7 @@ async function renderReleases() {
       // sorted by date read as six different imprints, which is the opposite of what an imprint is
       // for. The segments are split apart and the most specific one kept; a Latin spelling of a
       // series that has a Japanese name maps onto it.
-      const who = [pubOf(w.publisher), pubBoth(imprintOf(w.imprint))]
-        .filter(Boolean).join(' · ');
+      const who = publisherParts(w).join(' · ');
       // A release is of a VOLUME, so the row says which. 471 of 646 are numbered in the record
       // and the rest say nothing rather than being numbered by their position in a sorted list.
       // Same rule as the work page, from the same function: the releases tab was printing
