@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-07T21:17:21+00:00",
+ "generated": "2026-08-07T21:40:11+00:00",
  "since_last": {
-  "at": "2026-08-07T21:03:12+00:00",
+  "at": "2026-08-07T21:33:34+00:00",
   "statistics": {}
  },
  "means": {
@@ -25,7 +25,7 @@
   "releases": 1166,
   "works": 2558,
   "platforms": 22,
-  "series_rows": 3079,
+  "series_rows": 3076,
   "identification": {
    "discovery-candidate": 853,
    "platform-genre": 313
@@ -137,6 +137,12 @@
     "means": "records carrying a publisher-side yuri label whose imprint holds no term saying so, which is a label the work page cannot show a reader the evidence for. A rise means a pass has gone back to storing a field from a record other than the one that justified the label.",
     "budget": 0,
     "value": 0
+   },
+   {
+    "name": "titles with no translation of our own",
+    "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
+    "budget": 214,
+    "value": 214
    },
    {
     "name": "publishers with no English",
@@ -408,7 +414,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-07T21:03:11+00:00",
+  "previous_at": "2026-08-07T21:33:33+00:00",
   "drops": []
  },
  "outstanding": [
@@ -594,7 +600,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 10,
+   "count": 11,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "bookwalker listings unconfirmed": 0,
@@ -609,6 +615,7 @@
     "renderings with nothing to show": 46,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
+    "titles with no translation of our own": 214,
     "uncertain readings": 74,
     "undated cmoa candidates": 1220,
     "unreadable bookwalker rows": 15,
@@ -618,27 +625,27 @@
   }
  ],
  "statistics": {
-  "works": 3079,
+  "works": 3076,
   "states": {
    "print": 1727,
-   "oneshot": 401,
-   "unknown": 311,
+   "oneshot": 399,
+   "unknown": 310,
    "completed": 283,
    "active": 222,
    "dormant": 80,
    "slow": 55
   },
   "english_basis": {
-   "translated": 2679,
-   "licensed": 113,
+   "translated": 2677,
+   "licensed": 112,
    "official-jp": 112,
    "none": 109,
    "romaji": 66
   },
-  "print_works": 2515,
+  "print_works": 2514,
   "print_only": 1727,
   "volumes": 6235,
-  "with_identifier": 3079,
-  "chapters": 26903
+  "with_identifier": 3076,
+  "chapters": 26897
  }
 }
