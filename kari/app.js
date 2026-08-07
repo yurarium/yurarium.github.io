@@ -1559,6 +1559,19 @@ function readerBasis(r) {
    AND A TIMER IS NOT FREE NOW. 21 of 21 chapters counted as free where 19 of them need a daily
    ticket, and the line read "all free to read" to a reader who can open two. Conditionally free is
    still free, which is why it counts, and it is not the same thing, which is why it is said. */
+// How many credits a line shows before it counts the rest. Four fits one line at every width the
+// facts grid uses; a fifth wraps on a phone.
+const CREDITS_SHOWN = 4;
+
+function creditLine(r) {
+  const people = String(r.author || '').split(/\s*\/\s*/).filter(Boolean);
+  if (people.length <= CREDITS_SHOWN) return authorLabel(r);
+  const head = authorLabel({ ...r, author: people.slice(0, CREDITS_SHOWN).join(' / ') });
+  const rest = people.length - CREDITS_SHOWN;
+  return `${head}<span class="wf-sub" title="${esc(people.join(', '))}">${
+    esc(T(`ほか${rest}名`, `and ${rest} others`))}</span>`;
+}
+
 function accessLine(r) {
   const now = r.free || 0, timed = r.free_timed || 0;
   const free = now + timed;
@@ -1611,7 +1624,10 @@ function renderWorkPage() {
   // ── the facts, as pairs, in one grid rather than one row each ────────────────────────────────
   const facts = [];
   const fact = (k, v) => { if (v) facts.push(`<div class="wf"><dt>${esc(k)}</dt><dd>${v}</dd></div>`); };
-  fact(T('作者', 'Author'), r.author ? authorLabel(r) : '');
+  /* A CREDIT LINE IS A LIST OF PEOPLE AND STOPS BEING READABLE AS ONE. コミック百合姫 credits
+     more than twenty, run together, which is a paragraph where a reader wanted a name. The first
+     few are shown and the rest counted, with every name still in the tooltip. */
+  fact(T('作者', 'Author'), r.author ? creditLine(r) : '');
   // The newest chapter is a chapter, not a date. `latest_ep` was in the row and shown only in the
   // list, so the page said less about the same fact than the line that led to it.
   /* THESE THREE ARE ABOUT CHAPTERS, and the page below them lists volumes, so they say which.
