@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-07T08:05:21+00:00",
+ "generated": "2026-08-07T08:25:06+00:00",
  "since_last": {
-  "at": "2026-08-07T07:38:49+00:00",
+  "at": "2026-08-07T08:05:21+00:00",
   "statistics": {}
  },
  "means": {
@@ -115,8 +115,8 @@
    {
     "name": "implausible ruby spans",
     "means": "furigana runs holding fewer kana than they have kanji. A rise means the aligner placed a boundary somewhere no reading could fall, which the spelling check cannot see.",
-    "budget": 13,
-    "value": 13
+    "budget": 8,
+    "value": 8
    },
    {
     "name": "uncertain readings",
@@ -176,7 +176,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": 1
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    }
   ]
  },
@@ -352,7 +353,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-07T07:38:48+00:00",
+  "previous_at": "2026-08-07T08:05:20+00:00",
   "drops": []
  },
  "outstanding": [
@@ -532,7 +533,7 @@
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
-    "implausible ruby spans": 13,
+    "implausible ruby spans": 8,
     "incomplete attested rows": 16,
     "scraped counters in chapter names": 1,
     "uncertain readings": 54,
