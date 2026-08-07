@@ -701,7 +701,11 @@ function credit(c) {
    KEYED BOTH WAYS, by the string the catalogue holds and by the string this file shows, because
    the cataloguing is stripped in two places: `publisherOf` here and `publisher_of` in the
    generator. Two implementations of one rule can drift, and a raw key means a drift costs a lookup
-   the other key still answers rather than a publisher silently going back to Japanese. */
+   the other key still answers rather than a publisher silently going back to Japanese.
+
+   READ OUT OF feed/names.json, under `publishers`. It was a file of its own, fetched separately
+   and written by a script that ran after the build; the map is now one key beside titles and
+   authors, which is what it always was. */
 let PUBS = null;
 
 function pubEn(n) {
@@ -1445,6 +1449,26 @@ function publisherOf(s) {
   return String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '').replace(/\s*[（(][^）)]*[）)]\s*$/, '').trim();
 }
 
+/* THE ROLE IN FRONT OF A NAME, taken off however many of them there are.
+   MADB writes one role as `[著]やまじえびね` and the single strip below handled that. It also
+   writes `[[翻訳協力]][BPS株式会社]`, a role inside a role, and one pass takes `[[翻訳協力]` and
+   leaves the credit reading `][BPS株式会社]`: a stray bracket in front of a company's name on the
+   releases list. Two rows are in that state. Looping is the fix, and the loop is here once rather
+   than in each caller, because this was the same three-line closure written twice. */
+function stripRole(s) {
+  let out = String(s || '').trim();
+  // NEVER STRIP THE LAST THING LEFT. `[BPS株式会社]` is a name inside notation, and a loop that
+  // took every bracketed group would return nothing and print an empty credit, which is the
+  // silent failure this project keeps meeting rather than a visible one.
+  for (let n = 0; n < 8; n++) {
+    const cut = out.replace(/^\s*\[[^\]]*\]\s*/, '').replace(/^\]\s*/, '').trim();
+    if (!cut || cut === out) break;
+    out = cut;
+  }
+  // What is left is the name, whether or not the cataloguer wrapped it as well.
+  return out.replace(/^\[([^[\]]+)\]$/, '$1');
+}
+
 function volCount(n) {
   return T(n + '巻', n + (n === 1 ? ' volume' : ' volumes'));
 }
@@ -1525,9 +1549,9 @@ function workDetail(r) {
   (r.print || []).forEach(p => {
     const span = [p.first, p.last].filter(Boolean).join(' \u2013 ');
     // MADB prefixes a publisher with its role, [頒布] for the distributor. That is cataloguing
-    // notation and not part of the name a reader is being shown.
-    const strip = s => String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '');
-    const who = [strip(p.publisher), strip(p.imprint)].filter(Boolean).join(' \u00b7 ');
+    // notation and not part of the name a reader is being shown. stripRole() takes however many
+    // of them a record carries.
+    const who = [stripRole(p.publisher), stripRole(p.imprint)].filter(Boolean).join(' \u00b7 ');
     bits.push(`<div class="dl"><span class="dk">${T('\u5358\u884c\u672c', 'In print')}</span>` +
       `<span class="dv">${esc([p.volumes ? p.volumes + (T(' \u5DFB', ' vol')) : '', who, span]
         .filter(Boolean).join(' \u00b7 '))}</span></div>`);
@@ -2086,7 +2110,6 @@ async function renderReleases() {
                                  fin: v.final_volume ? v.final_volume_basis : null });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
-  const strip = s => String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '');
   // MADB records a distributor role in a trailing bracket: "講談社 (発売)" beside "講談社". That is
   // a fact about who put the volume in shops, not a second publisher, and a filter offering both
   // is offering the reader a distinction they did not ask for and cannot act on.
@@ -2104,7 +2127,7 @@ async function renderReleases() {
       // several as "[作画]A / [原作]B". Splitting on the slash alone turned the reading into a
       // second person, so English read "Tsumugi Meme / ツムギメメ". A trailing part that is all
       // kana and follows a part that is not is the reading of it.
-      const parts = String(w.creator || '').split('/').map(x => strip(x.trim())).filter(Boolean);
+      const parts = String(w.creator || '').split('/').map(x => stripRole(x.trim())).filter(Boolean);
       // The reading is written in KATAKANA and the name is not written only in katakana. あまね
       // reads アマネ, so requiring the name to be non-kana missed every hiragana pen name.
       const kata = s => /^[\u30a0-\u30ff\u30fb\u30fc\s]+$/.test(s);
@@ -3441,14 +3464,13 @@ Promise.all([
   DATA('feed/meta.json').catch(() => null),
   // Names, keyed by folded title/author, joined onto rows at render time: see nameFor(). Shipped
   // apart from the rows so an archived month, which is never rewritten, still gets current ones.
+  // PUBLISHERS RIDE IN THE SAME FILE. They were a second fetch of a second file written by a
+  // second script, and a company name is a name like the other two. Absent means every publisher
+  // renders as Japanese, which is the fallback the whole naming design already takes.
   DATA('feed/names.json').catch(() => null),
-  // Publisher and imprint names, the same join one step further out: a company name is a name, and
-  // it is the last one this file held as a literal. Absent means every publisher renders as
-  // Japanese, which is the fallback the whole naming design already takes.
-  DATA('feed/publishers.json').catch(() => null),
-]).then(([idx, feed, series, meta, names, pubs]) => {
+]).then(([idx, feed, series, meta, names]) => {
   NAMES = names && names.titles ? names : null;
-  PUBS = (pubs && pubs.names) || null;
+  PUBS = (names && names.publishers) || null;
   INDEX = idx; FEED = feed; SERIES = series; META = meta;
   // The header used to restate the totals: "1350 更新 · 302 作品 · 646 巻" and a release/platform
   // count under it. The tabs already carry those numbers, next to the thing they count, and a
