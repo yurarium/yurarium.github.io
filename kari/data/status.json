@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T12:27:09+00:00",
+ "generated": "2026-08-08T12:45:53+00:00",
  "since_last": {
-  "at": "2026-08-08T12:12:40+00:00",
+  "at": "2026-08-08T12:27:09+00:00",
   "statistics": {}
  },
  "means": {
@@ -296,8 +296,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 172,
-    "value": 172
+    "budget": 170,
+    "value": 170
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -315,7 +315,8 @@
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": 75
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -369,7 +370,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": 1
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "updates naming a work we do not hold",
@@ -563,7 +565,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T11:25:10+00:00",
+  "previous_at": "2026-08-08T12:27:07+00:00",
   "drops": []
  },
  "outstanding": [
@@ -576,7 +578,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 151,
+   "count": 149,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -717,7 +719,6 @@
     "一端の子",
     "京アミ！",
     "冬馬くん",
-    "可愛原先輩はかわいいがすき！",
     "天華百剣 ‐瞬‐",
     "奏 青春バンド百合アンソロジー",
     "完パコLOVE",
@@ -728,8 +729,7 @@
     "百合色ミュージアム（OrangeVox）",
     "私の女神が今日も推せる 【単話版】",
     "能面 battle girl納言",
-    "豹藤さんは攻略（おと）したい",
-    "鮮血王女、皆殺す ～家族に裏切られ、処刑された少女は蘇り、『死神』となって復讐する～"
+    "豹藤さんは攻略（おと）したい"
    ]
   },
   {
@@ -784,7 +784,7 @@
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 27,
     "volumes with an isbn and no date": 0,
-    "works showing a romanisation": 172,
+    "works showing a romanisation": 170,
     "works without English": 104
    }
   }
@@ -801,11 +801,11 @@
    "slow": 57
   },
   "english_basis": {
-   "translated": 2676,
+   "translated": 2678,
    "official-jp": 117,
    "licensed": 112,
    "none": 108,
-   "romaji": 64
+   "romaji": 62
   },
   "print_works": 2514,
   "print_only": 1727,
