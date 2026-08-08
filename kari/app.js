@@ -496,14 +496,55 @@ function personName(rec) {
   return bits.length === 2 ? `${bits[1]} ${bits[0]}` : rj;
 }
 
+/* HOW A CREDIT FIELD DIVIDES, ASKED OF THE BUILD RATHER THAN WORKED OUT HERE.
+
+   `adapters/names/creditline.py` divides every credit field in the corpus with the same splitter
+   the name store is keyed on, and ships the answer under `credit_parts`. This file used to divide
+   the field itself in two different places \u2014 `credit()` on the catalogue tab and `creditNames()`
+   on the \u767a\u58f2 tab \u2014 and neither knew about a role in round brackets, a doubled bracket, `\u307b\u304b`, an
+   ampersand or an interpunct. `\u5357\u90e8\u304f\u307e\u3053(\u4f5c) / \u6771\u6cb3\u307f\u305d(\u7d75)` matched nothing in a store that holds
+   both people, and `iimAn&\u60df\u4e1e` was one name nobody is called.
+
+   `{ p: [{ n: name, r: role }, \u2026, { etc: 1 }], part: 1 }`. `etc` is the field saying the people it
+   names are some of them; `part` is the build saying its division does NOT account for the whole
+   field, which is the flag that keeps a rebuilt byline from quietly losing a credit. */
+function creditDiv(field) {
+  const d = NAMES && NAMES.credit_parts && NAMES.credit_parts[foldKey(String(field || '').trim())];
+  return (d && Array.isArray(d.p)) ? d : null;
+}
+
+/* The people in a division, without the marker that says there are more of them. */
+function creditPeople(field) {
+  const d = creditDiv(field);
+  return d ? d.p.filter(x => x.n).map(x => x.n) : null;
+}
+
 /* A credit line built from the people in it, so it follows the same choices a single name does.
    Null where any of them is unknown to the store: half a line composed and half romanised whole
    reads as neither, and a reader cannot tell which half to trust. */
 // Kana and kanji. A credit with none of these is already Latin and is its own English form.
 const JA_TEXT = /[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff]/;
 
+/* A NAME ALREADY IN LATIN, WITH THE CATALOGUE'S TYPING TAKEN OFF.
+
+   `Ｍａｇｐｉｅ`, `ｆｉｎｉｔｅ` and `Ｈｏｕｒａｉ　Ｄｏｌｌ` are Latin pen names a cataloguer typed
+   in full width, and the store holds nothing for them because there is nothing to hold: a Latin
+   pen name is not a transliteration of anything (NAMES-PLAN §1) and `pass0_cache` files it as
+   `stated` off the surface. So the surface reached an English page with its width intact, and
+   `full-width forms in English renderings` counted 308 of them.
+
+   NFKC IS NOT A TRANSLATION and not a reading. It maps Ｍ to M and leaves everything else alone,
+   which is the same fold `pass4_analyser.latin_reading` already applies for the same reason. The
+   test is that the name holds no kana and no kanji, so a title published with a full-width mark —
+   `2×2＝SHINOBUDEN+` is the recorded one — never reaches this: it is a TITLE and goes through
+   `workLabel`, and the work's own name is what it publishes. */
+function plainLatin(n) {
+  const s = String(n || '');
+  return (s && !JA_TEXT.test(s)) ? s.normalize('NFKC') : null;
+}
+
 function creditFromParts(ja) {
-  const parts = NAMES && NAMES.credit_parts && NAMES.credit_parts[foldKey(ja)];
+  const parts = creditPeople(ja);
   if (!parts || parts.length < 2) return null;
   const out = [];
   for (const n of parts) {
@@ -512,7 +553,8 @@ function creditFromParts(ja) {
     /* A NAME ALREADY IN LATIN NEEDS NO RECORD. `倫理きよ, Syousa., jimao` composed nothing because
        Syousa. and jimao are not in the store, having no reading to hold, so the whole line fell
        through to the Japanese. A part with no Japanese in it is its own English form. */
-    if (!JA_TEXT.test(n)) { out.push(n); continue; }
+    const latin = plainLatin(n);
+    if (latin) { out.push(latin); continue; }
     return null;
   }
   return out.join(', ');
@@ -528,6 +570,18 @@ function authorLabel(r) {
   if (LANG === 'en') {
     const composedEarly = creditFromParts((r.author || '').trim());
     if (composedEarly) return esc(composedEarly);
+    /* AND WHERE ONE NAME IN THE LINE IS UNKNOWN, THE REST STILL RENDER. The composition above is
+       all-or-nothing on the argument that half a line composed and half romanised whole reads as
+       neither, and that argument is about the FALLBACK it had: the analyser's phrase, one fixed
+       string covering the whole field. `creditText` is a different fallback. It renders each name
+       in its own state and leaves the field's own separators alone, so an unknown name shows as
+       the Japanese §6 says it should while the people beside it read normally. Before this,
+       `ZCloud / 伊実 / 角川青羽` put all three in Japanese because two of them have no reading. */
+    const div = creditDiv((r.author || '').trim());
+    if (div && div.p.filter(x => x.n).length > 1) {
+      const inPlace = creditText((r.author || '').trim());
+      if (inPlace) return esc(inPlace);
+    }
   }
   // A CREDIT LINE IS ANNOTATED PERSON BY PERSON. The line as a whole has no record, so it had no
   // furigana at all even once every person in it had a sourced reading. The raw string is kept
@@ -540,7 +594,7 @@ function authorLabel(r) {
   // `author_en` held Rinri Kiyo, Syousa., jimao all along. The composition is allowed to fail; the
   // fallback has to be the romanisation and not the surface.
   const rawJa = (r.author || '').trim();
-  const parts = NAMES && NAMES.credit_parts && NAMES.credit_parts[foldKey(rawJa)];
+  const parts = creditPeople(rawJa);
   if (LANG !== 'en' && FURIGANA && parts && parts.length > 1) {
     let out = '', rest = rawJa, any = false;
     for (const nm of parts) {
@@ -557,6 +611,13 @@ function authorLabel(r) {
 
   if (!e) {
     const ph = phraseOf((r.author || '').trim());
+    // A LATIN NAME THE STORE HAS NOTHING FOR IS STILL THE NAME, and the catalogue's full width is
+    // not part of it. Only where the phrase map added nothing, so a rendering somebody recorded is
+    // never overwritten by a fold.
+    if (LANG === 'en' && ph === (r.author || '').trim()) {
+      const latin = plainLatin(ph);
+      if (latin) return esc(latin);
+    }
     return esc(ph);
   }
   if (LANG === 'en') {
@@ -694,30 +755,208 @@ const PLAT_EN = {
   'GANMA!(更新終了)':'GANMA! (ended)', 'コミックゼノン':'Comic Zenon',
   'マイナビニュース':'Mynavi News', 'ヤンジャン+':'Yanjan+', 'コミックエッセイ劇場':'Comic Essay Gekijo',
 };
-/* Creator role markers, which arrive welded into the credit string: "[著]森永みるく",
-   "[漫画]東雲水生 / [脚本]駒尾真子". The NAME is a proper noun and stays as it is in every mode:
-   transliterating a mangaka is not translation, it is guessing. The bracketed ROLE is a label and
-   is rendered. MADB's own vocabulary, so the set is small and closed. */
-const ROLE_EN = {
-  '著':'author', '原作':'story', '漫画':'art', '作画':'art', '脚本':'script',
-  'キャラクターデザイン原案':'character design',
-};
-/* A CREDIT LINE IS ROLES AND PEOPLE, and this translated only the roles. `[著]やまじえびね` became
-   `[author]やまじえびね`, which is an English label welded to a Japanese name and reads worse than
-   either language alone. The names go through the store the rest of the site uses, so a person
-   already rendered elsewhere is rendered the same way here.
+/* THE JOB A CREDIT DID, GLOSSED. ONE TABLE, and until this line there were two: this one held six
+   words for the catalogue tab and `CREDIT_ROLE` further down held twenty for the credit pages, so
+   キャラクターデザイン was English on one page and Japanese on another and neither table knew that
+   校正, 編纂 or ほか著 exist. The corpus states 34 role strings and the splitter's vocabulary allows
+   a few more; `every credit role has an English gloss` asks this table for every one of them.
 
-   A NAME THE STORE DOES NOT HOLD IS LEFT AS IT IS. Dropping it would lose the credit, and
-   romanising it here would put a second producer of a romanisation beside the one in the store. */
+   COMPOSED RATHER THAN LISTED, because a role is written as a compound as often as not:
+   `イラスト・漫画`, `表紙 ・ 漫画`, `キャラクター原案・漫画`, `原作監修・文`. Spelling every
+   combination out is the mistake the old table made at a smaller size — it carried
+   `キャラクターデザイン原案` as one entry and had neither of its halves. The atoms are glossed and
+   the joiner is rendered, so a compound this corpus has never written still comes out in English.
+
+   THE NAME BESIDE IT IS NOT TRANSLATED. Transliterating a mangaka is guessing; the role is a label
+   and is the only part of the notation that belongs to us. */
+const ROLE_EN = {
+  '著': 'author', '著者': 'author', '作': 'story', '文': 'text', '画': 'art', '絵': 'art',
+  '原作': 'story', '作画': 'art', '漫画': 'art', 'コミック': 'art', 'ストーリー': 'story',
+  '話': 'story',
+  'シナリオ': 'scenario', '脚本': 'script', '構成': 'composition', 'ネーム': 'layout',
+  '原案': 'original concept', 'キャラクター原案': 'character design',
+  'キャラクターデザイン': 'character design', 'キャラクターデザイン原案': 'character design',
+  'イラスト': 'illustration', 'カバーイラスト': 'cover illustration', 'カバー': 'cover',
+  '表紙': 'cover', 'デザイン': 'design', '企画': 'planning', '監修': 'supervision',
+  '原作監修': 'story supervision', '編': 'editor', '編集': 'editor', '編纂': 'compilation',
+  '校正': 'proofreading', '訳': 'translation', '翻訳': 'translation', '協力': 'assistance',
+  '構成協力': 'composition assistance', '原案協力': 'concept assistance',
+  '作画協力': 'art assistance', '翻訳協力': 'translation assistance',
+  '取材協力': 'research assistance',
+  // `ほか著雪子` is an anthology naming one of its contributors: the role says both what the person
+  // did and that there are more of them.
+  'ほか著': 'author, with others', '他著': 'author, with others',
+  'story': 'story', 'art': 'art', 'Story': 'story', 'Art': 'art',
+};
+
+/* One role as a reader reads it, compound and all. An atom with no gloss is left as the source
+   wrote it, which is the fallback every name on this site takes; the invariant is what stops that
+   fallback from being where a role quietly lives. */
+function roleWord(r) {
+  const raw = String(r || '').trim();
+  if (!raw) return '';
+  const atoms = raw.split(/[・･/／\s\u3000]+/).filter(Boolean);
+  if (!atoms.every(a => ROLE_EN[a])) return ROLE_EN[raw] ? T(raw, ROLE_EN[raw]) : raw;
+  return T(raw, atoms.map(a => ROLE_EN[a]).join(' and '));
+}
+
+/* A LIST OF ROLES, glossed and joined. Its own function because a caller copying a role list out
+   of a record and glossing it later is a field read in one place and rendered in another, which is
+   the shape `adapters/lint/entrypoints.py` refuses. */
+function roleWords(rs) {
+  return (rs || []).map(roleWord).filter(Boolean).join(SEP);
+}
+
+/* `ほか` closes a credit that names some of its contributors and stops. */
+function andOthers() { return T('ほか', 'and others'); }
+
+/* THE FIELD AS THE STORE IS KEYED ON IT, character by character, with the way back.
+
+   `foldKey` normalises NFKC and drops every space, and the shipped division is keyed the same way,
+   so the NAMES inside it are folded too. The field a page is drawing is not: `仲谷 鳰` reaches the
+   catalogue tab with its space and `2C=がろあ` with a half-width equals, while the division holds
+   `仲谷鳰` and `2C＝がろあ`. Two fields that fold alike share one entry, which is the point of a
+   fold, and it means `indexOf` on the raw string finds nothing at all — 49 credit lines went back
+   to Japanese the day the division started being shipped for every field rather than for the few
+   that had an analyser phrase.
+
+   So the search runs over the folded form and the map says which character of the original each
+   folded character came from. Folding per character keeps that map honest where NFKC changes a
+   length. */
+function foldSpans(raw) {
+  let f = '';
+  const idx = [];
+  for (let i = 0; i < raw.length; i++) {
+    const c = raw[i].normalize('NFKC');
+    for (const ch of c) {
+      if (ch === ' ') continue;
+      f += ch;
+      idx.push(i);
+    }
+  }
+  idx.push(raw.length);
+  return { f, idx };
+}
+
+/* Where `needle` sits in `raw`, compared as the name store compares. `[start, end)` in the
+   original, or null. */
+function foldFind(map, raw, needle, from) {
+  const want = foldKey(needle);
+  if (!want) return null;
+  const at = map.f.indexOf(want, from);
+  if (at < 0) return null;
+  // THE END IS ONE PAST THE LAST CHARACTER MATCHED, not the start of the next folded one. Those
+  // differ by exactly the spaces the fold removed, so taking `idx[at + len]` swallowed the space
+  // after a name and `年中麦茶太郎 / iimAn` came out `Nenjūmugichatarō/ iimAn`.
+  return [map.idx[at], map.idx[at + want.length - 1] + 1, at + want.length];
+}
+
+/* A CREDIT FIELD WITH EVERY NAME AND EVERY ROLE IN IT RENDERED, IN PLACE.
+
+   IN PLACE AND NOT REBUILT, because rebuilding drops whatever the division did not find and a
+   byline that has quietly lost a company is worse than one a reader can see is in Japanese. The
+   field keeps its own separators, its brackets and its order; what changes is that each name the
+   store can render is replaced by the rendering and each role the build identified is replaced by
+   its gloss.
+
+   THE SPANS COME FROM THE BUILD. This function decides nothing about what is a name and what is
+   notation — `creditDiv` carries that — so the store, the credit registry and this line can no
+   longer disagree about who is on a book.
+
+   A NAME CLAIMS ITS SPAN WHETHER OR NOT IT RENDERS. `COMIC BRIDGE編集部(編)` names an editorial
+   desk the store has never met and states 編 as the job, and glossing the role without claiming the
+   name first put the word "editor" inside the desk's own name. */
+function creditText(c) {
+  const raw = String(c || '');
+  if (LANG !== 'en' || !raw) return raw;
+  const div = creditDiv(raw);
+  if (!div) return raw;
+  const map = foldSpans(raw);
+  const spans = [];
+  const claim = (s, e, text) => { spans.push([s, e, text]); };
+  const taken = (s, e) => spans.some(([a, b]) => s < b && a < e);
+  let cursor = 0;
+  let previous = -1;
+  for (const part of div.p) {
+    if (!part.n) continue;
+    const at = foldFind(map, raw, part.n, cursor);
+    if (!at) continue;
+    // THE INTERPUNCT BETWEEN TWO PEOPLE IS A SEPARATOR AND IT IS NOT LATIN. 矢立肇・富野由悠季 is
+    // two names the build divided, and leaving the ・ standing put a katakana middle dot between
+    // two romanisations on an English page. The one inside a name it did NOT divide stays, because
+    // there the character is part of somebody's name: るいす・まくられん is one credit.
+    if (previous >= 0 && raw.slice(previous, at[0]).match(/^[・･]$/)) {
+      claim(previous, at[0], ' / ');
+    }
+    cursor = at[2];
+    previous = at[1];
+    const shown = personName(nameFor('authors', part.n, null)) || plainLatin(part.n);
+    claim(at[0], at[1], shown === null ? raw.slice(at[0], at[1]) : shown);
+  }
+  // A NAME THE FIELD WRITES TWICE IS RENDERED TWICE. `シチサブロー / シチサブロー` and
+  // `ホマレ / 大鷹シン / オオタカシン / ホマレ` repeat a credit, and the splitter records each name
+  // once, so the ordered pass above claimed the first occurrence and left the second in Japanese
+  // beside its own romanisation. Longest first, so a short name cannot claim a span inside a
+  // longer one that has not been reached yet.
+  for (const part of [...div.p].filter(x => x.n).sort((a, b) => b.n.length - a.n.length)) {
+    const shown = personName(nameFor('authors', part.n, null)) || plainLatin(part.n);
+    if (shown === null) continue;
+    let from = 0;
+    for (;;) {
+      const at = foldFind(map, raw, part.n, from);
+      if (!at) break;
+      from = at[2];
+      if (!taken(at[0], at[1])) claim(at[0], at[1], shown);
+    }
+  }
+  // THE ROLE SITS EITHER SIDE OF THE NAME. `[著]X` puts it in front and `X(作)` after it, so each
+  // role is looked for across the whole field and the first occurrence outside a claimed name is
+  // the notation. A role string that is part of somebody's pen name cannot be hit, because every
+  // name claimed its span above.
+  for (const part of div.p) {
+    if (!part.r) continue;
+    const en = roleWord(part.r);
+    if (en === part.r) continue;
+    let from = 0;
+    for (;;) {
+      const at = foldFind(map, raw, part.r, from);
+      if (!at) break;
+      from = at[2];
+      if (taken(at[0], at[1])) continue;
+      claim(at[0], at[1], en);
+      break;
+    }
+  }
+  if (div.p.some(x => x.etc)) {
+    const at = foldFind(map, raw, 'ほか', 0) || foldFind(map, raw, '他', 0);
+    if (at && !taken(at[0], at[1])) claim(at[0], at[1], andOthers());
+  }
+  // A READING PRINTED BESIDE ITS OWN NAME, taken off. The build hands over the literal because it
+  // is the half that knows a bracket holds a reading rather than a note.
+  for (const text of div.drop || []) {
+    const at = foldFind(map, raw, text, 0);
+    if (at && !taken(at[0], at[1])) claim(at[0], at[1], '');
+  }
+  spans.sort((a, b) => a[0] - b[0]);
+  let out = '', at = 0;
+  for (const [s, e, text] of spans) {
+    if (s < at) continue;
+    out += raw.slice(at, s) + text;
+    at = e;
+  }
+  out += raw.slice(at);
+  // TAKING A SPAN OUT LEAVES THE PUNCTUATION THAT WAS AROUND IT. A reading removed from
+  // `紬めめ / ツムギメメ` leaves a trailing space and a line ending in a separator reads as a
+  // credit the page failed to draw. Only whitespace and separators are touched, and only at the
+  // ends or where two have run together.
+  return out.replace(/[ \u3000]{2,}/g, ' ')
+            .replace(/^[\s\u3000/／、,，・･]+|[\s\u3000/／、,，・･]+$/g, '');
+}
+
+/* The catalogue tab's credit line. Kept as a name of its own because the tab reads `index[].c` and
+   `adapters/interface.py` names the function that renders it. */
 function credit(c) {
-  if (LANG !== 'en' || !c) return c || '';
-  const roled = c.replace(/\[([^\]]+)\]/g, (m, r) => ROLE_EN[r] ? `[${ROLE_EN[r]}]` : m);
-  return roled.replace(/[^\[\]\/、,]+/g, seg => {
-    const name = seg.trim();
-    if (!name || !/[\u3040-\u30ff\u3400-\u9fff]/.test(name)) return seg;
-    const shown = personName(nameFor('authors', name, null));
-    return shown ? seg.replace(name, shown) : seg;
-  });
+  return creditText(c);
 }
 
 /* THE PEOPLE IN A CATALOGUED CREDIT FIELD, each rendered by the store like any other name.
@@ -728,22 +967,25 @@ function credit(c) {
    pipeline now asks this function what the tab shows and `adapters/lint/entrypoints.py` refuses a
    read of `creator` anywhere else.
 
-   MADB writes a role before each name, [著] and [作画] among them, and joins creators with a slash
-   that survives even when one side is empty. Both are cataloguing notation, not the credit a
-   reader is being shown.
+   THE DIVISION IS THE BUILD'S. This split on the slash, took a leading bracket off with
+   `stripRole` and dropped a trailing katakana part on the argument that MADB writes one creator as
+   `紬めめ / ツムギメメ`. It does, and it also writes `[原作]王月よう / [漫画]アジイチ`, which is two
+   people whose second name happens to be katakana; this tab dropped アジイチ, フライ, ヨリフジ and
+   サトウナンキ from four bylines in every language. `creditline.py` asks the roles and the store
+   before it decides, and the answer arrives here already made.
 
-   MADB writes ONE creator as "紬めめ / ツムギメメ", the name beside its reading, and writes several
-   as "[作画]A / [原作]B". Splitting on the slash alone turned the reading into a second person, so
-   English read "Tsumugi Meme / ツムギメメ". A trailing part that is all kana and follows a part
-   that is not is the reading of it.
-
-   The reading is written in KATAKANA and the name is not written only in katakana. あまね reads
-   アマネ, so requiring the name to be non-kana missed every hiragana pen name. */
+   A FIELD THE DIVISION DOES NOT ACCOUNT FOR IS RENDERED AS WRITTEN. `part` says the build could
+   not place everything the field says, and rebuilding a byline out of an incomplete division is
+   how a credit disappears without anything reporting it. */
 function creditNames(creator) {
-  const parts = String(creator || '').split('/').map(x => stripRole(x.trim())).filter(Boolean);
-  const kata = s => /^[\u30a0-\u30ff\u30fb\u30fc\s]+$/.test(s);
-  const named = (parts.length === 2 && kata(parts[1]) && !kata(parts[0])) ? [parts[0]] : parts;
-  return named.map(x => authorLabel({ author: x })).join(' / ');
+  const div = creditDiv(creator);
+  if (!div || div.part) return creditText(creator);
+  // THE PEOPLE AND NOT THEIR JOBS. This tab has never shown a role and showing one here would
+  // widen a byline the 発売 list has one line for; `creditText` above keeps the role where the
+  // field put it, and the work page states it in full.
+  const people = div.p.filter(x => x.n).map(x => authorLabel({ author: x.n }));
+  if (div.p.some(x => x.etc)) people.push(esc(andOthers()));
+  return people.join(' / ');
 }
 
 /* The source chips sit OUTSIDE bilingual(). They are links, and two sets of clickable chips to the
@@ -2381,7 +2623,7 @@ function linkedCredits(r) {
   // written for credit LINES, the fields holding several people, so asking it first and giving up
   // when it answers nothing left every single-author work unlinked: the whole field is the one
   // credit in that case, and the store is keyed on exactly that string.
-  const parts = (NAMES && NAMES.credit_parts && NAMES.credit_parts[foldKey(raw)]) || [raw];
+  const parts = creditPeople(raw) || [raw];
   let out = '', rest = raw, linked = false, placed = 0;
   for (const nm of parts) {
     const at = rest.indexOf(nm);
@@ -2417,27 +2659,15 @@ function publisherChip(name) {
 function recWorkRows(ids, rolesById) {
   const by = new Map(((SERIES && SERIES.series) || []).map(x => [x.id, x]));
   return ids.map(id => by.get(id)).filter(Boolean).map(w => {
-    const roles = (rolesById && rolesById[w.id]) || [];
-    const said = roles.length
-      ? `<span class="wf-sub">${esc(roles.map(x => roleWord(x)).join(SEP))}</span>` : '';
+    // ALREADY GLOSSED. The caller reads the role list off the record and hands it to `roleWords`
+    // there, so this row draws what it was given: a field read in one place and rendered in
+    // another is the shape `adapters/lint/entrypoints.py` refuses.
+    const said = (rolesById && rolesById[w.id])
+      ? `<span class="wf-sub">${esc(rolesById[w.id])}</span>` : '';
     const when = w.first ? `<span class="wf-sub">${esc(fmtDate(w.first, { year: true }))}</span>` : '';
     return `<li class="recw"><a class="wplink" href="${esc(BASE)}work/${esc(w.id)}/">${
       workLabel(w)}</a>${said}${when}</li>`;
   }).join('');
-}
-
-/* A JOB, GLOSSED. The vocabulary is MADB's and the platforms', so it is small and closed; a word
-   outside it shows as the source wrote it, which is the fallback every name on this site takes. */
-const CREDIT_ROLE = {
-  '原作': 'story', '作画': 'art', '漫画': 'art', '著': 'author', '著者': 'author',
-  '脚本': 'script', '構成': 'composition', 'キャラクター原案': 'character design',
-  '原案': 'original concept', 'イラスト': 'illustration', '企画': 'planning',
-  '監修': 'supervision', '編': 'editor', '編集': 'editor', '訳': 'translation',
-  '翻訳': 'translation', '絵': 'art', '文': 'text', '表紙': 'cover', '協力': 'assistance',
-};
-function roleWord(r) {
-  const en = CREDIT_ROLE[r];
-  return en ? T(r, en) : r;
 }
 
 /* WHAT KIND OF THING A CREDIT IS, where it is not a person. 20 of them are not: 円谷プロダクション
@@ -2518,7 +2748,7 @@ function renderCreditPage(doc) {
   }
   if (fact.kind) fact1(T('種別', 'Kind'), esc(T(fact.kind, fact.kind)));
   const rolesById = {};
-  (fact.works || []).forEach(w => { if (w.roles) rolesById[w.id] = w.roles; });
+  (fact.works || []).forEach(w => { if (w.roles) rolesById[w.id] = roleWords(w.roles); });
   const rows = recWorkRows((fact.works || []).map(w => w.id), rolesById);
   /* THE HOUSES BEHIND THE WORKS, which is the small graph the plan describes: a work names its
      author and its publisher, a publisher lists its lines, an author lists works and the houses
@@ -2539,8 +2769,12 @@ function renderCreditPage(doc) {
   /* CREDITS HELD APART, which is what the owner's ruling means by information hung beside a credit.
      Seven pairs share a reading and were examined and kept apart; a page for either should be able
      to say the other exists. It is never a merge and never replaces one with the other. */
-  const homo = (fact.homophones || []).map(o =>
-    `<a class="wplink credit" href="${esc(BASE)}credit/${esc(o.id)}/">${esc(o.credit)}</a>`).join(SEP);
+  /* A NAME HERE GOES THROUGH THE RENDERER LIKE EVERY OTHER. This wrote `esc(o.credit)` into the
+     anchor, so a reader in English met the held-apart credit in Japanese beside their own name
+     rendered — the same fault as `esc(w.t)` on the catalogue tab, on a page nothing walked until
+     `credits.json` was added to the surfaces. `creditChip` is the anchor and the rendering
+     together, which is what the work page's volume rows already use. */
+  const homo = (fact.homophones || []).map(o => creditChip(o.credit)).join(SEP);
   const srcBody = (rec && rec.reading_cite)
     ? `<details class="wp-src"><summary>${esc(T('出典', 'Sources of information'))}</summary>
          <dl class="wp-facts">${citeLine(rec.reading_cite, T('読みの出典', 'Reading'))}${
@@ -2589,7 +2823,7 @@ function renderPublisherPage(doc) {
   const lineRows = (fact.lines || []).map(ln => {
     const years = [...new Set((ln.spellings || []).flatMap(s => s.years || []).filter(Boolean))].sort();
     const span = years.length > 1 ? `${years[0]}–${years[years.length - 1]}` : (years[0] || '');
-    const spellings = (ln.spellings || []).map(s => s.raw).filter(x => x !== ln.name);
+    const spellings = (ln.spellings || []).map(s => s.raw).filter(x => ln.name !== x);
     const alt = spellings.length
       ? `<span class="wf-sub" title="${esc(spellings.join(' · '))}">${
           esc(T(`${spellings.length}種の表記`, `${spellings.length} recorded spellings`))}</span>` : '';
