@@ -1,8 +1,14 @@
 {
- "generated": "2026-08-08T12:45:53+00:00",
+ "generated": "2026-08-08T13:05:12+00:00",
  "since_last": {
-  "at": "2026-08-08T12:27:09+00:00",
-  "statistics": {}
+  "at": "2026-08-08T13:01:17+00:00",
+  "statistics": {
+   "works": 2,
+   "print_works": 1,
+   "print_only": 2,
+   "with_identifier": 3,
+   "chapters": -128
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -26,7 +32,7 @@
   "releases": 1177,
   "works": 2558,
   "platforms": 22,
-  "series_rows": 3077,
+  "series_rows": 3079,
   "identification": {
    "discovery-candidate": 867,
    "platform-genre": 310
@@ -39,7 +45,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 26,
+  "invariants_passing": 29,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -73,6 +79,11 @@
    },
    {
     "name": "one row per identifier",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "every credit identifier resolves",
     "violations": 0,
     "examples": []
    },
@@ -157,6 +168,11 @@
     "examples": []
    },
    {
+    "name": "an imprint spelling belongs to its own publisher",
+    "violations": 0,
+    "examples": []
+   },
+   {
     "name": "no HTML entity in a stored name",
     "violations": 0,
     "examples": []
@@ -168,6 +184,11 @@
    },
    {
     "name": "a fixture states where it came from",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "the interface folds a name key as the build does",
     "violations": 0,
     "examples": []
    }
@@ -220,6 +241,18 @@
     "means": "publisher names app.js asks the shipped map for and does not get, normalised the way the browser normalises. A rise means the two implementations of the cataloguing rule have drifted, which is the one failure the budget above cannot see.",
     "budget": 0,
     "value": 0
+   },
+   {
+    "name": "imprint strings that reach no line",
+    "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
+    "budget": 278,
+    "value": 278
+   },
+   {
+    "name": "imprint names the interface disagrees with",
+    "means": "imprint strings app.js renders as one name and the shipped map calls another, counted as distinct pairs. It is the second producer of one fact, live and visible to a reader: 一迅社's yuri line shows as its magazine's name on 346 rows. It goes to zero when the interface reads feed/names.json's imprints map, and nothing else can move it down.",
+    "budget": 38,
+    "value": 38
    },
    {
     "name": "names rendered two ways",
@@ -276,6 +309,18 @@
     "value": 0
    },
    {
+    "name": "credit fields an identifier does not cover",
+    "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
+    "budget": 19,
+    "value": 19
+   },
+   {
+    "name": "credits sharing a reading nobody has ruled on",
+    "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
+    "budget": 0,
+    "value": 0
+   },
+   {
     "name": "implausible ruby spans",
     "means": "furigana runs holding fewer kana than they have kanji. A rise means the aligner placed a boundary somewhere no reading could fall, which the spelling check cannot see.",
     "budget": 0,
@@ -296,14 +341,26 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 170,
-    "value": 170
+    "budget": 172,
+    "value": 172
    },
    {
     "name": "titles carrying cataloguing punctuation",
     "means": "titles a reader is shown that still hold a bibliography's own ISBD markup: an equals sign in any spelling, or a reissue marker from the closed set adapters/isbd.py holds. A subtitle after the same colon is content and is not counted. A rise means a capture route wrote a catalogue string through as a name.",
     "budget": 23,
     "value": 23
+   },
+   {
+    "name": "works offered twice in a list",
+    "means": "rows beyond the first that a shipped list gives to one identity work. 41 works were listed twice or three times in index.json, which emitted one row per source record and asked identity nothing. A rise means a collapse stopped running, or a new list shipped without asking which work a record belongs to.",
+    "budget": 0,
+    "value": 0
+   },
+   {
+    "name": "one work under two names in a list",
+    "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
+    "budget": 69,
+    "value": 69
    },
    {
     "name": "incomplete attested rows",
@@ -565,7 +622,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T12:27:07+00:00",
+  "previous_at": "2026-08-08T13:01:16+00:00",
   "drops": []
  },
  "outstanding": [
@@ -578,7 +635,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 149,
+   "count": 151,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -695,6 +752,7 @@
     "うなうさ",
     "うらら迷路帖",
     "おねロリキャバクラ（同人版）",
+    "けいおん!",
     "こい☆フラ　レボリューション",
     "さろめりっく",
     "のだ",
@@ -708,6 +766,7 @@
     "アイドル総選挙4位だった私が魔王を倒すんですか？（Lilie comics）",
     "エデンの処女（おとめ）",
     "キマシ!",
+    "サタノファニ : 妖艶彩色本・極",
     "ナチュリーズ",
     "ハクせつシリーズ",
     "ハニー＆ハニー",
@@ -747,7 +806,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 25,
+   "count": 29,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
@@ -756,11 +815,15 @@
     "bookwalker series unread": 0,
     "captures with no floor": 11,
     "citations withheld from readers": 36,
+    "credit fields an identifier does not cover": 19,
     "credits carrying their own cataloguing": 38,
     "credits matching a chapter": 0,
+    "credits sharing a reading nobody has ruled on": 0,
     "credits that restate a name": 0,
     "credits the corpus files as a venue": 20,
     "implausible ruby spans": 0,
+    "imprint names the interface disagrees with": 38,
+    "imprint strings that reach no line": 278,
     "incomplete attested rows": 14,
     "invented markup in tests": 75,
     "kana left in a romanisation": 0,
@@ -769,6 +832,7 @@
     "names rendered two ways": 2,
     "nicovideo works with no rights": 189,
     "one page cited for two claims": 12,
+    "one work under two names in a list": 69,
     "publisher keys the interface misses": 0,
     "publisher readings nobody has settled": 16,
     "publishers with no English": 0,
@@ -784,18 +848,19 @@
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 27,
     "volumes with an isbn and no date": 0,
-    "works showing a romanisation": 170,
+    "works offered twice in a list": 0,
+    "works showing a romanisation": 172,
     "works without English": 104
    }
   }
  ],
  "statistics": {
-  "works": 3077,
+  "works": 3079,
   "states": {
-   "print": 1727,
-   "oneshot": 399,
-   "unknown": 310,
-   "completed": 283,
+   "print": 1729,
+   "oneshot": 426,
+   "unknown": 303,
+   "completed": 263,
    "active": 220,
    "dormant": 81,
    "slow": 57
@@ -805,13 +870,13 @@
    "official-jp": 117,
    "licensed": 112,
    "none": 108,
-   "romaji": 62
+   "romaji": 64
   },
-  "print_works": 2514,
-  "print_only": 1727,
+  "print_works": 2515,
+  "print_only": 1729,
   "volumes": 6235,
-  "with_identifier": 3076,
-  "chapters": 26969,
+  "with_identifier": 3079,
+  "chapters": 26841,
   "delivery_dated": 1084
  }
 }

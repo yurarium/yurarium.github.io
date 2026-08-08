@@ -37,6 +37,11 @@
    "examples": []
   },
   {
+   "name": "every credit identifier resolves",
+   "violations": 0,
+   "examples": []
+  },
+  {
    "name": "first date precedes its editions",
    "violations": 0,
    "examples": []
@@ -132,6 +137,11 @@
    "examples": []
   },
   {
+   "name": "an imprint spelling belongs to its own publisher",
+   "violations": 0,
+   "examples": []
+  },
+  {
    "name": "no HTML entity in a stored name",
    "violations": 0,
    "examples": []
@@ -143,6 +153,11 @@
   },
   {
    "name": "a fixture states where it came from",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "the interface folds a name key as the build does",
    "violations": 0,
    "examples": []
   }
@@ -195,6 +210,18 @@
    "means": "publisher names app.js asks the shipped map for and does not get, normalised the way the browser normalises. A rise means the two implementations of the cataloguing rule have drifted, which is the one failure the budget above cannot see.",
    "budget": 0,
    "value": 0
+  },
+  {
+   "name": "imprint strings that reach no line",
+   "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
+   "budget": 278,
+   "value": 278
+  },
+  {
+   "name": "imprint names the interface disagrees with",
+   "means": "imprint strings app.js renders as one name and the shipped map calls another, counted as distinct pairs. It is the second producer of one fact, live and visible to a reader: 一迅社's yuri line shows as its magazine's name on 346 rows. It goes to zero when the interface reads feed/names.json's imprints map, and nothing else can move it down.",
+   "budget": 38,
+   "value": 38
   },
   {
    "name": "names rendered two ways",
@@ -251,6 +278,18 @@
    "value": 0
   },
   {
+   "name": "credit fields an identifier does not cover",
+   "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
+   "budget": 19,
+   "value": 19
+  },
+  {
+   "name": "credits sharing a reading nobody has ruled on",
+   "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
+   "budget": 0,
+   "value": 0
+  },
+  {
    "name": "implausible ruby spans",
    "means": "furigana runs holding fewer kana than they have kanji. A rise means the aligner placed a boundary somewhere no reading could fall, which the spelling check cannot see.",
    "budget": 0,
@@ -271,14 +310,26 @@
   {
    "name": "works showing a romanisation",
    "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-   "budget": 170,
-   "value": 170
+   "budget": 172,
+   "value": 172
   },
   {
    "name": "titles carrying cataloguing punctuation",
    "means": "titles a reader is shown that still hold a bibliography's own ISBD markup: an equals sign in any spelling, or a reissue marker from the closed set adapters/isbd.py holds. A subtitle after the same colon is content and is not counted. A rise means a capture route wrote a catalogue string through as a name.",
    "budget": 23,
    "value": 23
+  },
+  {
+   "name": "works offered twice in a list",
+   "means": "rows beyond the first that a shipped list gives to one identity work. 41 works were listed twice or three times in index.json, which emitted one row per source record and asked identity nothing. A rise means a collapse stopped running, or a new list shipped without asking which work a record belongs to.",
+   "budget": 0,
+   "value": 0
+  },
+  {
+   "name": "one work under two names in a list",
+   "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
+   "budget": 69,
+   "value": 69
   },
   {
    "name": "incomplete attested rows",
@@ -289,7 +340,7 @@
   {
    "name": "stock phrasing in comments",
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
-   "budget": 903,
+   "budget": 898,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },
@@ -358,7 +409,7 @@
   {
    "name": "three as an organising shape",
    "means": "lists of exactly three items, and runs of three bold-led paragraphs, in documents that ship at 1.0. Three reads as rhetoric; four reads as an inventory. When there really are three things, write them as prose or find the fourth that was left out to make the shape work.",
-   "budget": 27,
+   "budget": 28,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },

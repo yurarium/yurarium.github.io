@@ -1079,10 +1079,14 @@ function renderTrackNote() {
 function renderFuriNote() {
   const n = el('furinote');
   if (!n) return;
-  n.textContent = T(
-    '大半は自動生成された推定で、出典に基づくものではありません。推定の読みには印がつきます。',
-    'Most are generated rather than taken from a source. The generated ones are marked where they '
-    + 'appear.');
+  // WHAT THE READER HAS TO KNOW IS WHAT THE MARK MEANS, and nothing else. This opened by saying
+  // most readings are generated, which put a proportion in front of somebody looking at one name,
+  // and the proportion is no longer even the same for both: 85% of title readings are the
+  // analyser's against 14% of author readings, after a round of sourcing moved 460 of them.
+  // The mark's own tooltip says the reading is not attested by any source, so the note says
+  // the same thing in fewer words. Estimated was wrong: a reading is not an approximation,
+  // it is either what people say or it is not.
+  n.textContent = T('出典のない読みには印がつきます。', 'A reading no source states is marked.');
 }
 
 /* A control that is not applicable keeps its space. Using [hidden] meant every language switch
