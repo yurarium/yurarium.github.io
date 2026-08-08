@@ -2032,7 +2032,14 @@ function renderWorkPage() {
      one; volumes is a count the bibliography states outright. */
   const len = [];
   if (r.chapters) {
-    len.push(T(`${r.chapters}話以上`, `at least ${r.chapters} chapters`));
+    // A ONE-SHOT'S SINGLE CHAPTER IS THE WHOLE WORK, so the floor does not apply to it. "at least
+    // 1 chapters" was wrong twice over on 394 rows: it hedged a length that is complete by
+    // definition, and it pluralised one. The 65 rows holding one chapter OF a serialisation keep
+    // the hedge, because there the floor is exactly what is being said.
+    const n = r.chapters;
+    const unit = n === 1 ? 'chapter' : 'chapters';
+    len.push(r.oneshot ? T(`${n}話`, `${n} ${unit}`)
+                       : T(`${n}話以上`, `at least ${n} ${unit}`));
   }
   (r.print || []).forEach(pr => { if (pr.volumes) len.push(volCount(pr.volumes)); });
   fact(T('分量', 'Length'), esc(len.join(T('・', ' · '))));
