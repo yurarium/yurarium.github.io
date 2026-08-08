@@ -112,6 +112,11 @@
    "examples": []
   },
   {
+   "name": "a delivery date never stands beside a printing",
+   "violations": 0,
+   "examples": []
+  },
+  {
    "name": "per-book dates cite their page",
    "violations": 0,
    "examples": []
@@ -284,7 +289,7 @@
   {
    "name": "stock phrasing in comments",
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
-   "budget": 904,
+   "budget": 898,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },
@@ -347,13 +352,13 @@
   {
    "name": "undated cmoa candidates",
    "means": "the same count for the コミックシーモア half of the queue, falling as adapters/cmoa_volumes.py works through it. Its floor is high and known: cmoa states an ISBN or an 出版年月 only where a volume was printed, and 754 of the 1,844 rows come from two digital distributors whose pages carry neither.",
-   "budget": 1220,
-   "value": 1220
+   "budget": 11,
+   "value": 11
   },
   {
    "name": "three as an organising shape",
    "means": "lists of exactly three items, and runs of three bold-led paragraphs, in documents that ship at 1.0. Three reads as rhetoric; four reads as an inventory. When there really are three things, write them as prose or find the fourth that was left out to make the shape work.",
-   "budget": 28,
+   "budget": 27,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },

@@ -904,6 +904,7 @@ const EV_HOLDS = {
   // What a platform says about whether the serialisation is still going. `state_claims` carries
   // the platform's own word for it, so the row quotes that and this only names the subject.
   'serialisation-status': ['連載状況', 'serialisation status'],
+  'delivery-date': ['配信開始日', 'delivery start date'],
 };
 const evType = k => (EV_TYPE[k] ? T(EV_TYPE[k][0], EV_TYPE[k][1]) : (k || ''));
 const evHolds = k => (EV_HOLDS[k] ? T(EV_HOLDS[k][0], EV_HOLDS[k][1]) : (k || ''));
@@ -2026,7 +2027,12 @@ function renderWorkPage() {
   const ran = [r.first ? fmtDate(r.first, { year: true }) : '',
                r.latest_any ? fmtDate(r.latest_any, { year: true }) : '']
     .filter(Boolean);
-  fact(T('刊行', 'Published'),
+  /* WHICH EVENT THE DATE NAMES. For 1,084 works the earliest thing anybody records is the day a
+     shop began delivering the file, and DEFINITIONS §6 admits a doujinshi a platform sells, for
+     which that may be the only datable event in its history. It is a true statement with no error
+     bar, so the line says what it is instead of calling it publication and hoping. Where a printing
+     is known the delivery date is not here at all: it never reaches print[].first. */
+  fact(r.first_event === 'shop-delivery' ? T('配信開始', 'Delivered from') : T('刊行', 'Published'),
        ran.length === 2 && ran[0] !== ran[1] ? esc(ran.join(' – ')) : esc(ran[0] || ''));
   /* LENGTH IS THE WORK'S SIZE, not our coverage of it. Chapters is a floor, so it is written as
      one; volumes is a count the bibliography states outright. */
@@ -2120,7 +2126,9 @@ function renderWorkPage() {
       <dd>${esc(who || '')}</dd></div><div class="wf"><dt>${esc(T('巻数', 'Volumes'))}</dt>
       <dd>${pr.volumes ? esc(volCount(pr.volumes)) : ''}${
         pr.first ? `<span class="wf-sub">${esc(T('初刊 ', 'from '))}${
-          esc(fmtDate(pr.first, { year: true }))}</span>` : ''}</dd></div>${shop}</dl>`;
+          esc(fmtDate(pr.first, { year: true }))}</span>`
+        : pr.delivered_from ? `<span class="wf-sub">${esc(T('配信開始 ', 'delivered from '))}${
+          esc(fmtDate(pr.delivered_from, { year: true }))}</span>` : ''}</dd></div>${shop}</dl>`;
   }).join('');
 
   /* SOURCES OF INFORMATION, collapsed. Most readers want the book; the ones who want the

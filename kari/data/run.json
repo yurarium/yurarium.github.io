@@ -4436,6 +4436,19 @@
    }
   ]
  },
+ "delivery_dated": {
+  "rows": 1084,
+  "followup": {
+   "unclassified": 1065,
+   "no-earlier-record-expected": 19
+  },
+  "means": "The day the shop began delivering this file, which is the earliest 配信開始日 across the volumes it holds. The shop states no print edition and no ISBN for this work, so no paper record is reachable and no catalogue can be asked. This dates the delivery and claims nothing about an earlier edition, which for a self-published work may never have had a recorded date at all.",
+  "followup_means": {
+   "no-earlier-record-expected": "The shop states this file is a doujinshi or an individually published book. Under DEFINITIONS §6 the delivery date may be the only datable event in its history, so this row is finished work and not a row awaiting a better source.",
+   "earlier-edition-unsourced": "The shop states this file is the electronic edition of an earlier one and does not date it. A better date may exist, and for a circle's own printing it may never have been recorded.",
+   "unclassified": "The shop says nothing about this file's edition. Whether a better date exists is unknown, so this row counts toward neither the settled population nor a backlog."
+  }
+ },
  "bulk_dated": [
   {
    "platform": "サンデーうぇぶり",

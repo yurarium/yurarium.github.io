@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T11:25:11+00:00",
+ "generated": "2026-08-08T12:27:09+00:00",
  "since_last": {
-  "at": "2026-08-08T11:18:35+00:00",
+  "at": "2026-08-08T12:12:40+00:00",
   "statistics": {}
  },
  "means": {
@@ -18,7 +18,8 @@
   "volumes": "volumes",
   "print_works": "works with a print edition",
   "print_only": "works published only in volumes",
-  "with_identifier": "works carrying an identifier"
+  "with_identifier": "works carrying an identifier",
+  "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
   "at": "2026-08-08",
@@ -38,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 25,
+  "invariants_passing": 26,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -132,6 +133,11 @@
    },
    {
     "name": "undated works say where and why",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "a delivery date never stands beside a printing",
     "violations": 0,
     "examples": []
    },
@@ -356,8 +362,8 @@
    {
     "name": "undated cmoa candidates",
     "means": "the same count for the コミックシーモア half of the queue, falling as adapters/cmoa_volumes.py works through it. Its floor is high and known: cmoa states an ISBN or an 出版年月 only where a volume was printed, and 754 of the 1,844 rows come from two digital distributors whose pages carry neither.",
-    "budget": 1220,
-    "value": 1220
+    "budget": 11,
+    "value": 11
    },
    {
     "name": "scraped counters in chapter names",
@@ -557,7 +563,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T11:18:34+00:00",
+  "previous_at": "2026-08-08T11:25:10+00:00",
   "drops": []
  },
  "outstanding": [
@@ -774,7 +780,7 @@
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 172,
     "uncertain readings": 53,
-    "undated cmoa candidates": 1220,
+    "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 27,
     "volumes with an isbn and no date": 0,
@@ -805,6 +811,7 @@
   "print_only": 1727,
   "volumes": 6235,
   "with_identifier": 3076,
-  "chapters": 26969
+  "chapters": 26969,
+  "delivery_dated": 1084
  }
 }
