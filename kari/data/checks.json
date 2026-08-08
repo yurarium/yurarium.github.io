@@ -82,6 +82,21 @@
    "examples": []
   },
   {
+   "name": "every credit role has an English gloss",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "no cataloguing notation in an English rendering",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "status.html shows no Japanese of its own",
+   "violations": 0,
+   "examples": []
+  },
+  {
    "name": "no build-machine paths in published files",
    "violations": 0,
    "examples": []
@@ -186,8 +201,8 @@
   {
    "name": "citations withheld from readers",
    "means": "readings whose recorded address is on a route the site may not link to, so the citation is held back. All of them are NDL creator searches on the disallowed /api path. Falls as the record page is recorded in place of the query; a rise means a pass stored a query again.",
-   "budget": 244,
-   "value": 244
+   "budget": 36,
+   "value": 36
   },
   {
    "name": "one page cited for two claims",
@@ -240,14 +255,20 @@
   {
    "name": "renderings still Japanese in English mode",
    "means": "rows the interface shows in kana or kanji on an English page, on the surfaces where that is coverage rather than a fault: a credit line whose role has no gloss, a person with no reading, a publishing line with no name. The invariant blocks on work titles; this is the rest, and nothing counted it before.",
-   "budget": 334,
-   "value": 334
+   "budget": 113,
+   "value": 113
+  },
+  {
+   "name": "credit fields the division does not account for",
+   "means": "credit fields whose shipped division leaves part of the field unexplained, so the interface renders the string as the catalogue wrote it instead of rebuilding a byline that would have lost something. A rise means the splitter met a shape it cannot divide.",
+   "budget": 0,
+   "value": 0
   },
   {
    "name": "full-width forms in English renderings",
    "means": "English renderings holding a full-width character and no kana or kanji, which is what narrowing the invariant to a script let past. Mostly a Latin pen name catalogued in full width; some are official titles and are correct, so this will not reach zero.",
-   "budget": 179,
-   "value": 179
+   "budget": 37,
+   "value": 37
   },
   {
    "name": "interface reads outside an entry point",
@@ -318,8 +339,8 @@
   {
    "name": "credit fields an identifier does not cover",
    "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-   "budget": 19,
-   "value": 19
+   "budget": 18,
+   "value": 18
   },
   {
    "name": "credit pages listing a work that does not name them",
@@ -396,7 +417,7 @@
   {
    "name": "stock phrasing in comments",
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
-   "budget": 898,
+   "budget": 903,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },

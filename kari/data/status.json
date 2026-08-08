@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T15:42:02+00:00",
+ "generated": "2026-08-08T17:16:27+00:00",
  "since_last": {
-  "at": "2026-08-08T14:53:39+00:00",
+  "at": "2026-08-08T15:42:02+00:00",
   "statistics": {}
  },
  "means": {
@@ -39,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 33,
+  "invariants_passing": 36,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -118,6 +118,21 @@
    },
    {
     "name": "English mode has no Japanese",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "every credit role has an English gloss",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "no cataloguing notation in an English rendering",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "status.html shows no Japanese of its own",
     "violations": 0,
     "examples": []
    },
@@ -211,8 +226,8 @@
    {
     "name": "citations withheld from readers",
     "means": "readings whose recorded address is on a route the site may not link to, so the citation is held back. All of them are NDL creator searches on the disallowed /api path. Falls as the record page is recorded in place of the query; a rise means a pass stored a query again.",
-    "budget": 244,
-    "value": 244
+    "budget": 36,
+    "value": 36
    },
    {
     "name": "one page cited for two claims",
@@ -265,14 +280,20 @@
    {
     "name": "renderings still Japanese in English mode",
     "means": "rows the interface shows in kana or kanji on an English page, on the surfaces where that is coverage rather than a fault: a credit line whose role has no gloss, a person with no reading, a publishing line with no name. The invariant blocks on work titles; this is the rest, and nothing counted it before.",
-    "budget": 334,
-    "value": 334
+    "budget": 113,
+    "value": 113
+   },
+   {
+    "name": "credit fields the division does not account for",
+    "means": "credit fields whose shipped division leaves part of the field unexplained, so the interface renders the string as the catalogue wrote it instead of rebuilding a byline that would have lost something. A rise means the splitter met a shape it cannot divide.",
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "full-width forms in English renderings",
     "means": "English renderings holding a full-width character and no kana or kanji, which is what narrowing the invariant to a script let past. Mostly a Latin pen name catalogued in full width; some are official titles and are correct, so this will not reach zero.",
-    "budget": 179,
-    "value": 179
+    "budget": 37,
+    "value": 37
    },
    {
     "name": "interface reads outside an entry point",
@@ -343,8 +364,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 19,
-    "value": 19
+    "budget": 18,
+    "value": 18
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -672,7 +693,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T14:53:38+00:00",
+  "previous_at": "2026-08-08T15:42:01+00:00",
   "drops": []
  },
  "outstanding": [
@@ -872,8 +893,9 @@
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
-    "citations withheld from readers": 244,
-    "credit fields an identifier does not cover": 19,
+    "citations withheld from readers": 36,
+    "credit fields an identifier does not cover": 18,
+    "credit fields the division does not account for": 0,
     "credit identifiers naming nobody": 5,
     "credit pages listing a work that does not name them": 8,
     "credits carrying their own cataloguing": 38,
@@ -881,7 +903,7 @@
     "credits sharing a reading nobody has ruled on": 0,
     "credits that restate a name": 0,
     "credits the corpus files as a venue": 20,
-    "full-width forms in English renderings": 179,
+    "full-width forms in English renderings": 37,
     "implausible ruby spans": 0,
     "imprint names the interface disagrees with": 0,
     "imprint strings that reach no line": 139,
@@ -899,7 +921,7 @@
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 16,
     "publishers with no English": 0,
-    "renderings still Japanese in English mode": 334,
+    "renderings still Japanese in English mode": 113,
     "renderings with nothing to show": 33,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
