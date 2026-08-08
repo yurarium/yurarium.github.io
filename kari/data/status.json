@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T17:16:27+00:00",
+ "generated": "2026-08-08T17:49:09+00:00",
  "since_last": {
-  "at": "2026-08-08T15:42:02+00:00",
+  "at": "2026-08-08T17:36:03+00:00",
   "statistics": {}
  },
  "means": {
@@ -272,10 +272,16 @@
     "value": 0
    },
    {
+    "name": "an imprint field repeating its publisher",
+    "means": "print rows whose imprint field holds the same name as their publisher field, which a shop's individual-publishing service writes when an artist publishes their own book. There is no line to name; what moves this is the capture writing one name in one place.",
+    "budget": 360,
+    "value": 360
+   },
+   {
     "name": "imprint strings that reach no line",
     "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
-    "budget": 139,
-    "value": 139
+    "budget": 18,
+    "value": 18
    },
    {
     "name": "renderings still Japanese in English mode",
@@ -443,14 +449,13 @@
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": null,
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 75
    },
    {
     "name": "nicovideo works with no rights",
     "means": "ニコニコ works captured with no copyright line read off their page, which is the only field the platform gives that names a publisher. Falls when the capture re-runs against the widened pattern; does not reach zero, because a work its own author posted carries no copyright element at all.",
-    "budget": 189,
-    "value": 189
+    "budget": 60,
+    "value": 60
    },
    {
     "name": "adapters fetching without net.py",
@@ -498,8 +503,7 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": null,
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 1
    },
    {
     "name": "updates naming a work we do not hold",
@@ -635,20 +639,6 @@
    "drop": null
   },
   {
-   "source": "nicovideo",
-   "files": 3,
-   "works": 864,
-   "rows": 7286,
-   "retrieved": "2026-08-07",
-   "age_days": 1,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 6757,
-   "well_formed": 0,
-   "malformed": 6757,
-   "drop": null
-  },
-  {
    "source": "webpages",
    "files": 37,
    "works": 531,
@@ -677,6 +667,20 @@
    "drop": null
   },
   {
+   "source": "nicovideo",
+   "files": 3,
+   "works": 864,
+   "rows": 7289,
+   "retrieved": "2026-08-08",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 6760,
+   "well_formed": 0,
+   "malformed": 6760,
+   "drop": null
+  },
+  {
    "source": "openbd",
    "files": 820,
    "works": 820,
@@ -693,7 +697,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T15:42:01+00:00",
+  "previous_at": "2026-08-08T17:36:02+00:00",
   "drops": []
  },
  "outstanding": [
@@ -885,10 +889,11 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 34,
+   "count": 35,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
+    "an imprint field repeating its publisher": 360,
     "author readings no source states": 312,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
@@ -906,7 +911,7 @@
     "full-width forms in English renderings": 37,
     "implausible ruby spans": 0,
     "imprint names the interface disagrees with": 0,
-    "imprint strings that reach no line": 139,
+    "imprint strings that reach no line": 18,
     "incomplete attested rows": 14,
     "interface reads outside an entry point": 13,
     "invented markup in tests": 75,
@@ -914,7 +919,7 @@
     "kana names with no stated division": 263,
     "labels with nothing to quote": 49,
     "names rendered two ways": 2,
-    "nicovideo works with no rights": 189,
+    "nicovideo works with no rights": 60,
     "one page cited for two claims": 12,
     "one work under two names in a list": 71,
     "publisher keys the interface misses": 0,
@@ -945,9 +950,9 @@
   "states": {
    "print": 1734,
    "oneshot": 426,
-   "unknown": 303,
+   "unknown": 304,
    "completed": 263,
-   "active": 220,
+   "active": 219,
    "dormant": 81,
    "slow": 57
   },
@@ -962,7 +967,7 @@
   "print_only": 1734,
   "volumes": 6280,
   "with_identifier": 3084,
-  "chapters": 26841,
+  "chapters": 26843,
   "delivery_dated": 1084
  }
 }

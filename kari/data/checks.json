@@ -247,10 +247,16 @@
    "value": 0
   },
   {
+   "name": "an imprint field repeating its publisher",
+   "means": "print rows whose imprint field holds the same name as their publisher field, which a shop's individual-publishing service writes when an artist publishes their own book. There is no line to name; what moves this is the capture writing one name in one place.",
+   "budget": 360,
+   "value": 360
+  },
+  {
    "name": "imprint strings that reach no line",
    "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
-   "budget": 139,
-   "value": 139
+   "budget": 18,
+   "value": 18
   },
   {
    "name": "renderings still Japanese in English mode",
@@ -431,8 +437,8 @@
   {
    "name": "nicovideo works with no rights",
    "means": "ニコニコ works captured with no copyright line read off their page, which is the only field the platform gives that names a publisher. Falls when the capture re-runs against the widened pattern; does not reach zero, because a work its own author posted carries no copyright element at all.",
-   "budget": 189,
-   "value": 189
+   "budget": 60,
+   "value": 60
   },
   {
    "name": "modules without a test",
@@ -500,7 +506,7 @@
   {
    "name": "shadowed names in build.py",
    "means": "names rebound more than 300 lines from their first binding. Two shipped bugs came from this; see adapters/lint/shadowing.py for why the count is not simply falling.",
-   "budget": 41,
+   "budget": 40,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },
