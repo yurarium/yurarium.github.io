@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T00:05:45+00:00",
+ "generated": "2026-08-08T00:22:15+00:00",
  "since_last": {
-  "at": "2026-08-07T23:57:45+00:00",
+  "at": "2026-08-08T00:17:09+00:00",
   "statistics": {}
  },
  "means": {
@@ -38,7 +38,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 23,
+  "invariants_passing": 24,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -151,6 +151,11 @@
     "examples": []
    },
    {
+    "name": "no HTML entity in a stored name",
+    "violations": 0,
+    "examples": []
+   },
+   {
     "name": "nicovideo channels agree with our own records",
     "violations": 0,
     "examples": []
@@ -256,8 +261,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 175,
-    "value": 175
+    "budget": 174,
+    "value": 174
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -305,7 +310,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": 1
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "updates naming a work we do not hold",
@@ -499,7 +505,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-07T23:57:44+00:00",
+  "previous_at": "2026-08-08T00:17:08+00:00",
   "drops": []
  },
  "outstanding": [
@@ -512,7 +518,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 153,
+   "count": 152,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -633,7 +639,6 @@
     "こい☆フラ　レボリューション",
     "さろめりっく",
     "のだ",
-    "ひよ&amp;びびっと!",
     "ふちゅれ！オトメ",
     "ゆずせん",
     "ゆゆ式",
@@ -714,7 +719,7 @@
     "undated cmoa candidates": 1220,
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 27,
-    "works showing a romanisation": 175,
+    "works showing a romanisation": 174,
     "works without English": 105
    }
   }
@@ -731,11 +736,11 @@
    "slow": 57
   },
   "english_basis": {
-   "translated": 2673,
+   "translated": 2674,
    "official-jp": 117,
    "licensed": 112,
    "none": 109,
-   "romaji": 66
+   "romaji": 65
   },
   "print_works": 2514,
   "print_only": 1727,
