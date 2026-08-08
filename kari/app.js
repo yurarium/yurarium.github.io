@@ -377,24 +377,7 @@ function enOf(rec) {
 
    It matters most in English. A reader in Japanese who is shown no furigana still has the name
    itself; a reader in English has only this string and nothing to fall back on. */
-/* A SCANNING VIEW CARRIES NO MARKS. The three tab lists are for finding a work, and the mark is
-   for reading one: 971 of these were on the lists at once, which is the flood the mark's own
-   argument says makes it stop meaning anything. It is the same call the interface already makes
-   about the work-page link, which renders in the detailed view and not the compact one.
-
-   Nothing is hidden by this. The doubt is a fact about the name and it is still on the work page,
-   where the reader is looking at that one name and can act on it, and it is still in the data for
-   anything that reads the store. */
-let IN_LIST = false;
-
-function inList(fn) {
-  const was = IN_LIST;
-  IN_LIST = true;
-  try { return fn(); } finally { IN_LIST = was; }
-}
-
 function uncertainMark(rec, e) {
-  if (IN_LIST) return '';
   // THE DOUBT IS ABOUT THE READING, so it only reaches a string the reading produced. A
   // romanisation is spelled out of the reading and inherits every doubt about it. A translation,
   // an official English name and a licensor's name do not: "Bloom Into You" is no less right for
@@ -788,7 +771,6 @@ function pubEn(n) {
    escape, and its output also fills a <select> option value on the releases filter, where markup
    would be shown literally. The display sites use publisherPartsHtml instead. */
 function pubMark(n) {
-  if (IN_LIST) return '';
   const rec = pubRec(n);
   return (LANG === 'en' && rec && rec.basis === 'romaji' && (rec.uncertain || rec.unverified))
     ? `<sup class="unc" title="${esc('the reading this is romanised from is not attested by any '
@@ -2278,7 +2260,7 @@ async function renderReleases() {
      joined. The alternative is re-running the creator and imprint normalisation below for 640
      volumes on every keystroke, and that work depends on the display preferences rather than on
      the query: the same reason drawnKey guards this whole function. */
-  REL_ROWS = inList(() => rows.map(r => {
+  REL_ROWS = rows.map(r => {
       const w = r.w;
       // MADB writes a role before each name, [著] and [作画] among them, and joins creators
       // with a slash that survives even when one side is empty. Both are cataloguing
@@ -2336,7 +2318,7 @@ async function renderReleases() {
       html: `<div class="relv"><div class="relvt">${name} ${vol}${fin}<!--vis--></div>` +
         `<div class="relvm">${[people, who].filter(Boolean).join(' · ')}</div></div>`,
     };
-  }));
+  });
   setRelOptions();
   paintReleases();
 }
@@ -2634,9 +2616,7 @@ function setPlatOptions() {
   sel.value = names.includes(keep) ? keep : '';
 }
 
-function renderFeed() { return inList(_renderFeed); }
-
-function _renderFeed() {
+function renderFeed() {
   const q = norm(el('fq').value.trim()), f = el('ftype').value;
   const model = el('fmodel').value, view = el('fview').value;
   const plat = el('fplat').value;
@@ -3061,9 +3041,7 @@ const SSTATE = {
   print:     ['単行本', 'k-fin', 'published in volumes; no web serialisation we track'],
 };
 
-function renderSeries() { return inList(_renderSeries); }
-
-function _renderSeries() {
+function renderSeries() {
   if (!SERIES) return;
   const q = norm(el('sq').value.trim());
   const state = el('sstate').value, freeOnly = el('sfree').value, plat = el('splat').value;
@@ -3178,9 +3156,7 @@ function _renderSeries() {
 }
 
 /* ── catalogue ────────────────────────────────────────── */
-function renderCat() { return inList(_renderCat); }
-
-function _renderCat() {
+function renderCat() {
   const q = norm(el('q').value.trim()), f = el('filter').value, mode = el('sort').value;
   const by = {
     'date':      (x,y) => (x.d||'9999').localeCompare(y.d||'9999'),
