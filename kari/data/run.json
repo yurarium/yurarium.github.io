@@ -1,9 +1,9 @@
 {
  "generated": "2026-08-08",
- "releases": 1151,
+ "releases": 1177,
  "platforms": 22,
  "works": 2558,
- "series_rows": 3076,
+ "series_rows": 3077,
  "sources": [
   {
    "source": "bookwalker",
@@ -18,10 +18,10 @@
   {
    "source": "comicfuz",
    "files": 2,
-   "works": 127,
-   "rows": 6104,
-   "retrieved": "2026-08-07",
-   "age_days": 1,
+   "works": 128,
+   "rows": 6174,
+   "retrieved": "2026-08-08",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -4444,6 +4444,14 @@
    "distinct_works": 1,
    "median_per_day": 1,
    "example_work": "はなにあらし"
+  },
+  {
+   "platform": "COMIC FUZ",
+   "date": "2026-08-08",
+   "releases": 33,
+   "distinct_works": 3,
+   "median_per_day": 2.0,
+   "example_work": "IDOL×IDOL STORY！"
   }
  ],
  "gaps": {
@@ -11590,7 +11598,7 @@
    },
    {
     "week": "2026-08-02",
-    "n": 49
+    "n": 75
    }
   ],
   "trimmed_weeks": 3,
@@ -11599,11 +11607,11 @@
  },
  "access_modes": {
   "purchase": 310,
-  "free": 693,
-  "free-timed": 120
+  "free-timed": 148,
+  "free": 691
  },
  "update_kinds": {
-  "new-chapter": 1067,
+  "new-chapter": 1093,
   "other": 23,
   "final": 8,
   "new-series": 31,
@@ -11611,11 +11619,11 @@
   "skipped": 1
  },
  "identification": {
-  "discovery-candidate": 841,
+  "discovery-candidate": 867,
   "platform-genre": 310
  },
  "collapsed": {
-  "duplicate_chapters": 79,
+  "duplicate_chapters": 76,
   "thin_sitemap": 8,
   "resolver": 51,
   "samples": 36

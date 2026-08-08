@@ -1,21 +1,21 @@
 {
  "releases": [
   {
-   "id": "comicfuz:47950",
-   "work": "球詠",
-   "ep": "１４巻 第８０球 「実感」（１）",
+   "id": "comicfuz:54761",
+   "work": "小森さんは断れない！",
+   "ep": "１２巻 第１５９話",
    "type": "chapter",
    "adv": true,
    "web": "serialised",
-   "pub": "2026-08-07",
-   "seen": "2026-08-07",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
    "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/47950",
-   "series_url": "https://comic-fuz.com/manga/441",
-   "author": "マウンテンプクイチ",
+   "url": "https://comic-fuz.com/manga/viewer/54761",
+   "series_url": "https://comic-fuz.com/manga/693",
+   "author": "クール教信者",
    "plat": "comic-fuz",
    "plat_name": "COMIC FUZ",
    "ident": "discovery-candidate",
@@ -28,52 +28,2634 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": false,
-   "ahead_n": 21,
-   "ahead_ep": "１５巻 第９０球 「示すしかなかろ」（２）",
-   "ahead_next_free": "2026-08-14",
-   "ahead_next_ep": "１４巻 第８０球 「実感」（２）",
+   "ahead_n": 11,
+   "ahead_ep": "１３巻 第１７０話",
+   "ahead_next_free": "2026-08-15",
+   "ahead_next_ep": "１２巻 第１６０話",
    "kind": "new-chapter",
-   "kind_basis": "episode numbered 80",
+   "kind_basis": "episode numbered 159",
    "kind_inferred": true,
    "preferred": "COMIC FUZ",
    "also_on": [],
    "is_preferred": true,
    "surfaced": false,
-   "feed_date": "2026-08-07",
+   "feed_date": "2026-08-08",
    "work_en": {
-    "reading": "タマヨミ",
+    "reading": "コモリサン ワ コトワレナイ！",
     "ruby": [
      [
-      "球詠",
-      "たまよみ"
+      "小森",
+      "こもり"
+     ],
+     [
+      "さんは",
+      null
+     ],
+     [
+      "断",
+      "ことわ"
+     ],
+     [
+      "れない！",
+      null
      ]
     ],
     "romaji": {
-     "macron": "Tamayomi",
-     "double": "Tamayomi",
-     "plain": "Tamayomi"
+     "macron": "Komorisan wa Kotowarenai!",
+     "double": "Komorisan wa Kotowarenai!",
+     "plain": "Komorisan wa Kotowarenai!"
     },
-    "en": "Tamayomi",
+    "en": "Komori-san Can't Turn Anyone Down!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Komori-san Can't Turn Anyone Down!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "クールキョウ シンジャ",
+    "ruby": [
+     [
+      "クール",
+      null
+     ],
+     [
+      "教",
+      "きょう"
+     ],
+     [
+      "信",
+      "しん"
+     ],
+     [
+      "者",
+      "じゃ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kūrukyō Shinja",
+     "double": "Kuurukyou Shinja",
+     "plain": "Kurukyo Shinja"
+    },
+    "en": "Coolkyousinnjya",
     "basis": "romaji",
     "reading_basis": "stated",
     "reading_cite": {
-     "source": "comic-fuz",
-     "url": "https://comic-fuz.com/manga/441",
-     "kind": "platform",
-     "reviewed": "2026-08-03"
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I9784575862560",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Records across the 小林さんちのメイドラゴン family agree. Guess was already right."
     }
    },
-   "author_en": {
-    "reading": "マウンテン プクイチ",
+   "wid": "w01787"
+  },
+  {
+   "id": "comicfuz-free:62620",
+   "work": "うさぎはかく語りき",
+   "ep": "第6話(2)",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3572",
+   "author": "鴻巣覚",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
+   "ahead_next_free": "2026-08-14",
+   "ahead_next_ep": "第19話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 6",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "reading": "ウサギ ワ カク カタリキ",
+    "ruby": [
+     [
+      "うさぎはかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
     "romaji": {
-     "macron": "Maunten Pukuichi",
-     "double": "Maunten Pukuichi",
-     "plain": "Maunten Pukuichi"
+     "macron": "Usagi wa Kaku Katariki",
+     "double": "Usagi wa Kaku Katariki",
+     "plain": "Usagi wa Kaku Katariki"
     },
-    "basis": "romaji",
-    "reading_basis": "surface"
+    "en": "ALSO SPRACH FOR RABBIT",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "ALSO SPRACH FOR RABBIT",
+     "translated": "Thus Spoke the Rabbit"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
    },
-   "wid": "w00026"
+   "author_en": {
+    "reading": "コウノス サトリ",
+    "ruby": [
+     [
+      "鴻巣覚",
+      "こうのすさとり"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōnosu Satori",
+     "double": "Kounosu Satori",
+     "plain": "Konosu Satori"
+    },
+    "en": "Satori Kōnosu",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I83220640e00000000000",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Guess confirmed. 13 records including うさぎはかく語りき, the example work, and 芳文社 きららファンタジア."
+    }
+   },
+   "wid": "w00028"
+  },
+  {
+   "id": "comicfuz-free:62617",
+   "work": "うさぎはかく語りき",
+   "ep": "第6話(1)",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3572",
+   "author": "鴻巣覚",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
+   "ahead_next_free": "2026-08-14",
+   "ahead_next_ep": "第19話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 6",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "reading": "ウサギ ワ カク カタリキ",
+    "ruby": [
+     [
+      "うさぎはかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Usagi wa Kaku Katariki",
+     "double": "Usagi wa Kaku Katariki",
+     "plain": "Usagi wa Kaku Katariki"
+    },
+    "en": "ALSO SPRACH FOR RABBIT",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "ALSO SPRACH FOR RABBIT",
+     "translated": "Thus Spoke the Rabbit"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "コウノス サトリ",
+    "ruby": [
+     [
+      "鴻巣覚",
+      "こうのすさとり"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōnosu Satori",
+     "double": "Kounosu Satori",
+     "plain": "Konosu Satori"
+    },
+    "en": "Satori Kōnosu",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I83220640e00000000000",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Guess confirmed. 13 records including うさぎはかく語りき, the example work, and 芳文社 きららファンタジア."
+    }
+   },
+   "wid": "w00028"
+  },
+  {
+   "id": "comicfuz-free:61171",
+   "work": "うさぎはかく語りき",
+   "ep": "第5話(2)",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3572",
+   "author": "鴻巣覚",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
+   "ahead_next_free": "2026-08-14",
+   "ahead_next_ep": "第19話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 5",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "reading": "ウサギ ワ カク カタリキ",
+    "ruby": [
+     [
+      "うさぎはかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Usagi wa Kaku Katariki",
+     "double": "Usagi wa Kaku Katariki",
+     "plain": "Usagi wa Kaku Katariki"
+    },
+    "en": "ALSO SPRACH FOR RABBIT",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "ALSO SPRACH FOR RABBIT",
+     "translated": "Thus Spoke the Rabbit"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "コウノス サトリ",
+    "ruby": [
+     [
+      "鴻巣覚",
+      "こうのすさとり"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōnosu Satori",
+     "double": "Kounosu Satori",
+     "plain": "Konosu Satori"
+    },
+    "en": "Satori Kōnosu",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I83220640e00000000000",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Guess confirmed. 13 records including うさぎはかく語りき, the example work, and 芳文社 きららファンタジア."
+    }
+   },
+   "wid": "w00028"
+  },
+  {
+   "id": "comicfuz-free:61168",
+   "work": "うさぎはかく語りき",
+   "ep": "第5話(1)",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3572",
+   "author": "鴻巣覚",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
+   "ahead_next_free": "2026-08-14",
+   "ahead_next_ep": "第19話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 5",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "reading": "ウサギ ワ カク カタリキ",
+    "ruby": [
+     [
+      "うさぎはかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Usagi wa Kaku Katariki",
+     "double": "Usagi wa Kaku Katariki",
+     "plain": "Usagi wa Kaku Katariki"
+    },
+    "en": "ALSO SPRACH FOR RABBIT",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "ALSO SPRACH FOR RABBIT",
+     "translated": "Thus Spoke the Rabbit"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "コウノス サトリ",
+    "ruby": [
+     [
+      "鴻巣覚",
+      "こうのすさとり"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōnosu Satori",
+     "double": "Kounosu Satori",
+     "plain": "Konosu Satori"
+    },
+    "en": "Satori Kōnosu",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I83220640e00000000000",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Guess confirmed. 13 records including うさぎはかく語りき, the example work, and 芳文社 きららファンタジア."
+    }
+   },
+   "wid": "w00028"
+  },
+  {
+   "id": "comicfuz-free:59928",
+   "work": "うさぎはかく語りき",
+   "ep": "第4話(3)",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3572",
+   "author": "鴻巣覚",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
+   "ahead_next_free": "2026-08-14",
+   "ahead_next_ep": "第19話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 4",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "reading": "ウサギ ワ カク カタリキ",
+    "ruby": [
+     [
+      "うさぎはかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Usagi wa Kaku Katariki",
+     "double": "Usagi wa Kaku Katariki",
+     "plain": "Usagi wa Kaku Katariki"
+    },
+    "en": "ALSO SPRACH FOR RABBIT",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "ALSO SPRACH FOR RABBIT",
+     "translated": "Thus Spoke the Rabbit"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "コウノス サトリ",
+    "ruby": [
+     [
+      "鴻巣覚",
+      "こうのすさとり"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōnosu Satori",
+     "double": "Kounosu Satori",
+     "plain": "Konosu Satori"
+    },
+    "en": "Satori Kōnosu",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I83220640e00000000000",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Guess confirmed. 13 records including うさぎはかく語りき, the example work, and 芳文社 きららファンタジア."
+    }
+   },
+   "wid": "w00028"
+  },
+  {
+   "id": "comicfuz-free:59925",
+   "work": "うさぎはかく語りき",
+   "ep": "第4話(2)",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3572",
+   "author": "鴻巣覚",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
+   "ahead_next_free": "2026-08-14",
+   "ahead_next_ep": "第19話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 4",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "reading": "ウサギ ワ カク カタリキ",
+    "ruby": [
+     [
+      "うさぎはかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Usagi wa Kaku Katariki",
+     "double": "Usagi wa Kaku Katariki",
+     "plain": "Usagi wa Kaku Katariki"
+    },
+    "en": "ALSO SPRACH FOR RABBIT",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "ALSO SPRACH FOR RABBIT",
+     "translated": "Thus Spoke the Rabbit"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "コウノス サトリ",
+    "ruby": [
+     [
+      "鴻巣覚",
+      "こうのすさとり"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōnosu Satori",
+     "double": "Kounosu Satori",
+     "plain": "Konosu Satori"
+    },
+    "en": "Satori Kōnosu",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I83220640e00000000000",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Guess confirmed. 13 records including うさぎはかく語りき, the example work, and 芳文社 きららファンタジア."
+    }
+   },
+   "wid": "w00028"
+  },
+  {
+   "id": "comicfuz-free:59922",
+   "work": "うさぎはかく語りき",
+   "ep": "第4話(1)",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3572",
+   "author": "鴻巣覚",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
+   "ahead_next_free": "2026-08-14",
+   "ahead_next_ep": "第19話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 4",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "reading": "ウサギ ワ カク カタリキ",
+    "ruby": [
+     [
+      "うさぎはかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Usagi wa Kaku Katariki",
+     "double": "Usagi wa Kaku Katariki",
+     "plain": "Usagi wa Kaku Katariki"
+    },
+    "en": "ALSO SPRACH FOR RABBIT",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "ALSO SPRACH FOR RABBIT",
+     "translated": "Thus Spoke the Rabbit"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "コウノス サトリ",
+    "ruby": [
+     [
+      "鴻巣覚",
+      "こうのすさとり"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōnosu Satori",
+     "double": "Kounosu Satori",
+     "plain": "Konosu Satori"
+    },
+    "en": "Satori Kōnosu",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I83220640e00000000000",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Guess confirmed. 13 records including うさぎはかく語りき, the example work, and 芳文社 きららファンタジア."
+    }
+   },
+   "wid": "w00028"
+  },
+  {
+   "id": "comicfuz-free:58536",
+   "work": "うさぎはかく語りき",
+   "ep": "第3話(3)",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3572",
+   "author": "鴻巣覚",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
+   "ahead_next_free": "2026-08-14",
+   "ahead_next_ep": "第19話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 3",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "reading": "ウサギ ワ カク カタリキ",
+    "ruby": [
+     [
+      "うさぎはかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Usagi wa Kaku Katariki",
+     "double": "Usagi wa Kaku Katariki",
+     "plain": "Usagi wa Kaku Katariki"
+    },
+    "en": "ALSO SPRACH FOR RABBIT",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "ALSO SPRACH FOR RABBIT",
+     "translated": "Thus Spoke the Rabbit"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "コウノス サトリ",
+    "ruby": [
+     [
+      "鴻巣覚",
+      "こうのすさとり"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōnosu Satori",
+     "double": "Kounosu Satori",
+     "plain": "Konosu Satori"
+    },
+    "en": "Satori Kōnosu",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I83220640e00000000000",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Guess confirmed. 13 records including うさぎはかく語りき, the example work, and 芳文社 きららファンタジア."
+    }
+   },
+   "wid": "w00028"
+  },
+  {
+   "id": "comicfuz-free:58533",
+   "work": "うさぎはかく語りき",
+   "ep": "第3話(2)",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3572",
+   "author": "鴻巣覚",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
+   "ahead_next_free": "2026-08-14",
+   "ahead_next_ep": "第19話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 3",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "reading": "ウサギ ワ カク カタリキ",
+    "ruby": [
+     [
+      "うさぎはかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Usagi wa Kaku Katariki",
+     "double": "Usagi wa Kaku Katariki",
+     "plain": "Usagi wa Kaku Katariki"
+    },
+    "en": "ALSO SPRACH FOR RABBIT",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "ALSO SPRACH FOR RABBIT",
+     "translated": "Thus Spoke the Rabbit"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "コウノス サトリ",
+    "ruby": [
+     [
+      "鴻巣覚",
+      "こうのすさとり"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōnosu Satori",
+     "double": "Kounosu Satori",
+     "plain": "Konosu Satori"
+    },
+    "en": "Satori Kōnosu",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I83220640e00000000000",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Guess confirmed. 13 records including うさぎはかく語りき, the example work, and 芳文社 きららファンタジア."
+    }
+   },
+   "wid": "w00028"
+  },
+  {
+   "id": "comicfuz-free:58530",
+   "work": "うさぎはかく語りき",
+   "ep": "第3話(1)",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3572",
+   "author": "鴻巣覚",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
+   "ahead_next_free": "2026-08-14",
+   "ahead_next_ep": "第19話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 3",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "reading": "ウサギ ワ カク カタリキ",
+    "ruby": [
+     [
+      "うさぎはかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Usagi wa Kaku Katariki",
+     "double": "Usagi wa Kaku Katariki",
+     "plain": "Usagi wa Kaku Katariki"
+    },
+    "en": "ALSO SPRACH FOR RABBIT",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "ALSO SPRACH FOR RABBIT",
+     "translated": "Thus Spoke the Rabbit"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "コウノス サトリ",
+    "ruby": [
+     [
+      "鴻巣覚",
+      "こうのすさとり"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōnosu Satori",
+     "double": "Kounosu Satori",
+     "plain": "Konosu Satori"
+    },
+    "en": "Satori Kōnosu",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I83220640e00000000000",
+     "kind": "national-library",
+     "reviewed": "2026-08-04",
+     "note": "Guess confirmed. 13 records including うさぎはかく語りき, the example work, and 芳文社 きららファンタジア."
+    }
+   },
+   "wid": "w00028"
+  },
+  {
+   "id": "comicfuz-free:45135",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.20",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 20",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:44910",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.19",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 19",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:44796",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.18",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 18",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:44649",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.17",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 17",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:44454",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.16",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 16",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:44272",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.15",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 15",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:43906",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.14",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 14",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:42937",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.13",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 13",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:42685",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.12",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 12",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:42217",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.11",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 11",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:41851",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.10",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 10",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:41772",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.9",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 9",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:41043",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.8",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 8",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:40467",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.7（2）",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 7",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:40464",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.7（1）",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 7",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:40413",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.6（2）",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 6",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:40410",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.6（1）",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 6",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:40110",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.5",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 5",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:39857",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.4（2）",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 4",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:39854",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.4（1）",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 4",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:39227",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.3（2）",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 3",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
+  },
+  {
+   "id": "comicfuz-free:39224",
+   "work": "IDOL×IDOL STORY！",
+   "ep": "Episode.3（1）",
+   "type": "access-change",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-08-08",
+   "seen": "2026-08-08",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/3140",
+   "author": "得能正太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "free -> free-timed",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 3",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-08",
+   "work_en": {
+    "en": "IDOLxIDOL STORY!",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "IDOL×IDOL STORY！"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トクノウ ショウタロウ",
+    "ruby": [
+     [
+      "得",
+      "とく"
+     ],
+     [
+      "能",
+      "のう"
+     ],
+     [
+      "正太郎",
+      "しょうたろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tokunō Shōtarō",
+     "double": "Tokunou Shoutarou",
+     "plain": "Tokuno Shotaro"
+    },
+    "en": "Shōtarō Tokunō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q18458173"
+    }
+   },
+   "wid": "w00040"
   },
   {
    "id": "kadokomi:KC_0027980007300011_E",
@@ -1002,163 +3584,6 @@
    "wid": "w02793"
   },
   {
-   "id": "comicfuz:79718",
-   "work": "IDOL×IDOL STORY！",
-   "ep": "SSSオフショット93",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-06",
-   "seen": "2026-08-07",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/79718",
-   "series_url": "https://comic-fuz.com/manga/3140",
-   "author": "得能正太郎",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "work has an earlier release here",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "surfaced": false,
-   "feed_date": "2026-08-06",
-   "work_en": {
-    "en": "IDOLxIDOL STORY!",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "IDOL×IDOL STORY！"
-    },
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "トクノウ ショウタロウ",
-    "ruby": [
-     [
-      "得",
-      "とく"
-     ],
-     [
-      "能",
-      "のう"
-     ],
-     [
-      "正太郎",
-      "しょうたろう"
-     ]
-    ],
-    "romaji": {
-     "macron": "Tokunō Shōtarō",
-     "double": "Tokunou Shoutarou",
-     "plain": "Tokuno Shotaro"
-    },
-    "en": "Shōtarō Tokunō",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q18458173"
-    }
-   },
-   "wid": "w00040"
-  },
-  {
-   "id": "comicfuz:58923",
-   "work": "しあわせ鳥見んぐ",
-   "ep": "３巻 第２８話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-06",
-   "seen": "2026-08-07",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/58923",
-   "series_url": "https://comic-fuz.com/manga/2474",
-   "author": "わらびもちきなこ",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free-timed"
-   ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "ahead_n": 12,
-   "ahead_ep": "３巻 第４０話",
-   "ahead_next_free": "2026-08-13",
-   "ahead_next_ep": "３巻 第２９話",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 28",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "surfaced": false,
-   "feed_date": "2026-08-06",
-   "work_en": {
-    "reading": "シアワセ トリミング",
-    "ruby": [
-     [
-      "しあわせ",
-      null
-     ],
-     [
-      "鳥見",
-      "とりみ"
-     ],
-     [
-      "んぐ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Shiawase Torimingu",
-     "double": "Shiawase Torimingu",
-     "plain": "Shiawase Torimingu"
-    },
-    "en": "HAPPINESS BIRD WITHIN YOU.",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "HAPPINESS BIRD WITHIN YOU.",
-     "translated": "Happy Birding"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "ワラビモチ キナコ",
-    "romaji": {
-     "macron": "Warabimochi Kinako",
-     "double": "Warabimochi Kinako",
-     "plain": "Warabimochi Kinako"
-    },
-    "en": "Warabimochi Kinako",
-    "basis": "romaji",
-    "reading_basis": "surface"
-   },
-   "wid": "w00041"
-  },
-  {
    "id": "comicfuz:44874",
    "work": "キルミーベイベー",
    "ep": "１４巻 第１７８話",
@@ -1166,7 +3591,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-08-06",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2813,194 +5238,6 @@
    "wid": "w01224"
   },
   {
-   "id": "comicfuz:75463",
-   "work": "このままモブじゃ終われない！",
-   "ep": "２巻 第２３話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-04",
-   "seen": "2026-08-07",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/75463",
-   "series_url": "https://comic-fuz.com/manga/3700",
-   "author": "優しい内臓",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free-timed"
-   ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "ahead_n": 3,
-   "ahead_ep": "２巻 第２６話",
-   "ahead_next_free": "2026-08-11",
-   "ahead_next_ep": "２巻 第２４話",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 23",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "surfaced": false,
-   "feed_date": "2026-08-04",
-   "work_en": {
-    "reading": "コノ ママ モブ ジャ オワレナイ！",
-    "ruby": [
-     [
-      "このままモブじゃ",
-      null
-     ],
-     [
-      "終",
-      "お"
-     ],
-     [
-      "われない！",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Kono Mama Mobu Ja Owarenai!",
-     "double": "Kono Mama Mobu Ja Owarenai!",
-     "plain": "Kono Mama Mobu Ja Owarenai!"
-    },
-    "en": "I Won't End Up a Background Character!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "I Won't End Up a Background Character!"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ヤサシイ ナイゾウ",
-    "ruby": [
-     [
-      "優",
-      "やさ"
-     ],
-     [
-      "しい",
-      null
-     ],
-     [
-      "内臓",
-      "ないぞう"
-     ]
-    ],
-    "romaji": {
-     "macron": "Yasashii Naizō",
-     "double": "Yasashii Naizou",
-     "plain": "Yasashi Naizo"
-    },
-    "en": "Yasashii Naizo",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033900175",
-     "kind": "national-library",
-     "reviewed": "2026-08-04",
-     "note": "Record is for このままモブじゃ終われない!, the work we hold. Guess confirmed."
-    }
-   },
-   "wid": "w00058"
-  },
-  {
-   "id": "comicfuz:79877",
-   "work": "百合SMでふたりの気持ちはつながりますか？",
-   "ep": "36話(3)掲載予定について／お詫び",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-04",
-   "seen": "2026-08-07",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/79877",
-   "series_url": "https://comic-fuz.com/manga/2391",
-   "author": "みら",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "ahead_n": 3,
-   "ahead_ep": "おまけ",
-   "ahead_next_free": "2026-08-16",
-   "ahead_next_ep": "第36話(1)",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 36",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "surfaced": false,
-   "feed_date": "2026-08-04",
-   "work_en": {
-    "reading": "ユリ SM デ フタリ ノ キモチ ワ ツナガリマス カ？",
-    "ruby": [
-     [
-      "百合",
-      "ゆり"
-     ],
-     [
-      "SMでふたりの",
-      null
-     ],
-     [
-      "気持",
-      "きも"
-     ],
-     [
-      "ちはつながりますか？",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Yuri SM de Futari no Kimochi wa Tsunagarimasu Ka?",
-     "double": "Yuri SM de Futari no Kimochi wa Tsunagarimasu Ka?",
-     "plain": "Yuri SM de Futari no Kimochi wa Tsunagarimasu Ka?"
-    },
-    "en": "Can Yuri SM Connect Our Feelings?",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Can Yuri SM Connect Our Feelings?"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ミラ",
-    "romaji": {
-     "macron": "Mira",
-     "double": "Mira",
-     "plain": "Mira"
-    },
-    "basis": "romaji",
-    "reading_basis": "surface"
-   },
-   "wid": "w00140"
-  },
-  {
    "id": "kadokomi:KC_0059410001900031_E",
    "work": "ユリノコ",
    "ep": "第18話-3",
@@ -3710,101 +5947,6 @@
    "wid": "w00004"
   },
   {
-   "id": "comicfuz:47293",
-   "work": "星屑テレパス",
-   "ep": "４巻 第３９話「瞑目アリア」",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-03",
-   "seen": "2026-08-07",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/47293",
-   "series_url": "https://comic-fuz.com/manga/2062",
-   "author": "大熊らすこ",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free-timed"
-   ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "ahead_n": 19,
-   "ahead_ep": "５巻 第５６話「彗星エンカウント」",
-   "ahead_next_free": "2026-08-10",
-   "ahead_next_ep": "４巻 第４０話「交信X」",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 39",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "surfaced": false,
-   "feed_date": "2026-08-03",
-   "work_en": {
-    "reading": "ホシクズ テレパス",
-    "ruby": [
-     [
-      "星屑",
-      "ほしくず"
-     ],
-     [
-      "テレパス",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Hoshikuzu Terepasu",
-     "double": "Hoshikuzu Terepasu",
-     "plain": "Hoshikuzu Terepasu"
-    },
-    "en": "Stardust Telepath",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Stardust Telepath"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "オオクマ ラスコ",
-    "ruby": [
-     [
-      "大熊",
-      "おおくま"
-     ],
-     [
-      "らすこ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Ōkuma Rasuko",
-     "double": "Ookuma Rasuko",
-     "plain": "Okuma Rasuko"
-    },
-    "en": "Rasuko Ookuma",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034783226",
-     "kind": "national-library",
-     "reviewed": "2026-08-04",
-     "note": "Record is for 星屑テレパス, the work we hold. The guess split it as オオクマラ スコ."
-    }
-   },
-   "wid": "w00006"
-  },
-  {
    "id": "kadokomi:KC_0041970006200011_E",
    "work": "安達としまむら",
    "ep": "第59話「Cherry Blossoms for the Two of Us1」①",
@@ -4173,116 +6315,6 @@
     "unverified": true
    },
    "wid": "w00008"
-  },
-  {
-   "id": "comicfuz:78593",
-   "work": "江口さんちの純情サキュバス",
-   "ep": "１巻 第９話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-02",
-   "seen": "2026-08-07",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/78593",
-   "series_url": "https://comic-fuz.com/manga/3776",
-   "author": "工藤える",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free-timed"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "ahead_n": 4,
-   "ahead_ep": "１巻 番外編",
-   "ahead_next_free": "2026-08-09",
-   "ahead_next_ep": "１巻 第１０話",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 9",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "surfaced": false,
-   "feed_date": "2026-08-02",
-   "work_en": {
-    "reading": "エグチサン チ ノ ジュンジョウ サキュバス",
-    "ruby": [
-     [
-      "江",
-      "え"
-     ],
-     [
-      "口",
-      "ぐち"
-     ],
-     [
-      "さんちの",
-      null
-     ],
-     [
-      "純",
-      "じゅん"
-     ],
-     [
-      "情",
-      "じょう"
-     ],
-     [
-      "サキュバス",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Eguchisan Chi no Junjō Sakyubasu",
-     "double": "Eguchisan Chi no Junjou Sakyubasu",
-     "plain": "Eguchisan Chi no Junjo Sakyubasu"
-    },
-    "en": "The Eguchi Household's Innocent Succubus",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Eguchi Household's Innocent Succubus"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "クドウ エル",
-    "ruby": [
-     [
-      "工藤",
-      "くどう"
-     ],
-     [
-      "える",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Kudō Eru",
-     "double": "Kudou Eru",
-     "plain": "Kudo Eru"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034096344",
-     "kind": "national-library",
-     "reviewed": "2026-08-04",
-     "note": "Guess confirmed. 芳文社, 江口さんちの純情サキュバス, the example work."
-    }
-   },
-   "wid": "w00010"
   },
   {
    "id": "kadokomi:KC_0065980001900021_E",
@@ -4863,7 +6895,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-08-01",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4957,7 +6989,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-08-01",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4977,10 +7009,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 12,
+   "ahead_n": 11,
    "ahead_ep": "１３巻 第１７０話",
-   "ahead_next_free": "2026-08-08",
-   "ahead_next_ep": "１２巻 第１５９話",
+   "ahead_next_free": "2026-08-15",
+   "ahead_next_ep": "１２巻 第１６０話",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 158",
    "kind_inferred": true,
@@ -6129,6 +8161,17 @@
    "work_level": true,
    "provenance": "attested",
    "free": true,
+   "channel": {
+    "name": "きららベース",
+    "host": "ニコニコ漫画",
+    "syndicated": true,
+    "origin": "芳文社",
+    "home": null
+   },
+   "channel_name": "きららベース",
+   "syndicated": false,
+   "origin_note": "carried on ニコニコ漫画 in the きららベース channel, which is a section of that site rather than a platform. Whether it was first published here or elsewhere is not established.",
+   "origin_unknown": true,
    "kind": "new-chapter",
    "kind_basis": "numbered 123, but this is the only chapter we hold: the work was already running when we first saw it",
    "kind_inferred": true,
@@ -6222,6 +8265,7 @@
    "free": true,
    "same_title_elsewhere": "カドコミ",
    "origin_note": "a work of this title also appears on カドコミ. Whether it is the same run is not established — we hold no chapter list on that side to compare, and a shared title is not evidence of a shared work.",
+   "channel": null,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 59",
    "kind_inferred": true,
@@ -6322,6 +8366,17 @@
    "work_level": true,
    "provenance": "attested",
    "free": true,
+   "channel": {
+    "name": "きららベース",
+    "host": "ニコニコ漫画",
+    "syndicated": true,
+    "origin": "芳文社",
+    "home": null
+   },
+   "channel_name": "きららベース",
+   "syndicated": false,
+   "origin_note": "carried on ニコニコ漫画 in the きららベース channel, which is a section of that site rather than a platform. Whether it was first published here or elsewhere is not established.",
+   "origin_unknown": true,
    "kind": "new-chapter",
    "kind_basis": "numbered 19, but this is the only chapter we hold: the work was already running when we first saw it",
    "kind_inferred": true,
@@ -6546,7 +8601,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-31",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6566,8 +8621,8 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 5,
-   "ahead_ep": "第21話(2)",
+   "ahead_n": 3,
+   "ahead_ep": "第20話(2)",
    "ahead_next_free": "2026-08-14",
    "ahead_next_ep": "第19話(2)",
    "kind": "new-chapter",
@@ -6642,7 +8697,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-31",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6662,10 +8717,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 21,
+   "ahead_n": 22,
    "ahead_ep": "１５巻 第９０球 「示すしかなかろ」（２）",
-   "ahead_next_free": "2026-08-14",
-   "ahead_next_ep": "１４巻 第８０球 「実感」（２）",
+   "ahead_next_free": "2026-08-07",
+   "ahead_next_ep": "１４巻 第８０球 「実感」（１）",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 79",
    "kind_inferred": true,
@@ -6717,7 +8772,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-31",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6783,7 +8838,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-31",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7704,6 +9759,7 @@
    "work_level": true,
    "provenance": "attested",
    "free": true,
+   "channel": null,
    "kind": "final",
    "kind_basis": "title states this is the last chapter",
    "kind_inferred": true,
@@ -8053,7 +10109,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-30",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8128,7 +10184,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-30",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8148,10 +10204,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 12,
+   "ahead_n": 13,
    "ahead_ep": "３巻 第４０話",
-   "ahead_next_free": "2026-08-13",
-   "ahead_next_ep": "３巻 第２９話",
+   "ahead_next_free": "2026-08-06",
+   "ahead_next_ep": "３巻 第２８話",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 27",
    "kind_inferred": true,
@@ -8210,7 +10266,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-30",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9099,6 +11155,7 @@
    "free": true,
    "same_title_elsewhere": "カドコミ",
    "origin_note": "a work of this title also appears on カドコミ. Whether it is the same run is not established — we hold no chapter list on that side to compare, and a shared title is not evidence of a shared work.",
+   "channel": null,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 56",
    "kind_inferred": true,
@@ -11034,7 +13091,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-28",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11054,10 +13111,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 3,
+   "ahead_n": 4,
    "ahead_ep": "２巻 第２６話",
-   "ahead_next_free": "2026-08-11",
-   "ahead_next_ep": "２巻 第２４話",
+   "ahead_next_free": "2026-08-04",
+   "ahead_next_ep": "２巻 第２３話",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 22",
    "kind_inferred": true,
@@ -11137,7 +13194,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-28",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13651,6 +15708,7 @@
    "free": true,
    "syndicated": true,
    "origin_note": "carried on ニコニコ漫画; originates on pixivコミック, which is where it should be read",
+   "channel": null,
    "kind": "new-chapter",
    "kind_basis": "extra or side story — content, not notice",
    "preferred": "ニコニコ漫画",
@@ -13741,7 +15799,15 @@
    "provenance": "attested",
    "free": true,
    "syndicated": true,
-   "origin_note": "carried on ニコニコ漫画; originates on COMIC FUZ, which is where it should be read",
+   "origin_note": "syndicated on ニコニコ漫画; confirmed on 芳文社's own platform, which is where it originates",
+   "channel": {
+    "name": "きららベース",
+    "host": "ニコニコ漫画",
+    "syndicated": true,
+    "origin": "芳文社",
+    "home": null
+   },
+   "channel_name": "きららベース",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 61",
    "kind_inferred": true,
@@ -13821,6 +15887,7 @@
    "free": true,
    "syndicated": true,
    "origin_note": "carried on ニコニコ漫画; originates on pixivコミック, which is where it should be read",
+   "channel": null,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 16",
    "kind_inferred": true,
@@ -13915,7 +15982,15 @@
    "provenance": "attested",
    "free": true,
    "syndicated": true,
-   "origin_note": "carried on ニコニコ漫画; originates on COMIC FUZ, which is where it should be read",
+   "origin_note": "syndicated on ニコニコ漫画; confirmed on 芳文社's own platform, which is where it originates",
+   "channel": {
+    "name": "きららベース",
+    "host": "ニコニコ漫画",
+    "syndicated": true,
+    "origin": "芳文社",
+    "home": null
+   },
+   "channel_name": "きららベース",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 117",
    "kind_inferred": true,
@@ -14035,7 +16110,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-27",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14055,10 +16130,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 19,
+   "ahead_n": 20,
    "ahead_ep": "５巻 第５６話「彗星エンカウント」",
-   "ahead_next_free": "2026-08-10",
-   "ahead_next_ep": "４巻 第４０話「交信X」",
+   "ahead_next_free": "2026-08-03",
+   "ahead_next_ep": "４巻 第３９話「瞑目アリア」",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 38",
    "kind_inferred": true,
@@ -14130,7 +16205,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-27",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16128,7 +18203,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-26",
-   "seen": "2026-08-07",
+   "seen": "2026-08-08",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16148,10 +18223,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 4,
+   "ahead_n": 5,
    "ahead_ep": "１巻 番外編",
-   "ahead_next_free": "2026-08-09",
-   "ahead_next_ep": "１巻 第１０話",
+   "ahead_next_free": "2026-08-02",
+   "ahead_next_ep": "１巻 第９話",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 8",
    "kind_inferred": true,
