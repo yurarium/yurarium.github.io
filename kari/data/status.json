@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-08T15:14:08+00:00",
+ "generated": "2026-08-08T15:42:02+00:00",
  "since_last": {
   "at": "2026-08-08T14:53:39+00:00",
   "statistics": {}
@@ -39,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 31,
+  "invariants_passing": 33,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -78,6 +78,11 @@
    },
    {
     "name": "every credit identifier resolves",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "a shipped identifier resolves",
     "violations": 0,
     "examples": []
    },
@@ -193,14 +198,8 @@
    },
    {
     "name": "names reach a page only through their renderer",
-    "violations": 10,
-    "examples": [
-     "kari/app.js:2184: renderWorkPage reads publisher and through:publisherChip; pubBoth/publisherParts/publisherPartsHtml is what renders it (who made the book, on a volume row: the house, the distributor and the line)",
-     "kari/app.js:2186: renderWorkPage reads distributor and through:publisherChip; pubBoth/publisherParts/publisherPartsHtml is what renders it (who made the book, on a volume row: the house, the distributor and the line)",
-     "kari/app.js:2187: renderWorkPage reads distributor and through:publisherChip; pubBoth/publisherParts/publisherPartsHtml is what renders it (who made the book, on a volume row: the house, the distributor and the line)",
-     "kari/app.js:2188: renderWorkPage reads imprint and through:imprintOf; pubBoth/publisherParts/publisherPartsHtml is what renders it (who made the book, on a volume row: the house, the distributor and the line)",
-     "kari/app.js:2188: renderWorkPage reads imprint and through:imprintOf; pubBoth/publisherParts/publisherPartsHtml is what renders it (who made the book, on a volume row: the house, the distributor and the line)"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "every Japanese field the data carries has a ruling",
@@ -212,8 +211,8 @@
    {
     "name": "citations withheld from readers",
     "means": "readings whose recorded address is on a route the site may not link to, so the citation is held back. All of them are NDL creator searches on the disallowed /api path. Falls as the record page is recorded in place of the query; a rise means a pass stored a query again.",
-    "budget": 36,
-    "value": 36
+    "budget": 244,
+    "value": 244
    },
    {
     "name": "one page cited for two claims",
@@ -242,8 +241,8 @@
    {
     "name": "titles with no translation of our own",
     "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
-    "budget": 172,
-    "value": 172
+    "budget": 171,
+    "value": 171
    },
    {
     "name": "publishers with no English",
@@ -278,8 +277,8 @@
    {
     "name": "interface reads outside an entry point",
     "means": "reads of a name-carrying field in kari/app.js that are excepted in entrypoints.SAFE rather than going through the function that renders that kind of name. Each names its function, its field, what is done with the value and how many there are. A rise means a new call site was argued for instead of using the renderer.",
-    "budget": 11,
-    "value": 11
+    "budget": 13,
+    "value": 13
    },
    {
     "name": "imprint names the interface disagrees with",
@@ -302,20 +301,20 @@
    {
     "name": "renderings with nothing to show",
     "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-    "budget": 38,
-    "value": 38
+    "budget": 33,
+    "value": 33
    },
    {
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-    "budget": 262,
-    "value": 262
+    "budget": 263,
+    "value": 263
    },
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 309,
-    "value": 309
+    "budget": 312,
+    "value": 312
    },
    {
     "name": "credits the corpus files as a venue",
@@ -346,6 +345,24 @@
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
     "budget": 19,
     "value": 19
+   },
+   {
+    "name": "credit pages listing a work that does not name them",
+    "means": "pairings a credit page would show whose work does not carry that credit's spelling in its own credit field. Substring arithmetic on two shipped fields, so it owes the splitter, the fold and the registry lookup nothing and cannot be satisfied by them agreeing. It will not reach zero: six of the eight are merges, where the surviving spelling is by construction not the one on the retired spelling's works, and two are release-row edges. A rise with neither behind it is a page claiming somebody worked on a book that does not name them.",
+    "budget": 8,
+    "value": 8
+   },
+   {
+    "name": "publisher pages listing a work from another house",
+    "means": "pairings a house page would show whose work names no such publisher on any print row. The publisher half of the measure above and independent the same way. A rise means one house is showing another's shelf, which is what an unmerged renaming looks like.",
+    "budget": 0,
+    "value": 0
+   },
+   {
+    "name": "credit identifiers naming nobody",
+    "means": "live credit identifiers no work is credited to, so they get no page. All five are joined spellings the ampersand split left behind, each half now holding its own address. A rise means a credit left the corpus or another splitter change orphaned a spelling.",
+    "budget": 5,
+    "value": 5
    },
    {
     "name": "credits sharing a reading nobody has ruled on",
@@ -392,8 +409,8 @@
    {
     "name": "one work under two names in a list",
     "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
-    "budget": 69,
-    "value": 69
+    "budget": 71,
+    "value": 71
    },
    {
     "name": "incomplete attested rows",
@@ -847,16 +864,18 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 32,
+   "count": 34,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
-    "author readings no source states": 309,
+    "author readings no source states": 312,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
-    "citations withheld from readers": 36,
+    "citations withheld from readers": 244,
     "credit fields an identifier does not cover": 19,
+    "credit identifiers naming nobody": 5,
+    "credit pages listing a work that does not name them": 8,
     "credits carrying their own cataloguing": 38,
     "credits matching a chapter": 0,
     "credits sharing a reading nobody has ruled on": 0,
@@ -867,26 +886,27 @@
     "imprint names the interface disagrees with": 0,
     "imprint strings that reach no line": 139,
     "incomplete attested rows": 14,
-    "interface reads outside an entry point": 11,
+    "interface reads outside an entry point": 13,
     "invented markup in tests": 75,
     "kana left in a romanisation": 0,
-    "kana names with no stated division": 262,
+    "kana names with no stated division": 263,
     "labels with nothing to quote": 49,
     "names rendered two ways": 2,
     "nicovideo works with no rights": 189,
     "one page cited for two claims": 12,
-    "one work under two names in a list": 69,
+    "one work under two names in a list": 71,
     "publisher keys the interface misses": 0,
+    "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 16,
     "publishers with no English": 0,
     "renderings still Japanese in English mode": 334,
-    "renderings with nothing to show": 38,
+    "renderings with nothing to show": 33,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 23,
     "titles shorter than their own reading": 3,
-    "titles with no translation of our own": 172,
+    "titles with no translation of our own": 171,
     "uncertain readings": 53,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
@@ -910,9 +930,9 @@
    "slow": 57
   },
   "english_basis": {
-   "translated": 2675,
+   "translated": 2676,
    "official-jp": 117,
-   "licensed": 112,
+   "licensed": 111,
    "none": 108,
    "romaji": 72
   },
