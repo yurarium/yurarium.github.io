@@ -489,6 +489,13 @@ function workLabel(r) {
    name is written; `given` swaps the two halves. Only a two-part name can be swapped: a single
    token is one name and reversing it would invent a structure the name does not have. */
 function personName(rec) {
+  /* AN ORGANISATION HAS NO PERSONAL NAME TO ORDER, and answering with one is what kept an English
+     name out of a record that held it. `kind` is what the store calls a credit that is not a
+     person, and 百合姫編集部 is a magazine and a department: its record carries Yuri Hime Editorial
+     Department, and every caller here asked for the reading's romanisation first because the
+     argument they pass says person. Declining sends them to `enOf`, which reads the record's own
+     order of English forms and answers with the romanisation anyway where that is all there is. */
+  if (rec && rec.kind) return null;
   const rj = rec && rec.romaji && rec.romaji[ROMAJI_STYLE];
   if (!rj) return null;
   if (NAME_ORDER !== 'given') return rj;
@@ -543,19 +550,34 @@ function plainLatin(n) {
   return (s && !JA_TEXT.test(s)) ? s.normalize('NFKC') : null;
 }
 
+/* ONE PERSON INSIDE A CREDIT LINE, in the form a reader is shown, or null where nothing renders.
+
+   THE ROMANISATION IS NOT THE ONLY ENGLISH A RECORD CAN HOLD, which is what this was missing.
+   `personName` is built from the kana, so a record with an English name and no reading behind it
+   answered nothing and the line kept the Japanese: 時一二 is not a Japanese name, the National
+   Diet Library holds no kana for it and does hold the heading Shi Yi Er, and that name sat in the
+   store while three credit lines printed the characters. `authorLabel` has always fallen through
+   to `enOf` for a single byline; the lines composed out of parts did not.
+
+   Order follows the single-name path exactly: the reader's romanisation and name order first,
+   then whatever English the record holds, then the surface where it is already Latin. */
+function personShown(n) {
+  const rec = nameFor('authors', n, null);
+  const e = rec && enOf(rec);
+  /* A NAME ALREADY IN LATIN NEEDS NO RECORD. `倫理きよ, Syousa., jimao` composed nothing because
+     Syousa. and jimao are not in the store, having no reading to hold, so the whole line fell
+     through to the Japanese. A part with no Japanese in it is its own English form. */
+  return personName(rec) || (e && e.text) || plainLatin(n);
+}
+
 function creditFromParts(ja) {
   const parts = creditPeople(ja);
   if (!parts || parts.length < 2) return null;
   const out = [];
   for (const n of parts) {
-    const shown = personName(nameFor('authors', n, null));
-    if (shown) { out.push(shown); continue; }
-    /* A NAME ALREADY IN LATIN NEEDS NO RECORD. `倫理きよ, Syousa., jimao` composed nothing because
-       Syousa. and jimao are not in the store, having no reading to hold, so the whole line fell
-       through to the Japanese. A part with no Japanese in it is its own English form. */
-    const latin = plainLatin(n);
-    if (latin) { out.push(latin); continue; }
-    return null;
+    const shown = personShown(n);
+    if (shown === null) return null;
+    out.push(shown);
   }
   return out.join(', ');
 }
@@ -779,6 +801,10 @@ const ROLE_EN = {
   'イラスト': 'illustration', 'カバーイラスト': 'cover illustration', 'カバー': 'cover',
   '表紙': 'cover', 'デザイン': 'design', '企画': 'planning', '監修': 'supervision',
   '原作監修': 'story supervision', '編': 'editor', '編集': 'editor', '編纂': 'compilation',
+  // The author of the work a comic is drawn from, as distinct from 原作, who wrote the story for
+  // this comic. English publishing calls both the original work, and the distinction the Japanese
+  // makes is between adapting a book and writing a script.
+  '原著': 'original work',
   '校正': 'proofreading', '訳': 'translation', '翻訳': 'translation', '協力': 'assistance',
   '構成協力': 'composition assistance', '原案協力': 'concept assistance',
   '作画協力': 'art assistance', '翻訳協力': 'translation assistance',
@@ -851,6 +877,22 @@ function foldFind(map, raw, needle, from) {
   return [map.idx[at], map.idx[at + want.length - 1] + 1, at + want.length];
 }
 
+/* THE INTERPUNCT BETWEEN TWO NAMES THE BUILD DIVIDED, in the script the row is being read in.
+
+   矢立肇・富野由悠季 is two names, and leaving the ・ standing puts a katakana middle dot between two
+   romanisations on an English page. The one inside a name the build did NOT divide never reaches
+   here, because there the character is part of somebody's name and るいす・まくられん is one credit.
+
+   ONE RULE, TWO RENDERERS. `creditText` composes the catalogue line and `linkedCredits` composes
+   the same field on a work page with each person wrapped in their address, and both walk the
+   division placing names into the field as written. `linkedCredits` copied the gap through
+   verbatim, so `Yadate Hajime・Tomino Yoshiyuki` was on four work pages while the catalogue tab
+   read the same credit correctly (STANDING-INSTRUCTIONS §3). Returns null where the gap is not a
+   separator to translate, which is every other gap. */
+function creditGap(text) {
+  return (LANG === 'en' && /^[・･]$/.test(text)) ? ' / ' : null;
+}
+
 /* A CREDIT FIELD WITH EVERY NAME AND EVERY ROLE IN IT RENDERED, IN PLACE.
 
    IN PLACE AND NOT REBUILT, because rebuilding drops whatever the division did not find and a
@@ -881,16 +923,11 @@ function creditText(c) {
     if (!part.n) continue;
     const at = foldFind(map, raw, part.n, cursor);
     if (!at) continue;
-    // THE INTERPUNCT BETWEEN TWO PEOPLE IS A SEPARATOR AND IT IS NOT LATIN. 矢立肇・富野由悠季 is
-    // two names the build divided, and leaving the ・ standing put a katakana middle dot between
-    // two romanisations on an English page. The one inside a name it did NOT divide stays, because
-    // there the character is part of somebody's name: るいす・まくられん is one credit.
-    if (previous >= 0 && raw.slice(previous, at[0]).match(/^[・･]$/)) {
-      claim(previous, at[0], ' / ');
-    }
+    const sep = previous >= 0 ? creditGap(raw.slice(previous, at[0])) : null;
+    if (sep !== null) claim(previous, at[0], sep);
     cursor = at[2];
     previous = at[1];
-    const shown = personName(nameFor('authors', part.n, null)) || plainLatin(part.n);
+    const shown = personShown(part.n);
     claim(at[0], at[1], shown === null ? raw.slice(at[0], at[1]) : shown);
   }
   // A NAME THE FIELD WRITES TWICE IS RENDERED TWICE. `シチサブロー / シチサブロー` and
@@ -899,7 +936,7 @@ function creditText(c) {
   // beside its own romanisation. Longest first, so a short name cannot claim a span inside a
   // longer one that has not been reached yet.
   for (const part of [...div.p].filter(x => x.n).sort((a, b) => b.n.length - a.n.length)) {
-    const shown = personName(nameFor('authors', part.n, null)) || plainLatin(part.n);
+    const shown = personShown(part.n);
     if (shown === null) continue;
     let from = 0;
     for (;;) {
@@ -2635,7 +2672,9 @@ function linkedCredits(r) {
     // credits, so this is the common case rather than an edge.
     const rec = nameFor('authors', nm, null);
     if (rec && rec.id) linked = true;
-    out += esc(rest.slice(0, at)) + creditChip(nm);
+    const gap = rest.slice(0, at);
+    const sep = placed ? creditGap(gap) : null;
+    out += (sep === null ? esc(gap) : sep) + creditChip(nm);
     rest = rest.slice(at + nm.length);
     placed += 1;
   }
@@ -2655,8 +2694,15 @@ function publisherChip(name) {
 }
 
 /* THE WORKS A RECORD IS NAMED ON, as the rows they are. Every title goes through workLabel, so a
-   work reads the same here as it does in the list it came from. */
-function recWorkRows(ids, rolesById) {
+   work reads the same here as it does in the list it came from.
+
+   AND WHERE THE WORK SPELLS THE NAME DIFFERENTLY, IT SAYS SO. A merge keeps one spelling and lends
+   the retired one's addresses to it, so 獅尾's page correctly lists Crossline while Crossline's own
+   byline reads ししお. Without the note a reader following that link meets a book that does not
+   name the person whose page they came from, and has no way to tell a merge from a broken link.
+   Same handling as the publisher page gives a line's older spellings: a variant is history and is
+   shown, not thrown away. The build decides which spelling that is, because it holds the anchors. */
+function recWorkRows(ids, rolesById, asById) {
   const by = new Map(((SERIES && SERIES.series) || []).map(x => [x.id, x]));
   return ids.map(id => by.get(id)).filter(Boolean).map(w => {
     // ALREADY GLOSSED. The caller reads the role list off the record and hands it to `roleWords`
@@ -2664,9 +2710,14 @@ function recWorkRows(ids, rolesById) {
     // another is the shape `adapters/lint/entrypoints.py` refuses.
     const said = (rolesById && rolesById[w.id])
       ? `<span class="wf-sub">${esc(rolesById[w.id])}</span>` : '';
+    // ALREADY RENDERED, for the reason the roles are: the caller hands over what authorLabel made
+    // of it, so the spelling follows the reader's language, style and furigana like every other
+    // name instead of arriving as raw Japanese under an English heading.
+    const spelt = (asById && asById[w.id])
+      ? `<span class="wf-sub">${esc(T('この作品での表記', 'credited as'))} ${asById[w.id]}</span>` : '';
     const when = w.first ? `<span class="wf-sub">${esc(fmtDate(w.first, { year: true }))}</span>` : '';
     return `<li class="recw"><a class="wplink" href="${esc(BASE)}work/${esc(w.id)}/">${
-      workLabel(w)}</a>${said}${when}</li>`;
+      workLabel(w)}</a>${said}${spelt}${when}</li>`;
   }).join('');
 }
 
@@ -2749,7 +2800,22 @@ function renderCreditPage(doc) {
   if (fact.kind) fact1(T('種別', 'Kind'), esc(T(fact.kind, fact.kind)));
   const rolesById = {};
   (fact.works || []).forEach(w => { if (w.roles) rolesById[w.id] = roleWords(w.roles); });
-  const rows = recWorkRows((fact.works || []).map(w => w.id), rolesById);
+  /* RENDERED HERE, LIKE THE ROLES ABOVE IT. The row below draws what it was handed, so the field
+     is read in the same place it is rendered, which is what `adapters/lint/entrypoints.py` asks.
+
+     AND ONLY WHERE THE READER WOULD SEE TWO DIFFERENT NAMES. Every merge in the registry today is
+     one name written two ways, so all five romanise identically: 獅尾 and ししお are both Shishio,
+     蛙田アメコ and 蛙田あめこ are both Kaeruda Ameko. "credited as Shishio" under a page headed
+     Shishio is a line that answers a question the English reader never had. The comparison is on
+     the RENDERED form for that reason, so the note appears in Japanese, where the two spellings
+     differ on the page, and stays out of English, where they do not. */
+  const asById = {};
+  const headLabel = authorLabel({ author: fact.credit });
+  (fact.works || []).forEach(w => {
+    const shown = w.as ? authorLabel({ author: w.as }) : '';
+    if (shown && shown !== headLabel) asById[w.id] = shown;
+  });
+  const rows = recWorkRows((fact.works || []).map(w => w.id), rolesById, asById);
   /* THE HOUSES BEHIND THE WORKS, which is the small graph the plan describes: a work names its
      author and its publisher, a publisher lists its lines, an author lists works and the houses
      behind them. */
