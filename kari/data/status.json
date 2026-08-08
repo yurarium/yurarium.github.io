@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T22:44:49+00:00",
+ "generated": "2026-08-08T23:41:36+00:00",
  "since_last": {
-  "at": "2026-08-08T21:33:12+00:00",
+  "at": "2026-08-08T23:35:12+00:00",
   "statistics": {}
  },
  "means": {
@@ -39,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 36,
+  "invariants_passing": 35,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -133,8 +133,10 @@
    },
    {
     "name": "status.html shows no Japanese of its own",
-    "violations": 0,
-    "examples": []
+    "violations": 1,
+    "examples": [
+     "status.html:gate shows 併記 in English mode"
+    ]
    },
    {
     "name": "content flags are accounted for",
@@ -217,9 +219,16 @@
     "examples": []
    },
    {
-    "name": "every Japanese field the data carries has a ruling",
+    "name": "a name reaches both lines of a bilingual row",
     "violations": 0,
     "examples": []
+   },
+   {
+    "name": "every Japanese field the data carries has a ruling",
+    "violations": 1,
+    "examples": [
+     "status[].gate.invariants[].name: holds Japanese and nothing says whether it is a name"
+    ]
    }
   ],
   "budgets": [
@@ -449,7 +458,8 @@
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": 75
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -503,7 +513,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": 1
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "updates naming a work we do not hold",
@@ -697,7 +708,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T21:33:10+00:00",
+  "previous_at": "2026-08-08T23:35:11+00:00",
   "drops": []
  },
  "outstanding": [
