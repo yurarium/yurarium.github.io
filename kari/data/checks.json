@@ -153,8 +153,8 @@
   {
    "name": "kana left in a romanisation",
    "means": "strings the shipped names file offers in place of Japanese that still hold a kana character, which undoes the one job a romanisation has. A rise means a renderer met a kana it has no table entry for and printed it.",
-   "budget": 1,
-   "value": 1
+   "budget": 0,
+   "value": 0
   },
   {
    "name": "titles shorter than their own reading",
@@ -195,20 +195,26 @@
   {
    "name": "publisher readings nobody has settled",
    "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
-   "budget": 21,
-   "value": 21
+   "budget": 17,
+   "value": 17
   },
   {
    "name": "renderings with nothing to show",
    "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-   "budget": 46,
-   "value": 46
+   "budget": 38,
+   "value": 38
   },
   {
    "name": "kana names with no stated division",
    "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-   "budget": 263,
-   "value": 263
+   "budget": 260,
+   "value": 260
+  },
+  {
+   "name": "author readings no source states",
+   "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
+   "budget": 309,
+   "value": 309
   },
   {
    "name": "credits the corpus files as a venue",
@@ -243,8 +249,8 @@
   {
    "name": "uncertain readings",
    "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-   "budget": 75,
-   "value": 75
+   "budget": 53,
+   "value": 53
   },
   {
    "name": "works without English",

@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T09:24:51+00:00",
+ "generated": "2026-08-08T10:17:49+00:00",
  "since_last": {
-  "at": "2026-08-08T09:18:48+00:00",
+  "at": "2026-08-08T09:24:51+00:00",
   "statistics": {}
  },
  "means": {
@@ -177,8 +177,8 @@
    {
     "name": "kana left in a romanisation",
     "means": "strings the shipped names file offers in place of Japanese that still hold a kana character, which undoes the one job a romanisation has. A rise means a renderer met a kana it has no table entry for and printed it.",
-    "budget": 1,
-    "value": 1
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "titles shorter than their own reading",
@@ -219,20 +219,26 @@
    {
     "name": "publisher readings nobody has settled",
     "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
-    "budget": 21,
-    "value": 21
+    "budget": 17,
+    "value": 17
    },
    {
     "name": "renderings with nothing to show",
     "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-    "budget": 46,
-    "value": 46
+    "budget": 38,
+    "value": 38
    },
    {
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-    "budget": 263,
-    "value": 263
+    "budget": 260,
+    "value": 260
+   },
+   {
+    "name": "author readings no source states",
+    "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
+    "budget": 309,
+    "value": 309
    },
    {
     "name": "credits the corpus files as a venue",
@@ -267,8 +273,8 @@
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 75,
-    "value": 75
+    "budget": 53,
+    "value": 53
    },
    {
     "name": "works without English",
@@ -529,7 +535,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T09:18:47+00:00",
+  "previous_at": "2026-08-08T09:24:49+00:00",
   "drops": []
  },
  "outstanding": [
@@ -716,6 +722,7 @@
    "count": 22,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
+    "author readings no source states": 309,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
@@ -726,22 +733,22 @@
     "credits the corpus files as a venue": 20,
     "implausible ruby spans": 0,
     "incomplete attested rows": 14,
-    "kana left in a romanisation": 1,
-    "kana names with no stated division": 263,
+    "kana left in a romanisation": 0,
+    "kana names with no stated division": 260,
     "labels with nothing to quote": 0,
     "names rendered two ways": 2,
     "one page cited for two claims": 12,
     "publisher keys the interface misses": 0,
-    "publisher readings nobody has settled": 21,
+    "publisher readings nobody has settled": 17,
     "publishers with no English": 0,
-    "renderings with nothing to show": 46,
+    "renderings with nothing to show": 38,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 23,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 172,
-    "uncertain readings": 75,
+    "uncertain readings": 53,
     "undated cmoa candidates": 1220,
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 27,
