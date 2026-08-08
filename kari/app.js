@@ -340,7 +340,15 @@ function enAvailable(rec) {
   // fall back to the stored string and cannot follow the toggle. That is a property of the record,
   // not of the design, and it disappears as readings are filled in.
   const styled = rec.romaji && rec.romaji[ROMAJI_STYLE];
-  if (styled) out.romaji = styled;
+  /* A COMPANY'S NAME IS NOT RESPELT FROM ITS KANA. The rule above is about a PERSON, whose Latin
+     name is their reading spelt out and should follow the style control. An organisation's is a
+     string somebody decided, and ネジ式１３番地 is the case: the digits are part of the name, so it
+     was settled as Nejishiki 13-banchi, which no speller reading ネジシキ ジュウサン バンチ can
+     produce. Respelling it gave Nejishikijūsanbanchi beside its own name and Nejishiki 13-banchi
+     beside its books, which is one name in two places and is what `names rendered two ways`
+     counts. `kind` is what the store calls a credit that is not a person. */
+  if (rec.kind && rec.en && rec.basis === 'romaji') out.romaji = rec.en;
+  else if (styled) out.romaji = styled;
   else if (rec.en && rec.basis === 'romaji') out.romaji = rec.en;
   return out;
 }
@@ -2727,9 +2735,8 @@ function recWorkRows(ids, rolesById, asById) {
    sentence above the list changes with it, because "not their body of work" is a sentence about a
    person and reads as nonsense over a limited company. */
 const SHAPE_NOTE = {
-  person: ['この人物が関わったとして本データベースが収録している百合作品。その人の全作品ではない。',
-           'The yuri works this database holds that name this person. Not their body of work: we '
-           + 'hold what is yuri, and they may have published a great deal more.'],
+  person: ['この人物が関わったとして本データベースが収録している百合作品。',
+           'The yuri works this database holds that name this person.'],
   venue: ['この媒体に掲載されたとして本データベースが収録している百合作品。',
           'The yuri works this database holds that were published in this venue.'],
   organisation: ['この団体が関わったとして本データベースが収録している百合作品。',
@@ -2784,10 +2791,14 @@ function renderCreditPage(doc) {
   if (rec && rec.reading && LANG !== 'en') {
     fact1(T('読み', 'Reading'), esc(rec.reading) + (rec.unverified
       ? `<span class="wf-sub">${esc(T('未確認', 'not confirmed'))}</span>` : ''));
-  } else if (!(rec && rec.reading) && shape === 'person') {
+  } else if (!(rec && rec.reading) && shape === 'person' && !(fact.divided_into || []).length) {
     /* ONE SENTENCE, NOT A LIST OF WHO WAS ASKED. 2,171 names carry a recorded failed search, and a
        reader does not need to know which shop was asked on which Tuesday. What they need is that
-       the reading is unknown rather than unexamined. */
+       the reading is unknown rather than unexamined.
+
+       NOT FOR A STRING THAT IS TWO PEOPLE. `iimAn&惟丞` has no reading because it is not a name,
+       and saying nobody knows it invites somebody to go and find one. The two halves below have
+       readings of their own, and each says so on its own page. */
     fact1(T('読み', 'Reading'),
           esc(T('この名前の読みは分かっていない。',
                 'The reading of this name is not known.')));
@@ -2841,6 +2852,11 @@ function renderCreditPage(doc) {
      `credits.json` was added to the surfaces. `creditChip` is the anchor and the rendering
      together, which is what the work page's volume rows already use. */
   const homo = (fact.homophones || []).map(o => creditChip(o.credit)).join(SEP);
+  /* A STRING THAT IS TWO PEOPLE, AND WHERE THEY BOTH ARE. `iimAn&惟丞` is one field カドコミ uses
+     to credit two artists, and it held one identifier until the splitter learned that an ampersand
+     joins two. There is no survivor to forward to, so the address answers with both. Without this
+     the page reads as a person with no works, which says the opposite of what is true. */
+  const divided = (fact.divided_into || []).map(o => creditChip(o.credit)).join(SEP);
   const srcBody = (rec && rec.reading_cite)
     ? `<details class="wp-src"><summary>${esc(T('出典', 'Sources of information'))}</summary>
          <dl class="wp-facts">${citeLine(rec.reading_cite, T('読みの出典', 'Reading'))}${
@@ -2851,11 +2867,15 @@ function renderCreditPage(doc) {
       <h2 class="wp-title">${authorLabel({ author: fact.credit })}</h2>
     </header>
     <dl class="wp-facts">${facts.join('')}</dl>
+    ${divided ? `<p class="wp-basis">${esc(T(
+        'この表記は二人の作者を一つの欄にまとめたもの。本データベースは次の二件として収録している：',
+        'This spelling is one field crediting two people. This database files it as: '))}${
+        divided}</p>` : ''}
     ${homo ? `<p class="wp-basis">${esc(T('同じ読みの別名義：', 'Held apart from: '))}${homo}</p>` : ''}
-    <section class="wp-sect"><h3>${esc(T('作品', 'Works'))} <span class="wp-n">${
+    ${divided ? '' : `<section class="wp-sect"><h3>${esc(T('作品', 'Works'))} <span class="wp-n">${
       (fact.works || []).length}</span></h3>
       <p class="wp-keep">${esc(T(note[0], note[1]))}</p>
-      <ol class="recws">${rows}</ol></section>
+      <ol class="recws">${rows}</ol></section>`}
     ${srcBody}`;
   el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeRecordPage(true); });
   window.scrollTo(0, 0);
@@ -2918,9 +2938,8 @@ function renderPublisherPage(doc) {
     <section class="wp-sect"><h3>${esc(T('作品', 'Works'))} <span class="wp-n">${
       (fact.works || []).length}</span></h3>
       <p class="wp-keep">${esc(T(
-        'この出版社の刊行物のうち、本データベースが百合として収録しているもの。同社の刊行物すべてではない。',
-        'The yuri works this database holds from this publisher. Not its catalogue: a house of this '
-        + 'size prints a great deal that is not here.'))}</p>
+        'この出版社の刊行物のうち、本データベースが百合として収録しているもの。',
+        'The yuri works this database holds from this publisher.'))}</p>
       <ol class="recws">${recWorkRows(fact.works || [])}</ol></section>
     ${srcBody}`;
   el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeRecordPage(true); });
