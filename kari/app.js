@@ -720,6 +720,32 @@ function credit(c) {
   });
 }
 
+/* THE PEOPLE IN A CATALOGUED CREDIT FIELD, each rendered by the store like any other name.
+
+   This was fifteen lines inside renderReleases, which made `w.creator` a field the 発売 tab read
+   and pulled apart on its own. A field read in one place and rendered in another is how the works
+   list came to print `esc(w.t)` from index.json while workLabel sat unused beside it, so the
+   pipeline now asks this function what the tab shows and `adapters/lint/entrypoints.py` refuses a
+   read of `creator` anywhere else.
+
+   MADB writes a role before each name, [著] and [作画] among them, and joins creators with a slash
+   that survives even when one side is empty. Both are cataloguing notation, not the credit a
+   reader is being shown.
+
+   MADB writes ONE creator as "紬めめ / ツムギメメ", the name beside its reading, and writes several
+   as "[作画]A / [原作]B". Splitting on the slash alone turned the reading into a second person, so
+   English read "Tsumugi Meme / ツムギメメ". A trailing part that is all kana and follows a part
+   that is not is the reading of it.
+
+   The reading is written in KATAKANA and the name is not written only in katakana. あまね reads
+   アマネ, so requiring the name to be non-kana missed every hiragana pen name. */
+function creditNames(creator) {
+  const parts = String(creator || '').split('/').map(x => stripRole(x.trim())).filter(Boolean);
+  const kata = s => /^[\u30a0-\u30ff\u30fb\u30fc\s]+$/.test(s);
+  const named = (parts.length === 2 && kata(parts[1]) && !kata(parts[0])) ? [parts[0]] : parts;
+  return named.map(x => authorLabel({ author: x })).join(' / ');
+}
+
 /* The source chips sit OUTSIDE bilingual(). They are links, and two sets of clickable chips to the
    same platforms reads as a bug rather than a translation. But that left them Japanese-only in
    併記, where the whole point is to show both. So the chip carries both names on ONE link instead
@@ -2279,31 +2305,13 @@ async function renderReleases() {
                                  fin: v.final_volume ? v.final_volume_basis : null });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
-  // THE FILTER OFFERS PUBLISHERS AND NOT DISTRIBUTORS. The two are separate fields on the record
-  // now, and a reader narrowing the releases list to 一迅社 wants the books 一迅社 published, not
-  // every book 講談社 happened to deliver for it. The row still names the distributor; only the
-  // filter is publisher-only, because that is the question the control asks.
-  const pubOf = s => pubBoth(s);
   /* Each row is rendered ONCE, into a string, and the controls only choose which strings are
      joined. The alternative is re-running the creator and imprint normalisation below for 640
      volumes on every keystroke, and that work depends on the display preferences rather than on
      the query: the same reason drawnKey guards this whole function. */
   REL_ROWS = rows.map(r => {
       const w = r.w;
-      // MADB writes a role before each name, [著] and [作画] among them, and joins creators
-      // with a slash that survives even when one side is empty. Both are cataloguing
-      // notation, not the credit a reader is being shown.
-      // MADB writes ONE creator as "紬めめ / ツムギメメ", the name beside its reading, and writes
-      // several as "[作画]A / [原作]B". Splitting on the slash alone turned the reading into a
-      // second person, so English read "Tsumugi Meme / ツムギメメ". A trailing part that is all
-      // kana and follows a part that is not is the reading of it.
-      const parts = String(w.creator || '').split('/').map(x => stripRole(x.trim())).filter(Boolean);
-      // The reading is written in KATAKANA and the name is not written only in katakana. あまね
-      // reads アマネ, so requiring the name to be non-kana missed every hiragana pen name.
-      const kata = s => /^[\u30a0-\u30ff\u30fb\u30fc\s]+$/.test(s);
-      const named = (parts.length === 2 && kata(parts[1]) && !kata(parts[0]))
-        ? [parts[0]] : parts;
-      const people = named.map(x => authorLabel({ author: x })).join(' / ');
+      const people = creditNames(w.creator);
       // MADB catalogues one imprint three ways: "IDコミックス. Yurihime comics = コミック百合姫",
       // "IDコミックス. コミック百合姫" and "IDコミックス. Yurihime comics". The "A = B" form gives
       // two names for one thing, so the Japanese side is taken and the Latin alias maps onto it.
@@ -2335,7 +2343,12 @@ async function renderReleases() {
       // The identifier the series row is keyed on, so visOf() can ask whether this work is held
       // out of the default listing. works.json knows the work by its MADB id and nothing else.
       id: wid, work_id: w.work_id,
-      pub: pubOf(w.publisher) || '',
+      // THE FILTER OFFERS PUBLISHERS AND NOT DISTRIBUTORS. The two are separate fields on
+      // the record now, and a reader narrowing the releases list to 一迅社 wants the books
+      // 一迅社 published, not every book 講談社 happened to deliver for it. The row still
+      // names the distributor; only the filter is publisher-only, because that is the
+      // question the control asks.
+      pub: pubBoth(w.publisher) || '',
       // Searched on every form of the name, the same rule the other two tabs follow: a reader
       // typing a romanisation must reach a work the interface is showing them in romaji.
       key: searchIndex('titles', w.title.ja, w.title && w.title.en) + ' ' +
