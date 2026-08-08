@@ -746,9 +746,36 @@ function credit(c) {
    authors, which is what it always was. */
 let PUBS = null;
 
+function pubRec(n) {
+  return (PUBS && (PUBS[n] || PUBS[String(n || '').normalize('NFKC')])) || null;
+}
+
+/* A PUBLISHER ROMANISATION FOLLOWS THE ROMANISATION CONTROL, the same rule enAvailable applies to
+   a title. This read `rec.en` alone, so a name we spelled ourselves was presented exactly like an
+   official one and ignored a preference the reader had set. The three styles are shipped only
+   where a romanisation is the name being shown, so this can never replace a reviewed name such as
+   Aokishi Comics with a transliteration of it. */
 function pubEn(n) {
-  const rec = PUBS && (PUBS[n] || PUBS[String(n || '').normalize('NFKC')]);
-  return (rec && rec.en) || null;
+  const rec = pubRec(n);
+  if (!rec) return null;
+  return (rec.basis === 'romaji' && rec.romaji && rec.romaji[ROMAJI_STYLE]) || rec.en || null;
+}
+
+/* MARKED WHERE THE READING IT IS BUILT FROM IS NOT ATTESTED, which is the rule already settled for
+   titles and not a new one. 254 of 323 publisher names are romanisations and marking every one of
+   them would land on most of the list, and uncertainMark's own argument is that a mark on
+   everything is not a mark. 134 have a reading nothing states, and those are the ones where the
+   English could be wrong in a way a reader who knows Japanese can see.
+
+   Returns HTML, so it cannot travel through pubBoth: that returns a plain string which callers
+   escape, and its output also fills a <select> option value on the releases filter, where markup
+   would be shown literally. The display sites use publisherPartsHtml instead. */
+function pubMark(n) {
+  const rec = pubRec(n);
+  return (LANG === 'en' && rec && rec.basis === 'romaji' && (rec.uncertain || rec.unverified))
+    ? `<sup class="unc" title="${esc('the reading this is romanised from is not attested by any '
+      + 'source, and may be wrong')}">[?]</sup>`
+    : '';
 }
 
 function pubBoth(n) {
@@ -1521,6 +1548,31 @@ const PUB_UNKNOWN = {
   absent: ['出版社の記載なし', 'publisher not stated'],
 };
 
+/* The same parts, escaped, each carrying its own mark. Separate from publisherParts because that
+   returns a plain string which callers escape, and it also fills a <select> option value on the
+   releases filter, where markup would be shown literally.
+
+   BUILT FROM THE RAW FIELDS AND NOT FROM publisherParts' OUTPUT. That returns the name as SHOWN,
+   and PUBS is keyed by the catalogued Japanese, so asking it about an English string would find
+   nothing and mark nothing. */
+function publisherPartsHtml(p) {
+  const out = [];
+  if (p.publisher) out.push(esc(pubBoth(p.publisher)) + pubMark(p.publisher));
+  else if (p.publisher_basis) {
+    const w = PUB_UNKNOWN[p.publisher_basis] || PUB_UNKNOWN.absent;
+    out.push(esc(T(w[0], w[1])));
+  }
+  if (p.distributor) {
+    const d = esc(pubBoth(p.distributor)) + pubMark(p.distributor);
+    out.push(T(`${d}（発売）`, `${d} (distributor)`));
+  }
+  if (p.imprint) {
+    const im = imprintOf(p.imprint);
+    out.push(esc(pubBoth(im)) + pubMark(im));
+  }
+  return out.filter(Boolean);
+}
+
 function publisherParts(p) {
   const out = [];
   if (p.publisher) out.push(pubBoth(p.publisher));
@@ -1641,10 +1693,10 @@ function workDetail(r) {
     // publisher field through stripRole() and print whatever came out, which is how a distributor
     // got named as the publisher here and in two other places besides. One reader of those fields
     // now, so the works list and the work page cannot disagree about one book.
-    const who = publisherParts(p).join(' \u00b7 ');
+    const who = publisherPartsHtml(p).join(' \u00b7 ');
     bits.push(`<div class="dl"><span class="dk">${T('\u5358\u884c\u672c', 'In print')}</span>` +
-      `<span class="dv">${esc([p.volumes ? p.volumes + (T(' \u5DFB', ' vol')) : '', who, span]
-        .filter(Boolean).join(' \u00b7 '))}</span></div>`);
+      `<span class="dv">${[esc(p.volumes ? p.volumes + (T(' \u5DFB', ' vol')) : ''), who, esc(span)]
+        .filter(Boolean).join(' \u00b7 ')}</span></div>`);
   });
   const why = r.completed_basis || r.state_basis;
   if (why) bits.push(`<div class="dl"><span class="dk">${T('\u6839\u62E0', 'Basis')}</span>` +
@@ -2234,7 +2286,7 @@ async function renderReleases() {
       // sorted by date read as six different imprints, which is the opposite of what an imprint is
       // for. The segments are split apart and the most specific one kept; a Latin spelling of a
       // series that has a Japanese name maps onto it.
-      const who = publisherParts(w).join(' · ');
+      const who = publisherPartsHtml(w).join(' · ');
       // A release is of a VOLUME, so the row says which. 471 of 646 are numbered in the record
       // and the rest say nothing rather than being numbered by their position in a sorted list.
       // Same rule as the work page, from the same function: the releases tab was printing
@@ -2264,7 +2316,7 @@ async function renderReleases() {
       // held-out control is a filter rather than a preference: flipping it must not rebuild 3,191
       // rows, and the mark it adds has to appear without one.
       html: `<div class="relv"><div class="relvt">${name} ${vol}${fin}<!--vis--></div>` +
-        `<div class="relvm">${[people, esc(who)].filter(Boolean).join(' · ')}</div></div>`,
+        `<div class="relvm">${[people, who].filter(Boolean).join(' · ')}</div></div>`,
     };
   });
   setRelOptions();
