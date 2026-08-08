@@ -931,6 +931,16 @@ const EV_HOLDS = {
   // the platform's own word for it, so the row quotes that and this only names the subject.
   'serialisation-status': ['連載状況', 'serialisation status'],
   'delivery-date': ['配信開始日', 'delivery start date'],
+  // WHO SAYS THE BOOK IS BY THIS PERSON. The page cited who catalogued a volume count and not who
+  // states the byline, which is the fact at the top of it. The project owner's ruling of
+  // 2026-08-08 puts the ATTRIBUTION here and the NAME's own provenance on the credit's page: the
+  // reading and its source belong to the person, and repeating them on every work they are on
+  // would be one fact with many producers.
+  attribution: ['作者の出典', 'who credits the work'],
+  // AND WHERE AN ENGLISH TITLE CAME FROM. `official-jp` and `licensed` are shown unmarked, because
+  // neither is our claim, so the one form a reader has no reason to doubt was the one carrying no
+  // evidence at all. 286 titles were in that state with the licensor's page sitting in the store.
+  'english-title': ['英語題の出典', 'the English title'],
 };
 const evType = k => (EV_TYPE[k] ? T(EV_TYPE[k][0], EV_TYPE[k][1]) : (k || ''));
 const evHolds = k => (EV_HOLDS[k] ? T(EV_HOLDS[k][0], EV_HOLDS[k][1]) : (k || ''));
@@ -1448,7 +1458,10 @@ function navState() {
            // list, so which tab is selected does not decide whether a work is open. The tab is
            // still carried, because it is where Back goes.
            work: PAGE_WORK
-               || (tab === 'cat' && open ? (open.parentElement?.dataset.id || '') : '') };
+               || (tab === 'cat' && open ? (open.parentElement?.dataset.id || '') : ''),
+           // A CREDIT AND A HOUSE ARE PLACES TOO, on the same reasoning: each selects a body of
+           // data, so each pushes a history entry and each belongs in the URL. §15's first kind.
+           rec: PAGE_REC ? { kind: PAGE_REC.kind, id: PAGE_REC.id } : null };
 }
 
 function navUrl(st) {
@@ -1471,6 +1484,11 @@ function navUrl(st) {
     const rest = q2.toString();
     return BASE + 'work/' + st.work + '/' + (rest ? '?' + rest : '');
   }
+  // A credit and a house each get a path of their own, which is where the pre-rendered page sits
+  // and what a citation should look like. Nothing else is carried into it: a period means
+  // something on the updates tab and an open work on the volumes tab, and neither describes what
+  // a reader of this address will see.
+  if (st.rec && st.rec.id) return BASE + st.rec.kind + '/' + st.rec.id + '/';
   return BASE + (qs ? '?' + qs : '');
 }
 
@@ -1500,6 +1518,10 @@ function repaintAll() {
   if (!FEED) return;
   renderFeed(); renderCat(); renderSeries(); renderReleases();
   if (PAGE_WORK) renderWorkPage();
+  // A RECORD PAGE IS A VIEW LIKE THE OTHERS. Language, romanisation style, name order and furigana
+  // are preferences, so changing one repaints what is on screen; a credit page left alone would
+  // have kept the language it was drawn in while every list behind it changed.
+  if (PAGE_REC) renderRecordPage();
 }
 
 /* WHAT VOLUME THIS IS, out of the twelve ways MADB writes it.
@@ -1595,15 +1617,24 @@ const PUB_UNKNOWN = {
    BUILT FROM THE RAW FIELDS AND NOT FROM publisherParts' OUTPUT. That returns the name as SHOWN,
    and PUBS is keyed by the catalogued Japanese, so asking it about an English string would find
    nothing and mark nothing. */
+/* THE HOUSE IS A LINK AND THE LINE IS NOT. A publisher and a distributor are the same kind of
+   object in one namespace and each holds a minted address; an imprint belongs to the house that
+   runs it and has none, which is the shape DEFINITIONS gives the two. A page for 百合姫コミックス
+   would be a second address competing with 一迅社's own.
+
+   THE LINK IS ADDED HERE AND NOT AT THE CALL SITE. The work page grew its own copy of these three
+   names so it could wrap two of them in an anchor, which is a second producer of what this
+   function is for, and `names reach a page only through their renderer` reported five reads for
+   it. One renderer for the publisher record, and every caller gets the links. */
 function publisherPartsHtml(p) {
   const out = [];
-  if (p.publisher) out.push(esc(pubBoth(p.publisher)) + pubMark(p.publisher));
+  if (p.publisher) out.push(publisherChip(p.publisher));
   else if (p.publisher_basis) {
     const w = PUB_UNKNOWN[p.publisher_basis] || PUB_UNKNOWN.absent;
     out.push(esc(T(w[0], w[1])));
   }
   if (p.distributor) {
-    const d = esc(pubBoth(p.distributor)) + pubMark(p.distributor);
+    const d = publisherChip(p.distributor);
     out.push(T(`${d}（発売）`, `${d} (distributor)`));
   }
   if (p.imprint) {
@@ -1799,7 +1830,9 @@ async function paintVolumes(r) {
   const ids = (r.print || []).map(p => p.work_id).filter(Boolean);
   const box = el('wp-vols');
   if (!box || !ids.length) return;
-  if (!DETAIL) DETAIL = fetch('data/works.json', { cache: 'no-cache' }).then(x => x.json());
+  // Against BASE, for the reason `recData` gives: the address is rewritten to the work's own path
+  // while the app stays loaded, and this fetch is the one other thing that happens after that.
+  if (!DETAIL) DETAIL = fetch(BASE + 'data/works.json', { cache: 'no-cache' }).then(x => x.json());
   const WORKS = await DETAIL;
   // The reader may have left, or opened another work, while the file was in flight.
   if (PAGE_WORK !== r.id || !el('wp-vols')) return;
@@ -1896,6 +1929,7 @@ function liveId(id) {
 function openWorkPage(id, push = true) {
   if (!id) return;
   id = liveId(id);
+  PAGE_REC = null;
   PAGE_WORK = id;
   renderWorkPage();
   navSync(push);
@@ -1919,7 +1953,7 @@ function closeWorkPage(push) {
 function showSelectedTab() {
   const tab = document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'feed';
   ['feed', 'ser', 'cat', 'rel'].forEach(t => { const s = el('tab-' + t); if (s) s.hidden = t !== tab; });
-  if (!PAGE_WORK) el('workpage').hidden = true;
+  if (!PAGE_WORK && !PAGE_REC) el('workpage').hidden = true;
 }
 
 /* A WORK'S PAGE, ARRANGED BY WHAT A READER ASKS.
@@ -1981,8 +2015,11 @@ const CREDITS_SHOWN = 4;
 
 function creditLine(r) {
   const people = String(r.author || '').split(/\s*\/\s*/).filter(Boolean);
-  if (people.length <= CREDITS_SHOWN) return authorLabel(r);
-  const head = authorLabel({ ...r, author: people.slice(0, CREDITS_SHOWN).join(' / ') });
+  // EVERY NAME STILL REACHES OUTPUT THROUGH authorLabel. `linkedCredits` splits the field on the
+  // parts the build shipped and hands each one to authorLabel, so the reader's language, style,
+  // name order and furigana all apply exactly as they did; what it adds is the address.
+  if (people.length <= CREDITS_SHOWN) return linkedCredits(r);
+  const head = linkedCredits({ ...r, author: people.slice(0, CREDITS_SHOWN).join(' / ') });
   const rest = people.length - CREDITS_SHOWN;
   return `${head}<span class="wf-sub" title="${esc(people.join(', '))}">${
     esc(T(`ほか${rest}名`, `and ${rest} others`))}</span>`;
@@ -2150,7 +2187,7 @@ function renderWorkPage() {
      under this heading rather than after an undifferentiated run of facts. Seller links are NOT
      here yet: shop_url is on the source records and reaches no build output. */
   const printBody = (r.print || []).map(pr => {
-    const who = publisherParts(pr).join(' · ');
+    const who = publisherPartsHtml(pr).join(' \u00b7 ');
     /* WHERE TO BUY IT, beside the volumes it describes, which parallels the platform links the
        serialisation carries. A retailer is a Tier C source and its shelf is never a marketing
        label, so this says only that the shop sells the book. */
@@ -2162,7 +2199,7 @@ function renderWorkPage() {
                : T('販売ページ', 'Shop page'))}</a></dd></div>`
       : '';
     return `<dl class="wp-facts"><div class="wf"><dt>${esc(T('出版社', 'Publisher'))}</dt>
-      <dd>${esc(who || '')}</dd></div><div class="wf"><dt>${esc(T('巻数', 'Volumes'))}</dt>
+      <dd>${who || ''}</dd></div><div class="wf"><dt>${esc(T('巻数', 'Volumes'))}</dt>
       <dd>${pr.volumes ? esc(volCount(pr.volumes)) : ''}${
         pr.first ? `<span class="wf-sub">${esc(T('初刊 ', 'from '))}${
           esc(fmtDate(pr.first, { year: true }))}</span>`
@@ -2214,7 +2251,14 @@ function renderWorkPage() {
   /* The platform half is read off `sources`, which already states each platform, when it was read
      and where. series.json carries it once and this joins it here; copying it into a second list
      would be the same fact with two producers, and a megabyte of the works index besides. */
+  /* WHERE THE ENGLISH TITLE CAME FROM, joined here from the name record rather than carried on
+     every row. `provenance.cite` in the build decides what may be shown, so a title we translated
+     ourselves contributes nothing: it is already marked as ours, and there is no document. */
+  const _trec = nameFor('titles', r.work, r.work_en);
+  const _tcite = _trec && _trec.en_cite;
   const heldRows = onceEach((r.sourced_from || []).concat(
+      _tcite ? [{ source: _tcite.source, holds: 'english-title',
+                  read: _tcite.reviewed, url: _tcite.url }] : [],
       (r.sources || []).map(s => ({ source: s.platform, holds: 'chapters',
                                     read: s.retrieved, url: s.url })),
       (r.state_claims || []).map(c => ({ source: c.source, holds: 'serialisation-status',
@@ -2265,6 +2309,365 @@ function renderWorkPage() {
   paintVolumes(r);
   window.scrollTo(0, 0);
 }
+
+/* ── a credit's record, and a publisher's ─────────────────────────────────────────────────────
+   WHY THESE ARE PAGES AND NOT A SEARCH. The project owner's ruling: they are URL-holding objects,
+   minted for every credit and every house rather than for the ones above some threshold. An author
+   with one work has a page holding that one work, and a reader following a citation to it arrives
+   somewhere that answers. Making the address depend on how much of somebody's output this database
+   happens to hold is a fact about our coverage standing in the reader's way.
+
+   THE SHAPE IS THE WORK PAGE'S. The thing itself with no heading of its own, then its parts, then
+   its sources collapsed. A credit page is the credit and the works it is named on; a house page is
+   the house and the lines it runs.
+
+   THE FRAMING THIS MUST NOT GET WRONG, and it binds the author side harder than the publisher one.
+   Nobody thinks a KADOKAWA page listing 387 works is KADOKAWA's catalogue. A person's page listing
+   three works reads as that person's body of work, when they may have thirty and we hold the three
+   that are yuri. So the page says what its list is, above the list, in the reader's language. */
+/* A SEPARATOR IS PUNCTUATION AND NOT A TRANSLATION. `T('・', ' · ')` renders `・ / ·` in 併記,
+   which is right for a label and wrong between two things: the publishers line came out
+   `講談社 / Kodansha・ / ・秋田書店 / Akita Publishing`. The volumes section on the work page has
+   settled this already and uses a middle dot with spaces in every mode, which reads cleanly
+   between two names that are themselves two names in 併記. Same mark here. */
+const SEP = ' \u00b7 ';
+
+let PAGE_REC = null;                       // {kind: 'credit'|'publisher', id}
+const RECDATA = {};                        // kind -> promise of the shipped file
+
+function recData(kind) {
+  if (!RECDATA[kind]) {
+    // AGAINST BASE AND NOT AGAINST THE ADDRESS BAR. `navSync` rewrites the address to
+    // `/kari/work/<id>/` while the app stays loaded, so a relative fetch started after that
+    // resolves inside the work's directory and 404s. That was invisible while every fetch happened
+    // at boot; a record page is fetched on demand, from wherever the reader already is.
+    RECDATA[kind] = fetch(BASE + 'data/' + (kind === 'credit' ? 'credits' : 'publishers') + '.json',
+                          { cache: 'no-cache' }).then(x => x.json()).catch(() => null);
+  }
+  return RECDATA[kind];
+}
+
+/* WHERE A RETIRED IDENTIFIER WENT, for a credit and a house, and it is `liveId`'s rule applied to
+   another registry: A into B into C has to land on C. Minting about 2,400 addresses guarantees some
+   will merge, and an address published once has to keep resolving. */
+function liveRecId(doc, key, id) {
+  const rows = (doc && doc[key]) || {};
+  const map = (doc && doc.merged) || {};
+  let cur = id;
+  const seen = new Set([id]);
+  while (cur && !rows[cur] && map[cur] && !seen.has(map[cur])) { cur = map[cur]; seen.add(cur); }
+  return cur;
+}
+
+/* ONE CREDIT, RENDERED THE WAY EVERY OTHER CREDIT ON THE SITE IS RENDERED. It goes through
+   authorLabel, so the reader's language, romanisation style, name order and furigana all reach it
+   and nothing here is a second opinion about how a name is spelt. What this adds is the link. */
+function creditChip(name) {
+  const rec = nameFor('authors', name, null);
+  const inner = authorLabel({ author: name });
+  const id = rec && rec.id;
+  return id ? `<a class="wplink credit" href="${esc(BASE)}credit/${esc(id)}/">${inner}</a>` : inner;
+}
+
+/* A CREDIT FIELD WITH EACH PERSON IN IT LINKED. The parts come from `credit_parts`, which the build
+   composes from the same splitter the name store is keyed on, so this never divides a name itself:
+   ・ sits inside さりい・Ｂ and separates 矢立肇 from 富野由悠季, and nothing in the string tells the
+   two apart. Where the build shipped no parts the whole field goes through authorLabel unchanged,
+   which is what it did before this existed. */
+function linkedCredits(r) {
+  const raw = String(r.author || '').trim();
+  if (!raw) return authorLabel(r);
+  // A FIELD NAMING ONE PERSON HAS NO PARTS, and that is most of the corpus. `credit_parts` is
+  // written for credit LINES, the fields holding several people, so asking it first and giving up
+  // when it answers nothing left every single-author work unlinked: the whole field is the one
+  // credit in that case, and the store is keyed on exactly that string.
+  const parts = (NAMES && NAMES.credit_parts && NAMES.credit_parts[foldKey(raw)]) || [raw];
+  let out = '', rest = raw, linked = false, placed = 0;
+  for (const nm of parts) {
+    const at = rest.indexOf(nm);
+    if (at < 0) continue;
+    // EVERY PART GOES THROUGH creditChip, INCLUDING THE ONES WITH NO ADDRESS. Skipping an
+    // unregistered person left their Japanese surface sitting in the output between two rendered
+    // names, so `宮澤伊織 / 水野英多` came out `宮澤伊織 / Mizuno Hideta` under an English heading.
+    // The registry is minted from the works list and the store legitimately holds records nothing
+    // credits, so this is the common case rather than an edge.
+    const rec = nameFor('authors', nm, null);
+    if (rec && rec.id) linked = true;
+    out += esc(rest.slice(0, at)) + creditChip(nm);
+    rest = rest.slice(at + nm.length);
+    placed += 1;
+  }
+  // ALL OF IT OR NONE OF IT. A line whose parts do not all appear in the field would come back
+  // half rewritten, and `authorLabel` on the whole line is what this replaces rather than
+  // improves: it composes a credit line from its people and knows to fail as a whole.
+  return (linked && placed === parts.length) ? out + esc(rest) : authorLabel(r);
+}
+
+/* A HOUSE'S NAME, LINKED. Same rule: the name itself is `pubBoth`'s, which is what the volumes
+   section already shows, and the identifier comes off the shipped map beside it. */
+function publisherChip(name) {
+  const rec = pubRec(name) || pubRec(String(name || '').replace(/^\s*\[[^\]]*\]\s*/, '').trim());
+  const shown = esc(pubBoth(name)) + pubMark(name);
+  return rec && rec.id
+    ? `<a class="wplink pub" href="${esc(BASE)}publisher/${esc(rec.id)}/">${shown}</a>` : shown;
+}
+
+/* THE WORKS A RECORD IS NAMED ON, as the rows they are. Every title goes through workLabel, so a
+   work reads the same here as it does in the list it came from. */
+function recWorkRows(ids, rolesById) {
+  const by = new Map(((SERIES && SERIES.series) || []).map(x => [x.id, x]));
+  return ids.map(id => by.get(id)).filter(Boolean).map(w => {
+    const roles = (rolesById && rolesById[w.id]) || [];
+    const said = roles.length
+      ? `<span class="wf-sub">${esc(roles.map(x => roleWord(x)).join(SEP))}</span>` : '';
+    const when = w.first ? `<span class="wf-sub">${esc(fmtDate(w.first, { year: true }))}</span>` : '';
+    return `<li class="recw"><a class="wplink" href="${esc(BASE)}work/${esc(w.id)}/">${
+      workLabel(w)}</a>${said}${when}</li>`;
+  }).join('');
+}
+
+/* A JOB, GLOSSED. The vocabulary is MADB's and the platforms', so it is small and closed; a word
+   outside it shows as the source wrote it, which is the fallback every name on this site takes. */
+const CREDIT_ROLE = {
+  '原作': 'story', '作画': 'art', '漫画': 'art', '著': 'author', '著者': 'author',
+  '脚本': 'script', '構成': 'composition', 'キャラクター原案': 'character design',
+  '原案': 'original concept', 'イラスト': 'illustration', '企画': 'planning',
+  '監修': 'supervision', '編': 'editor', '編集': 'editor', '訳': 'translation',
+  '翻訳': 'translation', '絵': 'art', '文': 'text', '表紙': 'cover', '協力': 'assistance',
+};
+function roleWord(r) {
+  const en = CREDIT_ROLE[r];
+  return en ? T(r, en) : r;
+}
+
+/* WHAT KIND OF THING A CREDIT IS, where it is not a person. 20 of them are not: 円谷プロダクション
+   is a company, 「真夜中ぱんチ」製作委員会 a committee, 電撃G'sマガジン a magazine, and DEFINITIONS
+   treats a magazine as a place where yuri is published rather than as a party to a work. The
+   sentence above the list changes with it, because "not their body of work" is a sentence about a
+   person and reads as nonsense over a limited company. */
+const SHAPE_NOTE = {
+  person: ['この人物が関わったとして本データベースが収録している百合作品。その人の全作品ではない。',
+           'The yuri works this database holds that name this person. Not their body of work: we '
+           + 'hold what is yuri, and they may have published a great deal more.'],
+  venue: ['この媒体に掲載されたとして本データベースが収録している百合作品。',
+          'The yuri works this database holds that were published in this venue.'],
+  organisation: ['この団体が関わったとして本データベースが収録している百合作品。',
+                 'The yuri works this database holds that name this organisation.'],
+};
+
+/* THE CITATION FOR A CLAIM, rendered once for whichever claim asked. `provenance.cite` in the build
+   decides what may be shown and this only draws it, so a route the project agreed not to take and
+   an address that is a data endpoint rather than a document never reach here at all. */
+function citeLine(cite, what) {
+  if (!cite) return '';
+  const who = esc(cite.source || '');
+  const link = cite.url
+    ? `<a href="${esc(cite.url)}" target="_blank" rel="noopener noreferrer nofollow">${who}</a>`
+    : who;
+  const when = cite.reviewed ? `<span class="wf-sub">${esc(fmtDate(cite.reviewed, { year: true }))}</span>` : '';
+  return `<div class="wf"><dt>${esc(what)}</dt><dd>${link}${when}</dd></div>`;
+}
+
+function renderCreditPage(doc) {
+  const box = el('workpage');
+  const id = liveRecId(doc, 'credits', PAGE_REC.id);
+  const fact = doc && doc.credits && doc.credits[id];
+  if (!box) return;
+  document.querySelector('nav').hidden = true;
+  ['ser', 'feed', 'rel', 'cat'].forEach(x => { const s = el('tab-' + x); if (s) s.hidden = true; });
+  box.hidden = false;
+  if (!fact) {
+    box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=ser" id="wp-back">${
+      esc(T('← 作品一覧', '← All works'))}</a></p><p>${
+      esc(T('この記録は見つからない。', 'No record answers to this address.'))}</p>`;
+    el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeRecordPage(true); });
+    return;
+  }
+  const rec = nameFor('authors', fact.credit, null);
+  const shape = fact.shape || 'person';
+  const note = SHAPE_NOTE[shape] || SHAPE_NOTE.person;
+  const facts = [];
+  const fact1 = (k, v) => { if (v) facts.push(`<div class="wf"><dt>${esc(k)}</dt><dd>${v}</dd></div>`); };
+  /* THE READING AND WHERE IT CAME FROM. This is the credit page's distinctive content and the
+     reason it earns an address: the name's own provenance belongs to the person and not to each of
+     their works, and repeating it on every work page would be one fact with many producers.
+
+     THE NOTE BESIDE IT DOES NOT COME HERE. The store holds our reasoning for our own decisions,
+     which is a fact about us; the citation says which document, where and when, which is what a
+     reader can act on. Decided by the project owner, 2026-08-08. */
+  /* THE KANA GOES IN THE JAPANESE LINE AND THE LATIN IN THE ENGLISH ONE. EN mode contains no
+     Japanese at all, which is §4 and which `English mode has no Japanese` enforces on the shipped
+     names; a kana reading printed under an English heading would break the rule in the one place
+     that check cannot see, and it would say the same thing twice besides, since the romanisation
+     below is that reading spelt in Latin. */
+  if (rec && rec.reading && LANG !== 'en') {
+    fact1(T('読み', 'Reading'), esc(rec.reading) + (rec.unverified
+      ? `<span class="wf-sub">${esc(T('未確認', 'not confirmed'))}</span>` : ''));
+  } else if (!(rec && rec.reading) && shape === 'person') {
+    /* ONE SENTENCE, NOT A LIST OF WHO WAS ASKED. 2,171 names carry a recorded failed search, and a
+       reader does not need to know which shop was asked on which Tuesday. What they need is that
+       the reading is unknown rather than unexamined. */
+    fact1(T('読み', 'Reading'),
+          esc(T('この名前の読みは分かっていない。',
+                'The reading of this name is not known.')));
+  }
+  if (rec && rec.romaji && LANG !== 'ja') {
+    fact1(T('ローマ字', 'Romanised'), esc(personName(rec) || '')
+      + (rec.unverified ? `<span class="wf-sub">${
+          esc(T('読みは未確認', 'the reading is not confirmed'))}</span>` : ''));
+  }
+  if (fact.kind) fact1(T('種別', 'Kind'), esc(T(fact.kind, fact.kind)));
+  const rolesById = {};
+  (fact.works || []).forEach(w => { if (w.roles) rolesById[w.id] = w.roles; });
+  const rows = recWorkRows((fact.works || []).map(w => w.id), rolesById);
+  /* THE HOUSES BEHIND THE WORKS, which is the small graph the plan describes: a work names its
+     author and its publisher, a publisher lists its lines, an author lists works and the houses
+     behind them. */
+  /* DEDUPED ON WHAT IS DRAWN, not on the field behind it. Two print rows naming one house render
+     the same chip, and comparing the chips is comparing what a reader would see twice, which is
+     the same rule `onceEach` applies to the evidence table. It also keeps the field's only read a
+     hand-over to the function that renders it. */
+  const houses = new Set();
+  const byId = new Map(((SERIES && SERIES.series) || []).map(x => [x.id, x]));
+  (fact.works || []).forEach(w => {
+    const row = byId.get(w.id);
+    (row && row.print || []).forEach(pr => {
+      if (pr.publisher) houses.add(publisherChip(pr.publisher));
+    });
+  });
+  if (houses.size) fact1(T('出版社', 'Publishers'), [...houses].join(SEP));
+  /* CREDITS HELD APART, which is what the owner's ruling means by information hung beside a credit.
+     Seven pairs share a reading and were examined and kept apart; a page for either should be able
+     to say the other exists. It is never a merge and never replaces one with the other. */
+  const homo = (fact.homophones || []).map(o =>
+    `<a class="wplink credit" href="${esc(BASE)}credit/${esc(o.id)}/">${esc(o.credit)}</a>`).join(SEP);
+  const srcBody = (rec && rec.reading_cite)
+    ? `<details class="wp-src"><summary>${esc(T('出典', 'Sources of information'))}</summary>
+         <dl class="wp-facts">${citeLine(rec.reading_cite, T('読みの出典', 'Reading'))}${
+           citeLine(rec.en_cite, T('英語表記の出典', 'English name'))}</dl></details>` : '';
+  box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=ser" id="wp-back">${
+      esc(T('← 作品一覧', '← All works'))}</a></p>
+    <header class="wp-head">
+      <h2 class="wp-title">${authorLabel({ author: fact.credit })}</h2>
+    </header>
+    <dl class="wp-facts">${facts.join('')}</dl>
+    ${homo ? `<p class="wp-basis">${esc(T('同じ読みの別名義：', 'Held apart from: '))}${homo}</p>` : ''}
+    <section class="wp-sect"><h3>${esc(T('作品', 'Works'))} <span class="wp-n">${
+      (fact.works || []).length}</span></h3>
+      <p class="wp-keep">${esc(T(note[0], note[1]))}</p>
+      <ol class="recws">${rows}</ol></section>
+    ${srcBody}`;
+  el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeRecordPage(true); });
+  window.scrollTo(0, 0);
+}
+
+function renderPublisherPage(doc) {
+  const box = el('workpage');
+  const id = liveRecId(doc, 'publishers', PAGE_REC.id);
+  const fact = doc && doc.publishers && doc.publishers[id];
+  if (!box) return;
+  document.querySelector('nav').hidden = true;
+  ['ser', 'feed', 'rel', 'cat'].forEach(x => { const s = el('tab-' + x); if (s) s.hidden = true; });
+  box.hidden = false;
+  if (!fact) {
+    box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=ser" id="wp-back">${
+      esc(T('← 作品一覧', '← All works'))}</a></p><p>${
+      esc(T('この記録は見つからない。', 'No record answers to this address.'))}</p>`;
+    el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeRecordPage(true); });
+    return;
+  }
+  const rec = pubRec(fact.name);
+  /* WHAT A PUBLISHER PAGE SHOWS THAT NOTHING ELSE CAN: which of its imprints are yuri lines.
+     百合姫コミックス over 354 rows against a house with one book somebody shelved as yuri is the
+     same structural signal used to find entries admitted on a shop's shelf with nothing behind
+     them, and here a reader can see it directly.
+
+     A SPELLING IS A HISTORICAL VARIANT AND IS NOT THROWN AWAY. The line's own name heads the row
+     and the years each catalogued spelling covers sit under it, measured off the rows rather than
+     written down, so a reader looking at a 2008 volume can see that `Yuri-hime comics` is what that
+     volume says. */
+  const lineRows = (fact.lines || []).map(ln => {
+    const years = [...new Set((ln.spellings || []).flatMap(s => s.years || []).filter(Boolean))].sort();
+    const span = years.length > 1 ? `${years[0]}–${years[years.length - 1]}` : (years[0] || '');
+    const spellings = (ln.spellings || []).map(s => s.raw).filter(x => x !== ln.name);
+    const alt = spellings.length
+      ? `<span class="wf-sub" title="${esc(spellings.join(' · '))}">${
+          esc(T(`${spellings.length}種の表記`, `${spellings.length} recorded spellings`))}</span>` : '';
+    return `<tr><td>${esc(pubBoth(ln.name))}${
+        ln.parent ? `<span class="wf-sub">${esc(pubBoth(ln.parent))}</span>` : ''}${alt}</td>
+      <td>${esc(String(ln.rows || 0))}</td><td>${esc(span)}</td></tr>`;
+  }).join('');
+  const lines = lineRows ? `<div class="wp-scroll"><table class="wp-rows">
+      <tr><th>${esc(T('レーベル', 'Imprint line'))}</th><th>${esc(T('冊数', 'Books'))}</th>
+          <th>${esc(T('年', 'Years'))}</th></tr>${lineRows}</table></div>` : '';
+  const seats = (fact.seats || []).includes('distributor')
+    ? `<p class="wp-basis">${esc(T('発売元としても記録がある。',
+        'Also recorded as the distributor on books another house published.'))}</p>` : '';
+  const srcBody = (rec && (rec.en_cite || rec.reading_cite))
+    ? `<details class="wp-src"><summary>${esc(T('出典', 'Sources of information'))}</summary>
+         <dl class="wp-facts">${citeLine(rec.en_cite, T('社名の出典', 'Company name'))}${
+           citeLine(rec.reading_cite, T('読みの出典', 'Reading'))}</dl></details>` : '';
+  box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=ser" id="wp-back">${
+      esc(T('← 作品一覧', '← All works'))}</a></p>
+    <header class="wp-head">
+      <h2 class="wp-title">${esc(pubBoth(fact.name))}</h2>
+    </header>
+    ${seats}
+    ${lines ? `<section class="wp-sect"><h3>${esc(T('レーベル', 'Imprint lines'))} <span class="wp-n">${
+      (fact.lines || []).length}</span></h3>${lines}</section>` : ''}
+    <section class="wp-sect"><h3>${esc(T('作品', 'Works'))} <span class="wp-n">${
+      (fact.works || []).length}</span></h3>
+      <p class="wp-keep">${esc(T(
+        'この出版社の刊行物のうち、本データベースが百合として収録しているもの。同社の刊行物すべてではない。',
+        'The yuri works this database holds from this publisher. Not its catalogue: a house of this '
+        + 'size prints a great deal that is not here.'))}</p>
+      <ol class="recws">${recWorkRows(fact.works || [])}</ol></section>
+    ${srcBody}`;
+  el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeRecordPage(true); });
+  window.scrollTo(0, 0);
+}
+
+function renderRecordPage() {
+  if (!PAGE_REC) return;
+  const want = PAGE_REC;
+  recData(want.kind).then(doc => {
+    // The reader may have left, or opened another record, while the file was in flight.
+    if (!PAGE_REC || PAGE_REC.kind !== want.kind || PAGE_REC.id !== want.id) return;
+    if (want.kind === 'credit') renderCreditPage(doc);
+    else renderPublisherPage(doc);
+  });
+}
+
+function openRecordPage(kind, id, push = true) {
+  if (!id) return;
+  PAGE_WORK = null;
+  PAGE_REC = { kind, id };
+  renderRecordPage();
+  navSync(push);
+}
+
+function closeRecordPage(push) {
+  PAGE_REC = null;
+  el('workpage').hidden = true;
+  showSelectedTab();
+  document.querySelector('nav').hidden = false;
+  navSync(push);
+}
+
+/* A credit or a publisher link renders in place instead of letting the browser fetch the
+   pre-rendered page, which would only redirect back here. Same handler shape as the work links,
+   including leaving a modified click alone: a reader asking for a new tab is asking for the
+   address, and the address works. */
+document.addEventListener('click', ev => {
+  const a = ev.target.closest('a.credit, a.pub');
+  if (!a) return;
+  if (ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+  const m = a.getAttribute('href').match(/(credit|publisher)\/([A-Za-z0-9_-]+)\//);
+  if (!m) return;
+  ev.preventDefault();
+  ev.stopPropagation();
+  openRecordPage(m[1], m[2]);
+});
 
 function stateLabel(r) {
   const k = SSTATE[r.state];
@@ -2437,6 +2840,15 @@ function navApply(st) {
     }
     // A work record is opened by clicking its row, which is also how it is closed, so the state is
     // reached by asking for the difference rather than by re-running the handler.
+    // A RECORD PAGE IS REACHED BY ASKING FOR THE DIFFERENCE, the way a work page is. Done before
+    // the work branch, because opening one closes the other and the two must not both be applied.
+    const wantRec = st.rec || null;
+    const haveRec = PAGE_REC ? PAGE_REC.kind + '/' + PAGE_REC.id : '';
+    const askRec = wantRec ? wantRec.kind + '/' + wantRec.id : '';
+    if (askRec !== haveRec) {
+      if (askRec) openRecordPage(wantRec.kind, wantRec.id, false);
+      else closeRecordPage(false);
+    }
     const wantWork = st.work || '';
     if (tab !== 'cat') {
       // THE WORK PAGE IS THE DESTINATION. This marked a row in the list and scrolled to it, which
@@ -2465,11 +2877,20 @@ window.addEventListener('popstate', e => navApply(e.state || readNavUrl()));
 // already out there and an address published once has to keep resolving.
 // The app's own directory. A stub sits two levels below it, so an address cannot be built from
 // location.pathname alone.
-const BASE = location.pathname.replace(/(?:work\/[A-Za-z0-9_-]+\/?|index\.html)?$/, '');
+// Three roots sit two levels below it now, so all three come off. A credit page reached at
+// /kari/credit/c00024/ would otherwise compute BASE as /kari/credit/c00024/ and every link on it
+// would be built inside itself.
+const BASE = location.pathname.replace(
+  /(?:(?:work|credit|publisher)\/[A-Za-z0-9_-]+\/?|index\.html)?$/, '');
 
 function workFromPath() {
   const m = location.pathname.match(/\/work\/([A-Za-z0-9_-]+)\/?$/);
   return m ? m[1] : '';
+}
+
+function recFromPath() {
+  const m = location.pathname.match(/\/(credit|publisher)\/([A-Za-z0-9_-]+)\/?$/);
+  return m ? { kind: m[1], id: m[2] } : null;
 }
 
 function readNavUrl() {
@@ -2479,15 +2900,25 @@ function readNavUrl() {
   const onPath = workFromPath();
   // The tab rides in the query beside the path, so a work opened from the updates tab is left by
   // going back to the updates tab. Absent, it means the works list, which is where most arrive.
-  if (onPath) return { tab: q.get('tab') || 'ser', month: '', work: onPath };
-  return { tab: q.get('tab') || 'feed', month: q.get('month') || '', work: q.get('work') || '' };
+  if (onPath) return { tab: q.get('tab') || 'ser', month: '', work: onPath, rec: null };
+  // A pre-rendered credit or publisher page hands over with the query form, and its own address is
+  // the path form. Both resolve to the same view, because a link to either is already an address
+  // somebody may hold.
+  const onRec = recFromPath()
+    || (q.get('credit') ? { kind: 'credit', id: q.get('credit') } : null)
+    || (q.get('publisher') ? { kind: 'publisher', id: q.get('publisher') } : null);
+  if (onRec) return { tab: q.get('tab') || 'ser', month: '', work: '', rec: onRec };
+  return { tab: q.get('tab') || 'feed', month: q.get('month') || '', work: q.get('work') || '',
+           rec: null };
 }
 
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('nav button').forEach(x =>
     x.setAttribute('aria-selected', String(x === b)));
-  // Choosing a tab leaves a work page, because a tab is a place and so is a work.
+  // Choosing a tab leaves a work page, because a tab is a place and so is a work. And a credit
+  // page and a house page, for the same reason.
   PAGE_WORK = null;
+  PAGE_REC = null;
   showSelectedTab();
   document.querySelector('nav').hidden = false;
   if (b.dataset.tab === 'rel') renderReleases();

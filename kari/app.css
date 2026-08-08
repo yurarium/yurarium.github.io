@@ -632,3 +632,19 @@ nav button .n:empty { display: none; }
   .wp-read{white-space:nowrap;color:var(--dim)}
   .wp-read a{color:var(--dim)}
   .wp-keep{font-size:.76rem;color:var(--faint);margin:.9rem 0 0;line-height:1.5}
+
+  /* ── a credit's record, and a publisher's ────────────────────────────────────────────────────
+     The work page's own parts, reused. These pages take its shape by design: the thing itself
+     with no heading of its own, then its parts, then its sources collapsed. What is new is the
+     list of works, which is a list of links and not a list of rows, because a credit page answers
+     "what else" rather than "what is the state of each of these". */
+  .recws{list-style:none;margin:.6rem 0 0;padding:0}
+  .recw{padding:.4rem 0;border-top:1px solid var(--line)}
+  .recw:first-child{border-top:0}
+  .recw a{text-decoration:none}
+  .recw a:hover{text-decoration:underline}
+  /* A NAME THAT IS A LINK STAYS A NAME. Underlining every credit on a work page would put a rule
+     under most of the page and would collide with the dotted underline that means a rendering is
+     ours, which carries meaning. So the link is quiet until it is pointed at. */
+  a.credit,a.pub{color:inherit;text-decoration:none}
+  a.credit:hover,a.pub:hover{text-decoration:underline}
