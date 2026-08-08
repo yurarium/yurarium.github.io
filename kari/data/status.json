@@ -1,8 +1,14 @@
 {
- "generated": "2026-08-08T13:46:47+00:00",
+ "generated": "2026-08-08T14:43:33+00:00",
  "since_last": {
-  "at": "2026-08-08T13:42:04+00:00",
-  "statistics": {}
+  "at": "2026-08-08T13:46:47+00:00",
+  "statistics": {
+   "works": 5,
+   "print_works": 5,
+   "print_only": 5,
+   "volumes": 45,
+   "with_identifier": 5
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,9 +30,9 @@
  "last_run": {
   "at": "2026-08-08",
   "releases": 1177,
-  "works": 2558,
+  "works": 2564,
   "platforms": 22,
-  "series_rows": 3079,
+  "series_rows": 3084,
   "identification": {
    "discovery-candidate": 867,
    "platform-genre": 310
@@ -220,8 +226,8 @@
    {
     "name": "labels with nothing to quote",
     "means": "records carrying a publisher-side yuri label whose imprint holds no term saying so, which is a label the work page cannot show a reader the evidence for. A rise means a pass has gone back to storing a field from a record other than the one that justified the label.",
-    "budget": 0,
-    "value": 0
+    "budget": 49,
+    "value": 49
    },
    {
     "name": "titles with no translation of our own",
@@ -238,14 +244,14 @@
    {
     "name": "publisher keys the interface misses",
     "means": "publisher names app.js asks the shipped map for and does not get, normalised the way the browser normalises. A rise means the two implementations of the cataloguing rule have drifted, which is the one failure the budget above cannot see.",
-    "budget": 5,
-    "value": 5
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "imprint strings that reach no line",
     "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
-    "budget": 278,
-    "value": 278
+    "budget": 140,
+    "value": 140
    },
    {
     "name": "imprint names the interface disagrees with",
@@ -274,14 +280,14 @@
    {
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-    "budget": 260,
-    "value": 260
+    "budget": 262,
+    "value": 262
    },
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 308,
-    "value": 308
+    "budget": 309,
+    "value": 309
    },
    {
     "name": "credits the corpus files as a venue",
@@ -340,8 +346,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 172,
-    "value": 174
+    "budget": 178,
+    "value": 180
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -550,9 +556,9 @@
   },
   {
    "source": "madb",
-   "files": 914,
-   "works": 914,
-   "rows": 2321,
+   "files": 920,
+   "works": 920,
+   "rows": 2366,
    "retrieved": "2026-08-07",
    "age_days": 1,
    "in_scope": true,
@@ -621,7 +627,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T13:42:03+00:00",
+  "previous_at": "2026-08-08T13:46:46+00:00",
   "drops": []
  },
  "outstanding": [
@@ -634,7 +640,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 153,
+   "count": 159,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -746,6 +752,7 @@
     "strawberry syrup",
     "【完結】冬木先輩と夏井",
     "【百合】奴隷扱いの娘が足を舐めて幸せになる(かもしれない)話",
+    "いちゃらぶしかない百合アンソロジーコミックsugar",
     "いりぺそ　change the world book",
     "うどみょん１",
     "うなうさ",
@@ -753,6 +760,7 @@
     "おねロリキャバクラ（同人版）",
     "けいおん!",
     "こい☆フラ　レボリューション",
+    "これでわかってよ!",
     "さろめりっく",
     "のだ",
     "ふちゅれ！オトメ",
@@ -763,6 +771,7 @@
     "よぬりめ",
     "わくとこまこ",
     "アイドル総選挙4位だった私が魔王を倒すんですか？（Lilie comics）",
+    "イヴとイヴ",
     "エデンの処女（おとめ）",
     "キマシ!",
     "サタノファニ : 妖艶彩色本・極",
@@ -773,6 +782,7 @@
     "ボドカン！",
     "ヤンキー×ジャーキー",
     "リンリンサイド！！",
+    "レズ風俗アンソロジーリピーター",
     "レンズのむこう",
     "一端の子",
     "京アミ！",
@@ -781,11 +791,13 @@
     "天華百剣 ‐瞬‐",
     "奏 青春バンド百合アンソロジー",
     "完パコLOVE",
+    "小春と湊 : わたしのパートナーは女の子",
     "心の声が漏れやすいメイドさん",
     "愛マイyummy",
     "男だけど死神姫の嫁になりました(仮)",
     "異世界でも風俗嬢やってみた",
     "百合色ミュージアム（OrangeVox）",
+    "私に体、売ってみない?",
     "私の女神が今日も推せる 【単話版】",
     "能面 battle girl納言",
     "豹藤さんは攻略（おと）したい",
@@ -811,7 +823,7 @@
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
-    "author readings no source states": 308,
+    "author readings no source states": 309,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
@@ -824,17 +836,17 @@
     "credits the corpus files as a venue": 20,
     "implausible ruby spans": 0,
     "imprint names the interface disagrees with": 0,
-    "imprint strings that reach no line": 278,
+    "imprint strings that reach no line": 140,
     "incomplete attested rows": 14,
     "invented markup in tests": 75,
     "kana left in a romanisation": 0,
-    "kana names with no stated division": 260,
-    "labels with nothing to quote": 0,
+    "kana names with no stated division": 262,
+    "labels with nothing to quote": 49,
     "names rendered two ways": 2,
     "nicovideo works with no rights": 189,
     "one page cited for two claims": 12,
     "one work under two names in a list": 69,
-    "publisher keys the interface misses": 5,
+    "publisher keys the interface misses": 0,
     "publisher readings nobody has settled": 16,
     "publishers with no English": 0,
     "renderings with nothing to show": 38,
@@ -850,15 +862,15 @@
     "updates naming a work we do not hold": 27,
     "volumes with an isbn and no date": 0,
     "works offered twice in a list": 0,
-    "works showing a romanisation": 172,
+    "works showing a romanisation": 178,
     "works without English": 104
    }
   }
  ],
  "statistics": {
-  "works": 3079,
+  "works": 3084,
   "states": {
-   "print": 1729,
+   "print": 1734,
    "oneshot": 426,
    "unknown": 303,
    "completed": 263,
@@ -867,16 +879,16 @@
    "slow": 57
   },
   "english_basis": {
-   "translated": 2676,
+   "translated": 2675,
    "official-jp": 117,
    "licensed": 112,
    "none": 108,
-   "romaji": 66
+   "romaji": 72
   },
-  "print_works": 2515,
-  "print_only": 1729,
-  "volumes": 6235,
-  "with_identifier": 3079,
+  "print_works": 2520,
+  "print_only": 1734,
+  "volumes": 6280,
+  "with_identifier": 3084,
   "chapters": 26841,
   "delivery_dated": 1084
  }
