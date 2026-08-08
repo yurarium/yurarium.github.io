@@ -1,14 +1,8 @@
 {
- "generated": "2026-08-08T13:05:12+00:00",
+ "generated": "2026-08-08T13:46:47+00:00",
  "since_last": {
-  "at": "2026-08-08T13:01:17+00:00",
-  "statistics": {
-   "works": 2,
-   "print_works": 1,
-   "print_only": 2,
-   "with_identifier": 3,
-   "chapters": -128
-  }
+  "at": "2026-08-08T13:42:04+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -45,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 29,
+  "invariants_passing": 30,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -158,6 +152,11 @@
     "examples": []
    },
    {
+    "name": "a stated printing precedes the delivery",
+    "violations": 0,
+    "examples": []
+   },
+   {
     "name": "a publisher is a name, not a role",
     "violations": 0,
     "examples": []
@@ -239,8 +238,8 @@
    {
     "name": "publisher keys the interface misses",
     "means": "publisher names app.js asks the shipped map for and does not get, normalised the way the browser normalises. A rise means the two implementations of the cataloguing rule have drifted, which is the one failure the budget above cannot see.",
-    "budget": 0,
-    "value": 0
+    "budget": 5,
+    "value": 5
    },
    {
     "name": "imprint strings that reach no line",
@@ -251,8 +250,8 @@
    {
     "name": "imprint names the interface disagrees with",
     "means": "imprint strings app.js renders as one name and the shipped map calls another, counted as distinct pairs. It is the second producer of one fact, live and visible to a reader: 一迅社's yuri line shows as its magazine's name on 346 rows. It goes to zero when the interface reads feed/names.json's imprints map, and nothing else can move it down.",
-    "budget": 38,
-    "value": 38
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "names rendered two ways",
@@ -342,7 +341,7 @@
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
     "budget": 172,
-    "value": 172
+    "value": 174
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -622,7 +621,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T13:01:16+00:00",
+  "previous_at": "2026-08-08T13:42:03+00:00",
   "drops": []
  },
  "outstanding": [
@@ -635,7 +634,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 151,
+   "count": 153,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -778,6 +777,7 @@
     "一端の子",
     "京アミ！",
     "冬馬くん",
+    "可愛原先輩はかわいいがすき！",
     "天華百剣 ‐瞬‐",
     "奏 青春バンド百合アンソロジー",
     "完パコLOVE",
@@ -788,7 +788,8 @@
     "百合色ミュージアム（OrangeVox）",
     "私の女神が今日も推せる 【単話版】",
     "能面 battle girl納言",
-    "豹藤さんは攻略（おと）したい"
+    "豹藤さんは攻略（おと）したい",
+    "鮮血王女、皆殺す ～家族に裏切られ、処刑された少女は蘇り、『死神』となって復讐する～"
    ]
   },
   {
@@ -822,7 +823,7 @@
     "credits that restate a name": 0,
     "credits the corpus files as a venue": 20,
     "implausible ruby spans": 0,
-    "imprint names the interface disagrees with": 38,
+    "imprint names the interface disagrees with": 0,
     "imprint strings that reach no line": 278,
     "incomplete attested rows": 14,
     "invented markup in tests": 75,
@@ -833,7 +834,7 @@
     "nicovideo works with no rights": 189,
     "one page cited for two claims": 12,
     "one work under two names in a list": 69,
-    "publisher keys the interface misses": 0,
+    "publisher keys the interface misses": 5,
     "publisher readings nobody has settled": 16,
     "publishers with no English": 0,
     "renderings with nothing to show": 38,
@@ -866,11 +867,11 @@
    "slow": 57
   },
   "english_basis": {
-   "translated": 2678,
+   "translated": 2676,
    "official-jp": 117,
    "licensed": 112,
    "none": 108,
-   "romaji": 64
+   "romaji": 66
   },
   "print_works": 2515,
   "print_only": 1729,

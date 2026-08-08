@@ -1505,20 +1505,29 @@ const VOLPART = { '上': 1, '中': 2, '下': 3 };
 
    It lived inside the releases renderer and the work page showed the raw string beside it, so one
    work read "アフタヌーンKC" in one place and "IDコミックス. Yurihime comics" in another. */
-const IMPRINT_ALIAS = { 'yurihimecomics': 'コミック百合姫', 'yurihimecomic': 'コミック百合姫',
-                        'コミック百合姫': 'コミック百合姫', '百合姫コミックス': 'コミック百合姫' };
+/* ONE LINE, MANY RECORDED SPELLINGS, AND THE BUILD DECIDES WHICH. This held a hand-written table
+   of four aliases and a rule that took the most specific segment, which could only ever know about
+   the spellings somebody had met. 一迅社 writes its yuri line about twenty ways and the variation
+   is not all noise: the 2015 hyphen drop is the publisher restyling the logotype, proved by MADB
+   re-cataloguing every pre-2025 record in one 2024 sweep and emitting both forms, while the
+   separators and the case are the cataloguer's.
 
+   So the registry is curated and shipped in feed/names.json, keyed by the raw catalogued string and
+   by its folded form. A string the map does not know keeps its catalogued spelling, which is what
+   this did before and is a finished state rather than a failure.
+
+   IT IS NOT SAFE TO GUESS THE PARENT. Bare `IDコミックス` is not the yuri line: all 47 rows
+   carrying it alone are `marketing_label: none` and entered on a retailer's shelf, so folding it in
+   would attach a publisher-side label to works the publisher labelled nothing. */
 function imprintOf(s) {
-  const bare = String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '');
-  const segs = bare.split(/[=／\/.．]/).map(x => x.trim()).filter(Boolean);
-  for (const seg of segs.slice().reverse()) {
-    const k = seg.toLowerCase().replace(/[\s\u30fb-]/g, '');
-    if (IMPRINT_ALIAS[k] || IMPRINT_ALIAS[seg]) return IMPRINT_ALIAS[k] || IMPRINT_ALIAS[seg];
+  const raw = String(s || '').replace(/^\s*\[[^\]]*\]\s*/, '').trim();
+  if (!raw) return '';
+  const m = NAMES && NAMES.imprints;
+  if (m) {
+    const hit = m[raw] || m[foldKey(raw)];
+    if (hit && hit.name) return hit.name;
   }
-  // Nothing recognised: the most specific segment, which is the last that is not the umbrella line
-  // every Ichijinsha comic carries.
-  const named = segs.filter(x => x !== 'IDコミックス');
-  return (named.length ? named[named.length - 1] : segs[0]) || '';
+  return raw;
 }
 
 /* A PUBLISHER ARRIVES AS A NAME AND IS SHOWN AS ONE. There was a `publisherOf` here that took a
