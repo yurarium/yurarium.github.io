@@ -482,6 +482,16 @@ function editionLabel(work) {
   return e ? `${e.text} (${en})` : null;
 }
 
+/* ONE LANGUAGE, AND 併記 IS THE CALLER'S JOB. `bilingual()` runs a renderer once per language with
+   LANG forced, so every branch below tests `en` and otherwise answers in Japanese. A `both` branch
+   here would print the pair again on each of the two lines it is already inside.
+
+   THE COST OF THAT CONTRACT IS THAT A CALLER OUTSIDE `bilingual()` GETS JAPANESE AND NO WARNING.
+   That is what hid the English title on the work page heading, on the 作品 index rows, on the 発売
+   rows and in the works list of a credit or a publisher page: four surfaces, one shape, and each
+   of them silently correct-looking in ja and in en. Every one of those call sites now wraps, and
+   the answer to "how does a title read" is still this function alone. `pubBoth` is the exception
+   and says why in its own comment: it fills slots that cannot take a second line. */
 function workLabel(r) {
   const e = enOf(nameFor('titles', r.work, r.work_en));
   const rec = nameFor('titles', r.work, r.work_en);
@@ -1091,6 +1101,11 @@ function pubMark(n) {
     : '';
 }
 
+/* THE PAIR ON ONE LINE, because every slot this fills is a slot a second line would break: a
+   clickable chip, a cell in the imprint table, a run of names joined by ·, and the option value
+   on the 発売 filter, which is a string in a <select>. `workLabel` and `authorLabel` answer in one
+   language and let `bilingual()` stack the two, and a house name in a heading follows them, so the
+   publisher page's own <h2> asks bilingual() for this and gets one language per line. */
 function pubBoth(n) {
   if (!n) return '';
   const en = pubEn(n);
@@ -2377,7 +2392,11 @@ function renderWorkPage() {
   /* A CREDIT LINE IS A LIST OF PEOPLE AND STOPS BEING READABLE AS ONE. コミック百合姫 credits
      more than twenty, run together, which is a paragraph where a reader wanted a name. The first
      few are shown and the rest counted, with every name still in the tooltip. */
-  fact(T('作者', 'Author'), r.author ? creditLine(r) : '');
+  /* THE WHOLE BYLINE AGAIN, ONE LANGUAGE PER LINE. The label beside it is `T`, which pairs two
+     short interface words inline; the value is a person's name, which `authorLabel` renders in one
+     language on purpose. In 併記 this cell used to hold the Japanese alone, with furigana over it
+     and the romanisation nowhere, on a page where every other cell said both. */
+  fact(T('作者', 'Author'), r.author ? bilingual(() => creditLine(r)) : '');
   // The newest chapter is a chapter, not a date. `latest_ep` was in the row and shown only in the
   // list, so the page said less about the same fact than the line that led to it.
   /* THESE THREE ARE ABOUT CHAPTERS, and the page below them lists volumes, so they say which.
@@ -2437,7 +2456,10 @@ function renderWorkPage() {
         esc(platName(r.stated_next.platform))}</span></p>`
     : '';
   if (r.collection && r.collection !== r.work) {
-    fact(T('収録', 'Part of'), esc(workTextOf(r.collection)));
+    // A collection is a work, so its name obeys the same contract `workLabel` does and needs the
+    // same wrapper. `workTextOf` answers in Japanese for anything but `en`, so this cell was the
+    // last title on the page still stuck in one script under 併記.
+    fact(T('収録', 'Part of'), bilingual(() => esc(workTextOf(r.collection))));
   }
 
 
@@ -2584,10 +2606,20 @@ function renderWorkPage() {
   const backTo = from === 'feed' ? T('← 更新一覧', '← All updates')
                : from === 'rel' ? T('← 発売一覧', '← All releases')
                : T('← 作品一覧', '← All works');
+  /* A RECORD PAGE'S HEADING STACKS THE TWO LANGUAGES, and all three record pages agree on it.
+     The rest of a page like this pairs them inline, and that works because `T` holds two short
+     interface words with a label sitting over them. A title has neither of those. 娘が彼女を連れて
+     きた話 beside My Daughter Brought Her Girlfriend Home overflows the <h2> at the width this was
+     read at, so the line breaks wherever the viewport puts it, and the Japanese half carries ruby,
+     which means a break can land between a kanji and the kana above it. Two lines put the break
+     where it means something and `.bi-en` already styles the second one as the same heading again.
+
+     The publisher page's heading was the inline form and moved here, so the shape a reader meets
+     at the top of a page no longer depends on which of the three they opened. */
   box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=${esc(from)}" id="wp-back">${
       esc(backTo)}</a></p>
     <header class="wp-head">
-      <h2 class="wp-title">${workLabel(r)}</h2>
+      <h2 class="wp-title">${bilingual(() => workLabel(r))}</h2>
       <p class="wp-badges">${badges.join('')}</p>
     </header>
     <dl class="wp-facts">${facts.join('')}</dl>
@@ -2726,8 +2758,12 @@ function recWorkRows(ids, rolesById, asById) {
     const spelt = (asById && asById[w.id])
       ? `<span class="wf-sub">${esc(T('この作品での表記', 'credited as'))} ${asById[w.id]}</span>` : '';
     const when = w.first ? `<span class="wf-sub">${esc(fmtDate(w.first, { year: true }))}</span>` : '';
+    // THE TITLE IS THE ROW, so it stacks the way a title stacks in every other list of works. This
+    // is a list, and the tabs it duplicates already wrap their rows, so a reader who has set 併記
+    // and follows a link from the 作品 tab to an author's page met the same 208 titles with the
+    // English half gone. `said`, `spelt` and `when` are sub-lines the caller already rendered.
     return `<li class="recw"><a class="wplink" href="${esc(BASE)}work/${esc(w.id)}/">${
-      workLabel(w)}</a>${said}${spelt}${when}</li>`;
+      bilingual(() => workLabel(w))}</a>${said}${spelt}${when}</li>`;
   }).join('');
 }
 
@@ -2821,12 +2857,20 @@ function renderCreditPage(doc) {
      蛙田アメコ and 蛙田あめこ are both Kaeruda Ameko. "credited as Shishio" under a page headed
      Shishio is a line that answers a question the English reader never had. The comparison is on
      the RENDERED form for that reason, so the note appears in Japanese, where the two spellings
-     differ on the page, and stays out of English, where they do not. */
+     differ on the page, and stays out of English, where they do not.
+
+     WHICH RENDERING, UNDER 併記. The test above needs one string per name and the page now shows
+     two, so `cmpLang` names the one the test reads. It is `ja` in 併記 because that is the line
+     the two spellings differ on: 獅尾 and ししお sit one above their shared Shishio, and a reader
+     seeing both wants to know which of them the book says. English on its own keeps the silence
+     the paragraph above describes, because there `cmpLang` is still `en`. What is DISPLAYED is
+     both, since the note carries a name and a name follows the toggle. */
   const asById = {};
-  const headLabel = authorLabel({ author: fact.credit });
+  const cmpLang = LANG === 'both' ? 'ja' : LANG;
+  const headLabel = inLang(cmpLang, () => authorLabel({ author: fact.credit }));
   (fact.works || []).forEach(w => {
-    const shown = w.as ? authorLabel({ author: w.as }) : '';
-    if (shown && shown !== headLabel) asById[w.id] = shown;
+    const shown = w.as ? inLang(cmpLang, () => authorLabel({ author: w.as })) : '';
+    if (shown && shown !== headLabel) asById[w.id] = bilingual(() => authorLabel({ author: w.as }));
   });
   const rows = recWorkRows((fact.works || []).map(w => w.id), rolesById, asById);
   /* THE HOUSES BEHIND THE WORKS, which is the small graph the plan describes: a work names its
@@ -2852,13 +2896,22 @@ function renderCreditPage(doc) {
      anchor, so a reader in English met the held-apart credit in Japanese beside their own name
      rendered — the same fault as `esc(w.t)` on the catalogue tab, on a page nothing walked until
      `credits.json` was added to the surfaces. `creditChip` is the anchor and the rendering
-     together, which is what the work page's volume rows already use. */
-  const homo = (fact.homophones || []).map(o => creditChip(o.credit)).join(SEP);
+     together, which is what the work page's volume rows already use.
+
+     AND IN BOTH LANGUAGES, because `creditChip` reaches `authorLabel` and answers in one. The
+     emptiness test is on the LIST and not on the string: `bilingual` wraps whatever it is given in
+     a span, so an empty run of chips comes back as markup with nothing in it, which is truthy, and
+     the sentence introducing the chips would have printed above no chips at all. */
+  const homo = (fact.homophones || []).length
+    ? bilingual(() => (fact.homophones || []).map(o => creditChip(o.credit)).join(SEP)) : '';
   /* A STRING THAT IS TWO PEOPLE, AND WHERE THEY BOTH ARE. `iimAn&惟丞` is one field カドコミ uses
      to credit two artists, and it held one identifier until the splitter learned that an ampersand
      joins two. There is no survivor to forward to, so the address answers with both. Without this
      the page reads as a person with no works, which says the opposite of what is true. */
-  const divided = (fact.divided_into || []).map(o => creditChip(o.credit)).join(SEP);
+  // Same wrapper and the same test on the list. This one also decides whether the works section is
+  // drawn at all, so an empty run coming back truthy would have hidden it.
+  const divided = (fact.divided_into || []).length
+    ? bilingual(() => (fact.divided_into || []).map(o => creditChip(o.credit)).join(SEP)) : '';
   const srcBody = (rec && rec.reading_cite)
     ? `<details class="wp-src"><summary>${esc(T('出典', 'Sources of information'))}</summary>
          <dl class="wp-facts">${citeLine(rec.reading_cite, T('読みの出典', 'Reading'))}${
@@ -2866,7 +2919,7 @@ function renderCreditPage(doc) {
   box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=ser" id="wp-back">${
       esc(T('← 作品一覧', '← All works'))}</a></p>
     <header class="wp-head">
-      <h2 class="wp-title">${authorLabel({ author: fact.credit })}</h2>
+      <h2 class="wp-title">${bilingual(() => authorLabel({ author: fact.credit }))}</h2>
     </header>
     <dl class="wp-facts">${facts.join('')}</dl>
     ${divided ? `<p class="wp-basis">${esc(T(
@@ -2932,7 +2985,7 @@ function renderPublisherPage(doc) {
   box.innerHTML = `<p class="wp-back"><a href="${BASE}?tab=ser" id="wp-back">${
       esc(T('← 作品一覧', '← All works'))}</a></p>
     <header class="wp-head">
-      <h2 class="wp-title">${esc(pubBoth(fact.name))}</h2>
+      <h2 class="wp-title">${bilingual(() => esc(pubBoth(fact.name)))}</h2>
     </header>
     ${seats}
     ${lines ? `<section class="wp-sect"><h3>${esc(T('レーベル', 'Imprint lines'))} <span class="wp-n">${
@@ -3035,33 +3088,59 @@ async function renderReleases() {
      the query: the same reason drawnKey guards this whole function. */
   REL_ROWS = rows.map(r => {
       const w = r.w;
-      const people = creditNames(w.creator);
-      // MADB catalogues one imprint three ways: "IDコミックス. Yurihime comics = コミック百合姫",
-      // "IDコミックス. コミック百合姫" and "IDコミックス. Yurihime comics". The "A = B" form gives
-      // two names for one thing, so the Japanese side is taken and the Latin alias maps onto it.
-      // Three spellings of 百合姫 in a list sorted by date read as three different imprints.
-      // MADB catalogues one imprint at least six ways: "IDコミックス", "コミック百合姫",
-      // "IDコミックス. Yurihime comics = コミック百合姫", "IDコミックス／Yuri-hime comics",
-      // "Yuri-hime comics", with half and full-width separators. Six spellings of 百合姫 in a list
-      // sorted by date read as six different imprints, which is the opposite of what an imprint is
-      // for. The segments are split apart and the most specific one kept; a Latin spelling of a
-      // series that has a Japanese name maps onto it.
-      const who = publisherPartsHtml(w).join(' · ');
-      // A release is of a VOLUME, so the row says which. 471 of 646 are numbered in the record
-      // and the rest say nothing rather than being numbered by their position in a sorted list.
-      // Same rule as the work page, from the same function: the releases tab was printing
-      // `第vol. 8巻` for every volume MADB numbered in words.
-      const vol = r.n ? `<span class="relvn">${esc(volLabel(r.n))}</span>` : '';
-      // The volume that ended the series, where a shop states both that it ended and how long it
-      // is. The updates tab marks a final chapter the same way; a volume carries no such marking
-      // of its own, so this says whose claim it is.
-      const fin = r.fin ? finalTag(r.fin) : '';
       const wid = byMadb.get(w.work_id);
       const href = wid ? `${BASE}work/${esc(wid)}/` : '';
-      // The same rule the rest of the site uses. Printing w.title.ja left every release in
-      // Japanese however a reader had set the language, which the works tab beside it does not do.
-      const label = workLabel({ work: w.title.ja });
-      const name = href ? `<a href="${href}">${label}</a>` : label;
+      /* THE WHOLE ROW ONCE PER LANGUAGE, which is what the 作品 and 更新 tabs beside it already do
+         and what the 併記 note at the top of this file describes. Only the title was reported
+         missing, and wrapping the title alone would have left this row saying 講談社 / Kodansha
+         inline, the volume 第6巻 / vol. 6 inline, and the byline in Japanese, under a title that
+         had grown a second line. `creditNames` reaches `authorLabel`, so the byline was stuck for
+         the same reason the title was.
+
+         `pub` and `key` below stay outside: one is the value of an <option> and the other is a
+         search index, and neither is a thing a reader reads.
+
+         AND THE READER'S SETTING IS READ BEFORE THE CALLBACK RUNS. `inLang` assigns LANG for the
+         length of each pass, so inside `row` the global says `ja` or `en` and never `both`, and a
+         test on it there answers about the pass and not about the toggle. It answered wrongly with
+         no error: every row kept its placeholder comment and the mark that fills it went missing
+         from one of the two lines. `stacked` is read out here, where LANG is still what the reader
+         chose, and the rows are rebuilt when it changes because LANG is one of RENDER_PREFS. */
+      const stacked = LANG === 'both';
+      const row = lang => {
+        const people = creditNames(w.creator);
+        // MADB catalogues one imprint three ways: "IDコミックス. Yurihime comics = コミック百合姫",
+        // "IDコミックス. コミック百合姫" and "IDコミックス. Yurihime comics". The "A = B" form gives
+        // two names for one thing, so the Japanese side is taken and the Latin alias maps onto it.
+        // Three spellings of 百合姫 in a list sorted by date read as three different imprints.
+        // MADB catalogues one imprint at least six ways: "IDコミックス", "コミック百合姫",
+        // "IDコミックス. Yurihime comics = コミック百合姫", "IDコミックス／Yuri-hime comics",
+        // "Yuri-hime comics", with half and full-width separators. Six spellings of 百合姫 in a list
+        // sorted by date read as six different imprints, which is the opposite of what an imprint is
+        // for. The segments are split apart and the most specific one kept; a Latin spelling of a
+        // series that has a Japanese name maps onto it.
+        const who = publisherPartsHtml(w).join(' · ');
+        // A release is of a VOLUME, so the row says which. 471 of 646 are numbered in the record
+        // and the rest say nothing rather than being numbered by their position in a sorted list.
+        // Same rule as the work page, from the same function: the releases tab was printing
+        // `第vol. 8巻` for every volume MADB numbered in words.
+        const vol = r.n ? `<span class="relvn">${esc(volLabel(r.n))}</span>` : '';
+        // The volume that ended the series, where a shop states both that it ended and how long it
+        // is. The updates tab marks a final chapter the same way; a volume carries no such marking
+        // of its own, so this says whose claim it is.
+        const fin = r.fin ? finalTag(r.fin) : '';
+        // The same rule the rest of the site uses. Printing w.title.ja left every release in
+        // Japanese however a reader had set the language, which the works tab beside it does not do.
+        const label = workLabel({ work: w.title.ja });
+        const name = href ? `<a href="${href}">${label}</a>` : label;
+        // ONE MARK PER ROW, ON THE JAPANESE LINE. The placeholder below is filled by a string
+        // replace that takes the first match, so emitting it on both lines of a 併記 pair would
+        // leave the second one showing nothing and the comment sitting in the markup. The mark
+        // itself is `visTag`, which pairs its own two words with T().
+        const held = (stacked && lang === 'en') ? '' : '<!--vis-->';
+        return `<div class="relvt">${name} ${vol}${fin}${held}</div>` +
+          `<div class="relvm">${[people, who].filter(Boolean).join(' · ')}</div>`;
+      };
     return {
       d: r.d, m: r.d.slice(0, 7),
       // The identifier the series row is keyed on, so visOf() can ask whether this work is held
@@ -3080,8 +3159,7 @@ async function renderReleases() {
       // A PLACEHOLDER, because the row's html is built once per display preference and the
       // held-out control is a filter rather than a preference: flipping it must not rebuild 3,191
       // rows, and the mark it adds has to appear without one.
-      html: `<div class="relv"><div class="relvt">${name} ${vol}${fin}<!--vis--></div>` +
-        `<div class="relvm">${[people, who].filter(Boolean).join(' · ')}</div></div>`,
+      html: `<div class="relv">${bilingual(row)}</div>`,
     };
   });
   setRelOptions();
@@ -3981,15 +4059,20 @@ function renderCat() {
      Paros" and workLabel returned that on demand. An index row is compact and carries no work_en,
      so the title is the key and the store answers from it.
 
-     The yomi is a reading aid for Japanese and has no place on an English page. */
+     The yomi is a reading aid for Japanese and has no place on an English page.
+
+     TITLE, READING AND BYLINE TOGETHER, ONCE PER LANGUAGE. `workLabel` and `credit` both answer in
+     one language, so under 併記 this row was Japanese throughout while the 更新 and 発売 tabs next
+     to it stacked both. Wrapping the whole cell also settles the yomi, which now sits on the
+     Japanese line where the test above always meant to put it. The date and the volume count stay
+     out: a date is digits and `L` gives a counter one language on purpose. */
   el('list').innerHTML = rows.map(w => `
     <li data-id="${esc(w.id)}">
       <button class="row" aria-expanded="false">
-        <span>
+        <span>${bilingual(() => `
           <span class="t">${workLabel({ work: w.t })}</span>${
             w.y && LANG !== 'en' ? `<span class="yomi">${esc(w.y)}</span>` : ''}
-          <br><span class="meta">${esc(credit(w.c) || '—')}</span>
-        </span>
+          <br><span class="meta">${esc(credit(w.c) || '—')}</span>`)}</span>
         <span class="num">${esc(w.d || '—')}<br>${w.n} ${esc(L('巻', w.n === 1 ? 'vol' : 'vols'))}</span>
       </button>
     </li>`).join('');
