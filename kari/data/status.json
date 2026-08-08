@@ -1,8 +1,14 @@
 {
- "generated": "2026-08-08T17:49:09+00:00",
+ "generated": "2026-08-08T18:05:25+00:00",
  "since_last": {
-  "at": "2026-08-08T17:36:03+00:00",
-  "statistics": {}
+  "at": "2026-08-08T17:49:09+00:00",
+  "statistics": {
+   "works": -9,
+   "print_works": -9,
+   "print_only": -9,
+   "with_identifier": -9,
+   "delivery_dated": -2
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -26,7 +32,7 @@
   "releases": 1177,
   "works": 2564,
   "platforms": 22,
-  "series_rows": 3084,
+  "series_rows": 3075,
   "identification": {
    "discovery-candidate": 867,
    "platform-genre": 310
@@ -418,8 +424,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 180,
-    "value": 180
+    "budget": 179,
+    "value": 179
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -436,8 +442,8 @@
    {
     "name": "one work under two names in a list",
     "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
-    "budget": 71,
-    "value": 71
+    "budget": 53,
+    "value": 53
    },
    {
     "name": "incomplete attested rows",
@@ -449,7 +455,8 @@
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": 75
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -503,7 +510,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": 1
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "updates naming a work we do not hold",
@@ -697,7 +705,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T17:36:02+00:00",
+  "previous_at": "2026-08-08T17:49:08+00:00",
   "drops": []
  },
  "outstanding": [
@@ -710,7 +718,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 159,
+   "count": 158,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -861,7 +869,6 @@
     "天華百剣 ‐瞬‐",
     "奏 青春バンド百合アンソロジー",
     "完パコLOVE",
-    "小春と湊 : わたしのパートナーは女の子",
     "心の声が漏れやすいメイドさん",
     "愛マイyummy",
     "男だけど死神姫の嫁になりました(仮)",
@@ -921,7 +928,7 @@
     "names rendered two ways": 2,
     "nicovideo works with no rights": 60,
     "one page cited for two claims": 12,
-    "one work under two names in a list": 71,
+    "one work under two names in a list": 53,
     "publisher keys the interface misses": 0,
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 16,
@@ -940,15 +947,15 @@
     "updates naming a work we do not hold": 27,
     "volumes with an isbn and no date": 0,
     "works offered twice in a list": 0,
-    "works showing a romanisation": 180,
+    "works showing a romanisation": 179,
     "works without English": 104
    }
   }
  ],
  "statistics": {
-  "works": 3084,
+  "works": 3075,
   "states": {
-   "print": 1734,
+   "print": 1725,
    "oneshot": 426,
    "unknown": 304,
    "completed": 263,
@@ -957,17 +964,17 @@
    "slow": 57
   },
   "english_basis": {
-   "translated": 2676,
-   "official-jp": 117,
+   "translated": 2670,
+   "official-jp": 115,
    "licensed": 111,
    "none": 108,
-   "romaji": 72
+   "romaji": 71
   },
-  "print_works": 2520,
-  "print_only": 1734,
+  "print_works": 2511,
+  "print_only": 1725,
   "volumes": 6280,
-  "with_identifier": 3084,
+  "with_identifier": 3075,
   "chapters": 26843,
-  "delivery_dated": 1084
+  "delivery_dated": 1082
  }
 }

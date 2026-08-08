@@ -393,8 +393,8 @@
   {
    "name": "works showing a romanisation",
    "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-   "budget": 180,
-   "value": 180
+   "budget": 179,
+   "value": 179
   },
   {
    "name": "titles carrying cataloguing punctuation",
@@ -411,8 +411,8 @@
   {
    "name": "one work under two names in a list",
    "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
-   "budget": 71,
-   "value": 71
+   "budget": 53,
+   "value": 53
   },
   {
    "name": "incomplete attested rows",

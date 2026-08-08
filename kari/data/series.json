@@ -28013,6 +28013,17 @@
      "first": "2023-08",
      "last": null,
      "label": "yuri"
+    },
+    {
+     "work_id": "madb-t-bde72604ee95",
+     "shop_url": null,
+     "volumes": 1,
+     "publisher": "一迅社",
+     "distributor": "講談社",
+     "imprint": "IDコミックス. YH comics",
+     "first": "2025-07-14",
+     "last": null,
+     "label": "yuri"
     }
    ],
    "latest_any": "2026-07-16",
@@ -28027,6 +28038,16 @@
      "source": "openBD",
      "holds": "volumes",
      "read": "2026-08-08"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "attribution",
+     "read": "2026-08-07"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "volumes",
+     "read": "2026-08-07"
     },
     {
      "source": "メディア芸術データベース",
@@ -72128,7 +72149,7 @@
    "partial": false,
    "latest": "2025-08-08",
    "latest_ep": "ゆりごっこ",
-   "first": "2019-01-20",
+   "first": "2019-01",
    "state": "unknown",
    "oneshot": false,
    "completed_basis": null,
@@ -72158,6 +72179,15 @@
    ],
    "evidence": [
     {
+     "kind": "imprint",
+     "rank": 1,
+     "type": "publisher",
+     "source": "一迅社",
+     "term": "YURIHIME COMICS",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C421850"
+    },
+    {
      "kind": "shelf",
      "rank": 4,
      "type": "retailer",
@@ -72170,8 +72200,19 @@
    ],
    "state_claims": [],
    "stated_next": null,
-   "id": "w01495",
+   "id": "w01168",
    "print": [
+    {
+     "work_id": "C421850",
+     "shop_url": null,
+     "volumes": 1,
+     "publisher": "一迅社",
+     "distributor": "講談社",
+     "imprint": "YURIHIME COMICS",
+     "first": "2019-01",
+     "last": null,
+     "label": "yuri"
+    },
     {
      "work_id": "bw-d78908bb-723a-42ea-881c-93c8e058f825",
      "shop_url": "https://bookwalker.jp/ded78908bb-723a-42ea-881c-93c8e058f825/",
@@ -72186,6 +72227,18 @@
    "latest_any": "2025-08-08",
    "latest_any_kind": "chapter",
    "sourced_from": [
+    {
+     "source": "メディア芸術データベース",
+     "holds": "volumes",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C421850"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "attribution",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C421850"
+    },
     {
      "source": "BOOK☆WALKER",
      "holds": "volumes",
@@ -112442,7 +112495,17 @@
      "retrieved": "2026-08-06"
     }
    ],
-   "evidence": [],
+   "evidence": [
+    {
+     "kind": "shelf",
+     "rank": 4,
+     "type": "retailer",
+     "source": "コミックシーモア",
+     "term": "百合・GL",
+     "read": "2026-08-05",
+     "url": "https://www.cmoa.jp/search/genre/37/"
+    }
+   ],
    "state_claims": [],
    "stated_next": null,
    "id": "w00807",
@@ -112454,6 +112517,16 @@
      "publisher": "講談社",
      "imprint": "月刊少年マガジン",
      "first": "2023-12",
+     "last": null,
+     "label": "none"
+    },
+    {
+     "work_id": "madb-t-6231afe73b19",
+     "shop_url": null,
+     "volumes": 2,
+     "publisher": "講談社",
+     "imprint": "月刊少年マガジン",
+     "first": "2023-03",
      "last": null,
      "label": "none"
     }
@@ -112475,6 +112548,21 @@
      "source": "メディア芸術データベース",
      "holds": "attribution",
      "read": "2026-08-07"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "volumes",
+     "read": "2026-08-05"
+    },
+    {
+     "source": "openBD",
+     "holds": "volumes",
+     "read": "2026-08-08"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "attribution",
+     "read": "2026-08-05"
     }
    ],
    "work_en": {
@@ -176719,7 +176807,7 @@
    "oneshot": false,
    "latest": null,
    "latest_ep": "",
-   "first": "2012-04",
+   "first": "2006-02",
    "state": "print",
    "state_basis": null,
    "completed_basis": null,
@@ -176732,7 +176820,7 @@
    "skipped": [],
    "collection": null,
    "state_claims": [],
-   "id": "w01269",
+   "id": "w01103",
    "completed_claim": {
     "source": "cmoa.jp",
     "volumes": 2,
@@ -176749,11 +176837,30 @@
      "first": "2012-04",
      "last": null,
      "label": "none"
+    },
+    {
+     "work_id": "C363623",
+     "shop_url": null,
+     "volumes": 1,
+     "publisher": "一迅社",
+     "imprint": "IDコミックス　／　Yuri-hime comics",
+     "first": "2006-02",
+     "last": null,
+     "label": "yuri"
     }
    ],
    "latest_any": "2012-04",
    "latest_any_kind": "volume",
    "evidence": [
+    {
+     "kind": "imprint",
+     "rank": 1,
+     "type": "publisher",
+     "source": "一迅社",
+     "term": "IDコミックス　／　Yuri-hime comics",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C363623"
+    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -176781,6 +176888,23 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C339173"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "volumes",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C363623"
+    },
+    {
+     "source": "openBD",
+     "holds": "volumes",
+     "read": "2026-08-08"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "attribution",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C363623"
     }
    ],
    "work_en": {
@@ -182547,9 +182671,19 @@
      "first": "2010-08",
      "last": null,
      "label": "yuri"
+    },
+    {
+     "work_id": "C360568",
+     "shop_url": null,
+     "volumes": 1,
+     "publisher": "一迅社",
+     "imprint": "IDコミックス　／　Yurihime comics",
+     "first": "2015-08",
+     "last": null,
+     "label": "yuri"
     }
    ],
-   "latest_any": "2010-08",
+   "latest_any": "2015-08",
    "latest_any_kind": "volume",
    "evidence": [
     {
@@ -182560,6 +182694,15 @@
      "term": "IDコミックス　／　Yuri-hime comics",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C357104"
+    },
+    {
+     "kind": "imprint",
+     "rank": 1,
+     "type": "publisher",
+     "source": "一迅社",
+     "term": "IDコミックス　／　Yurihime comics",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C360568"
     }
    ],
    "sourced_from": [
@@ -182579,6 +182722,23 @@
      "holds": "attribution",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C357104"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "volumes",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C360568"
+    },
+    {
+     "source": "openBD",
+     "holds": "volumes",
+     "read": "2026-08-08"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "attribution",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C360568"
     }
    ],
    "work_en": {
@@ -184978,9 +185138,20 @@
      "first": "2014-10",
      "last": null,
      "label": "yuri"
+    },
+    {
+     "work_id": "C422605",
+     "shop_url": null,
+     "volumes": 1,
+     "publisher": "一迅社",
+     "distributor": "講談社",
+     "imprint": "Yurihime comics",
+     "first": "2018-05",
+     "last": null,
+     "label": "yuri"
     }
    ],
-   "latest_any": "2014-10",
+   "latest_any": "2018-05",
    "latest_any_kind": "volume",
    "evidence": [
     {
@@ -184991,6 +185162,15 @@
      "term": "IDコミックス　／　Yuri-hime comics",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C357194"
+    },
+    {
+     "kind": "imprint",
+     "rank": 1,
+     "type": "publisher",
+     "source": "一迅社",
+     "term": "Yurihime comics",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C422605"
     }
    ],
    "sourced_from": [
@@ -185010,6 +185190,18 @@
      "holds": "attribution",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C357194"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "volumes",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C422605"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "attribution",
+     "read": "2026-08-07",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C422605"
     }
    ],
    "work_en": {
@@ -193037,120 +193229,6 @@
    }
   },
   {
-   "work": "くちびるに透けたオレンジ",
-   "author": "ロクロイチ",
-   "credits": [
-    {
-     "name": "ロクロイチ",
-     "role": "著"
-    }
-   ],
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2015-08",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w01087",
-   "completed_claim": null,
-   "print": [
-    {
-     "work_id": "C360568",
-     "shop_url": null,
-     "volumes": 1,
-     "publisher": "一迅社",
-     "imprint": "IDコミックス　／　Yurihime comics",
-     "first": "2015-08",
-     "last": null,
-     "label": "yuri"
-    }
-   ],
-   "latest_any": "2015-08",
-   "latest_any_kind": "volume",
-   "evidence": [
-    {
-     "kind": "imprint",
-     "rank": 1,
-     "type": "publisher",
-     "source": "一迅社",
-     "term": "IDコミックス　／　Yurihime comics",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C360568"
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C360568"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C360568"
-    }
-   ],
-   "work_en": {
-    "reading": "クチビル ニ スケタ オレンジ",
-    "ruby": [
-     [
-      "くちびるに",
-      null
-     ],
-     [
-      "透",
-      "す"
-     ],
-     [
-      "けたオレンジ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Kuchibiru ni Suketa Orenji",
-     "double": "Kuchibiru ni Suketa Orenji",
-     "plain": "Kuchibiru ni Suketa Orenji"
-    },
-    "en": "Orange Showing Through Her Lips",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Orange Showing Through Her Lips"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ロクロイチ",
-    "romaji": {
-     "macron": "Rokuroichi",
-     "double": "Rokuroichi",
-     "plain": "Rokuroichi"
-    },
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c01361"
-   }
-  },
-  {
    "work": "よめとり!",
    "author": "すこやか",
    "credits": [
@@ -194984,121 +195062,6 @@
      "isbn": "9784758070171"
     },
     "id": "c01402"
-   }
-  },
-  {
-   "work": "くちびるためいきさくらいろ",
-   "author": "森永みるく",
-   "credits": [
-    {
-     "name": "森永みるく",
-     "role": "著"
-    }
-   ],
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2006-02",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w01103",
-   "completed_claim": null,
-   "print": [
-    {
-     "work_id": "C363623",
-     "shop_url": null,
-     "volumes": 1,
-     "publisher": "一迅社",
-     "imprint": "IDコミックス　／　Yuri-hime comics",
-     "first": "2006-02",
-     "last": null,
-     "label": "yuri"
-    }
-   ],
-   "latest_any": "2006-02",
-   "latest_any_kind": "volume",
-   "evidence": [
-    {
-     "kind": "imprint",
-     "rank": 1,
-     "type": "publisher",
-     "source": "一迅社",
-     "term": "IDコミックス　／　Yuri-hime comics",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C363623"
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C363623"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C363623"
-    }
-   ],
-   "work_en": {
-    "reading": "クチビルタメイキサクライロ",
-    "romaji": {
-     "macron": "Kuchibirutameikisakurairo",
-     "double": "Kuchibirutameikisakurairo",
-     "plain": "Kuchibirutameikisakurairo"
-    },
-    "en": "Lips, Sighs, Cherry Blossom Pink",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Lips, Sighs, Cherry Blossom Pink"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "モリナガ ミルク",
-    "ruby": [
-     [
-      "森永",
-      "もりなが"
-     ],
-     [
-      "みるく",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Morinaga Miruku",
-     "double": "Morinaga Miruku",
-     "plain": "Morinaga Miruku"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "openBD",
-     "kind": "publisher-jp",
-     "reviewed": "2026-08-05",
-     "isbn": "4758070016"
-    },
-    "id": "c01340"
    }
   },
   {
@@ -208766,90 +208729,6 @@
    }
   },
   {
-   "work": "リリウム・テラリウム",
-   "author": "ED",
-   "credits": [
-    {
-     "name": "ED",
-     "role": "著"
-    }
-   ],
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2019-01",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w01168",
-   "completed_claim": null,
-   "print": [
-    {
-     "work_id": "C421850",
-     "shop_url": null,
-     "volumes": 1,
-     "publisher": "一迅社",
-     "distributor": "講談社",
-     "imprint": "YURIHIME COMICS",
-     "first": "2019-01",
-     "last": null,
-     "label": "yuri"
-    }
-   ],
-   "latest_any": "2019-01",
-   "latest_any_kind": "volume",
-   "evidence": [
-    {
-     "kind": "imprint",
-     "rank": 1,
-     "type": "publisher",
-     "source": "一迅社",
-     "term": "YURIHIME COMICS",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C421850"
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C421850"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C421850"
-    }
-   ],
-   "work_en": {
-    "reading": "リリウム・ テラリウム",
-    "romaji": {
-     "macron": "Ririumu Terariumu",
-     "double": "Ririumu Terariumu",
-     "plain": "Ririumu Terariumu"
-    },
-    "en": "Lilium Terrarium",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Lilium Terrarium"
-    },
-    "reading_basis": "analyser"
-   }
-  },
-  {
    "work": "マイ・ファーストレディ",
    "author": "竹宮ジン",
    "credits": [
@@ -209957,129 +209836,6 @@
      "isbn": "9784048937757"
     },
     "id": "c00692"
-   }
-  },
-  {
-   "work": "キミイロ少女",
-   "author": "未幡",
-   "credits": [
-    {
-     "name": "未幡",
-     "role": "著"
-    }
-   ],
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2018-05",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w01173",
-   "completed_claim": null,
-   "print": [
-    {
-     "work_id": "C422605",
-     "shop_url": null,
-     "volumes": 1,
-     "publisher": "一迅社",
-     "distributor": "講談社",
-     "imprint": "Yurihime comics",
-     "first": "2018-05",
-     "last": null,
-     "label": "yuri"
-    }
-   ],
-   "latest_any": "2018-05",
-   "latest_any_kind": "volume",
-   "evidence": [
-    {
-     "kind": "imprint",
-     "rank": 1,
-     "type": "publisher",
-     "source": "一迅社",
-     "term": "Yurihime comics",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C422605"
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C422605"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C422605"
-    }
-   ],
-   "work_en": {
-    "reading": "キミイロ ショウジョ",
-    "ruby": [
-     [
-      "キミイロ",
-      null
-     ],
-     [
-      "少",
-      "しょう"
-     ],
-     [
-      "女",
-      "じょ"
-     ]
-    ],
-    "romaji": {
-     "macron": "Kimiiro Shōjo",
-     "double": "Kimiiro Shoujo",
-     "plain": "Kimiiro Shojo"
-    },
-    "en": "The Girl in Your Colour",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Girl in Your Colour"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ミマン",
-    "ruby": [
-     [
-      "未幡",
-      "みまん"
-     ]
-    ],
-    "romaji": {
-     "macron": "Miman",
-     "double": "Miman",
-     "plain": "Miman"
-    },
-    "en": "Miman",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I028932490",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00262"
    }
   },
   {
@@ -295613,6 +295369,17 @@
      "delivered_from": "2025-02-22",
      "last": null,
      "label": "none"
+    },
+    {
+     "work_id": "bw-531712",
+     "shop_url": "https://bookwalker.jp/series/531712/",
+     "volumes": 2,
+     "publisher": "ナンバーナイン",
+     "imprint": "百合コレ",
+     "first": null,
+     "delivered_from": "2025-06-25",
+     "last": null,
+     "label": "none"
     }
    ],
    "evidence": [
@@ -295645,6 +295412,24 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/series/512894/"
+    },
+    {
+     "source": "BOOK☆WALKER",
+     "holds": "volumes",
+     "read": "2026-08-05",
+     "url": "https://bookwalker.jp/series/531712/"
+    },
+    {
+     "source": "BOOK☆WALKER",
+     "holds": "delivery-date",
+     "read": "2026-08-05",
+     "url": "https://bookwalker.jp/series/531712/"
+    },
+    {
+     "source": "BOOK☆WALKER",
+     "holds": "attribution",
+     "read": "2026-08-05",
+     "url": "https://bookwalker.jp/series/531712/"
     }
    ],
    "work_en": {
@@ -297280,6 +297065,17 @@
      "delivered_from": "2025-04-25",
      "last": null,
      "label": "none"
+    },
+    {
+     "work_id": "bw-74320164-60e0-4288-ad8d-05f9c4814e11",
+     "shop_url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/",
+     "volumes": 1,
+     "publisher": "ナンバーナイン",
+     "imprint": "百合コレ",
+     "first": null,
+     "delivered_from": "2026-02-13",
+     "last": null,
+     "label": "none"
     }
    ],
    "evidence": [
@@ -297312,6 +297108,24 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/series/522692/"
+    },
+    {
+     "source": "BOOK☆WALKER",
+     "holds": "volumes",
+     "read": "2026-08-05",
+     "url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/"
+    },
+    {
+     "source": "BOOK☆WALKER",
+     "holds": "delivery-date",
+     "read": "2026-08-05",
+     "url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/"
+    },
+    {
+     "source": "BOOK☆WALKER",
+     "holds": "attribution",
+     "read": "2026-08-05",
+     "url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/"
     }
    ],
    "work_en": {
@@ -298833,135 +298647,6 @@
     "basis": "romaji",
     "reading_basis": "researched",
     "id": "c01977"
-   }
-  },
-  {
-   "work": "矢印の先には",
-   "author": "一ノらい",
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2025-06-25",
-   "first_event": "shop-delivery",
-   "first_followup": "unclassified",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w02354",
-   "completed_claim": null,
-   "print": [
-    {
-     "work_id": "bw-531712",
-     "shop_url": "https://bookwalker.jp/series/531712/",
-     "volumes": 2,
-     "publisher": "ナンバーナイン",
-     "imprint": "百合コレ",
-     "first": null,
-     "delivered_from": "2025-06-25",
-     "last": null,
-     "label": "none"
-    }
-   ],
-   "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=31",
-     "page": 31
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/531712/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "delivery-date",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/531712/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/531712/"
-    }
-   ],
-   "work_en": {
-    "reading": "ヤジルシ ノ サキ ニ ワ",
-    "ruby": [
-     [
-      "矢",
-      "や"
-     ],
-     [
-      "印",
-      "じるし"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "先",
-      "さき"
-     ],
-     [
-      "には",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Yajirushi no Saki ni wa",
-     "double": "Yajirushi no Saki ni wa",
-     "plain": "Yajirushi no Saki ni wa"
-    },
-    "en": "At the Point of the Arrow",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "At the Point of the Arrow"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "イチノライ",
-    "ruby": [
-     [
-      "一",
-      "いち"
-     ],
-     [
-      "ノらい",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Ichinorai",
-     "double": "Ichinorai",
-     "plain": "Ichinorai"
-    },
-    "basis": "romaji",
-    "reading_basis": "researched",
-    "id": "c01621"
    }
   },
   {
@@ -322049,131 +321734,6 @@
    }
   },
   {
-   "work": "ファイとスイののんびり旅行記",
-   "author": "たけの野々",
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2026-02-13",
-   "first_event": "shop-delivery",
-   "first_followup": "unclassified",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w02573",
-   "completed_claim": null,
-   "print": [
-    {
-     "work_id": "bw-74320164-60e0-4288-ad8d-05f9c4814e11",
-     "shop_url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/",
-     "volumes": 1,
-     "publisher": "ナンバーナイン",
-     "imprint": "百合コレ",
-     "first": null,
-     "delivered_from": "2026-02-13",
-     "last": null,
-     "label": "none"
-    }
-   ],
-   "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=27",
-     "page": 27
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "delivery-date",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/"
-    }
-   ],
-   "work_en": {
-    "reading": "ファイ ト スイ ノ ノンビリ リョコウキ",
-    "ruby": [
-     [
-      "ファイとスイののんびり",
-      null
-     ],
-     [
-      "旅",
-      "りょ"
-     ],
-     [
-      "行",
-      "こう"
-     ],
-     [
-      "記",
-      "き"
-     ]
-    ],
-    "romaji": {
-     "macron": "Fai to Sui no Nonbiri Ryokōki",
-     "double": "Fai to Sui no Nonbiri Ryokouki",
-     "plain": "Fai to Sui no Nonbiri Ryokoki"
-    },
-    "en": "Fai and Sui's Unhurried Travel Diary",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Fai and Sui's Unhurried Travel Diary"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "タケノノノ",
-    "ruby": [
-     [
-      "たけの",
-      null
-     ],
-     [
-      "野々",
-      "のの"
-     ]
-    ],
-    "romaji": {
-     "macron": "Takenonono",
-     "double": "Takenonono",
-     "plain": "Takenonono"
-    },
-    "basis": "romaji",
-    "reading_basis": "researched",
-    "id": "c01959"
-   }
-  },
-  {
    "work": "しすたー・いん・らう！",
    "author": "阿部かなり",
    "chapters": 0,
@@ -329256,7 +328816,7 @@
    "skipped": [],
    "collection": null,
    "state_claims": [],
-   "id": "w02641",
+   "id": "w01204",
    "completed_claim": null,
    "print": [
     {
@@ -329268,11 +328828,30 @@
      "first": "2021-04-01",
      "last": null,
      "label": "none"
+    },
+    {
+     "work_id": "madb-t-0ab9c167da38",
+     "shop_url": null,
+     "volumes": 2,
+     "publisher": "一迅社",
+     "distributor": "講談社",
+     "imprint": "YURIHIME COMICS",
+     "first": "2021-04",
+     "last": null,
+     "label": "yuri"
     }
    ],
    "latest_any": "2021-04-01",
    "latest_any_kind": "volume",
    "evidence": [
+    {
+     "kind": "imprint",
+     "rank": 1,
+     "type": "publisher",
+     "source": "一迅社",
+     "term": "YURIHIME COMICS",
+     "read": "2026-08-07"
+    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -329296,6 +328875,21 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/de839a9e64-217f-4e7f-9d06-f125120f6bd8/"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "volumes",
+     "read": "2026-08-07"
+    },
+    {
+     "source": "openBD",
+     "holds": "volumes",
+     "read": "2026-08-08"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "attribution",
+     "read": "2026-08-07"
     }
    ],
    "work_en": {
@@ -386718,144 +386312,6 @@
    }
   },
   {
-   "work": "クダンノフォークロア",
-   "author": "SukeraSparo / 志水はつみ / 煮汁",
-   "credits": [
-    {
-     "name": "SukeraSparo",
-     "role": "キャラクターデザイン原案"
-    },
-    {
-     "name": "志水はつみ"
-    },
-    {
-     "name": "煮汁"
-    }
-   ],
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2021-04",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w01204",
-   "completed_claim": null,
-   "print": [
-    {
-     "work_id": "madb-t-0ab9c167da38",
-     "shop_url": null,
-     "volumes": 2,
-     "publisher": "一迅社",
-     "distributor": "講談社",
-     "imprint": "YURIHIME COMICS",
-     "first": "2021-04",
-     "last": null,
-     "label": "yuri"
-    }
-   ],
-   "latest_any": "2021-04",
-   "latest_any_kind": "volume",
-   "evidence": [
-    {
-     "kind": "imprint",
-     "rank": 1,
-     "type": "publisher",
-     "source": "一迅社",
-     "term": "YURIHIME COMICS",
-     "read": "2026-08-07"
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    }
-   ],
-   "work_en": {
-    "reading": "クダンノフォークロア",
-    "romaji": {
-     "macron": "Kudannofōkuroa",
-     "double": "Kudannofookuroa",
-     "plain": "Kudannofokuroa"
-    },
-    "en": "FOLKLORE OF KUDAN",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "FOLKLORE OF KUDAN"
-    },
-    "reading_basis": "analyser",
-    "en_cite": {
-     "source": "openBD",
-     "kind": "publisher-jp",
-     "reviewed": "2026-08-06",
-     "isbn": "9784758022217"
-    }
-   },
-   "author_en": {
-    "reading": "SukeraSparo / シミズ ハツミ / ニジル",
-    "ruby": [
-     [
-      "SukeraSparo",
-      null
-     ],
-     [
-      " / ",
-      null
-     ],
-     [
-      "志",
-      "し"
-     ],
-     [
-      "水",
-      "みず"
-     ],
-     [
-      "はつみ",
-      null
-     ],
-     [
-      " / ",
-      null
-     ],
-     [
-      "煮汁",
-      "にじる"
-     ]
-    ],
-    "romaji": {
-     "macron": "SukeraSparo / Shimizu Hatsumi / Nijiru",
-     "double": "SukeraSparo / Shimizu Hatsumi / Nijiru",
-     "plain": "SukeraSparo / Shimizu Hatsumi / Nijiru"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji"
-   }
-  },
-  {
    "work": "冷たくて柔らか : PiNKY CANDY KiSS",
    "author": "ウオズミアミ",
    "credits": [
@@ -389445,147 +388901,6 @@
    }
   },
   {
-   "work": "らぶあんどぴーす",
-   "author": "原田重光 / 蘇募ロウ",
-   "credits": [
-    {
-     "name": "原田重光",
-     "role": "原作"
-    },
-    {
-     "name": "蘇募ロウ",
-     "role": "漫画"
-    }
-   ],
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2023-03",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w01452",
-   "completed_claim": {
-    "source": "cmoa.jp",
-    "volumes": 3,
-    "retrieved": "2026-08-05",
-    "provenance": "claimed"
-   },
-   "print": [
-    {
-     "work_id": "madb-t-6231afe73b19",
-     "shop_url": null,
-     "volumes": 2,
-     "publisher": "講談社",
-     "imprint": "月刊少年マガジン",
-     "first": "2023-03",
-     "last": null,
-     "label": "none"
-    }
-   ],
-   "latest_any": "2023-03",
-   "latest_any_kind": "volume",
-   "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
-    }
-   ],
-   "work_en": {
-    "reading": "ラブ アンド ピース",
-    "romaji": {
-     "macron": "Rabu Ando Pīsu",
-     "double": "Rabu Ando Piisu",
-     "plain": "Rabu Ando Pisu"
-    },
-    "en": "LOVE & PEACE",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "LOVE & PEACE"
-    },
-    "reading_basis": "analyser",
-    "en_cite": {
-     "source": "openBD",
-     "kind": "publisher-jp",
-     "reviewed": "2026-08-06",
-     "isbn": "9784065296486"
-    }
-   },
-   "author_en": {
-    "reading": "ハラダ シゲミツ / ソボロウ",
-    "ruby": [
-     [
-      "原",
-      "はら"
-     ],
-     [
-      "田",
-      "だ"
-     ],
-     [
-      "重光",
-      "しげみつ"
-     ],
-     [
-      " / ",
-      null
-     ],
-     [
-      "蘇",
-      "そ"
-     ],
-     [
-      "募",
-      "ぼ"
-     ],
-     [
-      "ロウ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Harada Shigemitsu / Soborō",
-     "double": "Harada Shigemitsu / Soborou",
-     "plain": "Harada Shigemitsu / Soboro"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji"
-   }
-  },
-  {
    "work": "昨日シたのに覚えてないの? : 百合えっち短編集",
    "author": "焼肉定食",
    "chapters": 0,
@@ -392146,129 +391461,6 @@
    }
   },
   {
-   "work": "小春と湊 : わたしのパートナーは女の子",
-   "author": "ひあるろん / 達磨",
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2025-07-14",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w03167",
-   "completed_claim": null,
-   "print": [
-    {
-     "work_id": "madb-t-bde72604ee95",
-     "shop_url": null,
-     "volumes": 1,
-     "publisher": "一迅社",
-     "distributor": "講談社",
-     "imprint": "IDコミックス. YH comics",
-     "first": "2025-07-14",
-     "last": null,
-     "label": "yuri"
-    }
-   ],
-   "latest_any": "2025-07-14",
-   "latest_any_kind": "volume",
-   "evidence": [],
-   "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    }
-   ],
-   "work_en": {
-    "reading": "コハル ト ミナト : ワタシ ノ パートナー ワ オンナノコ",
-    "ruby": [
-     [
-      "小春",
-      "こはる"
-     ],
-     [
-      "と",
-      null
-     ],
-     [
-      "湊",
-      "みなと"
-     ],
-     [
-      " : わたしのパートナーは",
-      null
-     ],
-     [
-      "女",
-      "おんな"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "子",
-      "こ"
-     ]
-    ],
-    "romaji": {
-     "macron": "Koharu to Minato : Watashi no Pātonā wa Onnanoko",
-     "double": "Koharu to Minato : Watashi no Paatonaa wa Onnanoko",
-     "plain": "Koharu to Minato : Watashi no Patona wa Onnanoko"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "ndlsearch.ndl.go.jp",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034139066",
-     "kind": "national-library",
-     "reviewed": "2026-08-08"
-    }
-   },
-   "author_en": {
-    "reading": "ヒアルロン / ダルマ",
-    "ruby": [
-     [
-      "ひあるろん",
-      null
-     ],
-     [
-      " / ",
-      null
-     ],
-     [
-      "達磨",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Hiaruron / Daruma",
-     "double": "Hiaruron / Daruma",
-     "plain": "Hiaruron / Daruma"
-    },
-    "reading_basis": "analyser",
-    "basis": "romaji",
-    "unverified": true
-   }
-  },
-  {
    "work": "甘やかし百合えっちアンソロジー",
    "author": "結野ちり / 葵季むつみ / ぴかち / しのぎあさ / 三本ひより / せきはら / 生肉",
    "chapters": 0,
@@ -394286,6 +393478,8 @@
   "w00281": "w00225",
   "w00486": "w00156",
   "w00650": "w00314",
+  "w01087": "w01016",
+  "w01173": "w01034",
   "w01227": "w00989",
   "w01228": "w00978",
   "w01230": "w01214",
@@ -394298,8 +393492,10 @@
   "w01237": "w01149",
   "w01238": "w01169",
   "w01239": "w01070",
+  "w01269": "w01103",
   "w01406": "w00579",
   "w01444": "w00848",
+  "w01452": "w00807",
   "w01479": "w00055",
   "w01480": "w00056",
   "w01481": "w00067",
@@ -394308,6 +393504,7 @@
   "w01485": "w00830",
   "w01487": "w00855",
   "w01489": "w00943",
+  "w01495": "w01168",
   "w01681": "w01352",
   "w01721": "w00522",
   "w01751": "w01391",
@@ -394318,9 +393515,12 @@
   "w01969": "w01541",
   "w02128": "w00993",
   "w02291": "w01382",
+  "w02354": "w02323",
   "w02493": "w01366",
+  "w02573": "w02340",
   "w02594": "w01344",
   "w02621": "w01381",
+  "w02641": "w01204",
   "w02804": "w01350",
   "w02864": "w01431",
   "w03016": "w02010",
@@ -394331,7 +393531,8 @@
   "w03153": "w02204",
   "w03154": "w02062",
   "w03155": "w02413",
-  "w03164": "w01627"
+  "w03164": "w01627",
+  "w03167": "w00166"
  },
  "generated": "2026-08-08",
  "credence": {
