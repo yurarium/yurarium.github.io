@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T21:10:20+00:00",
+ "generated": "2026-08-08T22:44:49+00:00",
  "since_last": {
-  "at": "2026-08-08T21:05:30+00:00",
+  "at": "2026-08-08T21:33:12+00:00",
   "statistics": {}
  },
  "means": {
@@ -418,14 +418,14 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 179,
-    "value": 179
+    "budget": 178,
+    "value": 178
    },
    {
     "name": "titles carrying cataloguing punctuation",
     "means": "titles a reader is shown that still hold a bibliography's own ISBD markup: an equals sign in any spelling, or a reissue marker from the closed set adapters/isbd.py holds. A subtitle after the same colon is content and is not counted. A rise means a capture route wrote a catalogue string through as a name.",
-    "budget": 15,
-    "value": 15
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "works offered twice in a list",
@@ -697,7 +697,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T21:05:29+00:00",
+  "previous_at": "2026-08-08T21:33:10+00:00",
   "drops": []
  },
  "outstanding": [
@@ -710,7 +710,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 158,
+   "count": 157,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -842,7 +842,6 @@
     "わくとこまこ",
     "アイドル総選挙4位だった私が魔王を倒すんですか？（Lilie comics）",
     "イヴとイヴ",
-    "エデンの処女（おとめ）",
     "キマシ!",
     "サタノファニ : 妖艶彩色本・極",
     "ナチュリーズ",
@@ -869,7 +868,7 @@
     "私に体、売ってみない?",
     "私の女神が今日も推せる 【単話版】",
     "能面 battle girl納言",
-    "豹藤さんは攻略（おと）したい",
+    "豹藤さんは攻略したい",
     "鮮血王女、皆殺す ～家族に裏切られ、処刑された少女は蘇り、『死神』となって復讐する～"
    ]
   },
@@ -888,7 +887,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 34,
+   "count": 33,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
@@ -930,7 +929,7 @@
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
     "targets a capture wrote no row for": 4,
-    "titles carrying cataloguing punctuation": 15,
+    "titles carrying cataloguing punctuation": 0,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 171,
     "uncertain readings": 53,
@@ -939,7 +938,7 @@
     "updates naming a work we do not hold": 27,
     "volumes with an isbn and no date": 0,
     "works offered twice in a list": 0,
-    "works showing a romanisation": 179,
+    "works showing a romanisation": 178,
     "works without English": 104
    }
   }
@@ -956,11 +955,11 @@
    "slow": 57
   },
   "english_basis": {
-   "translated": 2644,
+   "translated": 2645,
    "official-jp": 115,
    "licensed": 110,
    "none": 108,
-   "romaji": 71
+   "romaji": 70
   },
   "print_works": 2484,
   "print_only": 1698,

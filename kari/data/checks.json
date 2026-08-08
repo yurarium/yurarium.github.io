@@ -393,14 +393,14 @@
   {
    "name": "works showing a romanisation",
    "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-   "budget": 179,
-   "value": 179
+   "budget": 178,
+   "value": 178
   },
   {
    "name": "titles carrying cataloguing punctuation",
    "means": "titles a reader is shown that still hold a bibliography's own ISBD markup: an equals sign in any spelling, or a reissue marker from the closed set adapters/isbd.py holds. A subtitle after the same colon is content and is not counted. A rise means a capture route wrote a catalogue string through as a name.",
-   "budget": 15,
-   "value": 15
+   "budget": 0,
+   "value": 0
   },
   {
    "name": "works offered twice in a list",
@@ -423,7 +423,7 @@
   {
    "name": "stock phrasing in comments",
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
-   "budget": 903,
+   "budget": 898,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },

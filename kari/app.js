@@ -1223,7 +1223,9 @@ const EV_HOLDS = {
   // 2026-08-08 puts the ATTRIBUTION here and the NAME's own provenance on the credit's page: the
   // reading and its source belong to the person, and repeating them on every work they are on
   // would be one fact with many producers.
-  attribution: ['作者の出典', 'who credits the work'],
+  // EVERY OTHER VALUE HERE NAMES THE FACT CITED, and so does this one now. A catalogue states a
+  // byline the publisher set, which is the fact, and the label says so.
+  attribution: ['作者の出典', 'the byline'],
   // AND WHERE AN ENGLISH TITLE CAME FROM. `official-jp` and `licensed` are shown unmarked, because
   // neither is our claim, so the one form a reader has no reason to doubt was the one carrying no
   // evidence at all. 286 titles were in that state with the licensor's page sitting in the store.
