@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T10:17:49+00:00",
+ "generated": "2026-08-08T11:18:35+00:00",
  "since_last": {
-  "at": "2026-08-08T09:24:51+00:00",
+  "at": "2026-08-08T11:06:38+00:00",
   "statistics": {}
  },
  "means": {
@@ -38,7 +38,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 24,
+  "invariants_passing": 25,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -159,6 +159,11 @@
     "name": "nicovideo channels agree with our own records",
     "violations": 0,
     "examples": []
+   },
+   {
+    "name": "a fixture states where it came from",
+    "violations": 0,
+    "examples": []
    }
   ],
   "budgets": [
@@ -219,8 +224,8 @@
    {
     "name": "publisher readings nobody has settled",
     "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
-    "budget": 17,
-    "value": 17
+    "budget": 16,
+    "value": 16
    },
    {
     "name": "renderings with nothing to show",
@@ -237,8 +242,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 309,
-    "value": 309
+    "budget": 308,
+    "value": 308
    },
    {
     "name": "credits the corpus files as a venue",
@@ -285,8 +290,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 173,
-    "value": 173
+    "budget": 172,
+    "value": 172
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -299,6 +304,25 @@
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector — the adapter still returns rows, just emptier ones.",
     "budget": 14,
     "value": 14
+   },
+   {
+    "name": "invented markup in tests",
+    "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
+    "budget": 75,
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
+   },
+   {
+    "name": "nicovideo works with no rights",
+    "means": "ニコニコ works captured with no copyright line read off their page, which is the only field the platform gives that names a publisher. Falls when the capture re-runs against the widened pattern; does not reach zero, because a work its own author posted carries no copyright element at all.",
+    "budget": 189,
+    "value": 189
+   },
+   {
+    "name": "adapters fetching without net.py",
+    "means": "modules that call urlopen themselves instead of going through adapters/net.py, and so have no per-host pause, no retry for a 503, no status code to tell an absent work from a refused request, and no sight of a redirect. Falls as each one is migrated. Its floor is not zero: adapters/editions/capture.py sends one route an extra header and keeps everything else net.py has, and a route that must not be fetched at all should not be made convenient.",
+    "budget": 35,
+    "value": 35
    },
    {
     "name": "captures with no floor",
@@ -535,7 +559,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T09:24:49+00:00",
+  "previous_at": "2026-08-08T11:06:37+00:00",
   "drops": []
  },
  "outstanding": [
@@ -719,10 +743,11 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 22,
+   "count": 25,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
-    "author readings no source states": 309,
+    "adapters fetching without net.py": 35,
+    "author readings no source states": 308,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
@@ -733,13 +758,15 @@
     "credits the corpus files as a venue": 20,
     "implausible ruby spans": 0,
     "incomplete attested rows": 14,
+    "invented markup in tests": 75,
     "kana left in a romanisation": 0,
     "kana names with no stated division": 260,
     "labels with nothing to quote": 0,
     "names rendered two ways": 2,
+    "nicovideo works with no rights": 189,
     "one page cited for two claims": 12,
     "publisher keys the interface misses": 0,
-    "publisher readings nobody has settled": 17,
+    "publisher readings nobody has settled": 16,
     "publishers with no English": 0,
     "renderings with nothing to show": 38,
     "rows with a moving address": 0,
@@ -753,7 +780,7 @@
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 27,
     "volumes with an isbn and no date": 0,
-    "works showing a romanisation": 173,
+    "works showing a romanisation": 172,
     "works without English": 104
    }
   }
@@ -770,11 +797,11 @@
    "slow": 57
   },
   "english_basis": {
-   "translated": 2675,
+   "translated": 2676,
    "official-jp": 117,
    "licensed": 112,
    "none": 108,
-   "romaji": 65
+   "romaji": 64
   },
   "print_works": 2514,
   "print_only": 1727,
