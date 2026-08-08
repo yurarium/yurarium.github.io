@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T07:28:07+00:00",
+ "generated": "2026-08-08T09:24:51+00:00",
  "since_last": {
-  "at": "2026-08-08T00:22:15+00:00",
+  "at": "2026-08-08T09:18:48+00:00",
   "statistics": {}
  },
  "means": {
@@ -175,6 +175,18 @@
     "value": 12
    },
    {
+    "name": "kana left in a romanisation",
+    "means": "strings the shipped names file offers in place of Japanese that still hold a kana character, which undoes the one job a romanisation has. A rise means a renderer met a kana it has no table entry for and printed it.",
+    "budget": 1,
+    "value": 1
+   },
+   {
+    "name": "titles shorter than their own reading",
+    "means": "MADB records whose stated reading carries ISBD's mark for other title information while the stored name carries none, so the work is held under a name shorter than the one the catalogue read out. Falls when a source states the missing words; a rise means a route went back to reading the title out of one field.",
+    "budget": 3,
+    "value": 3
+   },
+   {
     "name": "labels with nothing to quote",
     "means": "records carrying a publisher-side yuri label whose imprint holds no term saying so, which is a label the work page cannot show a reader the evidence for. A rise means a pass has gone back to storing a field from a record other than the one that justified the label.",
     "budget": 0,
@@ -183,8 +195,8 @@
    {
     "name": "titles with no translation of our own",
     "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
-    "budget": 225,
-    "value": 225
+    "budget": 172,
+    "value": 172
    },
    {
     "name": "publishers with no English",
@@ -203,6 +215,12 @@
     "means": "strings the shipped maps spell one way as a publisher and another way as a person, which happens because a self-published work names its own author as its publisher. A rise means a publisher name was written by hand where the name store already spelt it.",
     "budget": 2,
     "value": 2
+   },
+   {
+    "name": "publisher readings nobody has settled",
+    "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
+    "budget": 21,
+    "value": 21
    },
    {
     "name": "renderings with nothing to show",
@@ -249,20 +267,20 @@
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 74,
-    "value": 74
+    "budget": 75,
+    "value": 75
    },
    {
     "name": "works without English",
     "means": "works that render in Japanese in English-only mode. Should be 0; a rise means the automatic naming pass stopped covering something it used to.",
-    "budget": 105,
-    "value": 105
+    "budget": 104,
+    "value": 104
    },
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 174,
-    "value": 174
+    "budget": 173,
+    "value": 173
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -301,6 +319,12 @@
     "value": 0
    },
    {
+    "name": "volumes with an isbn and no date",
+    "means": "volumes on a work page stating an ISBN and no publication date. An ISBN is a key into a registry that states one, so each of these is a lookup nobody has done. Falls as adapters/openbd/enrich.py --fetch works through the corpus. Its floor is the books openBD has no record of, which was 245 of 2,321 ISBNs when this was written.",
+    "budget": 0,
+    "value": 0
+   },
+   {
     "name": "undated cmoa candidates",
     "means": "the same count for the コミックシーモア half of the queue, falling as adapters/cmoa_volumes.py works through it. Its floor is high and known: cmoa states an ISBN or an 出版年月 only where a volume was printed, and 754 of the 1,844 rows come from two digital distributors whose pages carry neither.",
     "budget": 1220,
@@ -310,7 +334,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": 1
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "updates naming a work we do not hold",
@@ -404,20 +429,6 @@
    "drop": null
   },
   {
-   "source": "openbd",
-   "files": 509,
-   "works": 509,
-   "rows": 1098,
-   "retrieved": "2026-08-06",
-   "age_days": 2,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 0,
-   "well_formed": 0,
-   "malformed": 0,
-   "drop": null
-  },
-  {
    "source": "editions",
    "files": 1,
    "works": 4,
@@ -500,11 +511,25 @@
    "well_formed": 6127,
    "malformed": 0,
    "drop": null
+  },
+  {
+   "source": "openbd",
+   "files": 820,
+   "works": 820,
+   "rows": 2076,
+   "retrieved": "2026-08-08",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 0,
+   "well_formed": 0,
+   "malformed": 0,
+   "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T00:22:14+00:00",
+  "previous_at": "2026-08-08T09:18:47+00:00",
   "drops": []
  },
  "outstanding": [
@@ -517,7 +542,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 152,
+   "count": 151,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -558,7 +583,6 @@
     "Honey Latte Girl",
     "I love my friend",
     "I'm sorry I know",
-    "Killer Twinkle",
     "Koishi is desperate series.",
     "LOVE CUBIC",
     "LOVESHISHAMO",
@@ -689,7 +713,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 19,
+   "count": 22,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "bookwalker listings unconfirmed": 0,
@@ -702,24 +726,28 @@
     "credits the corpus files as a venue": 20,
     "implausible ruby spans": 0,
     "incomplete attested rows": 14,
+    "kana left in a romanisation": 1,
     "kana names with no stated division": 263,
     "labels with nothing to quote": 0,
     "names rendered two ways": 2,
     "one page cited for two claims": 12,
     "publisher keys the interface misses": 0,
+    "publisher readings nobody has settled": 21,
     "publishers with no English": 0,
     "renderings with nothing to show": 46,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 23,
-    "titles with no translation of our own": 225,
-    "uncertain readings": 74,
+    "titles shorter than their own reading": 3,
+    "titles with no translation of our own": 172,
+    "uncertain readings": 75,
     "undated cmoa candidates": 1220,
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 27,
-    "works showing a romanisation": 174,
-    "works without English": 105
+    "volumes with an isbn and no date": 0,
+    "works showing a romanisation": 173,
+    "works without English": 104
    }
   }
  ],
@@ -735,10 +763,10 @@
    "slow": 57
   },
   "english_basis": {
-   "translated": 2674,
+   "translated": 2675,
    "official-jp": 117,
    "licensed": 112,
-   "none": 109,
+   "none": 108,
    "romaji": 65
   },
   "print_works": 2514,

@@ -151,6 +151,18 @@
    "value": 12
   },
   {
+   "name": "kana left in a romanisation",
+   "means": "strings the shipped names file offers in place of Japanese that still hold a kana character, which undoes the one job a romanisation has. A rise means a renderer met a kana it has no table entry for and printed it.",
+   "budget": 1,
+   "value": 1
+  },
+  {
+   "name": "titles shorter than their own reading",
+   "means": "MADB records whose stated reading carries ISBD's mark for other title information while the stored name carries none, so the work is held under a name shorter than the one the catalogue read out. Falls when a source states the missing words; a rise means a route went back to reading the title out of one field.",
+   "budget": 3,
+   "value": 3
+  },
+  {
    "name": "labels with nothing to quote",
    "means": "records carrying a publisher-side yuri label whose imprint holds no term saying so, which is a label the work page cannot show a reader the evidence for. A rise means a pass has gone back to storing a field from a record other than the one that justified the label.",
    "budget": 0,
@@ -159,8 +171,8 @@
   {
    "name": "titles with no translation of our own",
    "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
-   "budget": 225,
-   "value": 225
+   "budget": 172,
+   "value": 172
   },
   {
    "name": "publishers with no English",
@@ -179,6 +191,12 @@
    "means": "strings the shipped maps spell one way as a publisher and another way as a person, which happens because a self-published work names its own author as its publisher. A rise means a publisher name was written by hand where the name store already spelt it.",
    "budget": 2,
    "value": 2
+  },
+  {
+   "name": "publisher readings nobody has settled",
+   "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
+   "budget": 21,
+   "value": 21
   },
   {
    "name": "renderings with nothing to show",
@@ -225,20 +243,20 @@
   {
    "name": "uncertain readings",
    "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-   "budget": 74,
-   "value": 74
+   "budget": 75,
+   "value": 75
   },
   {
    "name": "works without English",
    "means": "works that render in Japanese in English-only mode. Should be 0; a rise means the automatic naming pass stopped covering something it used to.",
-   "budget": 105,
-   "value": 105
+   "budget": 104,
+   "value": 104
   },
   {
    "name": "works showing a romanisation",
    "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-   "budget": 174,
-   "value": 174
+   "budget": 173,
+   "value": 173
   },
   {
    "name": "titles carrying cataloguing punctuation",
@@ -255,7 +273,7 @@
   {
    "name": "stock phrasing in comments",
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
-   "budget": 905,
+   "budget": 904,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },
@@ -287,6 +305,12 @@
   {
    "name": "bookwalker listings unconfirmed",
    "means": "BOOK☆WALKER rows whose series listing was read before the reader compared what it read against the shop's own 全N件. Until 2026-08-06 the last row of a listing swallowed the markup printed underneath it and was identified by the related-series link in there, so it was dropped; a listing is sorted newest first, so the row dropped is the OLDEST volume and `first_publication` is the earliest date across the volumes read. Falls as adapters/recon/bookwalker_volumes.py --follow-series re-reads them, and reaches zero, because every row counted here names a series to fetch.",
+   "budget": 0,
+   "value": 0
+  },
+  {
+   "name": "volumes with an isbn and no date",
+   "means": "volumes on a work page stating an ISBN and no publication date. An ISBN is a key into a registry that states one, so each of these is a lookup nobody has done. Falls as adapters/openbd/enrich.py --fetch works through the corpus. Its floor is the books openBD has no record of, which was 245 of 2,321 ISBNs when this was written.",
    "budget": 0,
    "value": 0
   },
