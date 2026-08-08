@@ -1,14 +1,8 @@
 {
- "generated": "2026-08-08T18:05:25+00:00",
+ "generated": "2026-08-08T18:21:32+00:00",
  "since_last": {
-  "at": "2026-08-08T17:49:09+00:00",
-  "statistics": {
-   "works": -9,
-   "print_works": -9,
-   "print_only": -9,
-   "with_identifier": -9,
-   "delivery_dated": -2
-  }
+  "at": "2026-08-08T18:05:25+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -256,7 +250,7 @@
    {
     "name": "labels with nothing to quote",
     "means": "records carrying a publisher-side yuri label whose imprint holds no term saying so, which is a label the work page cannot show a reader the evidence for. A rise means a pass has gone back to storing a field from a record other than the one that justified the label.",
-    "budget": 49,
+    "budget": 0,
     "value": 49
    },
    {
@@ -705,7 +699,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T17:49:08+00:00",
+  "previous_at": "2026-08-08T18:05:24+00:00",
   "drops": []
  },
  "outstanding": [
@@ -896,7 +890,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 35,
+   "count": 34,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
@@ -924,7 +918,7 @@
     "invented markup in tests": 75,
     "kana left in a romanisation": 0,
     "kana names with no stated division": 263,
-    "labels with nothing to quote": 49,
+    "labels with nothing to quote": 0,
     "names rendered two ways": 2,
     "nicovideo works with no rights": 60,
     "one page cited for two claims": 12,
