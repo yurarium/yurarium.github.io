@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-08T18:21:32+00:00",
+ "generated": "2026-08-08T18:55:56+00:00",
  "since_last": {
-  "at": "2026-08-08T18:05:25+00:00",
+  "at": "2026-08-08T18:51:43+00:00",
   "statistics": {}
  },
  "means": {
@@ -251,7 +251,7 @@
     "name": "labels with nothing to quote",
     "means": "records carrying a publisher-side yuri label whose imprint holds no term saying so, which is a label the work page cannot show a reader the evidence for. A rise means a pass has gone back to storing a field from a record other than the one that justified the label.",
     "budget": 0,
-    "value": 49
+    "value": 0
    },
    {
     "name": "titles with no translation of our own",
@@ -340,14 +340,14 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 312,
-    "value": 312
+    "budget": 316,
+    "value": 316
    },
    {
     "name": "credits the corpus files as a venue",
     "means": "credits in the author store that this corpus also records as a publisher or an imprint, and that carry no mark saying what they are. Candidates rather than faults, because a doujin artist is their own imprint. A rise means a route put a company where a byline goes.",
-    "budget": 20,
-    "value": 20
+    "budget": 16,
+    "value": 16
    },
    {
     "name": "credits carrying their own cataloguing",
@@ -699,7 +699,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T18:05:24+00:00",
+  "previous_at": "2026-08-08T18:51:42+00:00",
   "drops": []
  },
  "outstanding": [
@@ -895,7 +895,7 @@
    "rows": {
     "adapters fetching without net.py": 35,
     "an imprint field repeating its publisher": 360,
-    "author readings no source states": 312,
+    "author readings no source states": 316,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
@@ -908,7 +908,7 @@
     "credits matching a chapter": 0,
     "credits sharing a reading nobody has ruled on": 0,
     "credits that restate a name": 0,
-    "credits the corpus files as a venue": 20,
+    "credits the corpus files as a venue": 16,
     "full-width forms in English renderings": 37,
     "implausible ruby spans": 0,
     "imprint names the interface disagrees with": 0,
