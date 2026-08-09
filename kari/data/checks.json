@@ -271,8 +271,8 @@
   {
    "name": "renderings still Japanese in English mode",
    "means": "rows the interface shows in kana or kanji on an English page, on the surfaces where that is coverage rather than a fault: a credit line whose role has no gloss, a person with no reading, a publishing line with no name. The invariant blocks on work titles; this is the rest, and nothing counted it before.",
-   "budget": 109,
-   "value": 109
+   "budget": 77,
+   "value": 77
   },
   {
    "name": "credit fields the division does not account for",
@@ -307,8 +307,8 @@
   {
    "name": "author names romanised as one word",
    "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-   "budget": 1118,
-   "value": 1118
+   "budget": 1129,
+   "value": 1129
   },
   {
    "name": "divisions read back from a romanisation",
@@ -331,14 +331,14 @@
   {
    "name": "kana names with no stated division",
    "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-   "budget": 219,
-   "value": 219
+   "budget": 222,
+   "value": 222
   },
   {
    "name": "author readings no source states",
    "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-   "budget": 312,
-   "value": 312
+   "budget": 313,
+   "value": 313
   },
   {
    "name": "credits the corpus files as a venue",
