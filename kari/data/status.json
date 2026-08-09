@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-09T04:03:33+00:00",
+ "generated": "2026-08-09T08:47:55+00:00",
  "since_last": {
-  "at": "2026-08-09T02:57:18+00:00",
+  "at": "2026-08-09T04:03:33+00:00",
   "statistics": {}
  },
  "means": {
@@ -299,10 +299,10 @@
     "value": 18
    },
    {
-    "name": "renderings still Japanese in English mode",
-    "means": "rows the interface shows in kana or kanji on an English page, on the surfaces where that is coverage rather than a fault: a credit line whose role has no gloss, a person with no reading, a publishing line with no name. The invariant blocks on work titles; this is the rest, and nothing counted it before.",
-    "budget": 77,
-    "value": 77
+    "name": "renderings resting on a mechanical romanisation",
+    "means": "names an English page spells itself, because no source states how they are read. Each one carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
+    "budget": 97,
+    "value": 97
    },
    {
     "name": "credit fields the division does not account for",
@@ -313,8 +313,8 @@
    {
     "name": "full-width forms in English renderings",
     "means": "English renderings holding a full-width character and no kana or kanji, which is what narrowing the invariant to a script let past. Mostly a Latin pen name catalogued in full width; some are official titles and are correct, so this will not reach zero.",
-    "budget": 37,
-    "value": 37
+    "budget": 28,
+    "value": 28
    },
    {
     "name": "interface reads outside an entry point",
@@ -726,7 +726,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-09T02:57:17+00:00",
+  "previous_at": "2026-08-09T04:03:32+00:00",
   "drops": []
  },
  "outstanding": [
@@ -937,7 +937,7 @@
     "credits that restate a name": 0,
     "credits the corpus files as a venue": 16,
     "divisions read back from a romanisation": 3,
-    "full-width forms in English renderings": 37,
+    "full-width forms in English renderings": 28,
     "implausible ruby spans": 0,
     "imprint names the interface disagrees with": 0,
     "imprint strings that reach no line": 18,
@@ -955,7 +955,7 @@
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 16,
     "publishers with no English": 0,
-    "renderings still Japanese in English mode": 77,
+    "renderings resting on a mechanical romanisation": 97,
     "renderings with nothing to show": 33,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
