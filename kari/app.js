@@ -327,6 +327,101 @@ function nameFor(kind, raw, existing) {
   return NAMES[kind][foldKey(raw)] || null;
 }
 
+/* ── THE FLOOR UNDER AN ENGLISH PAGE ──────────────────────────────────────────────────────────
+
+   THE RULE THIS FILE NOW KEEPS. An English page shows no kana and no kanji. Where nothing states
+   how a name is read, it shows a mechanical romanisation and marks it, and the mark carries a
+   tooltip saying the reading is not attested. That is the owner's ruling, and it reverses what
+   this file used to do: 77 renderings fell through to the Japanese, because every English branch
+   below ended in `return raw`.
+
+   Showing incorrect kana in JAPANESE stays the least acceptable thing here, which is why none of
+   this touches the Japanese side. Furigana and kana are exactly as they were. The asymmetry is the
+   point: a reader in Japanese has the name itself and can judge our reading against it, and a
+   reader in English has this string and nothing to fall back on.
+
+   THE SPELLING IS THE BUILD'S. `adapters/names/romfloor.py` romanises every Japanese string that
+   can reach a surface, in the reader's three styles, and ships them under `floor`. A romaniser
+   written here would be a second producer of the one fact `kana.romanise` produces, which is the
+   shape STANDING-INSTRUCTIONS §3 counts seven shipped bugs from. Nothing here spells anything.
+
+   ONE SCRIPT CLASS FOR THE WHOLE FILE. `JA_TEXT` used to hold the same ranges four hundred lines
+   below, and `adapters/interface.py` holds them a third time. The check that blocks tests these
+   exact ranges, so a string that fails there has to be a string that fails here or the two
+   disagree about what a reader can read. U+3005 repeats the character before it, so it belongs to
+   a run and travels with its neighbour. */
+const JA_ANY     = /[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\u3005]/;
+const JA_ANY_RUN = /[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\u3005]+/g;
+
+/* THE MARK IS PLAIN TEXT AND THE TOOLTIP IS ADDED WHERE THERE IS MARKUP TO ADD IT TO.
+
+   A credit line is composed as TEXT. `creditText` walks the field by index replacing spans of the
+   original, `epText` strips a rendered work name off the front of a rendered chapter name, and the
+   search index reads the same strings; markup inside any of those breaks arithmetic they do on
+   characters. So a floored name carries `[?]` as part of its text, which is the same token
+   `uncertainMark` has always shown, and `floorHtml` turns that token into the hoverable mark once
+   the text has been escaped.
+
+   THE DEGRADED CASE IS STILL RIGHT, which is why the mark is text and not a pair of control
+   characters. A call site that forgets `floorHtml` shows `Ikuta Hana[?]` with no tooltip, and a
+   reader can still see the claim is ours. A pair of control characters would have gone out
+   invisible, which is the silence §4 is about. */
+const FLOOR_MARK = '[?]';
+const FLOOR_WHY = 'No source states how this name is read. It is romanised here by machine and '
+                + 'may be wrong.';
+
+/* Escaped text on its way into a page, with the floor's mark made hoverable.
+
+   ON ESCAPED TEXT ONLY. `uncertainMark` already emits this token inside a `<sup>`, so running this
+   over composed markup would put a mark inside a mark. Every caller below hands over the output of
+   `esc` and nothing else.
+
+   `floor` BESIDE `unc` BECAUSE THE TWO SAY DIFFERENT THINGS. `unc` alone means we hold a reading
+   and no source states it. This means we hold no reading at all and spelled the characters, which
+   is weaker again, and `renderings resting on a mechanical romanisation` counts it by asking the
+   interface for its markup. That is one class name shared between this file and check.py, and it
+   is the whole of the coupling: the check owns no copy of the rule that decides when to emit it. */
+function floorHtml(html) {
+  return String(html ?? '').split(FLOOR_MARK).join(
+    `<sup class="unc floor" title="${esc(FLOOR_WHY)}">${FLOOR_MARK}</sup>`);
+}
+
+/* What the build spelled for this string, in the style the reader chose.
+
+   A STRING WHERE THE THREE STYLES AGREE, AND AN OBJECT WHERE THEY DIFFER. Two thirds of these
+   hold no long vowel, so there is nothing for macron, doubled and plain to disagree about, and
+   writing the same spelling three times put half a megabyte on a file that loads on every visit. */
+function floorText(ja) {
+  const f = NAMES && NAMES.floor && NAMES.floor[foldKey(ja)];
+  if (!f) return null;
+  return (typeof f === 'string' ? f : (f[ROMAJI_STYLE] || f.macron)) || null;
+}
+
+/* THE ANSWER OF LAST RESORT, AND IT IS TOTAL. Every English branch in this file ends here, and it
+   returns no kana and no kanji whatever it is handed.
+
+   A STRING WITH NO JAPANESE IN IT IS ITS OWN ENGLISH FORM and takes no mark: a Latin pen name is
+   not a transliteration of anything, so folding `Ｍａｇｐｉｅ` to the width it is read at asserts
+   nothing. Everything else is ours and is marked. Where the build spelled the whole string, that
+   is the answer; where it did not, each Japanese run is spelled on its own, and a run the build
+   never reached becomes question marks. That last one should be unreachable, because the build
+   floors every string every surface carries, and it is written this way so that a hole in the map
+   arrives as something a reader can see rather than as Japanese under an English heading. */
+function enFallback(ja) {
+  const s = String(ja ?? '').normalize('NFKC');
+  if (!s || !JA_ANY.test(s)) return s;
+  const whole = floorText(s);
+  if (whole) return whole + FLOOR_MARK;
+  return s.replace(JA_ANY_RUN, run => {
+    const got = floorText(run);
+    if (got) return got + FLOOR_MARK;
+    // THE INTERPUNCT IS PUNCTUATION SITTING IN THE KANA BLOCK, and the build keeps it out of a run
+    // for that reason, so it is the one character here whose answer is not a reading.
+    return Array.from(run).map(
+      c => floorText(c) || (c === '\u30fb' ? ' \u00b7 ' : '?')).join('') + FLOOR_MARK;
+  });
+}
+
 /* What this record can offer at each level. Kept separate from the choosing, so the popup can
    count what is available without duplicating the rules that decide what is shown. */
 function enAvailable(rec) {
@@ -363,6 +458,16 @@ function enOf(rec) {
     // Spelling is ours to change; typography applies to every form, including a
     // licensor's, because the shape of an apostrophe is not part of the name.
     const text = curly(ours ? respell(have[level]) : have[level]);
+    // AN "ENGLISH NAME" THAT IS THE JAPANESE IS NOT AN ANSWER. MangaUpdates files 時一二 with an
+    // English heading equal to the characters, so the store holds `en: 時一二` at basis `romaji`
+    // and this function handed the kanji back as a rendering. Three credit lines and a work page
+    // heading printed it under an English toggle with a [?] beside it, which reads as a claim that
+    // this is how the name is written in English.
+    //
+    // SKIPPED RATHER THAN REFUSED, so a record whose first form is Japanese and whose second is
+    // real still answers with the second. Where none of them is Latin the record answers nothing
+    // and the caller reaches `enFallback`, which is where a name with no English belongs.
+    if (JA_ANY.test(text)) continue;
     return { text, ours, unverified: !!rec.unverified, basis: level };
   }
   return null;
@@ -461,10 +566,24 @@ function enHtml(rec, cls, isPerson) {
    row that never went through the store. */
 /* Chapter names, collections and credit lines. Not titles. A chapter name is mostly structure
    (第12話 -> Ch. 12) and a credit line is roles plus names, so they live in their own map, but
-   they are looked up exactly the same way. Falls through to the Japanese when nothing is held. */
+   they are looked up exactly the same way.
+
+   IT USED TO FALL THROUGH TO THE JAPANESE and that is the branch the owner's ruling closes. A
+   phrase nobody has rendered now reaches `enFallback`, and so does a phrase the map answers with
+   the Japanese it was given, which happens where the analyser could read nothing at all. */
+/* WHAT THE MAP HOLDS, WHICH IS NOT THE SAME QUESTION AS WHAT TO SHOW. `phraseOf` now always
+   answers something, so a caller choosing between the phrase and a record's own rendering can no
+   longer tell the two apart by comparing the answer with what it asked about. This is the map
+   speaking or staying silent, and a phrase that came back as the Japanese it was given counts as
+   silence: the analyser reads a string it cannot parse by handing it back. */
+function phraseHeld(ja) {
+  const got = (NAMES && NAMES.phrases && NAMES.phrases[foldKey(ja)]) || null;
+  return (got && !JA_ANY.test(got)) ? got : null;
+}
+
 function phraseOf(ja) {
-  if (LANG !== 'en' || !ja || !NAMES || !NAMES.phrases) return ja;
-  return NAMES.phrases[foldKey(ja)] || ja;
+  if (LANG !== 'en' || !ja) return ja;
+  return phraseHeld(ja) || enFallback(ja);
 }
 
 function workTextOf(ja) {
@@ -510,7 +629,11 @@ function workLabel(r) {
   const rec = nameFor('titles', r.work, r.work_en);
   if (LANG === 'en' && e) return esc(e.text) + uncertainMark(rec, e);
   if (LANG === 'en') { const ed = editionLabel(r.work); if (ed) return esc(ed); }
-  if (LANG === 'en') { const ph = phraseOf(r.work); if (ph !== r.work) return esc(ph); }
+  // ENGLISH LEAVES HERE AND NEVER FALLS PAST IT. `phraseOf` used to answer with the Japanese where
+  // the map held nothing, so this test was `ph !== r.work` and a title with no rendering dropped
+  // to the ruby line below and printed the Japanese under an English toggle. It now answers with
+  // the floor, which is Latin whatever the store holds.
+  if (LANG === 'en') return floorHtml(esc(phraseOf(r.work)));
   return ruby(r.work, rec) + (FURIGANA ? uncertainMark(rec) : '');
 }
 
@@ -560,8 +683,6 @@ function creditPeople(field) {
 /* A credit line built from the people in it, so it follows the same choices a single name does.
    Null where any of them is unknown to the store: half a line composed and half romanised whole
    reads as neither, and a reader cannot tell which half to trust. */
-// Kana and kanji. A credit with none of these is already Latin and is its own English form.
-const JA_TEXT = /[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff]/;
 
 /* A NAME ALREADY IN LATIN, WITH THE CATALOGUE'S TYPING TAKEN OFF.
 
@@ -578,10 +699,10 @@ const JA_TEXT = /[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff]/;
    `workLabel`, and the work's own name is what it publishes. */
 function plainLatin(n) {
   const s = String(n || '');
-  return (s && !JA_TEXT.test(s)) ? s.normalize('NFKC') : null;
+  return (s && !JA_ANY.test(s)) ? s.normalize('NFKC') : null;
 }
 
-/* ONE PERSON INSIDE A CREDIT LINE, in the form a reader is shown, or null where nothing renders.
+/* ONE PERSON INSIDE A CREDIT LINE, in the form a reader is shown. Never null in English.
 
    THE ROMANISATION IS NOT THE ONLY ENGLISH A RECORD CAN HOLD, which is what this was missing.
    `personName` is built from the kana, so a record with an English name and no reading behind it
@@ -591,14 +712,19 @@ function plainLatin(n) {
    to `enOf` for a single byline; the lines composed out of parts did not.
 
    Order follows the single-name path exactly: the reader's romanisation and name order first,
-   then whatever English the record holds, then the surface where it is already Latin. */
+   then whatever English the record holds, then the surface where it is already Latin, and then the
+   floor, which is where the 31 compound credit lines were losing a name each.
+
+   IT STILL ANSWERS NULL IN JAPANESE, and every caller tests for that. A Japanese page shows the
+   name as written and has nothing to fall back to. */
 function personShown(n) {
   const rec = nameFor('authors', n, null);
   const e = rec && enOf(rec);
   /* A NAME ALREADY IN LATIN NEEDS NO RECORD. `倫理きよ, Syousa., jimao` composed nothing because
      Syousa. and jimao are not in the store, having no reading to hold, so the whole line fell
      through to the Japanese. A part with no Japanese in it is its own English form. */
-  return personName(rec) || (e && e.text) || plainLatin(n);
+  return personName(rec) || (e && e.text) || plainLatin(n)
+    || (LANG === 'en' ? enFallback(n) : null);
 }
 
 function creditFromParts(ja) {
@@ -622,18 +748,22 @@ function authorLabel(r) {
   // name-order choice reaching a line at all.
   if (LANG === 'en') {
     const composedEarly = creditFromParts((r.author || '').trim());
-    if (composedEarly) return esc(composedEarly);
+    if (composedEarly) return floorHtml(esc(composedEarly));
     /* AND WHERE ONE NAME IN THE LINE IS UNKNOWN, THE REST STILL RENDER. The composition above is
        all-or-nothing on the argument that half a line composed and half romanised whole reads as
        neither, and that argument is about the FALLBACK it had: the analyser's phrase, one fixed
        string covering the whole field. `creditText` is a different fallback. It renders each name
-       in its own state and leaves the field's own separators alone, so an unknown name shows as
-       the Japanese §6 says it should while the people beside it read normally. Before this,
-       `ZCloud / 伊実 / 角川青羽` put all three in Japanese because two of them have no reading. */
+       in its own state and leaves the field's own separators alone, so `ZCloud / 伊実 / 角川青羽`
+       no longer puts all three in Japanese because two of them have no reading.
+
+       IT USED TO STOP HALF WAY, and that is the shape the owner's ruling closes. Each name was
+       rendered in its own state, and one of those states was the Japanese, so 31 credit lines had
+       some names romanised and some not: `Sasa Tōgorō / 黒布直導`. Every part now reaches the
+       floor, so no part of a line can be Japanese while its neighbours are not. */
     const div = creditDiv((r.author || '').trim());
     if (div && div.p.filter(x => x.n).length > 1) {
       const inPlace = creditText((r.author || '').trim());
-      if (inPlace) return esc(inPlace);
+      if (inPlace) return floorHtml(esc(inPlace));
     }
   }
   // A CREDIT LINE IS ANNOTATED PERSON BY PERSON. The line as a whole has no record, so it had no
@@ -663,15 +793,11 @@ function authorLabel(r) {
   }
 
   if (!e) {
-    const ph = phraseOf((r.author || '').trim());
     // A LATIN NAME THE STORE HAS NOTHING FOR IS STILL THE NAME, and the catalogue's full width is
-    // not part of it. Only where the phrase map added nothing, so a rendering somebody recorded is
-    // never overwritten by a fold.
-    if (LANG === 'en' && ph === (r.author || '').trim()) {
-      const latin = plainLatin(ph);
-      if (latin) return esc(latin);
-    }
-    return esc(ph);
+    // not part of it. `enFallback` folds it, inside `phraseOf`, and only where the phrase map added
+    // nothing, so a rendering somebody recorded is never overwritten by a fold.
+    const ph = phraseOf((r.author || '').trim());
+    return LANG === 'en' ? floorHtml(esc(ph)) : esc(ph);
   }
   if (LANG === 'en') {
     // A CREDIT LINE is roles and several people, and the phrase map renders those: the roles
@@ -684,10 +810,15 @@ function authorLabel(r) {
     // "Suzuka Raika" after スズミ ライカ. It also dropped the mark: the phrase path returns a plain
     // string, so a romanisation resting on a guess was shown to an English reader with nothing to
     // say so, and an English reader has no Japanese to fall back on.
+    //
+    // ASKED WHETHER THE MAP HOLDS ONE, not whether its answer differs from the question. `phraseOf`
+    // now answers with the floor where the map is silent, so the old test was true of every line
+    // and would have taken a mechanical romanisation of the whole field over the record's own
+    // rendering of the name in it.
     const raw = (r.author || '').trim();
     if (/[\/／,、･・]|原作|作画|漫画|構成|脚本|企画/.test(raw)) {
-      const ph = phraseOf(raw);
-      if (ph !== raw) return esc(ph);
+      const ph = phraseHeld(raw);
+      if (ph) return esc(ph);
     }
     return enHtml(rec, 'byen', true);
   }
@@ -853,7 +984,13 @@ function roleWord(r) {
   const raw = String(r || '').trim();
   if (!raw) return '';
   const atoms = raw.split(/[・･/／\s\u3000]+/).filter(Boolean);
-  if (!atoms.every(a => ROLE_EN[a])) return ROLE_EN[raw] ? T(raw, ROLE_EN[raw]) : raw;
+  // A ROLE WITH NO GLOSS IS A MISSING TABLE ENTRY, and `every credit role has an English gloss`
+  // blocks on one at zero, so this fallback should never be what a reader meets. It is the floor
+  // anyway, because a role sitting in kanji on an English page is the thing that may not happen
+  // and an invariant is a check rather than a guarantee about the next role somebody adds.
+  if (!atoms.every(a => ROLE_EN[a])) {
+    return ROLE_EN[raw] ? T(raw, ROLE_EN[raw]) : T(raw, enFallback(raw));
+  }
   return T(raw, atoms.map(a => ROLE_EN[a]).join(' and '));
 }
 
@@ -924,6 +1061,24 @@ function creditGap(text) {
   return (LANG === 'en' && /^[・･]$/.test(text)) ? ' / ' : null;
 }
 
+/* WHATEVER SITS BETWEEN TWO NAMES THE BUILD DIVIDED, in English.
+
+   A gap holds the field's brackets and separators, and where the division did not account for the
+   whole field it holds words as well: a company nobody split out, or a role the splitter did not
+   attach to anybody. `[[翻訳協力]][BPS株式会社]` is both at once.
+
+   GLOSSED BEFORE IT IS ROMANISED. `roleWord` reads the one role table this file has, so 原著 comes
+   out `original work` rather than `Gencho`, and a run that is not a role falls through the same
+   function to the floor. Asking the table first is not a second opinion about what a role is: the
+   division already claimed every role it recognised, and this is the vocabulary answering about
+   what it left. */
+function creditGapText(text) {
+  // FOLDED TO THE WIDTH IT IS READ AT, like every other English rendering here. `enFallback` does
+  // this for the strings it is given and this replaced it on the gaps, so `Ｓｙｏｕｓａ．` in a
+  // bracket went back to full width and `full-width forms in English renderings` rose by three.
+  return String(text ?? '').normalize('NFKC').replace(JA_ANY_RUN, run => roleWord(run));
+}
+
 /* A CREDIT FIELD WITH EVERY NAME AND EVERY ROLE IN IT RENDERED, IN PLACE.
 
    IN PLACE AND NOT REBUILT, because rebuilding drops whatever the division did not find and a
@@ -943,7 +1098,10 @@ function creditText(c) {
   const raw = String(c || '');
   if (LANG !== 'en' || !raw) return raw;
   const div = creditDiv(raw);
-  if (!div) return raw;
+  // A FIELD NOBODY DIVIDED IS STILL A FIELD A READER MEETS. This handed the string back as the
+  // catalogue wrote it, which is Japanese under an English heading whenever the splitter met a
+  // shape it could not divide. The floor spells the whole field instead, marked.
+  if (!div) return enFallback(raw);
   const map = foldSpans(raw);
   const spans = [];
   const claim = (s, e, text) => { spans.push([s, e, text]); };
@@ -958,8 +1116,12 @@ function creditText(c) {
     if (sep !== null) claim(previous, at[0], sep);
     cursor = at[2];
     previous = at[1];
+    // `personShown` answers for every name in English mode, so the claimed span is never the
+    // surface any more. The guard stays because this function is also the one place a null would
+    // put Japanese back into a line, and §4 says to test for the bad value rather than assume it
+    // cannot arrive.
     const shown = personShown(part.n);
-    claim(at[0], at[1], shown === null ? raw.slice(at[0], at[1]) : shown);
+    claim(at[0], at[1], shown === null ? enFallback(raw.slice(at[0], at[1])) : shown);
   }
   // A NAME THE FIELD WRITES TWICE IS RENDERED TWICE. `シチサブロー / シチサブロー` and
   // `ホマレ / 大鷹シン / オオタカシン / ホマレ` repeat a credit, and the splitter records each name
@@ -1006,13 +1168,19 @@ function creditText(c) {
     if (at && !taken(at[0], at[1])) claim(at[0], at[1], '');
   }
   spans.sort((a, b) => a[0] - b[0]);
+  // WHAT NOBODY CLAIMED IS THE OTHER HALF OF THE LINE. The spans are the names and the roles the
+  // build identified; between them sit the field's brackets, its separators and anything the
+  // division did not account for, and that last group is where a company sat in kanji between two
+  // romanised people. `[[翻訳協力]][BPS株式会社] / [著]時一二` glossed the role, romanised nothing
+  // else, and printed the firm's name in Japanese. Each gap is floored on its own, so a gap that
+  // is only punctuation comes back untouched and a gap holding a name comes back spelled.
   let out = '', at = 0;
   for (const [s, e, text] of spans) {
     if (s < at) continue;
-    out += raw.slice(at, s) + text;
+    out += creditGapText(raw.slice(at, s)) + text;
     at = e;
   }
-  out += raw.slice(at);
+  out += creditGapText(raw.slice(at));
   // TAKING A SPAN OUT LEAVES THE PUNCTUATION THAT WAS AROUND IT. A reading removed from
   // `紬めめ / ツムギメメ` leaves a trailing space and a line ending in a separator reads as a
   // credit the page failed to draw. Only whitespace and separators are touched, and only at the
@@ -1022,9 +1190,14 @@ function creditText(c) {
 }
 
 /* The catalogue tab's credit line. Kept as a name of its own because the tab reads `index[].c` and
-   `adapters/interface.py` names the function that renders it. */
+   `adapters/interface.py` names the function that renders it.
+
+   IT RETURNS MARKUP AND THE TAB NO LONGER ESCAPES IT. `creditText` composes text, and a name it
+   floored carries the `[?]` token; the tooltip that says why is markup, and this is where the line
+   becomes markup. The escaping happens here rather than at the call site so that a second caller
+   cannot get the raw text by accident. */
 function credit(c) {
-  return creditText(c);
+  return floorHtml(esc(creditText(c)));
 }
 
 /* THE PEOPLE IN A CATALOGUED CREDIT FIELD, each rendered by the store like any other name.
@@ -1047,7 +1220,10 @@ function credit(c) {
    how a credit disappears without anything reporting it. */
 function creditNames(creator) {
   const div = creditDiv(creator);
-  if (!div || div.part) return creditText(creator);
+  // MARKUP, LIKE THE BRANCH BELOW IT. This returned `creditText`'s plain text into a slot the
+  // releases tab interpolates, so the one branch of this function that could carry a floored name
+  // was also the one that went out unescaped and without its tooltip.
+  if (!div || div.part) return floorHtml(esc(creditText(creator)));
   // THE PEOPLE AND NOT THEIR JOBS. This tab has never shown a role and showing one here would
   // widen a byline the 発売 list has one line for; `creditText` above keeps the role where the
   // field put it, and the work page states it in full.
@@ -1122,8 +1298,13 @@ function pubMark(n) {
 function pubBoth(n) {
   if (!n) return '';
   const en = pubEn(n);
-  if (!en || en === n) return n;
-  return LANG === 'en' ? en : LANG === 'ja' ? n : `${n} / ${en}`;
+  // A HOUSE THE MAP HAS NOTHING FOR IS FLOORED LIKE ANY OTHER NAME. 集英社ホームコミックス is the
+  // umbrella a sub-line sits under and no entry answers for it, so this returned the Japanese into
+  // an English page's imprint cell. The floor spells it and marks it, and the pair form keeps the
+  // Japanese on its own side where a reader asked for both.
+  const shown = (en && en !== n) ? en : (LANG === 'en' ? enFallback(n) : null);
+  if (shown === null) return n;
+  return LANG === 'en' ? shown : LANG === 'ja' ? n : `${n} / ${shown}`;
 }
 
 function platBoth(n) {
@@ -1956,7 +2137,7 @@ function publisherPartsHtml(p) {
   }
   if (p.imprint) {
     const im = imprintOf(p.imprint);
-    out.push(esc(pubBoth(im)) + pubMark(im));
+    out.push(floorHtml(esc(pubBoth(im))) + pubMark(im));
   }
   return out.filter(Boolean);
 }
@@ -2472,7 +2653,7 @@ function renderWorkPage() {
     // A collection is a work, so its name obeys the same contract `workLabel` does and needs the
     // same wrapper. `workTextOf` answers in Japanese for anything but `en`, so this cell was the
     // last title on the page still stuck in one script under 併記.
-    fact(T('収録', 'Part of'), bilingual(() => esc(workTextOf(r.collection))));
+    fact(T('収録', 'Part of'), bilingual(() => floorHtml(esc(workTextOf(r.collection)))));
   }
 
 
@@ -2727,23 +2908,31 @@ function linkedCredits(r) {
     // credits, so this is the common case rather than an edge.
     const rec = nameFor('authors', nm, null);
     if (rec && rec.id) linked = true;
+    // THE GAP BETWEEN TWO NAMES IS PART OF THE LINE. It holds the field's brackets and its
+    // separators, and where the division did not account for the whole field it holds a name as
+    // well, which is how a company sat in kanji between two romanised people on a work page.
+    // `creditText` composes the same field on the catalogue tab and floors its gaps for the same
+    // reason; the two walk one division and must not answer differently (§3).
     const gap = rest.slice(0, at);
     const sep = placed ? creditGap(gap) : null;
-    out += (sep === null ? esc(gap) : sep) + creditChip(nm);
+    const between = sep === null
+      ? floorHtml(esc(LANG === 'en' ? creditGapText(gap) : gap)) : sep;
+    out += between + creditChip(nm);
     rest = rest.slice(at + nm.length);
     placed += 1;
   }
   // ALL OF IT OR NONE OF IT. A line whose parts do not all appear in the field would come back
   // half rewritten, and `authorLabel` on the whole line is what this replaces rather than
   // improves: it composes a credit line from its people and knows to fail as a whole.
-  return (linked && placed === parts.length) ? out + esc(rest) : authorLabel(r);
+  const tail = floorHtml(esc(LANG === 'en' ? creditGapText(rest) : rest));
+  return (linked && placed === parts.length) ? out + tail : authorLabel(r);
 }
 
 /* A HOUSE'S NAME, LINKED. Same rule: the name itself is `pubBoth`'s, which is what the volumes
    section already shows, and the identifier comes off the shipped map beside it. */
 function publisherChip(name) {
   const rec = pubRec(name) || pubRec(String(name || '').replace(/^\s*\[[^\]]*\]\s*/, '').trim());
-  const shown = esc(pubBoth(name)) + pubMark(name);
+  const shown = floorHtml(esc(pubBoth(name))) + pubMark(name);
   return rec && rec.id
     ? `<a class="wplink pub" href="${esc(BASE)}publisher/${esc(rec.id)}/">${shown}</a>` : shown;
 }
@@ -3881,7 +4070,7 @@ function detailList(rows) {
       ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">${esc(T('公開'))} ${esc(r.pub)}</div>` : ''}
       <div class="line2">
         ${r.author ? `<span class="meta by">${authorLabel(r)}</span>` : ''}
-        ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection. The collection's genre label does not necessarily describe every instalment">${esc(workTextOf(r.collection))}</span>` : ''}
+        ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection. The collection's genre label does not necessarily describe every instalment">${floorHtml(esc(workTextOf(r.collection)))}</span>` : ''}
         <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(platName(r.plat_name || r.plat))}</span>
         ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(platName(r.plat_name))}, not a platform of its own">${esc(r.channel_name)}</span>` : ''}
         ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">${esc(T('転載'))}</span>` : ''}
@@ -4014,7 +4203,7 @@ function renderSeries() {
               r.first ? ` · ${esc(r.first)}` : ''}`
           : `${r.chapters}${r.partial ? '+' : ''} ${esc(T('話'))}${
             r.latest ? ` · ${esc(T('最新'))} ${esc(fmtDate(r.latest, { year: true }))}${
-              r.latest_ep ? ' ' + esc(phraseOf(r.latest_ep)) : ''}` : ''}`}</div>
+              r.latest_ep ? ' ' + floorHtml(esc(phraseOf(r.latest_ep))) : ''}` : ''}`}</div>
         ${r.author ? `<div class="line2"><span class="meta by">${authorLabel(r)}</span></div>` : ''}`)}
       ${r.id ? '</a>' : ''}
         <div class="srcs">${r.sources.map(s => {
@@ -4085,7 +4274,7 @@ function renderCat() {
         <span>${bilingual(() => `
           <span class="t">${workLabel({ work: w.t })}</span>${
             w.y && LANG !== 'en' ? `<span class="yomi">${esc(w.y)}</span>` : ''}
-          <br><span class="meta">${esc(credit(w.c) || '—')}</span>`)}</span>
+          <br><span class="meta">${credit(w.c) || '—'}</span>`)}</span>
         <span class="num">${esc(w.d || '—')}<br>${w.n} ${esc(L('巻', w.n === 1 ? 'vol' : 'vols'))}</span>
       </button>
     </li>`).join('');
