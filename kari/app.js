@@ -370,20 +370,32 @@ const FLOOR_MARK = '[?]';
 const FLOOR_WHY = 'No source states how this name is read. It is romanised here by machine and '
                 + 'may be wrong.';
 
+/* WHAT THE CLASS MEANS, AND IT IS ONE SENTENCE: no source states how this name is read, so the
+   Latin a reader is looking at is ours. `renderings resting on a mechanical romanisation` counts
+   it by asking the interface for its markup, which makes this the one class name shared between
+   this file and check.py, and the whole of the coupling: the check owns no copy of the rule that
+   decides when to emit it.
+
+   TWO PLACES EMIT IT AND THE STRING IS WRITTEN ONCE (§3). `floorHtml` marks a name the store holds
+   nothing for, spelled out of the characters. `uncertainMark` marks a name whose reading came from
+   a community database, spelled out of kana an anonymous editor typed. The second arrived with the
+   project owner's correction of 2026-08-09: Wikidata raises the floor on the string and does not
+   overcome the record's fallback basis, so a reading from it is a better spelling of a name still
+   resting on our own work, and it belongs in the same count as the rest of them.
+
+   `unc` WITHOUT `floor` IS STILL A DIFFERENT STATEMENT. It says we hold a reading nobody states,
+   which is what an analyser's answer is: no editor typed it and there is no page to send anyone to.
+   The floor class says the string is ours and names why. */
+const FLOOR_CLASS = 'unc floor';
+
 /* Escaped text on its way into a page, with the floor's mark made hoverable.
 
    ON ESCAPED TEXT ONLY. `uncertainMark` already emits this token inside a `<sup>`, so running this
    over composed markup would put a mark inside a mark. Every caller below hands over the output of
-   `esc` and nothing else.
-
-   `floor` BESIDE `unc` BECAUSE THE TWO SAY DIFFERENT THINGS. `unc` alone means we hold a reading
-   and no source states it. This means we hold no reading at all and spelled the characters, which
-   is weaker again, and `renderings resting on a mechanical romanisation` counts it by asking the
-   interface for its markup. That is one class name shared between this file and check.py, and it
-   is the whole of the coupling: the check owns no copy of the rule that decides when to emit it. */
+   `esc` and nothing else. */
 function floorHtml(html) {
   return String(html ?? '').split(FLOOR_MARK).join(
-    `<sup class="unc floor" title="${esc(FLOOR_WHY)}">${FLOOR_MARK}</sup>`);
+    `<sup class="${FLOOR_CLASS}" title="${esc(FLOOR_WHY)}">${FLOOR_MARK}</sup>`);
 }
 
 /* What the build spelled for this string, in the style the reader chose.
@@ -509,14 +521,22 @@ function uncertainMark(rec, e) {
   if (!unattested) return '';
   // THE SAME MARK, AND A DIFFERENT SENTENCE, WHERE A SOURCE DID PRINT THE KANA. The project owner
   // ruled on 2026-08-09 that Wikidata is noncanonical and is used to raise the floor on romaji, so
-  // 67 readings hold `community-printed`: somebody typed the kana, and nobody who answers for the
+  // 73 readings hold `community-printed`: somebody typed the kana, and nobody who answers for the
   // person's name did. "not attested by any source" would be false of those, and dropping the mark
   // would be worse, because the pronunciation is exactly what is unconfirmed. So the superscript
   // stands and the tooltip says which of the two states this is.
-  const why = rec.reading_basis === 'community-printed'
+  //
+  // AND IT CARRIES THE FLOOR CLASS, which is the owner's correction of the same day: Wikidata does
+  // not overcome the record's fallback basis, so a name resting on it is a name an English page
+  // spells for itself and belongs in the count that says so. The sentence stays the specific one
+  // rather than becoming FLOOR_WHY, because naming the community database tells a reader where to
+  // go and settle it; the class and the tooltip answer two different questions and only the class
+  // is counted.
+  const wikidata = rec.reading_basis === 'community-printed';
+  const why = wikidata
     ? 'the reading this is romanised from comes from a community-edited database, and no publisher or library confirms it'
     : 'the reading this is romanised from is not attested by any source, and may be wrong';
-  return `<sup class="unc" title="${esc(why)}">[?]</sup>`;
+  return `<sup class="${wikidata ? FLOOR_CLASS : 'unc'}" title="${esc(why)}">[?]</sup>`;
 }
 
 function enHtml(rec, cls, isPerson) {
