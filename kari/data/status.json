@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-09T23:10:47+00:00",
+ "generated": "2026-08-09T23:44:24+00:00",
  "since_last": {
-  "at": "2026-08-09T22:58:46+00:00",
+  "at": "2026-08-09T23:33:29+00:00",
   "statistics": {}
  },
  "means": {
@@ -517,6 +517,13 @@
     "value": 13
    },
    {
+    "name": "impossibilities asserted without evidence",
+    "means": "a comment saying something cannot happen, naming nothing that proves it",
+    "budget": 8,
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
+   },
+   {
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
@@ -770,7 +777,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-09T22:58:45+00:00",
+  "previous_at": "2026-08-09T23:33:28+00:00",
   "drops": []
  },
  "outstanding": [
@@ -960,7 +967,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 39,
+   "count": 40,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
@@ -986,6 +993,7 @@
     "divisions resting on a community database": 88,
     "full-width forms in English renderings": 28,
     "implausible ruby spans": 0,
+    "impossibilities asserted without evidence": 8,
     "imprint names the interface disagrees with": 0,
     "imprint strings that reach no line": 18,
     "incomplete attested rows": 13,

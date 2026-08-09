@@ -492,6 +492,13 @@
    "value": 13
   },
   {
+   "name": "impossibilities asserted without evidence",
+   "means": "a comment saying something cannot happen, naming nothing that proves it",
+   "budget": 8,
+   "value": null,
+   "not_measured": "source-quality budget; measured at check-in"
+  },
+  {
    "name": "stock phrasing in comments",
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
    "budget": 895,
