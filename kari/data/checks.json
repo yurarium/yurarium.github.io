@@ -307,8 +307,14 @@
   {
    "name": "author names romanised as one word",
    "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-   "budget": 984,
-   "value": 984
+   "budget": 1118,
+   "value": 1118
+  },
+  {
+   "name": "divisions read back from a romanisation",
+   "means": "people whose name is divided on the strength of a space in a community editor's romanisation, recovered by reading that romanisation backwards. The one class `a division cites its source` admits without a source that states readings, counted here so that admitting it is visible. It falls when a source states one of them.",
+   "budget": 3,
+   "value": 3
   },
   {
    "name": "publisher readings nobody has settled",

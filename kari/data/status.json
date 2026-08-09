@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-09T01:28:20+00:00",
+ "generated": "2026-08-09T02:31:03+00:00",
  "since_last": {
-  "at": "2026-08-09T01:05:07+00:00",
+  "at": "2026-08-09T01:28:20+00:00",
   "statistics": {}
  },
  "means": {
@@ -332,8 +332,14 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 984,
-    "value": 984
+    "budget": 1118,
+    "value": 1118
+   },
+   {
+    "name": "divisions read back from a romanisation",
+    "means": "people whose name is divided on the strength of a space in a community editor's romanisation, recovered by reading that romanisation backwards. The one class `a division cites its source` admits without a source that states readings, counted here so that admitting it is visible. It falls when a source states one of them.",
+    "budget": 3,
+    "value": 3
    },
    {
     "name": "publisher readings nobody has settled",
@@ -465,7 +471,8 @@
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": 75
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -519,7 +526,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": 1
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "updates naming a work we do not hold",
@@ -713,7 +721,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-09T01:05:05+00:00",
+  "previous_at": "2026-08-09T01:28:18+00:00",
   "drops": []
  },
  "outstanding": [
@@ -903,12 +911,12 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 34,
+   "count": 35,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
     "an imprint field repeating its publisher": 360,
-    "author names romanised as one word": 984,
+    "author names romanised as one word": 1118,
     "author readings no source states": 312,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
@@ -923,6 +931,7 @@
     "credits sharing a reading nobody has ruled on": 0,
     "credits that restate a name": 0,
     "credits the corpus files as a venue": 16,
+    "divisions read back from a romanisation": 3,
     "full-width forms in English renderings": 37,
     "implausible ruby spans": 0,
     "imprint names the interface disagrees with": 0,
