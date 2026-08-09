@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-09T01:05:07+00:00",
+ "generated": "2026-08-09T01:28:20+00:00",
  "since_last": {
-  "at": "2026-08-08T23:41:36+00:00",
+  "at": "2026-08-09T01:05:07+00:00",
   "statistics": {}
  },
  "means": {
@@ -465,8 +465,7 @@
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": null,
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 75
    },
    {
     "name": "nicovideo works with no rights",
@@ -520,8 +519,7 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": null,
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 1
    },
    {
     "name": "updates naming a work we do not hold",
@@ -715,7 +713,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-08T23:41:35+00:00",
+  "previous_at": "2026-08-09T01:05:05+00:00",
   "drops": []
  },
  "outstanding": [
