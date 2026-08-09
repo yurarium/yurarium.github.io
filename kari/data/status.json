@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-09T12:51:03+00:00",
+ "generated": "2026-08-09T13:56:41+00:00",
  "since_last": {
-  "at": "2026-08-09T11:57:20+00:00",
+  "at": "2026-08-09T12:51:03+00:00",
   "statistics": {}
  },
  "means": {
@@ -39,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 39,
+  "invariants_passing": 40,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -133,6 +133,11 @@
    },
    {
     "name": "no cataloguing notation in an English rendering",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "no name is spelled with question marks",
     "violations": 0,
     "examples": []
    },
@@ -301,8 +306,8 @@
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 626,
-    "value": 626
+    "budget": 798,
+    "value": 798
    },
    {
     "name": "credit fields the division does not account for",
@@ -319,14 +324,20 @@
    {
     "name": "interface reads outside an entry point",
     "means": "reads of a name-carrying field in kari/app.js that are excepted in entrypoints.SAFE rather than going through the function that renders that kind of name. Each names its function, its field, what is done with the value and how many there are. A rise means a new call site was argued for instead of using the renderer.",
-    "budget": 13,
-    "value": 13
+    "budget": 12,
+    "value": 12
    },
    {
     "name": "imprint names the interface disagrees with",
     "means": "imprint strings app.js renders as one name and the shipped map calls another, counted as distinct pairs. It is the second producer of one fact, live and visible to a reader: 一迅社's yuri line shows as its magazine's name on 346 rows. It goes to zero when the interface reads feed/names.json's imprints map, and nothing else can move it down.",
     "budget": 0,
     "value": 0
+   },
+   {
+    "name": "credit phrases spelling a person otherwise",
+    "means": "credit fields whose composed phrase spells one of the people in it differently from the name store, counted by asking the shipped division who the field names. It was 207 while a line of one person plus a role bracket was left exactly as the analyser first wrote it, so a reading sourced afterwards could not reach it. The residue is the all-or-nothing rule: a line is left alone where any one person on it has no rendering yet, and it falls as those readings arrive.",
+    "budget": 70,
+    "value": 70
    },
    {
     "name": "names rendered two ways",
@@ -488,7 +499,8 @@
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": 75
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -542,7 +554,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": 1
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "updates naming a work we do not hold",
@@ -736,7 +749,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-09T11:57:19+00:00",
+  "previous_at": "2026-08-09T12:51:02+00:00",
   "drops": []
  },
  "outstanding": [
@@ -926,7 +939,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 37,
+   "count": 38,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
@@ -941,6 +954,7 @@
     "credit fields the division does not account for": 0,
     "credit identifiers naming nobody": 7,
     "credit pages listing a work that does not name them": 8,
+    "credit phrases spelling a person otherwise": 70,
     "credits carrying their own cataloguing": 38,
     "credits matching a chapter": 0,
     "credits sharing a reading nobody has ruled on": 157,
@@ -953,7 +967,7 @@
     "imprint names the interface disagrees with": 0,
     "imprint strings that reach no line": 18,
     "incomplete attested rows": 14,
-    "interface reads outside an entry point": 13,
+    "interface reads outside an entry point": 12,
     "interpunct credits nobody has ruled on": 0,
     "invented markup in tests": 75,
     "kana left in a romanisation": 0,
@@ -967,7 +981,7 @@
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 16,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 626,
+    "renderings resting on a mechanical romanisation": 798,
     "renderings with nothing to show": 24,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,

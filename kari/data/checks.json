@@ -97,6 +97,11 @@
    "examples": []
   },
   {
+   "name": "no name is spelled with question marks",
+   "violations": 0,
+   "examples": []
+  },
+  {
    "name": "status.html shows no Japanese of its own",
    "violations": 0,
    "examples": []
@@ -276,8 +281,8 @@
   {
    "name": "renderings resting on a mechanical romanisation",
    "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-   "budget": 626,
-   "value": 626
+   "budget": 798,
+   "value": 798
   },
   {
    "name": "credit fields the division does not account for",
@@ -294,14 +299,20 @@
   {
    "name": "interface reads outside an entry point",
    "means": "reads of a name-carrying field in kari/app.js that are excepted in entrypoints.SAFE rather than going through the function that renders that kind of name. Each names its function, its field, what is done with the value and how many there are. A rise means a new call site was argued for instead of using the renderer.",
-   "budget": 13,
-   "value": 13
+   "budget": 12,
+   "value": 12
   },
   {
    "name": "imprint names the interface disagrees with",
    "means": "imprint strings app.js renders as one name and the shipped map calls another, counted as distinct pairs. It is the second producer of one fact, live and visible to a reader: 一迅社's yuri line shows as its magazine's name on 346 rows. It goes to zero when the interface reads feed/names.json's imprints map, and nothing else can move it down.",
    "budget": 0,
    "value": 0
+  },
+  {
+   "name": "credit phrases spelling a person otherwise",
+   "means": "credit fields whose composed phrase spells one of the people in it differently from the name store, counted by asking the shipped division who the field names. It was 207 while a line of one person plus a role bracket was left exactly as the analyser first wrote it, so a reading sourced afterwards could not reach it. The residue is the all-or-nothing rule: a line is left alone where any one person on it has no rendering yet, and it falls as those readings arrive.",
+   "budget": 70,
+   "value": 70
   },
   {
    "name": "names rendered two ways",
