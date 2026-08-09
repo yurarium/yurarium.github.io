@@ -506,9 +506,17 @@ function uncertainMark(rec, e) {
   const unattested = rec && (e
     ? (e.basis === 'romaji' && (rec.uncertain || rec.unverified))
     : rec.uncertain);
-  return unattested
-    ? `<sup class="unc" title="${esc('the reading this is romanised from is not attested by any source, and may be wrong')}">[?]</sup>`
-    : '';
+  if (!unattested) return '';
+  // THE SAME MARK, AND A DIFFERENT SENTENCE, WHERE A SOURCE DID PRINT THE KANA. The project owner
+  // ruled on 2026-08-09 that Wikidata is noncanonical and is used to raise the floor on romaji, so
+  // 67 readings hold `community-printed`: somebody typed the kana, and nobody who answers for the
+  // person's name did. "not attested by any source" would be false of those, and dropping the mark
+  // would be worse, because the pronunciation is exactly what is unconfirmed. So the superscript
+  // stands and the tooltip says which of the two states this is.
+  const why = rec.reading_basis === 'community-printed'
+    ? 'the reading this is romanised from comes from a community-edited database, and no publisher or library confirms it'
+    : 'the reading this is romanised from is not attested by any source, and may be wrong';
+  return `<sup class="unc" title="${esc(why)}">[?]</sup>`;
 }
 
 function enHtml(rec, cls, isPerson) {
@@ -542,13 +550,21 @@ function enHtml(rec, cls, isPerson) {
   // which would be false here: the sounds are sourced and only the spacing is missing. It is also
   // the commoner state by far, and a superscript on one name in five is the flood `uncertainMark`
   // was narrowed to avoid.
+  // A FOURTH CLAIM, AND IT IS THE UNDERLINE'S OTHER HALF. `undivided` says nothing states where a
+  // name breaks; `division_basis` says something does and that something is a community-edited
+  // database. アカイマルボロウ is a kana credit whose sounds are its own surface, so the [?] would be
+  // false about it, and the only part of the rendering anybody typed is the SPACE. Eight people
+  // reached a reader divided by an anonymous edit with no mark at all, because the doubt was
+  // recorded on a different record of the same person and the interface never sees that one.
   const why = e.unverified
     ? `The pronunciation of this ${thing} has not been confirmed.`
     : (isPerson && e.basis === 'romaji' && rec.undivided)
       ? 'No source states where this name divides, so it is romanised as one word.'
-      : (e.ours && e.basis !== 'romaji')
-        ? `Translated by us. The ${who} publishes no English ${thing}.`
-        : '';
+      : (isPerson && e.basis === 'romaji' && rec.division_basis === 'community-printed')
+        ? 'Where this name divides comes from a community-edited database, and no publisher or library confirms it.'
+        : (e.ours && e.basis !== 'romaji')
+          ? `Translated by us. The ${who} publishes no English ${thing}.`
+          : '';
   // A NOTE ON EVERYTHING IS A NOTE ON NOTHING. Every name carried one, including the ones whose
   // note said only that the name is the one the work or person uses, which a reader can assume.
   // Annotate what is OURS; say nothing about what is theirs.
