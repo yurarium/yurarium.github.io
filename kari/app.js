@@ -427,6 +427,19 @@ function enFallback(ja) {
   return s.replace(JA_ANY_RUN, run => {
     const got = floorText(run);
     if (got) return got + FLOOR_MARK;
+    /* A ・ JOINS TWO NAMES BEFORE IT JOINS TWO CHARACTERS. 安田剛助・文尾文 is one credit field
+       printed whole, and the build floors the two people separately because the corpus settled it
+       as two people, so the joined string is in no map and every character fell to the last resort
+       below: a reader was shown `???? · Bun?Bun` for two artists whose readings openBD and the
+       publisher both state. Each side is offered as a run of its own first, which is the unit the
+       store is keyed on. */
+    if (run.indexOf('\u30fb') >= 0) {
+      const sides = run.split('\u30fb');
+      const each = sides.map(x => (x ? floorText(x) : ''));
+      if (each.every((x, i) => x || !sides[i])) {
+        return each.filter(Boolean).join(' \u00b7 ') + FLOOR_MARK;
+      }
+    }
     // THE INTERPUNCT IS PUNCTUATION SITTING IN THE KANA BLOCK, and the build keeps it out of a run
     // for that reason, so it is the one character here whose answer is not a reading.
     return Array.from(run).map(

@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-09T11:57:20+00:00",
+ "generated": "2026-08-09T12:51:03+00:00",
  "since_last": {
-  "at": "2026-08-09T11:39:31+00:00",
+  "at": "2026-08-09T11:57:20+00:00",
   "statistics": {}
  },
  "means": {
@@ -373,7 +373,7 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 393,
+    "budget": 397,
     "value": 397
    },
    {
@@ -433,7 +433,7 @@
    {
     "name": "credits sharing a reading nobody has ruled on",
     "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
-    "budget": 156,
+    "budget": 157,
     "value": 157
    },
    {
@@ -736,7 +736,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-09T11:39:29+00:00",
+  "previous_at": "2026-08-09T11:57:19+00:00",
   "drops": []
  },
  "outstanding": [
