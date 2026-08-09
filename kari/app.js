@@ -426,11 +426,24 @@ function enHtml(rec, cls, isPerson) {
   // mechanical, not a judgement, and a note saying we did it tells a reader nothing they can act
   // on. What is worth saying is that a pronunciation is UNCONFIRMED, and that a title is our
   // English invention rather than one the work publishes. Silence everywhere else.
+  // A THIRD CLAIM, AND THE QUIETEST OF THE THREE. `undivided` says the reading is attested and
+  // states no word break, so the romanisation runs together: 太陽まりい is filed タイヨウマリイ by
+  // the national media-arts catalogue, which is correct, and comes out `Taiyōmarii` when the
+  // person is 太陽 まりい. Nothing about the characters says where a Japanese name divides, and
+  // guessing publishes a wrong claim about somebody under their own work, so the run-on form
+  // stands and this is what stops it standing as though it were settled.
+  //
+  // IT GETS THE UNDERLINE AND NOT THE [?]. The superscript says the pronunciation may be wrong,
+  // which would be false here: the sounds are sourced and only the spacing is missing. It is also
+  // the commoner state by far, and a superscript on one name in five is the flood `uncertainMark`
+  // was narrowed to avoid.
   const why = e.unverified
     ? `The pronunciation of this ${thing} has not been confirmed.`
-    : (e.ours && e.basis !== 'romaji')
-      ? `Translated by us. The ${who} publishes no English ${thing}.`
-      : '';
+    : (isPerson && e.basis === 'romaji' && rec.undivided)
+      ? 'No source states where this name divides, so it is romanised as one word.'
+      : (e.ours && e.basis !== 'romaji')
+        ? `Translated by us. The ${who} publishes no English ${thing}.`
+        : '';
   // A NOTE ON EVERYTHING IS A NOTE ON NOTHING. Every name carried one, including the ones whose
   // note said only that the name is the one the work or person uses, which a reader can assume.
   // Annotate what is OURS; say nothing about what is theirs.

@@ -172,6 +172,11 @@
    "examples": []
   },
   {
+   "name": "a person is spelled one way",
+   "violations": 0,
+   "examples": []
+  },
+  {
    "name": "nicovideo channels agree with our own records",
    "violations": 0,
    "examples": []
@@ -300,6 +305,12 @@
    "value": 2
   },
   {
+   "name": "author names romanised as one word",
+   "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
+   "budget": 984,
+   "value": 984
+  },
+  {
    "name": "publisher readings nobody has settled",
    "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
    "budget": 16,
@@ -314,14 +325,14 @@
   {
    "name": "kana names with no stated division",
    "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-   "budget": 263,
-   "value": 263
+   "budget": 219,
+   "value": 219
   },
   {
    "name": "author readings no source states",
    "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-   "budget": 316,
-   "value": 316
+   "budget": 312,
+   "value": 312
   },
   {
    "name": "credits the corpus files as a venue",
