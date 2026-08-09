@@ -226,7 +226,17 @@
   /* The subsidiary route from an update to the record of the work it belongs to. Quiet: the row's
      own link is to the chapter, which is what a reader of this tab came for. */
   .wpline{margin:.15rem 0 .1rem}
-  .wplink{font-size:.76rem;color:var(--dim);text-decoration:none;border-bottom:1px dotted var(--line)}
+  /* AN ADDRESS IS NOT A TYPE SIZE. This carried .76rem, written for the sub-line above, and then
+     the class was reused to wrap a NAME: `creditChip` puts it round each person in the 作者 fact
+     and `publisherChip` round each house in the 出版社 one. Both of those cells are .95rem, so a
+     person with a page shrank to .76rem and a person without one stayed at .95rem, and the byline
+     `Yosshā! / QZO。 / 和狸ナオ` drew its three artists at two sizes with the registry deciding
+     which. The same happened a size down on the 発売 rows, where the row is .87em and KADOKAWA
+     came out smaller than the artist beside it.
+     The size belongs to the line the link sits in. It is stated here for the two lines that ARE
+     the link: the route from an update to its work, and a row in a list of works. */
+  .wplink{color:var(--dim);text-decoration:none;border-bottom:1px dotted var(--line)}
+  .wpline .wplink,.recw > .wplink{font-size:.76rem}
   .wplink:hover{color:var(--accent);border-bottom-color:var(--accent)}
   .wp-sub{font-size:.92rem;margin:1.4rem 0 .5rem;font-weight:600}
   .wp-n{color:var(--faint);font-weight:400;font-size:.8rem}
@@ -564,7 +574,10 @@
                border-bottom: 1px solid currentColor; padding-bottom: .2rem; }
 .relv { padding: .3rem 0; border-bottom: 1px solid rgba(128,128,128,.16); }
 .relvt { font-weight: 600; }
-.relvm { font-size: .87em; opacity: .66; }
+/* THE SAME SIZE AS `.meta`, WHICH IS THE BYLINE ON EVERY OTHER LIST, and stated in the same unit.
+   This was .87em, which lands within a tenth of a pixel of .82rem today and follows the row's own
+   size rather than the page's, so the two would part company the first time `.relv` changed. */
+.relvm { font-size: .82rem; opacity: .66; }
 #rel-note { opacity: .7; font-size: .9em; }
 
 /* A tab's count is filled when its data is. Releases loads works.json on first open, so until

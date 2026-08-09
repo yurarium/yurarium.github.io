@@ -427,19 +427,20 @@ function enFallback(ja) {
   return s.replace(JA_ANY_RUN, run => {
     const got = floorText(run);
     if (got) return got + FLOOR_MARK;
-    /* A ・ JOINS TWO NAMES BEFORE IT JOINS TWO CHARACTERS. 安田剛助・文尾文 is one credit field
-       printed whole, and the build floors the two people separately because the corpus settled it
-       as two people, so the joined string is in no map and every character fell to the last resort
-       below: a reader was shown `???? · Bun?Bun` for two artists whose readings openBD and the
-       publisher both state. Each side is offered as a run of its own first, which is the unit the
-       store is keyed on. */
-    if (run.indexOf('\u30fb') >= 0) {
-      const sides = run.split('\u30fb');
-      const each = sides.map(x => (x ? floorText(x) : ''));
-      if (each.every((x, i) => x || !sides[i])) {
-        return each.filter(Boolean).join(' \u00b7 ') + FLOOR_MARK;
-      }
-    }
+    /* WHETHER A ・ SEPARATES TWO PEOPLE IS NOT A QUESTION THIS FUNCTION MAY ANSWER, and the
+       attempt is what this comment replaces. A reader met `???? · Bun?Bun` for 安田剛助・文尾文, so
+       this branch was taught to offer each side of a ・ to the floor map and join the two answers.
+       It spelled those two people, and it also reached `くろば・Ｕ` sitting inside a longer field
+       and answered `Kuroba U`, one artist's name with the character taken out of the middle of it.
+       A test made of "is each half in the floor map" agrees with whatever split filled the map, so
+       it cannot tell 矢立肇・富野由悠季 from くろば・Ｕ (STANDING-INSTRUCTIONS §14b). The corpus
+       settles that question in `adapters/names/interpunct.py` and the build ships the answer as
+       `credit_parts`.
+
+       The fault was upstream. `creditLine` cut the field on the slash and passed the pieces on as
+       a field of their own, so the division shipped for the whole field was thrown away and the
+       line fell to this function. It reads `creditPeople` now, and a credit field no longer
+       arrives here with two people inside one run. */
     // THE INTERPUNCT IS PUNCTUATION SITTING IN THE KANA BLOCK, and the build keeps it out of a run
     // for that reason, so it is the one character here whose answer is not a reading.
     return Array.from(run).map(
@@ -2561,12 +2562,25 @@ function readerBasis(r) {
 const CREDITS_SHOWN = 4;
 
 function creditLine(r) {
-  const people = String(r.author || '').split(/\s*\/\s*/).filter(Boolean);
+  // COUNTED OFF THE SHIPPED DIVISION, AND THE SLASH IS WHAT THIS REPLACES. This split the field on
+  // `/` and handed the first four pieces to `linkedCredits` AS A FIELD OF THEIR OWN. That string
+  // is not a field the build ever saw, so `credit_parts` answered nothing for it, and the whole
+  // line dropped to the floor: `安田剛助・文尾文` reached a reader as `???? · Bun?Bun` on w01700
+  // while the same field rendered `Yasuda Kōsuke / Fumio Aya` everywhere else. The slash is also
+  // the wrong count. A field writes two people with a comma or a ・ as readily as with a slash, so
+  // 46 rows counted one credit where the build had divided two, three or four.
+  //
+  // ONE PRODUCER OF THE DIVISION (§3). `creditPeople` reads `credit_parts`, which is the same
+  // splitter the name store is keyed on, and `linkedCredits` walks that division and stops after
+  // the count this line shows. Nothing here cuts a string.
+  const raw = String(r.author || '').trim();
+  const people = creditPeople(raw) || (raw ? [raw] : []);
   // EVERY NAME STILL REACHES OUTPUT THROUGH authorLabel. `linkedCredits` splits the field on the
   // parts the build shipped and hands each one to authorLabel, so the reader's language, style,
   // name order and furigana all apply exactly as they did; what it adds is the address.
   if (people.length <= CREDITS_SHOWN) return linkedCredits(r);
-  const head = linkedCredits({ ...r, author: people.slice(0, CREDITS_SHOWN).join(' / ') });
+  const head = linkedCredits(r, CREDITS_SHOWN);
+  if (head === null) return linkedCredits(r);
   const rest = people.length - CREDITS_SHOWN;
   return `${head}<span class="wf-sub" title="${esc(people.join(', '))}">${
     esc(T(`ほか${rest}名`, `and ${rest} others`))}</span>`;
@@ -2937,15 +2951,34 @@ function creditChip(name) {
    composes from the same splitter the name store is keyed on, so this never divides a name itself:
    ・ sits inside さりい・Ｂ and separates 矢立肇 from 富野由悠季, and nothing in the string tells the
    two apart. Where the build shipped no parts the whole field goes through authorLabel unchanged,
-   which is what it did before this existed. */
-function linkedCredits(r) {
+   which is what it did before this existed.
+
+   `shown` IS HOW MANY OF THEM TO DRAW, and the rest of the field is left off. `creditLine` used to
+   shorten a long byline by cutting the FIELD on the slash and calling this with the first four
+   pieces, which is a second answer to "how does this credit divide" and a worse one: the cut
+   string is in no map, so the division went missing and the line fell to the floor. The count
+   belongs here, where the division is already in hand. */
+function linkedCredits(r, shown) {
   const raw = String(r.author || '').trim();
   if (!raw) return authorLabel(r);
   // A FIELD NAMING ONE PERSON HAS NO PARTS, and that is most of the corpus. `credit_parts` is
   // written for credit LINES, the fields holding several people, so asking it first and giving up
   // when it answers nothing left every single-author work unlinked: the whole field is the one
   // credit in that case, and the store is keyed on exactly that string.
-  const parts = creditPeople(raw) || [raw];
+  const all = creditPeople(raw) || [raw];
+  const parts = (shown > 0 && shown < all.length) ? all.slice(0, shown) : all;
+  /* LOCATED AS THE FIELD WRITES IT, AND `foldFind` IS THE ROUTE THAT WAS TRIED AND REJECTED.
+     `creditText` locates the same names through `foldSpans`, which folds the width and takes the
+     spaces out, and 38 fields here hold a name the division spells differently for that reason:
+     `山本 和音` against 山本和音, `sono.N` against ｓｏｎｏ．Ｎ. Those fields lose the walk and fall
+     to `authorLabel`, so their work pages carry a byline with no address on it.
+
+     Folding fixes the address and costs the surface. What this function draws for a part is
+     `creditChip(nm)`, which renders the DIVISION's spelling, so 35 Japanese bylines came back
+     rewritten: `sono.N` as ｓｏｎｏ．Ｎ and `2C=がろあ` as 2C＝がろあ, a name changed under the
+     artist rather than annotated. The chip also drops the row's own `author_en`. Keeping the field
+     as written is this function's whole contract, so the address stays missing on those 38 until
+     the chip can be handed a span and a key separately. */
   let out = '', rest = raw, linked = false, placed = 0;
   for (const nm of parts) {
     const at = rest.indexOf(nm);
@@ -2973,8 +3006,16 @@ function linkedCredits(r) {
   // ALL OF IT OR NONE OF IT. A line whose parts do not all appear in the field would come back
   // half rewritten, and `authorLabel` on the whole line is what this replaces rather than
   // improves: it composes a credit line from its people and knows to fail as a whole.
-  const tail = floorHtml(esc(LANG === 'en' ? creditGapText(rest) : rest));
-  return (linked && placed === parts.length) ? out + tail : authorLabel(r);
+  //
+  // WHAT IS LEFT OF THE FIELD BELONGS TO THE NAMES THAT WERE NOT DRAWN. A shortened line stops
+  // after the count it was given, so the tail holds the other ten people and printing it would
+  // undo the shortening.
+  const tail = parts === all ? floorHtml(esc(LANG === 'en' ? creditGapText(rest) : rest)) : '';
+  if (linked && placed === parts.length) return out + tail;
+  // A SHORTENED WALK THAT FAILED HAS NOTHING TO OFFER, and `authorLabel` is the wrong answer for
+  // it: that renders the WHOLE field, and the caller would print "and 9 others" under a line
+  // already naming all fourteen. Null says so and the caller draws the byline in full.
+  return parts === all ? authorLabel(r) : null;
 }
 
 /* A HOUSE'S NAME, LINKED. Same rule: the name itself is `pubBoth`'s, which is what the volumes
