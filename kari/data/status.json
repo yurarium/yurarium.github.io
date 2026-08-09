@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-09T08:47:55+00:00",
+ "generated": "2026-08-09T11:57:20+00:00",
  "since_last": {
-  "at": "2026-08-09T04:03:33+00:00",
+  "at": "2026-08-09T11:39:31+00:00",
   "statistics": {}
  },
  "means": {
@@ -300,9 +300,9 @@
    },
    {
     "name": "renderings resting on a mechanical romanisation",
-    "means": "names an English page spells itself, because no source states how they are read. Each one carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 97,
-    "value": 97
+    "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
+    "budget": 626,
+    "value": 626
    },
    {
     "name": "credit fields the division does not account for",
@@ -331,20 +331,26 @@
    {
     "name": "names rendered two ways",
     "means": "strings the shipped maps spell one way as a publisher and another way as a person, which happens because a self-published work names its own author as its publisher. A rise means a publisher name was written by hand where the name store already spelt it.",
-    "budget": 2,
-    "value": 2
+    "budget": 3,
+    "value": 3
    },
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1127,
-    "value": 1127
+    "budget": 1191,
+    "value": 1191
    },
    {
     "name": "divisions read back from a romanisation",
-    "means": "people whose name is divided on the strength of a space in a community editor's romanisation, recovered by reading that romanisation backwards. The one class `a division cites its source` admits without a source that states readings, counted here so that admitting it is visible. It falls when a source states one of them.",
+    "means": "people whose name is divided on the strength of a space in a community editor's romanisation, recovered by reading that romanisation backwards. One of the two classes `a division cites its source` admits without a source that states readings, counted here so that admitting it is visible. It falls when a source states one of them.",
     "budget": 3,
     "value": 3
+   },
+   {
+    "name": "divisions resting on a community database",
+    "means": "people whose name divides where Wikidata says it divides and where nothing else does, either because their reading came from there or because the space was carried onto a reading of their own. The project owner ruled the source noncanonical and admitted it as a floor, so this is what that admission costs, counted where somebody can watch it. It falls when a publisher or the national library states a division.",
+    "budget": 88,
+    "value": 88
    },
    {
     "name": "publisher readings nobody has settled",
@@ -355,26 +361,32 @@
    {
     "name": "renderings with nothing to show",
     "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-    "budget": 33,
-    "value": 33
+    "budget": 24,
+    "value": 24
    },
    {
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-    "budget": 222,
-    "value": 222
+    "budget": 252,
+    "value": 252
    },
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 311,
-    "value": 311
+    "budget": 393,
+    "value": 397
    },
    {
     "name": "credits the corpus files as a venue",
     "means": "credits in the author store that this corpus also records as a publisher or an imprint, and that carry no mark saying what they are. Candidates rather than faults, because a doujin artist is their own imprint. A rise means a route put a company where a byline goes.",
     "budget": 16,
     "value": 16
+   },
+   {
+    "name": "interpunct credits nobody has ruled on",
+    "means": "credit fields holding a ・ where the corpus points both ways: one of the names either side is credited elsewhere on its own and the other is not, so it cannot be said whether the mark separates two people or sits inside one name. It falls when somebody writes the answer into data/identity/interpunct-rulings.yaml, and a wrong guess either invents a person or erases one.",
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "credits carrying their own cataloguing",
@@ -421,8 +433,8 @@
    {
     "name": "credits sharing a reading nobody has ruled on",
     "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
-    "budget": 0,
-    "value": 0
+    "budget": 156,
+    "value": 157
    },
    {
     "name": "implausible ruby spans",
@@ -433,8 +445,8 @@
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 52,
-    "value": 52
+    "budget": 53,
+    "value": 53
    },
    {
     "name": "works without English",
@@ -476,8 +488,7 @@
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": null,
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 75
    },
    {
     "name": "nicovideo works with no rights",
@@ -531,8 +542,7 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": null,
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 1
    },
    {
     "name": "updates naming a work we do not hold",
@@ -726,7 +736,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-09T04:03:32+00:00",
+  "previous_at": "2026-08-09T11:39:29+00:00",
   "drops": []
  },
  "outstanding": [
@@ -916,13 +926,13 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 35,
+   "count": 37,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
     "an imprint field repeating its publisher": 360,
-    "author names romanised as one word": 1127,
-    "author readings no source states": 311,
+    "author names romanised as one word": 1191,
+    "author readings no source states": 397,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
@@ -933,21 +943,23 @@
     "credit pages listing a work that does not name them": 8,
     "credits carrying their own cataloguing": 38,
     "credits matching a chapter": 0,
-    "credits sharing a reading nobody has ruled on": 0,
+    "credits sharing a reading nobody has ruled on": 157,
     "credits that restate a name": 0,
     "credits the corpus files as a venue": 16,
     "divisions read back from a romanisation": 3,
+    "divisions resting on a community database": 88,
     "full-width forms in English renderings": 28,
     "implausible ruby spans": 0,
     "imprint names the interface disagrees with": 0,
     "imprint strings that reach no line": 18,
     "incomplete attested rows": 14,
     "interface reads outside an entry point": 13,
+    "interpunct credits nobody has ruled on": 0,
     "invented markup in tests": 75,
     "kana left in a romanisation": 0,
-    "kana names with no stated division": 222,
+    "kana names with no stated division": 252,
     "labels with nothing to quote": 0,
-    "names rendered two ways": 2,
+    "names rendered two ways": 3,
     "nicovideo works with no rights": 60,
     "one page cited for two claims": 12,
     "one work under two names in a list": 13,
@@ -955,15 +967,15 @@
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 16,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 97,
-    "renderings with nothing to show": 33,
+    "renderings resting on a mechanical romanisation": 626,
+    "renderings with nothing to show": 24,
     "rows with a moving address": 0,
     "scraped counters in chapter names": 1,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 0,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 171,
-    "uncertain readings": 52,
+    "uncertain readings": 53,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 27,
