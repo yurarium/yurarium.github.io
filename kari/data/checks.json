@@ -212,6 +212,21 @@
    "examples": []
   },
   {
+   "name": "a fact is reached through its entry point",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "the interface is the derivation of its source",
+   "violations": 0,
+   "examples": []
+  },
+  {
+   "name": "a stated reading names where it came from",
+   "violations": 0,
+   "examples": []
+  },
+  {
    "name": "every Japanese field the data carries has a ruling",
    "violations": 0,
    "examples": []
@@ -294,7 +309,7 @@
    "name": "full-width forms in English renderings",
    "means": "English renderings holding a full-width character and no kana or kanji, which is what narrowing the invariant to a script let past. Mostly a Latin pen name catalogued in full width; some are official titles and are correct, so this will not reach zero.",
    "budget": 28,
-   "value": 38
+   "value": 28
   },
   {
    "name": "interface reads outside an entry point",
@@ -473,13 +488,13 @@
   {
    "name": "incomplete attested rows",
    "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector — the adapter still returns rows, just emptier ones.",
-   "budget": 14,
-   "value": 14
+   "budget": 13,
+   "value": 13
   },
   {
    "name": "stock phrasing in comments",
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
-   "budget": 898,
+   "budget": 895,
    "value": null,
    "not_measured": "source-quality budget; measured at check-in"
   },
