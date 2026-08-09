@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-09T13:56:41+00:00",
+ "generated": "2026-08-09T17:20:30+00:00",
  "since_last": {
-  "at": "2026-08-09T12:51:03+00:00",
+  "at": "2026-08-09T13:56:41+00:00",
   "statistics": {}
  },
  "means": {
@@ -319,7 +319,7 @@
     "name": "full-width forms in English renderings",
     "means": "English renderings holding a full-width character and no kana or kanji, which is what narrowing the invariant to a script let past. Mostly a Latin pen name catalogued in full width; some are official titles and are correct, so this will not reach zero.",
     "budget": 28,
-    "value": 28
+    "value": 38
    },
    {
     "name": "interface reads outside an entry point",
@@ -335,9 +335,15 @@
    },
    {
     "name": "credit phrases spelling a person otherwise",
-    "means": "credit fields whose composed phrase spells one of the people in it differently from the name store, counted by asking the shipped division who the field names. It was 207 while a line of one person plus a role bracket was left exactly as the analyser first wrote it, so a reading sourced afterwards could not reach it. The residue is the all-or-nothing rule: a line is left alone where any one person on it has no rendering yet, and it falls as those readings arrive.",
-    "budget": 70,
-    "value": 70
+    "means": "credit fields whose composed phrase spells one of the people in it differently from the name store, counted by asking the shipped division who the field names. It was 207 while a line of one person plus a role bracket was left exactly as the analyser first wrote it, so a reading sourced afterwards could not reach it. It was then 70 while a line was recomposed only where every person on it had a store record, which held back 60 lines on the strength of a name already in Latin that no store will ever hold. The residue is a field naming one person inside notation that states no job, which is the one shape the recomposition still refuses to touch.",
+    "budget": 4,
+    "value": 4
+   },
+   {
+    "name": "bylines drawn in a spelling the field does not write",
+    "means": "work rows whose byline reaches a reader spelt differently from the credit field the row holds, measured with furigana on. The division spells a name the way the store is keyed on it and a field spells it the way a cataloguer typed it, and a walk that confuses the two either loses the address on 38 pages or rewrites a name under its own artist. The residue is the parts of a field naming several people, which have no rendering of their own to take the alignment from. A rise means a name is being respelt.",
+    "budget": 23,
+    "value": 23
    },
    {
     "name": "names rendered two ways",
@@ -749,7 +755,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-09T12:51:02+00:00",
+  "previous_at": "2026-08-09T13:56:39+00:00",
   "drops": []
  },
  "outstanding": [
@@ -939,7 +945,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 38,
+   "count": 39,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
@@ -948,13 +954,14 @@
     "author readings no source states": 397,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
+    "bylines drawn in a spelling the field does not write": 23,
     "captures with no floor": 11,
     "citations withheld from readers": 36,
     "credit fields an identifier does not cover": 18,
     "credit fields the division does not account for": 0,
     "credit identifiers naming nobody": 7,
     "credit pages listing a work that does not name them": 8,
-    "credit phrases spelling a person otherwise": 70,
+    "credit phrases spelling a person otherwise": 4,
     "credits carrying their own cataloguing": 38,
     "credits matching a chapter": 0,
     "credits sharing a reading nobody has ruled on": 157,
