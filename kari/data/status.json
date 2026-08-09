@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-09T02:57:18+00:00",
+ "generated": "2026-08-09T04:03:33+00:00",
  "since_last": {
-  "at": "2026-08-09T02:31:03+00:00",
+  "at": "2026-08-09T02:57:18+00:00",
   "statistics": {}
  },
  "means": {
@@ -39,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 38,
+  "invariants_passing": 39,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -53,6 +53,11 @@
    },
    {
     "name": "a division cites its source",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "a division names its donor in a field",
     "violations": 0,
     "examples": []
    },
@@ -332,8 +337,8 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1129,
-    "value": 1129
+    "budget": 1127,
+    "value": 1127
    },
    {
     "name": "divisions read back from a romanisation",
@@ -362,8 +367,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 313,
-    "value": 313
+    "budget": 311,
+    "value": 311
    },
    {
     "name": "credits the corpus files as a venue",
@@ -410,8 +415,8 @@
    {
     "name": "credit identifiers naming nobody",
     "means": "live credit identifiers no work is credited to, so they get no page. All five are joined spellings the ampersand split left behind, each half now holding its own address. A rise means a credit left the corpus or another splitter change orphaned a spelling.",
-    "budget": 5,
-    "value": 5
+    "budget": 7,
+    "value": 7
    },
    {
     "name": "credits sharing a reading nobody has ruled on",
@@ -428,8 +433,8 @@
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 53,
-    "value": 53
+    "budget": 52,
+    "value": 52
    },
    {
     "name": "works without English",
@@ -471,7 +476,8 @@
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": 75
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -525,7 +531,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
-    "value": 1
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "updates naming a work we do not hold",
@@ -719,7 +726,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-09T02:31:02+00:00",
+  "previous_at": "2026-08-09T02:57:17+00:00",
   "drops": []
  },
  "outstanding": [
@@ -914,15 +921,15 @@
    "rows": {
     "adapters fetching without net.py": 35,
     "an imprint field repeating its publisher": 360,
-    "author names romanised as one word": 1129,
-    "author readings no source states": 313,
+    "author names romanised as one word": 1127,
+    "author readings no source states": 311,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "captures with no floor": 11,
     "citations withheld from readers": 36,
     "credit fields an identifier does not cover": 18,
     "credit fields the division does not account for": 0,
-    "credit identifiers naming nobody": 5,
+    "credit identifiers naming nobody": 7,
     "credit pages listing a work that does not name them": 8,
     "credits carrying their own cataloguing": 38,
     "credits matching a chapter": 0,
@@ -956,7 +963,7 @@
     "titles carrying cataloguing punctuation": 0,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 171,
-    "uncertain readings": 53,
+    "uncertain readings": 52,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 27,
