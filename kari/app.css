@@ -233,10 +233,16 @@
      `Yosshā! / QZO。 / 和狸ナオ` drew its three artists at two sizes with the registry deciding
      which. The same happened a size down on the 発売 rows, where the row is .87em and KADOKAWA
      came out smaller than the artist beside it.
-     The size belongs to the line the link sits in. It is stated here for the two lines that ARE
-     the link: the route from an update to its work, and a row in a list of works. */
+     The size belongs to the line the link sits in, and `.wpline` is the one line that IS the link:
+     a route from an update to its work, on its own, with nothing under it.
+     A ROW IN A LIST OF WORKS IS NOT THAT LINE, and it was written in here beside it. The title on a
+     credit page carries a role, a spelling and a date under it, and all four measured 12.16px, so
+     the row's own name read as the fourth piece of metadata about itself. A sub-line is subordinate
+     or it is not a sub-line. The title takes the size of the row it heads, which is the list's own
+     15px, and the weight every other list of works gives a title. */
   .wplink{color:var(--dim);text-decoration:none;border-bottom:1px dotted var(--line)}
-  .wpline .wplink,.recw > .wplink{font-size:.76rem}
+  .wpline .wplink{font-size:.76rem}
+  .recw > .wplink{font-weight:600;color:var(--fg)}
   .wplink:hover{color:var(--accent);border-bottom-color:var(--accent)}
   .wp-sub{font-size:.92rem;margin:1.4rem 0 .5rem;font-weight:600}
   .wp-n{color:var(--faint);font-weight:400;font-size:.8rem}

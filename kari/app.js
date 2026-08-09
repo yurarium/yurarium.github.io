@@ -2939,10 +2939,26 @@ function liveRecId(doc, key, id) {
 
 /* ONE CREDIT, RENDERED THE WAY EVERY OTHER CREDIT ON THE SITE IS RENDERED. It goes through
    authorLabel, so the reader's language, romanisation style, name order and furigana all reach it
-   and nothing here is a second opinion about how a name is spelt. What this adds is the link. */
-function creditChip(name) {
-  const rec = nameFor('authors', name, null);
-  const inner = authorLabel({ author: name });
+   and nothing here is a second opinion about how a name is spelt. What this adds is the link.
+
+   THE SPAN IS WHAT THE FIELD WRITES AND THE ADDRESS COMES OFF THE FOLD OF IT, and separating those
+   two is what let the walk in `linkedCredits` be fixed. `credit_parts` spells a name the way the
+   store is keyed on it, so the division says 山本和音 where the field says `山本 和音` and
+   ｓｏｎｏ．Ｎ where the field says `sono.N`. Handing the DIVISION's spelling here drew the name a
+   reader sees as the store spells it, which is somebody's name changed under their own work; the
+   walk therefore located names in the field as written and missed those 38. `nameFor` folds
+   whatever it is given, so the span addresses the same record the division's name does, and it is
+   the span that is drawn.
+
+   `existing` IS THE RECORD THE CALLER ALREADY RESOLVED, not a second lookup. A work page holds a
+   rendering of its own byline in `author_en`, aligned to the spelling that row writes, and a chip
+   covering the whole field belongs to that record: the store's copy carries the store's spacing,
+   so its ruby draws 永田　さんずい over a field that says 永田さんずい. One resolution, in the
+   caller, consumed here (§3). Called with one argument the chip resolves it itself, which is what
+   a credit page's held-apart names do. */
+function creditChip(span, existing) {
+  const rec = nameFor('authors', span, existing);
+  const inner = authorLabel({ author: span, author_en: rec });
   const id = rec && rec.id;
   return id ? `<a class="wplink credit" href="${esc(BASE)}credit/${esc(id)}/">${inner}</a>` : inner;
 }
@@ -2967,42 +2983,59 @@ function linkedCredits(r, shown) {
   // credit in that case, and the store is keyed on exactly that string.
   const all = creditPeople(raw) || [raw];
   const parts = (shown > 0 && shown < all.length) ? all.slice(0, shown) : all;
-  /* LOCATED AS THE FIELD WRITES IT, AND `foldFind` IS THE ROUTE THAT WAS TRIED AND REJECTED.
-     `creditText` locates the same names through `foldSpans`, which folds the width and takes the
-     spaces out, and 38 fields here hold a name the division spells differently for that reason:
-     `山本 和音` against 山本和音, `sono.N` against ｓｏｎｏ．Ｎ. Those fields lose the walk and fall
-     to `authorLabel`, so their work pages carry a byline with no address on it.
+  /* LOCATED BY THE FOLD AND DRAWN AS THE FIELD WRITES IT, which are two different strings and were
+     one value doing both jobs.
 
-     Folding fixes the address and costs the surface. What this function draws for a part is
-     `creditChip(nm)`, which renders the DIVISION's spelling, so 35 Japanese bylines came back
-     rewritten: `sono.N` as ｓｏｎｏ．Ｎ and `2C=がろあ` as 2C＝がろあ, a name changed under the
-     artist rather than annotated. The chip also drops the row's own `author_en`. Keeping the field
-     as written is this function's whole contract, so the address stays missing on those 38 until
-     the chip can be handed a span and a key separately. */
-  let out = '', rest = raw, linked = false, placed = 0;
+     `credit_parts` spells each name the way the store is keyed on it, so 38 fields here hold a
+     name the division writes differently: `山本 和音` against 山本和音 and `sono.N` against
+     ｓｏｎｏ．Ｎ. `indexOf` on the field as written misses those, the walk gives up, and the byline
+     falls to `authorLabel` with no address on any name in it.
+
+     THE ROUTE TRIED AND REJECTED WAS FOLDING ALONE. `foldFind` finds all 38, and the part handed to
+     the chip was still the DIVISION's name, so 35 Japanese bylines came back rewritten: `sono.N` as
+     ｓｏｎｏ．Ｎ and `2C=がろあ` as 2C＝がろあ, the artist's own name rewritten under their own work.
+     What the fold gives is a pair of offsets, and the text between them is the field's own spelling.
+     So the fold addresses the record and the span is what a reader sees. Measured over the corpus,
+     every one of 4,931 placements folds back to the name the division gave, which is why the span
+     needs no second key beside it: `nameFor` folds what it is handed.
+
+     A CHIP COVERING THE WHOLE FIELD GETS THE ROW'S OWN RENDERING. `author_en` is this row's record
+     for the string this row writes, so its ruby is aligned to that spelling where the store's copy
+     carries the store's; 65 rows hold the two. It is only the row's answer while the span IS the
+     field, so the offsets decide and the count of parts does not: `[著]山田` divides into one person
+     and `author_en` there is the record for the bracket as well. */
+  const map = foldSpans(raw);
+  let out = '', linked = false, placed = 0, at = 0, from = 0;
   for (const nm of parts) {
-    const at = rest.indexOf(nm);
-    if (at < 0) continue;
+    const hit = foldFind(map, raw, nm, from);
+    if (!hit) continue;
+    from = hit[2];
+    const span = raw.slice(hit[0], hit[1]);
     // EVERY PART GOES THROUGH creditChip, INCLUDING THE ONES WITH NO ADDRESS. Skipping an
     // unregistered person left their Japanese surface sitting in the output between two rendered
     // names, so `宮澤伊織 / 水野英多` came out `宮澤伊織 / Mizuno Hideta` under an English heading.
     // The registry is minted from the works list and the store legitimately holds records nothing
     // credits, so this is the common case rather than an edge.
-    const rec = nameFor('authors', nm, null);
+    //
+    // RESOLVED ONCE, HERE, AND THE CHIP CONSUMES IT. Both this line and the chip need to know which
+    // record answers for the span, and asking twice is the shape §3 counts seven shipped bugs from.
+    const rec = nameFor('authors', span,
+                        (hit[0] === 0 && hit[1] === raw.length) ? r.author_en : null);
     if (rec && rec.id) linked = true;
     // THE GAP BETWEEN TWO NAMES IS PART OF THE LINE. It holds the field's brackets and its
     // separators, and where the division did not account for the whole field it holds a name as
     // well, which is how a company sat in kanji between two romanised people on a work page.
     // `creditText` composes the same field on the catalogue tab and floors its gaps for the same
     // reason; the two walk one division and must not answer differently (§3).
-    const gap = rest.slice(0, at);
+    const gap = raw.slice(at, hit[0]);
     const sep = placed ? creditGap(gap) : null;
     const between = sep === null
       ? floorHtml(esc(LANG === 'en' ? creditGapText(gap) : gap)) : sep;
-    out += between + creditChip(nm);
-    rest = rest.slice(at + nm.length);
+    out += between + creditChip(span, rec);
+    at = hit[1];
     placed += 1;
   }
+  const rest = raw.slice(at);
   // ALL OF IT OR NONE OF IT. A line whose parts do not all appear in the field would come back
   // half rewritten, and `authorLabel` on the whole line is what this replaces rather than
   // improves: it composes a credit line from its people and knows to fail as a whole.
