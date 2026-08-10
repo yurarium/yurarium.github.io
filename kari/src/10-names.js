@@ -444,7 +444,16 @@ function enHtml(rec, cls, isPerson) {
   // false about it, and the only part of the rendering anybody typed is the SPACE. Eight people
   // reached a reader divided by an anonymous edit with no mark at all, because the doubt was
   // recorded on a different record of the same person and the interface never sees that one.
-  const why = e.unverified
+  // A FIFTH CLAIM, AND IT OUTRANKS THE PRONUNCIATION ONE. Where the kana are themselves a
+  // transliteration, romanising them takes a reader FURTHER from the name than the Japanese did:
+  // ステファン・セジク comes out `Sutefan Sejiku` and the person is Stjepan Šejić. Saying only that
+  // the pronunciation is unconfirmed would be true and would send a reader looking for the wrong
+  // thing, so this is said first. Nothing about a string can find it, since katakana pen names are
+  // ordinary, so it is a ruling recorded per name in curated.yaml.
+  const why = rec.transliterates
+    ? `These kana spell a ${thing} from another language, and its own spelling has not been found, `
+      + 'so what is shown is a transliteration of a transliteration.'
+    : e.unverified
     ? `The pronunciation of this ${thing} has not been confirmed.`
     : (isPerson && e.basis === 'romaji' && rec.undivided)
       ? 'No source states where this name divides, so it is romanised as one word.'
