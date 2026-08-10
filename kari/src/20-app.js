@@ -266,10 +266,17 @@ function renderTrackNote() {
   const p = el('trackfrom');
   if (!p || !TRACK_FROM) return;
   p.hidden = false;
+  /* AND WHOSE CLOCK THEY ARE ON. Every date here is Japan's, because every publication this
+     database describes is dated in JST and a run just after midnight in Tokyo is the middle of the
+     previous afternoon in UTC. The consequence a reader meets is a retrieval date that has not
+     happened yet where they are: 1,561 rows read 2026-08-11 on the 10th. The dates were right and
+     nothing said which clock they were read by. */
   p.innerHTML = ftLine(
-    `更新の追跡開始は ${TRACK_FROM}。それ以前のウェブ漫画の公開日は正確とは限りません。`,
+    `更新の追跡開始は ${TRACK_FROM}。それ以前のウェブ漫画の公開日は正確とは限りません。`
+    + `日付はすべて日本時間です。`,
     `Update tracking began on ${TRACK_FROM}. Web manga publication dates before ${TRACK_FROM}`
-    + ` may not be reliable.`);
+    + ` may not be reliable. Every date on this site is Japan time, so one may be a day ahead of`
+    + ` yours.`);
 }
 
 /* Said once rather than stamped on every reading. While essentially all of them are machine
@@ -341,8 +348,17 @@ function applyRomajiVisibility() {
       b.setAttribute('aria-pressed', String(b.dataset.nameorderSet === NAME_ORDER)));
   }
   const fb2 = el('datebox');
-  if (fb2) fb2.querySelectorAll('[data-datefmt-set]').forEach(b =>
-    b.setAttribute('aria-pressed', String(b.dataset.datefmtSet === DATEFMT)));
+  /* THE EXAMPLE IS TODAY'S DATE. Both buttons carried a frozen `2026-08-05` written into the
+     markup on the day they were added, so the tip offered a sample that was neither today nor
+     anything on the page, and drifted further from both every day. Rendered through `fmtDate`,
+     which is the function the choice actually changes, so the tip cannot disagree with the
+     setting it describes. */
+  if (fb2) fb2.querySelectorAll('[data-datefmt-set]').forEach(b => {
+    b.setAttribute('aria-pressed', String(b.dataset.datefmtSet === DATEFMT));
+    const was = DATEFMT;
+    DATEFMT = b.dataset.datefmtSet;
+    try { b.setAttribute('title', fmtDate(todayISO(), { year: true })); } finally { DATEFMT = was; }
+  });
   const db = el('dialbox');
   if (db) {
     setGroupApplicable(db, LANG !== 'ja');
@@ -801,6 +817,45 @@ const PUB_UNKNOWN = {
    names so it could wrap two of them in an anchor, which is a second producer of what this
    function is for, and `names reach a page only through their renderer` reported five reads for
    it. One renderer for the publisher record, and every caller gets the links. */
+/* A SEPARATOR IS PUNCTUATION AND NOT A TRANSLATION. `T('・', ' · ')` renders `・ / ·` in 併記,
+   which is right for a label and wrong between two things: the publishers line came out
+   `講談社 / Kodansha・ / ・秋田書店 / Akita Publishing`. The volumes section on the work page has
+   settled this already and uses a middle dot with spaces in every mode, which reads cleanly
+   between two names that are themselves two names in 併記. Same mark here.
+
+   DEFINED HERE, ABOVE EVERY CALLER. It was declared 200 lines below the first two lists that
+   needed it, so those two were still joining on `T('・', ' · ')` after this was written and a
+   reader in 併記 got `10巻 / 10 volumes・ / · 4巻 / 4 volumes` on the Length line and
+   `3話無料 / 3 free・ / · 38話有料 / 38 to buy` in the Reading column. */
+const SEP = ' \u00b7 ';
+
+/* A COUNT WITH A `+` ON IT, and the `+` said nothing. `90+ ch` on the works list means the platform
+   lists more chapters than we hold, which the work page spells out as `3 listed of 90` and the list
+   had no room for. The mark stays, because the number really is a floor and printing it bare would
+   claim a total we do not have; the tooltip is what it was missing. */
+function partialCount(n, partial) {
+  if (!partial) return String(n);
+  return `<span title="${esc(T('掲載サイトにはこれより多くの話があり、ここに持っているのはこの数です。',
+    'the platform lists more chapters than we hold; this is what we have'))}">${esc(String(n))}+</span>`;
+}
+
+
+/* THE `発売` SUFFIX ALONE, never the name with it.
+
+   A NAME IS NOT PROSE AND MUST NOT ENTER `T()`. Both functions below used to build
+   `T(`${chip}（発売）`, `${chip} (distributor)`)`, which is wrong twice over. `T` runs `curly()` over
+   whatever it is handed, and a chip is markup: `class="wplink pub"` came out `class=“wplink pub”`
+   and `href="/kari/publisher/h00004/"` came out wrapped in curly quotes, so every distributor link
+   on the site resolved to a path that does not exist. 208 records carry a distributor. `respell()`
+   ran too, which is why one tooltip in the corpus read `romanized` where every other read
+   `romanised`. And in 併記 `T` joins its two arguments, so the name printed twice:
+   `講談社（発売） / 講談社 (distributor)`.
+
+   `L` AND NOT `T`, because this is a label in a fixed slot beside a name that is already bilingual
+   in 併記. `T` would put the marker in both languages after a chip that is itself two names, and
+   the row is four names long before it says anything. */
+function DISTRIBUTOR_MARK() { return L('（発売）', ' (distributor)'); }
+
 function publisherPartsHtml(p) {
   const out = [];
   if (p.publisher) out.push(publisherChip(p.publisher));
@@ -808,10 +863,7 @@ function publisherPartsHtml(p) {
     const w = PUB_UNKNOWN[p.publisher_basis] || PUB_UNKNOWN.absent;
     out.push(esc(T(w[0], w[1])));
   }
-  if (p.distributor) {
-    const d = publisherChip(p.distributor);
-    out.push(T(`${d}（発売）`, `${d} (distributor)`));
-  }
+  if (p.distributor) out.push(publisherChip(p.distributor) + DISTRIBUTOR_MARK());
   if (p.imprint) {
     const im = imprintOf(p.imprint);
     out.push(floorHtml(esc(pubBoth(im))) + pubMark(im));
@@ -829,9 +881,7 @@ function publisherParts(p) {
   // A distributor put the book into shops and did not publish it, so the row says which it is.
   // 講談社 has handled 発売 for 一迅社 since it bought the house in 2016, and a reader shown the
   // name alone has no way to tell that from 講談社 publishing the book.
-  if (p.distributor) {
-    out.push(T(`${pubBoth(p.distributor)}（発売）`, `${pubBoth(p.distributor)} (distributor)`));
-  }
+  if (p.distributor) out.push(pubBoth(p.distributor) + DISTRIBUTOR_MARK());
   if (p.imprint) out.push(pubBoth(imprintOf(p.imprint)));
   return out.filter(Boolean);
 }
@@ -1014,7 +1064,10 @@ async function paintVolumes(r) {
   let rows = [];
   (WORKS.works || []).forEach(w => {
     if (!ids.includes(w.work_id)) return;
-    (w.volumes || []).forEach(v => rows.push(v));
+    // WHICH PRINT RUN A VOLUME BELONGS TO. Flattening several catalogue records into one list lost
+    // it, and citrus came out vol. 1, vol. 1, vol. 2, vol. 2, vol. 3, vol. 3, vol. 4 …: a ten
+    // volume run interleaved with a four volume reissue whose books all appeared in one month.
+    (w.volumes || []).forEach(v => rows.push({ ...v, run: w.work_id }));
   });
   /* THE ADMISSION AND THE CATALOGUE LINK USED TO BE ASSEMBLED HERE, as a line of prose at the
      foot of the page: which comparator shelved the work, and a link to its bibliography record.
@@ -1036,7 +1089,12 @@ async function paintVolumes(r) {
   const merged = [];
   for (const v of rows) {
     const prev = merged[merged.length - 1];
-    if (prev && v.number && prev.number === v.number && prev.published === v.published) {
+    /* AND ONLY WITHIN ONE RUN. Two editions of a volume are two ISBNs on one catalogue record;
+       two catalogue records dating a volume 1 to the same month are two different printings, and
+       folding those together took citrus's 2015 reissue from four volumes to three while the block
+       above it still said four. `run` is the record each volume came from. */
+    if (prev && v.number && prev.run === v.run
+        && prev.number === v.number && prev.published === v.published) {
       prev.editions = (prev.editions || [prev.isbn]).concat(v.isbn ? [v.isbn] : []);
       continue;
     }
@@ -1051,12 +1109,41 @@ async function paintVolumes(r) {
      listed. */
   const says = v => v.published || v.isbn || v.number || (v.editions || []).length;
   const told = rows.filter(says), silent = rows.length - told.length;
+  /* A HOLE IN THE NUMBERING, NAMED. 63 works run 1–12, 14, 15, 16 because the catalogue holds no
+     record of volume 13, and the list showed the jump and said nothing, under a heading counting
+     the ROWS. A reader met `Volumes 15` above a list ending at 16 and had no way to tell a gap in
+     the bibliography from a gap in the interface. This is a fact about what MADB holds, so it says
+     that rather than asserting the volume does not exist. */
+  const nums = told.map(v => parseInt(v.number, 10)).filter(n => Number.isFinite(n));
+  const highest = nums.length ? Math.max(...nums) : 0;
+  const have = new Set(nums);
+  const gaps = [];
+  for (let i = 1; i < highest; i++) if (!have.has(i)) gaps.push(i);
+  const gapNote = gaps.length ? `<p class="vnone">${esc(T(
+      `第${gaps.join('・')}巻は書誌に記録がない`,
+      `no catalogue record for ${gaps.length === 1 ? 'volume' : 'volumes'} ${gaps.join(', ')}`))}</p>` : '';
+  /* ONE LIST PER PRINT RUN, WHERE THERE IS MORE THAN ONE. Sorting every catalogue record's volumes
+     into one sequence put a 2013 first volume next to a 2015 one and left the reader to work out
+     that the second was a reissue. Each run is its own list, headed by what it is, in the order the
+     runs are listed above it. Where there is one run there is one list and no heading, which is
+     every work but the 37 the catalogue splits. */
+  const runOrder = (r.print || []).map(pr => pr.work_id);
+  const groups = runOrder.length > 1
+    ? runOrder.map(id => told.filter(v => v.run === id)).filter(g => g.length)
+    : [told];
+  const runHead = g => {
+    if (groups.length < 2) return '';
+    const pr = (r.print || []).find(x => x.work_id === g[0].run);
+    const from = pr && pr.first ? fmtDate(pr.first, { year: true }) : '';
+    return `<h4 class="wp-subh">${esc(T(`${g.length}巻${from ? `　${from}から` : ''}`,
+      `${g.length} ${g.length === 1 ? 'volume' : 'volumes'}${from ? ` from ${from}` : ''}`))}</h4>`;
+  };
   el('wp-vols').innerHTML =
     `<h3 class="wp-sub">${esc(T('収録巻', 'Volumes'))} <span class="wp-n">${rows.length}</span></h3>` +
     (silent ? `<p class="vnone">${esc(T(
         `${silent}巻は刊行日も書誌情報も記録がない`,
-        `${silent} with no date and nothing else recorded`))}</p>` : '') +
-    '<ol class="vols">' + told.map(v => {
+        `${silent} with no date and nothing else recorded`))}</p>` : '') + gapNote +
+    groups.map(g => runHead(g) + '<ol class="vols">' + g.map(v => {
       const n = v.number ? `<span class="voln">${esc(volLabel(v.number))}</span>` : '';
       const d = v.published
         ? `<time datetime="${esc(v.published)}">${esc(fmtDate(v.published, { year: true }))}</time>`
@@ -1072,7 +1159,7 @@ async function paintVolumes(r) {
         : (v.isbn ? `<span class="mono visbn">${esc(v.isbn)}</span>` : '');
       const f = v.final_volume ? finalTag(v.final_volume_basis) : '';
       return `<li class="vol">${n}${d}${i}${f}</li>`;
-    }).join('') + '</ol>';
+    }).join('') + '</ol>').join('');
 }
 
 /* OPENING AND CLOSING ARE STATE CHANGES; THE ADDRESS FOLLOWS FROM THE STATE.
@@ -1300,8 +1387,17 @@ function renderWorkPage() {
      which that may be the only datable event in its history. It is a true statement with no error
      bar, so the line says what it is instead of calling it publication and hoping. Where a printing
      is known the delivery date is not here at all: it never reaches print[].first. */
+  /* A RANGE WITH A CLOSING DATE SAYS THE WORK ENDED. The second date is the newest thing that has
+     happened so far, which on a running series is today's news and not a conclusion: Otherside
+     Picnic read `2018-08 – 2026-08-09` under a badge saying 更新中. Only a state that means the
+     serialisation has stopped closes the span; everything still running, dormant included, gets an
+     open one, because dormant is a series nobody has declared finished. */
+  const ENDED = { completed: 1, oneshot: 1, print: 1 };
+  const span = ran.length === 2 && ran[0] !== ran[1]
+    ? (ENDED[r.state] ? ran.join(' – ') : T(`${ran[0]}から`, `${ran[0]} – `))
+    : (ran[0] || '');
   fact(r.first_event === 'shop-delivery' ? T('配信開始', 'Delivered from') : T('刊行', 'Published'),
-       ran.length === 2 && ran[0] !== ran[1] ? esc(ran.join(' – ')) : esc(ran[0] || ''));
+       esc(span));
   /* LENGTH IS THE WORK'S SIZE, not our coverage of it. Chapters is a floor, so it is written as
      one; volumes is a count the bibliography states outright. */
   const len = [];
@@ -1315,8 +1411,13 @@ function renderWorkPage() {
     len.push(r.oneshot ? T(`${n}話`, `${n} ${unit}`)
                        : T(`${n}話以上`, `at least ${n} ${unit}`));
   }
-  (r.print || []).forEach(pr => { if (pr.volumes) len.push(volCount(pr.volumes)); });
-  fact(T('分量', 'Length'), esc(len.join(T('・', ' · '))));
+  /* A REISSUE IS NOT EXTRA LENGTH. Each print run pushed its own count, so citrus read
+     `at least 41 chapters · 10 volumes · 4 volumes`, where the 4 are the first four volumes issued
+     again in one month in 2015. The work is ten volumes long. The runs themselves are set out in
+     the section below, which is where a second one belongs. */
+  const runs = (r.print || []).filter(pr => pr.volumes);
+  if (runs.length) len.push(volCount(Math.max(...runs.map(pr => pr.volumes))));
+  fact(T('分量', 'Length'), esc(len.join(SEP)));
   /* WHAT FORM IT EXISTS IN. Every row can answer this and it had to be inferred from which
      sections happened to be populated. */
   fact(T('形態', 'Available as'), esc(
@@ -1333,11 +1434,16 @@ function renderWorkPage() {
      carried a next-update date equal to the day its newest chapter arrived, so the page announced
      a chapter already on the shelf below it. Shown only when it is later than both the newest
      chapter and today, and it sits with the serialisation because it is a platform's statement. */
+  /* THE PLATFORM ONLY WHERE THERE IS A CHOICE OF THEM. Which platform stated the date matters when
+     the work runs on several and answers nothing when it runs on one: 裏世界ピクニック printed
+     `Next chapter: 2026-08-16` and then `GANGAN ONLINE` directly under the single row that had just
+     named GANGAN ONLINE. */
   const nx = (r.stated_next || {}).next_update || '';
+  const nextWho = (r.sources || []).length > 1
+    ? `<span class="wf-sub">${esc(platName(r.stated_next.platform))}</span>` : '';
   const nextLine = nx && nx > String(r.latest || '') && nx >= todayISO()
     ? `<p class="wp-next">${esc(T('次回更新：', 'Next chapter: '))}${
-        esc(fmtDate(nx, { year: true }))}<span class="wf-sub">${
-        esc(platName(r.stated_next.platform))}</span></p>`
+        esc(fmtDate(nx, { year: true }))}${nextWho}</p>`
     : '';
   if (r.collection && r.collection !== r.work) {
     // A collection is a work, so its name obeys the same contract `workLabel` does and needs the
@@ -1363,9 +1469,17 @@ function renderWorkPage() {
     const held = r.chapters && s.chapters && r.chapters > s.chapters
       ? T(`${r.chapters}話中${s.chapters}話`, `${s.chapters} listed of ${r.chapters}`)
       : String(s.chapters || '') + (s.partial ? '+' : '');
+    /* THE COLUMN HAS TO ACCOUNT FOR THE COLUMN BESIDE IT. `free` and `priced` are what the
+       listing stated, and a chapter it said nothing about was counted in `chapters` and then
+       dropped here: 裏世界ピクニック read `3 listed of 90 | 1 free · 1 to buy`, and 279 of 1,575
+       platform rows are short this way. フレンドガールフレンド has 13 chapters and no mode on any of
+       them, so the cell was empty beside a count of 13, which reads as a rendering fault. What is
+       missing is our reading of the listing and not a fact about the offer, so it says so. */
+    const unsaid = Math.max(0, (s.chapters || 0) - f - (s.priced || 0));
     const money = [f ? T(`${f}話無料`, `${f} free`) : '',
-                   s.priced ? T(`${s.priced}話有料`, `${s.priced} to buy`) : '']
-      .filter(Boolean).join(T('・', ' · '));
+                   s.priced ? T(`${s.priced}話有料`, `${s.priced} to buy`) : '',
+                   unsaid ? T(`${unsaid}話は不明`, `${unsaid} not recorded`) : '']
+      .filter(Boolean).join(SEP);
     const nm = s.url
       ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer nofollow">${
            esc(platBoth(s.platform))}</a>`
@@ -1481,7 +1595,7 @@ function renderWorkPage() {
      day it was read and claims nothing about today. */
   const keepLine = (evTable || heldTable)
     ? `<p class="wp-keep">${esc(T('出典が削除された場合も記録を保持し、その旨を示す。',
-        'Entries are retained after a source is withdrawn, and marked as such'))}</p>` : '';
+        'Entries are retained after a source is withdrawn, and marked as such.'))}</p>` : '';
   const srcBody = (basis.length || evTable || heldTable)
     ? `<details class="wp-src"><summary>${esc(T('出典', 'Sources of information'))}</summary>
          ${basis.join('')}${evTable}${heldTable}${keepLine}</details>` : '';
@@ -1530,13 +1644,6 @@ function renderWorkPage() {
    Nobody thinks a KADOKAWA page listing 387 works is KADOKAWA's catalogue. A person's page listing
    three works reads as that person's body of work, when they may have thirty and we hold the three
    that are yuri. So the page says what its list is, above the list, in the reader's language. */
-/* A SEPARATOR IS PUNCTUATION AND NOT A TRANSLATION. `T('・', ' · ')` renders `・ / ·` in 併記,
-   which is right for a label and wrong between two things: the publishers line came out
-   `講談社 / Kodansha・ / ・秋田書店 / Akita Publishing`. The volumes section on the work page has
-   settled this already and uses a middle dot with spaces in every mode, which reads cleanly
-   between two names that are themselves two names in 併記. Same mark here. */
-const SEP = ' \u00b7 ';
-
 let PAGE_REC = null;                       // {kind: 'credit'|'publisher', id}
 const RECDATA = {};                        // kind -> promise of the shipped file
 
@@ -2704,7 +2811,7 @@ function compactList(rows) {
         ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">${esc(T('転載'))}</span>` : ''}
         ${anyFree ? `<span class="k k-free">${esc(T('無料'))}</span>` : ''}
         ${(el('fmodel').value === 'all' && lead.ahead_n)
-          ? `<span class="k k-adv" title="${esc(lead.ahead_n)} chapter(s) of this series sit ahead of the free line, newest ${esc(lead.ahead_ep || '')}: readable now for points. Next free: ${esc(lead.ahead_next_ep || '')} on ${esc(lead.ahead_next_free || '')}. A standing fact about the series, not a count of what this update added.">${esc(T('有料先行'))}</span>` : ''}
+          ? `<span class="k k-adv" title="${esc(aheadTip(lead))}">${esc(T('有料先行'))}</span>` : ''}
         </span></span>`;
       html += `<div class="crow">${bilingual(line)}</div>`;
     }
@@ -2868,6 +2975,28 @@ function detailList(rows) {
    Built from data/series.json, which is the FULL chapter history per (work, platform) rather than
    the 60-day feed window. That is the whole point of the tab: a series between arcs is absent from
    the updates feed and perfectly readable, and it is exactly the kind a reader is looking for. */
+/* THE 有料先行 TOOLTIP, in the reader's language and agreeing with its own count.
+
+   It read `1 chapter(s) of this series sit ahead of the free line`, which pluralises by bracket and
+   then disagrees with itself in the verb. It was also English whatever the language toggle said,
+   which is the state 30 of the 32 tooltips in this file are in; `interface tooltips a reader of
+   Japanese cannot read` counts them.
+
+   THE CHAPTER NAMES STAY AS THE PLATFORM PRINTS THEM. `５巻 第５６話「彗星エンカウント」` is the name of
+   a thing and not prose about one, so it is quoted rather than translated, in English too. */
+function aheadTip(lead) {
+  const n = lead.ahead_n;
+  const newest = lead.ahead_ep || '';
+  const nextEp = lead.ahead_next_ep || '';
+  const when = lead.ahead_next_free || '';
+  return T(
+    `この作品は無料公開より${n}話先まで進んでおり、最新は${newest}。ポイントで今すぐ読めます。` +
+    `次に無料になるのは${when}の${nextEp}。作品全体の状態であり、この更新で増えた数ではありません。`,
+    `${n} ${n === 1 ? 'chapter' : 'chapters'} of this series sit ahead of the free line, newest ` +
+    `${newest}: readable now for points. Next free: ${nextEp} on ${when}. A standing fact about ` +
+    `the series, not a count of what this update added.`);
+}
+
 const SSTATE = {
   active:    ['更新中', 'k-new', 'a chapter within the last 45 days'],
   // 103 works reach this state and there was no entry for it, so they fell through to `unknown`
@@ -3056,9 +3185,15 @@ function renderSeries() {
           ${acc()}
         </div>
         <div class="ep">${r.state === 'print'
-          ? `${(r.print || []).reduce((n, p) => n + (p.volumes || 0), 0)} ${esc(T('巻'))}${
-              r.first ? ` · ${esc(r.first)}` : ''}`
-          : `${r.chapters}${r.partial ? '+' : ''} ${esc(T('話'))}${
+          ? (() => {
+              /* THE UNIT AGREES WITH THE COUNT. `T('巻')` reaches EN as the fixed plural `vols`,
+                 so 1,698 print rows read `1 vols`. The volume list on the work page already
+                 counts and pluralises in one place; this is the same rule, one row up. */
+              const nv = (r.print || []).reduce((n, p) => n + (p.volumes || 0), 0);
+              return `${nv} ${esc(L('巻', nv === 1 ? 'vol' : 'vols'))}${
+                r.first ? ` · ${esc(r.first)}` : ''}`;
+            })()
+          : `${partialCount(r.chapters, r.partial)} ${esc(T('話'))}${
             r.latest ? ` · ${esc(T('最新'))} ${esc(fmtDate(r.latest, { year: true }))}${
               r.latest_ep ? ' ' + floorHtml(esc(phraseOf(r.latest_ep))) : ''}` : ''}`}</div>
         ${r.author ? `<div class="line2"><span class="meta by">${authorLabel(r)}</span></div>` : ''}`)}

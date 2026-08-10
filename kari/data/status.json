@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10T19:49:29+00:00",
+ "generated": "2026-08-10T21:19:11+00:00",
  "since_last": {
-  "at": "2026-08-10T19:04:06+00:00",
+  "at": "2026-08-10T21:15:47+00:00",
   "statistics": {}
  },
  "means": {
@@ -243,8 +243,10 @@
    },
    {
     "name": "a fact is reached through its entry point",
-    "violations": 0,
-    "examples": []
+    "violations": 1,
+    "examples": [
+     "build.py:349 reaches facts.credit.interpunct"
+    ]
    },
    {
     "name": "a name is answered by one module",
@@ -305,6 +307,11 @@
     "name": "a rendered file names a platform its targets hold",
     "violations": 0,
     "examples": []
+   },
+   {
+    "name": "no source a reader sees is an adapter",
+    "violations": 0,
+    "examples": []
    }
   ],
   "budgets": [
@@ -318,7 +325,7 @@
     "name": "one page cited for two claims",
     "means": "records whose reading and whose English name cite the same page while naming different kinds of source, so at most one of the two can be right about where it came from. A rise means an entry carried one address for two claims again.",
     "budget": 11,
-    "value": 13
+    "value": 11
    },
    {
     "name": "kana left in a romanisation",
@@ -391,6 +398,12 @@
     "means": "English renderings holding a full-width character and no kana or kanji, which is what narrowing the invariant to a script let past. Mostly a Latin pen name catalogued in full width; some are official titles and are correct, so this will not reach zero.",
     "budget": 7,
     "value": 7
+   },
+   {
+    "name": "interface tooltips a reader of Japanese cannot read",
+    "means": "title attributes in kari/app.js whose text is an English literal rather than a string built by T() or L(), so they stay English when a reader selects 日本語. The tooltips are where the interface explains itself, which is the worst place to be monolingual. Falls as each is written in both; a rise means a new one was added in one language.",
+    "budget": 34,
+    "value": 34
    },
    {
     "name": "interface reads outside an entry point",
@@ -898,7 +911,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T19:04:05+00:00",
+  "previous_at": "2026-08-10T21:15:46+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1036,7 +1049,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 46,
+   "count": 47,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 34,
@@ -1068,6 +1081,7 @@
     "imprint strings that reach no line": 18,
     "incomplete attested rows": 33,
     "interface reads outside an entry point": 12,
+    "interface tooltips a reader of Japanese cannot read": 34,
     "interpunct credits nobody has ruled on": 0,
     "invented markup in tests": 75,
     "kana left in a romanisation": 0,

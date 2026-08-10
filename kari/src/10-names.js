@@ -14,11 +14,22 @@ function inLang(lang, fn) {
   try { return fn(); } finally { LANG = prev; }
 }
 
-/* One row, or two stacked and distinguished. `render(lang)` must produce a complete row. */
+/* One row, or two stacked and distinguished. `render(lang)` must produce a complete row.
+
+   TWO IDENTICAL LINES ARE ONE LINE. 127 works are titled in Latin script alone: citrus, MURCIELAGO,
+   GIRL FRIENDS, Girl@Girl. There is no Japanese form to put above the English because the Japanese
+   form IS the English one, so 併記 stacked `citrus` over `citrus` and the work page's heading read
+   the name twice. This is not the duplication the note above defends: that one is about each line
+   being a COMPLETE row, and a second line that repeats the first character for character is not a
+   row a reader of either language gets anything from. Compared after rendering rather than by
+   asking whether the title has kanji, because the row is the thing that has to differ and any of
+   its parts may be what differs. */
 function bilingual(render, cls) {
   if (LANG !== 'both') return render(LANG);
-  return `<span class="bi ${cls || ''}">${inLang('ja', () => render('ja'))}` +
-         `<span class="bi-en">${inLang('en', () => render('en'))}</span></span>`;
+  const ja = inLang('ja', () => render('ja'));
+  const en = inLang('en', () => render('en'));
+  if (ja === en) return ja;
+  return `<span class="bi ${cls || ''}">${ja}<span class="bi-en">${en}</span></span>`;
 }
 
 /* ── English names and readings ──────────────────────────────────────────────────────────────
@@ -400,10 +411,15 @@ function uncertainMark(rec, e) {
   // rather than becoming FLOOR_WHY, because naming the community database tells a reader where to
   // go and settle it; the class and the tooltip answer two different questions and only the class
   // is counted.
+  // ONE REGISTER ACROSS THE THREE. These two and FLOOR_WHY are three different statements and stay
+  // three, but they were written in two styles: FLOOR_WHY a pair of sentences, these two lower-case
+  // fragments with no stop. A reader hovering two marks in the same byline met both, which reads as
+  // two different hands rather than as two different facts. All three are sentences now.
   const wikidata = rec.reading_basis === 'community-printed';
   const why = wikidata
-    ? 'the reading this is romanised from comes from a community-edited database, and no publisher or library confirms it'
-    : 'the reading this is romanised from is not attested by any source, and may be wrong';
+    ? 'The reading this is romanised from comes from a community-edited database. No publisher '
+      + 'or library confirms it.'
+    : 'No source states the reading this is romanised from, and it may be wrong.';
   return `<sup class="${wikidata ? FLOOR_CLASS : 'unc'}" title="${esc(why)}">[?]</sup>`;
 }
 
