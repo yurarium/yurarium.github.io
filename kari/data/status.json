@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10T18:39:31+00:00",
+ "generated": "2026-08-10T19:49:29+00:00",
  "since_last": {
-  "at": "2026-08-10T18:28:58+00:00",
+  "at": "2026-08-10T19:04:06+00:00",
   "statistics": {}
  },
  "means": {
@@ -317,8 +317,8 @@
    {
     "name": "one page cited for two claims",
     "means": "records whose reading and whose English name cite the same page while naming different kinds of source, so at most one of the two can be right about where it came from. A rise means an entry carried one address for two claims again.",
-    "budget": 12,
-    "value": 12
+    "budget": 11,
+    "value": 13
    },
    {
     "name": "kana left in a romanisation",
@@ -347,8 +347,8 @@
    {
     "name": "titles with no translation of our own",
     "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
-    "budget": 172,
-    "value": 172
+    "budget": 175,
+    "value": 175
    },
    {
     "name": "publishers with no English",
@@ -533,8 +533,8 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 197,
-    "value": 197
+    "budget": 196,
+    "value": 196
    },
    {
     "name": "implausible ruby spans",
@@ -898,7 +898,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T18:28:57+00:00",
+  "previous_at": "2026-08-10T19:04:05+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1076,7 +1076,7 @@
     "listing series with no feed of their own": 0,
     "names rendered two ways": 0,
     "nicovideo works with no rights": 60,
-    "one page cited for two claims": 12,
+    "one page cited for two claims": 11,
     "one work named two ways across its rows": 0,
     "one work under two names in a list": 14,
     "publisher keys the interface misses": 0,
@@ -1086,7 +1086,7 @@
     "renderings resting on a mechanical romanisation": 874,
     "renderings with nothing to show": 24,
     "rows with a moving address": 1,
-    "ruby asserting a reading per character": 197,
+    "ruby asserting a reading per character": 196,
     "scope questions left open": 2,
     "scraped counters in chapter names": 0,
     "series names holding a page title": 4,
@@ -1096,7 +1096,7 @@
     "titles read by a machine, unmarked": 1475,
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
-    "titles with no translation of our own": 172,
+    "titles with no translation of our own": 175,
     "uncertain readings": 52,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
@@ -1121,9 +1121,9 @@
    "slow": 56
   },
   "english_basis": {
-   "translated": 2666,
-   "official-jp": 120,
-   "licensed": 114,
+   "translated": 2637,
+   "official-jp": 151,
+   "licensed": 112,
    "none": 104,
    "romaji": 44
   },
