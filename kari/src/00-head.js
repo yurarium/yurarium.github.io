@@ -27,8 +27,11 @@ document.querySelectorAll('.themebtn[data-theme-set]').forEach(b =>
   }));
 
 // Search text is deliberately NOT persisted: restoring a stale query on load is surprising.
+// `spage` is here for the same reason `fview` is: how much of a list is drawn at once is a
+// preference about the reader's machine, not a statement about the works, so it persists and it
+// stays out of RESETS and out of the chip row.
 const VIEW_FIELDS = ['fmodel', 'ftype', 'fview', 'fplat', 'sort', 'filter',
-                     'sstate', 'sfree', 'splat', 'ssort', 'fvis', 'svis', 'rvis'];
+                     'sstate', 'sfree', 'splat', 'ssort', 'spage', 'fvis', 'svis', 'rvis'];
 function saveView() {
   const v = { tab: document.querySelector('nav button[aria-selected=true]')?.dataset.tab };
   VIEW_FIELDS.forEach(id => { const e = el(id); if (e) v[id] = e.value; });

@@ -223,27 +223,28 @@
   /* A slot the volume loader fills once the data lands. display:contents so the rows inside it
      lay out as if they were direct children of the list, which is what they are. */
   #wp-extra{display:contents}
-  /* The subsidiary route from an update to the record of the work it belongs to. Quiet: the row's
-     own link is to the chapter, which is what a reader of this tab came for. */
-  .wpline{margin:.15rem 0 .1rem}
-  /* AN ADDRESS IS NOT A TYPE SIZE. This carried .76rem, written for the sub-line above, and then
-     the class was reused to wrap a NAME: `creditChip` puts it round each person in the 作者 fact
+  /* AN ADDRESS IS NOT A TYPE SIZE. This carried .76rem, written for a caption under an update row
+     that no longer exists, and then the class was reused to wrap a NAME: `creditChip` puts it
+     round each person in the 作者 fact
      and `publisherChip` round each house in the 出版社 one. Both of those cells are .95rem, so a
      person with a page shrank to .76rem and a person without one stayed at .95rem, and the byline
      `Yosshā! / QZO。 / 和狸ナオ` drew its three artists at two sizes with the registry deciding
      which. The same happened a size down on the 発売 rows, where the row is .87em and KADOKAWA
      came out smaller than the artist beside it.
-     The size belongs to the line the link sits in, and `.wpline` is the one line that IS the link:
-     a route from an update to its work, on its own, with nothing under it.
-     A ROW IN A LIST OF WORKS IS NOT THAT LINE, and it was written in here beside it. The title on a
+     The size belongs to the line the link sits in, so nothing here sets one.
+     A ROW IN A LIST OF WORKS SETS ITS OWN, and it was once written in here instead. The title on a
      credit page carries a role, a spelling and a date under it, and all four measured 12.16px, so
      the row's own name read as the fourth piece of metadata about itself. A sub-line is subordinate
      or it is not a sub-line. The title takes the size of the row it heads, which is the list's own
      15px, and the weight every other list of works gives a title. */
   .wplink{color:var(--dim);text-decoration:none;border-bottom:1px dotted var(--line)}
-  .wpline .wplink{font-size:.76rem}
   .recw > .wplink{font-weight:600;color:var(--fg)}
   .wplink:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  /* THE MAIN LINK ON AN UPDATE ROW, which is the work's record. The dotted rule above marks a name
+     sitting in running text; a block holding a title, its chapter and its badges is not running
+     text, and the same rule drew a line across the row. The hover cue is the one every list of
+     works already has, `.rel a:hover .t`, and the title carries it. */
+  .relmain{display:block;border-bottom:0}
   .wp-sub{font-size:.92rem;margin:1.4rem 0 .5rem;font-weight:600}
   .wp-n{color:var(--faint);font-weight:400;font-size:.8rem}
   /* What the list does not enumerate, because the rows would be identical and empty. */
@@ -439,6 +440,9 @@
   .rel .coll{color:var(--faint);font-size:.78rem}
   .rel .coll::before{content:"／ "}
   .rel .plat{color:var(--faint)}
+  /* The source description carries the way out to the platform, so it has to answer a pointer. It
+     stays the quietest thing on the line: what the row is about is the work named above it. */
+  .rel a.plat:hover{color:var(--accent);text-decoration:underline}
   /* A channel sits inside its host, so it reads as a qualifier on the platform rather than beside
      it as an equal. */
   .rel .chan{color:var(--faint);font-size:.76rem}
@@ -504,6 +508,11 @@
   .basis a{color:var(--accent)}
   .scroll{overflow-x:auto}
   .empty{color:var(--dim);padding:2rem 0;text-align:center}
+  /* The foot of a list that has more behind it. Full width and centred, so it reads as the end of
+     the list rather than as a control belonging to the last row, and it is hidden outright when
+     everything is drawn: a disabled button there would say the list continues when it does not. */
+  .morerow{margin:.9rem 0 0;text-align:center}
+  .morerow .themebtn{padding:.4rem 1.1rem}
   footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);
     color:var(--faint);font-size:.78rem}
   footer a{color:var(--accent)}

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <title>Yurarium 仮</title>
-<link rel="stylesheet" href="app.css?v=373baaac">
+<link rel="stylesheet" href="app.css?v=3327bbd4">
 </head>
 <body>
 <div class="wrap">
@@ -234,12 +234,25 @@
   </div>
   <div class="resrow">
     <p class="count" id="scount"></p>
-    <!-- Sort joins the density control, because both arrange the output and neither selects it. -->
+    <!-- Sort joins the density control, because both arrange the output and neither selects it.
+         "最終更新順 / last updated" WAS THE DEFAULT AND WAS A FACT ABOUT SERIALISATIONS ONLY: a
+         work published in volumes has never updated, and two thirds of the rows here carry no such
+         date. The label follows the key rather than the other way round, so it says which way the
+         list runs and lets each row say which date it is: see workDate() in kari/src/20-app.js. -->
     <span class="outbox">
-      <select id="ssort" class="sortsel">
-        <option value="latest">最終更新順 / last updated</option>
+      <select id="ssort" class="sortsel"
+              title="newest first is the latest date the work carries: its most recent chapter, or its most recent volume where it is published in volumes">
+        <option value="latest">新しい順 / newest first</option>
         <option value="chapters">話数順 / chapter count</option>
         <option value="work">作品名順 / title</option>
+      </select>
+      <!-- How much of the list is drawn. A preference, not a filter: it sits with sort and density
+           rather than in the filter panel, and the reset button does not clear it. -->
+      <select id="spage" class="sortsel"
+              title="the whole corpus is held in the browser; this is how much of it is drawn into the page at once. Choose all at once to search the full list with the browser's own find">
+        <option value="200">200件ずつ / 200 at a time</option>
+        <option value="500">500件ずつ / 500 at a time</option>
+        <option value="0">全件を描画 / all at once</option>
       </select>
       <span class="themebox viewbox" role="group" aria-label="表示 / layout">
         <button class="themebtn" data-view-set="compact" data-i18n>簡易 / compact</button>
@@ -248,6 +261,10 @@
     </span>
   </div>
   <div id="serlist"></div>
+  <!-- Outside the list, so pressing it does not destroy the element holding the keyboard focus.
+       Its wording is written by paintSerMore and carries the number of rows not drawn, because a
+       list that simply stops is indistinguishable from a list that has ended. -->
+  <p class="morerow"><button id="smore" class="themebtn" hidden></button></p>
   <p class="empty" id="sempty" hidden>該当なし / no matches</p>
 </section>
 
@@ -327,6 +344,6 @@
 </footer>
 </div>
 
-<script src="app.js?v=79afe1c2"></script>
+<script src="app.js?v=838f75ef"></script>
 </body>
 </html>

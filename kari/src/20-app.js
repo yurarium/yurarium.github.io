@@ -2805,10 +2805,34 @@ function detailList(rows) {
       html += `<div class="date-h"><time datetime="${esc(d)}">${
         esc(fmtDate(d, { dow: true, year: needsYear(d) }))}</time></div>`;
     }
+    /* WHERE EACH LINK GOES, AND WHY THE ROW STOPPED BEING ONE.
+       The row was a single anchor to the chapter on its platform, with a "record for this work"
+       line underneath and OUTSIDE that anchor, because an anchor cannot hold another one. The
+       project owner's ruling, 2026-08-10: the main link is the work's own record, and the source
+       description carries the way out to the platform.
+
+       The anchor being the whole row is what caused both of the things reported about this view.
+       It is why the record link had to be a caption in a shape no other layout has, and it is why
+       the byline here was the one place on this site where a credit that resolves to a page was
+       drawn as plain text: `authorLabel` was not a considered choice, it was the only renderer
+       that could be called inside a link. Nothing else was ever wrong with `creditLine`.
+
+       So the row is not an anchor. The title and the chapter name are one, addressing the work,
+       exactly as the works tab wraps its title and the source chips sit outside it. Everything on
+       line 2 is a name that resolves somewhere, and each now says so.
+
+       THE COMPACT VIEW KEEPS THE OPPOSITE ARRANGEMENT and the owner accepted that. It has one line
+       per work with no source description to hang the platform link on, so the same rule applied
+       there would take a reader's way out and give nothing back.
+
+       A ROW WITH NO RECORD KEEPS ITS TITLE AS TEXT. 609 rows carry no work identifier, 605 of them
+       the archived month, written before the build put one on a release row and never rewritten
+       (REQUIREMENTS §5). Those rows lose nothing: the platform link is on the source name either
+       way, which is the one thing every row here has always had. */
     // The whole row again in the other language, not an English title bolted under a Japanese
     // row: kind, type, access, author, platform and syndication all re-render.
-    const inner = bilingual(() => `
-      <div class="relhead">
+    const inner = bilingual(() => {
+      const head = `<div class="relhead">
         <span class="t">${workLabel(r)}</span>
         ${visTag(r)}
         ${kindTag(r)}
@@ -2817,28 +2841,25 @@ function detailList(rows) {
         ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
       </div>
       ${epText(r) ? `<div class="ep">${esc(epText(r))}</div>` : ''}
-      ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">${esc(T('公開'))} ${esc(r.pub)}</div>` : ''}
+      ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">${esc(T('公開'))} ${esc(r.pub)}</div>` : ''}`;
+      const where = platName(r.plat_name || r.plat);
+      return `${r.wid
+        ? `<a class="wplink relmain" href="${esc(BASE)}work/${esc(r.wid)}/?tab=feed">${head}</a>`
+        : head}
       <div class="line2">
-        ${r.author ? `<span class="meta by">${authorLabel(r)}</span>` : ''}
+        ${r.author ? `<span class="meta by">${creditLine(r)}</span>` : ''}
         ${r.collection && r.collection !== r.work ? `<span class="meta coll" title="an instalment of a collection. The collection's genre label does not necessarily describe every instalment">${floorHtml(esc(workTextOf(r.collection)))}</span>` : ''}
-        <span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(platName(r.plat_name || r.plat))}</span>
+        ${r.url
+          ? `<a class="meta plat" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow" title="${
+              esc(r.origin_note || `read this instalment on ${where}`)}">${esc(where)}</a>`
+          : `<span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(where)}</span>`}
         ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(platName(r.plat_name))}, not a platform of its own">${esc(r.channel_name)}</span>` : ''}
         ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">${esc(T('転載'))}</span>` : ''}
         ${(r.also_on && r.also_on.length) ? `<span class="meta">${LANG === 'en' ? '· ' : '・'}${esc(L('他', 'also on'))} ${esc(r.also_on.map(platName).join(LANG === 'en' ? ', ' : '、'))}</span>` : ''}
       </div>
-      ${caveats(r)}`);
-    /* OUTSIDE the anchor, not inside it. The whole row is wrapped in a link to the platform,
-       because opening what has just been published is what this tab is for, and an anchor inside
-       an anchor is not a thing a browser will render.
-
-       Detailed only. Compact is a scanning view and the row's own link is the point of it. */
-    const wp = r.wid
-      ? `<div class="wpline"><a class="wplink" href="${esc(BASE)}work/${esc(r.wid)}/?tab=feed"
-           >${esc(T('この作品の記録', 'record for this work'))}</a></div>`
-      : '';
-    html += `<div class="rel${NON_STORY.has(r.type) ? ' quiet' : ''}">${
-      r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow">${inner}</a>` : inner
-    }${wp}</div>`;
+      ${caveats(r)}`;
+    });
+    html += `<div class="rel${NON_STORY.has(r.type) ? ' quiet' : ''}">${inner}</div>`;
   }
   return html;
 }
@@ -2863,6 +2884,78 @@ const SSTATE = {
   // reporting a gap in itself as a fact about the manga.
   print:     ['単行本', 'k-fin', 'published in volumes; no web serialisation we track'],
 };
+
+/* THE DATE THIS LIST ORDERS ITSELF BY, FOR A ROW OF EITHER KIND.
+
+   The default sort was `latest`, labelled 最終更新順 / last updated, and `latest` is the
+   SERIALISATION's own date: it is what decides whether a work is 更新中 or 休眠 and it is null for
+   every work published in volumes. 1,948 of the 3,046 rows here carry none — 1,697 print works and
+   251 web rows whose platform states no date we could read — so nearly two thirds of the list tied
+   on the empty string and sat below the dated rows in whatever order the file happened to be in.
+   A control offering to sort by a fact most of its rows do not have was not sorting them.
+
+   `latest_any` IS THE FACT THE BUILD ALREADY SHIPS FOR EXACTLY THIS QUESTION, and it is consumed
+   here rather than recomputed (§3). build.py takes the newest of the serialisation's last chapter
+   and each print run's last volume, and says so in its own words: a reader scanning the list wants
+   to know when the work last did anything, and `latest` answers only when the serialisation last
+   updated, so a work whose volume shipped last month reads as a year stale. The work page has drawn
+   its 刊行 span off it since that field landed. The list was the one place still asking `latest`.
+   `latest` keeps its job untouched, which is deciding the state badge.
+
+   AND THE FALLBACK IS NOT A SECOND FACT. `latest_any` covers 1,911 rows; `first` carries the rest
+   to 2,981 of 3,046. A row with exactly one dated event has that event as both its first and its
+   latest, so taking `first` where there is no `latest_any` is the same question answered from the
+   only evidence there is, not a different question. 65 rows carry no date at all and sort last.
+
+   A ROUTE REJECTED: clamping a date in the future, so that "newest" could mean "most recently
+   happened". 12 rows are dated ahead of today and 11 of them are announced volumes, which is what
+   the 発売 tab is a list of. A publication date a publisher has stated is a fact about the manga,
+   and hiding it at the bottom of the list to protect a word would be the label deciding the key. */
+function workDate(r) {
+  return r.latest_any || r.first || '';
+}
+
+/* HOW MANY ROWS ARE DRAWN AT ONCE, AND WHY THIS IS NOT THE WHOLE LIST.
+
+   The tab drew all 3,046 rows on every render: 2.08 MB of markup and 32,190 elements in Japanese,
+   3.73 MB and 60,846 in 併記. For scale, the updates tab's detailed view is the busiest list on
+   this site and comes to 255 KB and 4,185 elements. The works list is fourteen times that, it is
+   rebuilt on every keystroke in the search box beside it, and it is built at boot for every
+   visitor whichever tab they arrived on.
+
+   200 IS NOT A ROUND NUMBER, IT IS THE YARDSTICK. At about 1.2 KB and 20 elements a row, 200 rows
+   is roughly what the updates tab already paints, which is the one list here that has always drawn
+   its whole body and has never been reported as slow.
+
+   THE ESCAPE HATCH IS THE POINT OF THE PREFERENCE. Drawing part of a list breaks the browser's own
+   find-in-page over the rest of it, and that is a real thing to lose: a reader looking for a title
+   they cannot spell has been able to press ctrl-F over the entire corpus. So "all at once" stays
+   available and the button below the list says how many rows are not drawn, rather than the list
+   simply stopping.
+
+   A PREFERENCE, NOT A FILTER (§15). It changes how the same data looks, so it persists, it is
+   never in history, and it is deliberately absent from RESETS.ser and from the chip row: the same
+   line 簡易/詳細 sits on. Back must not move a reader between pages of a list they did not
+   navigate.
+
+   THE SIZES ARE THE SELECT'S, and it is the only place they are written. A copy of the default
+   here would be a second answer to a question the markup already answers, and the two would agree
+   until somebody changed one of them. `serStep` is what everything below asks. */
+let SER_SHOWN = 0, SER_BODY = null;
+// 0 is the reader asking for all of them, and it is also what a missing control answers: an
+// index.html without this select gets the whole list, which is what this tab did before.
+const serStep = () => Number(el('spage')?.value) || 0;
+
+function paintSerMore(shown, total) {
+  const b = el('smore');
+  if (!b) return;
+  b.hidden = shown >= total;
+  if (b.hidden) return;
+  const left = total - shown;
+  const next = Math.min(left, serStep() || left);
+  b.textContent = T(`さらに${next}件を表示（残り${left}件）`,
+                    `show ${next} more (${left} not drawn)`);
+}
 
 function renderSeries() {
   if (!SERIES) return;
@@ -2890,8 +2983,22 @@ function renderSeries() {
   rows = rows.slice().sort(
     sort === 'chapters' ? (a, b) => b.chapters - a.chapters
     : sort === 'work'   ? (a, b) => a.work.localeCompare(b.work, 'ja')
-    : (a, b) => (b.latest || '').localeCompare(a.latest || ''));
+    : (a, b) => workDate(b).localeCompare(workDate(a)));
 
+  /* ONE PRODUCER OF "IS THIS A DIFFERENT LIST". Every control that changes which rows there are or
+     what order they come in starts the reveal again, and deriving that from the controls' own
+     values means a call site added later cannot forget to do it. Language, theme, romanisation and
+     furigana are absent on purpose: they repaint the same list, and a reader who has asked for 800
+     rows and then switched language should still have 800. */
+  // Joined on a NUL, written as the escape, because it is the one character no control's value can
+  // hold: a search for "a b" and a state of "b" must not compose the same key as "a" and "b b".
+  const key = [q, state, freeOnly, plat, sort, VIS_SHOW, serStep()].join('\u0000');
+  if (key !== SER_BODY) { SER_BODY = key; SER_SHOWN = serStep(); }
+  const drawn = SER_SHOWN ? rows.slice(0, SER_SHOWN) : rows;
+  paintSerMore(drawn.length, rows.length);
+
+  // THE COUNT IS ABOUT THE BODY, NOT THE DRAW. It says how many works match, which is the reader's
+  // question; how many of them are on the page is what the button under the list says.
   el('scount').textContent = nTotal(rows.length);
   // THE BADGE COUNTS WHAT THE TAB LISTS. It was assigned once from index.json, which was the same
   // number right up until some rows stopped being listed by default; then the tab said 3076 and
@@ -2900,7 +3007,7 @@ function renderSeries() {
   el('n-cat').textContent = SERIES.series.filter(
     r => (r.chapters || (r.print || []).length) && visShown(r)).length;
   el('sempty').hidden = rows.length > 0;
-  el('serlist').innerHTML = rows.map(r => {
+  el('serlist').innerHTML = drawn.map(r => {
     const [lbl, cls, why] = SSTATE[r.state] || SSTATE.unknown;
     // Free count is the reader's actual question: not "is it free" but "how much of it is".
     // "全話無料" of a single chapter is a category error. There is no proportion to state, only
@@ -3187,7 +3294,16 @@ el('fmonth').addEventListener('change', () => {
   // so the reader is already at the top and the scroll only moves the page out from under them.
   // A behaviour that was right for a layout outlives the layout unless somebody goes and looks.
 });
-['sq','sstate','sfree','splat','ssort'].forEach(i => el(i).addEventListener('input', renderSeries));
+['sq','sstate','sfree','splat','ssort','spage'].forEach(i => el(i).addEventListener('input', renderSeries));
+/* THE BUTTON LIVES OUTSIDE #serlist, and that is the whole reason it is a separate element rather
+   than the last row of the list. Revealing more redraws the list, and a control inside what it
+   redraws takes the keyboard focus with it: a reader pressing it twice would be returned to the
+   top of the page in between. */
+el('smore').addEventListener('click', () => {
+  SER_SHOWN += serStep();
+  renderSeries();
+  if (!el('smore').hidden) el('smore').focus();
+});
 el('sreset').addEventListener('click', () => resetFilters(RESETS.ser, renderSeries));
 el('rreset').addEventListener('click', () => resetFilters(RESETS.rel, paintReleases));
 ['q','sort','filter'].forEach(i => el(i).addEventListener('input', renderCat));
