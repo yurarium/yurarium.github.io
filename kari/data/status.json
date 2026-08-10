@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10T10:30:26+00:00",
+ "generated": "2026-08-10T11:02:59+00:00",
  "since_last": {
-  "at": "2026-08-10T09:43:48+00:00",
+  "at": "2026-08-10T10:30:26+00:00",
   "statistics": {}
  },
  "means": {
@@ -303,7 +303,7 @@
     "name": "one page cited for two claims",
     "means": "records whose reading and whose English name cite the same page while naming different kinds of source, so at most one of the two can be right about where it came from. A rise means an entry carried one address for two claims again.",
     "budget": 12,
-    "value": 12
+    "value": 13
    },
    {
     "name": "kana left in a romanisation",
@@ -333,7 +333,7 @@
     "name": "titles with no translation of our own",
     "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
     "budget": 172,
-    "value": 172
+    "value": 174
    },
    {
     "name": "publishers with no English",
@@ -524,8 +524,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1480,
-    "value": 1480
+    "budget": 1474,
+    "value": 1474
    },
    {
     "name": "uncertain readings",
@@ -542,8 +542,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 153,
-    "value": 153
+    "budget": 148,
+    "value": 148
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -865,7 +865,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T09:43:47+00:00",
+  "previous_at": "2026-08-10T10:30:25+00:00",
   "drops": []
  },
  "outstanding": [
@@ -878,7 +878,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 118,
+   "count": 105,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -922,7 +922,6 @@
     "Koishi is desperate series.",
     "LOVE CUBIC",
     "LOVESHISHAMO",
-    "LatteComi コミックアンソロジー【百合】（単話版）（LatteComi）",
     "Love Only the Body",
     "Love Only the Body Omnibus",
     "MIO×REO Yuri Illustration",
@@ -957,7 +956,6 @@
     "Students and Teachers",
     "Sweet Little Devil",
     "TOUKO Swing-by!",
-    "TSロリシリーズ（コスモブルー）",
     "That Room",
     "The Day Tomorrow Comes",
     "Urge",
@@ -987,18 +985,7 @@
     "puberty girls",
     "schadenliebe",
     "sick",
-    "strawberry syrup",
-    "いりぺそ　change the world book",
-    "うなうさ",
-    "けいおん!",
-    "さろめりっく",
-    "のだ",
-    "ゆずせん",
-    "よぬりめ",
-    "わくとこまこ",
-    "ナチュリーズ",
-    "ハクせつシリーズ",
-    "百合色ミュージアム（OrangeVox）"
+    "strawberry syrup"
    ]
   },
   {
@@ -1070,7 +1057,7 @@
     "shelf admissions a reader cannot follow": 5,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 0,
-    "titles read by a machine, unmarked": 1480,
+    "titles read by a machine, unmarked": 1474,
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 172,
@@ -1080,7 +1067,7 @@
     "updates naming a work we do not hold": 27,
     "volumes with an isbn and no date": 0,
     "works offered twice in a list": 0,
-    "works showing a romanisation": 153,
+    "works showing a romanisation": 148,
     "works whose first publication country is unattested": 2562,
     "works without English": 104
    }
@@ -1098,11 +1085,11 @@
    "slow": 58
   },
   "english_basis": {
-   "translated": 2664,
+   "translated": 2667,
    "official-jp": 118,
-   "licensed": 111,
-   "none": 105,
-   "romaji": 48
+   "licensed": 113,
+   "none": 104,
+   "romaji": 44
   },
   "print_works": 2482,
   "print_only": 1697,
