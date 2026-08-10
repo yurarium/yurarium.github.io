@@ -2,8 +2,8 @@
  "generated": "2026-08-10",
  "releases": 1146,
  "platforms": 22,
- "works": 2564,
- "series_rows": 3048,
+ "works": 2562,
+ "series_rows": 3046,
  "sources": [
   {
    "source": "bookwalker",
@@ -4446,6 +4446,58 @@
    }
   ]
  },
+ "scope": {
+  "by_basis": {
+   "japanese-edition-catalogued": 2560,
+   "foreign-comics-line": 2
+  },
+  "attested": 0,
+  "refused": [
+   "オルターエゴ",
+   "サンストーン"
+  ],
+  "rulings": [
+   {
+    "work": "w01338",
+    "title": "サンストーン",
+    "disposition": "out-of-scope",
+    "country": "US",
+    "country_basis": "publisher-states-origin",
+    "source": "誠文堂新光社"
+   },
+   {
+    "work": "w02084",
+    "title": "オルターエゴ",
+    "disposition": "out-of-scope",
+    "country": "ES",
+    "country_basis": "publisher-states-origin",
+    "source": "KADOKAWA"
+   },
+   {
+    "work": "w02333",
+    "title": "落差",
+    "disposition": "review",
+    "country": null,
+    "country_basis": "foreign-comics-line",
+    "source": "BOOK☆WALKER"
+   },
+   {
+    "work": "w02348",
+    "title": "ON a LEASH ~ 戦場で出会った彼女に囚われて ~",
+    "disposition": "review",
+    "country": null,
+    "country_basis": "foreign-comics-line",
+    "source": "BOOK☆WALKER"
+   }
+  ],
+  "means": {
+   "japanese-serialisation-attested": "A source names the Japanese magazine or platform the work first ran in, so the first publication venue was in Japan and DEFINITIONS §6 admits it. This is the only term that puts JP in the field, and it is the one no bulk catalogue can supply.",
+   "publisher-states-origin": "The Japanese publisher's own page for this work says where the work comes from, and it is not Japan. The Japanese edition is a translation, so DEFINITIONS §6 excludes the work whatever the author's nationality and whoever sells it here.",
+   "translator-credited": "The record credits somebody with putting the text into Japanese, so the Japanese text is a translation of a text that existed before it. Which country that text was published in is a separate question, and 現代語訳 of a Japanese classic is translated and Japanese, so this asks for the publisher's page rather than settling anything.",
+   "foreign-comics-line": "The book is on a line whose business is bringing comics published abroad to Japan. Where `data/names/imprints.yaml` carries the flag, the publisher's own page for the line is what put it there. It is evidence about a book on the line and not a proof about any particular book, because nothing stops a house putting a Japanese work on it.",
+   "japanese-edition-catalogued": "Every source consulted catalogues the Japanese edition. That places the EDITION in Japan and says nothing about where the work first appeared, so the scope test has not run. The route that closes it is a serialisation venue, which the bulk catalogues do not carry."
+  }
+ },
  "delivery_dated": {
   "rows": 1070,
   "followup": {
@@ -5413,10 +5465,6 @@
    },
    {
     "work": "シナモン : 人外×人間百合アンソロジー",
-    "platform": null
-   },
-   {
-    "work": "サンストーン",
     "platform": null
    },
    {
@@ -10272,7 +10320,7 @@
     "platform": null
    },
    {
-    "work": "うどみょん１",
+    "work": "うどみょん",
     "platform": null
    },
    {
@@ -10996,7 +11044,7 @@
     "platform": null
    },
    {
-    "work": "ふぉーおぶあかいんど！2",
+    "work": "ふぉーおぶあかいんど！",
     "platform": null
    },
    {
@@ -11285,10 +11333,10 @@
    }
   ],
   "grouping": {
-   "series-link": 432,
+   "series-link": 431,
    "title-match": 39,
    "mixed": 68,
-   "unknown": 1644,
+   "unknown": 1643,
    "title-only": 381
   },
   "catalogue_listings": [

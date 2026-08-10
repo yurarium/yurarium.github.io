@@ -3148,10 +3148,17 @@ async function detail(id, li) {
   li.querySelector('.detail')?.remove();
   const d = document.createElement('div');
   d.className = 'detail';
+  /* THE COUNTRY TAG APPEARS ONLY WHERE A COUNTRY IS ATTESTED. It was esc(fp.country || ''), which
+     renders an empty grey pill on any record without one, and until now there were none: build.py
+     wrote the literal "JP" on every work. DEFINITIONS §6 makes this field the inclusion test,
+     adapters/facts/origin decides it now, and it is empty wherever nothing establishes where the
+     work was first published. An empty chip is the interface reporting our own uncertainty at a
+     reader, which belongs on status.html; a work with no attested country shows the venue and the
+     date it has and says nothing it cannot support. */
   d.innerHTML = `
     <h3>初出 / first known publication</h3>
     <p>${esc(fp.date || '—')} · ${esc(fp.venue || '—')}
-       <span class="tag grey">${esc(fp.country || '')}</span>
+       ${fp.country ? `<span class="tag grey">${esc(fp.country)}</span>` : ''}
        <span class="tag grey">date via ${esc(fp.date_source || '?')}</span></p>
     <p class="meta">${esc(fp.note || '')}</p>
     <h3>巻 / volumes (${(w.volumes || []).length})</h3>

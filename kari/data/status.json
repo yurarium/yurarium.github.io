@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10T07:36:27+00:00",
+ "generated": "2026-08-10T10:30:26+00:00",
  "since_last": {
-  "at": "2026-08-10T07:29:27+00:00",
+  "at": "2026-08-10T09:43:48+00:00",
   "statistics": {}
  },
  "means": {
@@ -24,9 +24,9 @@
  "last_run": {
   "at": "2026-08-10",
   "releases": 1146,
-  "works": 2564,
+  "works": 2562,
   "platforms": 22,
-  "series_rows": 3048,
+  "series_rows": 3046,
   "identification": {
    "discovery-candidate": 840,
    "platform-genre": 306
@@ -39,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 48,
+  "invariants_passing": 50,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -152,6 +152,11 @@
     "examples": []
    },
    {
+    "name": "scope rulings are accounted for",
+    "violations": 0,
+    "examples": []
+   },
+   {
     "name": "archives are unchanged",
     "violations": 0,
     "examples": []
@@ -247,6 +252,11 @@
     "examples": []
    },
    {
+    "name": "a work shows the English its record holds",
+    "violations": 0,
+    "examples": []
+   },
+   {
     "name": "the store has one writer",
     "violations": 0,
     "examples": []
@@ -302,6 +312,12 @@
     "value": 0
    },
    {
+    "name": "titles read past their own gloss",
+    "means": "titles printing how a word in them is said, shipped with a reading that drops the kana or reads the bracket aloud. A publisher's furigana on the line outranks an analyser. A rise means a capture route reached the naming passes without the gloss rule.",
+    "budget": 1,
+    "value": 1
+   },
+   {
     "name": "titles shorter than their own reading",
     "means": "MADB records whose stated reading carries ISBD's mark for other title information while the stored name carries none, so the work is held under a name shorter than the one the catalogue read out. Falls when a source states the missing words; a rise means a route went back to reading the title out of one field.",
     "budget": 3,
@@ -316,8 +332,8 @@
    {
     "name": "titles with no translation of our own",
     "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
-    "budget": 171,
-    "value": 171
+    "budget": 172,
+    "value": 172
    },
    {
     "name": "publishers with no English",
@@ -346,8 +362,8 @@
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 798,
-    "value": 798
+    "budget": 866,
+    "value": 866
    },
    {
     "name": "credit fields the division does not account for",
@@ -412,8 +428,8 @@
    {
     "name": "publisher readings nobody has settled",
     "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
-    "budget": 16,
-    "value": 16
+    "budget": 21,
+    "value": 21
    },
    {
     "name": "renderings with nothing to show",
@@ -494,16 +510,28 @@
     "value": 157
    },
    {
+    "name": "ruby asserting a reading per character",
+    "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
+    "budget": 197,
+    "value": 197
+   },
+   {
     "name": "implausible ruby spans",
     "means": "furigana runs holding fewer kana than they have kanji. A rise means the aligner placed a boundary somewhere no reading could fall, which the spelling check cannot see.",
     "budget": 0,
     "value": 0
    },
    {
+    "name": "titles read by a machine, unmarked",
+    "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
+    "budget": 1480,
+    "value": 1480
+   },
+   {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 53,
-    "value": 53
+    "budget": 52,
+    "value": 52
    },
    {
     "name": "works without English",
@@ -514,8 +542,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 178,
-    "value": 178
+    "budget": 153,
+    "value": 153
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -608,6 +636,12 @@
     "value": 11
    },
    {
+    "name": "shelf admissions a reader cannot follow",
+    "means": "works a retailer's yuri shelf admitted whose row offers no page on that retailer, so the source named as putting the work here cannot be reached from it. Falls as a route records which of the shop's pages it read the work off. Its floor is the works a shop lists under two titles where the bibliography holds one, for which no single page is the work's.",
+    "budget": 5,
+    "value": 5
+   },
+   {
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 1,
@@ -618,6 +652,18 @@
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 27,
     "value": 27
+   },
+   {
+    "name": "works whose first publication country is unattested",
+    "means": "works whose `first_publication.country` is empty, which is DEFINITIONS §6's inclusion test not having run. It read 0 until now because build.py wrote the literal \"JP\" on every record, so the field asserted the answer and no check on it could fail. Every source here catalogues the Japanese EDITION and none states where the work first appeared, so this falls one work at a time as a serialisation venue is read off a publisher's page and recorded in data/scope.yaml. A rise means the corpus grew, which is expected, and the number to watch is the share rather than the count.",
+    "budget": 2562,
+    "value": 2562
+   },
+   {
+    "name": "scope questions left open",
+    "means": "works a scope signal flagged as a possible translation that nobody has ruled on. A credited translator and a publisher's foreign-comics line are evidence and not proof: a 現代語訳 is translated and Japanese. Falls as each is settled either way in data/scope.yaml, citing the page that settles it, and reaches zero.",
+    "budget": 2,
+    "value": 2
    },
    {
     "name": "targets a capture wrote no row for",
@@ -819,7 +865,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T07:29:26+00:00",
+  "previous_at": "2026-08-10T09:43:47+00:00",
   "drops": []
  },
  "outstanding": [
@@ -832,7 +878,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 157,
+   "count": 118,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -942,56 +988,17 @@
     "schadenliebe",
     "sick",
     "strawberry syrup",
-    "【完結】冬木先輩と夏井",
-    "【百合】奴隷扱いの娘が足を舐めて幸せになる(かもしれない)話",
-    "いちゃらぶしかない百合アンソロジーコミックsugar",
     "いりぺそ　change the world book",
-    "うどみょん１",
     "うなうさ",
-    "うらら迷路帖",
-    "おねロリキャバクラ（同人版）",
     "けいおん!",
-    "こい☆フラ　レボリューション",
-    "これでわかってよ!",
     "さろめりっく",
     "のだ",
-    "ふちゅれ！オトメ",
     "ゆずせん",
-    "ゆゆ式",
-    "ゆりでなる♡えすぽわーる",
-    "ゆりゆり",
     "よぬりめ",
     "わくとこまこ",
-    "アイドル総選挙4位だった私が魔王を倒すんですか？（Lilie comics）",
-    "イヴとイヴ",
-    "キマシ!",
-    "サタノファニ : 妖艶彩色本・極",
     "ナチュリーズ",
     "ハクせつシリーズ",
-    "ハニー＆ハニー",
-    "ファインダー越しのあの子（Lilie comics）",
-    "ボドカン！",
-    "ヤンキー×ジャーキー",
-    "リンリンサイド！！",
-    "レズ風俗アンソロジーリピーター",
-    "レンズのむこう",
-    "一端の子",
-    "京アミ！",
-    "冬馬くん",
-    "可愛原先輩はかわいいがすき！",
-    "天華百剣 ‐瞬‐",
-    "奏 青春バンド百合アンソロジー",
-    "完パコLOVE",
-    "心の声が漏れやすいメイドさん",
-    "愛マイyummy",
-    "男だけど死神姫の嫁になりました(仮)",
-    "異世界でも風俗嬢やってみた",
-    "百合色ミュージアム（OrangeVox）",
-    "私に体、売ってみない?",
-    "私の女神が今日も推せる 【単話版】",
-    "能面 battle girl納言",
-    "豹藤さんは攻略したい",
-    "鮮血王女、皆殺す ～家族に裏切られ、処刑された少女は蘇り、『死神』となって復讐する～"
+    "百合色ミュージアム（OrangeVox）"
    ]
   },
   {
@@ -1009,7 +1016,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 40,
+   "count": 46,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
@@ -1052,50 +1059,56 @@
     "one work under two names in a list": 13,
     "publisher keys the interface misses": 0,
     "publisher pages listing a work from another house": 0,
-    "publisher readings nobody has settled": 16,
+    "publisher readings nobody has settled": 21,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 798,
+    "renderings resting on a mechanical romanisation": 866,
     "renderings with nothing to show": 24,
     "rows with a moving address": 0,
+    "ruby asserting a reading per character": 197,
+    "scope questions left open": 2,
     "scraped counters in chapter names": 1,
+    "shelf admissions a reader cannot follow": 5,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 0,
+    "titles read by a machine, unmarked": 1480,
+    "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
-    "titles with no translation of our own": 171,
-    "uncertain readings": 53,
+    "titles with no translation of our own": 172,
+    "uncertain readings": 52,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 27,
     "volumes with an isbn and no date": 0,
     "works offered twice in a list": 0,
-    "works showing a romanisation": 178,
+    "works showing a romanisation": 153,
+    "works whose first publication country is unattested": 2562,
     "works without English": 104
    }
   }
  ],
  "statistics": {
-  "works": 3048,
+  "works": 3046,
   "states": {
-   "print": 1698,
+   "print": 1697,
    "oneshot": 426,
-   "unknown": 304,
+   "unknown": 303,
    "completed": 263,
    "active": 218,
    "dormant": 81,
    "slow": 58
   },
   "english_basis": {
-   "translated": 2645,
-   "official-jp": 115,
-   "licensed": 110,
-   "none": 108,
-   "romaji": 70
+   "translated": 2664,
+   "official-jp": 118,
+   "licensed": 111,
+   "none": 105,
+   "romaji": 48
   },
-  "print_works": 2484,
-  "print_only": 1698,
-  "volumes": 6280,
-  "with_identifier": 3048,
-  "chapters": 26843,
+  "print_works": 2482,
+  "print_only": 1697,
+  "volumes": 6274,
+  "with_identifier": 3046,
+  "chapters": 26842,
   "delivery_dated": 1070
  }
 }
