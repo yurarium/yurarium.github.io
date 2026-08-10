@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10T16:29:08+00:00",
+ "generated": "2026-08-10T16:39:05+00:00",
  "since_last": {
-  "at": "2026-08-10T16:26:25+00:00",
+  "at": "2026-08-10T16:36:00+00:00",
   "statistics": {}
  },
  "means": {
@@ -39,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 51,
+  "invariants_passing": 52,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -160,10 +160,8 @@
    },
    {
     "name": "archives are unchanged",
-    "violations": 1,
-    "examples": [
-     "2026-07.json"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "no refutation of print serials",
@@ -382,7 +380,7 @@
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
     "budget": 873,
-    "value": 951
+    "value": 876
    },
    {
     "name": "credit fields the division does not account for",
@@ -394,7 +392,7 @@
     "name": "full-width forms in English renderings",
     "means": "English renderings holding a full-width character and no kana or kanji, which is what narrowing the invariant to a script let past. Mostly a Latin pen name catalogued in full width; some are official titles and are correct, so this will not reach zero.",
     "budget": 7,
-    "value": 15
+    "value": 7
    },
    {
     "name": "interface reads outside an entry point",
@@ -508,7 +506,7 @@
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
     "budget": 21,
-    "value": 25
+    "value": 23
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -598,22 +596,19 @@
     "name": "facts with more than one home",
     "means": "a vocabulary, a shape or a rule typed into a second file",
     "budget": 12,
-    "value": null,
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 12
    },
    {
     "name": "impossibilities asserted without evidence",
     "means": "a comment saying something cannot happen, naming nothing that proves it",
     "budget": 0,
-    "value": null,
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 0
    },
    {
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": null,
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 75
    },
    {
     "name": "nicovideo works with no rights",
@@ -673,14 +668,13 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 0,
-    "value": null,
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 0
    },
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 26,
-    "value": 27
+    "value": 29
    },
    {
     "name": "works whose first publication country is unattested",
@@ -697,7 +691,7 @@
    {
     "name": "targets a capture wrote no row for",
     "means": "works a platform pass was given as a target and wrote no row for. The pass put each in a `failed` list, printed it and dropped it, so until now a work asked for and not got left nothing in the repository at all. A rise means a pass has stopped resolving something it used to, which is either an address that moved or a platform that withdrew a work. It falls when the target is captured, or when a platform's refusal is written into a register the count reads, as data/source/kadokomi/withheld.yaml already is.",
-    "budget": 5,
+    "budget": 4,
     "value": 4
    },
    {
@@ -906,7 +900,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T16:26:21+00:00",
+  "previous_at": "2026-08-10T16:35:59+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1102,7 +1096,7 @@
     "scraped counters in chapter names": 0,
     "series names holding a page title": 4,
     "shelf admissions a reader cannot follow": 5,
-    "targets a capture wrote no row for": 5,
+    "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 0,
     "titles read by a machine, unmarked": 1474,
     "titles read past their own gloss": 1,
