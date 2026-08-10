@@ -52371,6 +52371,42 @@
    },
    "reading_basis": "analyser"
   },
+  "君が一等星に光るまで": {
+   "reading": "キミ ガ イットウセイ ニ ヒカル マデ",
+   "ruby": [
+    [
+     "君",
+     "きみ"
+    ],
+    [
+     "が",
+     null
+    ],
+    [
+     "一等星",
+     "いっとうせい"
+    ],
+    [
+     "に",
+     null
+    ],
+    [
+     "光",
+     "ひか"
+    ],
+    [
+     "るまで",
+     null
+    ]
+   ],
+   "romaji": {
+    "macron": "Kimi ga Ittōsei ni Hikaru made",
+    "double": "Kimi ga Ittousei ni Hikaru made",
+    "plain": "Kimi ga Ittosei ni Hikaru made"
+   },
+   "basis": "romaji",
+   "reading_basis": "analyser"
+  },
   "君だけが光": {
    "reading": "キミ ダケ ガ ヒカリ",
    "ruby": [
@@ -120546,6 +120582,17 @@
    },
    "id": "c01074"
   },
+  "安藤いも": {
+   "reading": "アンドウ イモ",
+   "romaji": {
+    "macron": "Andō Imo",
+    "double": "Andou Imo",
+    "plain": "Ando Imo"
+   },
+   "basis": "romaji",
+   "reading_basis": "analyser",
+   "unverified": true
+  },
   "宙": {
    "reading": "ソラ",
    "ruby": [
@@ -146010,6 +146057,35 @@
     "講談社"
    ]
   },
+  "ヒーローズコミックスわいるど": {
+   "id": "heros-comics-wild",
+   "name": "ヒーローズコミックスわいるど",
+   "parent": "HCヒーローズコミックス",
+   "publishers": [
+    "ヒーローズ"
+   ]
+  },
+  "Bamboo comics": {
+   "id": "bamboo-comics",
+   "name": "バンブーコミックス",
+   "publishers": [
+    "竹書房"
+   ]
+  },
+  "bamboocomics": {
+   "id": "bamboo-comics",
+   "name": "バンブーコミックス",
+   "publishers": [
+    "竹書房"
+   ]
+  },
+  "バンブーコミックス": {
+   "id": "bamboo-comics",
+   "name": "バンブーコミックス",
+   "publishers": [
+    "竹書房"
+   ]
+  },
   "FUZ comics": {
    "id": "fuz-comics",
    "name": "FUZコミックス",
@@ -146120,6 +146196,20 @@
     "スクウェア・エニックス"
    ]
   },
+  "ヤングチャンピオン・コミックス": {
+   "id": "young-champion-comics",
+   "name": "ヤングチャンピオン・コミックス",
+   "publishers": [
+    "秋田書店"
+   ]
+  },
+  "ヤングチャンピオンコミックス": {
+   "id": "young-champion-comics",
+   "name": "ヤングチャンピオン・コミックス",
+   "publishers": [
+    "秋田書店"
+   ]
+  },
   "講談社コミックス. 週刊少年マガジン": {
    "id": "kodansha-comics-shonen-magazine",
    "name": "講談社コミックス. 週刊少年マガジン",
@@ -146134,20 +146224,6 @@
    "parent": "講談社コミックス",
    "publishers": [
     "講談社"
-   ]
-  },
-  "ヤングチャンピオン・コミックス": {
-   "id": "young-champion-comics",
-   "name": "ヤングチャンピオン・コミックス",
-   "publishers": [
-    "秋田書店"
-   ]
-  },
-  "ヤングチャンピオンコミックス": {
-   "id": "young-champion-comics",
-   "name": "ヤングチャンピオン・コミックス",
-   "publishers": [
-    "秋田書店"
    ]
   },
   "シリウスKC": {
@@ -146240,6 +146316,20 @@
     "双葉社"
    ]
   },
+  "ヤンマガKC": {
+   "id": "yanmaga-kc",
+   "name": "ヤンマガKC",
+   "publishers": [
+    "講談社"
+   ]
+  },
+  "ヤンマガkc": {
+   "id": "yanmaga-kc",
+   "name": "ヤンマガKC",
+   "publishers": [
+    "講談社"
+   ]
+  },
   "シャイニーコミックス": {
    "id": "shiny-comics",
    "name": "シャイニーコミックス",
@@ -146300,20 +146390,6 @@
    "parent": "MFC",
    "publishers": [
     "KADOKAWA"
-   ]
-  },
-  "ヤンマガKC": {
-   "id": "yanmaga-kc",
-   "name": "ヤンマガKC",
-   "publishers": [
-    "講談社"
-   ]
-  },
-  "ヤンマガkc": {
-   "id": "yanmaga-kc",
-   "name": "ヤンマガKC",
-   "publishers": [
-    "講談社"
    ]
   },
   "コロコロコミックススペシャル": {
@@ -146378,27 +146454,6 @@
    "parent": "ちゃおコミックス",
    "publishers": [
     "小学館"
-   ]
-  },
-  "Bamboo comics": {
-   "id": "bamboo-comics",
-   "name": "バンブーコミックス",
-   "publishers": [
-    "竹書房"
-   ]
-  },
-  "bamboocomics": {
-   "id": "bamboo-comics",
-   "name": "バンブーコミックス",
-   "publishers": [
-    "竹書房"
-   ]
-  },
-  "バンブーコミックス": {
-   "id": "bamboo-comics",
-   "name": "バンブーコミックス",
-   "publishers": [
-    "竹書房"
    ]
   },
   "あすかコミックスDX": {
@@ -146659,14 +146714,6 @@
    "name": "Seasons Fantasy",
    "publishers": [
     "文藝春秋"
-   ]
-  },
-  "ヒーローズコミックスわいるど": {
-   "id": "heros-comics-wild",
-   "name": "ヒーローズコミックスわいるど",
-   "parent": "HCヒーローズコミックス",
-   "publishers": [
-    "ヒーローズ"
    ]
   },
   "MFコミックス. ジーンシリーズ": {
@@ -148676,6 +148723,13 @@
    "p": [
     {
      "n": "Cheomji"
+    }
+   ]
+  },
+  "Ciwaz": {
+   "p": [
+    {
+     "n": "Ciwaz"
     }
    ]
   },
@@ -166873,6 +166927,13 @@
     }
    ]
   },
+  "安藤いも": {
+   "p": [
+    {
+     "n": "安藤いも"
+    }
+   ]
+  },
   "宙": {
    "p": [
     {
@@ -178516,6 +178577,7 @@
    "plain": "98. Dai92Hanashi Nanoha No Ren'aisodanshitsu"
   },
   "99.第93話なにげないひとこと": "99. Dai93Hanashi Nanigenai Hitokoto",
+  "9話": "9Hanashi",
   "AM:TIGER総集編": {
    "macron": "AM:TIGERSōshūhen",
    "double": "AM:TIGERSoushuuhen",
@@ -181118,6 +181180,7 @@
    "plain": "[한국어 ver.]사이좋은 조장들 - Kumichotachi No Nakayoshi"
   },
   "【한국어ver.】서아-栖鴉": "[한국어 ver.]서아-Sumika Karasu",
+  "【4巻告知イラスト】": "[4Maki Kokuchi Irasuto]",
   "あいかわももこ": "Aikawamomoko",
   "あいされこめいじのまとめ": "Aisarekomeijinomatome",
   "あいそえる": "Aisoeru",
@@ -188566,6 +188629,11 @@
    "double": "Roriisuiitororii",
    "plain": "Rorisuitorori"
   },
+  "ロリースイートロリー発売告知": {
+   "macron": "Rorīsuītororī Hatsubai Kokuchi",
+   "double": "Roriisuiitororii Hatsubai Kokuchi",
+   "plain": "Rorisuitorori Hatsubai Kokuchi"
+  },
   "ロンリーガールに花束を": {
    "macron": "Ronrī Gāru Ni Hanataba O",
    "double": "Ronrii Gaaru Ni Hanataba O",
@@ -189249,6 +189317,11 @@
    "macron": "Yosōgai Wa Usu Amai Koi No Aji.",
    "double": "Yosougai Wa Usu Amai Koi No Aji.",
    "plain": "Yosogai Wa Usu Amai Koi No Aji."
+  },
+  "予行練習": {
+   "macron": "Yokō Renshū",
+   "double": "Yokou Renshuu",
+   "plain": "Yoko Renshu"
   },
   "事案17バードゾーンサバイブ!1": {
    "macron": "Jian17 Bādozōnsabaibu!1",
@@ -190752,6 +190825,11 @@
    "double": "Mukai No Gakkou De Desugeemu Yatteruppoi",
    "plain": "Mukai No Gakko De Desugemu Yatteruppoi"
   },
+  "君が一等星に光るまで": {
+   "macron": "Kimi Ga Ittōsei Ni Hikaru Made",
+   "double": "Kimi Ga Ittousei Ni Hikaru Made",
+   "plain": "Kimi Ga Ittosei Ni Hikaru Made"
+  },
   "君だけが光": "Kimi Dake Ga Hikari",
   "君としらない夏になる": "Kimi To Shiranai Natsu Ni Naru",
   "君となら、明日を歌えるの": "Kimi Tonara,Asu O Utaeru No",
@@ -191823,6 +191901,11 @@
    "macron": "Andō Yū",
    "double": "Andou Yuu",
    "plain": "Ando Yu"
+  },
+  "安藤いも": {
+   "macron": "Andō Imo",
+   "double": "Andou Imo",
+   "plain": "Ando Imo"
   },
   "安達としまむら": "Adachi To Shimamura",
   "安達としまむら公式コミックアンソロジー": {
@@ -195298,6 +195381,7 @@
   "熟成14": "Jukusei14",
   "熟成15": "Jukusei15",
   "熟成16": "Jukusei16",
+  "熟成17": "Jukusei17",
   "熱の中の少女": {
    "macron": "Netsu No Naka No Shōjo",
    "double": "Netsu No Naka No Shoujo",
@@ -196550,6 +196634,11 @@
   "第106-110話(完)": "Dai106-110Hanashi(Kan)",
   "第10話": "Dai10Hanashi",
   "第10話エキゾチック物質雑談してみた2": "Dai10Hanashi Ekizochikku Busshitsu Zatsudan Shite Mita2",
+  "第10話外れ小路のウワサ": {
+   "macron": "Dai10Hanashi Hazure Kōji No Uwasa",
+   "double": "Dai10Hanashi Hazure Kouji No Uwasa",
+   "plain": "Dai10Hanashi Hazure Koji No Uwasa"
+  },
   "第10話1": "Dai10Hanashi1",
   "第10話彼氏の女友達とデート(?)する話1": {
    "macron": "Dai10Hanashi Kareshi No Onnatomodachi To Dēto(?)Suru Hanashi1",
@@ -197021,6 +197110,7 @@
   "第39話おわりまで(4)": "Dai39Hanashi Owarimade(4)",
   "第39話-1": "Dai39Hanashi-1",
   "第39話-2": "Dai39Hanashi-2",
+  "第39話1": "Dai39Hanashi1",
   "第3巻特典情報!": {
    "macron": "Dai3Maki Tokuten Jōhō!",
    "double": "Dai3Maki Tokuten Jouhou!",
@@ -197082,6 +197172,7 @@
   "第47話1": "Dai47Hanashi1",
   "第47話2": "Dai47Hanashi2",
   "第48話1": "Dai48Hanashi1",
+  "第48話2": "Dai48Hanashi2",
   "第4角-1": "Dai4Kaku-1",
   "第4話": "Dai4Hanashi",
   "第4話2日前UP": "Dai4Hanashi 2HinokumaUP",
@@ -197330,7 +197421,6 @@
   "第9話": "Dai9Hanashi",
   "第9話夏が追ってくる1": "Dai9Hanashi Natsu Ga Otte Kuru1",
   "第9話夏が追ってくる2": "Dai9Hanashi Natsu Ga Otte Kuru2",
-  "第9話夜哭き界隈のウワサ": "Dai9Hanashi Yoru Naki Kaiwai No Uwasa",
   "第9話-1": "Dai9Hanashi-1",
   "第9話-2": "Dai9Hanashi-2",
   "第9話1": "Dai9Hanashi1",
@@ -197454,6 +197544,11 @@
    "macron": "Dai Jūhachi Fuku“Majo To Hitoku”Zenpen",
    "double": "Dai Juuhachi Fuku“Majo To Hitoku”Zenpen",
    "plain": "Dai Juhachi Fuku“Majo To Hitoku”Zenpen"
+  },
+  "第十八服「魔女と秘匿」後編": {
+   "macron": "Dai Jūhachi Fuku“Majo To Hitoku”Kōhen",
+   "double": "Dai Juuhachi Fuku“Majo To Hitoku”Kouhen",
+   "plain": "Dai Juhachi Fuku“Majo To Hitoku”Kohen"
   },
   "第十八話ゲート": {
    "macron": "Dai Jūhachi Hanashi Gēto",
@@ -197587,7 +197682,6 @@
   "第336話「人たらしめるもの」": "Dai336Hanashi “Hito Tara Shimeru Mono”",
   "第35話「名前呼びしたい双子姉妹」": "Dai35Hanashi “Namae Yobi Shitai Futago Shimai”",
   "第36話": "Dai36Hanashi",
-  "第36話うさぎの国の乙女": "Dai36Hanashi Usagi No Kuni No Otome",
   "第37話乙女たちのブートキャンプ": {
    "macron": "Dai37Hanashi Otometachi No Būtokyanpu",
    "double": "Dai37Hanashi Otometachi No Buutokyanpu",
@@ -197597,6 +197691,11 @@
    "macron": "Dai38Hanashi Chikyū Ni Yasashiku",
    "double": "Dai38Hanashi Chikyuu Ni Yasashiku",
    "plain": "Dai38Hanashi Chikyu Ni Yasashiku"
+  },
+  "第39話宇宙のひみつ": {
+   "macron": "Dai39Hanashi Uchū No Himitsu",
+   "double": "Dai39Hanashi Uchuu No Himitsu",
+   "plain": "Dai39Hanashi Uchu No Himitsu"
   },
   "第43話": "Dai43Hanashi",
   "第49−1話相思": {
@@ -198761,6 +198860,11 @@
    "double": "Yomikiri Maamorisu",
    "plain": "Yomikiri Mamorisu"
   },
+  "読切予行練習": {
+   "macron": "Yomikiri Yokō Renshū",
+   "double": "Yomikiri Yokou Renshuu",
+   "plain": "Yomikiri Yoko Renshu"
+  },
   "読切多重夢": {
    "macron": "Yomikiri Tajūmu",
    "double": "Yomikiri Tajuumu",
@@ -199791,6 +199895,7 @@
   "骨に願いを、星に呪いを": "Hone Ni Negai O,Hoshi Ni Noroi O",
   "骨抜きチキン": "Honenuki Chikin",
   "高上優里子": "Takaue Yuriko",
+  "高井さんの見える世界": "Takaisan No Mieru Sekai",
   "高坂": {
    "macron": "Kōsaka",
    "double": "Kousaka",
@@ -201404,6 +201509,10 @@
   "emily(著者)": "Emily ( Chosha )",
   "ep.final(2)": "ep.final(2)",
   "episode141": "episode14 (1)",
+  "episode1(1)": "episode1(1)",
+  "episode1(2)": "episode1(2)",
+  "episode2(1)": "episode2(1)",
+  "episode2(2)": "episode2(2)",
   "episode:28勝利と契約のグランドフィナーレ": "episode:28, Shōri to Keiyaku no Gurando Fināre",
   "flower・flower": "flower, flower",
   "girlinpink(YURIHUB)": "girl in pink(YURI HUB)",
@@ -201687,6 +201796,7 @@
   "【한국어ver.】부끄럼쟁이레이무씨-はずかしがりやの霊夢さん": "[한국어, Ver .] 부끄럼쟁이레이무씨 - Hazukashigari Ya no Reimusan",
   "【한국어ver.】사이좋은조장들-組長達のなかよし": "[한국어, ver.]사이좋은, 조장들, -, Kumichōtachi no Nakayoshi",
   "【한국어ver.】서아-栖鴉": "[한국어 Ver .] 서아 - Sumika Karasu",
+  "【4巻告知イラスト】": "[Yon Kan Kokuchi Irasuto]",
   "あいかわももこ": "Aikawa Momoko",
   "あいされこめいじのまとめ": "Aisare Kome Iji no Matome",
   "あいそえる": "Aisoeru",
@@ -204577,6 +204687,7 @@
   "ロボットJSにスキはありません!!": "Robotto JS ni Suki wa Arimasen!!",
   "ロマンスコード": "Romansu Kōdo",
   "ロリースイートロリー": "Rorīsuītororī",
+  "ロリースイートロリー発売告知": "Rorīsuītororī Hatsubai Kokuchi",
   "ロンリーガールに花束を": "Ronrī Gāru ni Hanataba o",
   "ロンリーガールに花束を:樫風短編集": "Ronrī Gāru ni Hanataba o, :, Kashifū Tanpenshū",
   "ロンリーガールに花束を樫風短編集": "Ronrī Gāru ni Hanataba o, Kashifū Tanpenshū",
@@ -204792,6 +204903,7 @@
   "予定は未定": "Yotei wa Mitei",
   "予定は未定(百合コレ)": "Yotei wa Mitei (Yuri Kore)",
   "予想外は薄甘い恋の味。": "Yosōgai wa Usu Amai Koi no Aji.",
+  "予行練習": "Yokō Renshū",
   "事案16貸切!全校遠足2": "Jian 16 Kashikiri! Zenkō Ensoku ( 2 )",
   "事案17バードゾーンサバイブ!1": "Jian 17 Bādozōnsabaibu! ( 1 )",
   "事案17バードゾーンサバイブ!2": "Jian 17 Bādozōnsabaibu! ( 2 )",
@@ -205346,6 +205458,7 @@
   "名宵": "Nayoi",
   "名称未設定": "Meishō Misettei",
   "向かいの学校でデスゲームやってるっぽい": "Mukai no Gakkō de Desugēmu Yatteruppoi",
+  "君が一等星に光るまで": "Kimi ga Ittōsei ni Hikaru made",
   "君だけが光": "Kimi Dake ga Hikari",
   "君としらない夏になる": "Kimi to Shiranai Natsu ni Naru",
   "君としらない夏になる(百合姫コミックス)": "Kimi to Shiranai Natsu ni Naru (Yuri Hime Komikkusu)",
@@ -205767,6 +205880,7 @@
   "安田剛助": "Yasuda Kōsuke",
   "安蔵くんこ": "Anzōkunko",
   "安藤優": "Andō Yū",
+  "安藤いも": "Andō Imo",
   "安達としまむら": "Adachi to Shimamura",
   "安達としまむら公式コミックアンソロジー": "Adachi to Shimamura Kōshiki Komikku Ansorojī",
   "安達としまむら公式コミックアンソロジー(電撃コミックスNEXT)": "Adachi to Shimamura, Kōshiki Komikku Ansorojī (Dengeki Komikkusu NEXT)",
@@ -207114,6 +207228,7 @@
   "熟成14": "Jukusei 14",
   "熟成15": "Jukusei 15",
   "熟成16": "Jukusei 16",
+  "熟成17": "Jukusei 17",
   "熱の中の少女": "Netsu no Naka no Shōjo",
   "熱を産んだ夜": "Netsu o Unda Yoru",
   "熱帯魚は雪に焦がれる": "Nettaigyo wa Yuki ni Kogareru",
@@ -207724,6 +207839,7 @@
   "第10話": "Ch. 10",
   "第10話1,211": "Ch. 10 1,211",
   "第10話エキゾチック物質雑談してみた2": "Ch. 10 Ekizochikku Busshitsu Zatsudan Shite Mita - 2",
+  "第10話外れ小路のウワサ": "Ch. 10 Hazure Kōji no Uwasa",
   "第10話-2": "Ch. 10-2",
   "第10話1": "Ch. 10-1",
   "第10話彼氏の女友達とデート(?)する話1": "Ch. 10 Kareshi no Onnatomodachi to Dēto ( ? ) Suru Hanashi - 1",
@@ -208005,6 +208121,7 @@
   "第39話おわりまで(4)": "Ch. 39 Owari made ( 4 )",
   "第39話-1": "Ch. 39-1",
   "第39話-2": "Ch. 39-2",
+  "第39話1": "Ch. 39-1",
   "第3回": "Ch. 3",
   "第3巻特典情報!": "Ch. 3 Maki Tokuten Jōhō !",
   "第3角-2": "Ch. 3-2",
@@ -208055,6 +208172,7 @@
   "第47話2": "Ch. 47-2",
   "第48話": "Ch. 48",
   "第48話1": "Ch. 48-1",
+  "第48話2": "Ch. 48-2",
   "第49話": "Ch. 49",
   "第4回カラオケに行っても歌おうとしない片桐。相川が頼み込んだ末、片桐が選んだ曲は!?": "Ch. 4 Karaoke ni Itte mo Utaō to Shinai Katagiri. Aikawa ga Tanomikonda Sue, Katagiri ga Eranda Kyoku wa ! ?",
   "第4角-1": "Ch. 4-1",
@@ -208254,6 +208372,7 @@
   "第十五織": "Dai Jūgoshiki",
   "第十五織5日前UP": "Dai Jūgoshiki 5Ka Mae UP",
   "第十八服「魔女と秘匿」前編": "Dai Jūhachifuku “Majo to Hitoku” Zenpen",
+  "第十八服「魔女と秘匿」後編": "Dai Jūhachifuku “Majo to Hitoku” Kōhen",
   "第十八話ゲート": "Dai Jūhachi Hanashi Gēto",
   "第十六服「魔女と魅力」後編": "Dai Jūrokufuku “Majo to Miryoku” Kōhen",
   "第十六話遠きを知りて近きを知らず": "Dai Jūrokuwa Tōki o Shirite Chikaki o Shirazu",
@@ -208763,6 +208882,7 @@
   "読切トランス細工ガール": "Yomikiri Toransu Saiku Gāru",
   "読切ファッションガールヒーロー": "Yomikiri Fasshon Gāru Hīrō",
   "読切マーモリス": "Yomikiri Māmorisu",
+  "読切予行練習": "Yomikiri Yokō Renshū",
   "読切多重夢": "Yomikiri Tajūmu",
   "読切夜明けのアリス": "Yomikiri Yoake no Arisu",
   "読切弓道スケッチ": "Yomikiri Kyūdō Suketchi",
@@ -209099,6 +209219,7 @@
   "骨に願いを、星に呪いを(百合姫コミックス)": "Hone ni Negai o, Hoshi ni Noroi o (Yuri Hime Komikkusu)",
   "骨抜きチキン": "Honenuki Chikin",
   "高上優里子": "Takagami Yuriko",
+  "高井さんの見える世界": "Takaisan no Mieru Sekai",
   "高坂はしやん/伊予嶺つく": "Kōsaka Hashiyan, Iyomine Tsuku",
   "高坂はしやん(著)伊予嶺つく(著)": "Kōsaka Hashiyan, Iyomine Tsuku",
   "高坂はしやん,伊予嶺つく": "Kōsaka Hashiyan, Iyomine Tsuku",
