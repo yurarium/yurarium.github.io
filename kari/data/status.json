@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10T21:19:11+00:00",
+ "generated": "2026-08-10T22:16:43+00:00",
  "since_last": {
-  "at": "2026-08-10T21:15:47+00:00",
+  "at": "2026-08-10T22:06:24+00:00",
   "statistics": {}
  },
  "means": {
@@ -23,23 +23,23 @@
  },
  "last_run": {
   "at": "2026-08-10",
-  "releases": 1273,
+  "releases": 1264,
   "works": 2562,
   "platforms": 23,
   "series_rows": 3048,
   "identification": {
-   "discovery-candidate": 924,
+   "discovery-candidate": 915,
    "platform-genre": 349
   },
   "collapsed": {
    "duplicate_chapters": 84,
    "thin_sitemap": 8,
-   "resolver": 51,
+   "resolver": 55,
    "samples": 36
   }
  },
  "gate": {
-  "invariants_passing": 53,
+  "invariants_passing": 54,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -243,10 +243,8 @@
    },
    {
     "name": "a fact is reached through its entry point",
-    "violations": 1,
-    "examples": [
-     "build.py:349 reaches facts.credit.interpunct"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "a name is answered by one module",
@@ -384,8 +382,8 @@
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 874,
-    "value": 874
+    "budget": 873,
+    "value": 873
    },
    {
     "name": "credit fields the division does not account for",
@@ -398,6 +396,12 @@
     "means": "English renderings holding a full-width character and no kana or kanji, which is what narrowing the invariant to a script let past. Mostly a Latin pen name catalogued in full width; some are official titles and are correct, so this will not reach zero.",
     "budget": 7,
     "value": 7
+   },
+   {
+    "name": "works named by a truncation",
+    "means": "distinct work titles in the shipped rows that end in three ASCII full stops, which is a listing running out of room rather than a title trailing off: a Japanese title that trails off uses …. Falls as the archived feeds holding them age out; a rise means a release writer has gone back to reading `work_title` off a record without resolving it against data/work-aliases.yaml.",
+    "budget": 2,
+    "value": 2
    },
    {
     "name": "interface tooltips a reader of Japanese cannot read",
@@ -558,8 +562,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1475,
-    "value": 1475
+    "budget": 1473,
+    "value": 1473
    },
    {
     "name": "uncertain readings",
@@ -684,8 +688,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 36,
-    "value": 36
+    "budget": 33,
+    "value": 33
    },
    {
     "name": "works whose first publication country is unattested",
@@ -911,7 +915,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T21:15:46+00:00",
+  "previous_at": "2026-08-10T22:06:23+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1049,7 +1053,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 47,
+   "count": 48,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 34,
@@ -1097,7 +1101,7 @@
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 21,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 874,
+    "renderings resting on a mechanical romanisation": 873,
     "renderings with nothing to show": 24,
     "rows with a moving address": 1,
     "ruby asserting a reading per character": 196,
@@ -1107,15 +1111,16 @@
     "shelf admissions a reader cannot follow": 5,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 0,
-    "titles read by a machine, unmarked": 1475,
+    "titles read by a machine, unmarked": 1473,
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 175,
     "uncertain readings": 52,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
-    "updates naming a work we do not hold": 36,
+    "updates naming a work we do not hold": 33,
     "volumes with an isbn and no date": 0,
+    "works named by a truncation": 2,
     "works offered twice in a list": 0,
     "works showing a romanisation": 148,
     "works whose first publication country is unattested": 2562,
@@ -1135,8 +1140,8 @@
    "slow": 56
   },
   "english_basis": {
-   "translated": 2637,
-   "official-jp": 151,
+   "translated": 2636,
+   "official-jp": 152,
    "licensed": 112,
    "none": 104,
    "romaji": 44

@@ -1156,7 +1156,7 @@
    "surfaced": false,
    "feed_date": "2026-08-09",
    "work_en": {
-    "reading": "キミ ガ イットウセイ ニ ヒカル マデ",
+    "reading": "キミ ガ デネブ ニ ヒカル マデ",
     "ruby": [
      [
       "君",
@@ -1168,7 +1168,7 @@
      ],
      [
       "一等星",
-      "いっとうせい"
+      "でねぶ"
      ],
      [
       "に",
@@ -1184,16 +1184,29 @@
      ]
     ],
     "romaji": {
-     "macron": "Kimi ga Ittōsei ni Hikaru made",
-     "double": "Kimi ga Ittousei ni Hikaru made",
-     "plain": "Kimi ga Ittosei ni Hikaru made"
+     "macron": "Kimi ga Denebu ni Hikaru made",
+     "double": "Kimi ga Denebu ni Hikaru made",
+     "plain": "Kimi ga Denebu ni Hikaru made"
     },
-    "en": "Until You Shine as a First-Magnitude Star",
-    "basis": "translated",
+    "en": "The Brightest Star",
+    "basis": "official-jp",
     "en_forms": {
+     "official-jp": "The Brightest Star",
      "translated": "Until You Shine as a First-Magnitude Star"
     },
-    "reading_basis": "analyser"
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "COMIC FUZ",
+     "url": "https://comic-fuz.com/manga/4133",
+     "kind": "platform",
+     "reviewed": "2026-08-10"
+    },
+    "en_cite": {
+     "source": "COMIC FUZ",
+     "url": "https://comic-fuz.com/manga/4133",
+     "kind": "platform",
+     "reviewed": "2026-08-10"
+    }
    },
    "author_en": {
     "reading": "ナウチ",
@@ -8797,7 +8810,7 @@
    "late_discovered": false,
    "discovered_on": null,
    "id": "magapoke:https://pocket.shonenmagazine.com/title/02328/episode/442035",
-   "work": "念願の悪役令嬢(ラスボス)の身体を手に入れたぞ!",
+   "work": "念願の悪役令嬢の身体を手に入れたぞ!",
    "ep": "【第102話】最後の一撃",
    "type": "chapter",
    "adv": true,
@@ -8828,7 +8841,7 @@
    "surfaced": false,
    "feed_date": "2026-08-07",
    "work_en": {
-    "reading": "ネンガン ノ アクヤク レイジョウ ( ラスボス ) ノ カラダ ヲ テ ニ イレタ ゾ !",
+    "reading": "ネンガン ノ ラスボス ノ カラダ ヲ テ ニ イレタ ゾ !",
     "ruby": [
      [
       "念願",
@@ -8840,10 +8853,10 @@
      ],
      [
       "悪役令嬢",
-      "あくやくれいじょう"
+      "らすぼす"
      ],
      [
-      "(ラスボス)の",
+      "の",
       null
      ],
      [
@@ -8872,16 +8885,16 @@
      ]
     ],
     "romaji": {
-     "macron": "Nengan no Akuyaku Reijō ( Rasubosu ) no Karada o Te ni Ireta Zo !",
-     "double": "Nengan no Akuyaku Reijou ( Rasubosu ) no Karada o Te ni Ireta Zo !",
-     "plain": "Nengan no Akuyaku Reijo ( Rasubosu ) no Karada o Te ni Ireta Zo !"
+     "macron": "Nengan no Rasubosu no Karada o Te ni Ireta Zo !",
+     "double": "Nengan no Rasubosu no Karada o Te ni Ireta Zo !",
+     "plain": "Nengan no Rasubosu no Karada o Te ni Ireta Zo !"
     },
     "en": "I Finally Got the Body of the Villainess Final Boss!",
     "basis": "translated",
     "en_forms": {
      "translated": "I Finally Got the Body of the Villainess Final Boss!"
     },
-    "reading_basis": "researched"
+    "reading_basis": "stated"
    },
    "author_en": {
     "reading": "ハタ リョウスケ / ナカジマ レイ / ウシオ ヒトハ / アカイ マルボロウ",
@@ -8931,7 +8944,8 @@
     "reading_basis": "stated",
     "basis": "romaji",
     "unverified": true
-   }
+   },
+   "wid": "w00097"
   },
   {
    "late_discovered": false,
@@ -9248,10 +9262,10 @@
      "double": "Yuri Kamisama no Iu Toori !",
      "plain": "Yuri Kamisama no Iu Tori !"
     },
-    "en": "Yuri Fist",
+    "en": "As the Yuri God Says!",
     "basis": "translated",
     "en_forms": {
-     "translated": "Yuri Fist"
+     "translated": "As the Yuri God Says!"
     },
     "reading_basis": "analyser",
     "unverified": true
@@ -13179,7 +13193,7 @@
    "late_discovered": false,
    "discovered_on": null,
    "id": "remaining:第10話①",
-   "work": "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です!…って、魔王が女の子の場合はどう...",
+   "work": "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です！…って、魔王が女の子の場合はどうすればいいのですか！？～",
    "ep": "第10話①",
    "type": "chapter",
    "adv": true,
@@ -13205,122 +13219,25 @@
    "kind_basis": "episode numbered 10",
    "kind_inferred": true,
    "preferred": "チャンピオンクロス",
-   "also_on": [],
+   "also_on": [
+    "ヤングチャンピオン"
+   ],
    "is_preferred": true,
    "surfaced": false,
    "feed_date": "2026-08-05",
    "work_en": {
-    "reading": "コウシャク レイジョウ ノ ロウラク ミッション ～ マオウ ト ノ セイリャク ケッコン ガ、 ジンルイ サイゴ ノ キリフダデス !…．． ッテ、 マオウ ガ オンナノコ ノ バアイ ワ ドウ . . .",
-    "ruby": [
-     [
-      "公爵",
-      "こうしゃく"
-     ],
-     [
-      "令嬢",
-      "れいじょう"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "籠絡",
-      "ろうらく"
-     ],
-     [
-      "ミッション～",
-      null
-     ],
-     [
-      "魔王",
-      "まおう"
-     ],
-     [
-      "との",
-      null
-     ],
-     [
-      "政略",
-      "せいりゃく"
-     ],
-     [
-      "結婚",
-      "けっこん"
-     ],
-     [
-      "が、",
-      null
-     ],
-     [
-      "人類",
-      "じんるい"
-     ],
-     [
-      "最後",
-      "さいご"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "切",
-      "き"
-     ],
-     [
-      "り",
-      null
-     ],
-     [
-      "札",
-      "ふだ"
-     ],
-     [
-      "です!…って、",
-      null
-     ],
-     [
-      "魔王",
-      "まおう"
-     ],
-     [
-      "が",
-      null
-     ],
-     [
-      "女",
-      "おんな"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "子",
-      "こ"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "場合",
-      "ばあい"
-     ],
-     [
-      "はどう...",
-      null
-     ]
-    ],
+    "reading": "コウシャク レイジョウ ノ ロウラク ミッション",
     "romaji": {
-     "macron": "Kōshaku Reijō no Rōraku Misshon ~ Maō to no Seiryaku Kekkon ga, Jinrui Saigo no Kirifudadesu !..... Tte, Maō ga Onnanoko no Bāi wa Dō . . .",
-     "double": "Koushaku Reijou no Rouraku Misshon ~ Maou to no Seiryaku Kekkon ga, Jinrui Saigo no Kirifudadesu !..... Tte, Maou ga Onnanoko no Baai wa Dou . . .",
-     "plain": "Koshaku Reijo no Roraku Misshon ~ Mao to no Seiryaku Kekkon ga, Jinrui Saigo no Kirifudadesu !..... Tte, Mao ga Onnanoko no Bai wa Do . . ."
+     "macron": "Kōshaku Reijō no Rōraku Misshon",
+     "double": "Koushaku Reijou no Rouraku Misshon",
+     "plain": "Koshaku Reijo no Roraku Misshon"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser",
-    "unverified": true
+    "en": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!"
+    },
+    "reading_basis": "researched"
    },
    "author_en": {
     "reading": "リンゴアメ サード, カワダ アキオ",
@@ -13353,7 +13270,8 @@
     },
     "reading_basis": "stated",
     "basis": "romaji"
-   }
+   },
+   "wid": "w00177"
   },
   {
    "late_discovered": false,
@@ -13551,88 +13469,6 @@
     "id": "c00313"
    },
    "wid": "w00201"
-  },
-  {
-   "late_discovered": false,
-   "discovered_on": null,
-   "id": "youngchampion:第10話①",
-   "work": "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です！…って、魔王が女の子の場合はどうすればいいのですか！？～",
-   "ep": "第10話①",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-05",
-   "seen": "2026-08-11",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://youngchampion.jp/series/86c1162f34a04",
-   "author": "りんご飴サード,川田暁生",
-   "plat": "youngchampion",
-   "plat_name": "ヤングチャンピオン",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "purchase"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 10",
-   "kind_inferred": true,
-   "preferred": "ヤングチャンピオン",
-   "also_on": [],
-   "is_preferred": true,
-   "surfaced": false,
-   "feed_date": "2026-08-05",
-   "work_en": {
-    "reading": "コウシャク レイジョウ ノ ロウラク ミッション",
-    "romaji": {
-     "macron": "Kōshaku Reijō no Rōraku Misshon",
-     "double": "Koushaku Reijou no Rouraku Misshon",
-     "plain": "Koshaku Reijo no Roraku Misshon"
-    },
-    "en": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "リンゴアメ サード, カワダ アキオ",
-    "ruby": [
-     [
-      "りんご",
-      null
-     ],
-     [
-      "飴",
-      "あめ"
-     ],
-     [
-      "サード",
-      null
-     ],
-     [
-      ",",
-      null
-     ],
-     [
-      "川田暁生",
-      "かわだあきお"
-     ]
-    ],
-    "romaji": {
-     "macron": "Ringoame Sādo, Kawada Akio",
-     "double": "Ringoame Saado, Kawada Akio",
-     "plain": "Ringoame Sado, Kawada Akio"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji"
-   },
-   "wid": "w00177"
   },
   {
    "id": "action:episode:12207421983913993890",
@@ -16238,7 +16074,7 @@
    "surfaced": false,
    "feed_date": "2026-08-02",
    "work_en": {
-    "reading": "キミ ガ イットウセイ ニ ヒカル マデ",
+    "reading": "キミ ガ デネブ ニ ヒカル マデ",
     "ruby": [
      [
       "君",
@@ -16250,7 +16086,7 @@
      ],
      [
       "一等星",
-      "いっとうせい"
+      "でねぶ"
      ],
      [
       "に",
@@ -16266,16 +16102,29 @@
      ]
     ],
     "romaji": {
-     "macron": "Kimi ga Ittōsei ni Hikaru made",
-     "double": "Kimi ga Ittousei ni Hikaru made",
-     "plain": "Kimi ga Ittosei ni Hikaru made"
+     "macron": "Kimi ga Denebu ni Hikaru made",
+     "double": "Kimi ga Denebu ni Hikaru made",
+     "plain": "Kimi ga Denebu ni Hikaru made"
     },
-    "en": "Until You Shine as a First-Magnitude Star",
-    "basis": "translated",
+    "en": "The Brightest Star",
+    "basis": "official-jp",
     "en_forms": {
+     "official-jp": "The Brightest Star",
      "translated": "Until You Shine as a First-Magnitude Star"
     },
-    "reading_basis": "analyser"
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "COMIC FUZ",
+     "url": "https://comic-fuz.com/manga/4133",
+     "kind": "platform",
+     "reviewed": "2026-08-10"
+    },
+    "en_cite": {
+     "source": "COMIC FUZ",
+     "url": "https://comic-fuz.com/manga/4133",
+     "kind": "platform",
+     "reviewed": "2026-08-10"
+    }
    },
    "author_en": {
     "reading": "ナウチ",
@@ -24441,183 +24290,6 @@
     "id": "c00118"
    },
    "wid": "w00057"
-  },
-  {
-   "late_discovered": false,
-   "discovered_on": null,
-   "id": "remaining:第11話「フィアナ、無事クエストを達成する」(1)",
-   "work": "病弱少女、転生して健康な肉体(最強)を手に入れる ～友達が欲しくて魔境から旅立ったのですが、どうやら...",
-   "ep": "第11話「フィアナ、無事クエストを達成する」(1)",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-07-28",
-   "seen": "2026-08-11",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-gardo.com/episode/2550912966011803878",
-   "author": "あらた伊里/アトハ/狐印",
-   "plat": "remaining",
-   "plat_name": "コミックガルド",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "purchase"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 11",
-   "kind_inferred": true,
-   "preferred": "コミックガルド",
-   "also_on": [],
-   "is_preferred": true,
-   "surfaced": false,
-   "feed_date": "2026-07-28",
-   "work_en": {
-    "reading": "ビョウジャク ショウジョ、 テンショウ シテ ケンコウナ ニクタイ ( サイキョウ ) ヲ テ ニ イレル   ～ トモダチ ガ ホシクテ マキョウ カラ タビダッタ ノデスガ、 ドウ ヤラ . . .",
-    "ruby": [
-     [
-      "病弱",
-      "びょうじゃく"
-     ],
-     [
-      "少女",
-      "しょうじょ"
-     ],
-     [
-      "、",
-      null
-     ],
-     [
-      "転生",
-      "てんしょう"
-     ],
-     [
-      "して",
-      null
-     ],
-     [
-      "健康",
-      "けんこう"
-     ],
-     [
-      "な",
-      null
-     ],
-     [
-      "肉体",
-      "にくたい"
-     ],
-     [
-      "(",
-      null
-     ],
-     [
-      "最強",
-      "さいきょう"
-     ],
-     [
-      ")を",
-      null
-     ],
-     [
-      "手",
-      "て"
-     ],
-     [
-      "に",
-      null
-     ],
-     [
-      "入",
-      "い"
-     ],
-     [
-      "れる ～",
-      null
-     ],
-     [
-      "友達",
-      "ともだち"
-     ],
-     [
-      "が",
-      null
-     ],
-     [
-      "欲",
-      "ほ"
-     ],
-     [
-      "しくて",
-      null
-     ],
-     [
-      "魔境",
-      "まきょう"
-     ],
-     [
-      "から",
-      null
-     ],
-     [
-      "旅立",
-      "たびだ"
-     ],
-     [
-      "ったのですが、どうやら...",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Byōjaku Shōjo, Tenshō Shite Kenkōna Nikutai ( Saikyō ) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyō kara Tabidatta Nodesuga, Dō Yara . . .",
-     "double": "Byoujaku Shoujo, Tenshou Shite Kenkouna Nikutai ( Saikyou ) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyou kara Tabidatta Nodesuga, Dou Yara . . .",
-     "plain": "Byojaku Shojo, Tensho Shite Kenkona Nikutai ( Saikyo ) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyo kara Tabidatta Nodesuga, Do Yara . . ."
-    },
-    "basis": "romaji",
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "アラタ イリ / アトハ / コイン",
-    "ruby": [
-     [
-      "あらた",
-      null
-     ],
-     [
-      "伊里",
-      "いり"
-     ],
-     [
-      "/",
-      null
-     ],
-     [
-      "アトハ",
-      null
-     ],
-     [
-      "/",
-      null
-     ],
-     [
-      "狐印",
-      "こいん"
-     ]
-    ],
-    "romaji": {
-     "macron": "Arata Iri / Atoha / Koin",
-     "double": "Arata Iri / Atoha / Koin",
-     "plain": "Arata Iri / Atoha / Koin"
-    },
-    "reading_basis": "community-printed",
-    "basis": "romaji",
-    "unverified": true
-   }
   },
   {
    "late_discovered": false,

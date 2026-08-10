@@ -1,6 +1,6 @@
 {
  "generated": "2026-08-10",
- "releases": 1273,
+ "releases": 1264,
  "platforms": 23,
  "works": 2562,
  "series_rows": 3048,
@@ -139,13 +139,13 @@
  "claims": {
   "total": 432,
   "by_disposition": {
-   "absorbed": 347,
+   "absorbed": 346,
    "unsettleable": 40,
    "phantom": 1,
    "print-serialised": 26,
    "undatable": 5,
-   "scheduled": 2,
-   "open": 11
+   "open": 12,
+   "scheduled": 2
   },
   "trace": [
    {
@@ -1526,9 +1526,13 @@
     "url": "https://youngchampion.jp/series/86c1162f34a04",
     "claimed": "2026-07-19",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "attested on this platform within a week — one event",
-    "platform_latest": "2026-08-05"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": false,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "ギャラクシーぷーちゃん 宇宙のはじっこでこんにちは",
@@ -11542,23 +11546,23 @@
    },
    {
     "week": "2026-06-14",
-    "n": 134
+    "n": 133
    },
    {
     "week": "2026-06-21",
-    "n": 142
-   },
-   {
-    "week": "2026-06-28",
     "n": 141
    },
    {
+    "week": "2026-06-28",
+    "n": 140
+   },
+   {
     "week": "2026-07-05",
-    "n": 258
+    "n": 256
    },
    {
     "week": "2026-07-12",
-    "n": 118
+    "n": 116
    },
    {
     "week": "2026-07-19",
@@ -11566,11 +11570,11 @@
    },
    {
     "week": "2026-07-26",
-    "n": 134
+    "n": 133
    },
    {
     "week": "2026-08-02",
-    "n": 169
+    "n": 168
    },
    {
     "week": "2026-08-09",
@@ -11578,16 +11582,16 @@
    }
   ],
   "trimmed_weeks": 3,
-  "pre_tracking_releases": 1086,
+  "pre_tracking_releases": 1078,
   "tracking_from": "2026-08-02"
  },
  "access_modes": {
-  "purchase": 310,
-  "free": 783,
-  "free-timed": 128
+  "purchase": 307,
+  "free": 780,
+  "free-timed": 125
  },
  "update_kinds": {
-  "new-chapter": 1178,
+  "new-chapter": 1169,
   "other": 25,
   "oneshot": 22,
   "final": 8,
@@ -11595,13 +11599,13 @@
   "skipped": 1
  },
  "identification": {
-  "discovery-candidate": 924,
+  "discovery-candidate": 915,
   "platform-genre": 349
  },
  "collapsed": {
   "duplicate_chapters": 84,
   "thin_sitemap": 8,
-  "resolver": 51,
+  "resolver": 55,
   "samples": 36
  },
  "filled": {
