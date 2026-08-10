@@ -1,11 +1,8 @@
 {
- "generated": "2026-08-10T18:28:58+00:00",
+ "generated": "2026-08-10T18:39:31+00:00",
  "since_last": {
-  "at": "2026-08-10T16:43:48+00:00",
-  "statistics": {
-   "works": -1,
-   "chapters": -11
-  }
+  "at": "2026-08-10T18:28:58+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -380,8 +377,8 @@
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 876,
-    "value": 876
+    "budget": 874,
+    "value": 874
    },
    {
     "name": "credit fields the division does not account for",
@@ -566,8 +563,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 151,
-    "value": 151
+    "budget": 148,
+    "value": 148
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -674,8 +671,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 29,
-    "value": 29
+    "budget": 36,
+    "value": 36
    },
    {
     "name": "works whose first publication country is unattested",
@@ -698,8 +695,8 @@
    {
     "name": "rows with a moving address",
     "means": "rows anchored on a chapter address whose identifier holds no work-level address on the same host. A chapter address moves when the work publishes, so a rise means a work has arrived whose address nobody has read yet and which would be minted a second identifier the next time it updates. Run adapters/gigaviewer/workaddress.py and apply what it writes with identity.py --attachments.",
-    "budget": 2,
-    "value": 2
+    "budget": 1,
+    "value": 1
    },
    {
     "name": "listing series with no feed of their own",
@@ -901,7 +898,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T16:43:47+00:00",
+  "previous_at": "2026-08-10T18:28:57+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1086,9 +1083,9 @@
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 21,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 876,
+    "renderings resting on a mechanical romanisation": 874,
     "renderings with nothing to show": 24,
-    "rows with a moving address": 2,
+    "rows with a moving address": 1,
     "ruby asserting a reading per character": 197,
     "scope questions left open": 2,
     "scraped counters in chapter names": 0,
@@ -1103,10 +1100,10 @@
     "uncertain readings": 52,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
-    "updates naming a work we do not hold": 29,
+    "updates naming a work we do not hold": 36,
     "volumes with an isbn and no date": 0,
     "works offered twice in a list": 0,
-    "works showing a romanisation": 151,
+    "works showing a romanisation": 148,
     "works whose first publication country is unattested": 2562,
     "works without English": 104
    }
