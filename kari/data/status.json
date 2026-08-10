@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10T15:14:15+00:00",
+ "generated": "2026-08-10T16:06:41+00:00",
  "since_last": {
-  "at": "2026-08-10T15:10:31+00:00",
+  "at": "2026-08-10T15:58:26+00:00",
   "statistics": {}
  },
  "means": {
@@ -23,12 +23,12 @@
  },
  "last_run": {
   "at": "2026-08-10",
-  "releases": 1252,
+  "releases": 1250,
   "works": 2562,
   "platforms": 23,
   "series_rows": 3048,
   "identification": {
-   "discovery-candidate": 903,
+   "discovery-candidate": 901,
    "platform-genre": 349
   },
   "collapsed": {
@@ -377,7 +377,7 @@
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 866,
+    "budget": 873,
     "value": 873
    },
    {
@@ -407,7 +407,7 @@
    {
     "name": "credit phrases spelling a person otherwise",
     "means": "credit fields whose composed phrase spells one of the people in it differently from the name store, counted by asking the shipped division who the field names. It was 207 while a line of one person plus a role bracket was left exactly as the analyser first wrote it, so a reading sourced afterwards could not reach it. It was then 70 while a line was recomposed only where every person on it had a store record, which held back 60 lines on the strength of a name already in Latin that no store will ever hold. The residue is a field naming one person inside notation that states no job, which is the one shape the recomposition still refuses to touch.",
-    "budget": 4,
+    "budget": 5,
     "value": 5
    },
    {
@@ -467,7 +467,7 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 397,
+    "budget": 398,
     "value": 398
    },
    {
@@ -503,7 +503,7 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 18,
+    "budget": 21,
     "value": 21
    },
    {
@@ -563,7 +563,7 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 148,
+    "budget": 150,
     "value": 150
    },
    {
@@ -581,13 +581,13 @@
    {
     "name": "one work under two names in a list",
     "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
-    "budget": 13,
+    "budget": 14,
     "value": 14
    },
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector — the adapter still returns rows, just emptier ones.",
-    "budget": 13,
+    "budget": 31,
     "value": 31
    },
    {
@@ -689,13 +689,13 @@
    {
     "name": "targets a capture wrote no row for",
     "means": "works a platform pass was given as a target and wrote no row for. The pass put each in a `failed` list, printed it and dropped it, so until now a work asked for and not got left nothing in the repository at all. A rise means a pass has stopped resolving something it used to, which is either an address that moved or a platform that withdrew a work. It falls when the target is captured, or when a platform's refusal is written into a register the count reads, as data/source/kadokomi/withheld.yaml already is.",
-    "budget": 4,
-    "value": 4
+    "budget": 5,
+    "value": 5
    },
    {
     "name": "rows with a moving address",
     "means": "rows anchored on a chapter address whose identifier holds no work-level address on the same host. A chapter address moves when the work publishes, so a rise means a work has arrived whose address nobody has read yet and which would be minted a second identifier the next time it updates. Run adapters/gigaviewer/workaddress.py and apply what it writes with identity.py --attachments.",
-    "budget": 0,
+    "budget": 2,
     "value": 2
    },
    {
@@ -885,20 +885,20 @@
    "source": "webpages",
    "files": 37,
    "works": 523,
-   "rows": 7348,
+   "rows": 7346,
    "retrieved": "2026-08-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7297,
-   "well_formed": 7297,
-   "malformed": 0,
+   "checked_rows": 7295,
+   "well_formed": 7294,
+   "malformed": 1,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T15:10:30+00:00",
+  "previous_at": "2026-08-10T15:58:25+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1038,23 +1038,23 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 45,
+   "count": 46,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 34,
     "an imprint field repeating its publisher": 360,
     "author names romanised as one word": 1153,
-    "author readings no source states": 397,
+    "author readings no source states": 398,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "bylines drawn in a spelling the field does not write": 23,
     "captures with no floor": 10,
     "citations withheld from readers": 36,
-    "credit fields an identifier does not cover": 18,
+    "credit fields an identifier does not cover": 21,
     "credit fields the division does not account for": 0,
     "credit identifiers naming nobody": 7,
     "credit pages listing a work that does not name them": 8,
-    "credit phrases spelling a person otherwise": 4,
+    "credit phrases spelling a person otherwise": 5,
     "credits carrying their own cataloguing": 38,
     "credits matching a chapter": 0,
     "credits sharing a reading nobody has ruled on": 157,
@@ -1068,7 +1068,7 @@
     "impossibilities asserted without evidence": 0,
     "imprint names the interface disagrees with": 0,
     "imprint strings that reach no line": 18,
-    "incomplete attested rows": 13,
+    "incomplete attested rows": 31,
     "interface reads outside an entry point": 12,
     "interpunct credits nobody has ruled on": 0,
     "invented markup in tests": 75,
@@ -1080,20 +1080,20 @@
     "nicovideo works with no rights": 60,
     "one page cited for two claims": 12,
     "one work named two ways across its rows": 0,
-    "one work under two names in a list": 13,
+    "one work under two names in a list": 14,
     "publisher keys the interface misses": 0,
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 21,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 866,
+    "renderings resting on a mechanical romanisation": 873,
     "renderings with nothing to show": 24,
-    "rows with a moving address": 0,
+    "rows with a moving address": 2,
     "ruby asserting a reading per character": 197,
     "scope questions left open": 2,
     "scraped counters in chapter names": 0,
     "series names holding a page title": 4,
     "shelf admissions a reader cannot follow": 5,
-    "targets a capture wrote no row for": 4,
+    "targets a capture wrote no row for": 5,
     "titles carrying cataloguing punctuation": 0,
     "titles read by a machine, unmarked": 1474,
     "titles read past their own gloss": 1,
@@ -1105,7 +1105,7 @@
     "updates naming a work we do not hold": 26,
     "volumes with an isbn and no date": 0,
     "works offered twice in a list": 0,
-    "works showing a romanisation": 148,
+    "works showing a romanisation": 150,
     "works whose first publication country is unattested": 2562,
     "works without English": 104
    }
@@ -1133,7 +1133,7 @@
   "print_only": 1698,
   "volumes": 6274,
   "with_identifier": 3045,
-  "chapters": 26767,
+  "chapters": 26765,
   "delivery_dated": 1070
  }
 }
