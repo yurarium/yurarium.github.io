@@ -1,9 +1,9 @@
 {
  "generated": "2026-08-10",
- "releases": 1146,
- "platforms": 22,
+ "releases": 1252,
+ "platforms": 23,
  "works": 2562,
- "series_rows": 3046,
+ "series_rows": 3048,
  "sources": [
   {
    "source": "bookwalker",
@@ -19,9 +19,9 @@
    "source": "comicfuz",
    "files": 2,
    "works": 128,
-   "rows": 6174,
-   "retrieved": "2026-08-08",
-   "age_days": 2,
+   "rows": 6179,
+   "retrieved": "2026-08-10",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -47,11 +47,11 @@
   },
   {
    "source": "gigaviewer",
-   "files": 69,
-   "works": 661,
-   "rows": 7712,
-   "retrieved": "2026-08-06",
-   "age_days": 4,
+   "files": 71,
+   "works": 691,
+   "rows": 7747,
+   "retrieved": "2026-08-10",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -69,9 +69,9 @@
    "source": "kadokomi",
    "files": 5,
    "works": 971,
-   "rows": 7381,
-   "retrieved": "2026-08-07",
-   "age_days": 3,
+   "rows": 7396,
+   "retrieved": "2026-08-10",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -98,10 +98,10 @@
   {
    "source": "nicovideo",
    "files": 3,
-   "works": 864,
-   "rows": 7289,
-   "retrieved": "2026-08-08",
-   "age_days": 2,
+   "works": 1176,
+   "rows": 7575,
+   "retrieved": "2026-08-10",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -128,24 +128,24 @@
   {
    "source": "webpages",
    "files": 37,
-   "works": 531,
-   "rows": 7712,
-   "retrieved": "2026-08-07",
-   "age_days": 3,
+   "works": 523,
+   "rows": 7348,
+   "retrieved": "2026-08-10",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   }
  ],
  "claims": {
-  "total": 434,
+  "total": 432,
   "by_disposition": {
-   "absorbed": 359,
-   "open": 4,
-   "unsettleable": 38,
+   "absorbed": 347,
+   "unsettleable": 40,
    "phantom": 1,
-   "print-serialised": 27,
+   "print-serialised": 26,
+   "undatable": 5,
    "scheduled": 2,
-   "undatable": 3
+   "open": 11
   },
   "trace": [
    {
@@ -163,13 +163,9 @@
     "url": "https://ynjn.jp/title/27600",
     "claimed": "2026-08-01",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": true,
-    "traceable": true,
-    "last_looked": null,
-    "blocked": null
+    "disposition": "absorbed",
+    "why": "attested on this platform within a week — one event",
+    "platform_latest": "2026-08-04"
    },
    {
     "work": "私を喰べたい、ひとでなし",
@@ -360,7 +356,7 @@
     "source": "webcomics.jp",
     "disposition": "absorbed",
     "why": "attested on this platform within a week — one event",
-    "platform_latest": "2026-08-03"
+    "platform_latest": "2026-08-10"
    },
    {
     "work": "胡蝶の夢",
@@ -531,13 +527,8 @@
     "url": "https://comic-gardo.com/episode/2550912966011803878",
     "claimed": "2026-07-28",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true,
-    "last_looked": null,
-    "blocked": null
+    "disposition": "absorbed",
+    "why": "the platform attests this work on this date"
    },
    {
     "work": "球詠",
@@ -1315,7 +1306,7 @@
     "source": "webcomics.jp",
     "disposition": "print-serialised",
     "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
-    "platform_latest": "2026-07-07"
+    "platform_latest": "2026-08-04"
    },
    {
     "work": "娘が彼女を連れてきた話",
@@ -1508,8 +1499,8 @@
     "url": "https://www.ganganonline.com/title/38",
     "claimed": "2026-07-19",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "undatable",
+    "why": "this platform publishes no per-chapter dates — a reader on the site cannot see when a chapter appeared either, so there is nothing to check against"
    },
    {
     "work": "百合SMでふたりの気持ちはつながりますか?",
@@ -1535,13 +1526,9 @@
     "url": "https://youngchampion.jp/series/86c1162f34a04",
     "claimed": "2026-07-19",
     "source": "webcomics.jp",
-    "disposition": "open",
-    "why": "we hold no chapter history for this work on this platform",
-    "chapters_held": 0,
-    "also_attested_elsewhere": false,
-    "traceable": true,
-    "last_looked": null,
-    "blocked": null
+    "disposition": "absorbed",
+    "why": "attested on this platform within a week — one event",
+    "platform_latest": "2026-08-05"
    },
    {
     "work": "ギャラクシーぷーちゃん 宇宙のはじっこでこんにちは",
@@ -1860,7 +1847,7 @@
     "source": "webcomics.jp",
     "disposition": "print-serialised",
     "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
-    "platform_latest": "2026-07-02"
+    "platform_latest": "2026-08-06"
    },
    {
     "work": "田所さん",
@@ -1976,16 +1963,21 @@
     "chapters_held": 61,
     "last_looked": "2026-08-03",
     "cadence": "毎月第1水曜",
-    "next_update": "2026-08-05"
+    "next_update": "2026-09-02"
    },
    {
     "work": "子供部屋ドラゴン",
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/72638",
     "claimed": "2026-07-11",
-    "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "source": "webcomics.jp+yurinavi",
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "今年注目のエースちゃん",
@@ -2001,9 +1993,14 @@
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/67095",
     "claimed": "2026-07-11",
-    "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "source": "webcomics.jp+yurinavi",
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "T.Tラバーズ。",
@@ -2277,7 +2274,7 @@
     "claimed": "2026-07-07",
     "source": "webcomics.jp",
     "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "why": "attested within 2 days — the same event, dated differently"
    },
    {
     "work": "映しちゃダメな顔",
@@ -2285,8 +2282,13 @@
     "url": "https://manga.nicovideo.jp/comic/66620",
     "claimed": "2026-07-07",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "下部七花はかく語りき",
@@ -2341,7 +2343,7 @@
     "source": "webcomics.jp",
     "disposition": "absorbed",
     "why": "attested on this platform within a week — one event",
-    "platform_latest": "2026-07-03"
+    "platform_latest": "2026-08-07"
    },
    {
     "work": "銀輪ボイス",
@@ -2485,8 +2487,13 @@
     "url": "https://manga.nicovideo.jp/comic/66651",
     "claimed": "2026-07-02",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "現実世界でも幸せにしてくださいね?",
@@ -2533,8 +2540,13 @@
     "url": "https://manga.nicovideo.jp/comic/69335",
     "claimed": "2026-07-02",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "ケモノとワルツ",
@@ -2629,9 +2641,13 @@
     "url": "https://comic-walker.com/detail/KC_003176_S",
     "claimed": "2026-06-30",
     "source": "webcomics.jp",
-    "disposition": "print-serialised",
-    "why": "a magazine-dated claim cannot be confirmed or refuted by a publisher's web arm — the two record different events, and the web chapter typically follows the print instalment by two to five weeks",
-    "platform_latest": "2026-05-02"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "ぷれいめ～と",
@@ -3103,8 +3119,13 @@
     "url": "https://manga.nicovideo.jp/comic/51899",
     "claimed": "2026-06-12",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "ロイヤルテーラー ―王宮の裁縫師―",
@@ -3145,9 +3166,13 @@
     "url": "https://www.comic-essay.com/episode/a1026/",
     "claimed": "2026-06-10",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "attested on this platform within a week — one event",
-    "platform_latest": "2026-07-29"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "伽藍の姫-がらんのひめ-",
@@ -3155,8 +3180,13 @@
     "url": "https://manga.nicovideo.jp/comic/65650",
     "claimed": "2026-06-09",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "attested within 2 days — the same event, dated differently"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "アイ・ヘイ・チュー!",
@@ -3173,8 +3203,12 @@
     "url": "https://comic.pixiv.net/works/11080",
     "claimed": "2026-06-08",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "we hold 2 chapters ending 2024-12-08, 547 days before the claim — too far behind to argue the platform shows nothing",
+    "chapters_held": 2,
+    "last_looked": null,
+    "cadence": null,
+    "next_update": null
    },
    {
     "work": "セイ少女黙示録 ですぺあ",
@@ -3208,7 +3242,7 @@
     "disposition": "open",
     "why": "we hold no chapter history for this work on this platform",
     "chapters_held": 0,
-    "also_attested_elsewhere": false,
+    "also_attested_elsewhere": true,
     "traceable": true,
     "last_looked": null,
     "blocked": null
@@ -3589,8 +3623,13 @@
     "url": null,
     "claimed": "2026-07-23",
     "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "open",
+    "why": "no URL reported, and no history held — nothing to trace to",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": false,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "魔女まじょS-WITCH",
@@ -3990,8 +4029,9 @@
     "url": null,
     "claimed": "2026-07-16",
     "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "no URL reported, and this platform carries works published elsewhere without an index we can enumerate, so there is no page to address",
+    "chapters_held": 0
    },
    {
     "work": "大崎さんと小森さん",
@@ -4073,9 +4113,8 @@
     "url": null,
     "claimed": "2026-07-12",
     "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "attested on this platform within a week — one event",
-    "platform_latest": "2026-08-02"
+    "disposition": "undatable",
+    "why": "this platform publishes no per-chapter dates — a reader on the site cannot see when a chapter appeared either, so there is nothing to check against"
    },
    {
     "work": "彼氏の女友達がぐいぐい来る(私に)",
@@ -4116,24 +4155,6 @@
    {
     "work": "私を喰べたい、ひとでなし",
     "platform": "カドコミ",
-    "url": null,
-    "claimed": "2026-07-11",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "子供部屋ドラゴン",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-11",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
-    "work": "このままモブじゃ終われない！",
-    "platform": "きららベース",
     "url": null,
     "claimed": "2026-07-11",
     "source": "yurinavi",
@@ -4517,16 +4538,8 @@
    "date": "2026-07-09",
    "releases": 123,
    "distinct_works": 1,
-   "median_per_day": 1.0,
+   "median_per_day": 1,
    "example_work": "はなにあらし"
-  },
-  {
-   "platform": "COMIC FUZ",
-   "date": "2026-08-08",
-   "releases": 33,
-   "distinct_works": 3,
-   "median_per_day": 2.0,
-   "example_work": "IDOL×IDOL STORY！"
   }
  ],
  "gaps": {
@@ -11212,6 +11225,10 @@
     "platform": null
    },
    {
+    "work": "カナリアは綺羅星の夢をみる",
+    "platform": null
+   },
+   {
     "work": "隣の席が好きな人だった : 学生百合アンソロジー",
     "platform": null
    },
@@ -11521,27 +11538,27 @@
   "weeks": [
    {
     "week": "2026-06-07",
-    "n": 39
+    "n": 38
    },
    {
     "week": "2026-06-14",
-    "n": 137
+    "n": 134
    },
    {
     "week": "2026-06-21",
-    "n": 139
+    "n": 142
    },
    {
     "week": "2026-06-28",
-    "n": 139
+    "n": 141
    },
    {
     "week": "2026-07-05",
-    "n": 255
+    "n": 258
    },
    {
     "week": "2026-07-12",
-    "n": 116
+    "n": 118
    },
    {
     "week": "2026-07-19",
@@ -11549,42 +11566,46 @@
    },
    {
     "week": "2026-07-26",
-    "n": 125
+    "n": 132
    },
    {
     "week": "2026-08-02",
-    "n": 75
+    "n": 154
+   },
+   {
+    "week": "2026-08-09",
+    "n": 14
    }
   ],
   "trimmed_weeks": 3,
-  "pre_tracking_releases": 1071,
+  "pre_tracking_releases": 1084,
   "tracking_from": "2026-08-02"
  },
  "access_modes": {
-  "purchase": 298,
-  "free-timed": 140,
-  "free": 682
+  "purchase": 309,
+  "free": 771,
+  "free-timed": 122
  },
  "update_kinds": {
-  "new-chapter": 1064,
-  "other": 22,
+  "new-chapter": 1162,
+  "other": 23,
   "final": 8,
-  "new-series": 30,
+  "new-series": 37,
   "oneshot": 21,
   "skipped": 1
  },
  "identification": {
-  "discovery-candidate": 840,
-  "platform-genre": 306
+  "discovery-candidate": 903,
+  "platform-genre": 349
  },
  "collapsed": {
-  "duplicate_chapters": 72,
+  "duplicate_chapters": 92,
   "thin_sitemap": 8,
-  "resolver": 50,
+  "resolver": 51,
   "samples": 36
  },
  "filled": {
-  "author": 78,
-  "access": 116
+  "author": 64,
+  "access": 144
  }
 }

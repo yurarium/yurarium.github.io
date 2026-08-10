@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10T13:20:26+00:00",
+ "generated": "2026-08-10T15:14:15+00:00",
  "since_last": {
-  "at": "2026-08-10T11:52:32+00:00",
+  "at": "2026-08-10T15:10:31+00:00",
   "statistics": {}
  },
  "means": {
@@ -23,23 +23,23 @@
  },
  "last_run": {
   "at": "2026-08-10",
-  "releases": 1146,
+  "releases": 1252,
   "works": 2562,
-  "platforms": 22,
-  "series_rows": 3046,
+  "platforms": 23,
+  "series_rows": 3048,
   "identification": {
-   "discovery-candidate": 840,
-   "platform-genre": 306
+   "discovery-candidate": 903,
+   "platform-genre": 349
   },
   "collapsed": {
-   "duplicate_chapters": 72,
+   "duplicate_chapters": 92,
    "thin_sitemap": 8,
-   "resolver": 50,
+   "resolver": 51,
    "samples": 36
   }
  },
  "gate": {
-  "invariants_passing": 52,
+  "invariants_passing": 53,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -297,6 +297,11 @@
     "examples": []
    },
    {
+    "name": "no record comes from a host that is not a source",
+    "violations": 0,
+    "examples": []
+   },
+   {
     "name": "a rendered file names a platform its targets hold",
     "violations": 0,
     "examples": []
@@ -373,7 +378,7 @@
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
     "budget": 866,
-    "value": 866
+    "value": 873
    },
    {
     "name": "credit fields the division does not account for",
@@ -384,8 +389,8 @@
    {
     "name": "full-width forms in English renderings",
     "means": "English renderings holding a full-width character and no kana or kanji, which is what narrowing the invariant to a script let past. Mostly a Latin pen name catalogued in full width; some are official titles and are correct, so this will not reach zero.",
-    "budget": 28,
-    "value": 28
+    "budget": 7,
+    "value": 7
    },
    {
     "name": "interface reads outside an entry point",
@@ -403,7 +408,7 @@
     "name": "credit phrases spelling a person otherwise",
     "means": "credit fields whose composed phrase spells one of the people in it differently from the name store, counted by asking the shipped division who the field names. It was 207 while a line of one person plus a role bracket was left exactly as the analyser first wrote it, so a reading sourced afterwards could not reach it. It was then 70 while a line was recomposed only where every person on it had a store record, which held back 60 lines on the strength of a name already in Latin that no store will ever hold. The residue is a field naming one person inside notation that states no job, which is the one shape the recomposition still refuses to touch.",
     "budget": 4,
-    "value": 4
+    "value": 5
    },
    {
     "name": "bylines drawn in a spelling the field does not write",
@@ -463,7 +468,7 @@
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
     "budget": 397,
-    "value": 397
+    "value": 398
    },
    {
     "name": "credits the corpus files as a venue",
@@ -499,7 +504,7 @@
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
     "budget": 18,
-    "value": 18
+    "value": 21
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -559,7 +564,7 @@
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
     "budget": 148,
-    "value": 148
+    "value": 150
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -577,13 +582,13 @@
     "name": "one work under two names in a list",
     "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
     "budget": 13,
-    "value": 13
+    "value": 14
    },
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector — the adapter still returns rows, just emptier ones.",
     "budget": 13,
-    "value": 13
+    "value": 31
    },
    {
     "name": "facts with more than one home",
@@ -660,14 +665,14 @@
    {
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
-    "budget": 1,
-    "value": 1
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 27,
-    "value": 27
+    "budget": 26,
+    "value": 26
    },
    {
     "name": "works whose first publication country is unattested",
@@ -691,13 +696,13 @@
     "name": "rows with a moving address",
     "means": "rows anchored on a chapter address whose identifier holds no work-level address on the same host. A chapter address moves when the work publishes, so a rise means a work has arrived whose address nobody has read yet and which would be minted a second identifier the next time it updates. Run adapters/gigaviewer/workaddress.py and apply what it writes with identity.py --attachments.",
     "budget": 0,
-    "value": 0
+    "value": 2
    },
    {
     "name": "listing series with no feed of their own",
     "means": "series a GigaViewer platform's own yuri listing names that the last per-series feeds run did not resolve. The pairing of a name to a series id is positional and slipped by one on 2026-08-10, which cost 一迅プラス's second entry its chapter list while every other work came out renamed and looking right. Falls to zero on the first run after the fix; a rise means the pairing has slipped again, or a platform announced a series before its first chapter.",
-    "budget": 1,
-    "value": 1
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "series names holding a page title",
@@ -751,20 +756,6 @@
    "drop": null
   },
   {
-   "source": "gigaviewer",
-   "files": 69,
-   "works": 661,
-   "rows": 7712,
-   "retrieved": "2026-08-06",
-   "age_days": 4,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 7637,
-   "well_formed": 7637,
-   "malformed": 0,
-   "drop": null
-  },
-  {
    "source": "madb-title",
    "files": 57,
    "works": 57,
@@ -793,20 +784,6 @@
    "drop": null
   },
   {
-   "source": "kadokomi",
-   "files": 5,
-   "works": 971,
-   "rows": 7381,
-   "retrieved": "2026-08-07",
-   "age_days": 3,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 6709,
-   "well_formed": 6280,
-   "malformed": 429,
-   "drop": null
-  },
-  {
    "source": "madb",
    "files": 920,
    "works": 920,
@@ -817,34 +794,6 @@
    "empty": false,
    "checked_rows": 0,
    "well_formed": 0,
-   "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "webpages",
-   "files": 37,
-   "works": 531,
-   "rows": 7712,
-   "retrieved": "2026-08-07",
-   "age_days": 3,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 7661,
-   "well_formed": 7661,
-   "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "comicfuz",
-   "files": 2,
-   "works": 128,
-   "rows": 6174,
-   "retrieved": "2026-08-08",
-   "age_days": 2,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 6127,
-   "well_formed": 6127,
    "malformed": 0,
    "drop": null
   },
@@ -863,20 +812,6 @@
    "drop": null
   },
   {
-   "source": "nicovideo",
-   "files": 3,
-   "works": 864,
-   "rows": 7289,
-   "retrieved": "2026-08-08",
-   "age_days": 2,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 6760,
-   "well_formed": 0,
-   "malformed": 6760,
-   "drop": null
-  },
-  {
    "source": "openbd",
    "files": 820,
    "works": 820,
@@ -889,11 +824,81 @@
    "well_formed": 0,
    "malformed": 0,
    "drop": null
+  },
+  {
+   "source": "comicfuz",
+   "files": 2,
+   "works": 128,
+   "rows": 6179,
+   "retrieved": "2026-08-10",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 6132,
+   "well_formed": 6132,
+   "malformed": 0,
+   "drop": null
+  },
+  {
+   "source": "gigaviewer",
+   "files": 71,
+   "works": 691,
+   "rows": 7747,
+   "retrieved": "2026-08-10",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 7642,
+   "well_formed": 7642,
+   "malformed": 0,
+   "drop": null
+  },
+  {
+   "source": "kadokomi",
+   "files": 5,
+   "works": 971,
+   "rows": 7396,
+   "retrieved": "2026-08-10",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 6724,
+   "well_formed": 6322,
+   "malformed": 402,
+   "drop": null
+  },
+  {
+   "source": "nicovideo",
+   "files": 3,
+   "works": 1176,
+   "rows": 7575,
+   "retrieved": "2026-08-10",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 6734,
+   "well_formed": 0,
+   "malformed": 6734,
+   "drop": null
+  },
+  {
+   "source": "webpages",
+   "files": 37,
+   "works": 523,
+   "rows": 7348,
+   "retrieved": "2026-08-10",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 7297,
+   "well_formed": 7297,
+   "malformed": 0,
+   "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T11:52:31+00:00",
+  "previous_at": "2026-08-10T15:10:30+00:00",
   "drops": []
  },
  "outstanding": [
@@ -906,7 +911,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 105,
+   "count": 107,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -1013,7 +1018,9 @@
     "puberty girls",
     "schadenliebe",
     "sick",
-    "strawberry syrup"
+    "strawberry syrup",
+    "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です!…って、魔王が女の子の場合はどう...",
+    "病弱少女、転生して健康な肉体(最強)を手に入れる ～友達が欲しくて魔境から旅立ったのですが、どうやら..."
    ]
   },
   {
@@ -1031,7 +1038,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 47,
+   "count": 45,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 34,
@@ -1056,7 +1063,7 @@
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 88,
     "facts with more than one home": 12,
-    "full-width forms in English renderings": 28,
+    "full-width forms in English renderings": 7,
     "implausible ruby spans": 0,
     "impossibilities asserted without evidence": 0,
     "imprint names the interface disagrees with": 0,
@@ -1068,7 +1075,7 @@
     "kana left in a romanisation": 0,
     "kana names with no stated division": 252,
     "labels with nothing to quote": 0,
-    "listing series with no feed of their own": 1,
+    "listing series with no feed of their own": 0,
     "names rendered two ways": 0,
     "nicovideo works with no rights": 60,
     "one page cited for two claims": 12,
@@ -1083,7 +1090,7 @@
     "rows with a moving address": 0,
     "ruby asserting a reading per character": 197,
     "scope questions left open": 2,
-    "scraped counters in chapter names": 1,
+    "scraped counters in chapter names": 0,
     "series names holding a page title": 4,
     "shelf admissions a reader cannot follow": 5,
     "targets a capture wrote no row for": 4,
@@ -1095,7 +1102,7 @@
     "uncertain readings": 52,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
-    "updates naming a work we do not hold": 27,
+    "updates naming a work we do not hold": 26,
     "volumes with an isbn and no date": 0,
     "works offered twice in a list": 0,
     "works showing a romanisation": 148,
@@ -1105,28 +1112,28 @@
   }
  ],
  "statistics": {
-  "works": 3046,
+  "works": 3048,
   "states": {
-   "print": 1697,
+   "print": 1698,
    "oneshot": 426,
-   "unknown": 303,
-   "completed": 263,
-   "active": 218,
+   "unknown": 301,
+   "completed": 265,
+   "active": 220,
    "dormant": 81,
-   "slow": 58
+   "slow": 57
   },
   "english_basis": {
    "translated": 2666,
    "official-jp": 118,
    "licensed": 114,
    "none": 104,
-   "romaji": 44
+   "romaji": 46
   },
   "print_works": 2482,
-  "print_only": 1697,
+  "print_only": 1698,
   "volumes": 6274,
-  "with_identifier": 3046,
-  "chapters": 26842,
+  "with_identifier": 3045,
+  "chapters": 26767,
   "delivery_dated": 1070
  }
 }
