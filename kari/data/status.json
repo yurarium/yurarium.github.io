@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10T11:02:59+00:00",
+ "generated": "2026-08-10T11:27:53+00:00",
  "since_last": {
-  "at": "2026-08-10T10:30:26+00:00",
+  "at": "2026-08-10T11:20:27+00:00",
   "statistics": {}
  },
  "means": {
@@ -303,7 +303,7 @@
     "name": "one page cited for two claims",
     "means": "records whose reading and whose English name cite the same page while naming different kinds of source, so at most one of the two can be right about where it came from. A rise means an entry carried one address for two claims again.",
     "budget": 12,
-    "value": 13
+    "value": 12
    },
    {
     "name": "kana left in a romanisation",
@@ -333,7 +333,7 @@
     "name": "titles with no translation of our own",
     "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
     "budget": 172,
-    "value": 174
+    "value": 172
    },
    {
     "name": "publishers with no English",
@@ -404,8 +404,14 @@
    {
     "name": "names rendered two ways",
     "means": "strings the shipped maps spell one way as a publisher and another way as a person, which happens because a self-published work names its own author as its publisher. A rise means a publisher name was written by hand where the name store already spelt it.",
-    "budget": 3,
-    "value": 3
+    "budget": 0,
+    "value": 0
+   },
+   {
+    "name": "one work named two ways across its rows",
+    "means": "works whose rows render the same Japanese phrase two different ways, grouped on the name at the front of each rather than on the fold key, which folds an anthology apart from the work it collects. A rise means a row was named without looking at what its siblings already say.",
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "author names romanised as one word",
@@ -865,7 +871,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T10:30:25+00:00",
+  "previous_at": "2026-08-10T11:20:26+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1003,7 +1009,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 46,
+   "count": 45,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 35,
@@ -1040,9 +1046,10 @@
     "kana left in a romanisation": 0,
     "kana names with no stated division": 252,
     "labels with nothing to quote": 0,
-    "names rendered two ways": 3,
+    "names rendered two ways": 0,
     "nicovideo works with no rights": 60,
     "one page cited for two claims": 12,
+    "one work named two ways across its rows": 0,
     "one work under two names in a list": 13,
     "publisher keys the interface misses": 0,
     "publisher pages listing a work from another house": 0,
@@ -1085,9 +1092,9 @@
    "slow": 58
   },
   "english_basis": {
-   "translated": 2667,
+   "translated": 2666,
    "official-jp": 118,
-   "licensed": 113,
+   "licensed": 114,
    "none": 104,
    "romaji": 44
   },
