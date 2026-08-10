@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-10T16:39:05+00:00",
+ "generated": "2026-08-10T16:43:48+00:00",
  "since_last": {
-  "at": "2026-08-10T16:36:00+00:00",
+  "at": "2026-08-10T16:39:05+00:00",
   "statistics": {}
  },
  "means": {
@@ -39,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 52,
+  "invariants_passing": 53,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -53,10 +53,8 @@
    },
    {
     "name": "a division cites its source",
-    "violations": 1,
-    "examples": [
-     "安藤いも: divided as 'アンドウ イモ' with nothing saying who divided it"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "a division names its donor in a field",
@@ -379,7 +377,7 @@
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 873,
+    "budget": 876,
     "value": 876
    },
    {
@@ -469,7 +467,7 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 398,
+    "budget": 399,
     "value": 399
    },
    {
@@ -505,7 +503,7 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 21,
+    "budget": 23,
     "value": 23
    },
    {
@@ -547,7 +545,7 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1474,
+    "budget": 1475,
     "value": 1475
    },
    {
@@ -565,7 +563,7 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 150,
+    "budget": 151,
     "value": 151
    },
    {
@@ -589,7 +587,7 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector — the adapter still returns rows, just emptier ones.",
-    "budget": 31,
+    "budget": 33,
     "value": 33
    },
    {
@@ -673,7 +671,7 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 26,
+    "budget": 29,
     "value": 29
    },
    {
@@ -900,7 +898,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-10T16:35:59+00:00",
+  "previous_at": "2026-08-10T16:39:04+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1047,13 +1045,13 @@
     "adapters fetching without net.py": 34,
     "an imprint field repeating its publisher": 360,
     "author names romanised as one word": 1153,
-    "author readings no source states": 398,
+    "author readings no source states": 399,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "bylines drawn in a spelling the field does not write": 23,
     "captures with no floor": 10,
     "citations withheld from readers": 36,
-    "credit fields an identifier does not cover": 21,
+    "credit fields an identifier does not cover": 23,
     "credit fields the division does not account for": 0,
     "credit identifiers naming nobody": 7,
     "credit pages listing a work that does not name them": 8,
@@ -1071,7 +1069,7 @@
     "impossibilities asserted without evidence": 0,
     "imprint names the interface disagrees with": 0,
     "imprint strings that reach no line": 18,
-    "incomplete attested rows": 31,
+    "incomplete attested rows": 33,
     "interface reads outside an entry point": 12,
     "interpunct credits nobody has ruled on": 0,
     "invented markup in tests": 75,
@@ -1088,7 +1086,7 @@
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 21,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 873,
+    "renderings resting on a mechanical romanisation": 876,
     "renderings with nothing to show": 24,
     "rows with a moving address": 2,
     "ruby asserting a reading per character": 197,
@@ -1098,17 +1096,17 @@
     "shelf admissions a reader cannot follow": 5,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 0,
-    "titles read by a machine, unmarked": 1474,
+    "titles read by a machine, unmarked": 1475,
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 172,
     "uncertain readings": 52,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
-    "updates naming a work we do not hold": 26,
+    "updates naming a work we do not hold": 29,
     "volumes with an isbn and no date": 0,
     "works offered twice in a list": 0,
-    "works showing a romanisation": 150,
+    "works showing a romanisation": 151,
     "works whose first publication country is unattested": 2562,
     "works without English": 104
    }
