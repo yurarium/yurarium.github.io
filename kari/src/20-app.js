@@ -795,6 +795,13 @@ function imprintOf(s) {
    is unknown, and an empty cell reads as a field nobody has filled in. Naming the distributor and
    saying it is one is the honest row; guessing 一迅社 from a 百合姫 imprint would be the database
    inventing a fact, which is what the source layer refuses to do (DEFINITIONS §5). */
+/* WHAT A CREATOR FIELD SAID WHERE IT NAMED NOBODY. Same shape as PUB_UNKNOWN below and for the
+   same reason: the field is not empty, and printing nothing would say something untrue about the
+   book. `Various` is what an English catalogue writes for a book of many hands. */
+const AUTHOR_UNNAMED = {
+  'many-unnamed': ['複数の作家', 'Various'],
+};
+
 const PUB_UNKNOWN = {
   'not-stated': ['出版社の記載なし', 'publisher not stated'],
   'unknown-to-source': ['出版者不明', 'publisher unknown'],
@@ -1367,7 +1374,16 @@ function renderWorkPage() {
      short interface words inline; the value is a person's name, which `authorLabel` renders in one
      language on purpose. In 併記 this cell used to hold the Japanese alone, with furigana over it
      and the romanisation nowhere, on a page where every other cell said both. */
-  fact(T('作者', 'Author'), r.author ? bilingual(() => creditLine(r)) : '');
+  /* A BOOK WITH MANY AUTHORS AND NONE OF THEM NAMED. A shop puts something in the creator field
+     for every book it sells and has nobody to put for an anthology, so it writes the format of the
+     book: `アンソロジー` reached the registry as a credit, an identifier was minted, and a page was
+     published headed アンソロジー saying these are the works that name this person. The build
+     refuses the string now and says on the row what the field had said, because an empty Author
+     line reads as a book nobody made and these have many. */
+  fact(T('作者', 'Author'),
+       r.author ? bilingual(() => creditLine(r))
+                : (r.author_basis ? esc(T(...(AUTHOR_UNNAMED[r.author_basis]
+                                             || AUTHOR_UNNAMED['many-unnamed']))) : ''));
   // The newest chapter is a chapter, not a date. `latest_ep` was in the row and shown only in the
   // list, so the page said less about the same fact than the line that led to it.
   /* THESE THREE ARE ABOUT CHAPTERS, and the page below them lists volumes, so they say which.
