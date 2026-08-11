@@ -1108,7 +1108,19 @@ function creditGapText(text) {
   // FOLDED TO THE WIDTH IT IS READ AT, like every other English rendering here. `enFallback` does
   // this for the strings it is given and this replaced it on the gaps, so `Ｓｙｏｕｓａ．` in a
   // bracket went back to full width and `full-width forms in English renderings` rose by three.
-  return String(text ?? '').normalize('NFKC').replace(JA_ANY_RUN, run => bylineRole(run));
+  return String(text ?? '').normalize('NFKC')
+    .replace(JA_ANY_RUN, run => bylineRole(run))
+    // THE NOTATION GOES WITH THE ROLE IT HELD. `bylineRole` answers '' for the default, so a gap
+    // reading `[著]` came back `[]` and `(作)` came back `()`: the catalogue's brackets with
+    // nothing left inside them. No field the build ships reaches this walk, and the probes that
+    // found it were written by hand, so this is what the path should do rather than a report of
+    // what it did to a reader.
+    .replace(/[[(（【]\s*[\])）】]/g, ' ')
+    // AND TWO NAMES DO NOT RUN TOGETHER WHERE A ROLE SAT BETWEEN THEM. `ぐう(作画)水無瀬` renders
+    // the gap as `(art)` and left `Gū(art)Minase`; a rendered gap is a word and takes the spacing
+    // of one.
+    .replace(/([)\]）】])(?=\S)/g, '$1 ')
+    .replace(/\s{2,}/g, ' ');
 }
 
 /* A CREDIT FIELD WITH EVERY NAME AND EVERY ROLE IN IT RENDERED, IN PLACE.
