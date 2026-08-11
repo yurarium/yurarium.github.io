@@ -2726,6 +2726,9 @@ const EN = {
   '無料':'Free', '有料':'Paid', '無料（条件付）':'Free (paced)', '全話無料':'All free',
   '読み切り':'One-shot', '試し読み':'Preview', '番外編':'Extra', 'お知らせ':'Notice',
   'お詫び':'Apology', '再掲':'Reprint', '未分類':'Unclassified', '転載':'Syndicated',
+  // AND IT GOES THROUGH `fmtDate`, LIKE EVERY OTHER DATE ON THE PAGE. The badge sliced the ISO
+  // string at character five and the releases note printed it whole, so both ignored the reader's
+  // date setting: a page set to 現地 showed `8月11日（火）` on every row and `06-17` on these.
   // `既出` IS ABOUT PUBLICATION AND NOT ABOUT SIGHTING. It read `Seen`, and the date beside it is
   // `pub`, so a chapter published on 17 June and found today announced itself as `Seen 06-17`:
   // the one thing that cannot be true of a row appearing in the feed for the first time. The
@@ -2850,7 +2853,7 @@ function compactList(rows) {
       const line = () => `${kindTag(lead)}
         <span class="ccell"><span class="cmain">${goTo ? `<a href="${esc(goTo)}" target="_blank" rel="noopener noreferrer nofollow">${workLabel(lead)}</a>`
                    : `<span style="font-weight:600">${workLabel(lead)}</span>`}
-        ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc((lead.pub || '').slice(5))}</span>` : ''}
+        ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc(fmtDate(lead.pub))}</span>` : ''}
         ${lead.title_unsplit ? `<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">${esc(T('作者未分離'))}</span>` : ''}
         </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(platName(lead.plat_name || lead.plat))}</span>
         ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">${esc(T('転載'))}</span>` : ''}
@@ -2993,7 +2996,7 @@ function detailList(rows) {
         ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
       </div>
       ${epText(r) ? `<div class="ep">${esc(epText(r))}</div>` : ''}
-      ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(r.feed_date)}">${esc(T('公開'))} ${esc(r.pub)}</div>` : ''}`;
+      ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(fmtDate(r.feed_date, { year: true }))}">${esc(T('公開'))} ${esc(fmtDate(r.pub, { year: true }))}</div>` : ''}`;
       const where = platName(r.plat_name || r.plat);
       return `${r.wid
         ? `<a class="wplink relmain" href="${esc(BASE)}work/${esc(r.wid)}/?tab=feed">${head}</a>`
