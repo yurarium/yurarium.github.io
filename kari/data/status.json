@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-11T15:55:43+00:00",
+ "generated": "2026-08-11T17:08:01+00:00",
  "since_last": {
-  "at": "2026-08-11T15:50:00+00:00",
+  "at": "2026-08-11T17:02:28+00:00",
   "statistics": {}
  },
  "means": {
@@ -387,8 +387,8 @@
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 580,
-    "value": 586
+    "budget": 590,
+    "value": 590
    },
    {
     "name": "credit fields the division does not account for",
@@ -531,8 +531,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 31,
-    "value": 31
+    "budget": 28,
+    "value": 28
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -549,14 +549,14 @@
    {
     "name": "credit identifiers naming nobody",
     "means": "live credit identifiers no work is credited to, so they get no page. All five are joined spellings the ampersand split left behind, each half now holding its own address. A rise means a credit left the corpus or another splitter change orphaned a spelling.",
-    "budget": 14,
-    "value": 14
+    "budget": 25,
+    "value": 25
    },
    {
     "name": "credits sharing a reading nobody has ruled on",
     "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
-    "budget": 157,
-    "value": 157
+    "budget": 13,
+    "value": 13
    },
    {
     "name": "ruby asserting a reading per character",
@@ -573,7 +573,7 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1470,
+    "budget": 1477,
     "value": 1477
    },
    {
@@ -926,7 +926,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-11T15:49:59+00:00",
+  "previous_at": "2026-08-11T17:02:26+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1073,14 +1073,14 @@
     "bylines drawn in a spelling the field does not write": 24,
     "captures with no floor": 10,
     "citations withheld from readers": 36,
-    "credit fields an identifier does not cover": 31,
+    "credit fields an identifier does not cover": 28,
     "credit fields the division does not account for": 2,
-    "credit identifiers naming nobody": 14,
+    "credit identifiers naming nobody": 25,
     "credit pages listing a work that does not name them": 8,
     "credit phrases spelling a person otherwise": 3,
     "credits carrying their own cataloguing": 38,
     "credits matching a chapter": 0,
-    "credits sharing a reading nobody has ruled on": 157,
+    "credits sharing a reading nobody has ruled on": 13,
     "credits that restate a name": 0,
     "credits the corpus files as a venue": 16,
     "divisions read back from a romanisation": 3,
@@ -1109,7 +1109,7 @@
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 21,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 580,
+    "renderings resting on a mechanical romanisation": 590,
     "renderings with nothing to show": 24,
     "rows with a moving address": 3,
     "ruby asserting a reading per character": 195,
@@ -1119,7 +1119,7 @@
     "shelf admissions a reader cannot follow": 5,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 0,
-    "titles read by a machine, unmarked": 1470,
+    "titles read by a machine, unmarked": 1477,
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 175,

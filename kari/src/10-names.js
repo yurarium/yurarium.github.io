@@ -183,6 +183,11 @@ function ruby(ja, rec) {
    Folded exactly as the build folds, because （私に） and (私に) are different strings and the same
    work arrives as both. */
 let NAMES = null;
+/* SPELLING TO CREDIT IDENTIFIER. The registry unifies the spellings one person is written as, and
+   this is that map, shipped so a search can reach them by any of it: `アオトヒビキ` finds the works
+   credited to `あおと響`. Null until the boot loads it, and null is a working state, because the
+   search that reads it falls back to matching the raw credit field the row carries. */
+let CREDIT_KEYS = null;
 function foldKey(t) {
   return (t || '').normalize('NFKC').replace(/ /g, '');
 }

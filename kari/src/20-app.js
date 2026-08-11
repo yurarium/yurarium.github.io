@@ -3275,6 +3275,28 @@ function renderSeries() {
 }
 
 /* ── catalogue ────────────────────────────────────────── */
+/* Whether a query names a credit this row is one of the works of.
+
+   SEARCH THROUGH THE REGISTRY, WHICH IS WHAT THE ROW'S OWN STRING CANNOT DO. `w.c` is the creator
+   field one bibliography wrote, so searching it finds a person only under the characters that
+   record happens to use: `あおと響` and `アオトヒビキ` are one artist and each was reachable only by
+   its own half. The registry has unified them, `w.ci` carries the identifiers this row resolves to,
+   and CREDIT_KEYS turns a typed spelling into one of those identifiers.
+
+   STRICTLY A GAIN. It runs after the raw-string tests, and those are unchanged, so every match the
+   search had it still has. With no map loaded and no `ci` on a row this returns false and the
+   behaviour is exactly what it was. That is the property that let this land without waiting for the
+   43 credits that resolve to nothing to be settled: they keep being found by their own characters.
+
+   THE QUERY IS FOLDED THE WAY THE MAP IS KEYED, `foldKey`, which is `credit_key` in the build. A
+   partial word is not looked up: a map is an exact lookup, and `hits` above already covers the
+   substring case against the raw field. */
+function creditHit(w, q) {
+  if (!CREDIT_KEYS || !w.ci || !w.ci.length) return false;
+  const cid = CREDIT_KEYS[foldKey((el('q').value || '').trim())];
+  return !!cid && w.ci.indexOf(cid) !== -1;
+}
+
 function renderCat() {
   const q = norm(el('q').value.trim()), f = el('filter').value, mode = el('sort').value;
   const by = {
@@ -3290,7 +3312,8 @@ function renderCat() {
     // was asking the name store a question about the wrong kind of thing.
     if (q && !hits(searchIndex('titles', w.t, null), q)
            && !hits(norm(w.y), q)
-           && !hits(norm(w.c), q)) return false;
+           && !hits(norm(w.c), q)
+           && !creditHit(w, q)) return false;
     if (f === 'multi') return w.n > 1;
     if (f === 'single') return w.n <= 1;
     return true;
@@ -3772,7 +3795,13 @@ Promise.all([
   // second script, and a company name is a name like the other two. Absent means every publisher
   // renders as Japanese, which is the fallback the whole naming design already takes.
   DATA('feed/names.json').catch(() => null),
-]).then(([idx, feed, series, meta, names]) => {
+  // SPELLING TO CREDIT IDENTIFIER, so a search reaches a person by any spelling the registry
+  // unifies. 45 KB, against credits.json's 457: the works hang off `ci` on the index rows already
+  // loaded, so a query about a person never fetches the credit records. Absent means the search
+  // falls back to matching the raw credit field, which is what it did before this existed.
+  DATA('feed/credit-keys.json').catch(() => null),
+]).then(([idx, feed, series, meta, names, creditKeys]) => {
+  CREDIT_KEYS = creditKeys || null;
   NAMES = names && names.titles ? names : null;
   PUBS = (names && names.publishers) || null;
   INDEX = idx; FEED = feed; SERIES = series; META = meta;
