@@ -1,6 +1,73 @@
 {
  "releases": [
   {
+   "late_discovered": false,
+   "discovered_on": null,
+   "id": "remaining:読み切り",
+   "work": "横槍メンゴ新作読切シリーズ",
+   "ep": "読み切り",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-11",
+   "seen": "2026-08-11",
+   "basis": "heuristic",
+   "conf": "reported",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://ynjn.jp/title/30352",
+   "author": "",
+   "plat": "remaining",
+   "plat_name": "ヤンジャン+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "oneshot",
+   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
+   "kind_inferred": true,
+   "preferred": "ヤンジャン+",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-11",
+   "in_collection": true,
+   "work_en": {
+    "reading": "ヨコヤリ メンゴ シンサク ヨミキリ シリーズ",
+    "ruby": [
+     [
+      "横槍",
+      "よこやり"
+     ],
+     [
+      "メンゴ",
+      null
+     ],
+     [
+      "新作",
+      "しんさく"
+     ],
+     [
+      "読切",
+      "よみきり"
+     ],
+     [
+      "シリーズ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Yokoyari Mengo Shinsaku Yomikiri Shirīzu",
+     "double": "Yokoyari Mengo Shinsaku Yomikiri Shiriizu",
+     "plain": "Yokoyari Mengo Shinsaku Yomikiri Shirizu"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true
+   }
+  },
+  {
    "id": "comicfuz:47296",
    "work": "星屑テレパス",
    "ep": "４巻 第４０話「交信X」",
@@ -8240,6 +8307,95 @@
   {
    "late_discovered": false,
    "discovered_on": null,
+   "id": "g-comi:第10話 外れ小路のウワサ",
+   "work": "多良さんのウワサ",
+   "ep": "第10話 外れ小路のウワサ",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-07",
+   "seen": "2026-08-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://g-comi.jp/series/f5a28c7f5cc1b",
+   "author": "窓口基",
+   "plat": "g-comi",
+   "plat_name": "Gコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 10, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "Gコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "surfaced": false,
+   "feed_date": "2026-08-07",
+   "work_en": {
+    "reading": "タラサン ノ ウワサ",
+    "ruby": [
+     [
+      "多良",
+      "たら"
+     ],
+     [
+      "さんのウワサ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Tarasan no Uwasa",
+     "double": "Tarasan no Uwasa",
+     "plain": "Tarasan no Uwasa"
+    },
+    "en": "The Rumor About Tara",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Rumor About Tara"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "マドグチ モト",
+    "ruby": [
+     [
+      "窓口",
+      "まどぐち"
+     ],
+     [
+      "基",
+      "もと"
+     ]
+    ],
+    "romaji": {
+     "macron": "Madoguchi Moto",
+     "double": "Madoguchi Moto",
+     "plain": "Madoguchi Moto"
+    },
+    "en": "Guchimoto Mado",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033754483",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00395"
+   },
+   "wid": "w00283"
+  },
+  {
+   "late_discovered": false,
+   "discovered_on": null,
    "id": "g-comi:第2話",
    "work": "世界をすくってもお腹はすくから",
    "ep": "第2話",
@@ -8332,95 +8488,6 @@
     "basis": "romaji"
    },
    "wid": "w00217"
-  },
-  {
-   "late_discovered": false,
-   "discovered_on": null,
-   "id": "g-comi:第10話 外れ小路のウワサ",
-   "work": "多良さんのウワサ",
-   "ep": "第10話 外れ小路のウワサ",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-07",
-   "seen": "2026-08-11",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://g-comi.jp/series/f5a28c7f5cc1b",
-   "author": "窓口基",
-   "plat": "g-comi",
-   "plat_name": "Gコミ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 10, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "Gコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "surfaced": false,
-   "feed_date": "2026-08-07",
-   "work_en": {
-    "reading": "タラサン ノ ウワサ",
-    "ruby": [
-     [
-      "多良",
-      "たら"
-     ],
-     [
-      "さんのウワサ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Tarasan no Uwasa",
-     "double": "Tarasan no Uwasa",
-     "plain": "Tarasan no Uwasa"
-    },
-    "en": "The Rumor About Tara",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Rumor About Tara"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "マドグチ モト",
-    "ruby": [
-     [
-      "窓口",
-      "まどぐち"
-     ],
-     [
-      "基",
-      "もと"
-     ]
-    ],
-    "romaji": {
-     "macron": "Madoguchi Moto",
-     "double": "Madoguchi Moto",
-     "plain": "Madoguchi Moto"
-    },
-    "en": "Guchimoto Mado",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033754483",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00395"
-   },
-   "wid": "w00283"
   },
   {
    "late_discovered": false,
