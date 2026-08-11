@@ -656,17 +656,10 @@ function personShown(n) {
     || (LANG === 'en' ? enFallback(n) : null);
 }
 
-function creditFromParts(ja) {
-  const parts = creditPeople(ja);
-  if (!parts || parts.length < 2) return null;
-  const out = [];
-  for (const n of parts) {
-    const shown = personShown(n);
-    if (shown === null) return null;
-    out.push(shown);
-  }
-  return out.join(', ');
-}
+/* `creditFromParts` STOOD HERE AND IS `composedCredit` NOW. It composed the people and dropped
+   every role the field stated, so `[作画]蔵王大志 / [原作]影木栄貴` reached a reader as
+   `Zaō Taishi, Eiki Eiki` and the catalogue's own statement about who drew and who wrote was
+   thrown away at the last step. One composer, further down beside the role table it reads. */
 
 function authorLabel(r) {
   const rec = nameFor('authors', (r.author || '').trim(), r.author_en);
@@ -676,8 +669,8 @@ function authorLabel(r) {
   // 入間人間's line reading "Iruma Ningen" while the name itself was right, and what stopped the
   // name-order choice reaching a line at all.
   if (LANG === 'en') {
-    const composedEarly = creditFromParts((r.author || '').trim());
-    if (composedEarly) return floorHtml(esc(composedEarly));
+    const composedEarly = composedCredit((r.author || '').trim());
+    if (composedEarly !== null) return floorHtml(esc(composedEarly));
     /* AND WHERE ONE NAME IN THE LINE IS UNKNOWN, THE REST STILL RENDER. The composition above is
        all-or-nothing on the argument that half a line composed and half romanised whole reads as
        neither, and that argument is about the FALLBACK it had: the analyser's phrase, one fixed
@@ -723,10 +716,16 @@ function authorLabel(r) {
 
   if (!e) {
     // A LATIN NAME THE STORE HAS NOTHING FOR IS STILL THE NAME, and the catalogue's full width is
-    // not part of it. `enFallback` folds it, inside `phraseOf`, and only where the phrase map added
-    // nothing, so a rendering somebody recorded is never overwritten by a fold.
-    const ph = phraseOf((r.author || '').trim());
-    return LANG === 'en' ? floorHtml(esc(ph)) : esc(ph);
+    // not part of it. `enFallback` folds it, at the end of `creditText`, and only where the phrase
+    // map added nothing, so a rendering somebody recorded is never overwritten by a fold.
+    const raw0 = (r.author || '').trim();
+    if (LANG !== 'en') return esc(phraseOf(raw0));
+    // ONE FALLBACK FOR A CREDIT FIELD AND NOT TWO. This called `enFallback`, which spells every
+    // Japanese run the same way, so `ぐう(作画)水無瀬(原作)` came back with 作画 spelled `Sakuga`
+    // beside the names it labels, while `creditText` on the same string glossed it. `creditText` is
+    // the credit renderer: it composes where the build divided the field, walks it where the
+    // division is incomplete, and glosses the roles either way.
+    return floorHtml(esc(phraseHeld(raw0) || creditText(raw0)));
   }
   if (LANG === 'en') {
     // A CREDIT LINE is roles and several people, and the phrase map renders those: the roles
@@ -744,11 +743,12 @@ function authorLabel(r) {
     // now answers with the floor where the map is silent, so the old test was true of every line
     // and would have taken a mechanical romanisation of the whole field over the record's own
     // rendering of the name in it.
-    const raw = (r.author || '').trim();
-    if (/[\/／,、･・]|原作|作画|漫画|構成|脚本|企画/.test(raw)) {
-      const ph = phraseHeld(raw);
-      if (ph) return esc(ph);
-    }
+    // THE PHRASE MAP NO LONGER ANSWERS FOR A CREDIT LINE, and this is where it used to. A phrase is
+    // one string written once by the analyser for the whole field, so it romanised the roles along
+    // with the names: `[著]中村明日美子` came back `[Cho]Nakamura Asumiko` and `カボちゃ(著)` came
+    // back `Kabocha(Cho)`, which names a job in a language nobody outside Japan reads. The analyser
+    // does not write phrases for credit fields any more (`pass4_analyser.credit_line_phrase`), and
+    // a field with a division reaches `composedCredit` above before it could get here.
     return enHtml(rec, 'byen', true);
   }
   // No 'both' branch any more. In 併記 this is called twice (once per line) so pairing the two
@@ -883,15 +883,25 @@ const PLAT_EN = {
    THE NAME BESIDE IT IS NOT TRANSLATED. Transliterating a mangaka is guessing; the role is a label
    and is the only part of the notation that belongs to us. */
 const ROLE_EN = {
-  '著': 'author', '著者': 'author', '作': 'story', '文': 'text', '画': 'art', '絵': 'art',
-  '原作': 'story', '作画': 'art', '漫画': 'art', 'コミック': 'art', 'ストーリー': 'story',
+  '著': 'author', '著者': 'author', '作': 'author', '文': 'text', '画': 'art', '絵': 'art',
+  // 漫画 IS THE JOB OF MAKING THE COMIC AND 作画 IS DRAWING IT, and the corpus states both on the
+  // same book: `[原作]王月よう / [漫画]アジイチ` names a writer and the person who made the manga of
+  // it, while `原作／宮澤伊織　作画／水野英多` names a writer and an artist working from somebody
+  // else's layout. Both read `art` until this line, so a field distinguishing two jobs came out
+  // naming one.
+  '原作': 'story', '作画': 'art', '漫画': 'manga', 'コミック': 'manga', 'ストーリー': 'story',
   '話': 'story',
-  'シナリオ': 'scenario', '脚本': 'script', '構成': 'composition', 'ネーム': 'layout',
+  // ネーム is the panel-by-panel draft a comic is drawn from, which English publishing calls the
+  // storyboard. It read `layout`, which is what a book designer does to a finished page.
+  'シナリオ': 'scenario', '脚本': 'script', '構成': 'composition', 'ネーム': 'storyboard',
   '原案': 'original concept', 'キャラクター原案': 'character design',
   'キャラクターデザイン': 'character design', 'キャラクターデザイン原案': 'character design',
   'イラスト': 'illustration', 'カバーイラスト': 'cover illustration', 'カバー': 'cover',
   '表紙': 'cover', 'デザイン': 'design', '企画': 'planning', '監修': 'supervision',
-  '原作監修': 'story supervision', '編': 'editor', '編集': 'editor', '編纂': 'compilation',
+  // A ROLE NAMES SOMEBODY, so both of these are the person and not the act. 編纂 read
+  // `compilation`, which is the book, and a byline reading `Name (compilation)` says the person is
+  // one.
+  '原作監修': 'story supervision', '編': 'editor', '編集': 'editor', '編纂': 'compiler',
   // The author of the work a comic is drawn from, as distinct from 原作, who wrote the story for
   // this comic. English publishing calls both the original work, and the distinction the Japanese
   // makes is between adapting a book and writing a script.
@@ -903,8 +913,28 @@ const ROLE_EN = {
   // `ほか著雪子` is an anthology naming one of its contributors: the role says both what the person
   // did and that there are more of them.
   'ほか著': 'author, with others', '他著': 'author, with others',
+  // `ほか` closes a credit that names some of its contributors and stops. It is glossed here rather
+  // than in a function of its own so that the word a byline shows and the word a credit page shows
+  // come out of one table; `andOthers` reads this entry.
+  'ほか': 'and others', '他': 'and others',
   'story': 'story', 'art': 'art', 'Story': 'story', 'Art': 'art',
 };
+
+/* THE ROLE THAT IS THE DEFAULT, AND WHAT IS LEFT OF IT ON A BYLINE.
+
+   The project owner's ruling: 著, 著者, 作 and no role at all are one concept, the unmarked author,
+   and a byline never states it. `[著]中村明日美子` is that person's book and `中村明日美子` is the
+   same fact written without the cataloguing, so a reader meeting `Nakamura Asumiko (author)` on one
+   row and `Nakamura Asumiko` on the next would be reading a distinction the catalogue never made.
+
+   IT STAYS ON A CREDIT PAGE, which is why this is a second reading of the table and not an entry
+   removed from it. That page lists a person's works with the job beside each, the job is the
+   payload, and eliding it leaves an empty cell. `roleWord` is what that page calls.
+
+   THE VALUE IS WHAT SURVIVES, not a flag. `ほか著雪子` is an anthology saying both that this person
+   wrote and that there are more of them; the author half elides and the `ほか` half is a thing the
+   field says that a reader is owed. */
+const ROLE_ELIDED = { '著': '', '著者': '', '作': '', 'ほか著': 'ほか', '他著': 'ほか' };
 
 /* One role as a reader reads it, compound and all. An atom with no gloss is left as the source
    wrote it, which is the fallback every name on this site takes; the invariant is what stops that
@@ -930,8 +960,81 @@ function roleWords(rs) {
   return (rs || []).map(roleWord).filter(Boolean).join(SEP);
 }
 
-/* `ほか` closes a credit that names some of its contributors and stops. */
-function andOthers() { return T('ほか', 'and others'); }
+/* THE SAME ROLE AS A BYLINE STATES IT: empty where the field stated the default.
+
+   ATOM BY ATOM, because a role is written as a compound as often as not and the default can be one
+   half of one. `roleWord` already splits `表紙 ・ 漫画` and glosses each side, and a compound
+   holding 著 has to lose that side and keep the other rather than falling through whole.
+
+   THE GLOSS IS STILL `roleWord`'s. What this decides is which atoms survive; how a surviving atom
+   is spelled in English is the one table's answer, so a role cannot read one way here and another
+   way on a credit page. */
+function bylineRole(r) {
+  const raw = String(r || '').trim();
+  if (!raw) return '';
+  const atoms = raw.split(/[・･/／\s　]+/).filter(Boolean);
+  const kept = atoms.map(a => (a in ROLE_ELIDED) ? ROLE_ELIDED[a] : a).filter(Boolean);
+  if (!kept.length) return '';
+  // The raw string where nothing elided, so a role the atom split does not account for is glossed
+  // exactly as `roleWord` glosses it and no rejoining happens behind its back.
+  if (kept.length === atoms.length && kept.every((k, i) => k === atoms[i])) return roleWord(raw);
+  return roleWord(kept.join('・'));
+}
+
+/* `ほか` closes a credit that names some of its contributors and stops. Read off the role table,
+   because a byline can also meet the word as a role the field stated (`ほか著`) and two producers
+   of one gloss is the shape §3 counts seven shipped bugs from. */
+function andOthers() { return roleWord('ほか'); }
+
+/* A CREDIT FIELD AS A BYLINE, COMPOSED FROM THE DIVISION: the people the build found, each with the
+   job the field gave them, and nothing the catalogue wrote around them.
+
+   WHY COMPOSED AND NOT RENDERED IN PLACE. `[著]中村明日美子`, `中村明日美子` and
+   `中村明日美子(著者)` are one fact written three ways, and rendering in place published the
+   cataloguing with it: a reader met `[author]Nakamura Asumiko` on the catalogue tab and
+   `Kabocha(Cho)` on the updates tab for the same shape. The brackets, the slashes and the colons
+   are MADB's notation for saying which part is the job, and once the job is stated in English
+   beside the name there is nothing left for them to say.
+
+   NULL WHERE THE BUILD SAYS ITS DIVISION IS INCOMPLETE, which is `part`, and null where the field
+   is a single name with no job. The first is the rule `creditText` already had, and it is the
+   reason composing is safe at all: a byline that has quietly lost a company is worse than one a
+   reader can see is in Japanese, so the incomplete ones keep the in-place walk. The second is not a
+   line to compose: one bare name is the store's own rendering of that name, and routing it through
+   here would take the mark and the markup off 2,300 rows that are right today.
+
+   ALL OF THEM OR NONE. A part `personShown` cannot render returns null and the whole composition
+   declines, which is the rule `creditFromParts` has always had: half a line composed and half
+   rendered some other way reads as neither. In Japanese `personShown` answers null for everything,
+   so this never composes there and the field the source wrote stands. */
+/* WHAT THE FIELD PUT BETWEEN TWO PEOPLE, as an English page writes it.
+
+   The build ships the field's own answer under `j`, from `names.credits.joiner`, because a row
+   composed with a slash sitting in a tab of comma-separated rows reads as a different kind of row.
+   The one substitution is the Japanese comma, which is Japanese typography and not a separator an
+   English reader has: `、` and `, ` say the same thing and only one of them belongs on this page. */
+function creditJoiner(div) {
+  const j = (div && div.j) || ', ';
+  return j === '、' ? ', ' : j;
+}
+
+function composedCredit(ja) {
+  const div = creditDiv(ja);
+  if (!div || div.part) return null;
+  const people = div.p.filter(x => x.n);
+  const etc = div.p.some(x => x.etc);
+  if (!people.length) return null;
+  if (people.length === 1 && !people[0].r && !etc) return null;
+  const out = [];
+  for (const p of people) {
+    const shown = personShown(p.n);
+    if (shown === null) return null;
+    const role = bylineRole(p.r);
+    out.push(role ? `${shown} (${role})` : shown);
+  }
+  if (etc) out.push(andOthers());
+  return out.join(creditJoiner(div));
+}
 
 /* THE FIELD AS THE STORE IS KEYED ON IT, character by character, with the way back.
 
@@ -1005,7 +1108,7 @@ function creditGapText(text) {
   // FOLDED TO THE WIDTH IT IS READ AT, like every other English rendering here. `enFallback` does
   // this for the strings it is given and this replaced it on the gaps, so `Ｓｙｏｕｓａ．` in a
   // bracket went back to full width and `full-width forms in English renderings` rose by three.
-  return String(text ?? '').normalize('NFKC').replace(JA_ANY_RUN, run => roleWord(run));
+  return String(text ?? '').normalize('NFKC').replace(JA_ANY_RUN, run => bylineRole(run));
 }
 
 /* A CREDIT FIELD WITH EVERY NAME AND EVERY ROLE IN IT RENDERED, IN PLACE.
@@ -1026,11 +1129,21 @@ function creditGapText(text) {
 function creditText(c) {
   const raw = String(c || '');
   if (LANG !== 'en' || !raw) return raw;
+  // COMPOSED WHERE THE DIVISION ACCOUNTS FOR THE FIELD, which is 3,381 of 3,381 fields today. The
+  // walk below is what a field the build could not fully divide still gets, and it is why the
+  // in-place rendering is kept rather than deleted.
+  const composed = composedCredit(raw);
+  if (composed !== null) return composed;
   const div = creditDiv(raw);
   // A FIELD NOBODY DIVIDED IS STILL A FIELD A READER MEETS. This handed the string back as the
   // catalogue wrote it, which is Japanese under an English heading whenever the splitter met a
   // shape it could not divide. The floor spells the whole field instead, marked.
-  if (!div) return enFallback(raw);
+  //
+  // AND THE ROLES IN IT ARE STILL ROLES. `enFallback` spells every Japanese run the same way, so a
+  // field the build never saw came back with `作画` spelled `Sakuga` beside the names. Each run goes
+  // through the role table first and only what is not a role reaches the floor, which is exactly
+  // what the gaps inside a divided field already get.
+  if (!div) return creditGapText(raw);
   const map = foldSpans(raw);
   const spans = [];
   const claim = (s, e, text) => { spans.push([s, e, text]); };
@@ -1074,7 +1187,10 @@ function creditText(c) {
   // name claimed its span above.
   for (const part of div.p) {
     if (!part.r) continue;
-    const en = roleWord(part.r);
+    // THE BYLINE FORM, so a field this walk is drawing states the same jobs the composed line
+    // states. `[著]` claimed the span and glossed it `author`, which is the role the owner's ruling
+    // says a byline never carries.
+    const en = bylineRole(part.r);
     if (en === part.r) continue;
     let from = 0;
     for (;;) {

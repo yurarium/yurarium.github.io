@@ -13,13 +13,8 @@
   },
   {
    "name": "a division cites its source",
-   "violations": 4,
-   "examples": [
-    "斉藤りょーパー: divided as 'サイトウリ ョー パー' with nothing saying who divided it",
-    "読み切り作品: divided as 'ヨミキリ サクヒン' with nothing saying who divided it",
-    "読切 散らないで菊: divided as 'ヨミキリ   チラナイデ キク' with nothing saying who divided it",
-    "読切 画家の肖像: divided as 'ヨミキリ   ガカ ノ ショウゾウ' with nothing saying who divided it"
-   ]
+   "violations": 0,
+   "examples": []
   },
   {
    "name": "a division names its donor in a field",
@@ -102,6 +97,11 @@
    "examples": []
   },
   {
+   "name": "a byline never states the default role",
+   "violations": 0,
+   "examples": []
+  },
+  {
    "name": "no name is spelled with question marks",
    "violations": 0,
    "examples": []
@@ -133,21 +133,13 @@
   },
   {
    "name": "archives are unchanged",
-   "violations": 1,
-   "examples": [
-    "2026-07.json"
-   ]
+   "violations": 0,
+   "examples": []
   },
   {
    "name": "deployed data matches built",
-   "violations": 6,
-   "examples": [
-    "series.json",
-    "run.json",
-    "status.json",
-    "feed/names.json",
-    "feed/current.json"
-   ]
+   "violations": 0,
+   "examples": []
   },
   {
    "name": "no refutation of print serials",
@@ -370,26 +362,32 @@
   {
    "name": "renderings resting on a mechanical romanisation",
    "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-   "budget": 872,
-   "value": 944
+   "budget": 912,
+   "value": 912
   },
   {
    "name": "credit fields the division does not account for",
    "means": "credit fields whose shipped division leaves part of the field unexplained, so the interface renders the string as the catalogue wrote it instead of rebuilding a byline that would have lost something. A rise means the splitter met a shape it cannot divide.",
    "budget": 0,
-   "value": 0
+   "value": 2
   },
   {
    "name": "full-width forms in English renderings",
    "means": "English renderings holding a full-width character and no kana or kanji, which is what narrowing the invariant to a script let past. Mostly a Latin pen name catalogued in full width; some are official titles and are correct, so this will not reach zero.",
    "budget": 7,
-   "value": 15
+   "value": 7
+  },
+  {
+   "name": "works shaped like prose",
+   "means": "works credited to an author beside an illustrator whose only source is a retailer's shelf, which is how an illustrated novel is billed and how a work nothing catalogues is admitted. DEFINITIONS §6 refuses prose and had no test. A rise is a work somebody should look at before it reaches readers with a work record.",
+   "budget": 0,
+   "value": 0
   },
   {
    "name": "works named by a truncation",
    "means": "distinct work titles in the shipped rows that end in three ASCII full stops, which is a listing running out of room rather than a title trailing off: a Japanese title that trails off uses …. Falls as the archived feeds holding them age out; a rise means a release writer has gone back to reading `work_title` off a record without resolving it against data/work-aliases.yaml.",
-   "budget": 2,
-   "value": 0
+   "budget": 0,
+   "value": 2
   },
   {
    "name": "interface tooltips a reader of Japanese cannot read",
@@ -412,8 +410,8 @@
   {
    "name": "credit phrases spelling a person otherwise",
    "means": "credit fields whose composed phrase spells one of the people in it differently from the name store, counted by asking the shipped division who the field names. It was 207 while a line of one person plus a role bracket was left exactly as the analyser first wrote it, so a reading sourced afterwards could not reach it. It was then 70 while a line was recomposed only where every person on it had a store record, which held back 60 lines on the strength of a name already in Latin that no store will ever hold. The residue is a field naming one person inside notation that states no job, which is the one shape the recomposition still refuses to touch.",
-   "budget": 5,
-   "value": 5
+   "budget": 3,
+   "value": 3
   },
   {
    "name": "bylines drawn in a spelling the field does not write",
@@ -437,7 +435,7 @@
    "name": "author names romanised as one word",
    "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
    "budget": 1153,
-   "value": 1154
+   "value": 1155
   },
   {
    "name": "divisions read back from a romanisation",
@@ -473,7 +471,7 @@
    "name": "author readings no source states",
    "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
    "budget": 399,
-   "value": 403
+   "value": 400
   },
   {
    "name": "credits the corpus files as a venue",
@@ -509,7 +507,7 @@
    "name": "credit fields an identifier does not cover",
    "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
    "budget": 23,
-   "value": 31
+   "value": 26
   },
   {
    "name": "credit pages listing a work that does not name them",
@@ -550,8 +548,8 @@
   {
    "name": "titles read by a machine, unmarked",
    "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-   "budget": 1473,
-   "value": 1475
+   "budget": 1470,
+   "value": 1470
   },
   {
    "name": "uncertain readings",
@@ -593,35 +591,31 @@
    "name": "incomplete attested rows",
    "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector — the adapter still returns rows, just emptier ones.",
    "budget": 33,
-   "value": 36
+   "value": 34
   },
   {
    "name": "facts with more than one home",
    "means": "a vocabulary, a shape or a rule typed into a second file",
    "budget": 12,
-   "value": null,
-   "not_measured": "source-quality budget; measured at check-in"
+   "value": 12
   },
   {
    "name": "impossibilities asserted without evidence",
    "means": "a comment saying something cannot happen, naming nothing that proves it",
    "budget": 0,
-   "value": null,
-   "not_measured": "source-quality budget; measured at check-in"
+   "value": 0
   },
   {
    "name": "stock phrasing in comments",
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
-   "budget": 893,
-   "value": null,
-   "not_measured": "source-quality budget; measured at check-in"
+   "budget": 892,
+   "value": 893
   },
   {
    "name": "invented markup in tests",
    "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
    "budget": 75,
-   "value": null,
-   "not_measured": "source-quality budget; measured at check-in"
+   "value": 75
   },
   {
    "name": "nicovideo works with no rights",
@@ -633,8 +627,7 @@
    "name": "modules without a test",
    "means": "Python modules no suite covers. Offline tests are the enforcement for factoring as well: a module that cannot be tested without a network has not separated its logic from its I/O, so this number falling is the refactoring, not a proxy for it.",
    "budget": 0,
-   "value": null,
-   "not_measured": "source-quality budget; measured at check-in"
+   "value": 0
   },
   {
    "name": "adapters fetching without net.py",
@@ -688,34 +681,31 @@
    "name": "three as an organising shape",
    "means": "lists of exactly three items, and runs of three bold-led paragraphs, in documents that ship at 1.0. Three reads as rhetoric; four reads as an inventory. When there really are three things, write them as prose or find the fourth that was left out to make the shape work.",
    "budget": 27,
-   "value": null,
-   "not_measured": "source-quality budget; measured at check-in"
+   "value": 27
   },
   {
    "name": "scraped counters in chapter names",
    "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
    "budget": 0,
-   "value": null,
-   "not_measured": "source-quality budget; measured at check-in"
+   "value": 0
   },
   {
    "name": "shadowed names in build.py",
    "means": "names rebound more than 300 lines from their first binding. Two shipped bugs came from this; see adapters/lint/shadowing.py for why the count is not simply falling.",
    "budget": 40,
-   "value": null,
-   "not_measured": "source-quality budget; measured at check-in"
+   "value": 40
   },
   {
    "name": "updates naming a work we do not hold",
    "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-   "budget": 33,
-   "value": 20
+   "budget": 20,
+   "value": 33
   },
   {
    "name": "works whose first publication country is unattested",
    "means": "works whose `first_publication.country` is empty, which is DEFINITIONS §6's inclusion test not having run. It read 0 until now because build.py wrote the literal \"JP\" on every record, so the field asserted the answer and no check on it could fail. Every source here catalogues the Japanese EDITION and none states where the work first appeared, so this falls one work at a time as a serialisation venue is read off a publisher's page and recorded in data/scope.yaml. A rise means the corpus grew, which is expected, and the number to watch is the share rather than the count.",
-   "budget": 2562,
-   "value": 2562
+   "budget": 2551,
+   "value": 2551
   },
   {
    "name": "scope questions left open",
@@ -749,128 +739,138 @@
   }
  ],
  "seconds": {
-  "no cataloguing notation in an English rendering": 4.576,
-  "every name is defined where it is used": 4.091,
-  "no record comes from a host that is not a source": 3.975,
-  "unreadable bookwalker rows": 3.877,
-  "content flags are accounted for": 2.685,
-  "English mode has no Japanese": 2.297,
-  "no name is spelled with question marks": 2.178,
-  "renderings resting on a mechanical romanisation": 2.163,
-  "full-width forms in English renderings": 2.106,
-  "the pipeline runs from a clean checkout": 1.945,
-  "no ruby over bare Latin": 1.635,
-  "credit fields an identifier does not cover": 1.24,
-  "the store has one writer": 1.205,
-  "interpunct credits nobody has ruled on": 0.745,
-  "curated values reach the store": 0.619,
-  "every credit role has an English gloss": 0.575,
-  "publisher keys the interface misses": 0.44,
-  "bylines drawn in a spelling the field does not write": 0.439,
-  "every renderer is ruled": 0.338,
-  "divisions resting on a community database": 0.288,
-  "every Japanese field the data carries has a ruling": 0.273,
-  "no build-machine paths in published files": 0.267,
-  "a division names its donor in a field": 0.255,
-  "a division cites its source": 0.254,
-  "a fixture states where it came from": 0.237,
-  "scope rulings are accounted for": 0.203,
-  "the interface folds a name key as the build does": 0.184,
-  "a fact is reached through its entry point": 0.147,
-  "imprint names the interface disagrees with": 0.145,
-  "names reach a page only through their renderer": 0.136,
-  "a name reaches both lines of a bilingual row": 0.127,
-  "no stock phrasing in public text": 0.104,
-  "a stated reading names where it came from": 0.102,
-  "a name is answered by one module": 0.091,
-  "works whose first publication country is unattested": 0.074,
-  "titles with no translation of our own": 0.07,
-  "ruby spells the reading": 0.048,
-  "captures with no floor": 0.032,
-  "a reading can show its source": 0.029,
-  "one work under two names in a list": 0.02,
-  "one work named two ways across its rows": 0.019,
-  "labels with nothing to quote": 0.017,
-  "implausible ruby spans": 0.016,
-  "publishers with no English": 0.016,
-  "rows with a moving address": 0.015,
-  "adapters fetching without net.py": 0.014,
-  "kana left in a romanisation": 0.013,
-  "readings are stored as kana": 0.012,
-  "ruby covers its surface": 0.012,
-  "updates naming a work we do not hold": 0.011,
-  "works offered twice in a list": 0.01,
-  "a kana name's reading spells it": 0.01,
-  "ruby asserting a reading per character": 0.01,
-  "citations withheld from readers": 0.009,
-  "renderings with nothing to show": 0.008,
-  "credit phrases spelling a person otherwise": 0.008,
-  "credits the corpus files as a venue": 0.008,
-  "credits that restate a name": 0.007,
-  "a work shows the English its record holds": 0.007,
-  "titles carrying cataloguing punctuation": 0.006,
-  "the tracker states what it claims": 0.006,
-  "publisher pages listing a work from another house": 0.006,
-  "credits sharing a reading nobody has ruled on": 0.006,
-  "bookwalker series unread": 0.005,
-  "shelf admissions a reader cannot follow": 0.005,
-  "no refutation of print serials": 0.005,
-  "credit pages listing a work that does not name them": 0.005,
-  "deployed data matches built": 0.005,
-  "an imprint field repeating its publisher": 0.004,
-  "no source a reader sees is an adapter": 0.004,
-  "a delivery date never stands beside a printing": 0.004,
-  "titles read past their own gloss": 0.003,
-  "a stated printing precedes the delivery": 0.003,
+  "content flags are accounted for": 7.63,
+  "every name is defined where it is used": 4.922,
+  "no ruby over bare Latin": 4.651,
+  "no cataloguing notation in an English rendering": 3.591,
+  "a byline never states the default role": 2.3,
+  "facts with more than one home": 2.105,
+  "three as an organising shape": 1.978,
+  "the pipeline runs from a clean checkout": 1.812,
+  "renderings resting on a mechanical romanisation": 1.756,
+  "full-width forms in English renderings": 1.676,
+  "no name is spelled with question marks": 1.625,
+  "English mode has no Japanese": 1.555,
+  "a stated reading names where it came from": 1.549,
+  "modules without a test": 1.292,
+  "scope rulings are accounted for": 1.089,
+  "the store has one writer": 0.897,
+  "credit fields an identifier does not cover": 0.774,
+  "no record comes from a host that is not a source": 0.655,
+  "interpunct credits nobody has ruled on": 0.552,
+  "every credit role has an English gloss": 0.492,
+  "bylines drawn in a spelling the field does not write": 0.417,
+  "publisher keys the interface misses": 0.373,
+  "impossibilities asserted without evidence": 0.288,
+  "every renderer is ruled": 0.264,
+  "invented markup in tests": 0.263,
+  "divisions resting on a community database": 0.259,
+  "a division names its donor in a field": 0.237,
+  "a division cites its source": 0.236,
+  "every Japanese field the data carries has a ruling": 0.222,
+  "the interface folds a name key as the build does": 0.208,
+  "imprint names the interface disagrees with": 0.194,
+  "no build-machine paths in published files": 0.176,
+  "shadowed names in build.py": 0.163,
+  "a fact is reached through its entry point": 0.112,
+  "no stock phrasing in public text": 0.094,
+  "status.html shows no Japanese of its own": 0.093,
+  "names reach a page only through their renderer": 0.092,
+  "a name reaches both lines of a bilingual row": 0.09,
+  "a name is answered by one module": 0.076,
+  "titles with no translation of our own": 0.054,
+  "unreadable bookwalker rows": 0.053,
+  "works whose first publication country is unattested": 0.051,
+  "ruby spells the reading": 0.036,
+  "stock phrasing in comments": 0.036,
+  "captures with no floor": 0.021,
+  "a reading can show its source": 0.02,
+  "curated values reach the store": 0.018,
+  "one work named two ways across its rows": 0.015,
+  "one work under two names in a list": 0.014,
+  "labels with nothing to quote": 0.013,
+  "publishers with no English": 0.012,
+  "updates naming a work we do not hold": 0.012,
+  "rows with a moving address": 0.012,
+  "adapters fetching without net.py": 0.012,
+  "kana left in a romanisation": 0.011,
+  "a work shows the English its record holds": 0.01,
+  "implausible ruby spans": 0.01,
+  "ruby covers its surface": 0.009,
+  "shelf admissions a reader cannot follow": 0.008,
+  "readings are stored as kana": 0.008,
+  "citations withheld from readers": 0.007,
+  "ruby asserting a reading per character": 0.007,
+  "no source a reader sees is an adapter": 0.007,
+  "renderings with nothing to show": 0.007,
+  "works offered twice in a list": 0.007,
+  "an imprint field repeating its publisher": 0.006,
+  "a kana name's reading spells it": 0.005,
+  "credits that restate a name": 0.005,
+  "titles carrying cataloguing punctuation": 0.005,
+  "scraped counters in chapter names": 0.005,
+  "deployed data matches built": 0.004,
+  "credits sharing a reading nobody has ruled on": 0.004,
+  "credits the corpus files as a venue": 0.004,
+  "publisher pages listing a work from another house": 0.004,
+  "credit phrases spelling a person otherwise": 0.004,
+  "state agrees with its own date": 0.004,
+  "credit pages listing a work that does not name them": 0.004,
+  "a delivery date never stands beside a printing": 0.003,
+  "the tracker states what it claims": 0.003,
   "series names holding a page title": 0.003,
-  "listing series with no feed of their own": 0.003,
-  "credit fields the division does not account for": 0.003,
-  "the interface is the derivation of its source": 0.003,
-  "first date precedes its editions": 0.003,
-  "imprint strings that reach no line": 0.003,
-  "dates within a row are ordered": 0.002,
+  "no HTML entity in a stored name": 0.003,
+  "volumes with an isbn and no date": 0.003,
   "an imprint spelling belongs to its own publisher": 0.002,
-  "credits matching a chapter": 0.002,
-  "one page cited for two claims": 0.002,
-  "no HTML entity in a stored name": 0.002,
-  "interface tooltips a reader of Japanese cannot read": 0.002,
+  "listing series with no feed of their own": 0.002,
+  "titles read past their own gloss": 0.002,
+  "works shaped like prose": 0.002,
+  "undated works say where and why": 0.002,
   "undated cmoa candidates": 0.002,
-  "a person is spelled one way": 0.002,
-  "bookwalker listings unconfirmed": 0.002,
-  "every credit identifier resolves": 0.002,
-  "one row per identifier": 0.002,
-  "volumes with an isbn and no date": 0.002,
-  "state agrees with its own date": 0.002,
-  "divisions read back from a romanisation": 0.001,
-  "a shipped identifier resolves": 0.001,
-  "credits carrying their own cataloguing": 0.001,
-  "credit identifiers naming nobody": 0.001,
-  "works without English": 0.001,
-  "kana names with no stated division": 0.001,
-  "works showing a romanisation": 0.001,
-  "works named by a truncation": 0.001,
-  "a rendered file names a platform its targets hold": 0.001,
-  "a publisher is a name, not a role": 0.001,
-  "undated works say where and why": 0.001,
+  "dates within a row are ordered": 0.002,
+  "bookwalker series unread": 0.002,
+  "no refutation of print serials": 0.002,
+  "first date precedes its editions": 0.002,
+  "divisions read back from a romanisation": 0.002,
+  "credits matching a chapter": 0.002,
   "titles read by a machine, unmarked": 0.001,
+  "interface tooltips a reader of Japanese cannot read": 0.001,
+  "a person is spelled one way": 0.001,
+  "uncertain readings": 0.001,
+  "imprint strings that reach no line": 0.001,
+  "one row per identifier": 0.001,
+  "the interface is the derivation of its source": 0.001,
   "author names romanised as one word": 0.001,
+  "a publisher is a name, not a role": 0.001,
+  "every credit identifier resolves": 0.001,
+  "one page cited for two claims": 0.001,
+  "a rendered file names a platform its targets hold": 0.001,
+  "works without English": 0.001,
+  "credit identifiers naming nobody": 0.001,
+  "a shipped identifier resolves": 0.001,
+  "credit fields the division does not account for": 0.001,
+  "works named by a truncation": 0.001,
   "titles shorter than their own reading": 0.001,
-  "incomplete attested rows": 0.001,
+  "credits carrying their own cataloguing": 0.001,
+  "bookwalker listings unconfirmed": 0.001,
+  "per-book dates cite their page": 0.001,
+  "works showing a romanisation": 0.001,
+  "kana names with no stated division": 0.001,
   "names rendered two ways": 0.001,
-  "archives are unchanged": 0.0,
-  "author readings no source states": 0.0,
-  "per-book dates cite their page": 0.0,
-  "status.html shows no Japanese of its own": 0.0,
   "nicovideo works with no rights": 0.0,
-  "uncertain readings": 0.0,
+  "incomplete attested rows": 0.0,
+  "a fixture states where it came from": 0.0,
+  "archives are unchanged": 0.0,
   "nicovideo channels agree with our own records": 0.0,
+  "author readings no source states": 0.0,
   "feed holds only attested rows": 0.0,
-  "targets a capture wrote no row for": 0.0,
   "scope questions left open": 0.0,
+  "a stated printing precedes the delivery": 0.0,
+  "targets a capture wrote no row for": 0.0,
+  "interface reads outside an entry point": 0.0,
   "publisher readings nobody has settled": 0.0,
   "every update has a kind": 0.0,
-  "a record without a publisher says why": 0.0,
-  "interface reads outside an entry point": 0.0
+  "a record without a publisher says why": 0.0
  },
  "note": "Invariants are statements that are either true or the data is broken. At runtime a violation degrades to the fallback named in check.py and is counted here; at check-in the same violation blocks. Budgets are counts with no correct value, only a direction: they tighten automatically and loosen only by hand."
 }

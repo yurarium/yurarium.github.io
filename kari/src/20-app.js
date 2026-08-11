@@ -1733,6 +1733,18 @@ function linkedCredits(r, shown) {
   // credit in that case, and the store is keyed on exactly that string.
   const all = creditPeople(raw) || [raw];
   const parts = (shown > 0 && shown < all.length) ? all.slice(0, shown) : all;
+  /* COMPOSED ON AN ENGLISH PAGE, IN PLACE ON A JAPANESE ONE, and `creditText` splits the same way
+     for the same reason. The catalogue's brackets and slashes say which part of the field is the
+     job; once the job is stated in English beside the name they say nothing, and leaving them
+     standing published `[author]Zaō Taishi / [story]Eiki Eiki`. A Japanese reader is owed the field
+     the source wrote, so nothing is rebuilt there.
+
+     NOT WHERE THE BUILD SAYS ITS DIVISION IS INCOMPLETE. `part` means the field says something the
+     division did not account for, and composing then would drop it silently. */
+  const div = creditDiv(raw);
+  const composing = LANG === 'en' && div && !div.part;
+  const roleOf = new Map((div ? div.p : []).filter(x => x.n).map(x => [x.n, x.r]));
+  const pieces = [];
   /* LOCATED BY THE FOLD AND DRAWN AS THE FIELD WRITES IT, which are two different strings and were
      one value doing both jobs.
 
@@ -1781,7 +1793,13 @@ function linkedCredits(r, shown) {
     const sep = placed ? creditGap(gap) : null;
     const between = sep === null
       ? floorHtml(esc(LANG === 'en' ? creditGapText(gap) : gap)) : sep;
-    out += between + creditChip(span, rec);
+    const chip = creditChip(span, rec);
+    if (composing) {
+      const role = bylineRole(roleOf.get(nm));
+      pieces.push(role ? `${chip} (${esc(role)})` : chip);
+    } else {
+      out += between + chip;
+    }
     at = hit[1];
     placed += 1;
   }
@@ -1794,7 +1812,13 @@ function linkedCredits(r, shown) {
   // after the count it was given, so the tail holds the other ten people and printing it would
   // undo the shortening.
   const tail = parts === all ? floorHtml(esc(LANG === 'en' ? creditGapText(rest) : rest)) : '';
-  if (linked && placed === parts.length) return out + tail;
+  if (linked && placed === parts.length) {
+    if (!composing) return out + tail;
+    // `ほか` SURVIVES THE COMPOSITION, because it is the field saying the people it names are some
+    // of them, which is a fact about the book rather than notation around a name.
+    if (parts === all && div.p.some(x => x.etc)) pieces.push(esc(andOthers()));
+    return pieces.join(creditJoiner(div));
+  }
   // A SHORTENED WALK THAT FAILED HAS NOTHING TO OFFER, and `authorLabel` is the wrong answer for
   // it: that renders the WHOLE field, and the caller would print "and 9 others" under a line
   // already naming all fourteen. Null says so and the caller draws the byline in full.
