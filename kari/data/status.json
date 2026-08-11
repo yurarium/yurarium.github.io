@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-11T14:40:39+00:00",
+ "generated": "2026-08-11T15:55:43+00:00",
  "since_last": {
-  "at": "2026-08-11T14:37:42+00:00",
+  "at": "2026-08-11T15:50:00+00:00",
   "statistics": {}
  },
  "means": {
@@ -26,7 +26,7 @@
   "releases": 1257,
   "works": 2551,
   "platforms": 23,
-  "series_rows": 3042,
+  "series_rows": 3001,
   "identification": {
    "discovery-candidate": 911,
    "platform-genre": 346
@@ -39,7 +39,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 54,
+  "invariants_passing": 55,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -248,10 +248,8 @@
    },
    {
     "name": "a fact is reached through its entry point",
-    "violations": 1,
-    "examples": [
-     "build.py:361 reaches facts.credit.nobody"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "a name is answered by one module",
@@ -390,7 +388,7 @@
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
     "budget": 580,
-    "value": 580
+    "value": 586
    },
    {
     "name": "credit fields the division does not account for",
@@ -563,8 +561,8 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 196,
-    "value": 196
+    "budget": 195,
+    "value": 195
    },
    {
     "name": "implausible ruby spans",
@@ -576,7 +574,7 @@
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
     "budget": 1470,
-    "value": 1470
+    "value": 1477
    },
    {
     "name": "uncertain readings",
@@ -587,14 +585,14 @@
    {
     "name": "works without English",
     "means": "works that render in Japanese in English-only mode. Should be 0; a rise means the automatic naming pass stopped covering something it used to.",
-    "budget": 104,
-    "value": 104
+    "budget": 96,
+    "value": 96
    },
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 153,
-    "value": 153
+    "budget": 145,
+    "value": 145
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -611,8 +609,8 @@
    {
     "name": "one work under two names in a list",
     "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
-    "budget": 14,
-    "value": 14
+    "budget": 3,
+    "value": 3
    },
    {
     "name": "incomplete attested rows",
@@ -725,8 +723,8 @@
    {
     "name": "rows with a moving address",
     "means": "rows anchored on a chapter address whose identifier holds no work-level address on the same host. A chapter address moves when the work publishes, so a rise means a work has arrived whose address nobody has read yet and which would be minted a second identifier the next time it updates. Run adapters/gigaviewer/workaddress.py and apply what it writes with identity.py --attachments.",
-    "budget": 4,
-    "value": 4
+    "budget": 3,
+    "value": 3
    },
    {
     "name": "listing series with no feed of their own",
@@ -928,7 +926,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-11T14:37:41+00:00",
+  "previous_at": "2026-08-11T15:49:59+00:00",
   "drops": []
  },
  "outstanding": [
@@ -941,7 +939,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 110,
+   "count": 102,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "2332",
@@ -957,9 +955,7 @@
     "CPL",
     "Crossline",
     "Crushing On You",
-    "Curiosity Killed the Cat",
     "DRAGON KNIGHT",
-    "Day In, Day Out",
     "Devil'sLover",
     "Die Sekundenzeiger Tickt",
     "Distortion",
@@ -967,7 +963,6 @@
     "Epicurean",
     "Flower fizz",
     "Frag",
-    "Free soul",
     "GARROTE",
     "GIRL FRIENDS",
     "GIRLS IN THE DARK",
@@ -979,7 +974,6 @@
     "HONEY CRUSH",
     "Happy Storm Birthday!",
     "HimetoOjisama",
-    "Honey Latte Girl",
     "I love my friend",
     "I'm sorry I know",
     "Koishi is desperate series.",
@@ -1005,9 +999,7 @@
     "REFACTORS",
     "RipperLipper",
     "Roaming",
-    "Room for Honeys",
     "Rouge　caprice",
-    "SIS",
     "SUNDAY. 1:00PM",
     "She \"Falls\" in Love",
     "Smile0",
@@ -1019,8 +1011,6 @@
     "Students and Teachers",
     "Sweet Little Devil",
     "TOUKO Swing-by!",
-    "That Room",
-    "The Day Tomorrow Comes",
     "Urge",
     "Valentine with…",
     "Vespa",
@@ -1114,15 +1104,15 @@
     "nicovideo works with no rights": 60,
     "one page cited for two claims": 11,
     "one work named two ways across its rows": 0,
-    "one work under two names in a list": 14,
+    "one work under two names in a list": 3,
     "publisher keys the interface misses": 0,
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 21,
     "publishers with no English": 0,
     "renderings resting on a mechanical romanisation": 580,
     "renderings with nothing to show": 24,
-    "rows with a moving address": 4,
-    "ruby asserting a reading per character": 196,
+    "rows with a moving address": 3,
+    "ruby asserting a reading per character": 195,
     "scope questions left open": 2,
     "scraped counters in chapter names": 0,
     "series names holding a page title": 4,
@@ -1141,16 +1131,16 @@
     "works named by a truncation": 0,
     "works offered twice in a list": 0,
     "works shaped like prose": 0,
-    "works showing a romanisation": 153,
+    "works showing a romanisation": 145,
     "works whose first publication country is unattested": 2551,
-    "works without English": 104
+    "works without English": 96
    }
   }
  ],
  "statistics": {
-  "works": 3042,
+  "works": 3001,
   "states": {
-   "print": 1693,
+   "print": 1652,
    "oneshot": 431,
    "unknown": 295,
    "completed": 265,
@@ -1159,17 +1149,17 @@
    "slow": 56
   },
   "english_basis": {
-   "translated": 2625,
-   "official-jp": 152,
-   "licensed": 112,
-   "none": 104,
+   "translated": 2616,
+   "official-jp": 132,
+   "licensed": 108,
+   "none": 96,
    "romaji": 49
   },
-  "print_works": 2471,
-  "print_only": 1693,
+  "print_works": 2441,
+  "print_only": 1652,
   "volumes": 6153,
-  "with_identifier": 3034,
+  "with_identifier": 3001,
   "chapters": 26740,
-  "delivery_dated": 1063
+  "delivery_dated": 1037
  }
 }
