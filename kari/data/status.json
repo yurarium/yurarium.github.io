@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-11T12:17:18+00:00",
+ "generated": "2026-08-11T12:29:11+00:00",
  "since_last": {
-  "at": "2026-08-11T10:57:47+00:00",
+  "at": "2026-08-11T12:17:18+00:00",
   "statistics": {}
  },
  "means": {
@@ -387,8 +387,8 @@
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 513,
-    "value": 513
+    "budget": 515,
+    "value": 515
    },
    {
     "name": "credit fields the division does not account for",
@@ -531,8 +531,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 26,
-    "value": 26
+    "budget": 32,
+    "value": 32
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -615,8 +615,8 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector — the adapter still returns rows, just emptier ones.",
-    "budget": 34,
-    "value": 34
+    "budget": 46,
+    "value": 46
    },
    {
     "name": "facts with more than one home",
@@ -699,8 +699,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 33,
-    "value": 33
+    "budget": 36,
+    "value": 36
    },
    {
     "name": "works whose first publication country is unattested",
@@ -926,7 +926,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-11T10:57:46+00:00",
+  "previous_at": "2026-08-11T12:17:17+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1081,7 +1081,7 @@
     "bylines drawn in a spelling the field does not write": 23,
     "captures with no floor": 10,
     "citations withheld from readers": 36,
-    "credit fields an identifier does not cover": 26,
+    "credit fields an identifier does not cover": 32,
     "credit fields the division does not account for": 2,
     "credit identifiers naming nobody": 14,
     "credit pages listing a work that does not name them": 8,
@@ -1099,7 +1099,7 @@
     "impossibilities asserted without evidence": 0,
     "imprint names the interface disagrees with": 0,
     "imprint strings that reach no line": 18,
-    "incomplete attested rows": 34,
+    "incomplete attested rows": 46,
     "interface reads outside an entry point": 12,
     "interface tooltips a reader of Japanese cannot read": 34,
     "interpunct credits nobody has ruled on": 0,
@@ -1117,7 +1117,7 @@
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 21,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 513,
+    "renderings resting on a mechanical romanisation": 515,
     "renderings with nothing to show": 24,
     "rows with a moving address": 4,
     "ruby asserting a reading per character": 196,
@@ -1134,7 +1134,7 @@
     "uncertain readings": 53,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
-    "updates naming a work we do not hold": 33,
+    "updates naming a work we do not hold": 36,
     "volumes with an isbn and no date": 0,
     "works named by a truncation": 2,
     "works offered twice in a list": 0,
