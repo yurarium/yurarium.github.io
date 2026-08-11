@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-11T17:08:01+00:00",
+ "generated": "2026-08-11T18:24:56+00:00",
  "since_last": {
-  "at": "2026-08-11T17:02:28+00:00",
+  "at": "2026-08-11T17:28:51+00:00",
   "statistics": {}
  },
  "means": {
@@ -607,6 +607,12 @@
     "value": 0
    },
    {
+    "name": "published dates that moved in an archive",
+    "means": "a rebuild rewrote the publication date of a row a published month already carried; a name improving is the system working and a date changing is not, so each wants a reason",
+    "budget": 0,
+    "value": 0
+   },
+   {
     "name": "one work under two names in a list",
     "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
     "budget": 3,
@@ -926,7 +932,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-11T17:02:26+00:00",
+  "previous_at": "2026-08-11T17:28:50+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1133,7 +1139,8 @@
     "works shaped like prose": 0,
     "works showing a romanisation": 145,
     "works whose first publication country is unattested": 2551,
-    "works without English": 96
+    "works without English": 96,
+    "published dates that moved in an archive": 0
    }
   }
  ],
