@@ -2726,7 +2726,12 @@ const EN = {
   '無料':'Free', '有料':'Paid', '無料（条件付）':'Free (paced)', '全話無料':'All free',
   '読み切り':'One-shot', '試し読み':'Preview', '番外編':'Extra', 'お知らせ':'Notice',
   'お詫び':'Apology', '再掲':'Reprint', '未分類':'Unclassified', '転載':'Syndicated',
-  '公開予定':'Announced', '既出':'Seen',
+  // `既出` IS ABOUT PUBLICATION AND NOT ABOUT SIGHTING. It read `Seen`, and the date beside it is
+  // `pub`, so a chapter published on 17 June and found today announced itself as `Seen 06-17`:
+  // the one thing that cannot be true of a row appearing in the feed for the first time. The
+  // tooltip beside it has always said "published 2026-06-17; we only learned of it on…", so the
+  // badge was contradicting its own explanation.
+  '公開予定':'Announced', '既出':'Published',
   '作者未分離':'Author not split', '有料先行':'Paid early', '先行':'Early',
 
   /* words inside running text: lower case */
