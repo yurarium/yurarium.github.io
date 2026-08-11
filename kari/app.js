@@ -32,8 +32,13 @@ document.querySelectorAll('.themebtn[data-theme-set]').forEach(b =>
 // stays out of RESETS and out of the chip row.
 const VIEW_FIELDS = ['fmodel', 'ftype', 'fview', 'fplat', 'sort', 'filter',
                      'sstate', 'sfree', 'splat', 'ssort', 'spage', 'fvis', 'svis', 'rvis'];
+// WHICH TAB IS OPEN IS NOT A PREFERENCE. It is where the reader is, and this file is for how they
+// like things: a filter, a sort, how much of a list to draw. The tab already has a home that suits
+// it, `?tab=` on the address, carried through `navState` and history, so a link to a tab is a link
+// and Back leaves it. Stored here as well it outlived the visit that set it, and a reader who
+// looked at Works once opened the site on Works from then on with nothing on the page saying why.
 function saveView() {
-  const v = { tab: document.querySelector('nav button[aria-selected=true]')?.dataset.tab };
+  const v = {};
   VIEW_FIELDS.forEach(id => { const e = el(id); if (e) v[id] = e.value; });
   prefSet(PREF_VIEW, v);
 }
@@ -44,7 +49,8 @@ function restoreView() {
     const e = el(id);
     if (e && v[id] != null && [...e.options].some(o => o.value === v[id])) e.value = v[id];
   });
-  if (v.tab) document.querySelector(`nav button[data-tab="${v.tab}"]`)?.click();
+  // A `tab` left by an older build is ignored rather than acted on, so a reader carrying one in
+  // storage is not held on that tab forever by a version that has stopped writing it.
   // The three visibility selects hold one value between them, and this sets element values
   // directly rather than going through the change handler that keeps them in step.
   if (typeof syncVis === 'function') syncVis();
@@ -2984,7 +2990,13 @@ function renderWorkPage() {
      `Next chapter: 2026-08-16` and then `GANGAN ONLINE` directly under the single row that had just
      named GANGAN ONLINE. */
   const nx = (r.stated_next || {}).next_update || '';
-  const nextWho = (r.sources || []).length > 1
+  // ASKED OF THE SAME RECORD `nx` CAME FROM. The line above tolerates a work that states no next
+  // update, `(r.stated_next || {})`, and this one read `r.stated_next.platform` behind a test of
+  // how many sources the work has, which is a different question. So every work with more than one
+  // source and no stated next update threw here, and the work page for 227 of them rendered its
+  // header and footer and nothing else. `nextWho` is only ever used where `nx` is set, so that is
+  // what it waits on.
+  const nextWho = nx && (r.sources || []).length > 1
     ? `<span class="wf-sub">${esc(platName(r.stated_next.platform))}</span>` : '';
   const nextLine = nx && nx > String(r.latest || '') && nx >= todayISO()
     ? `<p class="wp-next">${esc(T('次回更新：', 'Next chapter: '))}${

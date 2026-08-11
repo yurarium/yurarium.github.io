@@ -1455,7 +1455,13 @@ function renderWorkPage() {
      `Next chapter: 2026-08-16` and then `GANGAN ONLINE` directly under the single row that had just
      named GANGAN ONLINE. */
   const nx = (r.stated_next || {}).next_update || '';
-  const nextWho = (r.sources || []).length > 1
+  // ASKED OF THE SAME RECORD `nx` CAME FROM. The line above tolerates a work that states no next
+  // update, `(r.stated_next || {})`, and this one read `r.stated_next.platform` behind a test of
+  // how many sources the work has, which is a different question. So every work with more than one
+  // source and no stated next update threw here, and the work page for 227 of them rendered its
+  // header and footer and nothing else. `nextWho` is only ever used where `nx` is set, so that is
+  // what it waits on.
+  const nextWho = nx && (r.sources || []).length > 1
     ? `<span class="wf-sub">${esc(platName(r.stated_next.platform))}</span>` : '';
   const nextLine = nx && nx > String(r.latest || '') && nx >= todayISO()
     ? `<p class="wp-next">${esc(T('次回更新：', 'Next chapter: '))}${
