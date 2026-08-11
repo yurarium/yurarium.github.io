@@ -1,6 +1,6 @@
 {
  "generated": "2026-08-11",
- "releases": 1261,
+ "releases": 1257,
  "platforms": 23,
  "works": 2551,
  "series_rows": 3042,
@@ -99,7 +99,7 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1176,
-   "rows": 7575,
+   "rows": 7577,
    "retrieved": "2026-08-11",
    "age_days": 0,
    "in_scope": true,
@@ -137,14 +137,14 @@
   }
  ],
  "claims": {
-  "total": 432,
+  "total": 431,
   "by_disposition": {
-   "absorbed": 349,
-   "unsettleable": 37,
+   "absorbed": 344,
+   "open": 15,
+   "unsettleable": 38,
    "phantom": 1,
    "print-serialised": 26,
    "undatable": 5,
-   "open": 12,
    "scheduled": 2
   },
   "trace": [
@@ -536,8 +536,13 @@
     "url": "https://manga.nicovideo.jp/comic/22768",
     "claimed": "2026-07-28",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "現実世界でも幸せにしてくださいね?",
@@ -735,9 +740,14 @@
     "platform": "ニコニコ漫画",
     "url": "https://manga.nicovideo.jp/comic/53991",
     "claimed": "2026-07-28",
-    "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "source": "webcomics.jp+yurinavi",
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "たゆたう恋の散り際に",
@@ -1895,8 +1905,13 @@
     "url": "https://manga.nicovideo.jp/comic/77731",
     "claimed": "2026-07-14",
     "source": "webcomics.jp",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "open",
+    "why": "we hold no chapter history for this work on this platform",
+    "chapters_held": 0,
+    "also_attested_elsewhere": true,
+    "traceable": true,
+    "last_looked": null,
+    "blocked": null
    },
    {
     "work": "画家の肖像",
@@ -3494,15 +3509,6 @@
     "why": "the platform attests this work on this date"
    },
    {
-    "work": "ばっどがーる",
-    "platform": "きららベース",
-    "url": null,
-    "claimed": "2026-07-28",
-    "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
-   },
-   {
     "work": "月はタピオカみたいに",
     "platform": "カドコミ",
     "url": null,
@@ -4069,8 +4075,9 @@
     "url": null,
     "claimed": "2026-07-14",
     "source": "yurinavi",
-    "disposition": "absorbed",
-    "why": "the platform attests this work on this date"
+    "disposition": "unsettleable",
+    "why": "no URL reported, and this platform carries works published elsewhere without an index we can enumerate, so there is no page to address",
+    "chapters_held": 0
    },
    {
     "work": "#ギャルとギャルの百合",
@@ -4653,9 +4660,9 @@
   }
  },
  "delivery_dated": {
-  "rows": 1059,
+  "rows": 1063,
   "followup": {
-   "unclassified": 1040,
+   "unclassified": 1044,
    "no-earlier-record-expected": 19
   },
   "means": "The day the shop began delivering this file, which is the earliest 配信開始日 across the volumes it holds. The shop states no print edition and no ISBN for this work, so no paper record is reachable and no catalogue can be asked. This dates the delivery and claims nothing about an earlier edition, which for a self-published work may never have had a recorded date at all.",
@@ -5978,6 +5985,10 @@
     "platform": null
    },
    {
+    "work": "アイドル総選挙4位だった私が魔王を倒すんですか?",
+    "platform": null
+   },
+   {
     "work": "セメルパルス",
     "platform": null
    },
@@ -5991,6 +6002,10 @@
    },
    {
     "work": "ふたごわずらい",
+    "platform": null
+   },
+   {
+    "work": "ファインダー越しのあの子",
     "platform": null
    },
    {
@@ -7602,6 +7617,10 @@
     "platform": null
    },
    {
+    "work": "LatteComi コミックアンソロジー【百合】",
+    "platform": null
+   },
+   {
     "work": "Whisper， My button.",
     "platform": null
    },
@@ -8175,6 +8194,10 @@
    },
    {
     "work": "純愛ですよ？先生",
+    "platform": null
+   },
+   {
+    "work": "TSロリシリーズ",
     "platform": null
    },
    {
@@ -9514,6 +9537,10 @@
     "platform": null
    },
    {
+    "work": "私の女神が今日も推せる",
+    "platform": null
+   },
+   {
     "work": "さよなら、私の神様",
     "platform": null
    },
@@ -10063,6 +10090,10 @@
    },
    {
     "work": "百合にはさまりたくない僕が百合告白を目撃した件",
+    "platform": null
+   },
+   {
+    "work": "百合色ミュージアム【合本版】",
     "platform": null
    },
    {
@@ -11639,15 +11670,15 @@
    },
    {
     "week": "2026-06-28",
-    "n": 140
+    "n": 137
    },
    {
     "week": "2026-07-05",
-    "n": 256
+    "n": 253
    },
    {
     "week": "2026-07-12",
-    "n": 118
+    "n": 115
    },
    {
     "week": "2026-07-19",
@@ -11655,7 +11686,7 @@
    },
    {
     "week": "2026-07-26",
-    "n": 133
+    "n": 131
    },
    {
     "week": "2026-08-02",
@@ -11663,28 +11694,28 @@
    },
    {
     "week": "2026-08-09",
-    "n": 19
+    "n": 26
    }
   ],
   "trimmed_weeks": 3,
-  "pre_tracking_releases": 1074,
+  "pre_tracking_releases": 1063,
   "tracking_from": "2026-08-02"
  },
  "access_modes": {
-  "free": 775,
+  "free": 777,
   "purchase": 307,
   "free-timed": 123
  },
  "update_kinds": {
   "oneshot": 26,
-  "new-chapter": 1162,
-  "new-series": 39,
+  "new-chapter": 1164,
+  "new-series": 33,
   "final": 8,
   "other": 25,
   "skipped": 1
  },
  "identification": {
-  "discovery-candidate": 915,
+  "discovery-candidate": 911,
   "platform-genre": 346
  },
  "collapsed": {
