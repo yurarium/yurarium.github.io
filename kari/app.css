@@ -22,7 +22,13 @@
   /* The size lives on the WORD, not on the h1: the language and theme controls sit inside the
      heading and would scale with it. At 1.1rem against a 15px body the title was eight per cent
      larger than the text around it, which is not a heading so much as a bold first line. */
-  .brand{font-size:2rem;font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  /* The brand is a link home and must not look like body copy that happens to be clickable,
+     nor like every other link on the page. Same treatment .rel a and .crow a already use:
+     inherit until pointed at. */
+  .brand{font-size:2rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;
+         color:inherit;text-decoration:none}
+  .brand:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+  .brand:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
   #byline{margin:.15rem 0 0;color:var(--dim);font-size:.9rem;max-width:38rem}
   .sub{color:var(--dim);font-size:.85rem;margin:0}
   .note{background:var(--warn-bg);color:var(--warn-fg);border-radius:6px;

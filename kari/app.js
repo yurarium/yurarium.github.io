@@ -3927,6 +3927,32 @@ window.addEventListener('popstate', e => navApply(e.state || readNavUrl()));
 const BASE = location.pathname.replace(
   /(?:(?:work|credit|publisher)\/[A-Za-z0-9_-]+\/?|index\.html)?$/, '');
 
+// THE MASTHEAD IS THE WAY BACK. A reader three levels down, in a work reached from a credit
+// reached from the updates tab, had nothing that returned them to the front page: Back walks the
+// trail they came by, and the tab strip does not close a work page. The title was the obvious
+// control and was not one.
+//
+// The href in the markup is `./`, which is right for the no-JS case and wrong the moment pushState
+// has moved the address to /kari/work/<id>/, where `./` resolves inside the work. So it is set
+// from BASE, which is the app's directory however it is served.
+//
+// A PLAIN CLICK RESETS THE VIEW INSTEAD OF RELOADING. navApply({}) selects the updates tab, clears
+// the period and closes any open work or record, which is what the front page is; navSync pushes
+// the entry so Back still returns to where the reader was. Modified clicks and middle clicks are
+// left alone so open-in-new-tab keeps working, and that is what the href is for.
+(() => {
+  const home = el('brandhome');
+  if (!home) return;
+  home.href = BASE;
+  home.addEventListener('click', e => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    navApply({});
+    navSync(true);
+    window.scrollTo(0, 0);
+  });
+})();
+
 function workFromPath() {
   const m = location.pathname.match(/\/work\/([A-Za-z0-9_-]+)\/?$/);
   return m ? m[1] : '';

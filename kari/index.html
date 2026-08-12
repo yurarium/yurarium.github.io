@@ -12,7 +12,11 @@
 <header>
   <div class="masthead">
    <div class="mast-text">
-    <h1><span class="brand">Yurarium</span> <span class="tag" data-i18n>仮 / provisional</span></h1>
+    <!-- The masthead is the way back. A reader who has followed a work, a credit and a house
+        three levels deep had no control that returned them to the front page, and the browser
+        Back button walked the trail instead of leaving it. href is the app's own directory so
+        it works served anywhere, and JS replaces the reload with a view reset. -->
+    <h1><a class="brand" id="brandhome" href="./">Yurarium</a> <span class="tag" data-i18n>仮 / provisional</span></h1>
     <!-- The page opened on a title and a tab strip with nothing saying what it was. Rendered in
         JS because it follows the language toggle like everything else. -->
     <p id="byline"></p>
