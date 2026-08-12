@@ -1,10 +1,8 @@
 {
- "generated": "2026-08-12T15:16:49+00:00",
+ "generated": "2026-08-12T16:03:47+00:00",
  "since_last": {
-  "at": "2026-08-12T12:59:22+00:00",
-  "statistics": {
-   "volumes": -3
-  }
+  "at": "2026-08-12T15:51:49+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -640,19 +638,22 @@
     "name": "facts with more than one home",
     "means": "a vocabulary, a shape or a rule typed into a second file",
     "budget": 12,
-    "value": 12
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "impossibilities asserted without evidence",
     "means": "a comment saying something cannot happen, naming nothing that proves it",
     "budget": 0,
-    "value": 0
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": 75
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -709,6 +710,12 @@
     "value": 2521
    },
    {
+    "name": "volume rows a page counts but cannot list",
+    "means": "volume rows the heading counts and the page can show nothing for. It was 1,420 across 897 works, every one of which had its own name and a delivery date in the source record while the build carried five fields and dropped both. コミック百合姫 was 119 of them. Distinct from `volume rows with no publication date`, which is a research debt: this is a row a reader is shown nothing about, and a rise means a field stopped being carried.",
+    "budget": null,
+    "value": 0
+   },
+   {
     "name": "works whose records number one volume twice",
     "means": "works whose print records give one volume number to two rows, so the page draws vol. 1 twice and heads the halves as two runs. Its floor is 10 and the floor is real books: citrus was printed twice and MADB gave it two C-numbers, and a reader should see both. The other ten are one run described by two catalogues at two precisions, and those go when the volumes themselves are reconciled. A rise is a new pair worth looking at by hand.",
     "budget": 15,
@@ -736,7 +743,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 0,
-    "value": 0
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "updates naming a work we do not hold",
@@ -968,7 +976,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-12T12:59:21+00:00",
+  "previous_at": "2026-08-12T15:51:48+00:00",
   "drops": []
  },
  "outstanding": [

@@ -260,6 +260,13 @@
   .vol{display:grid;grid-template-columns:5.5rem auto 1fr;gap:.2rem .8rem;align-items:baseline;
     padding:.4rem .2rem;border-bottom:1px solid var(--line);font-size:.85rem}
   .voln{font-weight:600}
+  /* A LABEL IS NOT A NUMBER AND DOES NOT SIT IN A NUMBER'S COLUMN WIDTH. `2017年1月号` is what an
+     issue is called; it is wider than `vol. 12` and it carries no claim about ordering, so it is
+     set lighter and allowed the room it needs. */
+  .vdesig{font-weight:500;font-size:.82rem;grid-column:1 / span 2}
+  /* The day a shop began selling a file, which is not the day the book was printed. Dimmer than a
+     publication date because it is a fact about the shop rather than about the edition. */
+  .vdeliv{color:var(--dim)}
   /* Stated absence, not an empty cell. A date we do not hold is a fact about the record. */
   .vnod{color:var(--faint);font-size:.8rem}
   .visbn{color:var(--dim);font-size:.78rem;justify-self:end}

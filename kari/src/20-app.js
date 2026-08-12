@@ -1126,8 +1126,15 @@ async function paintVolumes(r) {
      the page ran to 17,501px of identical lines reading 刊行日不明. A volume carrying no date, no
      number and no ISBN distinguishes itself from its neighbours in nothing, and counting them is
      the whole of what there is to say. So they are counted, and the ones that carry something are
-     listed. */
-  const says = v => v.published || v.isbn || v.number || (v.editions || []).length;
+     listed.
+
+     A NAME AND A DELIVERY DATE ARE SOMETHING. This asked for a date, an ISBN or a number, and 1,420
+     rows carry none of those and are not blank: they carry what the shop calls them and the day it
+     began selling them. コミック百合姫 came out as `Volumes 119` above `119 with no date and
+     nothing else recorded`, over 117 issues whose own names and delivery dates were in the record
+     all along. */
+  const says = v => v.published || v.isbn || v.number || v.designation || v.delivered
+                 || (v.editions || []).length;
   const told = rows.filter(says), silent = rows.length - told.length;
   /* A HOLE IN THE NUMBERING, NAMED. 63 works run 1–12, 14, 15, 16 because the catalogue holds no
      record of volume 13, and the list showed the jump and said nothing, under a heading counting
@@ -1147,6 +1154,13 @@ async function paintVolumes(r) {
      that the second was a reissue. Each run is its own list, headed by what it is, in the order the
      runs are listed above it. Where there is one run there is one list and no heading, which is
      every work but the 37 the catalogue splits. */
+  /* WHAT THE SHOP SAYS THESE ARE. A heading reading `収録巻` over 117 issues of コミック百合姫
+     claims a volume numbering they have never had. BOOK☆WALKER states `[雑誌]` on the issues
+     themselves and the build carries it onto the block; nothing here infers it from a date-shaped
+     name, because that would call まんがタイムきららＭＡＸ a magazine and still miss ガレット,
+     whose issues are numbered No.2 to No.37 and look exactly like a book's. An untagged magazine
+     is therefore headed as volumes, which is a limit recorded in docs/GAPS.md. */
+  const periodical = (r.print || []).some(p => p.periodical);
   const runOrder = (r.print || []).map(printIds);
   const groups = runOrder.length > 1
     ? runOrder.map(ids => told.filter(v => ids.includes(v.run))).filter(g => g.length)
@@ -1159,15 +1173,32 @@ async function paintVolumes(r) {
       `${g.length} ${g.length === 1 ? 'volume' : 'volumes'}${from ? ` from ${from}` : ''}`))}</h4>`;
   };
   el('wp-vols').innerHTML =
-    `<h3 class="wp-sub">${esc(T('収録巻', 'Volumes'))} <span class="wp-n">${rows.length}</span></h3>` +
+    `<h3 class="wp-sub">${esc(periodical
+        ? T('収録号', 'Issues') : T('収録巻', 'Volumes'))} <span class="wp-n">${rows.length}</span></h3>` +
     (silent ? `<p class="vnone">${esc(T(
         `${silent}巻は刊行日も書誌情報も記録がない`,
         `${silent} with no date and nothing else recorded`))}</p>` : '') + gapNote +
     groups.map(g => runHead(g) + '<ol class="vols">' + g.map(v => {
-      const n = v.number ? `<span class="voln">${esc(volLabel(v.number))}</span>` : '';
+      /* WHAT THIS INSTALMENT IS CALLED, WHERE THAT IS NOT A NUMBER. `2017年1月号` is a label and
+         nothing is derived from it: a magazine's naming scheme is not stable across its own life,
+         and コミック百合姫 has run Vol. 7 Winter 2007 quarterly, then bimonthly, then unnumbered,
+         and only now monthly by cover date. So it is shown as written, in the class that carries
+         no claim about ordering. */
+      const n = v.number ? `<span class="voln">${esc(volLabel(v.number))}</span>`
+        : (v.designation ? `<span class="voln vdesig">${esc(v.designation)}</span>` : '');
+      /* AND THE DAY A SHOP BEGAN SELLING THE FILE IS NOT THE DAY IT WAS PUBLISHED, which is the
+         same separation `delivered_from` already carries on the block above. 一迅社 dates
+         コミック百合姫's 2017年1月号 six weeks after the shop began delivering it, so a delivery
+         date labelled as a printing would be wrong by that much on every issue. It is shown,
+         because a reader asking when they could buy this is owed an answer, and it says what it
+         is. */
       const d = v.published
         ? `<time datetime="${esc(v.published)}">${esc(fmtDate(v.published, { year: true }))}</time>`
-        : `<span class="vnod">${esc(T('刊行日不明', 'no date recorded'))}</span>`;
+        : v.delivered
+          ? `<time class="vdeliv" datetime="${esc(v.delivered)}">${esc(T(
+              `配信 ${fmtDate(v.delivered, { year: true })}`,
+              `on sale ${fmtDate(v.delivered, { year: true })}`))}</time>`
+          : `<span class="vnod">${esc(T('刊行日不明', 'no date recorded'))}</span>`;
       // The ISBN is why most of these works are here at all: it is what a shop stated and what the
       // bibliography answered. A bibliographic record should show its identifier.
       const eds = (v.editions || []).filter(Boolean);
