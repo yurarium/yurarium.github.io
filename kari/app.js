@@ -2501,8 +2501,15 @@ function finalTag(basis) {
   return ` <span class="k k-fin" title="${esc(tip)}">${esc(T('完結巻', 'final volume'))}</span>`;
 }
 
-function volLabel(n) {
-  const raw = String(n == null ? '' : n).trim();
+/* TAKES THE ROW AND NOT THE STRING, so `number_n` travels with `number`. That is the position the
+   BUILD worked out for this designation, read rather than re-derived: the build already holds the
+   one map from a designation to a number, where `創刊号` is ガレット's first issue beside `vol. 8`
+   and `第1巻`. A second copy of that map here would be a rule written in two languages, and the
+   version in the browser would be the one nothing tests. Taking the row is also what lets
+   `adapters/interface.py` rule this surface and ask the real function what a reader sees. */
+function volLabel(v) {
+  const raw = String(v == null ? '' : (typeof v === 'object' ? v.number : v)).trim();
+  const at = (v && typeof v === 'object') ? v.number_n : undefined;
   if (!raw) return '';
   const m = raw.match(VOLNUM);
   if (m) return T('第' + m[1] + '巻', 'vol. ' + m[1]);
@@ -2511,17 +2518,24 @@ function volLabel(n) {
      publishing calls these parts, and the number is the position the set puts them in. */
   const part = VOLPART[raw] || VOLPART[raw.replace(/巻$/, '')];
   if (part) return T(raw, 'part ' + part);
-  /* Anything else is a NAMED part, 難問編 or 前夜, which is a section title and not a counter.
-     Seven of them, and they want translating the way a chapter name does. Shown as written until
-     they are, because inventing an English name for a section is worse than showing its own. */
-  return raw;
+  /* A DESIGNATION THE BUILD PLACED IN THE RUN, said in the reader's language. `創刊号` reached an
+     English page as itself, above `vol. 2`, because nothing here knew it was the first issue. The
+     build did know, and shipped `number_n`. */
+  if (Number.isFinite(at)) return T(raw, 'vol. ' + at);
+  /* Anything else is a NAMED part, 難問編 or 前夜, which is a section title and not a counter, and
+     it is rendered the way a chapter name is because that is what it is. Shown as written, this
+     put seven rows of Japanese in front of an English reader and nothing noticed, because the
+     field had no surface until 2026-08-12. `build.py` now feeds these designations through the
+     same analyser pass that renders a chapter name, so the map answers for them. */
+  return phraseOf(raw);
 }
 
 /* Where a volume sits in its work. A NUMBER, not the text of one: sorted as strings, volume 10
    comes before volume 9, and it only takes two volumes sharing a publication month for that to
    show. Anything neither numbered nor part of a 上中下 set sorts last, by its own text. */
-function volOrder(n) {
-  const raw = String(n == null ? '' : n).trim();
+function volOrder(v) {
+  const raw = String(v == null ? '' : (typeof v === 'object' ? v.number : v)).trim();
+  const at = (v && typeof v === 'object') ? v.number_n : undefined;
   const m = raw.match(VOLNUM);
   if (m) return [0, +m[1], ''];
   // Written 上 and 下 on eight works and 上巻 and 下巻 on 最後の制服, whose two volumes share a
@@ -2529,6 +2543,10 @@ function volOrder(n) {
   // spellings rather than two entries that can be added to singly.
   const part = VOLPART[raw] || VOLPART[raw.replace(/巻$/, '')];
   if (part) return [0, part, ''];
+  // The build's own placing, for a designation neither of the two rules above reads. ガレット's
+  // 創刊号 sorted below its vol. 37 without this, because `[1, …]` is the pile of things with no
+  // place in the run and it is not one of those.
+  if (Number.isFinite(at)) return [0, at, ''];
   return [1, 0, raw];
 }
 
@@ -2540,7 +2558,7 @@ function volOrder(n) {
    The date still decides where a set has no numbering to go on, which is the case volOrder returns
    kind 1 for: 難問編 and 前夜 are section titles and nothing about them says which came first. */
 function byVolume(a, b) {
-  const [ka, na, ta] = volOrder(a.number), [kb, nb, tb] = volOrder(b.number);
+  const [ka, na, ta] = volOrder(a), [kb, nb, tb] = volOrder(b);
   if (ka === 0 && kb === 0) return na - nb || ta.localeCompare(tb, 'ja');
   const da = String(a.published || '9999'), db = String(b.published || '9999');
   if (da !== db) return da.localeCompare(db);
@@ -2687,7 +2705,11 @@ async function paintVolumes(r) {
      the ROWS. A reader met `Volumes 15` above a list ending at 16 and had no way to tell a gap in
      the bibliography from a gap in the interface. This is a fact about what MADB holds, so it says
      that rather than asserting the volume does not exist. */
-  const nums = told.map(v => parseInt(v.number, 10)).filter(n => Number.isFinite(n));
+  /* THE BUILD'S PLACING, NOT A PARSE OF THE TEXT. `parseInt('創刊号')` is NaN, so ガレット's first
+     issue was absent from this set and the page reported `no catalogue record for volume 1` above
+     a list that opens with it. */
+  const nums = told.map(v => Number.isFinite(v.number_n) ? v.number_n : parseInt(v.number, 10))
+                   .filter(n => Number.isFinite(n));
   const highest = nums.length ? Math.max(...nums) : 0;
   const have = new Set(nums);
   const gaps = [];
@@ -2730,7 +2752,7 @@ async function paintVolumes(r) {
          and コミック百合姫 has run Vol. 7 Winter 2007 quarterly, then bimonthly, then unnumbered,
          and only now monthly by cover date. So it is shown as written, in the class that carries
          no claim about ordering. */
-      const n = v.number ? `<span class="voln">${esc(volLabel(v.number))}</span>`
+      const n = v.number ? `<span class="voln">${esc(volLabel(v))}</span>`
         : (v.designation ? `<span class="voln vdesig">${esc(v.designation)}</span>` : '');
       /* AND THE DAY A SHOP BEGAN SELLING THE FILE IS NOT THE DAY IT WAS PUBLISHED, which is the
          same separation `delivered_from` already carries on the block above. 一迅社 dates
@@ -3773,7 +3795,7 @@ async function renderReleases() {
   }));
   const rows = [];
   (WORKS.works || []).forEach(w => (w.volumes || []).forEach(v => {
-    if (v.published) rows.push({ d: String(v.published), w, n: v.number, isbn: v.isbn,
+    if (v.published) rows.push({ d: String(v.published), w, n: v.number, at: v.number_n, isbn: v.isbn,
                                  fin: v.final_volume ? v.final_volume_basis : null });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
@@ -3819,7 +3841,8 @@ async function renderReleases() {
         // and the rest say nothing rather than being numbered by their position in a sorted list.
         // Same rule as the work page, from the same function: the releases tab was printing
         // `第vol. 8巻` for every volume MADB numbered in words.
-        const vol = r.n ? `<span class="relvn">${esc(volLabel(r.n))}</span>` : '';
+        const vol = r.n
+          ? `<span class="relvn">${esc(volLabel({ number: r.n, number_n: r.at }))}</span>` : '';
         // The volume that ended the series, where a shop states both that it ended and how long it
         // is. The updates tab marks a final chapter the same way; a volume carries no such marking
         // of its own, so this says whose claim it is.
