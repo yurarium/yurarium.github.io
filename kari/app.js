@@ -2508,8 +2508,14 @@ function finalTag(basis) {
    version in the browser would be the one nothing tests. Taking the row is also what lets
    `adapters/interface.py` rule this surface and ask the real function what a reader sees. */
 function volLabel(v) {
-  const raw = String(v == null ? '' : (typeof v === 'object' ? v.number : v)).trim();
-  const at = (v && typeof v === 'object') ? v.number_n : undefined;
+  /* NUMBER OR DESIGNATION, ONE ENTRY POINT. A row is called by its number where it has one and by
+     what the record calls it where it does not, and both are the same question. Drawn separately,
+     the designation went onto the page through `esc` and 383 works showed Japanese in English
+     mode: neither `English mode has no Japanese` nor `entrypoints.py` could see it, because both
+     ask about the surfaces and the designation had been ruled as a field nothing draws. */
+  const row = (v && typeof v === 'object') ? v : { number: v };
+  const raw = String(row.number || row.designation || '').trim();
+  const at = row.number_n;
   if (!raw) return '';
   const m = raw.match(VOLNUM);
   if (m) return T('第' + m[1] + '巻', 'vol. ' + m[1]);
@@ -2752,8 +2758,9 @@ async function paintVolumes(r) {
          and コミック百合姫 has run Vol. 7 Winter 2007 quarterly, then bimonthly, then unnumbered,
          and only now monthly by cover date. So it is shown as written, in the class that carries
          no claim about ordering. */
-      const n = v.number ? `<span class="voln">${esc(volLabel(v))}</span>`
-        : (v.designation ? `<span class="voln vdesig">${esc(v.designation)}</span>` : '');
+      const lab = volLabel(v);
+      const n = lab
+        ? `<span class="voln${v.number ? '' : ' vdesig'}">${esc(lab)}</span>` : '';
       /* AND THE DAY A SHOP BEGAN SELLING THE FILE IS NOT THE DAY IT WAS PUBLISHED, which is the
          same separation `delivered_from` already carries on the block above. 一迅社 dates
          コミック百合姫's 2017年1月号 six weeks after the shop began delivering it, so a delivery
