@@ -492,8 +492,14 @@ function enAvailable(rec) {
      was settled as Nejishiki 13-banchi, which no speller reading ネジシキ ジュウサン バンチ can
      produce. Respelling it gave Nejishikijūsanbanchi beside its own name and Nejishiki 13-banchi
      beside its books, which is one name in two places and is what `names rendered two ways`
-     counts. `kind` is what the store calls a credit that is not a person. */
-  if (rec.kind && rec.en && rec.basis === 'romaji') out.romaji = rec.en;
+     counts.
+
+     `entity` IS WHAT THE STORE CALLS A CREDIT THAT IS NOT A PERSON, and this read `rec.kind` for as
+     long as the rule has existed. Nothing published a `kind`, so the branch never once fired and
+     天華百剣プロジェクト shipped as `Tenkahyakkenpurojekuto` beside its own
+     `en: Tenka Hyakken Project`. One fact, two names, and the mismatch was silent because the
+     fallback below is a plausible string. */
+  if (rec.entity && rec.en && rec.basis === 'romaji') out.romaji = rec.en;
   else if (styled) out.romaji = styled;
   else if (rec.en && rec.basis === 'romaji') out.romaji = rec.en;
   return out;
