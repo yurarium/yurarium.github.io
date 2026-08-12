@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-12T20:25:49+00:00",
+ "generated": "2026-08-12T20:45:55+00:00",
  "since_last": {
-  "at": "2026-08-12T20:23:33+00:00",
+  "at": "2026-08-12T20:44:19+00:00",
   "statistics": {}
  },
  "means": {
@@ -638,19 +638,22 @@
     "name": "facts with more than one home",
     "means": "a vocabulary, a shape or a rule typed into a second file",
     "budget": 12,
-    "value": 12
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "impossibilities asserted without evidence",
     "means": "a comment saying something cannot happen, naming nothing that proves it",
     "budget": 0,
-    "value": 0
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 75,
-    "value": 75
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -707,6 +710,12 @@
     "value": 2469
    },
    {
+    "name": "macron boundaries nobody has ruled on",
+    "means": "names where our macron says a long vowel and a source spells the pair out, which nobody has read. Most of the class is a style, because MangaUpdates and Wikidata write ou for ō; what hides in it is a pair crossing a word boundary, where 御家's オウチ is o-uchi and `Ōchi` states a long o nobody says. Four of 21 were that. The owner ruled on 2026-08-12 that a morphology rule is not worth buying for four names, so the four are data in kana.NOT_LONG and this is what stops a fifth arriving unnoticed. A rise is a name to read.",
+    "budget": null,
+    "value": 0
+   },
+   {
     "name": "volume rows a page counts but cannot list",
     "means": "volume rows the heading counts and the page can show nothing for. It was 1,420 across 897 works, every one of which had its own name and a delivery date in the source record while the build carried five fields and dropped both. コミック百合姫 was 119 of them. Distinct from `volume rows with no publication date`, which is a research debt: this is a row a reader is shown nothing about, and a rise means a field stopped being carried.",
     "budget": 0,
@@ -746,7 +755,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 0,
-    "value": 0
+    "value": null,
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "updates naming a work we do not hold",
@@ -978,7 +988,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-12T20:23:32+00:00",
+  "previous_at": "2026-08-12T20:44:18+00:00",
   "drops": []
  },
  "outstanding": [
