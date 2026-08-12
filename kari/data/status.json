@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-12T18:51:52+00:00",
+ "generated": "2026-08-12T20:00:49+00:00",
  "since_last": {
-  "at": "2026-08-12T18:50:45+00:00",
+  "at": "2026-08-12T19:54:20+00:00",
   "statistics": {}
  },
  "means": {
@@ -385,13 +385,13 @@
    {
     "name": "an imprint field repeating its publisher",
     "means": "print rows whose imprint field holds the same name as their publisher field, which a shop's individual-publishing service writes when an artist publishes their own book. There is no line to name; what moves this is the capture writing one name in one place.",
-    "budget": 341,
+    "budget": 360,
     "value": 360
    },
    {
     "name": "imprint strings that reach no line",
     "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
-    "budget": 16,
+    "budget": 18,
     "value": 18
    },
    {
@@ -583,7 +583,7 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1470,
+    "budget": 1477,
     "value": 1477
    },
    {
@@ -719,16 +719,22 @@
     "value": 8
    },
    {
+    "name": "volume numbers a page draws twice",
+    "means": "volume numbers a work page would draw more than once inside one print run. The measure beside `works whose records number one volume twice`, asking about the ROWS a reader sees rather than the records behind them, which is a different question once a run's records are folded into one list. Its floor is 5: 君と綴るうたかた numbers a volume 6 in 2024-03 and another in 2025-01-13, a second printing with its own ISBN that a date comparison cannot choose between. A rise means a fold stopped folding.",
+    "budget": 5,
+    "value": 5
+   },
+   {
     "name": "works holding fewer volumes than the shop states",
     "means": "works コミックシーモア sells more volumes of than the corpus holds, which is a capture that has fallen behind. The shop is Tier C and this asserts only that two parties disagree about a countable thing. A rise is ordinary, and is what a series publishing ahead of the next capture looks like.",
-    "budget": 68,
-    "value": 68
+    "budget": 69,
+    "value": 69
    },
    {
     "name": "works holding more volumes than the shop states",
     "means": "the other direction, counted apart so a fixed over-count cannot hide a new under-count. Mostly products counted as volumes: BOOK☆WALKER lists free sample editions among a series' items and the ingest numbers every item, which is how MURCIÉLAGO came to have 32 volumes where the shop and the bibliography both say 29. Should fall to near nothing once a volume number is read from the product title; what is left is a work the shop has delisted from.",
     "budget": 25,
-    "value": 31
+    "value": 25
    },
    {
     "name": "shelf admissions a reader cannot follow",
@@ -972,7 +978,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-12T18:50:44+00:00",
+  "previous_at": "2026-08-12T19:54:18+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1107,11 +1113,11 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 52,
+   "count": 53,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 34,
-    "an imprint field repeating its publisher": 341,
+    "an imprint field repeating its publisher": 360,
     "author names romanised as one word": 1155,
     "author readings no source states": 400,
     "bookwalker listings unconfirmed": 0,
@@ -1136,7 +1142,7 @@
     "implausible ruby spans": 0,
     "impossibilities asserted without evidence": 0,
     "imprint names the interface disagrees with": 0,
-    "imprint strings that reach no line": 16,
+    "imprint strings that reach no line": 18,
     "incomplete attested rows": 35,
     "interface reads outside an entry point": 12,
     "interface tooltips a reader of Japanese cannot read": 34,
@@ -1166,7 +1172,7 @@
     "shelf admissions a reader cannot follow": 5,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 0,
-    "titles read by a machine, unmarked": 1470,
+    "titles read by a machine, unmarked": 1477,
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 175,
@@ -1174,10 +1180,11 @@
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 18,
+    "volume numbers a page draws twice": 5,
     "volume rows a page counts but cannot list": 0,
     "volume rows with no publication date": 2514,
     "volumes with an isbn and no date": 0,
-    "works holding fewer volumes than the shop states": 68,
+    "works holding fewer volumes than the shop states": 69,
     "works holding more volumes than the shop states": 25,
     "works named by a truncation": 0,
     "works offered twice in a list": 0,
@@ -1201,8 +1208,8 @@
    "slow": 56
   },
   "english_basis": {
-   "translated": 2616,
-   "official-jp": 132,
+   "translated": 2615,
+   "official-jp": 133,
    "licensed": 108,
    "none": 96,
    "romaji": 49

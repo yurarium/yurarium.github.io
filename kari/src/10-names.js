@@ -588,8 +588,15 @@ function personName(rec) {
      person, and 百合姫編集部 is a magazine and a department: its record carries Yuri Hime Editorial
      Department, and every caller here asked for the reading's romanisation first because the
      argument they pass says person. Declining sends them to `enOf`, which reads the record's own
-     order of English forms and answers with the romanisation anyway where that is all there is. */
-  if (rec && rec.kind) return null;
+     order of English forms and answers with the romanisation anyway where that is all there is.
+
+     `entity` IS THE FIELD AND `kind` WAS NEVER PUBLISHED, which is the same one-word mismatch
+     `enAvailable` carried until 2026-08-12 and this one outlived the fix. Nothing ships a `kind`,
+     so the guard never fired once: 東方Project reached a reader as `Tōhōpurojekuto` beside its own
+     `en: Touhou Project`, and so did 天華百剣プロジェクト and ネジ式１３番地, the record the rule was
+     written for. `personShown` prefers this answer over `enOf`, so declining here is the whole of
+     what lets an organisation's own name through. */
+  if (rec && rec.entity) return null;
   const rj = rec && rec.romaji && rec.romaji[ROMAJI_STYLE];
   if (!rj) return null;
   if (NAME_ORDER !== 'given') return rj;

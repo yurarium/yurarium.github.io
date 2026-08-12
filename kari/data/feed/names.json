@@ -45479,12 +45479,19 @@
     "double": "Kon'ya wa Yoru Suzume no Yataide",
     "plain": "Kon'ya wa Yoru Suzume no Yataide"
    },
-   "en": "Tonight, at the Night Sparrow's Stall",
-   "basis": "translated",
+   "en": "Tonight at the Mystia's Yatai",
+   "basis": "official-jp",
    "en_forms": {
+    "official-jp": "Tonight at the Mystia's Yatai",
     "translated": "Tonight, at the Night Sparrow's Stall"
    },
    "reading_basis": "analyser",
+   "en_cite": {
+    "source": "comic-walker",
+    "url": "https://comic-walker.com/",
+    "kind": "publisher-jp",
+    "reviewed": "2026-08-12"
+   },
    "unverified": true
   },
   "今夜も抱かれてます!": {
@@ -99201,44 +99208,6 @@
    "reading_basis": "researched",
    "alias_of": "猫魔法が世界に革命を起こすそうですよ?"
   },
-  "CottonCandy": {
-   "reading": "CottonCandy 【タン ハナシ バン】",
-   "ruby": [
-    [
-     "CottonCandy【",
-     null
-    ],
-    [
-     "単",
-     "たん"
-    ],
-    [
-     "話",
-     "はなし"
-    ],
-    [
-     "版",
-     "ばん"
-    ],
-    [
-     "】",
-     null
-    ]
-   ],
-   "romaji": {
-    "macron": "CottonCandy [Tan Hanashi Ban]",
-    "double": "CottonCandy [Tan Hanashi Ban]",
-    "plain": "CottonCandy [Tan Hanashi Ban]"
-   },
-   "en": "CottonCandy (single chapters)",
-   "basis": "translated",
-   "en_forms": {
-    "translated": "CottonCandy (single chapters)"
-   },
-   "reading_basis": "analyser",
-   "unverified": true,
-   "alias_of": "CottonCandy【単話版】"
-  },
   "RoomforHoneys": {
    "reading": "ルーム・ フォー・ ハニーズ",
    "romaji": {
@@ -99253,63 +99222,6 @@
    },
    "reading_basis": "analyser",
    "alias_of": "ルーム・フォー・ハニーズ"
-  },
-  "Freesoul": {
-   "reading": "フリー・ ソウル",
-   "romaji": {
-    "macron": "Furī Sōru",
-    "double": "Furii Souru",
-    "plain": "Furi Soru"
-   },
-   "en": "Free Soul",
-   "basis": "translated",
-   "en_forms": {
-    "translated": "Free Soul"
-   },
-   "reading_basis": "analyser",
-   "alias_of": "フリー・ソウル"
-  },
-  "SIS": {
-   "reading": "エスアイエス ［ ヒミツ ノ コイゴコロ ］",
-   "ruby": [
-    [
-     "Ｓｉｓ",
-     "えすあいえす"
-    ],
-    [
-     "［",
-     null
-    ],
-    [
-     "秘密",
-     "ひみつ"
-    ],
-    [
-     "の",
-     null
-    ],
-    [
-     "恋心",
-     "こいごころ"
-    ],
-    [
-     "］",
-     null
-    ]
-   ],
-   "romaji": {
-    "macron": "Esuaiesu [ Himitsu no Koigokoro ]",
-    "double": "Esuaiesu [ Himitsu no Koigokoro ]",
-    "plain": "Esuaiesu [ Himitsu no Koigokoro ]"
-   },
-   "en": "Sis [Secret Feelings of Love]",
-   "basis": "translated",
-   "en_forms": {
-    "translated": "Sis [Secret Feelings of Love]"
-   },
-   "reading_basis": "analyser",
-   "unverified": true,
-   "alias_of": "Sis[秘密の恋心]"
   },
   "TheDayTomorrowComes": {
    "reading": "アス ガ クル ヒ",
@@ -146081,22 +145993,6 @@
     "一迅社"
    ]
   },
-  "YH comics": {
-   "id": "yurihime-comics",
-   "name": "百合姫コミックス",
-   "parent": "IDコミックス",
-   "publishers": [
-    "一迅社"
-   ]
-  },
-  "yhcomics": {
-   "id": "yurihime-comics",
-   "name": "百合姫コミックス",
-   "parent": "IDコミックス",
-   "publishers": [
-    "一迅社"
-   ]
-  },
   "IDコミックス. YH comics": {
    "id": "yurihime-comics",
    "name": "百合姫コミックス",
@@ -146106,6 +146002,22 @@
    ]
   },
   "idコミックス.yhcomics": {
+   "id": "yurihime-comics",
+   "name": "百合姫コミックス",
+   "parent": "IDコミックス",
+   "publishers": [
+    "一迅社"
+   ]
+  },
+  "YH comics": {
+   "id": "yurihime-comics",
+   "name": "百合姫コミックス",
+   "parent": "IDコミックス",
+   "publishers": [
+    "一迅社"
+   ]
+  },
+  "yhcomics": {
    "id": "yurihime-comics",
    "name": "百合姫コミックス",
    "parent": "IDコミックス",
@@ -194370,6 +194282,11 @@
    "macron": "Ichi Shun Sha Kōdansha yh comics",
    "double": "Ichi Shun Sha Koudansha yh comics",
    "plain": "Ichi Shun Sha Kodansha yh comics"
+  },
+  "一迅社講談社百合姫コミックス": {
+   "macron": "Ichi Shun Sha Kōdansha Yuri Hime Komikkusu",
+   "double": "Ichi Shun Sha Koudansha Yuri Hime Komikkusu",
+   "plain": "Ichi Shun Sha Kodansha Yuri Hime Komikkusu"
   },
   "七坂なな": "Hichisaka Nana",
   "七坂なな/桜木晶/河合朗/ほなみ彩/寺本薫/奈友/香川悠作/冬空/藤松盟/安蔵くんこ/梅原うめ/まりまりも/つみきつき/春名ヒスイ": {

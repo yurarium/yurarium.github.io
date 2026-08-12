@@ -1704,7 +1704,13 @@ function renderWorkPage() {
     </header>
     <dl class="wp-facts">${facts.join('')}</dl>
     ${sect(T('ウェブ連載', 'Web serialisation'), webBody)}
-    ${sect(T('単行本', 'Collected volumes'), printBody + '<div id="wp-vols"></div>')}
+    ${/* A HEADING OVER NOTHING IS A CLAIM THAT THERE IS SOMETHING. `sect` drops an empty body and
+          this one was never empty: the container `paintVolumes` fills is always in it, so 560 web
+          works with no print record at all carried a `Collected volumes` heading. The container is
+          only wanted where there is a run to put in it, and `paintVolumes` already returns early
+          without one. */
+      sect(T('単行本', 'Collected volumes'),
+           (r.print || []).length ? printBody + '<div id="wp-vols"></div>' : '')}
     ${srcBody}`;
   el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeWorkPage(true); });
   paintVolumes(r);
@@ -3301,10 +3307,19 @@ function renderSeries() {
     const acc = () => !r.chapters || !known ? ''
       : r.chapters === 1 ? (freeN ? `<span class="tag">${esc(T('無料'))}</span>`
                                   : `<span class="tag grey">${esc(T('有料'))}</span>`)
-      : freeN >= r.chapters ? `<span class="tag">${esc(T('全話無料'))}</span>`
+      // A CHAPTER SOMEBODY IS CHARGING FOR MEANS NOT ALL OF THEM ARE FREE, whatever the counts add
+      // up to. These three count RELEASE ROWS and `chapters` counts chapters, so they are not over
+      // one population: 病弱少女、転生して健康な肉体（最強）を手に入れる holds 11 chapters against
+      // 4 free, 17 free-with-a-ticket and 3 priced, and `freeN >= chapters` read that as all free
+      // while the work's own page said otherwise. 19 rows said it. `priced` is the one number here
+      // that cannot be explained away by a mismatched denominator.
+      : !r.priced && freeN >= r.chapters ? `<span class="tag">${esc(T('全話無料'))}</span>`
+      // AND THE PROPORTION IS CAPPED AT THE DENOMINATOR, for the same reason: 21 of 11 is not a
+      // proportion. Where the counts disagree the honest thing to show is what is known to be
+      // paid, so the numerator is the chapters not accounted for by a price.
       : freeN ? `<span class="tag" title="${r.free} free now${
             r.free_timed ? `, ${r.free_timed} free with a daily ticket: readable at no cost, just paced` : ''}${
-            r.priced ? `; ${r.priced} paid` : ''}">${freeN}/${r.chapters}${
+            r.priced ? `; ${r.priced} paid` : ''}">${Math.min(freeN, r.chapters)}/${r.chapters}${
             ' ' + esc(T('無料'))}</span>`
       : `<span class="tag grey">${esc(T('有料'))}</span>`;
     /* THE TITLE OPENS THE WORK'S PAGE. It used to be a link off to whichever platform serialises

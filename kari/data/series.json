@@ -8627,19 +8627,6 @@
    "id": "w00118",
    "print": [
     {
-     "work_id": "madb-t-1e5dc6278631",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "秋田書店",
-     "imprint": "ヤングチャンピオン・コミックス",
-     "first": "2024-01",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-1e5dc6278631"
-     ]
-    },
-    {
      "work_id": "madb-t-0b0ad8cae7a4",
      "shop_url": null,
      "volumes": 6,
@@ -8649,28 +8636,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "madb-t-0b0ad8cae7a4"
+      "madb-t-0b0ad8cae7a4",
+      "madb-t-1e5dc6278631"
+     ],
+     "folded_names": [
+      {
+       "publisher": "秋田書店",
+       "imprint": "ヤングチャンピオン・コミックス",
+       "first": "2024-01"
+      }
      ]
     }
    ],
    "latest_any": "2026-08-05",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -17259,19 +17239,6 @@
    "id": "w00048",
    "print": [
     {
-     "work_id": "madb-t-d67d5fe686c2",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "マイクロマガジン社",
-     "imprint": "Ride Comics",
-     "first": "2025-05-19",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-d67d5fe686c2"
-     ]
-    },
-    {
      "work_id": "C435608",
      "shop_url": null,
      "volumes": 8,
@@ -17281,28 +17248,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C435608"
+      "C435608",
+      "madb-t-d67d5fe686c2"
+     ],
+     "folded_names": [
+      {
+       "publisher": "マイクロマガジン社",
+       "imprint": "Ride Comics",
+       "first": "2025-05-19"
+      }
      ]
     }
    ],
    "latest_any": "2026-07-29",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -17641,20 +17601,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C368867"
-     ]
-    },
-    {
-     "work_id": "madb-t-f2ab6d5672fb",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "講談社",
-     "imprint": "ヤンマガKC",
-     "first": "2022-02",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C368867",
       "madb-t-f2ab6d5672fb"
+     ],
+     "folded_names": [
+      {
+       "publisher": "講談社",
+       "imprint": "ヤンマガKC",
+       "first": "2022-02"
+      }
      ]
     }
    ],
@@ -17677,21 +17632,6 @@
      "holds": "attribution",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C368867"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
     }
    ],
    "work_en": {
@@ -22214,12 +22154,19 @@
      "double": "Kon'ya wa Yoru Suzume no Yataide",
      "plain": "Kon'ya wa Yoru Suzume no Yataide"
     },
-    "en": "Tonight, at the Night Sparrow's Stall",
-    "basis": "translated",
+    "en": "Tonight at the Mystia's Yatai",
+    "basis": "official-jp",
     "en_forms": {
+     "official-jp": "Tonight at the Mystia's Yatai",
      "translated": "Tonight, at the Night Sparrow's Stall"
     },
     "reading_basis": "analyser",
+    "en_cite": {
+     "source": "comic-walker",
+     "url": "https://comic-walker.com/",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-12"
+    },
     "unverified": true
    },
    "author_en": {
@@ -27563,16 +27510,6 @@
      "kind": "shelf",
      "rank": 4,
      "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=32",
-     "page": 32
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
      "source": "コミックシーモア",
      "term": "百合・GL",
      "read": "2026-08-05",
@@ -27593,20 +27530,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C447404"
-     ]
-    },
-    {
-     "work_id": "bw-289564",
-     "shop_url": "https://bookwalker.jp/series/289564/",
-     "volumes": 0,
-     "publisher": "芳文社",
-     "imprint": "ＦＵＺコミックス",
-     "first": "2021-02",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C447404",
       "bw-289564"
+     ],
+     "folded_names": [
+      {
+       "publisher": "芳文社",
+       "imprint": "ＦＵＺコミックス",
+       "first": "2021-02"
+      }
      ]
     }
    ],
@@ -27629,23 +27561,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C447404"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/289564/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-06"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/289564/"
     }
    ],
    "work_en": {
@@ -30347,57 +30262,32 @@
    "id": "w00166",
    "print": [
     {
-     "work_id": "madb-t-c5c87e4ed537",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "一迅社",
-     "distributor": "講談社",
-     "imprint": "YH comics",
-     "first": "2023-08",
-     "last": null,
-     "label": "yuri",
-     "work_ids": [
-      "madb-t-c5c87e4ed537"
-     ]
-    },
-    {
      "work_id": "madb-t-bde72604ee95",
      "shop_url": null,
      "volumes": 2,
      "publisher": "一迅社",
      "distributor": "講談社",
      "imprint": "IDコミックス. YH comics",
-     "first": "2025-07-14",
+     "first": "2023-08",
      "last": null,
      "label": "yuri",
      "work_ids": [
-      "madb-t-bde72604ee95"
+      "madb-t-bde72604ee95",
+      "madb-t-c5c87e4ed537"
+     ],
+     "folded_names": [
+      {
+       "publisher": "一迅社",
+       "distributor": "講談社",
+       "imprint": "YH comics",
+       "first": "2023-08"
+      }
      ]
     }
    ],
    "latest_any": "2026-07-16",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "一迅社",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "一迅社",
-     "holds": "attribution",
-     "read": "2026-08-08"
-    },
     {
      "source": "一迅社",
      "holds": "volumes",
@@ -32218,15 +32108,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=17",
      "page": 17
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "state_claims": [
@@ -32242,50 +32123,30 @@
    "id": "w00187",
    "print": [
     {
-     "work_id": "madb-t-6a643a0232f8",
-     "shop_url": "https://www.cmoa.jp/title/256785/",
-     "volumes": 0,
-     "publisher": "竹書房",
-     "imprint": "Bamboo comics",
-     "first": "2022-11",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-6a643a0232f8"
-     ]
-    },
-    {
      "work_id": "bw-385950",
      "shop_url": "https://bookwalker.jp/series/385950/",
      "volumes": 5,
      "publisher": "竹書房",
      "imprint": "バンブーコミックス",
-     "first": "2022-11-30",
+     "first": "2022-11",
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-385950"
+      "bw-385950",
+      "madb-t-6a643a0232f8"
+     ],
+     "folded_names": [
+      {
+       "publisher": "竹書房",
+       "imprint": "Bamboo comics",
+       "first": "2022-11"
+      }
      ]
     }
    ],
    "latest_any": "2026-07-10",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
-    },
     {
      "source": "BOOK☆WALKER",
      "holds": "volumes",
@@ -32416,45 +32277,25 @@
      "volumes": 4,
      "publisher": "ホーム社",
      "imprint": "集英社ホームコミックス. オギャー!!",
-     "first": "2024-03",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-45f9f68dc8e7"
-     ]
-    },
-    {
-     "work_id": "madb-t-465c2a8f5bba",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "ホーム社",
-     "imprint": "オギャー!!",
      "first": "2023-09-19",
      "last": null,
      "label": "none",
      "work_ids": [
+      "madb-t-45f9f68dc8e7",
       "madb-t-465c2a8f5bba"
+     ],
+     "folded_names": [
+      {
+       "publisher": "ホーム社",
+       "imprint": "オギャー!!",
+       "first": "2023-09-19"
+      }
      ]
     }
    ],
    "latest_any": "2026-07-10",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -45792,20 +45633,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C447301"
-     ]
-    },
-    {
-     "work_id": "madb-t-8e43062655eb",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "KADOKAWA",
-     "imprint": "電撃コミックスNEXT",
-     "first": "2023-12",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C447301",
       "madb-t-8e43062655eb"
+     ],
+     "folded_names": [
+      {
+       "publisher": "KADOKAWA",
+       "imprint": "電撃コミックスNEXT",
+       "first": "2023-12"
+      }
      ]
     }
    ],
@@ -45828,21 +45664,6 @@
      "holds": "attribution",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C447301"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
     }
    ],
    "work_en": {
@@ -55783,45 +55604,25 @@
      "volumes": 5,
      "publisher": "KADOKAWA",
      "imprint": "it COMICS",
-     "first": "2024-01",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-4ba4aadef2d3"
-     ]
-    },
-    {
-     "work_id": "madb-t-b033804ac3d3",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "KADOKAWA",
-     "imprint": "it COMICS",
      "first": "2023-06",
      "last": null,
      "label": "none",
      "work_ids": [
+      "madb-t-4ba4aadef2d3",
       "madb-t-b033804ac3d3"
+     ],
+     "folded_names": [
+      {
+       "publisher": "KADOKAWA",
+       "imprint": "it COMICS",
+       "first": "2023-06"
+      }
      ]
     }
    ],
    "latest_any": "2026-01-02",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -63300,41 +63101,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "madb-t-644b8133c6a3"
-     ]
-    },
-    {
-     "work_id": "madb-t-ffa0d442947f",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "白泉社",
-     "imprint": "YOUNG ANIMAL COMICS",
-     "first": "2024-03",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "madb-t-644b8133c6a3",
       "madb-t-ffa0d442947f"
+     ],
+     "folded_names": [
+      {
+       "publisher": "白泉社",
+       "imprint": "YOUNG ANIMAL COMICS",
+       "first": "2024-03"
+      }
      ]
     }
    ],
    "latest_any": "2025-09-14",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -63927,19 +63708,6 @@
    "id": "w00436",
    "print": [
     {
-     "work_id": "madb-t-cecbfbc06561",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "KADOKAWA",
-     "imprint": "電撃コミックスNEXT",
-     "first": "2024-05",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-cecbfbc06561"
-     ]
-    },
-    {
      "work_id": "madb-t-8262e510d282",
      "shop_url": null,
      "volumes": 5,
@@ -63949,28 +63717,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "madb-t-8262e510d282"
+      "madb-t-8262e510d282",
+      "madb-t-cecbfbc06561"
+     ],
+     "folded_names": [
+      {
+       "publisher": "KADOKAWA",
+       "imprint": "電撃コミックスNEXT",
+       "first": "2024-05"
+      }
      ]
     }
    ],
    "latest_any": "2025-09-01",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -65741,34 +65502,12 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=22",
      "page": 22
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "state_claims": [],
    "stated_next": null,
    "id": "w00455",
    "print": [
-    {
-     "work_id": "madb-t-eb8231d65b48",
-     "shop_url": "https://www.cmoa.jp/title/288408/",
-     "volumes": 0,
-     "publisher": "講談社",
-     "imprint": "KCデラックス",
-     "first": "2024-03",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-eb8231d65b48"
-     ]
-    },
     {
      "work_id": "bw-461192",
      "shop_url": "https://bookwalker.jp/series/461192/",
@@ -65779,28 +65518,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-461192"
+      "bw-461192",
+      "madb-t-eb8231d65b48"
+     ],
+     "folded_names": [
+      {
+       "publisher": "講談社",
+       "imprint": "KCデラックス",
+       "first": "2024-03"
+      }
      ]
     }
    ],
    "latest_any": "2025-08-12",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
-    },
     {
      "source": "BOOK☆WALKER",
      "holds": "volumes",
@@ -66200,14 +65932,6 @@
      "term": "IDコミックス　／　Yurihime comics",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C360665"
-    },
-    {
-     "kind": "imprint",
-     "rank": 1,
-     "type": "publisher",
-     "source": "一迅社",
-     "term": "Yurihime comics",
-     "read": "2026-08-07"
     }
    ],
    "state_claims": [],
@@ -66224,21 +65948,17 @@
      "last": null,
      "label": "yuri",
      "work_ids": [
-      "C360665"
-     ]
-    },
-    {
-     "work_id": "madb-t-de1410efb48e",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "一迅社",
-     "distributor": "講談社",
-     "imprint": "Yurihime comics",
-     "first": "2017-05",
-     "last": null,
-     "label": "yuri",
-     "work_ids": [
+      "C360665",
       "madb-t-de1410efb48e"
+     ],
+     "distributor": "講談社",
+     "folded_names": [
+      {
+       "publisher": "一迅社",
+       "distributor": "講談社",
+       "imprint": "Yurihime comics",
+       "first": "2017-05"
+      }
      ]
     }
    ],
@@ -66255,26 +65975,6 @@
      "holds": "volumes",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C360665"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "一迅社",
-     "holds": "attribution",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "一迅社",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
     },
     {
      "source": "openBD",
@@ -71793,16 +71493,6 @@
      "term": "YURIHIME COMICS",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C421850"
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=34",
-     "page": 34
     }
    ],
    "state_claims": [],
@@ -71811,7 +71501,7 @@
    "print": [
     {
      "work_id": "C421850",
-     "shop_url": null,
+     "shop_url": "https://bookwalker.jp/ded78908bb-723a-42ea-881c-93c8e058f825/",
      "volumes": 1,
      "publisher": "一迅社",
      "distributor": "講談社",
@@ -71820,20 +71510,15 @@
      "last": null,
      "label": "yuri",
      "work_ids": [
-      "C421850"
-     ]
-    },
-    {
-     "work_id": "bw-d78908bb-723a-42ea-881c-93c8e058f825",
-     "shop_url": "https://bookwalker.jp/ded78908bb-723a-42ea-881c-93c8e058f825/",
-     "volumes": 0,
-     "publisher": "一迅社",
-     "imprint": "百合姫コミックス",
-     "first": "2019-01-20",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C421850",
       "bw-d78908bb-723a-42ea-881c-93c8e058f825"
+     ],
+     "folded_names": [
+      {
+       "publisher": "一迅社",
+       "imprint": "百合姫コミックス",
+       "first": "2019-01-20"
+      }
      ]
     }
    ],
@@ -71855,18 +71540,6 @@
      "source": "一迅社",
      "holds": "attribution",
      "read": "2026-08-08"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/ded78908bb-723a-42ea-881c-93c8e058f825/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/ded78908bb-723a-42ea-881c-93c8e058f825/"
     }
    ],
    "work_en": {
@@ -74959,16 +74632,6 @@
      "kind": "shelf",
      "rank": 4,
      "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=21",
-     "page": 21
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
      "source": "コミックシーモア",
      "term": "百合・GL",
      "read": "2026-08-05",
@@ -74989,20 +74652,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C418294"
-     ]
-    },
-    {
-     "work_id": "bw-188653",
-     "shop_url": "https://bookwalker.jp/series/188653/",
-     "volumes": 0,
-     "publisher": "小学館",
-     "imprint": "裏サンデー女子部",
-     "first": "2019-01",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C418294",
       "bw-188653"
+     ],
+     "folded_names": [
+      {
+       "publisher": "小学館",
+       "imprint": "裏サンデー女子部",
+       "first": "2019-01"
+      }
      ]
     }
    ],
@@ -75025,23 +74683,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C418294"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/188653/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-06"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/188653/"
     }
    ],
    "work_en": {
@@ -79240,16 +78881,6 @@
      "kind": "shelf",
      "rank": 4,
      "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=26",
-     "page": 26
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
      "source": "コミックシーモア",
      "term": "百合・GL",
      "read": "2026-08-05",
@@ -79270,20 +78901,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C449480"
-     ]
-    },
-    {
-     "work_id": "bw-311871",
-     "shop_url": "https://bookwalker.jp/series/311871/",
-     "volumes": 0,
-     "publisher": "芳文社",
-     "imprint": "ＦＵＺコミックス",
-     "first": "2021-07",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C449480",
       "bw-311871"
+     ],
+     "folded_names": [
+      {
+       "publisher": "芳文社",
+       "imprint": "ＦＵＺコミックス",
+       "first": "2021-07"
+      }
      ]
     }
    ],
@@ -79306,23 +78932,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C449480"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/311871/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-06"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/311871/"
     }
    ],
    "work_en": {
@@ -83157,88 +82766,35 @@
    "id": "w00586",
    "print": [
     {
-     "work_id": "madb-t-db8dd71b2d91",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "一迅社",
-     "imprint": "",
-     "first": "2024-03",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-db8dd71b2d91"
-     ]
-    },
-    {
      "work_id": "madb-t-a5a453cec857",
      "shop_url": null,
      "volumes": 5,
      "publisher": "一迅社",
-     "imprint": "",
+     "imprint": "LAKE",
      "first": "2022-05",
      "last": null,
      "label": "none",
      "work_ids": [
-      "madb-t-a5a453cec857"
-     ]
-    },
-    {
-     "work_id": "madb-t-ef7172c11abb",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "一迅社",
-     "imprint": "LAKE",
-     "first": "2025-07-21",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "madb-t-a5a453cec857",
+      "madb-t-db8dd71b2d91",
       "madb-t-ef7172c11abb"
+     ],
+     "folded_names": [
+      {
+       "publisher": "一迅社",
+       "first": "2024-03"
+      },
+      {
+       "publisher": "一迅社",
+       "imprint": "LAKE",
+       "first": "2025-07-21"
+      }
      ]
     }
    ],
-   "latest_any": "2025-07-21",
-   "latest_any_kind": "volume",
+   "latest_any": "2025-01-24",
+   "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "一迅社",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "一迅社",
-     "holds": "attribution",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "一迅社",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "一迅社",
-     "holds": "attribution",
-     "read": "2026-08-08"
-    },
     {
      "source": "一迅社",
      "holds": "volumes",
@@ -83561,20 +83117,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C419177"
-     ]
-    },
-    {
-     "work_id": "madb-t-bf9e1bf98432",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "芳文社",
-     "imprint": "Kirara menu",
-     "first": "2023-02",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C419177",
       "madb-t-bf9e1bf98432"
+     ],
+     "folded_names": [
+      {
+       "publisher": "芳文社",
+       "imprint": "Kirara menu",
+       "first": "2023-02"
+      }
      ]
     }
    ],
@@ -83597,21 +83148,6 @@
      "holds": "attribution",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C419177"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
     }
    ],
    "work_en": {
@@ -87008,20 +86544,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C340797"
-     ]
-    },
-    {
-     "work_id": "madb-t-454fa730c1f3",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "KADOKAWA",
-     "imprint": "角川コミックス・エース",
-     "first": "2022-01",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C340797",
       "madb-t-454fa730c1f3"
+     ],
+     "folded_names": [
+      {
+       "publisher": "KADOKAWA",
+       "imprint": "角川コミックス・エース",
+       "first": "2022-01"
+      }
      ]
     }
    ],
@@ -87054,21 +86585,6 @@
      "holds": "attribution",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C340797"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
     }
    ],
    "work_en": {
@@ -90702,14 +90218,6 @@
      "source": "一迅社",
      "term": "IDコミックス. Yurihime comics",
      "read": "2026-08-07"
-    },
-    {
-     "kind": "imprint",
-     "rank": 1,
-     "type": "publisher",
-     "source": "一迅社",
-     "term": "Yurihime comics",
-     "read": "2026-08-07"
     }
    ],
    "state_claims": [],
@@ -90717,57 +90225,32 @@
    "id": "w00644",
    "print": [
     {
-     "work_id": "madb-t-c9f5a9cc2ddd",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "一迅社",
-     "distributor": "講談社",
-     "imprint": "Yurihime comics",
-     "first": "2024-09",
-     "last": null,
-     "label": "yuri",
-     "work_ids": [
-      "madb-t-c9f5a9cc2ddd"
-     ]
-    },
-    {
      "work_id": "madb-t-5f4cde3ca776",
      "shop_url": null,
      "volumes": 3,
      "publisher": "一迅社",
      "distributor": "講談社",
      "imprint": "IDコミックス. Yurihime comics",
-     "first": "2025-03-10",
+     "first": "2024-09",
      "last": null,
      "label": "yuri",
      "work_ids": [
-      "madb-t-5f4cde3ca776"
+      "madb-t-5f4cde3ca776",
+      "madb-t-c9f5a9cc2ddd"
+     ],
+     "folded_names": [
+      {
+       "publisher": "一迅社",
+       "distributor": "講談社",
+       "imprint": "Yurihime comics",
+       "first": "2024-09"
+      }
      ]
     }
    ],
-   "latest_any": "2025-03-10",
-   "latest_any_kind": "volume",
+   "latest_any": "2024-09-28",
+   "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "一迅社",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "一迅社",
-     "holds": "attribution",
-     "read": "2026-08-08"
-    },
     {
      "source": "一迅社",
      "holds": "volumes",
@@ -95041,45 +94524,25 @@
      "volumes": 4,
      "publisher": "KADOKAWA",
      "imprint": "単行本コミックス",
-     "first": "2023-12",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-9c520ad8fd63"
-     ]
-    },
-    {
-     "work_id": "madb-t-a3e0310c1105",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "KADOKAWA",
-     "imprint": "単行本コミックス",
      "first": "2022-01",
      "last": null,
      "label": "none",
      "work_ids": [
+      "madb-t-9c520ad8fd63",
       "madb-t-a3e0310c1105"
+     ],
+     "folded_names": [
+      {
+       "publisher": "KADOKAWA",
+       "imprint": "単行本コミックス",
+       "first": "2022-01"
+      }
      ]
     }
    ],
    "latest_any": "2024-07-17",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -101693,24 +101156,19 @@
      "volumes": 3,
      "publisher": "ホーム社",
      "imprint": "オギャー!!",
-     "first": "2024-05",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-7c09b1a5454c"
-     ]
-    },
-    {
-     "work_id": "madb-t-e3d7235448ef",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "ホーム社",
-     "imprint": "オギャー!!",
      "first": "2022-12",
      "last": null,
      "label": "none",
      "work_ids": [
+      "madb-t-7c09b1a5454c",
       "madb-t-e3d7235448ef"
+     ],
+     "folded_names": [
+      {
+       "publisher": "ホーム社",
+       "imprint": "オギャー!!",
+       "first": "2022-12"
+      }
      ]
     }
    ],
@@ -101724,24 +101182,9 @@
      "role": "漫画"
     }
    ],
-   "latest_any": "2024-05",
-   "latest_any_kind": "volume",
+   "latest_any": "2024-03-22",
+   "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -102322,41 +101765,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "madb-t-2afa474a2e35"
-     ]
-    },
-    {
-     "work_id": "madb-t-cabc5fa5d834",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "集英社",
-     "imprint": "JUMP COMICS+",
-     "first": "2024-03",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "madb-t-2afa474a2e35",
       "madb-t-cabc5fa5d834"
+     ],
+     "folded_names": [
+      {
+       "publisher": "集英社",
+       "imprint": "JUMP COMICS+",
+       "first": "2024-03"
+      }
      ]
     }
    ],
    "latest_any": "2024-03-16",
    "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -111296,19 +110719,6 @@
    "id": "w00807",
    "print": [
     {
-     "work_id": "madb-t-acae9ef696b4",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "講談社",
-     "imprint": "月刊少年マガジン",
-     "first": "2023-12",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-acae9ef696b4"
-     ]
-    },
-    {
      "work_id": "madb-t-6231afe73b19",
      "shop_url": "https://www.cmoa.jp/title/264068/",
      "volumes": 3,
@@ -111318,28 +110728,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "madb-t-6231afe73b19"
+      "madb-t-6231afe73b19",
+      "madb-t-acae9ef696b4"
+     ],
+     "folded_names": [
+      {
+       "publisher": "講談社",
+       "imprint": "月刊少年マガジン",
+       "first": "2023-12"
+      }
      ]
     }
    ],
-   "latest_any": "2023-12",
-   "latest_any_kind": "volume",
+   "latest_any": "2023-10-05",
+   "latest_any_kind": "chapter",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -122517,20 +121920,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C419186"
-     ]
-    },
-    {
-     "work_id": "madb-t-0d21defed71a",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "マッグガーデン",
-     "imprint": "Blade comics",
-     "first": "2021-12",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C419186",
       "madb-t-0d21defed71a"
+     ],
+     "folded_names": [
+      {
+       "publisher": "マッグガーデン",
+       "imprint": "Blade comics",
+       "first": "2021-12"
+      }
      ]
     }
    ],
@@ -122548,16 +121946,6 @@
      "holds": "attribution",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C419186"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
     }
    ],
    "work_en": {
@@ -128317,16 +127705,6 @@
      "kind": "shelf",
      "rank": 4,
      "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=17",
-     "page": 17
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
      "source": "コミックシーモア",
      "term": "百合・GL",
      "read": "2026-08-05",
@@ -128347,20 +127725,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C436993"
-     ]
-    },
-    {
-     "work_id": "bw-250140",
-     "shop_url": "https://bookwalker.jp/series/250140/",
-     "volumes": 0,
-     "publisher": "芳文社",
-     "imprint": "ＦＵＺコミックス",
-     "first": "2020-05",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C436993",
       "bw-250140"
+     ],
+     "folded_names": [
+      {
+       "publisher": "芳文社",
+       "imprint": "ＦＵＺコミックス",
+       "first": "2020-05"
+      }
      ]
     }
    ],
@@ -128383,23 +127756,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C436993"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/250140/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-06"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/250140/"
     }
    ],
    "work_en": {
@@ -128491,16 +127847,6 @@
      "kind": "shelf",
      "rank": 4,
      "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=2",
-     "page": 2
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
      "source": "コミックシーモア",
      "term": "百合・GL",
      "read": "2026-08-05",
@@ -128521,20 +127867,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C447385"
-     ]
-    },
-    {
-     "work_id": "bw-289561",
-     "shop_url": "https://bookwalker.jp/series/289561/",
-     "volumes": 0,
-     "publisher": "芳文社",
-     "imprint": "ＦＵＺコミックス",
-     "first": "2021-02",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C447385",
       "bw-289561"
+     ],
+     "folded_names": [
+      {
+       "publisher": "芳文社",
+       "imprint": "ＦＵＺコミックス",
+       "first": "2021-02"
+      }
      ]
     }
    ],
@@ -128557,23 +127898,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C447385"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/289561/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-06"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/289561/"
     }
    ],
    "work_en": {
@@ -132068,19 +131392,6 @@
    "id": "w00981",
    "print": [
     {
-     "work_id": "madb-t-3fea82eeeee3",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "小学館",
-     "imprint": "サンデーうぇぶり少年サンデーコミックス",
-     "first": "2024-01",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-3fea82eeeee3"
-     ]
-    },
-    {
      "work_id": "C449694",
      "shop_url": null,
      "volumes": 6,
@@ -132090,28 +131401,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C449694"
+      "C449694",
+      "madb-t-3fea82eeeee3"
+     ],
+     "folded_names": [
+      {
+       "publisher": "小学館",
+       "imprint": "サンデーうぇぶり少年サンデーコミックス",
+       "first": "2024-01"
+      }
      ]
     }
    ],
-   "latest_any": "2024-01",
+   "latest_any": "2021-10",
    "latest_any_kind": "volume",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-07"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -135293,16 +134597,6 @@
      "term": "百合",
      "read": "2026-08-11",
      "url": "https://comic-walker.com/detail/KC_002377_S"
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=33",
-     "page": 33
     }
    ],
    "state_claims": [],
@@ -135310,21 +134604,8 @@
    "id": "w01587",
    "print": [
     {
-     "work_id": "bw-107988",
-     "shop_url": "https://bookwalker.jp/series/107988/",
-     "volumes": 0,
-     "publisher": "KADOKAWA",
-     "imprint": "MFC",
-     "first": "2017-03-23",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "bw-107988"
-     ]
-    },
-    {
      "work_id": "C367890",
-     "shop_url": null,
+     "shop_url": "https://bookwalker.jp/series/107988/",
      "volumes": 3,
      "publisher": "KADOKAWA",
      "imprint": "MFC",
@@ -135332,7 +134613,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C367890"
+      "C367890",
+      "bw-107988"
+     ],
+     "folded_names": [
+      {
+       "publisher": "KADOKAWA",
+       "imprint": "MFC",
+       "first": "2017-03-23"
+      }
      ]
     }
    ],
@@ -135342,21 +134631,9 @@
      "role": "著者"
     }
    ],
-   "latest_any": "2017-03-23",
+   "latest_any": "2017-03",
    "latest_any_kind": "volume",
    "sourced_from": [
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/107988/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/107988/"
-    },
     {
      "source": "メディア芸術データベース",
      "holds": "volumes",
@@ -164401,15 +163678,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=32",
      "page": 32
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "state_claims": [],
@@ -164417,29 +163685,24 @@
    "id": "w01432",
    "print": [
     {
-     "work_id": "madb-t-0d7acc157425",
-     "shop_url": "https://www.cmoa.jp/title/150068/",
-     "volumes": 0,
+     "work_id": "bw-f8632617-3431-4b4d-b479-8cb587df2cd8",
+     "shop_url": "https://bookwalker.jp/def8632617-3431-4b4d-b479-8cb587df2cd8/",
+     "volumes": 1,
      "publisher": "KADOKAWA",
      "imprint": "MFC",
      "first": "2018-05",
      "last": null,
      "label": "none",
      "work_ids": [
+      "bw-f8632617-3431-4b4d-b479-8cb587df2cd8",
       "madb-t-0d7acc157425"
-     ]
-    },
-    {
-     "work_id": "bw-f8632617-3431-4b4d-b479-8cb587df2cd8",
-     "shop_url": "https://bookwalker.jp/def8632617-3431-4b4d-b479-8cb587df2cd8/",
-     "volumes": 1,
-     "publisher": "KADOKAWA",
-     "imprint": "MFC",
-     "first": "2018-05-26",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "bw-f8632617-3431-4b4d-b479-8cb587df2cd8"
+     ],
+     "folded_names": [
+      {
+       "publisher": "KADOKAWA",
+       "imprint": "MFC",
+       "first": "2018-05"
+      }
      ]
     }
    ],
@@ -164449,24 +163712,9 @@
      "role": "著者"
     }
    ],
-   "latest_any": "2018-05-26",
+   "latest_any": "2018-05",
    "latest_any_kind": "volume",
    "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
-    },
     {
      "source": "BOOK☆WALKER",
      "holds": "volumes",
@@ -165598,20 +164846,14 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-462356"
-     ]
-    },
-    {
-     "work_id": "bw-86d3b866-e81b-4c69-a751-430c868ad187",
-     "shop_url": "https://bookwalker.jp/de86d3b866-e81b-4c69-a751-430c868ad187/",
-     "volumes": 0,
-     "publisher": "東京漫画社",
-     "imprint": "comicGAGA",
-     "first": null,
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "bw-462356",
       "bw-86d3b866-e81b-4c69-a751-430c868ad187"
+     ],
+     "folded_names": [
+      {
+       "publisher": "東京漫画社",
+       "imprint": "comicGAGA"
+      }
      ]
     }
    ],
@@ -165640,18 +164882,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/series/462356/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de86d3b866-e81b-4c69-a751-430c868ad187/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de86d3b866-e81b-4c69-a751-430c868ad187/"
     }
    ],
    "work_en": {
@@ -169952,16 +169182,6 @@
      "kind": "shelf",
      "rank": 4,
      "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=8",
-     "page": 8
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
      "source": "コミックシーモア",
      "term": "百合・GL",
      "read": "2026-08-05",
@@ -169982,37 +169202,25 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C421181"
-     ]
-    },
-    {
-     "work_id": "bw-167971",
-     "shop_url": "https://bookwalker.jp/series/167971/",
-     "volumes": 0,
-     "publisher": "小学館",
-     "imprint": "やわらかスピリッツ",
-     "first": "2018-08-04",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "bw-167971"
-     ]
-    },
-    {
-     "work_id": "bw-249431",
-     "shop_url": "https://bookwalker.jp/series/249431/",
-     "volumes": 0,
-     "publisher": "小学館",
-     "imprint": "やわらかスピリッツ",
-     "first": "2018-08",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C421181",
+      "bw-167971",
       "bw-249431"
+     ],
+     "folded_names": [
+      {
+       "publisher": "小学館",
+       "imprint": "やわらかスピリッツ",
+       "first": "2018-08-04"
+      },
+      {
+       "publisher": "小学館",
+       "imprint": "やわらかスピリッツ",
+       "first": "2018-08"
+      }
      ]
     }
    ],
-   "latest_any": "2018-08-04",
+   "latest_any": "2018-08",
    "latest_any_kind": "volume",
    "sourced_from": [
     {
@@ -170031,35 +169239,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C421181"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/167971/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/167971/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/249431/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-06"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/249431/"
     }
    ],
    "work_en": {
@@ -196794,25 +195973,20 @@
      "last": null,
      "label": "yuri",
      "work_ids": [
-      "C416085"
-     ]
-    },
-    {
-     "work_id": "C438652",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "一迅社",
-     "distributor": "講談社",
-     "imprint": "Yurihime comics",
-     "first": "2018-07",
-     "last": null,
-     "label": "yuri",
-     "work_ids": [
+      "C416085",
       "C438652"
+     ],
+     "folded_names": [
+      {
+       "publisher": "一迅社",
+       "distributor": "講談社",
+       "imprint": "Yurihime comics",
+       "first": "2018-07"
+      }
      ]
     }
    ],
-   "latest_any": "2018-07",
+   "latest_any": "2017-10",
    "latest_any_kind": "volume",
    "evidence": [
     {
@@ -196836,27 +196010,6 @@
      "holds": "volumes",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C416085"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "一迅社",
-     "holds": "attribution",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "一迅社",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C438652"
     },
     {
      "source": "openBD",
@@ -200697,7 +199850,7 @@
    "print": [
     {
      "work_id": "C418820",
-     "shop_url": null,
+     "shop_url": "https://bookwalker.jp/series/168009/",
      "volumes": 2,
      "publisher": "一迅社",
      "distributor": "講談社",
@@ -200706,24 +199859,19 @@
      "last": null,
      "label": "yuri",
      "work_ids": [
-      "C418820"
-     ]
-    },
-    {
-     "work_id": "bw-168009",
-     "shop_url": "https://bookwalker.jp/series/168009/",
-     "volumes": 0,
-     "publisher": "一迅社",
-     "imprint": "百合姫コミックス",
-     "first": "2018-08-01",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C418820",
       "bw-168009"
+     ],
+     "folded_names": [
+      {
+       "publisher": "一迅社",
+       "imprint": "百合姫コミックス",
+       "first": "2018-08-01"
+      }
      ]
     }
    ],
-   "latest_any": "2018-08-01",
+   "latest_any": "2018-08",
    "latest_any_kind": "volume",
    "evidence": [
     {
@@ -200734,16 +199882,6 @@
      "term": "Yurihime comics",
      "read": "2026-08-07",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C418820"
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=28",
-     "page": 28
     }
    ],
    "sourced_from": [
@@ -200762,18 +199900,6 @@
      "source": "一迅社",
      "holds": "attribution",
      "read": "2026-08-08"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/168009/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/168009/"
     }
    ],
    "work_en": {
@@ -202334,36 +201460,20 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C419354"
-     ]
-    },
-    {
-     "work_id": "bw-78b437e7-ad7b-488f-99b8-c13e3fef75ff",
-     "shop_url": "https://bookwalker.jp/de78b437e7-ad7b-488f-99b8-c13e3fef75ff/",
-     "volumes": 0,
-     "publisher": "イースト・プレス",
-     "imprint": "",
-     "first": "2018-10-17",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C419354",
       "bw-78b437e7-ad7b-488f-99b8-c13e3fef75ff"
+     ],
+     "folded_names": [
+      {
+       "publisher": "イースト・プレス",
+       "first": "2018-10-17"
+      }
      ]
     }
    ],
-   "latest_any": "2018-10-17",
+   "latest_any": "2018-10",
    "latest_any_kind": "volume",
    "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=22",
-     "page": 22
-    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -202391,18 +201501,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C419354"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de78b437e7-ad7b-488f-99b8-c13e3fef75ff/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de78b437e7-ad7b-488f-99b8-c13e3fef75ff/"
     }
    ],
    "work_en": {
@@ -204020,36 +203118,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C420405"
-     ]
-    },
-    {
-     "work_id": "bw-a8ee7e9f-2822-439e-b435-594ea99dd2e8",
-     "shop_url": "https://bookwalker.jp/dea8ee7e9f-2822-439e-b435-594ea99dd2e8/",
-     "volumes": 0,
-     "publisher": "少年画報社",
-     "imprint": "ヤングキング",
-     "first": "2019-03-25",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C420405",
       "bw-a8ee7e9f-2822-439e-b435-594ea99dd2e8"
+     ],
+     "folded_names": [
+      {
+       "publisher": "少年画報社",
+       "imprint": "ヤングキング",
+       "first": "2019-03-25"
+      }
      ]
     }
    ],
-   "latest_any": "2019-03-25",
+   "latest_any": "2019-03",
    "latest_any_kind": "volume",
    "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=34",
-     "page": 34
-    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -204077,18 +203160,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C420405"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/dea8ee7e9f-2822-439e-b435-594ea99dd2e8/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/dea8ee7e9f-2822-439e-b435-594ea99dd2e8/"
     }
    ],
    "work_en": {
@@ -206628,7 +205699,7 @@
    "print": [
     {
      "work_id": "C423569",
-     "shop_url": null,
+     "shop_url": "https://bookwalker.jp/de1391e2a8-8884-4fef-83dc-5ad9cfc51004/",
      "volumes": 1,
      "publisher": "一迅社",
      "distributor": "講談社",
@@ -206637,37 +205708,21 @@
      "last": null,
      "label": "yuri",
      "work_ids": [
-      "C423569"
-     ]
-    },
-    {
-     "work_id": "bw-1391e2a8-8884-4fef-83dc-5ad9cfc51004",
-     "shop_url": "https://bookwalker.jp/de1391e2a8-8884-4fef-83dc-5ad9cfc51004/",
-     "volumes": 0,
-     "publisher": "コンパス",
-     "imprint": "コンパスコミックス",
-     "first": "2018-02",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C423569",
       "bw-1391e2a8-8884-4fef-83dc-5ad9cfc51004"
+     ],
+     "folded_names": [
+      {
+       "publisher": "コンパス",
+       "imprint": "コンパスコミックス",
+       "first": "2018-02"
+      }
      ]
     }
    ],
    "latest_any": "2018-02",
    "latest_any_kind": "volume",
-   "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=36",
-     "page": 36
-    }
-   ],
+   "evidence": [],
    "sourced_from": [
     {
      "source": "一迅社",
@@ -206684,23 +205739,6 @@
      "source": "一迅社",
      "holds": "attribution",
      "read": "2026-08-08"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de1391e2a8-8884-4fef-83dc-5ad9cfc51004/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-06"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de1391e2a8-8884-4fef-83dc-5ad9cfc51004/"
     }
    ],
    "work_en": {
@@ -207496,36 +206534,20 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C432165"
-     ]
-    },
-    {
-     "work_id": "bw-5fd4239b-a945-4fe7-a7c2-5d79bdfa8bae",
-     "shop_url": "https://bookwalker.jp/de5fd4239b-a945-4fe7-a7c2-5d79bdfa8bae/",
-     "volumes": 0,
-     "publisher": "イースト・プレス",
-     "imprint": "",
-     "first": "2019-06-15",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C432165",
       "bw-5fd4239b-a945-4fe7-a7c2-5d79bdfa8bae"
+     ],
+     "folded_names": [
+      {
+       "publisher": "イースト・プレス",
+       "first": "2019-06-15"
+      }
      ]
     }
    ],
-   "latest_any": "2019-06-15",
+   "latest_any": "2019-06",
    "latest_any_kind": "volume",
    "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=15",
-     "page": 15
-    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -207553,18 +206575,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C432165"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de5fd4239b-a945-4fe7-a7c2-5d79bdfa8bae/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de5fd4239b-a945-4fe7-a7c2-5d79bdfa8bae/"
     }
    ],
    "work_en": {
@@ -209707,36 +208717,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C433149"
-     ]
-    },
-    {
-     "work_id": "bw-212250",
-     "shop_url": "https://bookwalker.jp/series/212250/",
-     "volumes": 0,
-     "publisher": "徳間書店",
-     "imprint": "RYU COMICS",
-     "first": "2019-08-01",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C433149",
       "bw-212250"
+     ],
+     "folded_names": [
+      {
+       "publisher": "徳間書店",
+       "imprint": "RYU COMICS",
+       "first": "2019-08-01"
+      }
      ]
     }
    ],
-   "latest_any": "2019-08-01",
+   "latest_any": "2019-08",
    "latest_any_kind": "volume",
    "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=32",
-     "page": 32
-    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -209764,18 +208759,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C433149"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/212250/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/212250/"
     }
    ],
    "work_en": {
@@ -210471,36 +209454,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C433621"
-     ]
-    },
-    {
-     "work_id": "bw-7fb7ed9b-b626-4155-9e95-9f275034b22f",
-     "shop_url": "https://bookwalker.jp/de7fb7ed9b-b626-4155-9e95-9f275034b22f/",
-     "volumes": 0,
-     "publisher": "ジーオーティー",
-     "imprint": "girls×garden comics",
-     "first": "2019-09-14",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C433621",
       "bw-7fb7ed9b-b626-4155-9e95-9f275034b22f"
+     ],
+     "folded_names": [
+      {
+       "publisher": "ジーオーティー",
+       "imprint": "girls×garden comics",
+       "first": "2019-09-14"
+      }
      ]
     }
    ],
-   "latest_any": "2019-09-14",
+   "latest_any": "2019-09",
    "latest_any_kind": "volume",
    "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=28",
-     "page": 28
-    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -210523,18 +209491,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C433621"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de7fb7ed9b-b626-4155-9e95-9f275034b22f/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de7fb7ed9b-b626-4155-9e95-9f275034b22f/"
     }
    ],
    "work_en": {
@@ -210632,36 +209588,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C433623"
-     ]
-    },
-    {
-     "work_id": "bw-4e855b34-5101-404c-9c9a-11a37636042b",
-     "shop_url": "https://bookwalker.jp/de4e855b34-5101-404c-9c9a-11a37636042b/",
-     "volumes": 0,
-     "publisher": "ジーオーティー",
-     "imprint": "girls×garden comics",
-     "first": "2019-09-14",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C433623",
       "bw-4e855b34-5101-404c-9c9a-11a37636042b"
+     ],
+     "folded_names": [
+      {
+       "publisher": "ジーオーティー",
+       "imprint": "girls×garden comics",
+       "first": "2019-09-14"
+      }
      ]
     }
    ],
-   "latest_any": "2019-09-14",
+   "latest_any": "2019-09",
    "latest_any_kind": "volume",
    "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=35",
-     "page": 35
-    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -210684,18 +209625,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C433623"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de4e855b34-5101-404c-9c9a-11a37636042b/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de4e855b34-5101-404c-9c9a-11a37636042b/"
     }
    ],
    "work_en": {
@@ -211802,36 +210731,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C436198"
-     ]
-    },
-    {
-     "work_id": "bw-1c12c859-bef3-4ae7-a7eb-4363245d8654",
-     "shop_url": "https://bookwalker.jp/de1c12c859-bef3-4ae7-a7eb-4363245d8654/",
-     "volumes": 0,
-     "publisher": "新書館",
-     "imprint": "ウィングス・コミックス",
-     "first": "2020-04-10",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C436198",
       "bw-1c12c859-bef3-4ae7-a7eb-4363245d8654"
+     ],
+     "folded_names": [
+      {
+       "publisher": "新書館",
+       "imprint": "ウィングス・コミックス",
+       "first": "2020-04-10"
+      }
      ]
     }
    ],
-   "latest_any": "2020-04-10",
+   "latest_any": "2020-04",
    "latest_any_kind": "volume",
    "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=1",
-     "page": 1
-    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -211854,18 +210768,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C436198"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de1c12c859-bef3-4ae7-a7eb-4363245d8654/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de1c12c859-bef3-4ae7-a7eb-4363245d8654/"
     }
    ],
    "work_en": {
@@ -213930,36 +212832,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C447781"
-     ]
-    },
-    {
-     "work_id": "bw-263641",
-     "shop_url": "https://bookwalker.jp/series/263641/",
-     "volumes": 0,
-     "publisher": "秋田書店",
-     "imprint": "少年チャンピオン・コミックス",
-     "first": "2020-09-15",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C447781",
       "bw-263641"
+     ],
+     "folded_names": [
+      {
+       "publisher": "秋田書店",
+       "imprint": "少年チャンピオン・コミックス",
+       "first": "2020-09-15"
+      }
      ]
     }
    ],
-   "latest_any": "2020-09-15",
+   "latest_any": "2020-09",
    "latest_any_kind": "volume",
    "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=7",
-     "page": 7
-    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -213987,18 +212874,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C447781"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/263641/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/263641/"
     }
    ],
    "work_en": {
@@ -214467,36 +213342,21 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "C448120"
-     ]
-    },
-    {
-     "work_id": "bw-279930",
-     "shop_url": "https://bookwalker.jp/series/279930/",
-     "volumes": 0,
-     "publisher": "新書館",
-     "imprint": "ウィングス・コミックス",
-     "first": "2020-12-10",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "C448120",
       "bw-279930"
+     ],
+     "folded_names": [
+      {
+       "publisher": "新書館",
+       "imprint": "ウィングス・コミックス",
+       "first": "2020-12-10"
+      }
      ]
     }
    ],
-   "latest_any": "2020-12-10",
+   "latest_any": "2020-12",
    "latest_any_kind": "volume",
    "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=30",
-     "page": 30
-    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -214524,18 +213384,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C448120"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/279930/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/279930/"
     }
    ],
    "work_en": {
@@ -220884,20 +219732,14 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-0844c6e3-a6bd-4a46-aa53-e68f251f2a36"
-     ]
-    },
-    {
-     "work_id": "bw-314852",
-     "shop_url": "https://bookwalker.jp/series/314852/",
-     "volumes": 0,
-     "publisher": "クロスフォリオ出版",
-     "imprint": "ガレットワークス",
-     "first": null,
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "bw-0844c6e3-a6bd-4a46-aa53-e68f251f2a36",
       "bw-314852"
+     ],
+     "folded_names": [
+      {
+       "publisher": "クロスフォリオ出版",
+       "imprint": "ガレットワークス"
+      }
      ]
     }
    ],
@@ -220931,18 +219773,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/de0844c6e3-a6bd-4a46-aa53-e68f251f2a36/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/314852/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/314852/"
     }
    ],
    "work_en": {
@@ -228844,28 +227674,23 @@
      "volumes": 29,
      "publisher": "スクウェア・エニックス",
      "imprint": "ヤングガンガンコミックス",
-     "first": "2014-04-25",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "bw-15279"
-     ]
-    },
-    {
-     "work_id": "C338361",
-     "shop_url": "https://www.cmoa.jp/title/76203/",
-     "volumes": 0,
-     "publisher": "スクウェア・エニックス",
-     "imprint": "ヤングガンガンコミックス",
      "first": "2014-04",
      "last": null,
      "label": "none",
      "work_ids": [
+      "bw-15279",
       "C338361"
+     ],
+     "folded_names": [
+      {
+       "publisher": "スクウェア・エニックス",
+       "imprint": "ヤングガンガンコミックス",
+       "first": "2014-04"
+      }
      ]
     }
    ],
-   "latest_any": "2014-04-25",
+   "latest_any": "2014-04",
    "latest_any_kind": "volume",
    "evidence": [
     {
@@ -228877,15 +227702,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=30",
      "page": 30
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "sourced_from": [
@@ -228900,23 +227716,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/series/15279/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C338361"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C338361"
     }
    ],
    "work_en": {
@@ -256368,21 +255167,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-349064"
-     ]
-    },
-    {
-     "work_id": "bw-dc7f51c0-6e3a-4b7c-b599-837a9751bcd9",
-     "shop_url": "https://bookwalker.jp/dedc7f51c0-6e3a-4b7c-b599-837a9751bcd9/",
-     "volumes": 0,
-     "publisher": "クロスフォリオ出版",
-     "imprint": "ガレットワークス",
-     "first": null,
-     "delivered_from": "2022-03-25",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "bw-349064",
       "bw-dc7f51c0-6e3a-4b7c-b599-837a9751bcd9"
+     ],
+     "delivered_from": "2022-03-25",
+     "folded_names": [
+      {
+       "publisher": "クロスフォリオ出版",
+       "imprint": "ガレットワークス"
+      }
      ]
     }
    ],
@@ -256407,27 +255200,15 @@
     },
     {
      "source": "BOOK☆WALKER",
-     "holds": "attribution",
+     "holds": "delivery-date",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/series/349064/"
     },
     {
      "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/dedc7f51c0-6e3a-4b7c-b599-837a9751bcd9/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "delivery-date",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/dedc7f51c0-6e3a-4b7c-b599-837a9751bcd9/"
-    },
-    {
-     "source": "BOOK☆WALKER",
      "holds": "attribution",
      "read": "2026-08-05",
-     "url": "https://bookwalker.jp/dedc7f51c0-6e3a-4b7c-b599-837a9751bcd9/"
+     "url": "https://bookwalker.jp/series/349064/"
     }
    ],
    "work_en": {
@@ -257149,21 +255930,14 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-353777"
-     ]
-    },
-    {
-     "work_id": "bw-357269",
-     "shop_url": "https://bookwalker.jp/series/357269/",
-     "volumes": 0,
-     "publisher": "クロスフォリオ出版",
-     "imprint": "BLIC-GL",
-     "first": null,
-     "delivered_from": "2022-05-27",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "bw-353777",
       "bw-357269"
+     ],
+     "folded_names": [
+      {
+       "publisher": "クロスフォリオ出版",
+       "imprint": "BLIC-GL"
+      }
      ]
     }
    ],
@@ -257197,24 +255971,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/series/353777/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/357269/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "delivery-date",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/357269/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/357269/"
     }
    ],
    "work_en": {
@@ -283871,21 +282627,14 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-522692"
-     ]
-    },
-    {
-     "work_id": "bw-74320164-60e0-4288-ad8d-05f9c4814e11",
-     "shop_url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/",
-     "volumes": 0,
-     "publisher": "ナンバーナイン",
-     "imprint": "百合コレ",
-     "first": null,
-     "delivered_from": "2026-02-13",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "bw-522692",
       "bw-74320164-60e0-4288-ad8d-05f9c4814e11"
+     ],
+     "folded_names": [
+      {
+       "publisher": "ナンバーナイン",
+       "imprint": "百合コレ"
+      }
      ]
     }
    ],
@@ -283919,24 +282668,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/series/522692/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "delivery-date",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/de74320164-60e0-4288-ad8d-05f9c4814e11/"
     }
    ],
    "work_en": {
@@ -286120,28 +284851,22 @@
      "volumes": 2,
      "publisher": "forcs",
      "imprint": "じるみて",
-     "first": "2025-06-27",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "bw-533813"
-     ]
-    },
-    {
-     "work_id": "madb-t-c286359598f4",
-     "shop_url": "https://www.cmoa.jp/title/327296/",
-     "volumes": 0,
-     "publisher": "viviON viviON THOTH",
-     "imprint": "",
      "first": "2025-06-18",
      "last": null,
      "label": "none",
      "work_ids": [
+      "bw-533813",
       "madb-t-c286359598f4"
+     ],
+     "folded_names": [
+      {
+       "publisher": "viviON viviON THOTH",
+       "first": "2025-06-18"
+      }
      ]
     }
    ],
-   "latest_any": "2025-06-27",
+   "latest_any": "2025-06-18",
    "latest_any_kind": "volume",
    "evidence": [
     {
@@ -286153,15 +284878,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=25",
      "page": 25
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "sourced_from": [
@@ -286176,21 +284892,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/series/533813/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
     }
    ],
    "work_en": {
@@ -293308,20 +292009,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-578432"
-     ]
-    },
-    {
-     "work_id": "madb-t-e5b1c420f32b",
-     "shop_url": "https://www.cmoa.jp/title/356017/",
-     "volumes": 0,
-     "publisher": "秋田書店",
-     "imprint": "SHŌNEN CHAMPION COMICS",
-     "first": "2026-04-22",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "bw-578432",
       "madb-t-e5b1c420f32b"
+     ],
+     "folded_names": [
+      {
+       "publisher": "秋田書店",
+       "imprint": "SHŌNEN CHAMPION COMICS",
+       "first": "2026-04-22"
+      }
      ]
     }
    ],
@@ -293337,15 +292033,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=11",
      "page": 11
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "sourced_from": [
@@ -293365,21 +292052,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/series/578432/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
     }
    ],
    "work_en": {
@@ -299193,28 +297865,22 @@
      "volumes": 1,
      "publisher": "祥伝社",
      "imprint": "FEEL COMICS",
-     "first": "2004-08-07",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "bw-60b413db-bd19-4337-aca1-95737e5d5748"
-     ]
-    },
-    {
-     "work_id": "C319020",
-     "shop_url": "https://www.cmoa.jp/title/57392/",
-     "volumes": 0,
-     "publisher": "詳伝社",
-     "imprint": "",
      "first": "2004-08",
      "last": null,
      "label": "none",
      "work_ids": [
+      "bw-60b413db-bd19-4337-aca1-95737e5d5748",
       "C319020"
+     ],
+     "folded_names": [
+      {
+       "publisher": "詳伝社",
+       "first": "2004-08"
+      }
      ]
     }
    ],
-   "latest_any": "2004-08-07",
+   "latest_any": "2004-08",
    "latest_any_kind": "volume",
    "evidence": [
     {
@@ -299226,15 +297892,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=27",
      "page": 27
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "sourced_from": [
@@ -299249,18 +297906,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/de60b413db-bd19-4337-aca1-95737e5d5748/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C319020"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C319020"
     }
    ],
    "work_en": {
@@ -324603,25 +323248,20 @@
      "shop_url": "https://bookwalker.jp/de9d2c3776-c077-4e4f-aef3-ae1ebf389ee9/",
      "volumes": 1,
      "publisher": "光文社",
-     "imprint": "",
-     "first": "2012-06",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "bw-9d2c3776-c077-4e4f-aef3-ae1ebf389ee9"
-     ]
-    },
-    {
-     "work_id": "C366420",
-     "shop_url": "https://www.cmoa.jp/title/132610/",
-     "volumes": 0,
-     "publisher": "光文社",
      "imprint": "Kobunshaアンソロジー",
      "first": "2012-06",
      "last": null,
      "label": "none",
      "work_ids": [
+      "bw-9d2c3776-c077-4e4f-aef3-ae1ebf389ee9",
       "C366420"
+     ],
+     "folded_names": [
+      {
+       "publisher": "光文社",
+       "imprint": "Kobunshaアンソロジー",
+       "first": "2012-06"
+      }
      ]
     }
    ],
@@ -324637,15 +323277,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=15",
      "page": 15
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "sourced_from": [
@@ -324660,18 +323291,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/de9d2c3776-c077-4e4f-aef3-ae1ebf389ee9/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C366420"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C366420"
     }
    ],
    "work_en": {
@@ -326992,20 +325611,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-a4725ae0-dc6d-4753-8346-ecc93f998ec9"
-     ]
-    },
-    {
-     "work_id": "madb-t-251e3e5e8c18",
-     "shop_url": "https://www.cmoa.jp/title/347609/",
-     "volumes": 0,
-     "publisher": "竹書房",
-     "imprint": "Bamboo comics. BCf",
-     "first": "2026-01-16",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "bw-a4725ae0-dc6d-4753-8346-ecc93f998ec9",
       "madb-t-251e3e5e8c18"
+     ],
+     "folded_names": [
+      {
+       "publisher": "竹書房",
+       "imprint": "Bamboo comics. BCf",
+       "first": "2026-01-16"
+      }
      ]
     }
    ],
@@ -327021,15 +325635,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=35",
      "page": 35
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "sourced_from": [
@@ -327044,21 +325649,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/dea4725ae0-dc6d-4753-8346-ecc93f998ec9/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
     }
    ],
    "work_en": {
@@ -335207,28 +333797,23 @@
      "volumes": 1,
      "publisher": "少年画報社",
      "imprint": "ヤングキング",
-     "first": "2023-07-27",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "bw-ba861696-210f-406c-9b5d-6daf68709c63"
-     ]
-    },
-    {
-     "work_id": "madb-t-06db852dea73",
-     "shop_url": "https://www.cmoa.jp/title/272682/",
-     "volumes": 0,
-     "publisher": "少年画報社",
-     "imprint": "YKコミックス",
      "first": "2023-07",
      "last": null,
      "label": "none",
      "work_ids": [
+      "bw-ba861696-210f-406c-9b5d-6daf68709c63",
       "madb-t-06db852dea73"
+     ],
+     "folded_names": [
+      {
+       "publisher": "少年画報社",
+       "imprint": "YKコミックス",
+       "first": "2023-07"
+      }
      ]
     }
    ],
-   "latest_any": "2023-07-27",
+   "latest_any": "2023-07",
    "latest_any_kind": "volume",
    "evidence": [
     {
@@ -335240,15 +333825,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=18",
      "page": 18
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "sourced_from": [
@@ -335263,21 +333839,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/deba861696-210f-406c-9b5d-6daf68709c63/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
     }
    ],
    "work_en": {
@@ -338899,35 +337460,23 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-c1048807-fdd9-402e-b394-11570023aa15"
-     ]
-    },
-    {
-     "work_id": "madb-t-17cfb9510f3f",
-     "shop_url": null,
-     "volumes": 0,
-     "publisher": "一迅社",
-     "distributor": "講談社",
-     "imprint": "IDコミックス. Yurihime comics",
-     "first": "2025-01-13",
-     "last": null,
-     "label": "yuri",
-     "work_ids": [
+      "bw-c1048807-fdd9-402e-b394-11570023aa15",
       "madb-t-17cfb9510f3f"
+     ],
+     "distributor": "講談社",
+     "folded_names": [
+      {
+       "publisher": "一迅社",
+       "distributor": "講談社",
+       "imprint": "IDコミックス. Yurihime comics",
+       "first": "2025-01-13"
+      }
      ]
     }
    ],
    "latest_any": "2025-01-13",
    "latest_any_kind": "volume",
    "evidence": [
-    {
-     "kind": "imprint",
-     "rank": 1,
-     "type": "publisher",
-     "source": "一迅社",
-     "term": "IDコミックス. Yurihime comics",
-     "read": "2026-08-07"
-    },
     {
      "kind": "shelf",
      "rank": 4,
@@ -338956,26 +337505,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/dec1048807-fdd9-402e-b394-11570023aa15/"
-    },
-    {
-     "source": "一迅社",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-07"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "一迅社",
-     "holds": "attribution",
-     "read": "2026-08-08"
     }
    ],
    "work_en": {
@@ -352904,20 +351433,15 @@
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-dfc3ae81-c96c-4377-ae57-f33fab758cf8"
-     ]
-    },
-    {
-     "work_id": "madb-t-4a74adb03fbe",
-     "shop_url": "https://www.cmoa.jp/title/330636/",
-     "volumes": 0,
-     "publisher": "光文社",
-     "imprint": "熱帯COMICS",
-     "first": "2025-07-11",
-     "last": null,
-     "label": "none",
-     "work_ids": [
+      "bw-dfc3ae81-c96c-4377-ae57-f33fab758cf8",
       "madb-t-4a74adb03fbe"
+     ],
+     "folded_names": [
+      {
+       "publisher": "光文社",
+       "imprint": "熱帯COMICS",
+       "first": "2025-07-11"
+      }
      ]
     }
    ],
@@ -352933,15 +351457,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=18",
      "page": 18
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "sourced_from": [
@@ -352961,21 +351476,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/dedfc3ae81-c96c-4377-ae57-f33fab758cf8/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
     }
    ],
    "work_en": {
@@ -359096,28 +357596,23 @@
      "volumes": 1,
      "publisher": "新書館",
      "imprint": "ひらり、コミックス",
-     "first": "2022-07-10",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "bw-ee43d6d4-2965-4840-b7db-a47bfcab91d7"
-     ]
-    },
-    {
-     "work_id": "madb-t-19874d1c2c81",
-     "shop_url": "https://www.cmoa.jp/title/245900/",
-     "volumes": 0,
-     "publisher": "新書館",
-     "imprint": "hirari、comics",
      "first": "2022-07",
      "last": null,
      "label": "none",
      "work_ids": [
+      "bw-ee43d6d4-2965-4840-b7db-a47bfcab91d7",
       "madb-t-19874d1c2c81"
+     ],
+     "folded_names": [
+      {
+       "publisher": "新書館",
+       "imprint": "hirari、comics",
+       "first": "2022-07"
+      }
      ]
     }
    ],
-   "latest_any": "2022-07-10",
+   "latest_any": "2022-07",
    "latest_any_kind": "volume",
    "evidence": [
     {
@@ -359129,15 +357624,6 @@
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=7",
      "page": 7
-    },
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
     }
    ],
    "sourced_from": [
@@ -359152,21 +357638,6 @@
      "holds": "attribution",
      "read": "2026-08-05",
      "url": "https://bookwalker.jp/deee43d6d4-2965-4840-b7db-a47bfcab91d7/"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-08"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
     }
    ],
    "work_en": {
