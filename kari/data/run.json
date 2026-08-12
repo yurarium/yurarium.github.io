@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-12",
- "releases": 1286,
+ "generated": "2026-08-13",
+ "releases": 1276,
  "platforms": 23,
  "works": 2551,
  "series_rows": 3001,
@@ -11,7 +11,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 7,
+   "age_days": 8,
    "in_scope": true,
    "empty": false
   },
@@ -21,7 +21,7 @@
    "works": 129,
    "rows": 6185,
    "retrieved": "2026-08-13",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -31,7 +31,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 7,
+   "age_days": 8,
    "in_scope": true,
    "empty": false
   },
@@ -41,7 +41,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 5,
+   "age_days": 6,
    "in_scope": true,
    "empty": false
   },
@@ -51,7 +51,7 @@
    "works": 694,
    "rows": 7750,
    "retrieved": "2026-08-13",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -61,7 +61,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 4,
+   "age_days": 5,
    "in_scope": true,
    "empty": false
   },
@@ -71,7 +71,7 @@
    "works": 971,
    "rows": 7403,
    "retrieved": "2026-08-13",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -81,7 +81,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 6,
+   "age_days": 7,
    "in_scope": true,
    "empty": false
   },
@@ -91,7 +91,7 @@
    "works": 920,
    "rows": 2366,
    "retrieved": "2026-08-07",
-   "age_days": 5,
+   "age_days": 6,
    "in_scope": true,
    "empty": false
   },
@@ -101,7 +101,7 @@
    "works": 1176,
    "rows": 7579,
    "retrieved": "2026-08-13",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -111,7 +111,7 @@
    "works": 820,
    "rows": 2076,
    "retrieved": "2026-08-08",
-   "age_days": 4,
+   "age_days": 5,
    "in_scope": true,
    "empty": false
   },
@@ -121,7 +121,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 10,
+   "age_days": 11,
    "in_scope": true,
    "empty": false
   },
@@ -131,7 +131,7 @@
    "works": 529,
    "rows": 7398,
    "retrieved": "2026-08-13",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   }
@@ -4688,9 +4688,9 @@
   {
    "platform": "COMIC FUZ",
    "date": "2026-08-13",
-   "releases": 43,
-   "distinct_works": 3,
-   "median_per_day": 2.0,
+   "releases": 44,
+   "distinct_works": 4,
+   "median_per_day": 2,
    "example_work": "IDOL×IDOL STORY！"
   }
  ],
@@ -11538,30 +11538,30 @@
    },
    {
     "week": "2026-08-09",
-    "n": 82
+    "n": 84
    }
   ],
   "trimmed_weeks": 4,
-  "pre_tracking_releases": 1040,
+  "pre_tracking_releases": 1028,
   "tracking_from": "2026-08-02"
  },
  "access_modes": {
-  "free": 814,
-  "purchase": 305,
-  "free-timed": 114
+  "purchase": 304,
+  "free": 808,
+  "free-timed": 112
  },
  "update_kinds": {
-  "new-chapter": 1193,
+  "new-chapter": 1184,
   "other": 26,
   "oneshot": 25,
-  "new-series": 33,
+  "new-series": 32,
   "final": 8,
   "skipped": 1
  },
  "identification": {
-  "discovery-candidate": 920,
+  "discovery-candidate": 913,
   "known-work-match": 18,
-  "platform-genre": 348
+  "platform-genre": 345
  },
  "collapsed": {
   "duplicate_chapters": 86,
@@ -11570,7 +11570,7 @@
   "samples": 36
  },
  "filled": {
-  "author": 64,
+  "author": 60,
   "access": 144
  }
 }
