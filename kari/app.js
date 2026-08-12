@@ -2529,7 +2529,12 @@ function volLabel(v) {
   /* A TWO OR THREE VOLUME SET IS NUMBERED 上 中 下, NOT 1 2 3. VOLPART already orders them and
      nothing rendered them, so 17 volumes reached an English page as a bare 上 or 下巻. English
      publishing calls these parts, and the number is the position the set puts them in. */
-  const part = VOLPART[raw] || VOLPART[raw.replace(/巻$/, '')];
+  /* WHICH PART, over the set this work uses and not off a fixed table. 上下 is two parts and
+     上中下 is three, and both spell 下 the same way: the table said 3, so a two volume work read
+     `Part 1` and `Part 3`. The build works it out over the run's own volumes and ships it as
+     `number_n`; the table is what is left for a row that reached here without one. */
+  const word = VOLPART[raw] || VOLPART[raw.replace(/巻$/, '')];
+  const part = word && (Number.isFinite(at) ? at : word);
   if (part) return T(raw, 'part ' + part);
   /* A DESIGNATION THE BUILD PLACED IN THE RUN, said in the reader's language. `創刊号` reached an
      English page as itself, above `vol. 2`, because nothing here knew it was the first issue. The

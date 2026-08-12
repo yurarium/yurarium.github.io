@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-12T20:14:15+00:00",
+ "generated": "2026-08-12T20:25:49+00:00",
  "since_last": {
-  "at": "2026-08-12T20:00:49+00:00",
+  "at": "2026-08-12T20:23:33+00:00",
   "statistics": {}
  },
  "means": {
@@ -703,8 +703,8 @@
    {
     "name": "volume rows with no publication date",
     "means": "volume rows a reader can reach that state no publication date, all of them BOOK☆WALKER's: the shop states 底本発行日 for the volumes whose print edition it recorded and nothing for the rest. No ISBN-keyed enrichment can reach them because BOOK☆WALKER states no ISBN, so the route is コミックシーモア's per-volume page, which states both. A rise means new undated works or a capture that stopped dating rows it used to.",
-    "budget": 2486,
-    "value": 2486
+    "budget": 2469,
+    "value": 2469
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -978,7 +978,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-12T20:00:48+00:00",
+  "previous_at": "2026-08-12T20:23:32+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1182,7 +1182,7 @@
     "updates naming a work we do not hold": 18,
     "volume numbers a page draws twice": 5,
     "volume rows a page counts but cannot list": 0,
-    "volume rows with no publication date": 2486,
+    "volume rows with no publication date": 2469,
     "volumes with an isbn and no date": 0,
     "works holding fewer volumes than the shop states": 69,
     "works holding more volumes than the shop states": 25,
@@ -1219,6 +1219,6 @@
   "volumes": 6038,
   "with_identifier": 3001,
   "chapters": 26740,
-  "delivery_dated": 1037
+  "delivery_dated": 1036
  }
 }
