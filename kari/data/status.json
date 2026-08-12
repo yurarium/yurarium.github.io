@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-12T17:10:58+00:00",
+ "generated": "2026-08-12T17:38:33+00:00",
  "since_last": {
-  "at": "2026-08-12T17:08:06+00:00",
+  "at": "2026-08-12T17:36:10+00:00",
   "statistics": {}
  },
  "means": {
@@ -344,7 +344,7 @@
     "name": "kana left in a romanisation",
     "means": "strings the shipped names file offers in place of Japanese that still hold a kana character, which undoes the one job a romanisation has. A rise means a renderer met a kana it has no table entry for and printed it.",
     "budget": 0,
-    "value": 0
+    "value": 1
    },
    {
     "name": "titles read past their own gloss",
@@ -972,7 +972,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-12T17:08:04+00:00",
+  "previous_at": "2026-08-12T17:36:08+00:00",
   "drops": []
  },
  "outstanding": [
