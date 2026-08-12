@@ -1,6 +1,6 @@
 {
  "generated": "2026-08-12",
- "releases": 1239,
+ "releases": 1278,
  "platforms": 23,
  "works": 2551,
  "series_rows": 3001,
@@ -19,9 +19,9 @@
    "source": "comicfuz",
    "files": 2,
    "works": 129,
-   "rows": 6189,
-   "retrieved": "2026-08-11",
-   "age_days": 1,
+   "rows": 6185,
+   "retrieved": "2026-08-13",
+   "age_days": -1,
    "in_scope": true,
    "empty": false
   },
@@ -48,10 +48,10 @@
   {
    "source": "gigaviewer",
    "files": 71,
-   "works": 692,
-   "rows": 7748,
-   "retrieved": "2026-08-11",
-   "age_days": 1,
+   "works": 694,
+   "rows": 7750,
+   "retrieved": "2026-08-13",
+   "age_days": -1,
    "in_scope": true,
    "empty": false
   },
@@ -99,9 +99,9 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1176,
-   "rows": 7577,
-   "retrieved": "2026-08-11",
-   "age_days": 1,
+   "rows": 7579,
+   "retrieved": "2026-08-12",
+   "age_days": 0,
    "in_scope": true,
    "empty": false
   },
@@ -129,9 +129,9 @@
    "source": "webpages",
    "files": 37,
    "works": 529,
-   "rows": 7395,
-   "retrieved": "2026-08-11",
-   "age_days": 1,
+   "rows": 7398,
+   "retrieved": "2026-08-13",
+   "age_days": -1,
    "in_scope": true,
    "empty": false
   }
@@ -4682,8 +4682,16 @@
    "date": "2026-07-09",
    "releases": 123,
    "distinct_works": 1,
-   "median_per_day": 1,
+   "median_per_day": 1.0,
    "example_work": "はなにあらし"
+  },
+  {
+   "platform": "COMIC FUZ",
+   "date": "2026-08-13",
+   "releases": 43,
+   "distinct_works": 3,
+   "median_per_day": 2.0,
+   "example_work": "IDOL×IDOL STORY！"
   }
  ],
  "gaps": {
@@ -11498,7 +11506,7 @@
   "weeks": [
    {
     "week": "2026-06-14",
-    "n": 134
+    "n": 133
    },
    {
     "week": "2026-06-21",
@@ -11506,15 +11514,15 @@
    },
    {
     "week": "2026-06-28",
-    "n": 137
+    "n": 136
    },
    {
     "week": "2026-07-05",
-    "n": 253
+    "n": 252
    },
    {
     "week": "2026-07-12",
-    "n": 115
+    "n": 114
    },
    {
     "week": "2026-07-19",
@@ -11522,42 +11530,43 @@
    },
    {
     "week": "2026-07-26",
-    "n": 131
+    "n": 130
    },
    {
     "week": "2026-08-02",
-    "n": 168
+    "n": 164
    },
    {
     "week": "2026-08-09",
-    "n": 26
+    "n": 74
    }
   ],
   "trimmed_weeks": 4,
-  "pre_tracking_releases": 1045,
+  "pre_tracking_releases": 1040,
   "tracking_from": "2026-08-02"
  },
  "access_modes": {
-  "free": 764,
+  "free": 806,
   "purchase": 305,
-  "free-timed": 120
+  "free-timed": 114
  },
  "update_kinds": {
+  "new-chapter": 1185,
+  "other": 26,
   "oneshot": 25,
-  "new-chapter": 1147,
   "new-series": 33,
   "final": 8,
-  "other": 25,
   "skipped": 1
  },
  "identification": {
-  "discovery-candidate": 897,
+  "discovery-candidate": 918,
+  "known-work-match": 18,
   "platform-genre": 342
  },
  "collapsed": {
-  "duplicate_chapters": 84,
+  "duplicate_chapters": 86,
   "thin_sitemap": 8,
-  "resolver": 56,
+  "resolver": 60,
   "samples": 36
  },
  "filled": {

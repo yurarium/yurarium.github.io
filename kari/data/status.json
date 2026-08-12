@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-12T20:45:55+00:00",
+ "generated": "2026-08-12T21:05:00+00:00",
  "since_last": {
-  "at": "2026-08-12T20:44:19+00:00",
+  "at": "2026-08-12T21:00:46+00:00",
   "statistics": {}
  },
  "means": {
@@ -23,23 +23,24 @@
  },
  "last_run": {
   "at": "2026-08-12",
-  "releases": 1239,
+  "releases": 1278,
   "works": 2551,
   "platforms": 23,
   "series_rows": 3001,
   "identification": {
-   "discovery-candidate": 897,
+   "discovery-candidate": 918,
+   "known-work-match": 18,
    "platform-genre": 342
   },
   "collapsed": {
-   "duplicate_chapters": 84,
+   "duplicate_chapters": 86,
    "thin_sitemap": 8,
-   "resolver": 56,
+   "resolver": 60,
    "samples": 36
   }
  },
  "gate": {
-  "invariants_passing": 57,
+  "invariants_passing": 56,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -173,8 +174,12 @@
    },
    {
     "name": "no published update leaves its month",
-    "violations": 0,
-    "examples": []
+    "violations": 3,
+    "examples": [
+     "2026-07.json published ('comic-fuz', 'comicfuz:78698') and it is no longer built",
+     "2026-07.json published ('comic-fuz', 'comicfuz:78983') and it is no longer built",
+     "2026-07.json published ('comic-fuz', 'comicfuz:78986') and it is no longer built"
+    ]
    },
    {
     "name": "no refutation of print serials",
@@ -706,13 +711,13 @@
    {
     "name": "volume rows with no publication date",
     "means": "volume rows a reader can reach that state no publication date, all of them BOOK☆WALKER's: the shop states 底本発行日 for the volumes whose print edition it recorded and nothing for the rest. No ISBN-keyed enrichment can reach them because BOOK☆WALKER states no ISBN, so the route is コミックシーモア's per-volume page, which states both. A rise means new undated works or a capture that stopped dating rows it used to.",
-    "budget": 2469,
-    "value": 2469
+    "budget": 2448,
+    "value": 2446
    },
    {
     "name": "macron boundaries nobody has ruled on",
     "means": "names where our macron says a long vowel and a source spells the pair out, which nobody has read. Most of the class is a style, because MangaUpdates and Wikidata write ou for ō; what hides in it is a pair crossing a word boundary, where 御家's オウチ is o-uchi and `Ōchi` states a long o nobody says. Four of 21 were that. The owner ruled on 2026-08-12 that a morphology rule is not worth buying for four names, so the four are data in kana.NOT_LONG and this is what stops a fifth arriving unnoticed. A rise is a name to read.",
-    "budget": null,
+    "budget": 0,
     "value": 0
    },
    {
@@ -916,34 +921,6 @@
    "drop": null
   },
   {
-   "source": "comicfuz",
-   "files": 2,
-   "works": 129,
-   "rows": 6189,
-   "retrieved": "2026-08-11",
-   "age_days": 1,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 6142,
-   "well_formed": 6142,
-   "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "gigaviewer",
-   "files": 71,
-   "works": 692,
-   "rows": 7748,
-   "retrieved": "2026-08-11",
-   "age_days": 1,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 7642,
-   "well_formed": 7642,
-   "malformed": 0,
-   "drop": null
-  },
-  {
    "source": "kadokomi",
    "files": 5,
    "works": 971,
@@ -961,34 +938,62 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1176,
-   "rows": 7577,
-   "retrieved": "2026-08-11",
-   "age_days": 1,
+   "rows": 7579,
+   "retrieved": "2026-08-12",
+   "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6736,
+   "checked_rows": 6738,
    "well_formed": 0,
-   "malformed": 6736,
+   "malformed": 6738,
+   "drop": null
+  },
+  {
+   "source": "comicfuz",
+   "files": 2,
+   "works": 129,
+   "rows": 6185,
+   "retrieved": "2026-08-13",
+   "age_days": -1,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 6138,
+   "well_formed": 6138,
+   "malformed": 0,
+   "drop": null
+  },
+  {
+   "source": "gigaviewer",
+   "files": 71,
+   "works": 694,
+   "rows": 7750,
+   "retrieved": "2026-08-13",
+   "age_days": -1,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 7642,
+   "well_formed": 7642,
+   "malformed": 0,
    "drop": null
   },
   {
    "source": "webpages",
    "files": 37,
    "works": 529,
-   "rows": 7395,
-   "retrieved": "2026-08-11",
-   "age_days": 1,
+   "rows": 7398,
+   "retrieved": "2026-08-13",
+   "age_days": -1,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7344,
-   "well_formed": 7344,
+   "checked_rows": 7347,
+   "well_formed": 7347,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-12T20:44:18+00:00",
+  "previous_at": "2026-08-12T21:00:44+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1162,6 +1167,7 @@
     "kana names with no stated division": 253,
     "labels with nothing to quote": 0,
     "listing series with no feed of their own": 0,
+    "macron boundaries nobody has ruled on": 0,
     "names rendered two ways": 0,
     "nicovideo works with no rights": 60,
     "one page cited for two claims": 11,
@@ -1192,7 +1198,7 @@
     "updates naming a work we do not hold": 18,
     "volume numbers a page draws twice": 5,
     "volume rows a page counts but cannot list": 0,
-    "volume rows with no publication date": 2469,
+    "volume rows with no publication date": 2448,
     "volumes with an isbn and no date": 0,
     "works holding fewer volumes than the shop states": 69,
     "works holding more volumes than the shop states": 25,
@@ -1228,7 +1234,7 @@
   "print_only": 1652,
   "volumes": 6038,
   "with_identifier": 3001,
-  "chapters": 26740,
+  "chapters": 26742,
   "delivery_dated": 1036
  }
 }
