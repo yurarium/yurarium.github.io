@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-12T17:38:33+00:00",
+ "generated": "2026-08-12T18:51:52+00:00",
  "since_last": {
-  "at": "2026-08-12T17:36:10+00:00",
+  "at": "2026-08-12T18:50:45+00:00",
   "statistics": {}
  },
  "means": {
@@ -344,7 +344,7 @@
     "name": "kana left in a romanisation",
     "means": "strings the shipped names file offers in place of Japanese that still hold a kana character, which undoes the one job a romanisation has. A rise means a renderer met a kana it has no table entry for and printed it.",
     "budget": 0,
-    "value": 1
+    "value": 0
    },
    {
     "name": "titles read past their own gloss",
@@ -386,13 +386,13 @@
     "name": "an imprint field repeating its publisher",
     "means": "print rows whose imprint field holds the same name as their publisher field, which a shop's individual-publishing service writes when an artist publishes their own book. There is no line to name; what moves this is the capture writing one name in one place.",
     "budget": 341,
-    "value": 341
+    "value": 360
    },
    {
     "name": "imprint strings that reach no line",
     "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
-    "budget": 17,
-    "value": 17
+    "budget": 16,
+    "value": 18
    },
    {
     "name": "renderings resting on a mechanical romanisation",
@@ -584,7 +584,7 @@
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
     "budget": 1470,
-    "value": 1470
+    "value": 1477
    },
    {
     "name": "uncertain readings",
@@ -703,8 +703,8 @@
    {
     "name": "volume rows with no publication date",
     "means": "volume rows a reader can reach that state no publication date, all of them BOOK☆WALKER's: the shop states 底本発行日 for the volumes whose print edition it recorded and nothing for the rest. No ISBN-keyed enrichment can reach them because BOOK☆WALKER states no ISBN, so the route is コミックシーモア's per-volume page, which states both. A rise means new undated works or a capture that stopped dating rows it used to.",
-    "budget": 2521,
-    "value": 2521
+    "budget": 2514,
+    "value": 2514
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -715,8 +715,8 @@
    {
     "name": "works whose records number one volume twice",
     "means": "works whose print records give one volume number to two rows, so the page draws vol. 1 twice and heads the halves as two runs. Its floor is 10 and the floor is real books: citrus was printed twice and MADB gave it two C-numbers, and a reader should see both. The other ten are one run described by two catalogues at two precisions, and those go when the volumes themselves are reconciled. A rise is a new pair worth looking at by hand.",
-    "budget": 15,
-    "value": 15
+    "budget": 8,
+    "value": 8
    },
    {
     "name": "works holding fewer volumes than the shop states",
@@ -728,7 +728,7 @@
     "name": "works holding more volumes than the shop states",
     "means": "the other direction, counted apart so a fixed over-count cannot hide a new under-count. Mostly products counted as volumes: BOOK☆WALKER lists free sample editions among a series' items and the ingest numbers every item, which is how MURCIÉLAGO came to have 32 volumes where the shop and the bibliography both say 29. Should fall to near nothing once a volume number is read from the product title; what is left is a work the shop has delisted from.",
     "budget": 25,
-    "value": 25
+    "value": 31
    },
    {
     "name": "shelf admissions a reader cannot follow",
@@ -972,7 +972,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-12T17:36:08+00:00",
+  "previous_at": "2026-08-12T18:50:44+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1136,7 +1136,7 @@
     "implausible ruby spans": 0,
     "impossibilities asserted without evidence": 0,
     "imprint names the interface disagrees with": 0,
-    "imprint strings that reach no line": 17,
+    "imprint strings that reach no line": 16,
     "incomplete attested rows": 35,
     "interface reads outside an entry point": 12,
     "interface tooltips a reader of Japanese cannot read": 34,
@@ -1175,7 +1175,7 @@
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 18,
     "volume rows a page counts but cannot list": 0,
-    "volume rows with no publication date": 2521,
+    "volume rows with no publication date": 2514,
     "volumes with an isbn and no date": 0,
     "works holding fewer volumes than the shop states": 68,
     "works holding more volumes than the shop states": 25,
@@ -1184,7 +1184,7 @@
     "works shaped like prose": 0,
     "works showing a romanisation": 145,
     "works whose first publication country is unattested": 2551,
-    "works whose records number one volume twice": 15,
+    "works whose records number one volume twice": 8,
     "works without English": 96
    }
   }
@@ -1209,7 +1209,7 @@
   },
   "print_works": 2441,
   "print_only": 1652,
-  "volumes": 6150,
+  "volumes": 6038,
   "with_identifier": 3001,
   "chapters": 26740,
   "delivery_dated": 1037

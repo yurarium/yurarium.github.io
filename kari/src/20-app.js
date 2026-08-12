@@ -1123,28 +1123,15 @@ async function paintVolumes(r) {
 
   if (!rows.length) return;
   rows.sort(byVolume);
-  /* ONE ROW PER VOLUME, however many editions of it exist.
-
-     ささやくように恋を唄う holds volumes 9 to 12 twice, with different ISBNs, the same date and
-     the same title, which is a standard and a special edition of one volume. MADB gives no way to
-     tell which is which: the two records differ in the ISBN and in nothing else. So they are one
-     row saying both, instead of four apparent duplicates a reader has to guess about. Merged only
-     where the number AND the date agree, so a genuine reissue years later stays its own row. */
-  const merged = [];
-  for (const v of rows) {
-    const prev = merged[merged.length - 1];
-    /* AND ONLY WITHIN ONE RUN. Two editions of a volume are two ISBNs on one catalogue record;
-       two catalogue records dating a volume 1 to the same month are two different printings, and
-       folding those together took citrus's 2015 reissue from four volumes to three while the block
-       above it still said four. `run` is the record each volume came from. */
-    if (prev && v.number && prev.run === v.run
-        && prev.number === v.number && prev.published === v.published) {
-      prev.editions = (prev.editions || [prev.isbn]).concat(v.isbn ? [v.isbn] : []);
-      continue;
-    }
-    merged.push({ ...v });
-  }
-  rows = merged;
+  /* ONE ROW PER VOLUME, HOWEVER MANY EDITIONS OF IT EXIST, decided in `build.py` and no longer
+     here. This folded two rows sharing a number AND a date into one carrying both ISBNs, which is
+     ささやくように恋を唄う holding volumes 9 to 12 twice: a standard and a special edition of one
+     volume that MADB gives no way to tell apart. `merge_volumes` does that fold now, over a print
+     run rather than over one record, because two catalogues describing one book is the same
+     question and the browser could not answer it: MADB dates MURCIÉLAGO's volume 1 to `2014-04`
+     and BOOK☆WALKER to `2014-04-25`, so neither the record nor the date agreed and the page drew
+     both. Keeping a copy here would be two producers of `editions` (§3), and this one would be
+     the copy that never fires. */
   /* A ROW THAT SAYS NOTHING, SAID 133 TIMES, IS NOT A LIST.
      付き合ってあげてもいいかな【単話】 holds 133 releases and BOOK☆WALKER dates none of them, so
      the page ran to 17,501px of identical lines reading 刊行日不明. A volume carrying no date, no
