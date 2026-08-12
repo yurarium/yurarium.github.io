@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-12T20:00:49+00:00",
+ "generated": "2026-08-12T20:14:15+00:00",
  "since_last": {
-  "at": "2026-08-12T19:54:20+00:00",
+  "at": "2026-08-12T20:00:49+00:00",
   "statistics": {}
  },
  "means": {
@@ -391,8 +391,8 @@
    {
     "name": "imprint strings that reach no line",
     "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
-    "budget": 18,
-    "value": 18
+    "budget": 16,
+    "value": 16
    },
    {
     "name": "renderings resting on a mechanical romanisation",
@@ -583,8 +583,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1477,
-    "value": 1477
+    "budget": 1476,
+    "value": 1476
    },
    {
     "name": "uncertain readings",
@@ -703,8 +703,8 @@
    {
     "name": "volume rows with no publication date",
     "means": "volume rows a reader can reach that state no publication date, all of them BOOK☆WALKER's: the shop states 底本発行日 for the volumes whose print edition it recorded and nothing for the rest. No ISBN-keyed enrichment can reach them because BOOK☆WALKER states no ISBN, so the route is コミックシーモア's per-volume page, which states both. A rise means new undated works or a capture that stopped dating rows it used to.",
-    "budget": 2514,
-    "value": 2514
+    "budget": 2486,
+    "value": 2486
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -978,7 +978,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-12T19:54:18+00:00",
+  "previous_at": "2026-08-12T20:00:48+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1142,7 +1142,7 @@
     "implausible ruby spans": 0,
     "impossibilities asserted without evidence": 0,
     "imprint names the interface disagrees with": 0,
-    "imprint strings that reach no line": 18,
+    "imprint strings that reach no line": 16,
     "incomplete attested rows": 35,
     "interface reads outside an entry point": 12,
     "interface tooltips a reader of Japanese cannot read": 34,
@@ -1172,7 +1172,7 @@
     "shelf admissions a reader cannot follow": 5,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 0,
-    "titles read by a machine, unmarked": 1477,
+    "titles read by a machine, unmarked": 1476,
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 175,
@@ -1182,7 +1182,7 @@
     "updates naming a work we do not hold": 18,
     "volume numbers a page draws twice": 5,
     "volume rows a page counts but cannot list": 0,
-    "volume rows with no publication date": 2514,
+    "volume rows with no publication date": 2486,
     "volumes with an isbn and no date": 0,
     "works holding fewer volumes than the shop states": 69,
     "works holding more volumes than the shop states": 25,

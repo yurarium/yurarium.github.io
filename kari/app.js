@@ -4866,13 +4866,17 @@ function renderSeries() {
       // 4 free, 17 free-with-a-ticket and 3 priced, and `freeN >= chapters` read that as all free
       // while the work's own page said otherwise. 19 rows said it. `priced` is the one number here
       // that cannot be explained away by a mismatched denominator.
-      : !r.priced && freeN >= r.chapters ? `<span class="tag">${esc(T('全話無料'))}</span>`
-      // AND THE PROPORTION IS CAPPED AT THE DENOMINATOR, for the same reason: 21 of 11 is not a
-      // proportion. Where the counts disagree the honest thing to show is what is known to be
-      // paid, so the numerator is the chapters not accounted for by a price.
+      : !r.priced ? `<span class="tag">${esc(T('全話無料'))}</span>`
+      // AND THE DENOMINATOR IS THE POPULATION THE NUMBERS ARE OVER, which is not the chapter
+      // count. These three count what a platform SELLS, and 64 works are sold in parts rather than
+      // in chapters: 病弱少女、転生して健康な肉体（最強）を手に入れる is 24 parts, 21 of them free,
+      // which the platform groups into 11 chapters. `freeN/chapters` read 21 of 11, and capping it
+      // read `11/11 free` over a work with three paid parts, which is the same lie in a shape that
+      // survives arithmetic. `known` is what the three numbers add up to and it is what they are
+      // about.
       : freeN ? `<span class="tag" title="${r.free} free now${
             r.free_timed ? `, ${r.free_timed} free with a daily ticket: readable at no cost, just paced` : ''}${
-            r.priced ? `; ${r.priced} paid` : ''}">${Math.min(freeN, r.chapters)}/${r.chapters}${
+            r.priced ? `; ${r.priced} paid` : ''}">${freeN}/${known}${
             ' ' + esc(T('無料'))}</span>`
       : `<span class="tag grey">${esc(T('有料'))}</span>`;
     /* THE TITLE OPENS THE WORK'S PAGE. It used to be a link off to whichever platform serialises
