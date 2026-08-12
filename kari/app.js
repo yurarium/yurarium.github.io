@@ -1578,13 +1578,26 @@ const VIS_WHY = {
    row carries one, and by title where it does not. Built once, from SERIES, so the three lists
    cannot come to different conclusions about the same work. */
 let VIS_BY_ID = new Map(), VIS_BY_WORK = new Map();
+/* WHICH CATALOGUE RECORDS ONE PRINT BLOCK STANDS FOR.
+
+   A block was one record and `work_id` was the whole answer. It stopped being the whole answer
+   when the build began folding a run MADB had filed under two headings: 捏造トラップ's volumes 4
+   and 6 sit on a second record, and a page that asked a merged block for its single id dropped
+   them off the list entirely. `work_ids` carries every record, `work_id` still addresses the one
+   the run is named for, and every reader of either goes through here. */
+function printIds(pr) {
+  if (!pr) return [];
+  if (pr.work_ids && pr.work_ids.length) return pr.work_ids;
+  return pr.work_id ? [pr.work_id] : [];
+}
+
 function indexVisibility() {
   VIS_BY_ID = new Map(); VIS_BY_WORK = new Map();
   ((SERIES && SERIES.series) || []).forEach(r => {
     if (!r.visibility) return;
     if (r.id) VIS_BY_ID.set(r.id, r.visibility);
     if (r.work) VIS_BY_WORK.set(foldKey(r.work), r.visibility);
-    (r.print || []).forEach(pr => pr.work_id && VIS_BY_ID.set(pr.work_id, r.visibility));
+    (r.print || []).forEach(pr => printIds(pr).forEach(id => VIS_BY_ID.set(id, r.visibility)));
   });
 }
 
@@ -2605,7 +2618,7 @@ let PAGE_WORK = null;
    left blank rather than numbered by their position in a sorted list, which would be the interface
    inventing a fact about the edition. Same rule the releases tab follows. */
 async function paintVolumes(r) {
-  const ids = (r.print || []).map(p => p.work_id).filter(Boolean);
+  const ids = (r.print || []).flatMap(printIds);
   const box = el('wp-vols');
   if (!box || !ids.length) return;
   // Against BASE, for the reason `recData` gives: the address is rewritten to the work's own path
@@ -2680,13 +2693,13 @@ async function paintVolumes(r) {
      that the second was a reissue. Each run is its own list, headed by what it is, in the order the
      runs are listed above it. Where there is one run there is one list and no heading, which is
      every work but the 37 the catalogue splits. */
-  const runOrder = (r.print || []).map(pr => pr.work_id);
+  const runOrder = (r.print || []).map(printIds);
   const groups = runOrder.length > 1
-    ? runOrder.map(id => told.filter(v => v.run === id)).filter(g => g.length)
+    ? runOrder.map(ids => told.filter(v => ids.includes(v.run))).filter(g => g.length)
     : [told];
   const runHead = g => {
     if (groups.length < 2) return '';
-    const pr = (r.print || []).find(x => x.work_id === g[0].run);
+    const pr = (r.print || []).find(x => printIds(x).includes(g[0].run));
     const from = pr && pr.first ? fmtDate(pr.first, { year: true }) : '';
     return `<h4 class="wp-subh">${esc(T(`${g.length}巻${from ? `　${from}から` : ''}`,
       `${g.length} ${g.length === 1 ? 'volume' : 'volumes'}${from ? ` from ${from}` : ''}`))}</h4>`;
@@ -3725,7 +3738,7 @@ async function renderReleases() {
   // on the series row that joined them. Without this map a release links nowhere.
   const byMadb = new Map();
   (SERIES?.series || []).forEach(r => (r.print || []).forEach(pr => {
-    if (r.id && pr.work_id) byMadb.set(pr.work_id, r.id);
+    if (r.id) printIds(pr).forEach(id => byMadb.set(id, r.id));
   }));
   const rows = [];
   (WORKS.works || []).forEach(w => (w.volumes || []).forEach(v => {
