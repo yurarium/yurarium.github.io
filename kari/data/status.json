@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-13T08:46:02+00:00",
+ "generated": "2026-08-13T12:20:42+00:00",
  "since_last": {
-  "at": "2026-08-13T08:42:49+00:00",
+  "at": "2026-08-13T08:46:02+00:00",
   "statistics": {}
  },
  "means": {
@@ -392,13 +392,13 @@
    {
     "name": "imprint strings that reach no line",
     "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
-    "budget": 16,
+    "budget": 18,
     "value": 18
    },
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 634,
+    "budget": 638,
     "value": 638
    },
    {
@@ -470,7 +470,7 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1173,
+    "budget": 1182,
     "value": 1182
    },
    {
@@ -488,7 +488,7 @@
    {
     "name": "publisher readings nobody has settled",
     "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
-    "budget": 21,
+    "budget": 22,
     "value": 22
    },
    {
@@ -500,7 +500,7 @@
    {
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-    "budget": 259,
+    "budget": 268,
     "value": 268
    },
    {
@@ -566,7 +566,7 @@
    {
     "name": "credits sharing a reading nobody has ruled on",
     "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
-    "budget": 14,
+    "budget": 23,
     "value": 23
    },
    {
@@ -584,7 +584,7 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1168,
+    "budget": 1169,
     "value": 1169
    },
    {
@@ -592,6 +592,12 @@
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
     "budget": 52,
     "value": 52
+   },
+   {
+    "name": "data reaching the site around the store",
+    "means": "fields a reader is served that the relational store could not answer. STORE-PLAN §1: the store becomes the sole compiled form, and this is what says whether a migration is happening. Asked of what the site SERVES, so it cannot fall by adding a table nobody reads, and it reaches 0 when the plan is done.",
+    "budget": 391,
+    "value": 391
    },
    {
     "name": "works without English",
@@ -693,7 +699,7 @@
     "name": "volumes with an isbn and no date",
     "means": "volumes on a work page stating an ISBN and no publication date. An ISBN is a key into a registry that states one, so each of these is a lookup nobody has done. Falls as adapters/openbd/enrich.py --fetch works through the corpus. Its floor is the books openBD has no record of, which was 245 of 2,321 ISBNs when this was written.",
     "budget": 0,
-    "value": 1
+    "value": 0
    },
    {
     "name": "undated cmoa candidates",
@@ -705,7 +711,7 @@
     "name": "volume rows with no publication date",
     "means": "volume rows a reader can reach that state no publication date, all of them BOOK☆WALKER's: the shop states 底本発行日 for the volumes whose print edition it recorded and nothing for the rest. No ISBN-keyed enrichment can reach them because BOOK☆WALKER states no ISBN, so the route is コミックシーモア's per-volume page, which states both. A rise means new undated works or a capture that stopped dating rows it used to.",
     "budget": 2436,
-    "value": 2437
+    "value": 2436
    },
    {
     "name": "macron boundaries nobody has ruled on",
@@ -734,7 +740,7 @@
    {
     "name": "works holding fewer volumes than the shop states",
     "means": "works コミックシーモア sells more volumes of than the corpus holds, which is a capture that has fallen behind. The shop is Tier C and this asserts only that two parties disagree about a countable thing. A rise is ordinary, and is what a series publishing ahead of the next capture looks like.",
-    "budget": 69,
+    "budget": 70,
     "value": 70
    },
    {
@@ -764,7 +770,7 @@
    {
     "name": "works whose first publication country is unattested",
     "means": "works whose `first_publication.country` is empty, which is DEFINITIONS §6's inclusion test not having run. It read 0 until now because build.py wrote the literal \"JP\" on every record, so the field asserted the answer and no check on it could fail. Every source here catalogues the Japanese EDITION and none states where the work first appeared, so this falls one work at a time as a serialisation venue is read off a publisher's page and recorded in data/scope.yaml. A rise means the corpus grew, which is expected, and the number to watch is the share rather than the count.",
-    "budget": 2551,
+    "budget": 2574,
     "value": 2574
    },
    {
@@ -985,7 +991,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-13T08:42:48+00:00",
+  "previous_at": "2026-08-13T08:46:01+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1046,12 +1052,12 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 52,
+   "count": 53,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 34,
     "an imprint field repeating its publisher": 360,
-    "author names romanised as one word": 1173,
+    "author names romanised as one word": 1182,
     "author readings no source states": 410,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
@@ -1065,9 +1071,10 @@
     "credit phrases spelling a person otherwise": 3,
     "credits carrying their own cataloguing": 38,
     "credits matching a chapter": 0,
-    "credits sharing a reading nobody has ruled on": 14,
+    "credits sharing a reading nobody has ruled on": 23,
     "credits that restate a name": 0,
     "credits the corpus files as a venue": 16,
+    "data reaching the site around the store": 391,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 88,
     "facts with more than one home": 12,
@@ -1075,14 +1082,14 @@
     "implausible ruby spans": 0,
     "impossibilities asserted without evidence": 0,
     "imprint names the interface disagrees with": 0,
-    "imprint strings that reach no line": 16,
+    "imprint strings that reach no line": 18,
     "incomplete attested rows": 37,
     "interface reads outside an entry point": 12,
     "interface tooltips a reader of Japanese cannot read": 34,
     "interpunct credits nobody has ruled on": 0,
     "invented markup in tests": 75,
     "kana left in a romanisation": 0,
-    "kana names with no stated division": 259,
+    "kana names with no stated division": 268,
     "labels with nothing to quote": 0,
     "listing series with no feed of their own": 0,
     "macron boundaries nobody has ruled on": 0,
@@ -1094,9 +1101,9 @@
     "published dates that moved in an archive": 0,
     "publisher keys the interface misses": 0,
     "publisher pages listing a work from another house": 0,
-    "publisher readings nobody has settled": 21,
+    "publisher readings nobody has settled": 22,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 634,
+    "renderings resting on a mechanical romanisation": 638,
     "renderings with nothing to show": 25,
     "rows with a moving address": 3,
     "ruby asserting a reading per character": 197,
@@ -1106,7 +1113,7 @@
     "shelf admissions a reader cannot follow": 5,
     "targets a capture wrote no row for": 4,
     "titles carrying cataloguing punctuation": 0,
-    "titles read by a machine, unmarked": 1168,
+    "titles read by a machine, unmarked": 1169,
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 151,
@@ -1118,13 +1125,13 @@
     "volume rows a page counts but cannot list": 0,
     "volume rows with no publication date": 2436,
     "volumes with an isbn and no date": 0,
-    "works holding fewer volumes than the shop states": 69,
+    "works holding fewer volumes than the shop states": 70,
     "works holding more volumes than the shop states": 25,
     "works named by a truncation": 0,
     "works offered twice in a list": 0,
     "works shaped like prose": 0,
     "works showing a romanisation": 65,
-    "works whose first publication country is unattested": 2551,
+    "works whose first publication country is unattested": 2574,
     "works whose records number one volume twice": 8,
     "works without English": 0
    }
