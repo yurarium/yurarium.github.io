@@ -1,10 +1,8 @@
 {
- "generated": "2026-08-12T23:14:18+00:00",
+ "generated": "2026-08-13T07:13:17+00:00",
  "since_last": {
-  "at": "2026-08-12T22:52:28+00:00",
-  "statistics": {
-   "chapters": 1
-  }
+  "at": "2026-08-12T23:14:18+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -400,8 +398,8 @@
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 628,
-    "value": 628
+    "budget": 610,
+    "value": 610
    },
    {
     "name": "credit fields the division does not account for",
@@ -472,8 +470,8 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1157,
-    "value": 1157
+    "budget": 1162,
+    "value": 1162
    },
    {
     "name": "divisions read back from a romanisation",
@@ -496,8 +494,8 @@
    {
     "name": "renderings with nothing to show",
     "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-    "budget": 24,
-    "value": 24
+    "budget": 18,
+    "value": 18
    },
    {
     "name": "kana names with no stated division",
@@ -508,8 +506,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 400,
-    "value": 400
+    "budget": 401,
+    "value": 401
    },
    {
     "name": "credits the corpus files as a venue",
@@ -592,8 +590,8 @@
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 52,
-    "value": 52
+    "budget": 53,
+    "value": 53
    },
    {
     "name": "works without English",
@@ -987,7 +985,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-12T22:52:27+00:00",
+  "previous_at": "2026-08-12T23:14:16+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1024,8 +1022,8 @@
    "rows": {
     "adapters fetching without net.py": 34,
     "an imprint field repeating its publisher": 360,
-    "author names romanised as one word": 1157,
-    "author readings no source states": 400,
+    "author names romanised as one word": 1162,
+    "author readings no source states": 401,
     "bookwalker listings unconfirmed": 0,
     "bookwalker series unread": 0,
     "bylines drawn in a spelling the field does not write": 24,
@@ -1069,8 +1067,8 @@
     "publisher pages listing a work from another house": 0,
     "publisher readings nobody has settled": 21,
     "publishers with no English": 0,
-    "renderings resting on a mechanical romanisation": 628,
-    "renderings with nothing to show": 24,
+    "renderings resting on a mechanical romanisation": 610,
+    "renderings with nothing to show": 18,
     "rows with a moving address": 3,
     "ruby asserting a reading per character": 195,
     "scope questions left open": 2,
@@ -1083,7 +1081,7 @@
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
     "titles with no translation of our own": 151,
-    "uncertain readings": 52,
+    "uncertain readings": 53,
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 17,
