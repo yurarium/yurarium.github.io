@@ -1,12 +1,13 @@
 {
- "generated": "2026-08-13T07:44:42+00:00",
+ "generated": "2026-08-13T08:02:44+00:00",
  "since_last": {
-  "at": "2026-08-13T07:40:55+00:00",
+  "at": "2026-08-13T07:44:42+00:00",
   "statistics": {
-   "works": -64,
-   "print_only": -21,
-   "with_identifier": 2,
-   "chapters": -1395
+   "works": -2,
+   "print_works": -2,
+   "print_only": -2,
+   "with_identifier": -2,
+   "delivery_dated": -2
   }
  },
  "means": {
@@ -31,7 +32,7 @@
   "releases": 1276,
   "works": 2551,
   "platforms": 23,
-  "series_rows": 3001,
+  "series_rows": 2999,
   "identification": {
    "discovery-candidate": 913,
    "known-work-match": 18,
@@ -403,8 +404,8 @@
    {
     "name": "renderings resting on a mechanical romanisation",
     "means": "names an English page spells itself, because no source states how they are read. That covers a name the store holds nothing for and a name read off a community-edited database, which improves the spelling without settling the pronunciation. Each carries a mark and a tooltip saying so. It falls as readings are researched and nothing about the renderer can move it, which makes it the data gap written as a number.",
-    "budget": 606,
-    "value": 606
+    "budget": 610,
+    "value": 610
    },
    {
     "name": "credit fields the division does not account for",
@@ -458,7 +459,7 @@
     "name": "bylines drawn in a spelling the field does not write",
     "means": "work rows whose byline reaches a reader spelt differently from the credit field the row holds, measured with furigana on. The division spells a name the way the store is keyed on it and a field spells it the way a cataloguer typed it, and a walk that confuses the two either loses the address on 38 pages or rewrites a name under its own artist. The residue is the parts of a field naming several people, which have no rendering of their own to take the alignment from. A rise means a name is being respelt.",
     "budget": 24,
-    "value": 25
+    "value": 24
    },
    {
     "name": "names rendered two ways",
@@ -476,7 +477,7 @@
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
     "budget": 1162,
-    "value": 1173
+    "value": 1162
    },
    {
     "name": "divisions read back from a romanisation",
@@ -500,19 +501,19 @@
     "name": "renderings with nothing to show",
     "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
     "budget": 18,
-    "value": 25
+    "value": 18
    },
    {
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
     "budget": 253,
-    "value": 259
+    "value": 253
    },
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
     "budget": 401,
-    "value": 410
+    "value": 401
    },
    {
     "name": "credits the corpus files as a venue",
@@ -548,13 +549,13 @@
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
     "budget": 28,
-    "value": 51
+    "value": 28
    },
    {
     "name": "credit pages listing a work that does not name them",
     "means": "pairings a credit page would show whose work does not carry that credit's spelling in its own credit field. Substring arithmetic on two shipped fields, so it owes the splitter, the fold and the registry lookup nothing and cannot be satisfied by them agreeing. It will not reach zero: six of the eight are merges, where the surviving spelling is by construction not the one on the retired spelling's works, and two are release-row edges. A rise with neither behind it is a page claiming somebody worked on a book that does not name them.",
     "budget": 8,
-    "value": 9
+    "value": 8
    },
    {
     "name": "publisher pages listing a work from another house",
@@ -572,13 +573,13 @@
     "name": "credits sharing a reading nobody has ruled on",
     "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
     "budget": 13,
-    "value": 14
+    "value": 13
    },
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
     "budget": 195,
-    "value": 198
+    "value": 195
    },
    {
     "name": "implausible ruby spans",
@@ -590,13 +591,13 @@
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
     "budget": 1153,
-    "value": 1163
+    "value": 1153
    },
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 52,
-    "value": 52
+    "budget": 53,
+    "value": 53
    },
    {
     "name": "works without English",
@@ -608,7 +609,7 @@
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
     "budget": 33,
-    "value": 68
+    "value": 33
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -632,7 +633,7 @@
     "name": "one work under two names in a list",
     "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
     "budget": 3,
-    "value": 27
+    "value": 3
    },
    {
     "name": "incomplete attested rows",
@@ -662,7 +663,7 @@
     "name": "nicovideo works with no rights",
     "means": "ニコニコ works captured with no copyright line read off their page, which is the only field the platform gives that names a publisher. Falls when the capture re-runs against the widened pattern; does not reach zero, because a work its own author posted carries no copyright element at all.",
     "budget": 60,
-    "value": 80
+    "value": 60
    },
    {
     "name": "adapters fetching without net.py",
@@ -763,8 +764,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 3,
-    "value": 3
+    "budget": 17,
+    "value": 17
    },
    {
     "name": "works whose first publication country is unattested",
@@ -1107,9 +1108,9 @@
   }
  ],
  "statistics": {
-  "works": 3001,
+  "works": 2999,
   "states": {
-   "print": 1652,
+   "print": 1650,
    "oneshot": 431,
    "unknown": 295,
    "completed": 265,
@@ -1118,16 +1119,16 @@
    "slow": 59
   },
   "english_basis": {
-   "translated": 2629,
-   "official-jp": 231,
+   "translated": 2628,
+   "official-jp": 230,
    "licensed": 108,
    "romaji": 33
   },
-  "print_works": 2441,
-  "print_only": 1652,
+  "print_works": 2439,
+  "print_only": 1650,
   "volumes": 6038,
-  "with_identifier": 3001,
+  "with_identifier": 2999,
   "chapters": 26750,
-  "delivery_dated": 1036
+  "delivery_dated": 1034
  }
 }
