@@ -628,7 +628,7 @@
    "creator": "[著]松山せいじ",
    "publisher": "小学館",
    "imprint": "サンデーGXコミックス",
-   "volume_count": 4,
+   "volume_count": 7,
    "grouping": "series-link",
    "sources": [
     "madb",
@@ -675,7 +675,7 @@
      "madb_id": "M406791",
      "number": "4",
      "isbn": "9784091573636",
-     "published": "2013-11",
+     "published": "2013-11-19",
      "openbd": "present",
      "number_n": 4,
      "final_volume": true,
@@ -684,7 +684,29 @@
       "provenance": "claimed",
       "volumes": 4,
       "retrieved": "2026-08-05"
-     }
+     },
+     "delivered": "2017-12-14"
+    },
+    {
+     "number": "1",
+     "published": "2011-10-19",
+     "delivered": "2017-12-14",
+     "openbd": "absent",
+     "number_n": 1
+    },
+    {
+     "number": "2",
+     "published": "2012-06-19",
+     "delivered": "2017-12-14",
+     "openbd": "absent",
+     "number_n": 2
+    },
+    {
+     "number": "3",
+     "published": "2013-04-19",
+     "delivered": "2017-12-14",
+     "openbd": "absent",
+     "number_n": 3
     }
    ],
    "completed_claim": {
@@ -50443,7 +50465,7 @@
    "creator": "松山せいじ",
    "publisher": "小学館",
    "imprint": "サンデーGXコミックス",
-   "volume_count": 4,
+   "volume_count": 0,
    "grouping": null,
    "shop_url": "https://bookwalker.jp/series/124664/",
    "sources": [
@@ -50456,44 +50478,7 @@
      "url": "https://bookwalker.jp/series/124664/"
     }
    ],
-   "volumes": [
-    {
-     "number": "1",
-     "published": "2011-10-19",
-     "delivered": "2017-12-14",
-     "openbd": "absent",
-     "number_n": 1,
-     "isbn": "978-4-09-157288-2",
-     "isbn_source": "ndl"
-    },
-    {
-     "number": "2",
-     "published": "2012-06-19",
-     "delivered": "2017-12-14",
-     "openbd": "absent",
-     "number_n": 2,
-     "isbn": "978-4-09-157310-0",
-     "isbn_source": "ndl"
-    },
-    {
-     "number": "3",
-     "published": "2013-04-19",
-     "delivered": "2017-12-14",
-     "openbd": "absent",
-     "number_n": 3,
-     "isbn": "978-4-09-157346-9",
-     "isbn_source": "ndl"
-    },
-    {
-     "number": "4",
-     "published": "2013-11-19",
-     "delivered": "2017-12-14",
-     "openbd": "absent",
-     "number_n": 4,
-     "isbn": "978-4-09-157363-6",
-     "isbn_source": "ndl"
-    }
-   ],
+   "volumes": [],
    "first_publication": {
     "date": "2011-10-19",
     "date_source": "madb",
@@ -84761,37 +84746,66 @@
      "number": "2",
      "published": "2023-05-01",
      "delivered": "2023-04-17",
-     "openbd": "absent",
+     "openbd": "present",
      "number_n": 2,
-     "isbn": "978-4-8019-7975-8",
-     "isbn_source": "ndl"
+     "isbn": "9784801979758",
+     "madb_id": "M929039"
     },
     {
      "number": "3",
      "published": "2023-11-30",
      "delivered": "2023-11-16",
      "openbd": "absent",
-     "number_n": 3,
-     "isbn": "978-4-8019-8201-7",
-     "isbn_source": "ndl"
+     "number_n": 3
     },
     {
      "number": "4",
      "published": "2024-07-31",
      "delivered": "2024-07-17",
-     "openbd": "absent",
+     "openbd": "present",
      "number_n": 4,
-     "isbn": "978-4-8019-8352-6",
-     "isbn_source": "ndl"
+     "isbn": "9784801983526",
+     "madb_id": "M972506"
     },
     {
      "number": "5",
      "published": "2025-03-03",
      "delivered": "2025-02-17",
      "openbd": "absent",
+     "number_n": 5
+    },
+    {
+     "madb_id": "M876453",
+     "number": "1",
+     "isbn": "9784801978690",
+     "published": "2022-10",
+     "openbd": "present",
+     "number_n": 1
+    },
+    {
+     "madb_id": "M946143",
+     "number": "3",
+     "isbn": "9784801982017",
+     "published": "2023-11-16",
+     "published_basis": "openbd-registration",
+     "published_source": "openbd",
+     "openbd": "present",
+     "number_n": 3
+    },
+    {
+     "madb_id": "M1057796",
+     "number": "5",
+     "isbn": "9784801985643",
+     "published": "2025-03-07",
+     "openbd": "present",
      "number_n": 5,
-     "isbn": "978-4-8019-8564-3",
-     "isbn_source": "ndl"
+     "final_volume": true,
+     "final_volume_basis": {
+      "source": "cmoa.jp",
+      "provenance": "claimed",
+      "volumes": 5,
+      "retrieved": "2026-08-05"
+     }
     }
    ],
    "first_publication": {
@@ -178115,7 +178129,7 @@
    "creator": "矢坂しゅう / ヤサカシュウ",
    "publisher": "竹書房",
    "imprint": "Bamboo comics",
-   "volume_count": 5,
+   "volume_count": 0,
    "grouping": "title-only",
    "sources": [
     "madb",
@@ -178133,57 +178147,7 @@
      "url": null
     }
    ],
-   "volumes": [
-    {
-     "madb_id": "M876453",
-     "number": "1",
-     "isbn": "9784801978690",
-     "published": "2022-10",
-     "openbd": "present",
-     "number_n": 1
-    },
-    {
-     "madb_id": "M929039",
-     "number": "2",
-     "isbn": "9784801979758",
-     "published": "2023-05",
-     "openbd": "present",
-     "number_n": 2
-    },
-    {
-     "madb_id": "M946143",
-     "number": "3",
-     "isbn": "9784801982017",
-     "published": "2023-11-16",
-     "published_basis": "openbd-registration",
-     "published_source": "openbd",
-     "openbd": "present",
-     "number_n": 3
-    },
-    {
-     "madb_id": "M972506",
-     "number": "4",
-     "isbn": "9784801983526",
-     "published": "2024-07",
-     "openbd": "present",
-     "number_n": 4
-    },
-    {
-     "madb_id": "M1057796",
-     "number": "5",
-     "isbn": "9784801985643",
-     "published": "2025-03-07",
-     "openbd": "present",
-     "number_n": 5,
-     "final_volume": true,
-     "final_volume_basis": {
-      "source": "cmoa.jp",
-      "provenance": "claimed",
-      "volumes": 5,
-      "retrieved": "2026-08-05"
-     }
-    }
-   ],
+   "volumes": [],
    "completed_claim": {
     "source": "cmoa.jp",
     "volumes": 5,

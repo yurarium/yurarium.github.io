@@ -1,8 +1,14 @@
 {
- "generated": "2026-08-13T12:20:42+00:00",
+ "generated": "2026-08-13T16:02:49+00:00",
  "since_last": {
-  "at": "2026-08-13T08:46:02+00:00",
-  "statistics": {}
+  "at": "2026-08-13T12:20:42+00:00",
+  "statistics": {
+   "works": -2,
+   "print_works": -2,
+   "print_only": -2,
+   "volumes": -3,
+   "with_identifier": -2
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -26,7 +32,7 @@
   "releases": 1276,
   "works": 2574,
   "platforms": 23,
-  "series_rows": 3040,
+  "series_rows": 3038,
   "identification": {
    "discovery-candidate": 913,
    "known-work-match": 18,
@@ -504,6 +510,12 @@
     "value": 268
    },
    {
+    "name": "claims whose evidence their basis does not admit",
+    "means": "records whose source kind is not one their basis admits, which is a citation outliving the claim it was written for. STORE-PLAN §5a: the composite key goes on `claim` when this reaches 0. The store answers the same question over its own tables and agrees.",
+    "budget": 105,
+    "value": 105
+   },
+   {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
     "budget": 410,
@@ -596,8 +608,8 @@
    {
     "name": "data reaching the site around the store",
     "means": "fields a reader is served that the relational store could not answer. STORE-PLAN §1: the store becomes the sole compiled form, and this is what says whether a migration is happening. Asked of what the site SERVES, so it cannot fall by adding a table nobody reads, and it reaches 0 when the plan is done.",
-    "budget": 391,
-    "value": 391
+    "budget": 369,
+    "value": 369
    },
    {
     "name": "works without English",
@@ -734,8 +746,8 @@
    {
     "name": "volume numbers a page draws twice",
     "means": "volume numbers a work page would draw more than once inside one print run. The measure beside `works whose records number one volume twice`, asking about the ROWS a reader sees rather than the records behind them, which is a different question once a run's records are folded into one list. Its floor is 5: 君と綴るうたかた numbers a volume 6 in 2024-03 and another in 2025-01-13, a second printing with its own ISBN that a date comparison cannot choose between. A rise means a fold stopped folding.",
-    "budget": 5,
-    "value": 5
+    "budget": 10,
+    "value": 10
    },
    {
     "name": "works holding fewer volumes than the shop states",
@@ -746,8 +758,8 @@
    {
     "name": "works holding more volumes than the shop states",
     "means": "the other direction, counted apart so a fixed over-count cannot hide a new under-count. Mostly products counted as volumes: BOOK☆WALKER lists free sample editions among a series' items and the ingest numbers every item, which is how MURCIÉLAGO came to have 32 volumes where the shop and the bibliography both say 29. Should fall to near nothing once a volume number is read from the product title; what is left is a work the shop has delisted from.",
-    "budget": 25,
-    "value": 25
+    "budget": 26,
+    "value": 26
    },
    {
     "name": "shelf admissions a reader cannot follow",
@@ -991,7 +1003,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-13T08:46:01+00:00",
+  "previous_at": "2026-08-13T12:20:40+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1052,7 +1064,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 53,
+   "count": 54,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "adapters fetching without net.py": 34,
@@ -1064,6 +1076,7 @@
     "bylines drawn in a spelling the field does not write": 24,
     "captures with no floor": 10,
     "citations withheld from readers": 36,
+    "claims whose evidence their basis does not admit": 105,
     "credit fields an identifier does not cover": 51,
     "credit fields the division does not account for": 2,
     "credit identifiers naming nobody": 25,
@@ -1074,7 +1087,7 @@
     "credits sharing a reading nobody has ruled on": 23,
     "credits that restate a name": 0,
     "credits the corpus files as a venue": 16,
-    "data reaching the site around the store": 391,
+    "data reaching the site around the store": 369,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 88,
     "facts with more than one home": 12,
@@ -1121,12 +1134,12 @@
     "undated cmoa candidates": 11,
     "unreadable bookwalker rows": 15,
     "updates naming a work we do not hold": 3,
-    "volume numbers a page draws twice": 5,
+    "volume numbers a page draws twice": 10,
     "volume rows a page counts but cannot list": 0,
     "volume rows with no publication date": 2436,
     "volumes with an isbn and no date": 0,
     "works holding fewer volumes than the shop states": 70,
-    "works holding more volumes than the shop states": 25,
+    "works holding more volumes than the shop states": 26,
     "works named by a truncation": 0,
     "works offered twice in a list": 0,
     "works shaped like prose": 0,
@@ -1138,9 +1151,9 @@
   }
  ],
  "statistics": {
-  "works": 3040,
+  "works": 3038,
   "states": {
-   "print": 1650,
+   "print": 1648,
    "oneshot": 429,
    "unknown": 360,
    "completed": 252,
@@ -1149,15 +1162,15 @@
    "slow": 58
   },
   "english_basis": {
-   "translated": 2636,
+   "translated": 2634,
    "official-jp": 230,
    "licensed": 109,
    "romaji": 65
   },
-  "print_works": 2461,
-  "print_only": 1650,
-  "volumes": 6108,
-  "with_identifier": 3040,
+  "print_works": 2459,
+  "print_only": 1648,
+  "volumes": 6105,
+  "with_identifier": 3038,
   "chapters": 28121,
   "delivery_dated": 1034
  }

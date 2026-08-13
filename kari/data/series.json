@@ -137412,7 +137412,7 @@
    ],
    "state_claims": [],
    "stated_next": null,
-   "id": "w02055",
+   "id": "w01463",
    "print": [
     {
      "work_id": "bw-381470",
@@ -137420,15 +137420,23 @@
      "volumes": 5,
      "publisher": "竹書房",
      "imprint": "バンブーコミックス",
-     "first": "2022-10-31",
+     "first": "2022-10",
      "last": null,
      "label": "none",
      "work_ids": [
-      "bw-381470"
+      "bw-381470",
+      "madb-t-b3091281a3fa"
+     ],
+     "folded_names": [
+      {
+       "publisher": "竹書房",
+       "imprint": "Bamboo comics",
+       "first": "2022-10"
+      }
      ]
     }
    ],
-   "latest_any": "2022-10-31",
+   "latest_any": "2022-10",
    "latest_any_kind": "volume",
    "sourced_from": [
     {
@@ -176417,18 +176425,26 @@
     {
      "work_id": "C332239",
      "shop_url": "https://www.cmoa.jp/title/47283/",
-     "volumes": 4,
+     "volumes": 7,
      "publisher": "小学館",
      "imprint": "サンデーGXコミックス",
-     "first": "2011-10-24",
+     "first": "2011-10-19",
      "last": null,
      "label": "none",
      "work_ids": [
-      "C332239"
+      "C332239",
+      "bw-124664"
+     ],
+     "folded_names": [
+      {
+       "publisher": "小学館",
+       "imprint": "サンデーGXコミックス",
+       "first": "2011-10-19"
+      }
      ]
     }
    ],
-   "latest_any": "2011-10-24",
+   "latest_any": "2011-10-19",
    "latest_any_kind": "volume",
    "evidence": [
     {
@@ -231603,154 +231619,6 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c01677"
-   }
-  },
-  {
-   "work": "ゆりてつ～私立百合ヶ咲女子高鉄道部～",
-   "author": "松山せいじ",
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2011-10-19",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w01603",
-   "completed_claim": null,
-   "print": [
-    {
-     "work_id": "bw-124664",
-     "shop_url": "https://bookwalker.jp/series/124664/",
-     "volumes": 4,
-     "publisher": "小学館",
-     "imprint": "サンデーGXコミックス",
-     "first": "2011-10-19",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "bw-124664"
-     ]
-    }
-   ],
-   "latest_any": "2011-10-19",
-   "latest_any_kind": "volume",
-   "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "BOOK☆WALKER",
-     "term": "百合",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=32",
-     "page": 32
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "volumes",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/124664/"
-    },
-    {
-     "source": "BOOK☆WALKER",
-     "holds": "attribution",
-     "read": "2026-08-05",
-     "url": "https://bookwalker.jp/series/124664/"
-    }
-   ],
-   "work_en": {
-    "reading": "ユリ テツ ～ シリツ ユリ ガ サキ ジョシコウ テツドウ ブ ～",
-    "ruby": [
-     [
-      "ゆりてつ～",
-      null
-     ],
-     [
-      "私立",
-      "しりつ"
-     ],
-     [
-      "百合",
-      "ゆり"
-     ],
-     [
-      "ヶ",
-      null
-     ],
-     [
-      "咲",
-      "さき"
-     ],
-     [
-      "女子高",
-      "じょしこう"
-     ],
-     [
-      "鉄道",
-      "てつどう"
-     ],
-     [
-      "部",
-      "ぶ"
-     ],
-     [
-      "～",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Yuri Tetsu ~ Shiritsu Yuri ga Saki Joshikō Tetsudō Bu ~",
-     "double": "Yuri Tetsu ~ Shiritsu Yuri ga Saki Joshikou Tetsudou Bu ~",
-     "plain": "Yuri Tetsu ~ Shiritsu Yuri ga Saki Joshiko Tetsudo Bu ~"
-    },
-    "en": "Yuritetsu: The Railway Club of Yurigasaki Girls' High",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Yuritetsu: The Railway Club of Yurigasaki Girls' High"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "マツヤマ セイジ",
-    "ruby": [
-     [
-      "松山",
-      "まつやま"
-     ],
-     [
-      "せいじ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Matsuyama Seiji",
-     "double": "Matsuyama Seiji",
-     "plain": "Matsuyama Seiji"
-    },
-    "en": "Seiji Matsuyama",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "openBD",
-     "kind": "publisher-jp",
-     "reviewed": "2026-08-06",
-     "isbn": "9784091572882"
-    },
-    "id": "c01311"
    }
   },
   {
@@ -373665,144 +373533,6 @@
    }
   },
   {
-   "work": "どうしたら幼馴染♀の彼女になれますか!?",
-   "author": "矢坂しゅう",
-   "chapters": 0,
-   "partial": false,
-   "oneshot": false,
-   "latest": null,
-   "latest_ep": "",
-   "first": "2022-10",
-   "state": "print",
-   "state_basis": null,
-   "completed_basis": null,
-   "free": 0,
-   "free_timed": 0,
-   "priced": 0,
-   "url": null,
-   "series_url": null,
-   "sources": [],
-   "skipped": [],
-   "collection": null,
-   "state_claims": [],
-   "id": "w01463",
-   "completed_claim": {
-    "source": "cmoa.jp",
-    "volumes": 5,
-    "retrieved": "2026-08-05",
-    "provenance": "claimed"
-   },
-   "print": [
-    {
-     "work_id": "madb-t-b3091281a3fa",
-     "shop_url": "https://www.cmoa.jp/title/253893/",
-     "volumes": 5,
-     "publisher": "竹書房",
-     "imprint": "Bamboo comics",
-     "first": "2022-10",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "madb-t-b3091281a3fa"
-     ]
-    }
-   ],
-   "latest_any": "2022-10",
-   "latest_any_kind": "volume",
-   "evidence": [
-    {
-     "kind": "shelf",
-     "rank": 4,
-     "type": "retailer",
-     "source": "コミックシーモア",
-     "term": "百合・GL",
-     "read": "2026-08-05",
-     "url": "https://www.cmoa.jp/search/genre/37/"
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-08-05"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-08-13"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-08-05"
-    }
-   ],
-   "work_en": {
-    "reading": "ドウ シタラ オサナナジミ ♀ ノ カノジョ ニ ナレマス カ ! ?",
-    "ruby": [
-     [
-      "どうしたら",
-      null
-     ],
-     [
-      "幼馴染",
-      "おさななじみ"
-     ],
-     [
-      "♀の",
-      null
-     ],
-     [
-      "彼女",
-      "かのじょ"
-     ],
-     [
-      "になれますか!?",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Dō Shitara Osananajimi ♀ no Kanojo ni Naremasu Ka ! ?",
-     "double": "Dou Shitara Osananajimi ♀ no Kanojo ni Naremasu Ka ! ?",
-     "plain": "Do Shitara Osananajimi ♀ no Kanojo ni Naremasu Ka ! ?"
-    },
-    "en": "How Do I Turn My Best Friend♀ Into My Girlfriend?",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "How Do I Turn My Best Friend♀ Into My Girlfriend?"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "ヤサカ シュウ",
-    "ruby": [
-     [
-      "矢坂",
-      "やさか"
-     ],
-     [
-      "しゅう",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Yasaka Shū",
-     "double": "Yasaka Shuu",
-     "plain": "Yasaka Shu"
-    },
-    "en": "YASAKA Shuu",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I030707279",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00152"
-   }
-  },
-  {
    "work": "ラストサマー・バケーション",
    "author": "東洋トタン",
    "credits": [
@@ -386939,6 +386669,7 @@
   "w01533": "w02056",
   "w01577": "w02056",
   "w01595": "w03062",
+  "w01603": "w01245",
   "w01643": "w01268",
   "w01681": "w01352",
   "w01721": "w00522",
@@ -386959,6 +386690,7 @@
   "w02023": "w01685",
   "w02025": "w02020",
   "w02028": "w02852",
+  "w02055": "w01463",
   "w02066": "w02873",
   "w02128": "w00993",
   "w02216": "w02121",
