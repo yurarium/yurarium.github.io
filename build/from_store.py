@@ -23,8 +23,8 @@ NAMED FOR WHAT IT READS, and not `site.py`, which is a module the standard libra
 """
 import argparse
 import hashlib
-import os
 import json
+import os
 import pathlib
 import re
 import sqlite3
@@ -161,9 +161,16 @@ def main(argv=None):
         held = {r.get("id") for r in (json.loads(was.read_text(encoding="utf-8")).get("releases")
                                       or [])}
         now = {r.get("id") for r in json.loads(text).get("releases") or []}
-        if held - now:
-            lost.append(f"{name}: {len(held - now)} published row(s) no longer built, "
-                        f"first {sorted(held - now)[0]}")
+        gone = sorted(held - now)
+        if gone:
+            # EVERY ONE OF THEM, not the first. A row leaves for more than one reason and they are
+            # told apart by reading them: a moving address mints a new id for a chapter nobody
+            # lost, and a first-sighting date that arrives late carries a row into another month.
+            # The operator can only tell those apart with the list in front of them.
+            lost.append(f"{name}: {len(gone)} published row(s) no longer built")
+            lost.extend(f"    {i}" for i in gone[:12])
+            if len(gone) > 12:
+                lost.append(f"    ... and {len(gone) - 12} more")
     if lost:
         for line in lost:
             print(f"REFUSING: {line}")
