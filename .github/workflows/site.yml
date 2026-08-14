@@ -29,6 +29,10 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # WHERE THE CORPUS'S RULES ARE, for every step. Both the build and the reader checks read the
+    # pipeline's `adapters/`, and each honours this rather than assuming a sibling checkout.
+    env:
+      YURARIUM_ADAPTERS: ${{ runner.temp }}/yurison/adapters
     steps:
       - uses: actions/checkout@v5
 
@@ -63,8 +67,7 @@ jobs:
 
       - name: Build the data this site serves
         run: |
-          python3 build/from_store.py --store "$RUNNER_TEMP/corpus.sqlite" \
-            --adapters "$RUNNER_TEMP/yurison/adapters"
+          python3 build/from_store.py --store "$RUNNER_TEMP/corpus.sqlite"
 
       - name: app.js is the derivation of kari/src
         run: python3 build-app.py --check
