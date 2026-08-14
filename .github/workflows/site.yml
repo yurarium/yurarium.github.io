@@ -22,6 +22,13 @@ on:
       release:
         description: "the pipeline release to build from, or `latest`"
         default: latest
+      # A MONTH WHOSE PUBLISHED ROW SET MAY CHANGE, named deliberately. The guard refuses a build
+      # that would drop a row an archive already served, which is right by default and wrong when
+      # the corpus has genuinely re-attributed one. Naming the month here puts the decision in the
+      # run's own record rather than leaving it to whoever noticed the guard was quiet.
+      regenerate:
+        description: "months to rebuild even if their row set changes, space separated YYYY-MM"
+        default: ""
 
 permissions:
   contents: write
@@ -75,8 +82,15 @@ jobs:
         run: python3 build/reader_checks.py --store "$RUNNER_TEMP/corpus.sqlite"
 
       - name: Build the data this site serves
+        env:
+          REGENERATE: ${{ inputs.regenerate }}
         run: |
-          python3 build/from_store.py --store "$RUNNER_TEMP/corpus.sqlite"
+          ARGS=""
+          for m in $REGENERATE; do ARGS="$ARGS --regenerate $m"; done
+          # `if` RATHER THAN `[ … ] && echo`. The step runs under `bash -e`, where an && list whose
+          # test fails is a failing command, so the empty case would have failed every ordinary run.
+          if [ -n "$ARGS" ]; then echo "::warning::rebuilding published month(s):$ARGS"; fi
+          python3 build/from_store.py --store "$RUNNER_TEMP/corpus.sqlite" $ARGS
 
       - name: app.js is the derivation of kari/src
         run: python3 build-app.py --check
