@@ -336,10 +336,70 @@ def _interface(ctx):
             fh.write(src)
             fh.close()
             path = fh.name
+        ctx["_iface_path"] = path
         ctx["_iface"] = interface.Interface(names=ctx["names_shipped"] or {}, prefs={"LANG": "en"},
                                             app_js=path)
     return ctx["_iface"]
 
+
+
+def inv_a_link_goes_where_its_label_says(ctx):
+    """A row's platform name and the address behind it name the same platform.
+
+    WHAT THIS CAUGHT. On the "coming soon" view five rows read `KADOKOMI` and linked to
+    manga.nicovideo.jp, with a tooltip agreeing with the label and not with the link, and `· also
+    on KADOKOMI` beside it. A reader clicking the name of one company opened another's site. Seven
+    works are in the state that produced it: `stated_next.platform` names カドコミ while the row's
+    headline `url` is the Niconico address, and `predictedRows` took the name from one and the
+    address from the other.
+
+    NEITHER FIELD IS WRONG ON ITS OWN, which is why nothing had caught it. The rule is about the
+    PAIR, and a check that asked either half would pass. The data even held both addresses: those
+    works carry a カドコミ source with its own comic-walker URL beside the Niconico one.
+
+    ASKED OF THE RENDERER'S OWN OUTPUT, §14b. It sets `SERIES` and calls `predictedRows`, which is
+    the function that builds the view, so there is no model here of what the view would do. What
+    decides the answer is the work's own source list: where a row names a platform the work has an
+    address for, the row's address has to be that one.
+
+    fallback: none. A link that goes somewhere else is worse than no link.
+    """
+    sys.path.insert(0, str(ADAPTERS))
+    import interface
+    rows = ctx.get("series") or []
+    if not rows:
+        return ["no work rows were collected, so nothing here was checked"]
+    try:
+        iface = interface.Interface(names=ctx["names_shipped"] or {},
+                                    # THE SHAPE app.js HOLDS, which is the document rather than
+                                    # its array: `predictedRows` walks `SERIES.series`.
+                                    prefs={"LANG": "en", "SERIES": {"series": rows}},
+                                    app_js=ctx.get("_iface_path"))
+        got = iface.values([("predictedRows", None)])
+    except interface.Unavailable as e:
+        return [f"the interface could not be run, so nothing here was checked: {e}"]
+    predicted = got[0] if got else []
+    if not isinstance(predicted, list):
+        return ["predictedRows answered something this cannot read"]
+    # WHERE EACH WORK REALLY IS, from the rows the view was built from.
+    where = {}
+    for r in rows:
+        for s in (r.get("sources") or []):
+            if s.get("platform") and s.get("url"):
+                where.setdefault(r.get("id"), {}).setdefault(s["platform"], s["url"])
+    bad = []
+    for row in predicted or []:
+        if not isinstance(row, dict):
+            continue
+        name, url, wid = row.get("plat_name"), row.get("url"), row.get("wid")
+        held = (where.get(wid) or {}).get(name)
+        if name and url and held and url != held:
+            bad.append(f"{wid}: the row says {name} and links to {url}, "
+                       f"where {name} is {held}")
+        # AND IT MAY NOT SAY A WORK IS ALSO ON THE PLATFORM IT IS ALREADY SHOWING.
+        if name and name in (row.get("also_on") or []):
+            bad.append(f"{wid}: shown on {name} and said to be also on {name}")
+    return bad
 
 
 def inv_english_mode_has_no_japanese(ctx):
@@ -993,6 +1053,7 @@ INVARIANTS = [
     ("a name reaches both lines of a bilingual row", inv_a_name_in_both_mode_is_rendered_in_both),
     ("status.html shows no Japanese of its own", inv_status_page_shows_no_japanese_of_its_own),
     ("English mode has no Japanese", inv_english_mode_has_no_japanese),
+    ("a link goes where its label says", inv_a_link_goes_where_its_label_says),
     ("every renderer is ruled", inv_every_renderer_is_ruled),
     ("the interface folds a name key as the build does", inv_interface_folds_a_name_key_as_the_build_does),
     ("every credit role has an English gloss", inv_every_credit_role_has_an_english_gloss),

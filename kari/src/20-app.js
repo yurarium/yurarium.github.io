@@ -2592,9 +2592,27 @@ function predictedRows() {
     // no access terms, so `ep` and `free` stay absent and the row shows neither. Filling them from
     // the last chapter would be describing a different chapter, and the free filter treating an
     // unknown as not-free is the existing considered answer.
-    const base = { work: r.work, work_en: r.work_en, author: r.author, author_en: r.author_en,
-                   wid: r.id, also_on: (r.sources || []).slice(1).map(s => s.platform).filter(Boolean),
-                   url: r.url || src.url, predicted: true, type: 'chapter', access_modes: [] };
+    // THE ROW IS ABOUT ONE PLATFORM AND EVERY FIELD ON IT HAS TO MEAN THAT PLATFORM. `plat_name`
+    // came from `stated_next` while `url` stayed the work's headline address and `also_on` listed
+    // every source but the first, so five rows read `KADOKOMI · also on KADOKOMI` and linked to
+    // manga.nicovideo.jp. A reader clicking the name of one company opened another's site.
+    //
+    // THE DATA HAD BOTH ADDRESSES ALL ALONG. Those works carry a カドコミ source with its own
+    // comic-walker URL beside the Niconico one; nothing had to be captured, the row simply took
+    // its name from one field and its address from another. `showing` is the platform this row
+    // speaks for and everything below is derived from it.
+    const forPlat = name => (r.sources || []).find(s => s.platform === name) || null;
+    const rowFor = (showing, fallback) => {
+      const on = showing || fallback || src.platform;
+      const own = forPlat(on);
+      return { work: r.work, work_en: r.work_en, author: r.author, author_en: r.author_en,
+               wid: r.id,
+               also_on: (r.sources || []).map(s => s.platform)
+                          .filter(p => p && p !== on),
+               url: (own && own.url) || r.url || src.url,
+               predicted: true, type: 'chapter', access_modes: [] };
+    };
+    const base = rowFor(null, src.platform);
     // A date the platform named, or the next one its stated rhythm falls on. The second is
     // computed at build time, because turning 毎月第3金曜 into a date is logic that already exists
     // and is tested, and a second copy of it here would be a second thing to keep right.
@@ -2606,7 +2624,7 @@ function predictedRows() {
       // a chapter, so a missed one belongs in front of the reader rather than dropped for being
       // in the past: the platform said a day, the day went by, and nothing arrived.
       const late = stated < todayISO;
-      out.push(Object.assign({}, base, {
+      out.push(Object.assign({}, rowFor(sn.platform, src.platform), {
         plat: sn.platform || src.platform, plat_name: sn.platform || src.platform,
         pub: stated, announced: true, overdue: late, cadence: sn.cadence,
         kind: late ? 'overdue' : 'announced',
