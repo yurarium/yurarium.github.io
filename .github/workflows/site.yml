@@ -11,9 +11,11 @@ name: site
 # secrets, one workflow edit from exposure; with both public a read needs no secret in either
 # direction.
 #
-# ON A SCHEDULE AND ON DEMAND, rather than triggered from the pipeline. A dispatch would need a
-# cross-repository token in `yurison`'s secrets; a schedule needs nothing, and the check below is
-# cheap enough to run against an unchanged store.
+# DISPATCHED BY THE PIPELINE WHEN IT PUBLISHES, with the schedule kept underneath as the floor.
+# `yurison` holds the mechanism and names no repository: which consumer to tell is an Actions
+# variable there, and the token is scoped to `Actions: write` on this repository alone. A
+# fine-grained token expires within the year and a dispatch that fails is an update nobody sent, so
+# the cron stays: push decides the latency, poll decides what an expired credential costs.
 on:
   schedule:
     - cron: "47 6 * * *"
@@ -75,12 +77,6 @@ jobs:
       - name: Dependencies
         run: pip install --quiet pyyaml
 
-      # THE CHECKS THAT ARE ABOUT WHAT A READER IS SHOWN, which moved here with the rendering they
-      # are about. They gate BEFORE the pipeline stops running them, so a check cannot go quiet by
-      # changing repository.
-      - name: What a reader is shown
-        run: python3 build/reader_checks.py --store "$RUNNER_TEMP/corpus.sqlite"
-
       - name: Build the data this site serves
         env:
           REGENERATE: ${{ inputs.regenerate }}
@@ -91,6 +87,18 @@ jobs:
           # test fails is a failing command, so the empty case would have failed every ordinary run.
           if [ -n "$ARGS" ]; then echo "::warning::rebuilding published month(s):$ARGS"; fi
           python3 build/from_store.py --store "$RUNNER_TEMP/corpus.sqlite" $ARGS
+
+      # AFTER THE BUILD AND BEFORE THE COMMIT, WHICH IS THE ONLY PLACE IT GATES ANYTHING. These
+      # read the store for some of what they check and `kari/data` for the rest, so running them
+      # first asked about the PREVIOUS build's files. On 2026-08-14 a store published with no floor
+      # surfaces produced a `names.json` whose English fallback spelled every Japanese run as
+      # question marks, this passed against yesterday's good files, the build committed, and the
+      # same check failed the NEXT run: it reported the fault one build after it had shipped it.
+      #
+      # Here the working tree already holds what is about to be published and nothing is committed
+      # yet, so a failure costs a run rather than the site.
+      - name: What a reader is shown
+        run: python3 build/reader_checks.py --store "$RUNNER_TEMP/corpus.sqlite"
 
       - name: app.js is the derivation of kari/src
         run: python3 build-app.py --check
