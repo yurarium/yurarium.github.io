@@ -48,11 +48,11 @@ ADAPTERS = pathlib.Path(
 #: More than one is listed while a schema change is in flight, so the two repositories can be
 #: updated in either order rather than in lockstep.
 #:
-#: `9c51c24f` adds the run's own report, §13: `run_source`, `run_queue`, `check_result` and
-#: `check_finding`. `d07040c9` stays listed because a store published before this change is still
-#: readable by this build, which is what "either order" means; it comes out when nothing in flight
-#: needs it.
-KNOWN_SCHEMAS = ("9c51c24feec6ecf3", "d07040c96d75baaa")
+#: `5ad476caca453555` is the run's own report, §13: `run_source`, `run_queue`, `run_drop`, `check_result`
+#: and `check_finding`, the last carrying the order `check.py` declares its checks in. `d07040c9`
+#: stays listed because a store published before the change is still readable by this build, which
+#: is what "either order" means; it comes out when nothing in flight needs it.
+KNOWN_SCHEMAS = ("5ad476caca453555", "d07040c96d75baaa")
 
 
 def open_store(path):
@@ -91,6 +91,26 @@ def files(db, generated):
     out["feed/names.json"] = emit.as_text(emit.names(db, generated))
     out["series.json"] = emit.as_text(emit.series(db, generated))
     out.update(emit.feed_files(db))
+
+    # ── THE RUN'S REPORT ON ITSELF, §13 ──────────────────────────────────────────────────────
+    #
+    # THESE THREE ARE NOT THE CORPUS AND THE SITE SERVES THEM ANYWAY. `app.js` reads `run.json`
+    # for the date this pipeline began watching, and the status page is built from `status.json`
+    # entire. They used to be copied across by `deploy.sh`; §11 removed that step and nothing
+    # replaced it, so all three froze on 2026-08-13 while the corpus beside them moved on. A page
+    # reporting on a run that is not the run that produced the data around it is worse than a
+    # missing page, because it answers.
+    #
+    # `status.py` STAYS THE ONE PRODUCER OF THE STATUS DOCUMENT and only its inputs moved. A
+    # second assembler here would be a second answer to what the run did.
+    import status
+    out["run.json"] = emit.as_text(emit.run(db))
+    out["checks.json"] = emit.as_text(emit.checks(db))
+    # THE PREVIOUS DOCUMENT IS THE ONE THING THE STORE CANNOT HOLD, being the file about to be
+    # replaced and the only record of the run before this one. `since_last` is computed from it.
+    was = KARI / "data" / "status.json"
+    previous = json.loads(was.read_text(encoding="utf-8")) if was.exists() else None
+    out["status.json"] = emit.as_text(status.from_store(db, previous))
     return out
 
 
@@ -204,9 +224,11 @@ def main(argv=None):
     # SO A REMOVAL IS A DELIBERATE ACT NOW, `--prune`, and everything else about this build stays
     # automatic. The cost of leaving a stale file for a day is a file nobody fetches; the cost of
     # deleting a live one is the site.
+    # THE THREE REPORT FILES USED TO BE EXEMPT HERE, because nothing built them and the sweep
+    # would have deleted what `deploy.sh` had copied. §13 builds them, so they are in `written`
+    # like everything else and the exemption would only hide a run that stopped producing one.
     stale = [p for p in sorted(data.rglob("*.json"))
-             if str(p.relative_to(data)) not in written
-             and p.name not in ("run.json", "checks.json", "status.json")]
+             if str(p.relative_to(data)) not in written]
     for p in stale:
         changed.append(f"{'-' if a.prune else '?'}{p.relative_to(data)}")
         if a.prune and not a.check:
