@@ -108,8 +108,11 @@ function connectors(d) {
   const drops = c.filter(x => x.drop);
   const led = d.ledger || {};
   const lede = esc(T(
-    `${c.length} 系統のソースを読み込み。最も古い取得は ${oldest.source}（${oldest.age_days} 日前）。`,
-    `${c.length} sources were read. The oldest capture is ${oldest.source}, ${oldest.age_days} days old.`))
+    // THE NAME IS QUOTED, READER-PLAN item 3. A source called `reachable` made the sentence read
+    // as a statement about whether the capture could be reached: "the oldest capture is
+    // reachable, 12 days old". A source name is a name and the sentence has to show that it is.
+    `${c.length} 系統のソースを読み込み。最も古い取得は「${oldest.source}」（${oldest.age_days} 日前）。`,
+    `${c.length} sources were read. The oldest capture is ${JSON.stringify(oldest.source)}, ${oldest.age_days} days old.`))
     + (stale.length ? ' ' + esc(T(`${stale.length} 件が 7 日を超過。`, `${stale.length} are over a week old.`)) : '')
     + (empty.length ? ' ' + esc(T(`${empty.length} 件が空。`, `${empty.length} returned nothing.`)) : '')
     + ' ' + esc(mal

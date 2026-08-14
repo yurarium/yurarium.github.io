@@ -3110,8 +3110,20 @@ function renderWorkPage() {
       ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer nofollow">${
            esc(platBoth(s.platform))}</a>`
       : esc(platBoth(s.platform));
-    return `<tr><td>${nm}</td><td>${esc(held)}</td><td>${esc(money)}</td><td>${
-      s.latest ? esc(fmtDate(s.latest, { year: true })) : ''}</td></tr>`;
+    /* AN UNKNOWN DATE SAYS SO, READER-PLAN items 2 and 10. 568 of 1,820 rows rendered an
+       entirely empty cell here beside a cell that says "76 not recorded" in words, so a reader
+       could not tell "this platform never says" from "the page failed to draw it". 470 of those
+       were ニコニコ漫画 stating a date the build was dropping, which is fixed where the row is
+       built; the 98 that are left are カドコミ rows for which no date exists anywhere.
+
+       A WORK-LEVEL DATE IS MARKED. ニコニコ漫画 says when a WORK last updated and never which
+       chapter did, so the date is real and is not a chapter's, and the title says which it is. */
+    const when = s.latest
+      ? `<span${s.latest_work_level ? ` title="${esc(T('作品単位の更新日。話は特定されない',
+            'the date this work last updated; the platform names no chapter'))}"` : ''}>${
+           esc(fmtDate(s.latest, { year: true }))}${s.latest_work_level ? '*' : ''}</span>`
+      : `<span class="m">${esc(T('記録なし', 'not recorded'))}</span>`;
+    return `<tr><td>${nm}</td><td>${esc(held)}</td><td>${esc(money)}</td><td>${when}</td></tr>`;
   }).join('');
   const webBody = chapRows ? `<div class="wp-scroll"><table class="wp-rows">
       <tr><th>${esc(T('掲載サイト', 'Platform'))}</th><th>${esc(T('話数', 'Chapters'))}</th>
