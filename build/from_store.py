@@ -52,7 +52,7 @@ ADAPTERS = pathlib.Path(
 #: and `check_finding`, the last carrying the order `check.py` declares its checks in. `d07040c9`
 #: stays listed because a store published before the change is still readable by this build, which
 #: is what "either order" means; it comes out when nothing in flight needs it.
-KNOWN_SCHEMAS = ("dd2f5224fce38862", "d07040c96d75baaa")
+KNOWN_SCHEMAS = ("7650efab09871f74", "dd2f5224fce38862")
 
 
 def open_store(path):

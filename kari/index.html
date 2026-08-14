@@ -199,7 +199,7 @@
   </select>
   <p class="snapnote" id="fsnap" hidden></p>
   <div id="feed"></div>
-  <p class="empty" id="fempty" hidden>該当なし / no matches</p>
+  <p class="empty" id="fempty" data-i18n hidden>該当なし / no matches</p>
   <!-- The select is the STATE. The picker above only sets it and fires `change`, so everything
        that reads el('fmonth').value, persists VIEW_FIELDS or resets filters is unchanged by the
        move. One producer of the fact, one consumer path. -->
@@ -268,7 +268,7 @@
        Its wording is written by paintSerMore and carries the number of rows not drawn, because a
        list that simply stops is indistinguishable from a list that has ended. -->
   <p class="morerow"><button id="smore" class="themebtn" hidden></button></p>
-  <p class="empty" id="sempty" hidden>該当なし / no matches</p>
+  <p class="empty" id="sempty" data-i18n hidden>該当なし / no matches</p>
 </section>
 
 <!-- A work's own page. Rendered over the list, at the address the pre-rendered
@@ -305,7 +305,7 @@
     </span>
   </div>
   <div id="rel-list"></div>
-  <p class="empty" id="rempty" hidden>該当なし / no matches</p>
+  <p class="empty" id="rempty" data-i18n hidden>該当なし / no matches</p>
 </section>
 
 <section id="tab-cat" hidden aria-hidden="true">
@@ -330,7 +330,7 @@
   </div>
   <p class="count" id="count"></p>
   <ol id="list"></ol>
-  <p class="empty" id="empty" hidden>該当なし / no matches</p>
+  <p class="empty" id="empty" data-i18n hidden>該当なし / no matches</p>
 </section>
 
 <footer>

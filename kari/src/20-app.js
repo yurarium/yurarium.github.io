@@ -2155,7 +2155,11 @@ function renderPublisherPage(doc) {
     const spellings = (ln.spellings || []).map(s => s.raw).filter(x => ln.name !== x);
     const alt = spellings.length
       ? `<span class="wf-sub" title="${esc(spellings.join(' · '))}">${
-          esc(T(`${spellings.length}種の表記`, `${spellings.length} recorded spellings`))}</span>` : '';
+          // ONE SPELLING READS "1 recorded spelling", READER-PLAN item 8. It said the plural ten times
+          // on a single publisher page and on 21 of 27 sampled. The Japanese beside it counts with
+          // a classifier and needs no plural, which is why only one half was ever wrong.
+          esc(T(`${spellings.length}種の表記`,
+                `${spellings.length} recorded spelling${spellings.length === 1 ? '' : 's'}`))}</span>` : '';
     return `<tr><td>${esc(pubBoth(ln.name))}${
         ln.parent ? `<span class="wf-sub">${esc(pubBoth(ln.parent))}</span>` : ''}${alt}</td>
       <td>${esc(String(ln.rows || 0))}</td><td>${esc(span)}</td></tr>`;
@@ -3293,7 +3297,18 @@ function renderSeries() {
   });
   rows = rows.slice().sort(
     sort === 'chapters' ? (a, b) => b.chapters - a.chapters
-    : sort === 'work'   ? (a, b) => a.work.localeCompare(b.work, 'ja')
+    /* SORTED BY WHAT THE READER IS SHOWN, READER-PLAN item 8. This compared the Japanese title
+       whatever the language was, so in English mode the list came out in an order with no visible
+       basis: `(Crybaby) Tsun-Neko-chan`, `Ayakashi in the Rain`, `A Moon Cooked Well Done`. The
+       control looked broken to an English reader and was working perfectly on a string they could
+       not see.
+
+       THE JAPANESE COLLATOR STAYS FOR JAPANESE, because it orders kana the way a reader expects
+       and a default collator does not. */
+    : sort === 'work'   ? (a, b) => (LANG === 'en'
+        ? workLabelText(a, 'en').localeCompare(workLabelText(b, 'en'), 'en',
+                                               { sensitivity: 'base' })
+        : a.work.localeCompare(b.work, 'ja'))
     : (a, b) => workDate(b).localeCompare(workDate(a)));
 
   /* ONE PRODUCER OF "IS THIS A DIFFERENT LIST". Every control that changes which rows there are or

@@ -577,6 +577,19 @@ function workLabel(r) {
   return ruby(r.work, rec) + (FURIGANA ? uncertainMark(rec) : '');
 }
 
+/* THE SAME LABEL AS PLAIN TEXT, for sorting. `workLabel` returns markup, and a sort comparing
+   markup compares `<span class="unc floor">` before it reaches a letter. READER-PLAN item 8: the
+   works tab sorted the Japanese title in English mode, so the order had no visible basis to an
+   English reader, and this is what it sorts on instead. */
+function workLabelText(r, lang) {
+  // `inLang` RATHER THAN A BARE CALL, and it says what is meant: this wants the label in ONE named
+  // language because it is a sort key. `a name reaches both lines of a bilingual row` refused the
+  // bare call and was right to: under 併記 a renderer called outside a wrapper answers in Japanese
+  // alone, and a sort key is exactly the kind of use that would never be noticed.
+  return inLang(lang || LANG, () => String(workLabel(r) ?? ''))
+    .replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+}
+
 /* Authors likewise: one language, chosen by the caller's context. A romanisation and its Japanese are the same name
    twice, so the toggle picks one (§5b). */
 /* A person's romanisation in the reader's chosen order. The stored form is family first, as the
