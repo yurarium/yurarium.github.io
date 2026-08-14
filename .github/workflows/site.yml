@@ -31,8 +31,11 @@ jobs:
     runs-on: ubuntu-latest
     # WHERE THE CORPUS'S RULES ARE, for every step. Both the build and the reader checks read the
     # pipeline's `adapters/`, and each honours this rather than assuming a sibling checkout.
+    # `runner.temp` IS NOT AVAILABLE IN A JOB-LEVEL `env` and GitHub rejects the whole file for it,
+    # which is a failure before any step starts. `github.workspace` is, and the clone below puts the
+    # pipeline beside this checkout exactly as a developer has it.
     env:
-      YURARIUM_ADAPTERS: ${{ runner.temp }}/yurison/adapters
+      YURARIUM_ADAPTERS: ${{ github.workspace }}/../yurison/adapters
     steps:
       - uses: actions/checkout@v5
 
@@ -41,8 +44,9 @@ jobs:
       # rather than keeping a second copy that would drift.
       - name: The pipeline's adapters
         run: |
-          git clone --depth 1 https://github.com/yurarium/yurison.git "$RUNNER_TEMP/yurison"
-          ls "$RUNNER_TEMP/yurison/adapters/relational/emit.py"
+          git clone --depth 1 https://github.com/yurarium/yurison.git \
+            "$GITHUB_WORKSPACE/../yurison"
+          ls "$YURARIUM_ADAPTERS/relational/emit.py"
 
       - name: The published store
         run: |
