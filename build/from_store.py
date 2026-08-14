@@ -47,7 +47,12 @@ ADAPTERS = pathlib.Path(
 #: The schema digests this build knows how to read. A store stamped with anything else is refused.
 #: More than one is listed while a schema change is in flight, so the two repositories can be
 #: updated in either order rather than in lockstep.
-KNOWN_SCHEMAS = ("d07040c96d75baaa",)
+#:
+#: `9c51c24f` adds the run's own report, §13: `run_source`, `run_queue`, `check_result` and
+#: `check_finding`. `d07040c9` stays listed because a store published before this change is still
+#: readable by this build, which is what "either order" means; it comes out when nothing in flight
+#: needs it.
+KNOWN_SCHEMAS = ("9c51c24feec6ecf3", "d07040c96d75baaa")
 
 
 def open_store(path):
