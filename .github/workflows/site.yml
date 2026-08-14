@@ -63,6 +63,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      # WHAT THE CORPUS'S RULES IMPORT. The emitters reach the name store through modules that read
+      # YAML, which is the only third-party thing on the path between a store and these files.
+      - name: Dependencies
+        run: pip install --quiet pyyaml
+
       # THE CHECKS THAT ARE ABOUT WHAT A READER IS SHOWN, which moved here with the rendering they
       # are about. They gate BEFORE the pipeline stops running them, so a check cannot go quiet by
       # changing repository.
