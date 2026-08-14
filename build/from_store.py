@@ -117,6 +117,10 @@ def main(argv=None):
     ap.add_argument("--check", action="store_true",
                     help="say what would change and write nothing")
     ap.add_argument("--adapters", help="the pipeline's adapters/, where the corpus's rules live")
+    ap.add_argument("--regenerate", metavar="YYYY-MM", action="append", default=[],
+                    help="a month whose published row set may change, said deliberately")
+    ap.add_argument("--prune", action="store_true",
+                    help="delete data files the store no longer produces, which is never automatic")
     a = ap.parse_args(argv)
     if a.adapters:
         globals()["ADAPTERS"] = pathlib.Path(a.adapters)
@@ -127,6 +131,15 @@ def main(argv=None):
     db, stamp = open_store(a.store)
     generated = stamp.get("generated") or ""
     written = json.loads(json.dumps(files(db, generated)))
+
+    # A STORE THAT CANNOT SAY WHAT THE FEED IS IS A STORE THIS MAY NOT BUILD FROM. The window's
+    # width, the first archived month and the run's date live in `run_report`, and a store compiled
+    # without them emits no feed at all. That is a broken artefact rather than a corpus with no
+    # releases, and the difference is worth refusing over: the day it happened, the site lost its
+    # feed and rendered nothing.
+    if "feed/current.json" not in written:
+        raise SystemExit(f"{a.store} yields no feed window; its `run_report` is empty or its "
+                         "releases carry no dates. Refusing to build from it.")
 
     data = KARI / "data"
     # ── A PUBLISHED MONTH DOES NOT LOSE ROWS, §11 ────────────────────────────────────────────
@@ -140,6 +153,8 @@ def main(argv=None):
     for name, text in written.items():
         if not re.fullmatch(r"feed/[0-9]{4}-[0-9]{2}\.json", name):
             continue
+        if name[len("feed/"):-len(".json")] in a.regenerate:
+            continue
         was = data / name
         if not was.exists():
             continue
@@ -152,6 +167,9 @@ def main(argv=None):
     if lost:
         for line in lost:
             print(f"REFUSING: {line}")
+        print("A published month's ROW SET is what is locked, not its bytes. If the loss is "
+              "understood and accepted, name the month with --regenerate, which says so out loud "
+              "and in the commit rather than quietly.")
         return 2
 
     changed, same = [], 0
@@ -165,14 +183,21 @@ def main(argv=None):
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(text, encoding="utf-8")
 
-    # A FILE THE STORE NO LONGER PRODUCES IS DELETED, never left to rot. `cp` adds and overwrites
-    # and never removes, which is how a file the pipeline stopped emitting went on being served.
+    # A FILE THE STORE NO LONGER PRODUCES IS REPORTED, AND DELETED ONLY WHEN ASKED. It used to be
+    # deleted outright, on the reasoning that a file the pipeline stopped emitting would otherwise be
+    # served for ever. That reasoning holds and the ACTION was still wrong: an emitter that produces
+    # NOTHING is indistinguishable here from a pipeline that meant to stop, and one that produced
+    # nothing took the feed off the live site. A store with an empty `run_report` is all it took.
+    #
+    # SO A REMOVAL IS A DELIBERATE ACT NOW, `--prune`, and everything else about this build stays
+    # automatic. The cost of leaving a stale file for a day is a file nobody fetches; the cost of
+    # deleting a live one is the site.
     stale = [p for p in sorted(data.rglob("*.json"))
              if str(p.relative_to(data)) not in written
              and p.name not in ("run.json", "checks.json", "status.json")]
     for p in stale:
-        changed.append(f"-{p.relative_to(data)}")
-        if not a.check:
+        changed.append(f"{'-' if a.prune else '?'}{p.relative_to(data)}")
+        if a.prune and not a.check:
             p.unlink()
 
     print(f"store  : schema {stamp.get('schema')}, generated {generated or 'unstated'}")
