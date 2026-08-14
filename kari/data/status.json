@@ -1,10 +1,8 @@
 {
- "generated": "2026-08-14T17:09:27+00:00",
+ "generated": "2026-08-14T22:43:01+00:00",
  "since_last": {
-  "at": "2026-08-13T22:22:15+00:00",
-  "statistics": {
-   "chapters": 10
-  }
+  "at": "2026-08-14T17:09:27+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -12,7 +10,8 @@
   "resolver": "Dropped rows the catch-all reader produced that a named adapter already covered",
   "samples": "Held back promotional read-throughs of finished volumes as print candidates",
   "discovery-candidate": "Admitted works that a discovery list names",
-  "platform-genre": "Admitted works that a platform files under its own yuri genre"
+  "platform-genre": "Admitted works that a platform files under its own yuri genre",
+  "known-work-match": "Matched updates to works the database already held"
  },
  "labels": {
   "works": "works",
@@ -24,25 +23,27 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-08-14",
-  "releases": 1261,
+  "at": "2026-08-15",
+  "releases": 1250,
   "works": 2574,
   "platforms": 23,
-  "series_rows": 3039,
+  "series_rows": 3038,
+  "assembled": 3039,
+  "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 892,
+   "discovery-candidate": 884,
    "known-work-match": 17,
-   "platform-genre": 352
+   "platform-genre": 349
   },
   "collapsed": {
    "duplicate_chapters": 84,
-   "resolver": 57,
+   "resolver": 60,
    "samples": 36,
    "thin_sitemap": 8
   }
  },
  "gate": {
-  "invariants_passing": 47,
+  "invariants_passing": 51,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -197,6 +198,11 @@
     "examples": []
    },
    {
+    "name": "every kind the run reports has a gloss",
+    "violations": 0,
+    "examples": []
+   },
+   {
     "name": "the store has one writer",
     "violations": 0,
     "examples": []
@@ -247,6 +253,21 @@
     "examples": [
      "('check_result is empty',)"
     ]
+   },
+   {
+    "name": "every platform a reader is shown is registered",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "no capture is dated after the run that read it",
+    "violations": 0,
+    "examples": []
+   },
+   {
+    "name": "every platform a reader is shown has an English name",
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "the store carries this run's census",
@@ -526,8 +547,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 65,
-    "value": 65
+    "budget": 66,
+    "value": 66
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -716,8 +737,8 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 63,
-    "value": 63
+    "budget": 62,
+    "value": 62
    },
    {
     "name": "works without English",
@@ -752,7 +773,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 12,
+   "age_days": 13,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -766,7 +787,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 9,
+   "age_days": 10,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -780,7 +801,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 9,
+   "age_days": 10,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -794,7 +815,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 8,
+   "age_days": 9,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -808,7 +829,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 7,
+   "age_days": 8,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -822,7 +843,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 7,
+   "age_days": 8,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -836,7 +857,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 6,
+   "age_days": 7,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -850,7 +871,7 @@
    "works": 129,
    "rows": 6189,
    "retrieved": "2026-08-15",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false,
    "checked_rows": 6142,
@@ -864,7 +885,7 @@
    "works": 704,
    "rows": 7760,
    "retrieved": "2026-08-15",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false,
    "checked_rows": 7642,
@@ -878,7 +899,7 @@
    "works": 972,
    "rows": 7416,
    "retrieved": "2026-08-15",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false,
    "checked_rows": 6744,
@@ -892,7 +913,7 @@
    "works": 1331,
    "rows": 11368,
    "retrieved": "2026-08-15",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false,
    "checked_rows": 10527,
@@ -906,7 +927,7 @@
    "works": 847,
    "rows": 2175,
    "retrieved": "2026-08-15",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -917,21 +938,21 @@
   {
    "source": "webpages",
    "files": 37,
-   "works": 529,
-   "rows": 7401,
+   "works": 528,
+   "rows": 7394,
    "retrieved": "2026-08-15",
-   "age_days": -1,
+   "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7350,
-   "well_formed": 7350,
+   "checked_rows": 7343,
+   "well_formed": 7343,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-14T16:47:38+00:00",
+  "previous_at": "2026-08-14T17:08:31+00:00",
   "drops": []
  },
  "outstanding": [
@@ -944,7 +965,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 28,
+   "count": 29,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "JCがサキュバスに先祖返りした話",
@@ -966,6 +987,7 @@
     "チートイーター異世界召喚尽く滅ぶべし",
     "ハッピーアワーガールズ",
     "ポンポコタヌキとへっぽこ王子",
+    "不器用ビンボーダンス ２",
     "口に出しても宜しいですか？",
     "同居人に片思いしてる百合漫画",
     "性別不明な中性僕っ子とお姉さん",
@@ -1033,7 +1055,7 @@
     "titles read by a machine, unmarked": 1165,
     "uncertain readings": 53,
     "data reaching the site around the store": 0,
-    "works showing a romanisation": 65,
+    "works showing a romanisation": 66,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
     "one work under two names in a list": 3,
@@ -1064,7 +1086,7 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 4,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 63,
+    "incomplete attested rows": 62,
     "works without English": 0,
     "volume rows with no publication date": 2436,
     "volume rows a page counts but cannot list": 0,
@@ -1076,18 +1098,18 @@
   "works": 3038,
   "states": {
    "print": 1648,
-   "oneshot": 429,
-   "unknown": 359,
-   "completed": 252,
-   "active": 216,
-   "dormant": 78,
-   "slow": 56
+   "oneshot": 430,
+   "dormant": 295,
+   "completed": 280,
+   "active": 264,
+   "slow": 71,
+   "unknown": 50
   },
   "english_basis": {
-   "translated": 2634,
+   "translated": 2633,
    "official-jp": 230,
    "licensed": 109,
-   "romaji": 65
+   "romaji": 66
   },
   "print_works": 2459,
   "print_only": 1648,
