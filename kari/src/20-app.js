@@ -3130,7 +3130,7 @@ function detailList(rows) {
           ? `<a class="meta plat" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer nofollow" title="${
               esc(r.origin_note || `read this instalment on ${where}`)}">${esc(where)}</a>`
           : `<span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(where)}</span>`}
-        ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(platName(r.plat_name))}, not a platform of its own">${esc(r.channel_name)}</span>` : ''}
+        ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(platName(r.plat_name))}, not a platform of its own">${esc(platName(r.channel_name))}</span>` : ''}
         ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">${esc(T('転載'))}</span>` : ''}
         ${(r.also_on && r.also_on.length) ? `<span class="meta">${LANG === 'en' ? '· ' : '・'}${esc(L('他', 'also on'))} ${esc(r.also_on.map(platName).join(LANG === 'en' ? ', ' : '、'))}</span>` : ''}
       </div>

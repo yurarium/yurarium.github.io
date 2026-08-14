@@ -860,32 +860,17 @@ function needsYear(iso) {
   return s.slice(0, 4) !== String(new Date().getFullYear());
 }
 
-/* Platform names in English.
-   Where the platform publishes its own Latin-script name: pixiv Comic, Comic Days, Sunday Webry,
-   KADOKOMI, Magazine Pocket. That name is used, because it is the one the platform answers to and
-   the one a reader will find. Where it publishes none, this is a romanisation and nothing more: a
-   best-effort reading of the Japanese, marked as such rather than invented as a translation.
-   Names already in Latin script are absent from the map and pass through untouched. */
-const PLAT_EN = {
-  'pixivコミック':'pixiv Comic', 'コミックDAYS':'Comic Days', 'サンデーうぇぶり':'Sunday Webry',
-  'カドコミ':'KADOKOMI', 'マガポケ':'Magazine Pocket', '少年ジャンプ+':'Shonen Jump+',
-  'ガンガンONLINE':'GANGAN ONLINE', 'ニコニコ漫画':'Niconico Manga', 'コロコロオンライン':'CoroCoro Online',
-  'となりのヤングジャンプ':'Tonari no Young Jump', 'くらげバンチ':'Kurage Bunch',
-  'コミックガルド':'Comic Gardo', 'コミックゼノン':'Comic Zenon', 'コミックボーダー':'Comic Border',
-  'コミック アース・スター':'Comic Earth Star', 'チャンピオンクロス':'Champion Cross',
-  'ヤングチャンピオン':'Young Champion', 'ヤンマガWeb':'Yanmaga Web', 'マンガワン':'Manga One',
-  'マンガPark':'Manga Park', 'マンガよもんが':'Manga Yomonga', '一迅プラス':'Ichijin Plus',
-  '花とゆめ+':'Hanayume+', 'webアクション':'Web Action', 'まんがタイムSquare':'Manga Time Square',
-  'ダ・ヴィンチニュース':'Da Vinci News', 'ゼロサムオンライン':'Zero-Sum Online',
-  'コミックPASH! neo':'Comic PASH! neo', 'コミックトレイル':'Comic Trail',
-  'コミックグロウル':'Comic Growl', 'コミックノヴァ':'Comic Nova', 'コミックリュエル':'Comic Ruelle',
-  'COMICリュエル':'COMIC Ruelle', 'COMIC熱帯':'COMIC Nettai', 'コミックオギャー!!':'Comic Ogyaaa!!',
-  'ファイアCROSS':'Fire CROSS', 'フラコミlike!':'Furacomi like!', 'ゼノン編集部':'Zenon editorial',
-  '竹コミ':'Takecomi', 'キミコミ':'Kimicomi', 'ビッコミ':'Bikkomi', 'ライコミ':'Raicomi',
-  'Gコミ':'G-Comi', 'アサコミ':'Asacomi', 'きららベース':'Kirara Base',
-  'GANMA!(更新終了)':'GANMA! (ended)', 'コミックゼノン':'Comic Zenon',
-  'マイナビニュース':'Mynavi News', 'ヤンジャン+':'Yanjan+', 'コミックエッセイ劇場':'Comic Essay Gekijo',
-};
+/* Platform names in English, from `feed/names.json`, READER-PLAN item 5.
+
+   THIS WAS A TABLE IN THIS FILE AND THAT MADE IT A SECOND REGISTER. It drifted from
+   `data/platforms.yaml`: きら星ポータル and comicブースト were never in it, so they reached an
+   English page in Japanese, and it carried seven names for platforms the corpus does not hold.
+   A platform's English name is a fact about the platform and now travels with it, which is the
+   same move `facts/platform` made for the host.
+
+   ABSENT MEANS ALREADY LATIN. COMIC FUZ and MAGCOMI need no rendering, and the pipeline's
+   `every platform a reader is shown has an English name` is what keeps the map complete. */
+const PLAT_EN = {};
 /* THE JOB A CREDIT DID, GLOSSED. ONE TABLE, and until this line there were two: this one held six
    words for the catalogue tab and `CREDIT_ROLE` further down held twenty for the credit pages, so
    キャラクターデザイン was English on one page and Japanese on another and neither table knew that
@@ -1393,6 +1378,7 @@ function platName(n) {
   // A name, not a phrase: shown as one or the other, never "ガンガンONLINE / GANGAN ONLINE".
   // That doubles the width of a meta line for no gain. Absent from the map means already Latin,
   // or no rendering worth asserting.
-  return (LANG === 'en' && PLAT_EN[n]) || n || '';
+  const shipped = (typeof NAMES !== 'undefined' && NAMES && NAMES.platforms) || PLAT_EN;
+  return (LANG === 'en' && shipped[n]) || n || '';
 }
 
