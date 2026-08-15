@@ -1,8 +1,10 @@
 {
- "generated": "2026-08-15T12:44:15+00:00",
+ "generated": "2026-08-15T13:36:23+00:00",
  "since_last": {
-  "at": "2026-08-15T10:39:58+00:00",
-  "statistics": {}
+  "at": "2026-08-15T12:44:15+00:00",
+  "statistics": {
+   "chapters": 1
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,14 +26,14 @@
  },
  "last_run": {
   "at": "2026-08-15",
-  "releases": 1335,
+  "releases": 1336,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3038,
   "assembled": 3040,
   "awaiting_identifier": 2,
   "identification": {
-   "discovery-candidate": 890,
+   "discovery-candidate": 891,
    "known-work-match": 17,
    "platform-genre": 428
   },
@@ -745,7 +747,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 62,
-    "value": 62
+    "value": 61
    },
    {
     "name": "works without English",
@@ -952,20 +954,20 @@
    "source": "webpages",
    "files": 37,
    "works": 529,
-   "rows": 7401,
+   "rows": 7402,
    "retrieved": "2026-08-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7350,
-   "well_formed": 7350,
+   "checked_rows": 7351,
+   "well_formed": 7351,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-15T10:33:08+00:00",
+  "previous_at": "2026-08-15T12:43:23+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1130,7 +1132,7 @@
   "print_only": 1648,
   "volumes": 6105,
   "with_identifier": 3038,
-  "chapters": 28133,
+  "chapters": 28134,
   "delivery_dated": 1034
  }
 }
