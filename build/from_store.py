@@ -235,6 +235,15 @@ def main(argv=None):
             p.unlink()
 
     print(f"store  : schema {stamp.get('schema')}, generated {generated or 'unstated'}")
+    # THE RUN'S OWN DATE, WHERE A WORKFLOW CAN READ IT. `site.yml` labelled its commit with
+    # `date -u +%F`, which is the runner's clock: a run at 09:00 in Japan is still yesterday in
+    # UTC, so the commit that published today's corpus was stamped with yesterday's date. The same
+    # two clocks were the fault `adapters/facts/dating.today` fixed in the pipeline, and a second
+    # clock in the publisher is the same fault a second time. The store states when it was
+    # compiled and this is that answer, written where a shell step can pick it up.
+    if os.environ.get("GITHUB_OUTPUT") and generated:
+        with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+            fh.write(f"generated={generated}\n")
     print(f"data   : {len(changed)} file(s) {'would change' if a.check else 'written'}, "
           f"{same} unchanged")
     for name in changed:

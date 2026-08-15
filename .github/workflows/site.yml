@@ -78,6 +78,7 @@ jobs:
         run: pip install --quiet pyyaml
 
       - name: Build the data this site serves
+        id: build
         env:
           REGENERATE: ${{ inputs.regenerate }}
         run: |
@@ -112,6 +113,10 @@ jobs:
           # TWO -m FLAGS AND NOT AN EMBEDDED NEWLINE. A multi-line message inside this block scalar
           # dedented out of it, and `Co-Authored-By:` was parsed as a top-level workflow key: the
           # first run of this file failed before it started a step.
-          git commit -m "Site data from the store $(date -u +%F)" \
+          # THE STORE'S OWN DATE, NOT THE RUNNER'S. `date -u +%F` is the runner's clock, and the
+          # corpus keeps the date it is in Japan: a run at 09:00 JST published today's data under
+          # yesterday's date. `build/from_store.py` reports what the store says it was compiled on.
+          STAMP="${{ steps.build.outputs.generated }}"
+          git commit -m "Site data from the store ${STAMP:-of unstated date}" \
                      -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
           git push
