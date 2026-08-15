@@ -22,6 +22,8 @@ import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import rules                                                    # noqa: E402
+rules.on_path()                    # the pipeline's harness, and this repository as the site
 import interface                                                        # noqa: E402
 import testkit                                                          # noqa: E402
 

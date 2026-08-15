@@ -1,0 +1,55 @@
+name: gate
+
+# WHAT MUST HOLD BEFORE A PUSH IS PART OF THIS SITE, and it runs on the push rather than on the
+# build. `site.yml` is dispatched by the pipeline when it publishes a store and on a daily cron, so
+# a change to this repository could sit unexamined until the corpus happened to move: the four
+# suites in `build/` had not been run by anything at all since STORE-PLAN §11 moved them here, and
+# three of them could not even import the pipeline's harness.
+#
+# IT DOES NOT BUILD THE SITE. Everything here is about this repository's own code, so it needs no
+# store and no release download: the suites carry their fixtures and `build-app.py --check` reads
+# `kari/src`. What a reader is actually shown is checked in `site.yml`, against the data that was
+# just built, which is the only place that question can be asked honestly.
+on: [push, pull_request]
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    env:
+      YURARIUM_ADAPTERS: ${{ github.workspace }}/../yurison/adapters
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # THE RULES THE CORPUS OWNS, which the suites import. `testkit` is the pipeline's harness and
+      # `interface` runs the shipped `app.js` under node, so a checkout without these is a run that
+      # cannot assert anything; `test.py` says so and stops rather than reporting a green tree.
+      - name: The pipeline's adapters
+        run: |
+          git clone --depth 1 https://github.com/yurarium/yurison.git \
+            "$GITHUB_WORKSPACE/../yurison"
+          ls "$YURARIUM_ADAPTERS/testkit.py"
+
+      - name: Dependencies
+        run: pip install --quiet pyyaml
+
+      - name: Tests
+        run: ./test.py
+
+      # PROVE THEY CAN FAIL. A suite that passes while inverted asserts nothing, and it looks
+      # exactly like one that works. This is the check that the other one means something.
+      - name: The suites fail when inverted
+        run: ./test.py --canary
+
+      - name: app.js is the derivation of kari/src
+        run: python3 build-app.py --check
+
+      # NOTHING COMPILED IS TRACKED. `.gitignore` is consulted for an untracked path and says
+      # nothing about a file git already follows, which is how three `build/__pycache__/*.pyc` were
+      # committed and kept up to date for as long as they were. The hook runs this too and a hook
+      # is bypassable, so this is the side nobody can skip.
+      - name: No compiled caches in the index
+        run: .githooks/no-caches.sh

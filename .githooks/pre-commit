@@ -7,3 +7,6 @@ DIR="$(git rev-parse --show-toplevel)/.githooks"
 [ -f "$DIR/leak-deny.local" ] && export LEAK_DENY="$(cat "$DIR/leak-deny.local")"
 "$DIR/leak-guard.sh" identity-config || exit $?
 "$DIR/leak-guard.sh" content staged  || exit $?
+# AND NOTHING COMPILED. .gitignore says nothing about a file git already tracks, so the rule is
+# asked of the index rather than assumed. See no-caches.sh.
+"$DIR/no-caches.sh"                  || exit $?

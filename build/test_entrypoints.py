@@ -19,6 +19,8 @@ import sys
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parent))
+import rules                                                    # noqa: E402
+rules.on_path()                    # the pipeline's harness, and this repository as the site
 import entrypoints
 import interface
 import testkit

@@ -18,18 +18,20 @@ what the pipeline really produces.
 import argparse
 import html as html_module
 import json
-import os
 import pathlib
 import re
 import subprocess
 import sys
-import unicodedata
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 KARI = ROOT / "kari"
 DATA = KARI / "data"
-ADAPTERS = pathlib.Path(
-    os.environ.get("YURARIUM_ADAPTERS") or ROOT.parent / "yurison" / "adapters")
+# WHERE THE PIPELINE'S RULES ARE, ASKED OF `build/rules.py`. This spelled the same default and the
+# same environment variable, which is two producers of one answer; the suites in this directory
+# were a third that got it wrong and could not import the harness at all.
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import rules                                                            # noqa: E402
+ADAPTERS = rules.ADAPTERS
 
 #: The pages a reader opens, which say things in their own voice rather than reporting the corpus.
 READER_TEXT = [ROOT / "index.html", ROOT / "README.md",
@@ -40,8 +42,7 @@ UNMEASURED = None
 
 def context(store):
     """What the checks read: this site's own files, and the store they were built from."""
-    for p in (ADAPTERS, ADAPTERS / "names", ADAPTERS / "relational"):
-        sys.path.insert(0, str(p))
+    rules.on_path()
     import sqlite3
     db = sqlite3.connect(f"file:{store}?mode=ro", uri=True)
     from relational import emit
@@ -565,12 +566,18 @@ def inv_every_renderer_is_ruled(ctx):
     except which names are in it. Its blind spot is a renderer written as an arrow function or a
     method, stated in interface.renderers, which is why the exemptions carry reasons and not names.
     """
+    # A CHECK THAT CANNOT READ ITS SUBJECT SAYS SO, §4. This swallowed every exception and returned
+    # clean, and `interface.APP_JS` is resolved from `YURARIUM_SITE`, which no workflow set: in CI
+    # the file it derives the renderer set from did not exist, `renderers()` raised
+    # FileNotFoundError, and this printed `ok every renderer is ruled` on every published build.
+    # `workLabelText` had been unruled since READER-PLAN item 8 and nothing said a word.
+    sys.path.insert(0, str(ADAPTERS))
     try:
-        sys.path.insert(0, str(ADAPTERS))
         import interface as _iface
         got = _iface.unruled_renderers()
-    except Exception:                                                   # noqa: BLE001
-        return []
+    except Exception as why:                                            # noqa: BLE001
+        return [f"the interface could not be read, so nothing was asked: "
+                f"{why.__class__.__name__}: {why}"]
     return [f"{n} returns rendered name text and is in neither SURFACES nor NOT_A_SURFACE"
             for n in got]
 
@@ -605,8 +612,11 @@ def inv_interface_folds_a_name_key_as_the_build_does(ctx):
     import interface
     try:
         import key as _key
-    except Exception:                                                           # noqa: BLE001
-        return []
+    except Exception as why:                                                    # noqa: BLE001
+        # THE SAME RULE AS ABOVE, §4. A missing fold is a check that asked nothing, not a check
+        # with nothing to report.
+        return [f"the build's fold could not be imported, so nothing was compared: "
+                f"{why.__class__.__name__}: {why}"]
     strings = sorted({s for r in list(ctx["series"]) + list(ctx["releases"])
                       for s in (r.get("work"), (r.get("author") or "").strip(), r.get("ep"),
                                 r.get("collection"), r.get("latest_ep"))

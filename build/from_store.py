@@ -33,16 +33,15 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 KARI = ROOT / "kari"
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import rules                                                            # noqa: E402
 
 #: WHERE THE CORPUS'S OWN RULES LIVE, and the dependency runs one way. How a name folds, what a
 #: citation may show a reader, where a personal name parts: those are facts about the corpus and
 #: they have one home, in the pipeline. This build reads them; the pipeline knows nothing about this
 #: repository and has no path that names it. Both are public, so the clone needs no credential.
 #:
-#: PINNED TO THE COMMIT THAT MADE THE STORE, because a rule and the data it was applied to belong
-#: together: the store's stamp says which schema it carries and the checkout says which rules.
-ADAPTERS = pathlib.Path(
-    os.environ.get("YURARIUM_ADAPTERS") or ROOT.parent / "yurison" / "adapters")
+#: `build/rules.py` IS WHERE FINDING THEM LIVES NOW. It was spelled here and nowhere else, so the
+#: four suites in this directory could not import the pipeline's harness and none of them ran.
 
 #: The schema digests this build knows how to read. A store stamped with anything else is refused.
 #: More than one is listed while a schema change is in flight, so the two repositories can be
@@ -79,8 +78,7 @@ def files(db, generated):
     reader needs beside them. A site that wanted a different shape would write its own emitter
     against the same tables, and nothing in the pipeline would have to know.
     """
-    for p in (ADAPTERS, ADAPTERS / "names", ADAPTERS / "relational"):
-        sys.path.insert(0, str(p))
+    rules.on_path()
     import emit
     out = {}
     out["credits.json"] = emit.as_text(emit.credits(db, generated))
@@ -147,11 +145,9 @@ def main(argv=None):
     ap.add_argument("--prune", action="store_true",
                     help="delete data files the store no longer produces, which is never automatic")
     a = ap.parse_args(argv)
-    if a.adapters:
-        globals()["ADAPTERS"] = pathlib.Path(a.adapters)
-    if not (ADAPTERS / "facts").is_dir():
-        raise SystemExit(f"no adapters at {ADAPTERS}; clone yurison beside this repository or "
-                         "pass --adapters")
+    rules.on_path(a.adapters)
+    if not rules.present():
+        raise SystemExit(rules.missing())
 
     db, stamp = open_store(a.store)
     generated = stamp.get("generated") or ""

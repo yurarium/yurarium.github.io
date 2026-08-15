@@ -101,6 +101,12 @@ jobs:
       - name: What a reader is shown
         run: python3 build/reader_checks.py --store "$RUNNER_TEMP/corpus.sqlite"
 
+      # THIS REPOSITORY'S OWN SUITES, BEFORE IT PUBLISHES. `gate.yml` runs them on every push,
+      # which is where a change is caught; running them here too means a scheduled build cannot
+      # publish from a tree whose suites do not pass, whatever was pushed while nobody looked.
+      - name: Tests
+        run: ./test.py
+
       - name: app.js is the derivation of kari/src
         run: python3 build-app.py --check
 

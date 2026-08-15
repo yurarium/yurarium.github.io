@@ -56,7 +56,9 @@ import re
 import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE.parent))
+sys.path.insert(0, str(HERE))
+import rules                                                    # noqa: E402
+rules.on_path()                    # the pipeline's harness, and this repository as the site
 import interface  # noqa: E402
 
 # The two ways a value becomes part of a page. A `SAFE` entry may never name one of these, which is
