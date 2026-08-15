@@ -1,98 +1,6 @@
 {
  "releases": [
   {
-   "id": "urasunday:https://urasunday.com/title/603:第1話 恋、しちゃいましょうか…？",
-   "work": "付き合ってあげてもいいかな",
-   "ep": "第1話 恋、しちゃいましょうか…？",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-07-20",
-   "seen": "2026-08-16",
-   "basis": "heuristic",
-   "conf": "low",
-   "why": "date matched as a pattern in the page, not stated by the platform",
-   "moved": "",
-   "url": "https://urasunday.com/title/603",
-   "author": "たみふる",
-   "author_basis": "carried from another record of the same work",
-   "plat": "urasunday-com",
-   "plat_name": "裏サンデー",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": "2026-08-16",
-   "late_discovered": true,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-series",
-   "kind_basis": "episode numbered 1",
-   "kind_inferred": true,
-   "preferred": "裏サンデー",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-08-16",
-   "wid": "w00522",
-   "work_en": {
-    "reading": "ツキアッテ アゲテ モ イイ カ ナ",
-    "ruby": [
-     [
-      "付",
-      "つ"
-     ],
-     [
-      "き",
-      null
-     ],
-     [
-      "合",
-      "あ"
-     ],
-     [
-      "ってあげてもいいかな",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Tsukiatte Agete mo Ii Ka Na",
-     "double": "Tsukiatte Agete mo Ii Ka Na",
-     "plain": "Tsukiatte Agete mo Ii Ka Na"
-    },
-    "en": "How Do We Relationship?",
-    "basis": "licensed",
-    "en_forms": {
-     "licensed": "How Do We Relationship?",
-     "translated": "I Suppose I Could Go Out With You"
-    },
-    "reading_basis": "analyser",
-    "en_cite": {
-     "source": "Viz Media",
-     "url": "https://www.viz.com/how-do-we-relationship",
-     "kind": "licensor",
-     "reviewed": "2026-08-08"
-    }
-   },
-   "author_en": {
-    "reading": "タミフル",
-    "romaji": {
-     "macron": "Tamifuru",
-     "double": "Tamifuru",
-     "plain": "Tamifuru"
-    },
-    "undivided": true,
-    "en": "Tamifull",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "openBD",
-     "kind": "publisher-jp",
-     "reviewed": "2026-08-06",
-     "isbn": "9784091287557"
-    },
-    "id": "c00639"
-   }
-  },
-  {
    "id": "gangan-online:https://www.ganganonline.com/title/38:第90話-3 八尺様リバイバルV",
    "work": "裏世界ピクニック",
    "ep": "第90話-3 八尺様リバイバルV",
@@ -150,7 +58,8 @@
     "en": "Otherside Picnic",
     "basis": "licensed",
     "en_forms": {
-     "licensed": "Otherside Picnic"
+     "licensed": "Otherside Picnic",
+     "translated": "Picnic in the World Behind"
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -827,7 +736,11 @@
      "double": "Kijitoinasa",
      "plain": "Kijitoinasa"
     },
-    "basis": "romaji",
+    "en": "Kiji and Inasa",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Kiji and Inasa"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -892,7 +805,11 @@
      "double": "Kijitoinasa",
      "plain": "Kijitoinasa"
     },
-    "basis": "romaji",
+    "en": "Kiji and Inasa",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Kiji and Inasa"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -957,7 +874,11 @@
      "double": "Kijitoinasa",
      "plain": "Kijitoinasa"
     },
-    "basis": "romaji",
+    "en": "Kiji and Inasa",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Kiji and Inasa"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -1022,7 +943,11 @@
      "double": "Kijitoinasa",
      "plain": "Kijitoinasa"
     },
-    "basis": "romaji",
+    "en": "Kiji and Inasa",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Kiji and Inasa"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -1087,7 +1012,11 @@
      "double": "Kijitoinasa",
      "plain": "Kijitoinasa"
     },
-    "basis": "romaji",
+    "en": "Kiji and Inasa",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Kiji and Inasa"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -1152,7 +1081,11 @@
      "double": "Kijitoinasa",
      "plain": "Kijitoinasa"
     },
-    "basis": "romaji",
+    "en": "Kiji and Inasa",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Kiji and Inasa"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -1217,7 +1150,11 @@
      "double": "Kijitoinasa",
      "plain": "Kijitoinasa"
     },
-    "basis": "romaji",
+    "en": "Kiji and Inasa",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Kiji and Inasa"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -1282,7 +1219,11 @@
      "double": "Kijitoinasa",
      "plain": "Kijitoinasa"
     },
-    "basis": "romaji",
+    "en": "Kiji and Inasa",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Kiji and Inasa"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -1347,7 +1288,11 @@
      "double": "Kijitoinasa",
      "plain": "Kijitoinasa"
     },
-    "basis": "romaji",
+    "en": "Kiji and Inasa",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Kiji and Inasa"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -1412,7 +1357,11 @@
      "double": "Kijitoinasa",
      "plain": "Kijitoinasa"
     },
-    "basis": "romaji",
+    "en": "Kiji and Inasa",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Kiji and Inasa"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -2496,7 +2445,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -2574,7 +2524,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -2652,7 +2603,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -2730,7 +2682,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -2808,7 +2761,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -2886,7 +2840,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -2964,7 +2919,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -3042,7 +2998,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -3120,7 +3077,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -3198,7 +3156,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -3295,7 +3254,11 @@
      "double": "Gansaku no Dai Juu Ban",
      "plain": "Gansaku no Dai Ju Ban"
     },
-    "basis": "romaji",
+    "en": "Forgery No. 10",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Forgery No. 10"
+    },
     "reading_basis": "analyser",
     "unverified": true
    }
@@ -3362,7 +3325,11 @@
      "double": "Gansaku no Dai Juu Ban",
      "plain": "Gansaku no Dai Ju Ban"
     },
-    "basis": "romaji",
+    "en": "Forgery No. 10",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Forgery No. 10"
+    },
     "reading_basis": "analyser",
     "unverified": true
    }
@@ -3917,7 +3884,11 @@
      "double": "Koinoowarionegautoki",
      "plain": "Koinowarionegautoki"
     },
-    "basis": "romaji",
+    "en": "When I Wish for the End of This Love",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "When I Wish for the End of This Love"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -4092,8 +4063,11 @@
      "double": "Juuji Tonbo wa Sora o Tobanai",
      "plain": "Juji Tonbo wa Sora o Tobanai"
     },
-    "en": "Jūji Tonbo wa Sora o Tobanai",
-    "basis": "romaji",
+    "en": "The Cross Dragonfly Does Not Fly",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Cross Dragonfly Does Not Fly"
+    },
     "reading_basis": "stated",
     "reading_cite": {
      "source": "ndlsearch.ndl.go.jp",
@@ -4242,7 +4216,8 @@
     "en": "Nighty night, Sheherazade",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Nighty night, Sheherazade"
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -4545,7 +4520,8 @@
     "basis": "official-jp",
     "en_forms": {
      "official-jp": "Bluer Than Love",
-     "licensed": "A Love Yet to Bloom"
+     "licensed": "A Love Yet to Bloom",
+     "translated": "Bluer than Love"
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -4622,6 +4598,7 @@
      "double": "Marusessensu",
      "plain": "Marusessensu"
     },
+    "translation_refused": "A coinage in kana. Our rendering is the romanisation already held.",
     "en": "Marusessensu",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -4681,6 +4658,14 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-08-14",
+   "work_en": {
+    "en": "Today's Ten Pages: High-School Girls vs the Beheading Jizo",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Today's Ten Pages: High-School Girls vs the Beheading Jizo"
+    },
+    "unverified": true
+   },
    "author_en": {
     "reading": "ヨドドウカギュウ",
     "romaji": {
@@ -5053,6 +5038,14 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-08-14",
+   "work_en": {
+    "en": "Poised, and a Pang",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Poised, and a Pang"
+    },
+    "unverified": true
+   },
    "author_en": {
     "unverified": true,
     "id": "c00529"
@@ -6130,6 +6123,7 @@
      "double": "Marusessensu",
      "plain": "Marusessensu"
     },
+    "translation_refused": "A coinage in kana. Our rendering is the romanisation already held.",
     "en": "Marusessensu",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -6332,6 +6326,14 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-08-13",
+   "work_en": {
+    "en": "Momo and Miyamura",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Momo and Miyamura"
+    },
+    "unverified": true
+   },
    "author_en": {
     "reading": "コウサイ",
     "ruby": [
@@ -6658,7 +6660,11 @@
      "double": "Meido In Ojousama",
      "plain": "Meido In Ojosama"
     },
-    "basis": "romaji",
+    "en": "Maid in Young Lady",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Maid in Young Lady"
+    },
     "reading_basis": "analyser"
    },
    "author_en": {
@@ -8157,224 +8163,6 @@
    }
   },
   {
-   "id": "kirapo:https://kirapo.jp/meteor/titles/tuimie:読み切り",
-   "work": "ツイてるギャルとミエてる陰キャ",
-   "ep": "読み切り",
-   "type": "oneshot",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-06-17",
-   "seen": "2026-08-16",
-   "basis": "heuristic",
-   "conf": "reported",
-   "why": "date matched as a pattern in the page, not stated by the platform",
-   "moved": "",
-   "url": "https://kirapo.jp/meteor/titles/tuimie",
-   "author": "深水たろー",
-   "plat": "remaining",
-   "plat_name": "きら星ポータル",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": "2026-08-11",
-   "late_discovered": true,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "oneshot",
-   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
-   "kind_inferred": true,
-   "preferred": "きら星ポータル",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-08-11",
-   "wid": "w03174",
-   "work_en": {
-    "reading": "ツイテル ギャル ト ミエテル インキャ",
-    "ruby": [
-     [
-      "ツイてるギャルとミエてる",
-      null
-     ],
-     [
-      "陰",
-      "いん"
-     ],
-     [
-      "キャ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Tsuiteru Gyaru to Mieteru Inkya",
-     "double": "Tsuiteru Gyaru to Mieteru Inkya",
-     "plain": "Tsuiteru Gyaru to Mieteru Inkya"
-    },
-    "en": "The Haunted Gal and the Introvert Who Sees",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Haunted Gal and the Introvert Who Sees"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "フカミタロー",
-    "romaji": {
-     "macron": "Fukamitarō",
-     "double": "Fukamitaroo",
-     "plain": "Fukamitaro"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "analyser",
-    "unverified": true
-   }
-  },
-  {
-   "id": "comic-zenon:https://comic-zenon.com/episode/12207421983944323781:読み切り",
-   "work": "画家の肖像",
-   "ep": "読み切り",
-   "type": "oneshot",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-07-13",
-   "seen": "2026-08-16",
-   "basis": "heuristic",
-   "conf": "reported",
-   "why": "date matched as a pattern in the page, not stated by the platform",
-   "moved": "",
-   "url": "https://comic-zenon.com/episode/12207421983944323781",
-   "author": "レオパード・ゲッコー",
-   "plat": "remaining",
-   "plat_name": "コミックゼノン",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": "2026-08-11",
-   "late_discovered": true,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "oneshot",
-   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
-   "kind_inferred": true,
-   "preferred": "コミックゼノン",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-08-11",
-   "wid": "w03172",
-   "work_en": {
-    "reading": "ガカ ノ ショウゾウ",
-    "ruby": [
-     [
-      "画家",
-      "がか"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "肖像",
-      "しょうぞう"
-     ]
-    ],
-    "romaji": {
-     "macron": "Gaka no Shōzō",
-     "double": "Gaka no Shouzou",
-     "plain": "Gaka no Shozo"
-    },
-    "en": "Portrait of the Painter",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Portrait of the Painter"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "レオパード・ゲッコー",
-    "romaji": {
-     "macron": "Reopādo Gekkō",
-     "double": "Reopaado Gekkoo",
-     "plain": "Reopado Gekko"
-    },
-    "basis": "romaji",
-    "reading_basis": "surface"
-   }
-  },
-  {
-   "id": "comic-zenon:https://comic-zenon.com/episode/12207421983944323839:読み切り",
-   "work": "散らないで菊",
-   "ep": "読み切り",
-   "type": "oneshot",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-07-13",
-   "seen": "2026-08-16",
-   "basis": "heuristic",
-   "conf": "reported",
-   "why": "date matched as a pattern in the page, not stated by the platform",
-   "moved": "",
-   "url": "https://comic-zenon.com/episode/12207421983944323839",
-   "author": "ぽぽらら",
-   "plat": "remaining",
-   "plat_name": "コミックゼノン",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": "2026-08-11",
-   "late_discovered": true,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "oneshot",
-   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
-   "kind_inferred": true,
-   "preferred": "コミックゼノン",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-08-11",
-   "wid": "w03173",
-   "work_en": {
-    "reading": "チラナイデ キク",
-    "ruby": [
-     [
-      "散",
-      "ち"
-     ],
-     [
-      "らないで",
-      null
-     ],
-     [
-      "菊",
-      "きく"
-     ]
-    ],
-    "romaji": {
-     "macron": "Chiranaide Kiku",
-     "double": "Chiranaide Kiku",
-     "plain": "Chiranaide Kiku"
-    },
-    "en": "Don't Fade, Kiku",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Don't Fade, Kiku"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "ポポララ",
-    "romaji": {
-     "macron": "Poporara",
-     "double": "Poporara",
-     "plain": "Poporara"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c02254"
-   }
-  },
-  {
    "id": "gardo:episode:12207421984065286876",
    "work": "病弱少女、転生して健康な肉体（最強）を手に入れる　～友達が欲しくて魔境から旅立ったのですが、どうやら私の魔法は少しおかしいようです！？～",
    "ep": "第11話「フィアナ、無事クエストを達成する」(2)",
@@ -8842,7 +8630,11 @@
      "double": "Sai Osore Jubutsu Reijou",
      "plain": "Sai Osore Jubutsu Reijo"
     },
-    "basis": "romaji",
+    "en": "The Most Frightening Lady of Cursed Objects",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Most Frightening Lady of Cursed Objects"
+    },
     "reading_basis": "analyser",
     "unverified": true
    }
@@ -8881,60 +8673,11 @@
    "is_preferred": true,
    "feed_date": "2026-08-11",
    "work_en": {
-    "reading": "サイ オソレ ジュブツ レイジョウ   〜 カノジョ ワ ジュブツ ヲ アイシ スギテ イル 〜",
-    "ruby": [
-     [
-      "最",
-      "さい"
-     ],
-     [
-      "恐",
-      "おそれ"
-     ],
-     [
-      "呪物",
-      "じゅぶつ"
-     ],
-     [
-      "令嬢",
-      "れいじょう"
-     ],
-     [
-      " 〜",
-      null
-     ],
-     [
-      "彼女",
-      "かのじょ"
-     ],
-     [
-      "は",
-      null
-     ],
-     [
-      "呪物",
-      "じゅぶつ"
-     ],
-     [
-      "を",
-      null
-     ],
-     [
-      "愛",
-      "あい"
-     ],
-     [
-      "しすぎている〜",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Sai Osore Jubutsu Reijō ~ Kanojo wa Jubutsu o Aishi Sugite Iru ~",
-     "double": "Sai Osore Jubutsu Reijou ~ Kanojo wa Jubutsu o Aishi Sugite Iru ~",
-     "plain": "Sai Osore Jubutsu Reijo ~ Kanojo wa Jubutsu o Aishi Sugite Iru ~"
+    "en": "The Most Frightening Lady of Cursed Objects: She Loves Cursed Objects Far Too Much",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Most Frightening Lady of Cursed Objects: She Loves Cursed Objects Far Too Much"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser",
     "unverified": true
    },
    "author_en": {
@@ -9327,6 +9070,7 @@
      "double": "Tamayomi",
      "plain": "Tamayomi"
     },
+    "translation_refused": "Reads as ball and song, and is also the two leads' names, 山崎珠姫 and 武田詠深. Either rendering discards the other, which is why the entry's own note settled on the romanisation.",
     "en": "Tamayomi",
     "basis": "romaji",
     "reading_basis": "stated",
@@ -9482,8 +9226,11 @@
      "double": "Gokigen'you , Ikkyoku Ikaga ?",
      "plain": "Gokigen'yo , Ikkyoku Ikaga ?"
     },
-    "en": "Gokigenyō, Ikkyoku Ikaga?",
-    "basis": "romaji",
+    "en": "Good Day to You. Care for a Game?",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Good Day to You. Care for a Game?"
+    },
     "reading_basis": "stated",
     "reading_cite": {
      "source": "ndlsearch.ndl.go.jp",
@@ -10111,6 +9858,7 @@
      "double": "Noda",
      "plain": "Noda"
     },
+    "translation_refused": "Two kana that read as a surname or as a sentence ending, and the title says which nowhere. Our rendering is Noda either way, which the romanisation already gives.",
     "en": "Noda",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -11555,7 +11303,8 @@
     "en": "TAKE OFF YOUR CLOTHES FOR ME!",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "TAKE OFF YOUR CLOTHES FOR ME!"
+     "official-jp": "TAKE OFF YOUR CLOTHES FOR ME!",
+     "translated": "Undress for Me!"
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -12208,7 +11957,8 @@
     "en": "Otherside Picnic",
     "basis": "licensed",
     "en_forms": {
-     "licensed": "Otherside Picnic"
+     "licensed": "Otherside Picnic",
+     "translated": "Picnic in the World Behind"
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -14962,7 +14712,8 @@
     "en": "I’m Fine With Being the Second Girlfriend",
     "basis": "licensed",
     "en_forms": {
-     "licensed": "I’m Fine With Being the Second Girlfriend"
+     "licensed": "I’m Fine With Being the Second Girlfriend",
+     "translated": "I Don't Mind Being the Second Girlfriend."
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -15012,211 +14763,6 @@
    }
   },
   {
-   "id": "comicfuz:79139",
-   "work": "蝶乃センパイは泳がせたい！",
-   "ep": "コミックス第３巻　書店特典",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-06-29",
-   "seen": "2026-08-16",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/79139",
-   "series_url": "https://comic-fuz.com/manga/3554",
-   "author": "東雲もづく",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": "2026-08-07",
-   "late_discovered": true,
-   "access_modes": [
-    "free"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "kind": "other",
-   "kind_basis": "notice, artwork, trial or announcement",
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-08-07",
-   "wid": "w02350",
-   "work_en": {
-    "reading": "チョウ ノ センパイ ワ オヨガセタイ！",
-    "ruby": [
-     [
-      "蝶",
-      "ちょう"
-     ],
-     [
-      "乃",
-      "の"
-     ],
-     [
-      "センパイは",
-      null
-     ],
-     [
-      "泳",
-      "およ"
-     ],
-     [
-      "がせたい！",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Chō no Senpai wa Oyogasetai!",
-     "double": "Chou no Senpai wa Oyogasetai!",
-     "plain": "Cho no Senpai wa Oyogasetai!"
-    },
-    "en": "Chōno-senpai Wants to Let Me Run!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Chōno-senpai Wants to Let Me Run!"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "シノノメ モズク",
-    "ruby": [
-     [
-      "東雲",
-      "しののめ"
-     ],
-     [
-      "もづく",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Shinonome Mozuku",
-     "double": "Shinonome Mozuku",
-     "plain": "Shinonome Mozuku"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034159556",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00330"
-   }
-  },
-  {
-   "id": "comicfuz:78373",
-   "work": "蝶乃センパイは泳がせたい！",
-   "ep": "最終話(2)",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-06-29",
-   "seen": "2026-08-16",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/78373",
-   "series_url": "https://comic-fuz.com/manga/3554",
-   "author": "東雲もづく",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": "2026-08-07",
-   "late_discovered": true,
-   "access_modes": [
-    "free-timed"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "kind": "final",
-   "kind_basis": "title states this is the last chapter",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-08-07",
-   "wid": "w02350",
-   "work_en": {
-    "reading": "チョウ ノ センパイ ワ オヨガセタイ！",
-    "ruby": [
-     [
-      "蝶",
-      "ちょう"
-     ],
-     [
-      "乃",
-      "の"
-     ],
-     [
-      "センパイは",
-      null
-     ],
-     [
-      "泳",
-      "およ"
-     ],
-     [
-      "がせたい！",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Chō no Senpai wa Oyogasetai!",
-     "double": "Chou no Senpai wa Oyogasetai!",
-     "plain": "Cho no Senpai wa Oyogasetai!"
-    },
-    "en": "Chōno-senpai Wants to Let Me Run!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Chōno-senpai Wants to Let Me Run!"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "シノノメ モズク",
-    "ruby": [
-     [
-      "東雲",
-      "しののめ"
-     ],
-     [
-      "もづく",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Shinonome Mozuku",
-     "double": "Shinonome Mozuku",
-     "plain": "Shinonome Mozuku"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034159556",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00330"
-   }
-  },
-  {
    "id": "kadokomi:KC_0083870000700011_E",
    "work": "ウェイバーズ",
    "ep": "第六話",
@@ -15262,7 +14808,8 @@
     "en": "WAVER(S)",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "WAVER(S)"
+     "official-jp": "WAVER(S)",
+     "translated": "Wavers"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -15343,7 +14890,8 @@
     "en": "WAVER(S)",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "WAVER(S)"
+     "official-jp": "WAVER(S)",
+     "translated": "Wavers"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -15424,7 +14972,8 @@
     "en": "WAVER(S)",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "WAVER(S)"
+     "official-jp": "WAVER(S)",
+     "translated": "Wavers"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -15505,7 +15054,8 @@
     "en": "WAVER(S)",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "WAVER(S)"
+     "official-jp": "WAVER(S)",
+     "translated": "Wavers"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -16809,7 +16359,8 @@
     "en": "I’m Fine With Being the Second Girlfriend",
     "basis": "licensed",
     "en_forms": {
-     "licensed": "I’m Fine With Being the Second Girlfriend"
+     "licensed": "I’m Fine With Being the Second Girlfriend",
+     "translated": "I Don't Mind Being the Second Girlfriend."
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -16906,7 +16457,8 @@
     "en": "WAVER(S)",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "WAVER(S)"
+     "official-jp": "WAVER(S)",
+     "translated": "Wavers"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -19091,6 +18643,7 @@
      "double": "Tamayomi",
      "plain": "Tamayomi"
     },
+    "translation_refused": "Reads as ball and song, and is also the two leads' names, 山崎珠姫 and 武田詠深. Either rendering discards the other, which is why the entry's own note settled on the romanisation.",
     "en": "Tamayomi",
     "basis": "romaji",
     "reading_basis": "stated",
@@ -29849,14 +29402,12 @@
    "is_preferred": true,
    "feed_date": "2026-08-07",
    "work_en": {
-    "reading": "㊙ ノ ライラ",
-    "romaji": {
-     "macron": "秘 no Raira",
-     "double": "秘 no Raira",
-     "plain": "秘 no Raira"
+    "en": "Top-Secret Laila",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Top-Secret Laila"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser"
+    "unverified": true
    },
    "author_en": {
     "reading": "アサヒナ ショウ",
@@ -29903,14 +29454,12 @@
    "is_preferred": true,
    "feed_date": "2026-08-07",
    "work_en": {
-    "reading": "㊙ ノ ライラ",
-    "romaji": {
-     "macron": "秘 no Raira",
-     "double": "秘 no Raira",
-     "plain": "秘 no Raira"
+    "en": "Top-Secret Laila",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Top-Secret Laila"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser"
+    "unverified": true
    },
    "author_en": {
     "reading": "アサヒナ ショウ",
@@ -30317,6 +29866,7 @@
      "double": "Roriisuiitororii",
      "plain": "Rorisuitorori"
     },
+    "translation_refused": "Three English words written in kana, which the publisher prints as three English words. Our rendering is the same string.",
     "en": "Lolly Sweet Lolly",
     "basis": "official-jp",
     "en_forms": {
@@ -31130,8 +30680,11 @@
      "double": "Mieruko Chan",
      "plain": "Mieruko Chan"
     },
-    "en": "Mieruko-chan",
-    "basis": "romaji",
+    "en": "The Girl Who Can See",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Girl Who Can See"
+    },
     "reading_basis": "researched"
    }
   },
@@ -31252,28 +30805,12 @@
    "work_level": true,
    "feed_date": "2026-08-07",
    "work_en": {
-    "reading": "ブキヨウ ビンボー ダンス 　 サン",
-    "ruby": [
-     [
-      "不器用",
-      "ぶきよう"
-     ],
-     [
-      "ビンボーダンス　",
-      null
-     ],
-     [
-      "３",
-      "さん"
-     ]
-    ],
-    "romaji": {
-     "macron": "Bukiyō Binbō Dansu San",
-     "double": "Bukiyou Binboo Dansu San",
-     "plain": "Bukiyo Binbo Dansu San"
+    "en": "Clumsy Broke Dance 3",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Clumsy Broke Dance 3"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser"
+    "unverified": true
    },
    "author_en": {
     "reading": "ナヲヲヲヲヲヲ",
@@ -33066,7 +32603,8 @@
     "en": "No Matter How I Look at It, It's You Guys' Fault I'm Not Popular!",
     "basis": "licensed",
     "en_forms": {
-     "licensed": "No Matter How I Look at It, It's You Guys' Fault I'm Not Popular!"
+     "licensed": "No Matter How I Look at It, It's You Guys' Fault I'm Not Popular!",
+     "translated": "However I Think About It, It's You Lot Who Are to Blame for My Not Being Popular!"
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -33520,8 +33058,11 @@
      "double": "Kimi to Bodoge ga Tsukuritai !",
      "plain": "Kimi to Bodoge ga Tsukuritai !"
     },
-    "en": "Kimi to Board Game ga Tsukuritai!",
-    "basis": "romaji",
+    "en": "I Want to Make a Board Game with You!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "I Want to Make a Board Game with You!"
+    },
     "reading_basis": "stated",
     "reading_cite": {
      "source": "ndlsearch.ndl.go.jp",
@@ -35304,6 +34845,7 @@
      "double": "Boitaboine",
      "plain": "Boitaboine"
     },
+    "translation_refused": "A coined name in kana. Our rendering is the romanisation already held.",
     "en": "Boitaboine",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -36285,6 +35827,7 @@
      "double": "Sutera Suteppu",
      "plain": "Sutera Suteppu"
     },
+    "translation_refused": "The kana are the two English words the publisher prints. Our rendering repeats them.",
     "en": "Stella Step",
     "basis": "official-jp",
     "en_forms": {
@@ -37299,6 +36842,7 @@
      "double": "Adachi to Shimamura",
      "plain": "Adachi to Shimamura"
     },
+    "translation_refused": "Two surnames joined by と. Our rendering is Adachi and Shimamura, which is the licensed name, and neither surname is a word the title is using for its meaning.",
     "en": "Adachi and Shimamura",
     "basis": "licensed",
     "en_forms": {
@@ -37563,6 +37107,7 @@
      "double": "Boitaboine",
      "plain": "Boitaboine"
     },
+    "translation_refused": "A coined name in kana. Our rendering is the romanisation already held.",
     "en": "Boitaboine",
     "basis": "romaji",
     "reading_basis": "surface"

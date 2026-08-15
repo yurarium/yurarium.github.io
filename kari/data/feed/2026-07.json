@@ -1,6 +1,242 @@
 {
  "releases": [
   {
+   "id": "urasunday:https://urasunday.com/title/603:第1話 恋、しちゃいましょうか…？",
+   "work": "付き合ってあげてもいいかな",
+   "ep": "第1話 恋、しちゃいましょうか…？",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-07-20",
+   "seen": "2026-08-16",
+   "basis": "heuristic",
+   "conf": "low",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://urasunday.com/title/603",
+   "author": "たみふる",
+   "author_basis": "carried from another record of the same work",
+   "plat": "urasunday-com",
+   "plat_name": "裏サンデー",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-series",
+   "kind_basis": "episode numbered 1",
+   "kind_inferred": true,
+   "preferred": "裏サンデー",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-07-20",
+   "wid": "w00522",
+   "work_en": {
+    "reading": "ツキアッテ アゲテ モ イイ カ ナ",
+    "ruby": [
+     [
+      "付",
+      "つ"
+     ],
+     [
+      "き",
+      null
+     ],
+     [
+      "合",
+      "あ"
+     ],
+     [
+      "ってあげてもいいかな",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Tsukiatte Agete mo Ii Ka Na",
+     "double": "Tsukiatte Agete mo Ii Ka Na",
+     "plain": "Tsukiatte Agete mo Ii Ka Na"
+    },
+    "en": "How Do We Relationship?",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "How Do We Relationship?",
+     "translated": "I Suppose I Could Go Out With You"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "Viz Media",
+     "url": "https://www.viz.com/how-do-we-relationship",
+     "kind": "licensor",
+     "reviewed": "2026-08-08"
+    }
+   },
+   "author_en": {
+    "reading": "タミフル",
+    "romaji": {
+     "macron": "Tamifuru",
+     "double": "Tamifuru",
+     "plain": "Tamifuru"
+    },
+    "undivided": true,
+    "en": "Tamifull",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "openBD",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-06",
+     "isbn": "9784091287557"
+    },
+    "id": "c00639"
+   }
+  },
+  {
+   "id": "comic-zenon:https://comic-zenon.com/episode/12207421983944323781:読み切り",
+   "work": "画家の肖像",
+   "ep": "読み切り",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-07-13",
+   "seen": "2026-08-16",
+   "basis": "heuristic",
+   "conf": "reported",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://comic-zenon.com/episode/12207421983944323781",
+   "author": "レオパード・ゲッコー",
+   "plat": "remaining",
+   "plat_name": "コミックゼノン",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "oneshot",
+   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
+   "kind_inferred": true,
+   "preferred": "コミックゼノン",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-07-13",
+   "wid": "w03172",
+   "work_en": {
+    "reading": "ガカ ノ ショウゾウ",
+    "ruby": [
+     [
+      "画家",
+      "がか"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "肖像",
+      "しょうぞう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Gaka no Shōzō",
+     "double": "Gaka no Shouzou",
+     "plain": "Gaka no Shozo"
+    },
+    "en": "Portrait of the Painter",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Portrait of the Painter"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "レオパード・ゲッコー",
+    "romaji": {
+     "macron": "Reopādo Gekkō",
+     "double": "Reopaado Gekkoo",
+     "plain": "Reopado Gekko"
+    },
+    "basis": "romaji",
+    "reading_basis": "surface"
+   }
+  },
+  {
+   "id": "comic-zenon:https://comic-zenon.com/episode/12207421983944323839:読み切り",
+   "work": "散らないで菊",
+   "ep": "読み切り",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-07-13",
+   "seen": "2026-08-16",
+   "basis": "heuristic",
+   "conf": "reported",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://comic-zenon.com/episode/12207421983944323839",
+   "author": "ぽぽらら",
+   "plat": "remaining",
+   "plat_name": "コミックゼノン",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "oneshot",
+   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
+   "kind_inferred": true,
+   "preferred": "コミックゼノン",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-07-13",
+   "wid": "w03173",
+   "work_en": {
+    "reading": "チラナイデ キク",
+    "ruby": [
+     [
+      "散",
+      "ち"
+     ],
+     [
+      "らないで",
+      null
+     ],
+     [
+      "菊",
+      "きく"
+     ]
+    ],
+    "romaji": {
+     "macron": "Chiranaide Kiku",
+     "double": "Chiranaide Kiku",
+     "plain": "Chiranaide Kiku"
+    },
+    "en": "Don't Fade, Kiku",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Don't Fade, Kiku"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ポポララ",
+    "romaji": {
+     "macron": "Poporara",
+     "double": "Poporara",
+     "plain": "Poporara"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c02254"
+   }
+  },
+  {
    "id": "kuragebunch:episode:12207421984030246278",
    "work": "友達からでもいいですか",
    "ep": "第1話",
@@ -327,6 +563,7 @@
      "double": "Tamayomi",
      "plain": "Tamayomi"
     },
+    "translation_refused": "Reads as ball and song, and is also the two leads' names, 山崎珠姫 and 武田詠深. Either rendering discards the other, which is why the entry's own note settled on the romanisation.",
     "en": "Tamayomi",
     "basis": "romaji",
     "reading_basis": "stated",
@@ -1194,7 +1431,8 @@
     "en": "There's No Freaking Way I'll be Your Lover! Unless...",
     "basis": "licensed",
     "en_forms": {
-     "licensed": "There's No Freaking Way I'll be Your Lover! Unless…"
+     "licensed": "There's No Freaking Way I'll be Your Lover! Unless…",
+     "translated": "There's No Way I Could Be Her Lover, No Way, No Way! (*It Turned Out Not to Be No Way!?)"
     },
     "reading_basis": "researched",
     "en_cite": {
@@ -5811,7 +6049,11 @@
      "double": "Sai Osore Jubutsu Reijou",
      "plain": "Sai Osore Jubutsu Reijo"
     },
-    "basis": "romaji",
+    "en": "The Most Frightening Lady of Cursed Objects",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Most Frightening Lady of Cursed Objects"
+    },
     "reading_basis": "analyser",
     "unverified": true
    }
@@ -5850,60 +6092,11 @@
    "is_preferred": true,
    "feed_date": "2026-07-28",
    "work_en": {
-    "reading": "サイ オソレ ジュブツ レイジョウ   〜 カノジョ ワ ジュブツ ヲ アイシ スギテ イル 〜",
-    "ruby": [
-     [
-      "最",
-      "さい"
-     ],
-     [
-      "恐",
-      "おそれ"
-     ],
-     [
-      "呪物",
-      "じゅぶつ"
-     ],
-     [
-      "令嬢",
-      "れいじょう"
-     ],
-     [
-      " 〜",
-      null
-     ],
-     [
-      "彼女",
-      "かのじょ"
-     ],
-     [
-      "は",
-      null
-     ],
-     [
-      "呪物",
-      "じゅぶつ"
-     ],
-     [
-      "を",
-      null
-     ],
-     [
-      "愛",
-      "あい"
-     ],
-     [
-      "しすぎている〜",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Sai Osore Jubutsu Reijō ~ Kanojo wa Jubutsu o Aishi Sugite Iru ~",
-     "double": "Sai Osore Jubutsu Reijou ~ Kanojo wa Jubutsu o Aishi Sugite Iru ~",
-     "plain": "Sai Osore Jubutsu Reijo ~ Kanojo wa Jubutsu o Aishi Sugite Iru ~"
+    "en": "The Most Frightening Lady of Cursed Objects: She Loves Cursed Objects Far Too Much",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Most Frightening Lady of Cursed Objects: She Loves Cursed Objects Far Too Much"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser",
     "unverified": true
    },
    "author_en": {
@@ -10169,7 +10362,8 @@
     "en": "NullMeta",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "NullMeta"
+     "official-jp": "NullMeta",
+     "translated": "Lukewarm Meta"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -10442,6 +10636,7 @@
      "double": "Tamayomi",
      "plain": "Tamayomi"
     },
+    "translation_refused": "Reads as ball and song, and is also the two leads' names, 山崎珠姫 and 武田詠深. Either rendering discards the other, which is why the entry's own note settled on the romanisation.",
     "en": "Tamayomi",
     "basis": "romaji",
     "reading_basis": "stated",
@@ -12716,7 +12911,8 @@
     "en": "I See You, Aizawa-san!",
     "basis": "licensed",
     "en_forms": {
-     "licensed": "I See You, Aizawa-san!"
+     "licensed": "I See You, Aizawa-san!",
+     "translated": "It's Showing, Aizawa-san!"
     },
     "reading_basis": "researched",
     "en_cite": {
@@ -16250,6 +16446,7 @@
      "double": "Boitaboine",
      "plain": "Boitaboine"
     },
+    "translation_refused": "A coined name in kana. Our rendering is the romanisation already held.",
     "en": "Boitaboine",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -16920,7 +17117,8 @@
     "en": "Contract Sisters",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "Contract Sisters"
+     "official-jp": "Contract Sisters",
+     "translated": "Sisters by Contract"
     },
     "reading_basis": "surface",
     "en_cite": {
@@ -17095,6 +17293,7 @@
      "double": "Adachi to Shimamura",
      "plain": "Adachi to Shimamura"
     },
+    "translation_refused": "Two surnames joined by と. Our rendering is Adachi and Shimamura, which is the licensed name, and neither surname is a word the title is using for its meaning.",
     "en": "Adachi and Shimamura",
     "basis": "licensed",
     "en_forms": {
@@ -17288,6 +17487,7 @@
      "double": "Gugagumoguruten",
      "plain": "Gugagumoguruten"
     },
+    "translation_refused": "A coinage in kana with no word under it, so our rendering is the romanisation over again.",
     "en": "Gugagumoguruten",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -17761,6 +17961,7 @@
      "double": "Boitaboine",
      "plain": "Boitaboine"
     },
+    "translation_refused": "A coined name in kana. Our rendering is the romanisation already held.",
     "en": "Boitaboine",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -20568,7 +20769,8 @@
     "basis": "official-jp",
     "en_forms": {
      "official-jp": "the moon on a rainy night",
-     "licensed": "The Moon on a Rainy Night"
+     "licensed": "The Moon on a Rainy Night",
+     "translated": "The Moon on a Rainy Night"
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -20837,6 +21039,7 @@
      "double": "Tamayomi",
      "plain": "Tamayomi"
     },
+    "translation_refused": "Reads as ball and song, and is also the two leads' names, 山崎珠姫 and 武田詠深. Either rendering discards the other, which is why the entry's own note settled on the romanisation.",
     "en": "Tamayomi",
     "basis": "romaji",
     "reading_basis": "stated",
@@ -28403,7 +28606,8 @@
     "en": "TAKE OFF YOUR CLOTHES FOR ME!",
     "basis": "official-jp",
     "en_forms": {
-     "official-jp": "TAKE OFF YOUR CLOTHES FOR ME!"
+     "official-jp": "TAKE OFF YOUR CLOTHES FOR ME!",
+     "translated": "Undress for Me!"
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -30156,6 +30360,7 @@
      "double": "Tamayomi",
      "plain": "Tamayomi"
     },
+    "translation_refused": "Reads as ball and song, and is also the two leads' names, 山崎珠姫 and 武田詠深. Either rendering discards the other, which is why the entry's own note settled on the romanisation.",
     "en": "Tamayomi",
     "basis": "romaji",
     "reading_basis": "stated",
@@ -31189,6 +31394,7 @@
      "double": "Marusessensu",
      "plain": "Marusessensu"
     },
+    "translation_refused": "A coinage in kana. Our rendering is the romanisation already held.",
     "en": "Marusessensu",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -31613,6 +31819,7 @@
      "double": "Marusessensu",
      "plain": "Marusessensu"
     },
+    "translation_refused": "A coinage in kana. Our rendering is the romanisation already held.",
     "en": "Marusessensu",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -31708,7 +31915,8 @@
     "basis": "official-jp",
     "en_forms": {
      "official-jp": "Bluer Than Love",
-     "licensed": "A Love Yet to Bloom"
+     "licensed": "A Love Yet to Bloom",
+     "translated": "Bluer than Love"
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -35409,7 +35617,8 @@
     "en": "No Matter How I Look at It, It's You Guys' Fault I'm Not Popular!",
     "basis": "licensed",
     "en_forms": {
-     "licensed": "No Matter How I Look at It, It's You Guys' Fault I'm Not Popular!"
+     "licensed": "No Matter How I Look at It, It's You Guys' Fault I'm Not Popular!",
+     "translated": "However I Think About It, It's You Lot Who Are to Blame for My Not Being Popular!"
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -48983,6 +49192,7 @@
      "double": "Boitaboine",
      "plain": "Boitaboine"
     },
+    "translation_refused": "A coined name in kana. Our rendering is the romanisation already held.",
     "en": "Boitaboine",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -49262,6 +49472,7 @@
      "double": "Adachi to Shimamura",
      "plain": "Adachi to Shimamura"
     },
+    "translation_refused": "Two surnames joined by と. Our rendering is Adachi and Shimamura, which is the licensed name, and neither surname is a word the title is using for its meaning.",
     "en": "Adachi and Shimamura",
     "basis": "licensed",
     "en_forms": {
@@ -49595,6 +49806,7 @@
      "double": "Sutera Suteppu",
      "plain": "Sutera Suteppu"
     },
+    "translation_refused": "The kana are the two English words the publisher prints. Our rendering repeats them.",
     "en": "Stella Step",
     "basis": "official-jp",
     "en_forms": {
@@ -49761,6 +49973,7 @@
      "double": "Boitaboine",
      "plain": "Boitaboine"
     },
+    "translation_refused": "A coined name in kana. Our rendering is the romanisation already held.",
     "en": "Boitaboine",
     "basis": "romaji",
     "reading_basis": "surface"
@@ -51864,7 +52077,8 @@
     "basis": "official-jp",
     "en_forms": {
      "official-jp": "the moon on a rainy night",
-     "licensed": "The Moon on a Rainy Night"
+     "licensed": "The Moon on a Rainy Night",
+     "translated": "The Moon on a Rainy Night"
     },
     "reading_basis": "analyser",
     "en_cite": {
@@ -52041,6 +52255,7 @@
      "double": "Tamayomi",
      "plain": "Tamayomi"
     },
+    "translation_refused": "Reads as ball and song, and is also the two leads' names, 山崎珠姫 and 武田詠深. Either rendering discards the other, which is why the entry's own note settled on the romanisation.",
     "en": "Tamayomi",
     "basis": "romaji",
     "reading_basis": "stated",
@@ -54269,7 +54484,8 @@
     "en": "I See You, Aizawa-san!",
     "basis": "licensed",
     "en_forms": {
-     "licensed": "I See You, Aizawa-san!"
+     "licensed": "I See You, Aizawa-san!",
+     "translated": "It's Showing, Aizawa-san!"
     },
     "reading_basis": "researched",
     "en_cite": {

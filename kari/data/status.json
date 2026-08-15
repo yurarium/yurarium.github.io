@@ -1,10 +1,8 @@
 {
- "generated": "2026-08-15T18:07:27+00:00",
+ "generated": "2026-08-15T20:25:00+00:00",
  "since_last": {
-  "at": "2026-08-15T13:36:23+00:00",
-  "statistics": {
-   "chapters": 65
-  }
+  "at": "2026-08-15T18:07:27+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -358,8 +356,8 @@
    {
     "name": "titles with no translation of our own",
     "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
-    "budget": 151,
-    "value": 151
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "publishers with no English",
@@ -448,8 +446,8 @@
    {
     "name": "claims whose evidence their basis does not admit",
     "means": "records whose source kind is not one their basis admits, which is a citation outliving the claim it was written for. STORE-PLAN §5a: the composite key goes on `claim` when this reaches 0. The store answers the same question over its own tables and agrees.",
-    "budget": 105,
-    "value": 105
+    "budget": 102,
+    "value": 102
    },
    {
     "name": "author readings no source states",
@@ -532,8 +530,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1178,
-    "value": 1176
+    "budget": 1170,
+    "value": 1170
    },
    {
     "name": "uncertain readings",
@@ -550,8 +548,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 66,
-    "value": 66
+    "budget": 26,
+    "value": 26
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -698,7 +696,7 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 24,
+    "budget": 26,
     "value": 26
    },
    {
@@ -967,7 +965,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-15T13:35:33+00:00",
+  "previous_at": "2026-08-15T18:05:01+00:00",
   "drops": []
  },
  "outstanding": [
@@ -980,39 +978,9 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 29,
+   "count": 0,
    "what": "Name in English the works that carry only a romanisation",
-   "rows": [
-    "JCがサキュバスに先祖返りした話",
-    "JSがキスする",
-    "MOJI の百合",
-    "おかしなエルフと女子高生",
-    "くっ殺せの姫騎士となり、百合娼館で働くことになりました。",
-    "ここに住みたい",
-    "ずぼら先輩とまじめちゃん",
-    "ときめけ魔法幼女ココピュア",
-    "とにも角にも鹿姫さん。",
-    "はぴちゅ！",
-    "まほまほ ~魔法少女と魔法使い~",
-    "ゆらめきラグーン",
-    "ゆりでなる♥えすぽわーる",
-    "エンドロールの後には最高の旅を",
-    "サキュバスの後輩に堕とされたくない先輩",
-    "センゲンス",
-    "チートイーター異世界召喚尽く滅ぶべし",
-    "ハッピーアワーガールズ",
-    "ポンポコタヌキとへっぽこ王子",
-    "不器用ビンボーダンス ２",
-    "口に出しても宜しいですか？",
-    "同居人に片思いしてる百合漫画",
-    "性別不明な中性僕っ子とお姉さん",
-    "河島さんは面倒くさい。",
-    "犬窪ノアとなかよしするまで",
-    "田舎エッチ ～田舎のエッチな女の子と過ごすひと夏のエッチな思い出～ アンソロジーコミック",
-    "異種族女子に○○する話",
-    "神絵師のおしごと",
-    "迷えるJCがキスをたしなむ話"
-   ]
+   "rows": []
   },
   {
    "kind": "candidate",
@@ -1029,7 +997,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 50,
+   "count": 49,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1038,7 +1006,7 @@
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
     "labels with nothing to quote": 0,
-    "titles with no translation of our own": 151,
+    "titles with no translation of our own": 0,
     "publishers with no English": 0,
     "an imprint field repeating its publisher": 360,
     "imprint strings that reach no line": 18,
@@ -1053,7 +1021,7 @@
     "publisher readings nobody has settled": 22,
     "renderings with nothing to show": 24,
     "kana names with no stated division": 269,
-    "claims whose evidence their basis does not admit": 105,
+    "claims whose evidence their basis does not admit": 102,
     "author readings no source states": 423,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
@@ -1067,10 +1035,10 @@
     "credits sharing a reading nobody has ruled on": 22,
     "ruby asserting a reading per character": 197,
     "implausible ruby spans": 0,
-    "titles read by a machine, unmarked": 1178,
+    "titles read by a machine, unmarked": 1170,
     "uncertain readings": 53,
     "data reaching the site around the store": 0,
-    "works showing a romanisation": 66,
+    "works showing a romanisation": 26,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
     "one work under two names in a list": 3,
@@ -1094,7 +1062,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 4,
-    "updates naming a work we do not hold": 24,
+    "updates naming a work we do not hold": 26,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 4,
@@ -1123,10 +1091,10 @@
    "unknown": 50
   },
   "english_basis": {
-   "translated": 2633,
+   "translated": 2674,
    "official-jp": 230,
-   "licensed": 109,
-   "romaji": 66
+   "licensed": 108,
+   "romaji": 26
   },
   "print_works": 2459,
   "print_only": 1648,
