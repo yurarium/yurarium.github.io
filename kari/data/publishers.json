@@ -3,570 +3,15 @@
  "note": "One record per publishing house, holding the imprint lines it runs with the spellings each line is catalogued under and the years those cover. Publishers and distributors share one namespace: the seat is on the edge to the book.",
  "count": 163,
  "publishers": {
-  "h00003": {
-   "id": "h00003",
-   "name": "小学館",
-   "rows": 47,
-   "works": [
-    "w00021",
-    "w01352",
-    "w00044",
-    "w01317",
-    "w03101",
-    "w00033",
-    "w00079",
-    "w00102",
-    "w00282",
-    "w00302",
-    "w00313",
-    "w00522",
-    "w00697",
-    "w00823",
-    "w00918",
-    "w00980",
-    "w00981",
-    "w00987",
-    "w01792",
-    "w00990",
-    "w01349",
-    "w01311",
-    "w01288",
-    "w01245",
-    "w01247",
-    "w01292",
-    "w01340",
-    "w01604",
-    "w01761",
-    "w01861",
-    "w01864",
-    "w02003",
-    "w02026",
-    "w02052",
-    "w02100",
-    "w02117",
-    "w02200",
-    "w02220",
-    "w02225",
-    "w02226",
-    "w02265",
-    "w01478"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "big-comics",
-     "name": "ビッグコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 6,
-     "works": [
-      "w00079",
-      "w00282",
-      "w00302",
-      "w01792",
-      "w01340",
-      "w02220"
-     ],
-     "spellings": [
-      {
-       "raw": "ビッグコミックス",
-       "rows": 6,
-       "years": [
-        "2018",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "sunday-gx-comics",
-     "name": "サンデーGXコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 5,
-     "works": [
-      "w00987",
-      "w00990",
-      "w01245",
-      "w02265"
-     ],
-     "spellings": [
-      {
-       "raw": "サンデーGXコミックス",
-       "rows": 5,
-       "years": [
-        "2011",
-        "2024"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "ura-shonen-sunday-comics",
-     "name": "裏少年サンデーコミックス",
-     "parent": "少年サンデーコミックス",
-     "resolved": true,
-     "rows": 5,
-     "works": [
-      "w00044",
-      "w00522",
-      "w01349",
-      "w01311",
-      "w01288"
-     ],
-     "spellings": [
-      {
-       "raw": "裏少年サンデーコミックス",
-       "rows": 5,
-       "years": [
-        "2014",
-        "2024"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "sunday-webry-shonen-sunday-comics",
-     "name": "サンデーうぇぶり少年サンデーコミックス",
-     "parent": "少年サンデーコミックス",
-     "resolved": true,
-     "rows": 4,
-     "works": [
-      "w00102",
-      "w00823",
-      "w00981"
-     ],
-     "spellings": [
-      {
-       "raw": "サンデーうぇぶり少年サンデーコミックス",
-       "rows": 4,
-       "years": [
-        "2018",
-        "2026"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "manga-one-comics",
-     "name": "マンガワンコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 4,
-     "works": [
-      "w00313",
-      "w02100",
-      "w02200",
-      "w02225"
-     ],
-     "spellings": [
-      {
-       "raw": "マンガワンコミックス",
-       "rows": 4,
-       "years": [
-        "2023",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "ciao-comics",
-     "name": "ちゃおコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 3,
-     "works": [
-      "w01864",
-      "w02117",
-      "w02226"
-     ],
-     "spellings": [
-      {
-       "raw": "ちゃおコミックス",
-       "rows": 3,
-       "years": [
-        "2020",
-        "2024"
-       ]
-      }
-     ]
-    },
-    {
-     "id": null,
-     "name": "やわらかスピリッツ",
-     "parent": null,
-     "resolved": false,
-     "rows": 2,
-     "works": [
-      "w01352"
-     ],
-     "spellings": [
-      {
-       "raw": "やわらかスピリッツ",
-       "rows": 2,
-       "years": [
-        "2018",
-        "2018"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "gessan-shonen-sunday-comics-special",
-     "name": "ゲッサン少年サンデーコミックススペシャル",
-     "parent": "少年サンデーコミックス",
-     "resolved": true,
-     "rows": 2,
-     "works": [
-      "w00980",
-      "w01478"
-     ],
-     "spellings": [
-      {
-       "raw": "ゲッサン少年サンデーコミックススペシャル",
-       "rows": 2,
-       "years": [
-        "2021",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": null,
-     "name": "スピリッツ女子部",
-     "parent": null,
-     "resolved": false,
-     "rows": 2,
-     "works": [
-      "w02026",
-      "w02052"
-     ],
-     "spellings": [
-      {
-       "raw": "スピリッツ女子部",
-       "rows": 2,
-       "years": [
-        "2022",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "big-spirits-comics",
-     "name": "ビッグスピリッツコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 2,
-     "works": [
-      "w01352",
-      "w01317"
-     ],
-     "spellings": [
-      {
-       "raw": "Big Spirits Comics",
-       "rows": 1,
-       "years": [
-        "2018",
-        "2018"
-       ]
-      },
-      {
-       "raw": "ビッグスピリッツコミックス",
-       "rows": 1,
-       "years": [
-        "2016",
-        "2016"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "big-comics-special-hibana",
-     "name": "BIG COMICS SPECIALヒバナ",
-     "parent": "ビッグコミックス",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w01292"
-     ],
-     "spellings": [
-      {
-       "raw": "BIG COMICS SPECIALヒバナ",
-       "rows": 1,
-       "years": [
-        "2015",
-        "2015"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "ciao-deluxe",
-     "name": "ちゃおデラックス",
-     "parent": "ちゃおコミックス",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w01604"
-     ],
-     "spellings": [
-      {
-       "raw": "ちゃおデラックス",
-       "rows": 1,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    },
-    {
-     "id": "ciao-plus-comics",
-     "name": "ちゃおプラスコミックス",
-     "parent": "ちゃおコミックス",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00033"
-     ],
-     "spellings": [
-      {
-       "raw": "ちゃおプラスコミックス",
-       "rows": 1,
-       "years": [
-        "2025",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "corocoro-comics-special",
-     "name": "コロコロコミックススペシャル",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00021"
-     ],
-     "spellings": [
-      {
-       "raw": "コロコロコミックススペシャル",
-       "rows": 1,
-       "years": [
-        "2024",
-        "2024"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "sunday-webry-comics",
-     "name": "サンデーうぇぶりコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w03101"
-     ],
-     "spellings": [
-      {
-       "raw": "サンデーうぇぶりコミックス",
-       "rows": 1,
-       "years": [
-        "2026",
-        "2026"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "digicolle",
-     "name": "デジコレ",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w02003"
-     ],
-     "spellings": [
-      {
-       "raw": "デジコレ",
-       "rows": 1,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    },
-    {
-     "id": "digicolle-macaron",
-     "name": "デジコレ　マカロン",
-     "parent": "デジコレ",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w01861"
-     ],
-     "spellings": [
-      {
-       "raw": "デジコレ　マカロン",
-       "rows": 1,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    },
-    {
-     "id": "big-spirits-comics-special",
-     "name": "ビッグスピリッツコミックススペシャル",
-     "parent": "ビッグスピリッツコミックス",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w01247"
-     ],
-     "spellings": [
-      {
-       "raw": "ビッグスピリッツコミックススペシャル",
-       "rows": 1,
-       "years": [
-        "2014",
-        "2014"
-       ]
-      }
-     ]
-    },
-    {
-     "id": null,
-     "name": "マンガワン女子部",
-     "parent": null,
-     "resolved": false,
-     "rows": 1,
-     "works": [
-      "w01761"
-     ],
-     "spellings": [
-      {
-       "raw": "マンガワン女子部",
-       "rows": 1,
-       "years": [
-        "2020",
-        "2020"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "yoru-sunday-shonen-sunday-comics",
-     "name": "夜サンデー少年サンデーコミックス",
-     "parent": "少年サンデーコミックス",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00697"
-     ],
-     "spellings": [
-      {
-       "raw": "夜サンデー少年サンデーコミックス",
-       "rows": 1,
-       "years": [
-        "2022",
-        "2022"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "shonen-sunday-comics",
-     "name": "少年サンデーコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00918"
-     ],
-     "spellings": [
-      {
-       "raw": "少年サンデーコミックス",
-       "rows": 1,
-       "years": [
-        "2021",
-        "2021"
-       ]
-      }
-     ]
-    },
-    {
-     "id": null,
-     "name": "裏サンデー女子部",
-     "parent": null,
-     "resolved": false,
-     "rows": 1,
-     "works": [
-      "w00522"
-     ],
-     "spellings": [
-      {
-       "raw": "裏サンデー女子部",
-       "rows": 1,
-       "years": [
-        "2019",
-        "2019"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00039": {
-   "id": "h00039",
-   "name": "とりからの巣",
-   "rows": 2,
-   "works": [
-    "w01878",
-    "w02099"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": null,
-     "name": "とりからの巣",
-     "parent": null,
-     "resolved": false,
-     "rows": 2,
-     "works": [
-      "w01878",
-      "w02099"
-     ],
-     "spellings": [
-      {
-       "raw": "とりからの巣",
-       "rows": 2,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    }
-   ]
-  },
   "h00002": {
    "id": "h00002",
    "name": "KADOKAWA",
    "rows": 392,
    "works": [
+    "w00014",
+    "w02337",
+    "w00017",
+    "w00094",
     "w02180",
     "w00101",
     "w00103",
@@ -589,7 +34,6 @@
     "w02301",
     "w00186",
     "w00147",
-    "w00094",
     "w03194",
     "w01975",
     "w00116",
@@ -600,9 +44,6 @@
     "w00129",
     "w00005",
     "w00142",
-    "w00014",
-    "w02337",
-    "w00017",
     "w00019",
     "w00024",
     "w00027",
@@ -965,14 +406,14 @@
      "resolved": true,
      "rows": 98,
      "works": [
+      "w00014",
+      "w02337",
       "w00018",
       "w00277",
       "w02969",
       "w00186",
       "w01975",
       "w00005",
-      "w00014",
-      "w02337",
       "w00024",
       "w00042",
       "w00061",
@@ -1275,15 +716,15 @@
      "resolved": true,
      "rows": 20,
      "works": [
+      "w00017",
+      "w00094",
       "w00101",
       "w00103",
       "w00076",
       "w00077",
       "w00147",
-      "w00094",
       "w00116",
       "w00122",
-      "w00017",
       "w00104",
       "w02793",
       "w00176",
@@ -2017,45 +1458,559 @@
     }
    ]
   },
-  "h00019": {
-   "id": "h00019",
-   "name": "ホーム社",
-   "rows": 5,
+  "h00039": {
+   "id": "h00039",
+   "name": "とりからの巣",
+   "rows": 2,
    "works": [
-    "w00188",
-    "w00526",
-    "w00731"
+    "w01878",
+    "w02099"
    ],
    "seats": [
     "publisher"
    ],
    "lines": [
     {
-     "id": "ogyaa",
-     "name": "オギャー!!",
-     "parent": "集英社ホームコミックス",
-     "resolved": true,
-     "rows": 5,
+     "id": null,
+     "name": "とりからの巣",
+     "parent": null,
+     "resolved": false,
+     "rows": 2,
      "works": [
-      "w00188",
-      "w00526",
-      "w00731"
+      "w01878",
+      "w02099"
      ],
      "spellings": [
       {
-       "raw": "オギャー!!",
+       "raw": "とりからの巣",
+       "rows": 2,
+       "years": [
+        null,
+        null
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00003": {
+   "id": "h00003",
+   "name": "小学館",
+   "rows": 47,
+   "works": [
+    "w00021",
+    "w01352",
+    "w00044",
+    "w01317",
+    "w03101",
+    "w00033",
+    "w00079",
+    "w00102",
+    "w00282",
+    "w00302",
+    "w00313",
+    "w00522",
+    "w00697",
+    "w00823",
+    "w00918",
+    "w00980",
+    "w00981",
+    "w00987",
+    "w01792",
+    "w00990",
+    "w01349",
+    "w01311",
+    "w01288",
+    "w01245",
+    "w01247",
+    "w01292",
+    "w01340",
+    "w01604",
+    "w01761",
+    "w01861",
+    "w01864",
+    "w02003",
+    "w02026",
+    "w02052",
+    "w02100",
+    "w02117",
+    "w02200",
+    "w02220",
+    "w02225",
+    "w02226",
+    "w02265",
+    "w01478"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "big-comics",
+     "name": "ビッグコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 6,
+     "works": [
+      "w00079",
+      "w00282",
+      "w00302",
+      "w01792",
+      "w01340",
+      "w02220"
+     ],
+     "spellings": [
+      {
+       "raw": "ビッグコミックス",
+       "rows": 6,
+       "years": [
+        "2018",
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sunday-gx-comics",
+     "name": "サンデーGXコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 5,
+     "works": [
+      "w00987",
+      "w00990",
+      "w01245",
+      "w02265"
+     ],
+     "spellings": [
+      {
+       "raw": "サンデーGXコミックス",
+       "rows": 5,
+       "years": [
+        "2011",
+        "2024"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ura-shonen-sunday-comics",
+     "name": "裏少年サンデーコミックス",
+     "parent": "少年サンデーコミックス",
+     "resolved": true,
+     "rows": 5,
+     "works": [
+      "w00044",
+      "w00522",
+      "w01349",
+      "w01311",
+      "w01288"
+     ],
+     "spellings": [
+      {
+       "raw": "裏少年サンデーコミックス",
+       "rows": 5,
+       "years": [
+        "2014",
+        "2024"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sunday-webry-shonen-sunday-comics",
+     "name": "サンデーうぇぶり少年サンデーコミックス",
+     "parent": "少年サンデーコミックス",
+     "resolved": true,
+     "rows": 4,
+     "works": [
+      "w00102",
+      "w00823",
+      "w00981"
+     ],
+     "spellings": [
+      {
+       "raw": "サンデーうぇぶり少年サンデーコミックス",
        "rows": 4,
        "years": [
+        "2018",
+        "2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "manga-one-comics",
+     "name": "マンガワンコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 4,
+     "works": [
+      "w00313",
+      "w02100",
+      "w02200",
+      "w02225"
+     ],
+     "spellings": [
+      {
+       "raw": "マンガワンコミックス",
+       "rows": 4,
+       "years": [
+        "2023",
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ciao-comics",
+     "name": "ちゃおコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 3,
+     "works": [
+      "w01864",
+      "w02117",
+      "w02226"
+     ],
+     "spellings": [
+      {
+       "raw": "ちゃおコミックス",
+       "rows": 3,
+       "years": [
+        "2020",
+        "2024"
+       ]
+      }
+     ]
+    },
+    {
+     "id": null,
+     "name": "やわらかスピリッツ",
+     "parent": null,
+     "resolved": false,
+     "rows": 2,
+     "works": [
+      "w01352"
+     ],
+     "spellings": [
+      {
+       "raw": "やわらかスピリッツ",
+       "rows": 2,
+       "years": [
+        "2018",
+        "2018"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gessan-shonen-sunday-comics-special",
+     "name": "ゲッサン少年サンデーコミックススペシャル",
+     "parent": "少年サンデーコミックス",
+     "resolved": true,
+     "rows": 2,
+     "works": [
+      "w00980",
+      "w01478"
+     ],
+     "spellings": [
+      {
+       "raw": "ゲッサン少年サンデーコミックススペシャル",
+       "rows": 2,
+       "years": [
+        "2021",
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": null,
+     "name": "スピリッツ女子部",
+     "parent": null,
+     "resolved": false,
+     "rows": 2,
+     "works": [
+      "w02026",
+      "w02052"
+     ],
+     "spellings": [
+      {
+       "raw": "スピリッツ女子部",
+       "rows": 2,
+       "years": [
         "2022",
-        "2023"
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "big-spirits-comics",
+     "name": "ビッグスピリッツコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 2,
+     "works": [
+      "w01352",
+      "w01317"
+     ],
+     "spellings": [
+      {
+       "raw": "Big Spirits Comics",
+       "rows": 1,
+       "years": [
+        "2018",
+        "2018"
        ]
       },
       {
-       "raw": "集英社ホームコミックス. オギャー!!",
+       "raw": "ビッグスピリッツコミックス",
        "rows": 1,
        "years": [
-        "2023",
-        "2023"
+        "2016",
+        "2016"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "big-comics-special-hibana",
+     "name": "BIG COMICS SPECIALヒバナ",
+     "parent": "ビッグコミックス",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w01292"
+     ],
+     "spellings": [
+      {
+       "raw": "BIG COMICS SPECIALヒバナ",
+       "rows": 1,
+       "years": [
+        "2015",
+        "2015"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ciao-deluxe",
+     "name": "ちゃおデラックス",
+     "parent": "ちゃおコミックス",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w01604"
+     ],
+     "spellings": [
+      {
+       "raw": "ちゃおデラックス",
+       "rows": 1,
+       "years": [
+        null,
+        null
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ciao-plus-comics",
+     "name": "ちゃおプラスコミックス",
+     "parent": "ちゃおコミックス",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00033"
+     ],
+     "spellings": [
+      {
+       "raw": "ちゃおプラスコミックス",
+       "rows": 1,
+       "years": [
+        "2025",
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "corocoro-comics-special",
+     "name": "コロコロコミックススペシャル",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00021"
+     ],
+     "spellings": [
+      {
+       "raw": "コロコロコミックススペシャル",
+       "rows": 1,
+       "years": [
+        "2024",
+        "2024"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sunday-webry-comics",
+     "name": "サンデーうぇぶりコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w03101"
+     ],
+     "spellings": [
+      {
+       "raw": "サンデーうぇぶりコミックス",
+       "rows": 1,
+       "years": [
+        "2026",
+        "2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "digicolle",
+     "name": "デジコレ",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w02003"
+     ],
+     "spellings": [
+      {
+       "raw": "デジコレ",
+       "rows": 1,
+       "years": [
+        null,
+        null
+       ]
+      }
+     ]
+    },
+    {
+     "id": "digicolle-macaron",
+     "name": "デジコレ　マカロン",
+     "parent": "デジコレ",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w01861"
+     ],
+     "spellings": [
+      {
+       "raw": "デジコレ　マカロン",
+       "rows": 1,
+       "years": [
+        null,
+        null
+       ]
+      }
+     ]
+    },
+    {
+     "id": "big-spirits-comics-special",
+     "name": "ビッグスピリッツコミックススペシャル",
+     "parent": "ビッグスピリッツコミックス",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w01247"
+     ],
+     "spellings": [
+      {
+       "raw": "ビッグスピリッツコミックススペシャル",
+       "rows": 1,
+       "years": [
+        "2014",
+        "2014"
+       ]
+      }
+     ]
+    },
+    {
+     "id": null,
+     "name": "マンガワン女子部",
+     "parent": null,
+     "resolved": false,
+     "rows": 1,
+     "works": [
+      "w01761"
+     ],
+     "spellings": [
+      {
+       "raw": "マンガワン女子部",
+       "rows": 1,
+       "years": [
+        "2020",
+        "2020"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "yoru-sunday-shonen-sunday-comics",
+     "name": "夜サンデー少年サンデーコミックス",
+     "parent": "少年サンデーコミックス",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00697"
+     ],
+     "spellings": [
+      {
+       "raw": "夜サンデー少年サンデーコミックス",
+       "rows": 1,
+       "years": [
+        "2022",
+        "2022"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "shonen-sunday-comics",
+     "name": "少年サンデーコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00918"
+     ],
+     "spellings": [
+      {
+       "raw": "少年サンデーコミックス",
+       "rows": 1,
+       "years": [
+        "2021",
+        "2021"
+       ]
+      }
+     ]
+    },
+    {
+     "id": null,
+     "name": "裏サンデー女子部",
+     "parent": null,
+     "resolved": false,
+     "rows": 1,
+     "works": [
+      "w00522"
+     ],
+     "spellings": [
+      {
+       "raw": "裏サンデー女子部",
+       "rows": 1,
+       "years": [
+        "2019",
+        "2019"
        ]
       }
      ]
@@ -2112,6 +2067,51 @@
        "years": [
         null,
         null
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00019": {
+   "id": "h00019",
+   "name": "ホーム社",
+   "rows": 5,
+   "works": [
+    "w00188",
+    "w00526",
+    "w00731"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "ogyaa",
+     "name": "オギャー!!",
+     "parent": "集英社ホームコミックス",
+     "resolved": true,
+     "rows": 5,
+     "works": [
+      "w00188",
+      "w00526",
+      "w00731"
+     ],
+     "spellings": [
+      {
+       "raw": "オギャー!!",
+       "rows": 4,
+       "years": [
+        "2022",
+        "2023"
+       ]
+      },
+      {
+       "raw": "集英社ホームコミックス. オギャー!!",
+       "rows": 1,
+       "years": [
+        "2023",
+        "2023"
        ]
       }
      ]

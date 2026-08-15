@@ -1,8 +1,10 @@
 {
- "generated": "2026-08-15T07:54:09+00:00",
+ "generated": "2026-08-15T10:39:58+00:00",
  "since_last": {
-  "at": "2026-08-15T06:25:53+00:00",
-  "statistics": {}
+  "at": "2026-08-15T07:54:09+00:00",
+  "statistics": {
+   "chapters": 2
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,20 +26,20 @@
  },
  "last_run": {
   "at": "2026-08-15",
-  "releases": 1249,
+  "releases": 1335,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3038,
   "assembled": 3040,
   "awaiting_identifier": 2,
   "identification": {
-   "discovery-candidate": 882,
+   "discovery-candidate": 890,
    "known-work-match": 17,
-   "platform-genre": 350
+   "platform-genre": 428
   },
   "collapsed": {
    "duplicate_chapters": 84,
-   "resolver": 62,
+   "resolver": 61,
    "samples": 36,
    "thin_sitemap": 8
   }
@@ -434,7 +436,7 @@
    {
     "name": "renderings with nothing to show",
     "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
-    "budget": 25,
+    "budget": 24,
     "value": 24
    },
    {
@@ -488,8 +490,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 52,
-    "value": 52
+    "budget": 51,
+    "value": 51
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -690,7 +692,7 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 7,
+    "budget": 8,
     "value": 8
    },
    {
@@ -904,14 +906,14 @@
    "source": "kadokomi",
    "files": 5,
    "works": 973,
-   "rows": 7417,
+   "rows": 7422,
    "retrieved": "2026-08-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6745,
-   "well_formed": 6344,
-   "malformed": 401,
+   "checked_rows": 6750,
+   "well_formed": 6431,
+   "malformed": 319,
    "drop": null
   },
   {
@@ -946,20 +948,20 @@
    "source": "webpages",
    "files": 37,
    "works": 529,
-   "rows": 7378,
+   "rows": 7401,
    "retrieved": "2026-08-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7327,
-   "well_formed": 7327,
+   "checked_rows": 7350,
+   "well_formed": 7350,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-15T03:47:37+00:00",
+  "previous_at": "2026-08-15T06:21:57+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1043,7 +1045,7 @@
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 88,
     "publisher readings nobody has settled": 22,
-    "renderings with nothing to show": 25,
+    "renderings with nothing to show": 24,
     "kana names with no stated division": 268,
     "claims whose evidence their basis does not admit": 105,
     "author readings no source states": 413,
@@ -1052,7 +1054,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 52,
+    "credit fields an identifier does not cover": 51,
     "credit pages listing a work that does not name them": 8,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
@@ -1085,7 +1087,7 @@
     "works holding more volumes than the shop states": 26,
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
-    "updates naming a work we do not hold": 7,
+    "updates naming a work we do not hold": 8,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 4,
@@ -1123,7 +1125,7 @@
   "print_only": 1648,
   "volumes": 6105,
   "with_identifier": 3038,
-  "chapters": 28131,
+  "chapters": 28133,
   "delivery_dated": 1034
  }
 }
