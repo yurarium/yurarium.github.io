@@ -57,6 +57,26 @@ def main(s):
     s.check("clone yurison" in rules.missing() and str(rules.ADAPTERS) in rules.missing(),
             "and a checkout without them is told where they should be")
 
+    # ── THE RUNNER COUNTS ITSELF, AND DOES NOT RUN ITSELF ─────────────────────────────────────
+    #
+    # BOTH HALVES WENT WRONG IN ONE AFTERNOON. `test.py` excluded itself from the walk, so it could
+    # have had no test at all and still printed `0 module(s) untested`; excluding it instead from
+    # the walk's OUTPUT let it collect itself as a suite, because the line that searches for
+    # `add_argument("--self-test"` contains that string, and the runner reported itself vacuous.
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("site_runner", ROOT / "test.py")
+    runner = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(runner)
+
+    walked = {str(m.relative_to(ROOT)) for m in runner.modules()}
+    s.check("test.py" in walked, "the runner is one of the modules it counts")
+    ran, covered = runner.collect()
+    s.eq([label for label, _ in ran if label.startswith("test.py")], [],
+         "and it is not a suite, having no self-test whatever its own source says")
+    s.eq(sorted({str(p_.relative_to(ROOT)) for p_ in runner.modules()} - covered), [],
+         "every module in this repository is named by a suite, which is the property the count "
+         "on the last line of a run is about")
+
     # ── THE RUNNER'S OFFLINE GUARD, ASKED RATHER THAN TRUSTED ─────────────────────────────────
     #
     # `test.py` marks the child it has guarded. Under the runner the refusal must be real; run by

@@ -77,9 +77,16 @@ def has_code(p):
 
 
 def modules():
+    """Every module in the repository, this one included.
+
+    THE RUNNER COUNTED EVERY MODULE BUT ITSELF, which is the exemption a harness should be last to
+    take: `test.py` decides what a green tree means, and it could have had no test at all without
+    appearing in the number it prints. It is not collected as a suite, having no `--self-test` and
+    no `test_` name; it is in the denominator, and `build/test_rules.py` names it in `COVERS`.
+    """
     for p in sorted(ROOT.rglob("*.py")):
         rel = p.relative_to(ROOT)
-        if SKIP_DIRS & set(rel.parts) or p.name == "test.py":
+        if SKIP_DIRS & set(rel.parts):
             continue
         if any(part.startswith(".") for part in rel.parts):
             continue
@@ -117,6 +124,13 @@ def collect():
     runnables, covered = [], set()
     for p in modules():
         rel = str(p.relative_to(ROOT))
+        # THE DETECTOR MATCHES ITS OWN DEFINITION, which is how this file collected ITSELF as a
+        # self-testing module the moment it stopped being excluded from the walk: the line below
+        # searches for a string that the line below is, so `test.py --self-test` ran, argparse
+        # refused the flag, and the runner reported itself vacuous. A rule written as a literal
+        # matches the place the literal is written.
+        if p.resolve() == pathlib.Path(__file__).resolve():
+            continue
         text = p.read_text(encoding="utf-8", errors="replace")
         if p.name.startswith("test_"):
             runnables.append((rel, [sys.executable, str(p)]))
