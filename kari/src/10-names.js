@@ -1332,7 +1332,21 @@ function creditNames(creator) {
 let PUBS = null;
 
 function pubRec(n) {
-  return (PUBS && (PUBS[n] || PUBS[String(n || '').normalize('NFKC')])) || null;
+  const direct = (PUBS && (PUBS[n] || PUBS[String(n || '').normalize('NFKC')])) || null;
+  if (direct) return direct;
+  // A COMPOUND IMPRINT STRING IS ANSWERED BY THE LINE IT NAMES. A cataloguer writes the line and a
+  // second form of it together, `IDコミックス. YH comics` and `ガンガンコミックスonline ／ GC ONLIN`,
+  // and no map holds that whole string: five of the corpus's 367 imprint strings were the only
+  // names left with no English at all, and they reached an English page in Japanese.
+  //
+  // THE RESOLUTION IS ALREADY SHIPPED. `NAMES.imprints` says which line a catalogued string names,
+  // which is exactly the question being asked here, and the line's own name is one the publisher
+  // map renders. Nothing is guessed: a string the registry does not resolve still falls to the
+  // floor, as it did.
+  const lines = (typeof NAMES !== 'undefined' && NAMES && NAMES.imprints) || null;
+  const line = lines && (lines[n] || lines[String(n || '').normalize('NFKC')]);
+  const named = line && line.name;
+  return (named && PUBS && (PUBS[named] || PUBS[String(named).normalize('NFKC')])) || null;
 }
 
 /* A PUBLISHER ROMANISATION FOLLOWS THE ROMANISATION CONTROL, the same rule enAvailable applies to
