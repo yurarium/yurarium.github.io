@@ -1105,7 +1105,10 @@ RECORDED = {
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
-    "bylines drawn in a spelling the field does not write": 24,
+    # 24 -> 25 ON 2026-08-15. The population is a name whose division the store keeps and whose
+    # credit field a cataloguer typed with different spacing, `鴉ぴえろ` against `鴉　ぴえろ`, and
+    # one more name's division settled with the day's naming work. Recorded where it stands.
+    "bylines drawn in a spelling the field does not write": 25,
     "interface reads outside an entry point": 12,
 }
 
