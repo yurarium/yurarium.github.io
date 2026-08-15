@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-15T20:25:00+00:00",
+ "generated": "2026-08-15T20:49:16+00:00",
  "since_last": {
-  "at": "2026-08-15T18:07:27+00:00",
+  "at": "2026-08-15T20:25:00+00:00",
   "statistics": {}
  },
  "means": {
@@ -599,8 +599,8 @@
    {
     "name": "modules reading a corpus file",
     "means": "modules that open one of the compiled JSON files by path instead of asking the store; §13 made the store the compiled form and `adapters/population.py` the one reader",
-    "budget": 17,
-    "value": 17
+    "budget": 16,
+    "value": 16
    },
    {
     "name": "adapters fetching without net.py",
@@ -965,7 +965,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-15T18:05:01+00:00",
+  "previous_at": "2026-08-15T20:20:47+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1046,7 +1046,7 @@
     "impossibilities asserted without evidence": 0,
     "invented markup in tests": 75,
     "nicovideo works with no rights": 80,
-    "modules reading a corpus file": 17,
+    "modules reading a corpus file": 16,
     "adapters fetching without net.py": 34,
     "captures with no floor": 10,
     "unreadable bookwalker rows": 15,
