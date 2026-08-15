@@ -47,11 +47,14 @@ import rules                                                            # noqa: 
 #: More than one is listed while a schema change is in flight, so the two repositories can be
 #: updated in either order rather than in lockstep.
 #:
-#: `5ad476caca453555` is the run's own report, §13: `run_source`, `run_queue`, `run_drop`, `check_result`
-#: and `check_finding`, the last carrying the order `check.py` declares its checks in. `d07040c9`
-#: stays listed because a store published before the change is still readable by this build, which
-#: is what "either order" means; it comes out when nothing in flight needs it.
-KNOWN_SCHEMAS = ("6d3bb09b1f977b25",)
+#: `7065ca642b650e09` adds `name_record.translation_refused`, which carries why a title has no
+#: rendering of ours beside the one it already shows: `スカーレット` is the English word Scarlet in
+#: kana and the licensor prints `Scarlet`, so our translation would be the same string. Nothing here
+#: reads the column directly, the pipeline's `emit.names` doing that, and the digest moves all the
+#: same because the stamp answers for the shape rather than for what this build touches.
+#: `6d3bb09b1f977b25` stays listed because a store published before the change is still readable by
+#: this build, which is what "either order" means; it comes out when nothing in flight needs it.
+KNOWN_SCHEMAS = ("7065ca642b650e09", "6d3bb09b1f977b25")
 
 
 def open_store(path):
