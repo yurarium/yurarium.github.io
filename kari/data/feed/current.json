@@ -104,6 +104,72 @@
    }
   },
   {
+   "id": "kadokomi:KC_0199460000200011_E",
+   "work": "こいのおわりをねがうとき",
+   "ep": "読切",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-15",
+   "seen": "2026-08-15",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_019946_S/episodes/KC_0199460000200011_E",
+   "series_url": "https://comic-walker.com/detail/KC_019946_S",
+   "author": "冬元はつみ",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "oneshot",
+   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-08-15",
+   "work_en": {
+    "reading": "コイノオワリヲネガウトキ",
+    "romaji": {
+     "macron": "Koinōwarionegautoki",
+     "double": "Koinoowarionegautoki",
+     "plain": "Koinowarionegautoki"
+    },
+    "basis": "romaji",
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "フユモトハツミ",
+    "ruby": [
+     [
+      "冬元",
+      "ふゆもと"
+     ],
+     [
+      "はつみ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Fuyumotohatsumi",
+     "double": "Fuyumotohatsumi",
+     "plain": "Fuyumotohatsumi"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "researched",
+    "id": "c01977"
+   }
+  },
+  {
    "id": "corocoro:https://www.corocoro.jp/title/65:第101話",
    "work": "DOUBLE HELIX BLOSSOM",
    "ep": "第101話",
@@ -180,6 +246,77 @@
     },
     "reading_basis": "stated",
     "basis": "romaji"
+   }
+  },
+  {
+   "id": "remaining:https://ynjn.jp/title/30352:読み切り",
+   "work": "横槍メンゴ新作読切シリーズ",
+   "ep": "読み切り",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-15",
+   "seen": "2026-08-15",
+   "basis": "heuristic",
+   "conf": "reported",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://ynjn.jp/title/30352",
+   "author": "",
+   "plat": "remaining",
+   "plat_name": "ヤンジャン+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "oneshot",
+   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
+   "kind_inferred": true,
+   "preferred": "ヤンジャン+",
+   "also_on": [],
+   "is_preferred": true,
+   "in_collection": true,
+   "feed_date": "2026-08-15",
+   "wid": "w03168",
+   "work_en": {
+    "reading": "ヨコヤリ メンゴ シンサク ヨミキリ シリーズ",
+    "ruby": [
+     [
+      "横槍",
+      "よこやり"
+     ],
+     [
+      "メンゴ",
+      null
+     ],
+     [
+      "新作",
+      "しんさく"
+     ],
+     [
+      "読切",
+      "よみきり"
+     ],
+     [
+      "シリーズ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Yokoyari Mengo Shinsaku Yomikiri Shirīzu",
+     "double": "Yokoyari Mengo Shinsaku Yomikiri Shiriizu",
+     "plain": "Yokoyari Mengo Shinsaku Yomikiri Shirizu"
+    },
+    "en": "Yokoyari Mengo's New One-Shot Series",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Yokoyari Mengo's New One-Shot Series"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
    }
   },
   {
@@ -1757,7 +1894,7 @@
     "unverified": true
    },
    "author_en": {
-    "reading": "ヨネダ タロウ, スタジオクロマト スタジオコロリド",
+    "reading": "ヨネダ タロウ, スタジオクロマト・スタジオコロリド",
     "ruby": [
      [
       "米田",
@@ -3902,87 +4039,6 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c00022"
-   }
-  },
-  {
-   "id": "remaining:https://youngchampion.jp/series/86c1162f34a04:第10話②",
-   "work": "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です！…って、魔王が女の子の場合はどうすればいいのですか！？～",
-   "ep": "第10話②",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-12",
-   "seen": "2026-08-15",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://youngchampion.jp/series/86c1162f34a04",
-   "author": "りんご飴サード,川田暁生",
-   "plat": "remaining",
-   "plat_name": "チャンピオンクロス",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "purchase"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 10",
-   "kind_inferred": true,
-   "preferred": "チャンピオンクロス",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-08-12",
-   "wid": "w00177",
-   "work_en": {
-    "reading": "コウシャク レイジョウ ノ ロウラク ミッション",
-    "romaji": {
-     "macron": "Kōshaku Reijō no Rōraku Misshon",
-     "double": "Koushaku Reijou no Rouraku Misshon",
-     "plain": "Koshaku Reijo no Roraku Misshon"
-    },
-    "en": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "リンゴアメ サード, カワダ アキオ",
-    "ruby": [
-     [
-      "りんご",
-      null
-     ],
-     [
-      "飴",
-      "あめ"
-     ],
-     [
-      "サード",
-      null
-     ],
-     [
-      ",",
-      null
-     ],
-     [
-      "川田暁生",
-      "かわだあきお"
-     ]
-    ],
-    "romaji": {
-     "macron": "Ringoame Sādo, Kawada Akio",
-     "double": "Ringoame Saado, Kawada Akio",
-     "plain": "Ringoame Sado, Kawada Akio"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji"
    }
   },
   {
@@ -7497,77 +7553,6 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00058"
-   }
-  },
-  {
-   "id": "remaining:https://ynjn.jp/title/30352:読み切り",
-   "work": "横槍メンゴ新作読切シリーズ",
-   "ep": "読み切り",
-   "type": "oneshot",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-10",
-   "seen": "2026-08-15",
-   "basis": "rendered",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://ynjn.jp/title/30352",
-   "author": "",
-   "plat": "remaining",
-   "plat_name": "ヤンジャン+",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "oneshot",
-   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
-   "kind_inferred": true,
-   "preferred": "ヤンジャン+",
-   "also_on": [],
-   "is_preferred": true,
-   "in_collection": true,
-   "feed_date": "2026-08-10",
-   "wid": "w03168",
-   "work_en": {
-    "reading": "ヨコヤリ メンゴ シンサク ヨミキリ シリーズ",
-    "ruby": [
-     [
-      "横槍",
-      "よこやり"
-     ],
-     [
-      "メンゴ",
-      null
-     ],
-     [
-      "新作",
-      "しんさく"
-     ],
-     [
-      "読切",
-      "よみきり"
-     ],
-     [
-      "シリーズ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Yokoyari Mengo Shinsaku Yomikiri Shirīzu",
-     "double": "Yokoyari Mengo Shinsaku Yomikiri Shiriizu",
-     "plain": "Yokoyari Mengo Shinsaku Yomikiri Shirizu"
-    },
-    "en": "Yokoyari Mengo's New One-Shot Series",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Yokoyari Mengo's New One-Shot Series"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
    }
   },
   {
@@ -23441,89 +23426,6 @@
    }
   },
   {
-   "id": "remaining:https://youngchampion.jp/series/86c1162f34a04:第10話①",
-   "work": "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です！…って、魔王が女の子の場合はどうすればいいのですか！？～",
-   "ep": "第10話①",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-05",
-   "seen": "2026-08-15",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://youngchampion.jp/series/86c1162f34a04",
-   "author": "りんご飴サード,川田暁生",
-   "plat": "remaining",
-   "plat_name": "チャンピオンクロス",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 10",
-   "kind_inferred": true,
-   "preferred": "チャンピオンクロス",
-   "also_on": [
-    "ヤングチャンピオン"
-   ],
-   "is_preferred": true,
-   "feed_date": "2026-08-05",
-   "wid": "w00177",
-   "work_en": {
-    "reading": "コウシャク レイジョウ ノ ロウラク ミッション",
-    "romaji": {
-     "macron": "Kōshaku Reijō no Rōraku Misshon",
-     "double": "Koushaku Reijou no Rouraku Misshon",
-     "plain": "Koshaku Reijo no Roraku Misshon"
-    },
-    "en": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "リンゴアメ サード, カワダ アキオ",
-    "ruby": [
-     [
-      "りんご",
-      null
-     ],
-     [
-      "飴",
-      "あめ"
-     ],
-     [
-      "サード",
-      null
-     ],
-     [
-      ",",
-      null
-     ],
-     [
-      "川田暁生",
-      "かわだあきお"
-     ]
-    ],
-    "romaji": {
-     "macron": "Ringoame Sādo, Kawada Akio",
-     "double": "Ringoame Saado, Kawada Akio",
-     "plain": "Ringoame Sado, Kawada Akio"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji"
-   }
-  },
-  {
    "id": "youngchampion:https://youngchampion.jp/series/90af950945671:第39話①",
    "work": "限界OLさんは悪役令嬢さまに仕えたい",
    "ep": "第39話①",
@@ -23716,6 +23618,339 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00214"
+   }
+  },
+  {
+   "id": "youngchampion:https://youngchampion.jp/series/86c1162f34a04:第8話③",
+   "work": "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です！…って、魔王が女の子の場合はどうすればいいのですか！？～",
+   "ep": "第8話③",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-06-17",
+   "seen": "2026-08-15",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://youngchampion.jp/series/86c1162f34a04",
+   "author": "りんご飴サード,川田暁生",
+   "plat": "youngchampion",
+   "plat_name": "ヤングチャンピオン",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-08-04",
+   "late_discovered": true,
+   "access_modes": [
+    "free-timed"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 8",
+   "kind_inferred": true,
+   "preferred": "ヤングチャンピオン",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-08-04",
+   "wid": "w00177",
+   "work_en": {
+    "reading": "コウシャク レイジョウ ノ ロウラク ミッション",
+    "romaji": {
+     "macron": "Kōshaku Reijō no Rōraku Misshon",
+     "double": "Koushaku Reijou no Rouraku Misshon",
+     "plain": "Koshaku Reijo no Roraku Misshon"
+    },
+    "en": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "リンゴアメ サード, カワダ アキオ",
+    "ruby": [
+     [
+      "りんご",
+      null
+     ],
+     [
+      "飴",
+      "あめ"
+     ],
+     [
+      "サード",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "川田暁生",
+      "かわだあきお"
+     ]
+    ],
+    "romaji": {
+     "macron": "Ringoame Sādo, Kawada Akio",
+     "double": "Ringoame Saado, Kawada Akio",
+     "plain": "Ringoame Sado, Kawada Akio"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "youngchampion:https://youngchampion.jp/series/86c1162f34a04:第9話①",
+   "work": "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です！…って、魔王が女の子の場合はどうすればいいのですか！？～",
+   "ep": "第9話①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-07-01",
+   "seen": "2026-08-15",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://youngchampion.jp/series/86c1162f34a04",
+   "author": "りんご飴サード,川田暁生",
+   "plat": "youngchampion",
+   "plat_name": "ヤングチャンピオン",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-08-04",
+   "late_discovered": true,
+   "access_modes": [
+    "free-timed"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 9",
+   "kind_inferred": true,
+   "preferred": "ヤングチャンピオン",
+   "preferred_reason": "the best-ranked carrier this chapter is actually free on",
+   "also_on": [
+    "チャンピオンクロス"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-08-04",
+   "wid": "w00177",
+   "work_en": {
+    "reading": "コウシャク レイジョウ ノ ロウラク ミッション",
+    "romaji": {
+     "macron": "Kōshaku Reijō no Rōraku Misshon",
+     "double": "Koushaku Reijou no Rouraku Misshon",
+     "plain": "Koshaku Reijo no Roraku Misshon"
+    },
+    "en": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "リンゴアメ サード, カワダ アキオ",
+    "ruby": [
+     [
+      "りんご",
+      null
+     ],
+     [
+      "飴",
+      "あめ"
+     ],
+     [
+      "サード",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "川田暁生",
+      "かわだあきお"
+     ]
+    ],
+    "romaji": {
+     "macron": "Ringoame Sādo, Kawada Akio",
+     "double": "Ringoame Saado, Kawada Akio",
+     "plain": "Ringoame Sado, Kawada Akio"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "youngchampion:https://youngchampion.jp/series/86c1162f34a04:第9話②",
+   "work": "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です！…って、魔王が女の子の場合はどうすればいいのですか！？～",
+   "ep": "第9話②",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-07-08",
+   "seen": "2026-08-15",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://youngchampion.jp/series/86c1162f34a04",
+   "author": "りんご飴サード,川田暁生",
+   "plat": "youngchampion",
+   "plat_name": "ヤングチャンピオン",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-08-04",
+   "late_discovered": true,
+   "access_modes": [
+    "free-timed"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 9",
+   "kind_inferred": true,
+   "preferred": "ヤングチャンピオン",
+   "preferred_reason": "the best-ranked carrier this chapter is actually free on",
+   "also_on": [
+    "チャンピオンクロス"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-08-04",
+   "wid": "w00177",
+   "work_en": {
+    "reading": "コウシャク レイジョウ ノ ロウラク ミッション",
+    "romaji": {
+     "macron": "Kōshaku Reijō no Rōraku Misshon",
+     "double": "Koushaku Reijou no Rouraku Misshon",
+     "plain": "Koshaku Reijo no Roraku Misshon"
+    },
+    "en": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "リンゴアメ サード, カワダ アキオ",
+    "ruby": [
+     [
+      "りんご",
+      null
+     ],
+     [
+      "飴",
+      "あめ"
+     ],
+     [
+      "サード",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "川田暁生",
+      "かわだあきお"
+     ]
+    ],
+    "romaji": {
+     "macron": "Ringoame Sādo, Kawada Akio",
+     "double": "Ringoame Saado, Kawada Akio",
+     "plain": "Ringoame Sado, Kawada Akio"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "youngchampion:https://youngchampion.jp/series/86c1162f34a04:第9話③",
+   "work": "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です！…って、魔王が女の子の場合はどうすればいいのですか！？～",
+   "ep": "第9話③",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-07-15",
+   "seen": "2026-08-15",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://youngchampion.jp/series/86c1162f34a04",
+   "author": "りんご飴サード,川田暁生",
+   "plat": "youngchampion",
+   "plat_name": "ヤングチャンピオン",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-08-04",
+   "late_discovered": true,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 9",
+   "kind_inferred": true,
+   "preferred": "ヤングチャンピオン",
+   "preferred_reason": "the best-ranked carrier this chapter is actually free on",
+   "also_on": [
+    "チャンピオンクロス"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-08-04",
+   "wid": "w00177",
+   "work_en": {
+    "reading": "コウシャク レイジョウ ノ ロウラク ミッション",
+    "romaji": {
+     "macron": "Kōshaku Reijō no Rōraku Misshon",
+     "double": "Koushaku Reijou no Rouraku Misshon",
+     "plain": "Koshaku Reijo no Roraku Misshon"
+    },
+    "en": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "リンゴアメ サード, カワダ アキオ",
+    "ruby": [
+     [
+      "りんご",
+      null
+     ],
+     [
+      "飴",
+      "あめ"
+     ],
+     [
+      "サード",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "川田暁生",
+      "かわだあきお"
+     ]
+    ],
+    "romaji": {
+     "macron": "Ringoame Sādo, Kawada Akio",
+     "double": "Ringoame Saado, Kawada Akio",
+     "plain": "Ringoame Sado, Kawada Akio"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
    }
   },
   {

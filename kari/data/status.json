@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-15T03:55:54+00:00",
+ "generated": "2026-08-15T06:25:53+00:00",
  "since_last": {
-  "at": "2026-08-14T23:00:41+00:00",
+  "at": "2026-08-15T03:55:54+00:00",
   "statistics": {}
  },
  "means": {
@@ -24,26 +24,26 @@
  },
  "last_run": {
   "at": "2026-08-15",
-  "releases": 1250,
+  "releases": 1249,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3038,
-  "assembled": 3039,
-  "awaiting_identifier": 1,
+  "assembled": 3040,
+  "awaiting_identifier": 2,
   "identification": {
-   "discovery-candidate": 884,
+   "discovery-candidate": 882,
    "known-work-match": 17,
-   "platform-genre": 349
+   "platform-genre": 350
   },
   "collapsed": {
    "duplicate_chapters": 84,
-   "resolver": 52,
+   "resolver": 62,
    "samples": 36,
    "thin_sitemap": 8
   }
  },
  "gate": {
-  "invariants_passing": 51,
+  "invariants_passing": 54,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -52,10 +52,8 @@
    },
    {
     "name": "a kana name's reading spells it",
-    "violations": 1,
-    "examples": [
-     "スタジオクロマト・スタジオコロリド: reading 'スタジオクロマト スタジオコロリド' spells 'スタジオクロマトスタジオコロリド'"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "a division cites its source",
@@ -248,11 +246,14 @@
     "examples": []
    },
    {
+    "name": "no workflow step reads a file the run emits",
+    "violations": 0,
+    "examples": []
+   },
+   {
     "name": "the store carries what the checks answered",
-    "violations": 1,
-    "examples": [
-     "('check_result is empty',)"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "every platform a reader is shown is registered",
@@ -511,8 +512,8 @@
    {
     "name": "credits sharing a reading nobody has ruled on",
     "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
-    "budget": 23,
-    "value": 23
+    "budget": 22,
+    "value": 22
    },
    {
     "name": "ruby asserting a reading per character",
@@ -690,7 +691,7 @@
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 7,
-    "value": 7
+    "value": 8
    },
    {
     "name": "works whose first publication country is unattested",
@@ -751,6 +752,12 @@
     "means": "volumes on a work's print run that state no printing date, which is what the dating passes work through",
     "budget": 2436,
     "value": 2436
+   },
+   {
+    "name": "predicted updates already behind the run",
+    "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -896,14 +903,14 @@
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 972,
-   "rows": 7416,
+   "works": 973,
+   "rows": 7417,
    "retrieved": "2026-08-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6744,
-   "well_formed": 6343,
+   "checked_rows": 6745,
+   "well_formed": 6344,
    "malformed": 401,
    "drop": null
   },
@@ -939,20 +946,20 @@
    "source": "webpages",
    "files": 37,
    "works": 529,
-   "rows": 7375,
+   "rows": 7378,
    "retrieved": "2026-08-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7324,
-   "well_formed": 7324,
+   "checked_rows": 7327,
+   "well_formed": 7327,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-14T22:42:09+00:00",
+  "previous_at": "2026-08-15T03:47:37+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1049,7 +1056,7 @@
     "credit pages listing a work that does not name them": 8,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
-    "credits sharing a reading nobody has ruled on": 23,
+    "credits sharing a reading nobody has ruled on": 22,
     "ruby asserting a reading per character": 197,
     "implausible ruby spans": 0,
     "titles read by a machine, unmarked": 1165,
@@ -1089,6 +1096,7 @@
     "incomplete attested rows": 62,
     "works without English": 0,
     "volume rows with no publication date": 2436,
+    "predicted updates already behind the run": 0,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
    }
