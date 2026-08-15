@@ -1,10 +1,8 @@
 {
- "generated": "2026-08-15T10:39:58+00:00",
+ "generated": "2026-08-15T12:44:15+00:00",
  "since_last": {
-  "at": "2026-08-15T07:54:09+00:00",
-  "statistics": {
-   "chapters": 2
-  }
+  "at": "2026-08-15T10:39:58+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -690,6 +688,12 @@
     "not_measured": "source-quality budget; measured at check-in"
    },
    {
+    "name": "announced works the corpus does not hold",
+    "means": "works a comparator announced on a platform this reads openly that the corpus does not hold. The policy is that such a work is ingested and presented without waiting for a person; a rise means an adapter cannot reach it, the platform titles it differently, or the promotion stopped happening",
+    "budget": 3,
+    "value": 3
+   },
+   {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 8,
@@ -961,7 +965,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-15T06:21:57+00:00",
+  "previous_at": "2026-08-15T10:33:08+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1023,7 +1027,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 49,
+   "count": 50,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1087,6 +1091,7 @@
     "works holding more volumes than the shop states": 26,
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
+    "announced works the corpus does not hold": 3,
     "updates naming a work we do not hold": 8,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
