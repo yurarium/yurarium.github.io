@@ -1,8 +1,10 @@
 {
- "generated": "2026-08-17T09:04:59+00:00",
+ "generated": "2026-08-17T16:26:56+00:00",
  "since_last": {
-  "at": "2026-08-16T20:33:46+00:00",
-  "statistics": {}
+  "at": "2026-08-17T09:04:59+00:00",
+  "statistics": {
+   "chapters": 2
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,22 +25,22 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-08-17",
-  "releases": 1348,
+  "at": "2026-08-18",
+  "releases": 1345,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3038,
   "assembled": 3061,
   "awaiting_identifier": 23,
   "identification": {
-   "discovery-candidate": 911,
-   "known-work-match": 17,
+   "discovery-candidate": 900,
+   "known-work-match": 25,
    "platform-genre": 420
   },
   "collapsed": {
-   "duplicate_chapters": 83,
-   "resolver": 56,
-   "samples": 36,
+   "duplicate_chapters": 82,
+   "resolver": 55,
+   "samples": 32,
    "thin_sitemap": 8
   }
  },
@@ -548,7 +550,7 @@
     "name": "data reaching the site around the store",
     "means": "fields a reader is served that the relational store could not answer. STORE-PLAN §1: the store becomes the sole compiled form, and this is what says whether a migration is happening. Asked of what the site SERVES, so it cannot fall by adding a table nobody reads, and it reaches 0 when the plan is done.",
     "budget": 0,
-    "value": 0
+    "value": 1
    },
    {
     "name": "works showing a romanisation",
@@ -702,7 +704,7 @@
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 25,
-    "value": 25
+    "value": 29
    },
    {
     "name": "works whose first publication country is unattested",
@@ -749,8 +751,8 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 101,
-    "value": 110
+    "budget": 67,
+    "value": 83
    },
    {
     "name": "works without English",
@@ -791,7 +793,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 15,
+   "age_days": 16,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -805,7 +807,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 12,
+   "age_days": 13,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -819,7 +821,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 12,
+   "age_days": 13,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -833,7 +835,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 11,
+   "age_days": 12,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -847,7 +849,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 10,
+   "age_days": 11,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -861,7 +863,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 10,
+   "age_days": 11,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -875,7 +877,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 9,
+   "age_days": 10,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -888,7 +890,7 @@
    "files": 2,
    "works": 129,
    "rows": 6189,
-   "retrieved": "2026-08-17",
+   "retrieved": "2026-08-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -900,9 +902,9 @@
   {
    "source": "gigaviewer",
    "files": 71,
-   "works": 712,
-   "rows": 7768,
-   "retrieved": "2026-08-17",
+   "works": 728,
+   "rows": 7784,
+   "retrieved": "2026-08-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -916,7 +918,7 @@
    "files": 5,
    "works": 973,
    "rows": 7423,
-   "retrieved": "2026-08-17",
+   "retrieved": "2026-08-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -930,7 +932,7 @@
    "files": 3,
    "works": 1331,
    "rows": 11368,
-   "retrieved": "2026-08-17",
+   "retrieved": "2026-08-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -944,7 +946,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-08-17",
+   "retrieved": "2026-08-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -957,20 +959,20 @@
    "source": "webpages",
    "files": 48,
    "works": 570,
-   "rows": 7794,
-   "retrieved": "2026-08-17",
+   "rows": 7803,
+   "retrieved": "2026-08-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7743,
-   "well_formed": 7743,
+   "checked_rows": 7752,
+   "well_formed": 7752,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-15T22:30:00+00:00",
+  "previous_at": "2026-08-16T20:32:50+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1075,7 +1077,7 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 4,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 101,
+    "incomplete attested rows": 67,
     "works without English": 0,
     "volume rows with no publication date": 2436,
     "predicted updates already behind the run": 0,
@@ -1105,7 +1107,7 @@
   "print_only": 1648,
   "volumes": 6105,
   "with_identifier": 3038,
-  "chapters": 28202,
+  "chapters": 28204,
   "delivery_dated": 1034
  }
 }
