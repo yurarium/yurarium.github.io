@@ -170,38 +170,58 @@ def main(argv=None):
     #
     # THE ARCHIVE IS RE-DERIVED EVERY BUILD AND WHAT IS LOCKED IS THE ROW SET. A name the store has
     # since corrected reaches a month published before the correction, which is right; an update
-    # that HAPPENED does not stop having happened, which is what this refuses. It was a check in
-    # the pipeline comparing the built tree against the deployed one, and here it is a guard: the
-    # build that would drop the row is the build that stops.
-    lost = []
+    # that HAPPENED does not stop having happened, and a row the store no longer produces is
+    # carried forward as it was published rather than dropped.
+    #
+    # THE ROW SET GROWS AND NEVER SHRINKS, except where a month is named for regeneration. What
+    # this is not is a freeze: every row the store still produces is rewritten from the store, so a
+    # corrected name or a re-read access state reaches the archive on the next build, which is the
+    # half that has to keep moving.
+    rules.on_path()
+    import emit as _emit
+    carried = []
     for name, text in written.items():
         if not re.fullmatch(r"feed/[0-9]{4}-[0-9]{2}\.json", name):
             continue
+        # A MONTH NAMED FOR REGENERATION IS REBUILT AND KEEPS NOTHING, which is how a row leaves an
+        # archive on purpose: 28 preview instalments were removed that way. Everything below is the
+        # accident.
         if name[len("feed/"):-len(".json")] in a.regenerate:
             continue
         was = data / name
         if not was.exists():
             continue
-        held = {r.get("id") for r in (json.loads(was.read_text(encoding="utf-8")).get("releases")
-                                      or [])}
-        now = {r.get("id") for r in json.loads(text).get("releases") or []}
-        gone = sorted(held - now)
-        if gone:
-            # EVERY ONE OF THEM, not the first. A row leaves for more than one reason and they are
-            # told apart by reading them: a moving address mints a new id for a chapter nobody
-            # lost, and a first-sighting date that arrives late carries a row into another month.
-            # The operator can only tell those apart with the list in front of them.
-            lost.append(f"{name}: {len(gone)} published row(s) no longer built")
-            lost.extend(f"    {i}" for i in gone[:12])
-            if len(gone) > 12:
-                lost.append(f"    ... and {len(gone) - 12} more")
-    if lost:
-        for line in lost:
-            print(f"REFUSING: {line}")
-        print("A published month's ROW SET is what is locked, not its bytes. If the loss is "
-              "understood and accepted, name the month with --regenerate, which says so out loud "
-              "and in the commit rather than quietly.")
-        return 2
+        held = {r.get("id"): r for r in (json.loads(was.read_text(encoding="utf-8"))
+                                         .get("releases") or [])}
+        doc = json.loads(text)
+        now = {r.get("id") for r in doc.get("releases") or []}
+        gone = [held[i] for i in held if i not in now]
+        if not gone:
+            continue
+        # THE ROWS THE STORE NO LONGER PRODUCES, KEPT AS PUBLISHED. An update that HAPPENED does
+        # not stop having happened, and the store is a snapshot of what the platforms say TODAY:
+        # ニコニコ漫画 states one date per work and nothing per chapter, so `nicovideo:56012:<date>`
+        # is re-minted the moment that work updates again and its July row ceases to exist; 26 more
+        # July rows are one update away from the same. マンガよもんが expires chapters off the site
+        # outright. Neither is a correction and both erased a row a reader had seen.
+        #
+        # THIS USED TO REFUSE THE BUILD AND ASK FOR `--regenerate`, which answers a different
+        # question: it accepts the loss rather than preventing it, and the archive eroded a little
+        # on every platform that moves an address or retires a chapter. Keeping the row is what the
+        # rule always meant.
+        doc["releases"] = sorted((doc.get("releases") or []) + gone,
+                                 key=lambda r: str(r.get("pub") or ""), reverse=True)
+        written[name] = _emit.as_text(doc)
+        carried.append((name, len(gone), gone))
+
+    # SAID OUT LOUD, EVERY TIME. A carry that printed nothing would be an archive quietly diverging
+    # from the store with no way to see it, which is the shape the refusal was protecting against.
+    for name, n, gone in carried:
+        print(f"carried forward: {name}: {n} published row(s) the store no longer builds")
+        for r in gone[:12]:
+            print(f"    {r.get('id')}")
+        if n > 12:
+            print(f"    ... and {n - 12} more")
 
     changed, same = [], 0
     for name, text in written.items():

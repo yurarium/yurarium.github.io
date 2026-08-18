@@ -120,28 +120,56 @@ def main(s):
 
     # ── A PUBLISHED MONTH DOES NOT LOSE ROWS ──────────────────────────────────────────────────
     #
-    # The archive is re-derived every build and what is locked is the ROW SET: a name the store has
-    # since corrected reaches a month published before the correction, which is right, and an
-    # update that happened does not stop having happened, which is what this refuses.
-    produced = dict(EMPTY, **{"feed/current.json": _feed(["r1"]),
-                              "feed/2026-07.json": _feed(["a", "b", "c"])})
-    (site / "data" / "feed" / "2026-07.json").write_text(_feed(["a", "b", "c"]),
-                                                        encoding="utf-8")
-    produced["feed/2026-07.json"] = _feed(["a", "c"])
-    code, said = run()
-    s.eq(code, 2, "a build that would drop a published row stops")
-    s.check("2026-07" in said and " b" in said,
-            "naming the month and the rows, because only a person can tell a re-mint from a loss")
-    s.eq(json.loads((site / "data" / "feed" / "2026-07.json").read_text())["releases"],
-         [{"id": "a"}, {"id": "b"}, {"id": "c"}],
-         "and the published month is left exactly as it was served")
+    # THE ROW SET GROWS AND NEVER SHRINKS. An update that happened does not stop having happened,
+    # and the store is a snapshot of what the platforms say TODAY: ニコニコ漫画 states one date per
+    # WORK and nothing per chapter, so `nicovideo:56012:<date>` is re-minted the moment that work
+    # updates again and its July row ceases to exist. マンガよもんが expires chapters off the site
+    # outright. Nine July rows went that way on 2026-08-18 and 26 more were one update from it.
+    #
+    # THIS USED TO REFUSE THE BUILD AND ASK FOR `--regenerate`, which answers a different question:
+    # it ACCEPTS the loss rather than preventing it, so the archive eroded a little on every
+    # platform that moves an address or retires a chapter, and the site stopped until somebody
+    # agreed to the erosion. Keeping the row is what the rule always meant.
+    # DATED, because the month is served newest first and a carried row belongs at its own date
+    # rather than wherever the merge happened to put it.
+    def _dated(rows):
+        return json.dumps({"releases": [{"id": i, "pub": p} for i, p in rows]},
+                          ensure_ascii=False)
 
-    # SAID OUT LOUD, IN THE RUN'S OWN RECORD. `--regenerate` is how an accepted loss is accepted,
-    # rather than by a guard that quietly gave way.
+    published = [("a", "2026-07-30"), ("b", "2026-07-20"), ("c", "2026-07-10")]
+    produced = dict(EMPTY, **{"feed/current.json": _feed(["r1"]),
+                              "feed/2026-07.json": _dated(published)})
+    (site / "data" / "feed" / "2026-07.json").write_text(_dated(published), encoding="utf-8")
+    produced["feed/2026-07.json"] = _dated([("a", "2026-07-30"), ("c", "2026-07-10")])
+    code, said = run()
+    s.eq(code, 0, "a build whose store no longer states a published row still runs")
+    s.eq([r["id"] for r in
+          json.loads((site / "data" / "feed" / "2026-07.json").read_text())["releases"]],
+         ["a", "b", "c"],
+         "the row it published is still there, and at its own date rather than appended")
+    s.check("carried forward" in said and "2026-07" in said and " b" in said,
+            "said out loud with the rows, because an archive diverging in silence is the fault "
+            "the refusal was protecting against")
+
+    # WHAT KEEPS MOVING IS EVERY ROW THE STORE STILL STATES. This is not a freeze: a corrected name
+    # or a re-read access state has to reach the archive, and only the rows the store has stopped
+    # producing are held as they were.
+    produced["feed/2026-07.json"] = json.dumps(
+        {"releases": [{"id": "a", "pub": "2026-07-30", "work": "corrected"},
+                      {"id": "c", "pub": "2026-07-10"}]}, ensure_ascii=False)
+    code, said = run()
+    rows = {r["id"]: r for r in
+            json.loads((site / "data" / "feed" / "2026-07.json").read_text())["releases"]}
+    s.eq(rows["a"].get("work"), "corrected", "a row the store still states is rewritten from it")
+    s.check("b" in rows, "and the carried row is still carried on the run after")
+
+    # A MONTH NAMED FOR REGENERATION KEEPS NOTHING, which is how a row leaves an archive on
+    # purpose: 28 preview instalments were removed that way, deliberately and in a commit message.
     code, said = run("--regenerate", "2026-07")
     s.eq(code, 0, "the month named on the command line may lose rows")
-    s.eq(json.loads((site / "data" / "feed" / "2026-07.json").read_text())["releases"],
-         [{"id": "a"}, {"id": "c"}], "and is rebuilt as the store now states it")
+    s.eq([r["id"] for r in
+          json.loads((site / "data" / "feed" / "2026-07.json").read_text())["releases"]],
+         ["a", "c"], "and is rebuilt as the store now states it")
 
     # ── `--check` WRITES NOTHING, WHICH IS THE WHOLE OF WHAT IT PROMISES ──────────────────────
     produced = dict(EMPTY, **{"feed/current.json": _feed(["r1", "r2"]),
