@@ -1,8 +1,13 @@
 {
- "generated": "2026-08-18T08:06:20+00:00",
+ "generated": "2026-08-18T16:13:13+00:00",
  "since_last": {
-  "at": "2026-08-17T16:26:56+00:00",
-  "statistics": {}
+  "at": "2026-08-18T08:06:20+00:00",
+  "statistics": {
+   "works": -2,
+   "print_only": 13,
+   "with_identifier": -2,
+   "chapters": -584
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,20 +28,20 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-08-18",
-  "releases": 1345,
+  "at": "2026-08-19",
+  "releases": 1351,
   "works": 2574,
   "platforms": 23,
-  "series_rows": 3038,
-  "assembled": 3061,
-  "awaiting_identifier": 23,
+  "series_rows": 3036,
+  "assembled": 3078,
+  "awaiting_identifier": 42,
   "identification": {
-   "discovery-candidate": 900,
-   "known-work-match": 25,
-   "platform-genre": 420
+   "discovery-candidate": 885,
+   "known-work-match": 23,
+   "platform-genre": 443
   },
   "collapsed": {
-   "duplicate_chapters": 82,
+   "duplicate_chapters": 103,
    "resolver": 55,
    "samples": 32,
    "thin_sitemap": 8
@@ -494,7 +499,7 @@
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
     "budget": 56,
-    "value": 56
+    "value": 54
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -524,7 +529,7 @@
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
     "budget": 197,
-    "value": 197
+    "value": 196
    },
    {
     "name": "implausible ruby spans",
@@ -536,7 +541,7 @@
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
     "budget": 1170,
-    "value": 1170
+    "value": 1171
    },
    {
     "name": "uncertain readings",
@@ -671,7 +676,7 @@
     "name": "works holding fewer volumes than the shop states",
     "means": "works コミックシーモア sells more volumes of than the corpus holds, which is a capture that has fallen behind. The shop is Tier C and this asserts only that two parties disagree about a countable thing. A rise is ordinary, and is what a series publishing ahead of the next capture looks like.",
     "budget": 70,
-    "value": 70
+    "value": 69
    },
    {
     "name": "works holding more volumes than the shop states",
@@ -702,7 +707,7 @@
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 25,
-    "value": 29
+    "value": 41
    },
    {
     "name": "works whose first publication country is unattested",
@@ -750,7 +755,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 67,
-    "value": 83
+    "value": 82
    },
    {
     "name": "works without English",
@@ -791,7 +796,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 16,
+   "age_days": 17,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -805,7 +810,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 13,
+   "age_days": 14,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -819,7 +824,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 13,
+   "age_days": 14,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -833,7 +838,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 12,
+   "age_days": 13,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -847,7 +852,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 11,
+   "age_days": 12,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -861,7 +866,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 11,
+   "age_days": 12,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -875,7 +880,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 10,
+   "age_days": 11,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -888,7 +893,7 @@
    "files": 2,
    "works": 129,
    "rows": 6189,
-   "retrieved": "2026-08-18",
+   "retrieved": "2026-08-19",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -900,14 +905,14 @@
   {
    "source": "gigaviewer",
    "files": 71,
-   "works": 728,
-   "rows": 7784,
-   "retrieved": "2026-08-18",
+   "works": 753,
+   "rows": 7829,
+   "retrieved": "2026-08-19",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7642,
-   "well_formed": 7642,
+   "checked_rows": 7664,
+   "well_formed": 7664,
    "malformed": 0,
    "drop": null
   },
@@ -915,14 +920,14 @@
    "source": "kadokomi",
    "files": 5,
    "works": 973,
-   "rows": 7423,
-   "retrieved": "2026-08-18",
+   "rows": 7438,
+   "retrieved": "2026-08-19",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6751,
-   "well_formed": 6432,
-   "malformed": 319,
+   "checked_rows": 6766,
+   "well_formed": 6441,
+   "malformed": 325,
    "drop": null
   },
   {
@@ -930,7 +935,7 @@
    "files": 3,
    "works": 1331,
    "rows": 11368,
-   "retrieved": "2026-08-18",
+   "retrieved": "2026-08-19",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -944,7 +949,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-08-18",
+   "retrieved": "2026-08-19",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -956,21 +961,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 570,
-   "rows": 7803,
-   "retrieved": "2026-08-18",
+   "works": 571,
+   "rows": 7870,
+   "retrieved": "2026-08-19",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7752,
-   "well_formed": 7752,
+   "checked_rows": 7819,
+   "well_formed": 7819,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-16T20:32:50+00:00",
+  "previous_at": "2026-08-17T16:26:07+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1085,27 +1090,27 @@
   }
  ],
  "statistics": {
-  "works": 3038,
+  "works": 3036,
   "states": {
-   "print": 1648,
-   "oneshot": 431,
+   "print": 1661,
+   "oneshot": 432,
    "dormant": 295,
    "completed": 282,
-   "active": 264,
-   "slow": 68,
-   "unknown": 50
+   "active": 255,
+   "slow": 62,
+   "unknown": 49
   },
   "english_basis": {
    "translated": 2674,
-   "official-jp": 230,
-   "licensed": 109,
+   "official-jp": 229,
+   "licensed": 108,
    "romaji": 25
   },
   "print_works": 2459,
-  "print_only": 1648,
+  "print_only": 1661,
   "volumes": 6105,
-  "with_identifier": 3038,
-  "chapters": 28204,
+  "with_identifier": 3036,
+  "chapters": 27620,
   "delivery_dated": 1034
  }
 }
