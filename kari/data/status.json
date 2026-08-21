@@ -1,8 +1,10 @@
 {
- "generated": "2026-08-21T08:21:40+00:00",
+ "generated": "2026-08-21T17:01:20+00:00",
  "since_last": {
-  "at": "2026-08-20T19:25:12+00:00",
-  "statistics": {}
+  "at": "2026-08-21T08:21:40+00:00",
+  "statistics": {
+   "chapters": 9
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,23 +25,23 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-08-21",
-  "releases": 1348,
+  "at": "2026-08-22",
+  "releases": 1357,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3036,
-  "assembled": 3080,
-  "awaiting_identifier": 44,
+  "assembled": 3082,
+  "awaiting_identifier": 46,
   "identification": {
-   "discovery-candidate": 883,
+   "discovery-candidate": 890,
    "known-work-match": 23,
-   "platform-genre": 442
+   "platform-genre": 444
   },
   "collapsed": {
-   "duplicate_chapters": 103,
+   "duplicate_chapters": 106,
    "resolver": 49,
    "samples": 32,
-   "thin_sitemap": 8
+   "thin_sitemap": 9
   }
  },
  "gate": {
@@ -132,10 +134,8 @@
    },
    {
     "name": "state agrees with its own date",
-    "violations": 1,
-    "examples": [
-     "その花の名はキラキラ: dormant beside a chapter 365 days old (basis: no chapter for 366 days, and nothing states it has ended)"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "undated works say where and why",
@@ -249,8 +249,10 @@
    },
    {
     "name": "no source a reader sees is an adapter",
-    "violations": 0,
-    "examples": []
+    "violations": 1,
+    "examples": [
+     "1 row(s) name the pass 'comparators' where a reader expects a source, e.g. '怪獣ロマンティクス'"
+    ]
    },
    {
     "name": "no workflow step reads a file the run emits",
@@ -538,7 +540,7 @@
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
     "budget": 1170,
-    "value": 1172
+    "value": 1173
    },
    {
     "name": "uncertain readings",
@@ -550,7 +552,7 @@
     "name": "data reaching the site around the store",
     "means": "fields a reader is served that the relational store could not answer. STORE-PLAN §1: the store becomes the sole compiled form, and this is what says whether a migration is happening. Asked of what the site SERVES, so it cannot fall by adding a table nobody reads, and it reaches 0 when the plan is done.",
     "budget": 0,
-    "value": 1
+    "value": 0
    },
    {
     "name": "works showing a romanisation",
@@ -704,7 +706,7 @@
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 25,
-    "value": 42
+    "value": 43
    },
    {
     "name": "works whose first publication country is unattested",
@@ -734,7 +736,7 @@
     "name": "listing series with no feed of their own",
     "means": "series a GigaViewer platform's own yuri listing names that the last per-series feeds run did not resolve. The pairing of a name to a series id is positional and slipped by one on 2026-08-10, which cost 一迅プラス's second entry its chapter list while every other work came out renamed and looking right. Falls to zero on the first run after the fix; a rise means the pairing has slipped again, or a platform announced a series before its first chapter.",
     "budget": 0,
-    "value": 1
+    "value": 0
    },
    {
     "name": "series names holding a page title",
@@ -752,7 +754,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 67,
-    "value": 93
+    "value": 94
    },
    {
     "name": "works without English",
@@ -793,7 +795,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 19,
+   "age_days": 20,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -807,7 +809,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 16,
+   "age_days": 17,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -821,7 +823,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 16,
+   "age_days": 17,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -835,7 +837,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 15,
+   "age_days": 16,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -849,7 +851,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 14,
+   "age_days": 15,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -863,7 +865,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 14,
+   "age_days": 15,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -877,7 +879,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 13,
+   "age_days": 14,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -890,7 +892,7 @@
    "files": 2,
    "works": 129,
    "rows": 6189,
-   "retrieved": "2026-08-21",
+   "retrieved": "2026-08-22",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -902,29 +904,29 @@
   {
    "source": "gigaviewer",
    "files": 71,
-   "works": 758,
-   "rows": 7834,
-   "retrieved": "2026-08-21",
+   "works": 762,
+   "rows": 7839,
+   "retrieved": "2026-08-22",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7664,
-   "well_formed": 7664,
+   "checked_rows": 7666,
+   "well_formed": 7666,
    "malformed": 0,
    "drop": null
   },
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 973,
-   "rows": 7444,
-   "retrieved": "2026-08-21",
+   "works": 974,
+   "rows": 7453,
+   "retrieved": "2026-08-22",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6772,
-   "well_formed": 6438,
-   "malformed": 334,
+   "checked_rows": 6781,
+   "well_formed": 6442,
+   "malformed": 339,
    "drop": null
   },
   {
@@ -932,7 +934,7 @@
    "files": 3,
    "works": 1333,
    "rows": 11390,
-   "retrieved": "2026-08-21",
+   "retrieved": "2026-08-22",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -946,7 +948,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-08-21",
+   "retrieved": "2026-08-22",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -958,21 +960,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 573,
-   "rows": 7869,
-   "retrieved": "2026-08-21",
+   "works": 574,
+   "rows": 7878,
+   "retrieved": "2026-08-22",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7818,
-   "well_formed": 7818,
+   "checked_rows": 7827,
+   "well_formed": 7827,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-19T23:56:43+00:00",
+  "previous_at": "2026-08-20T19:24:20+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1092,9 +1094,9 @@
    "print": 1661,
    "oneshot": 432,
    "dormant": 296,
-   "completed": 282,
+   "completed": 281,
    "active": 254,
-   "slow": 62,
+   "slow": 63,
    "unknown": 49
   },
   "english_basis": {
@@ -1107,7 +1109,7 @@
   "print_only": 1661,
   "volumes": 6105,
   "with_identifier": 3036,
-  "chapters": 27623,
+  "chapters": 27632,
   "delivery_dated": 1034
  }
 }
