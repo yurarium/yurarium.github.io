@@ -1,8 +1,10 @@
 {
- "generated": "2026-08-22T07:56:39+00:00",
+ "generated": "2026-08-22T09:27:38+00:00",
  "since_last": {
-  "at": "2026-08-21T17:01:20+00:00",
-  "statistics": {}
+  "at": "2026-08-22T07:56:39+00:00",
+  "statistics": {
+   "chapters": 1
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,22 +26,22 @@
  },
  "last_run": {
   "at": "2026-08-22",
-  "releases": 1357,
+  "releases": 1359,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3036,
   "assembled": 3082,
   "awaiting_identifier": 46,
   "identification": {
-   "discovery-candidate": 890,
+   "discovery-candidate": 892,
    "known-work-match": 23,
    "platform-genre": 444
   },
   "collapsed": {
-   "duplicate_chapters": 106,
+   "duplicate_chapters": 105,
    "resolver": 49,
    "samples": 32,
-   "thin_sitemap": 9
+   "thin_sitemap": 8
   }
  },
  "gate": {
@@ -704,7 +706,7 @@
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 25,
-    "value": 43
+    "value": 44
    },
    {
     "name": "works whose first publication country is unattested",
@@ -752,7 +754,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 67,
-    "value": 94
+    "value": 95
    },
    {
     "name": "works without English",
@@ -902,8 +904,8 @@
   {
    "source": "gigaviewer",
    "files": 71,
-   "works": 762,
-   "rows": 7839,
+   "works": 763,
+   "rows": 7840,
    "retrieved": "2026-08-22",
    "age_days": 0,
    "in_scope": true,
@@ -930,8 +932,8 @@
   {
    "source": "nicovideo",
    "files": 3,
-   "works": 1333,
-   "rows": 11390,
+   "works": 1335,
+   "rows": 11392,
    "retrieved": "2026-08-22",
    "age_days": 0,
    "in_scope": true,
@@ -959,20 +961,20 @@
    "source": "webpages",
    "files": 48,
    "works": 574,
-   "rows": 7878,
+   "rows": 7879,
    "retrieved": "2026-08-22",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7827,
-   "well_formed": 7827,
+   "checked_rows": 7828,
+   "well_formed": 7828,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-20T19:24:20+00:00",
+  "previous_at": "2026-08-21T17:00:28+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1107,7 +1109,7 @@
   "print_only": 1661,
   "volumes": 6105,
   "with_identifier": 3036,
-  "chapters": 27632,
+  "chapters": 27633,
   "delivery_dated": 1034
  }
 }

@@ -1,36 +1,34 @@
 {
  "releases": [
   {
-   "id": "magapoke:https://pocket.shonenmagazine.com/title/02202/episode/442921",
+   "id": "comicdays:episode:12207421983645810033",
    "work": "雨夜の月",
-   "ep": "【第50話(3)】夢現",
+   "ep": "第５０−３話　夢現",
    "type": "chapter",
-   "adv": true,
+   "adv": false,
    "web": "serialised",
    "pub": "2026-08-22",
    "seen": "2026-08-22",
-   "basis": "platform-stated",
+   "basis": "observed",
    "conf": "reported",
    "why": "",
    "moved": "",
-   "url": "https://pocket.shonenmagazine.com/title/02202/episode/442921",
+   "url": "https://comic-days.com/episode/12207421983645810033",
    "author": "くずしろ",
-   "plat": "magapoke",
-   "plat_name": "マガポケ",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
    "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "purchase"
-   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 50",
    "kind_inferred": true,
-   "preferred": "マガポケ",
-   "also_on": [],
+   "type_basis": "numbered chapter, though the platform feed did not say so",
+   "preferred": "コミックDAYS",
+   "also_on": [
+    "マガポケ"
+   ],
    "is_preferred": true,
    "feed_date": "2026-08-22",
    "wid": "w00016",
@@ -19453,6 +19451,106 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c01537"
+   }
+  },
+  {
+   "id": "nicovideo:82893:2026-08-11",
+   "work": "骨に願いを、星に呪いを",
+   "ep": "第2片",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-11",
+   "seen": "2026-08-22",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1117416",
+   "author": "いくたはな",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 2",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 2,
+   "free_episodes": 2,
+   "started": "2026-07-14",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on pixivコミック, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-08-11",
+   "work_en": {
+    "reading": "ホネ ニ ネガイ ヲ、 ホシ ニ ノロイ ヲ",
+    "ruby": [
+     [
+      "骨",
+      "ほね"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "願",
+      "ねが"
+     ],
+     [
+      "いを、",
+      null
+     ],
+     [
+      "星",
+      "ほし"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "呪",
+      "のろ"
+     ],
+     [
+      "いを",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hone ni Negai o, Hoshi ni Noroi o",
+     "double": "Hone ni Negai o, Hoshi ni Noroi o",
+     "plain": "Hone ni Negai o, Hoshi ni Noroi o"
+    },
+    "en": "A Wish upon the Bones, a Curse upon the Stars",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Wish upon the Bones, a Curse upon the Stars"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "イクタハナ",
+    "romaji": {
+     "macron": "Ikutahana",
+     "double": "Ikutahana",
+     "plain": "Ikutahana"
+    },
+    "undivided": true,
+    "en": "IKUTA Hana",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00140"
    }
   },
   {
