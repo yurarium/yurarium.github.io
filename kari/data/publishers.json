@@ -1,8 +1,119 @@
 {
- "generated": "2026-08-23",
+ "generated": "2026-08-24",
  "note": "One record per publishing house, holding the imprint lines it runs with the spellings each line is catalogued under and the years those cover. Publishers and distributors share one namespace: the seat is on the edge to the book.",
  "count": 163,
  "publishers": {
+  "h00005": {
+   "id": "h00005",
+   "name": "キルタイムコミュニケーション",
+   "rows": 17,
+   "works": [
+    "w00009",
+    "w00008",
+    "w00254",
+    "w00114",
+    "w00185",
+    "w00382",
+    "w00387",
+    "w00421",
+    "w00425",
+    "w00673",
+    "w00985",
+    "w01976",
+    "w01987",
+    "w02076",
+    "w02102",
+    "w02153",
+    "w02470"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "valkyrie-comics",
+     "name": "ヴァルキリーコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 9,
+     "works": [
+      "w00009",
+      "w00254",
+      "w00114",
+      "w00185",
+      "w00382",
+      "w01976",
+      "w01987",
+      "w02102",
+      "w02153"
+     ],
+     "spellings": [
+      {
+       "raw": "ヴァルキリーコミックス",
+       "rows": 9,
+       "years": [
+        "2020",
+        "2023"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "shiny-comics",
+     "name": "シャイニーコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 4,
+     "works": [
+      "w00008",
+      "w00673",
+      "w02076",
+      "w02470"
+     ],
+     "spellings": [
+      {
+       "raw": "シャイニーコミックス",
+       "rows": 3,
+       "years": [
+        "2025",
+        "2025"
+       ]
+      },
+      {
+       "raw": "コミックシャイニー",
+       "rows": 1,
+       "years": [
+        null,
+        null
+       ]
+      }
+     ]
+    },
+    {
+     "id": "young-unreal-comics",
+     "name": "ヤングアンリアルコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 4,
+     "works": [
+      "w00387",
+      "w00421",
+      "w00425",
+      "w00985"
+     ],
+     "spellings": [
+      {
+       "raw": "ヤングアンリアルコミックス",
+       "rows": 4,
+       "years": [
+        "2018",
+        "2024"
+       ]
+      }
+     ]
+    }
+   ]
+  },
   "h00039": {
    "id": "h00039",
    "name": "とりからの巣",
@@ -5475,117 +5586,6 @@
        "years": [
         "2014",
         "2014"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00005": {
-   "id": "h00005",
-   "name": "キルタイムコミュニケーション",
-   "rows": 17,
-   "works": [
-    "w00008",
-    "w00009",
-    "w00254",
-    "w00114",
-    "w00185",
-    "w00382",
-    "w00387",
-    "w00421",
-    "w00425",
-    "w00673",
-    "w00985",
-    "w01976",
-    "w01987",
-    "w02076",
-    "w02102",
-    "w02153",
-    "w02470"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "valkyrie-comics",
-     "name": "ヴァルキリーコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 9,
-     "works": [
-      "w00009",
-      "w00254",
-      "w00114",
-      "w00185",
-      "w00382",
-      "w01976",
-      "w01987",
-      "w02102",
-      "w02153"
-     ],
-     "spellings": [
-      {
-       "raw": "ヴァルキリーコミックス",
-       "rows": 9,
-       "years": [
-        "2020",
-        "2023"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "shiny-comics",
-     "name": "シャイニーコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 4,
-     "works": [
-      "w00008",
-      "w00673",
-      "w02076",
-      "w02470"
-     ],
-     "spellings": [
-      {
-       "raw": "シャイニーコミックス",
-       "rows": 3,
-       "years": [
-        "2025",
-        "2025"
-       ]
-      },
-      {
-       "raw": "コミックシャイニー",
-       "rows": 1,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    },
-    {
-     "id": "young-unreal-comics",
-     "name": "ヤングアンリアルコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 4,
-     "works": [
-      "w00387",
-      "w00421",
-      "w00425",
-      "w00985"
-     ],
-     "spellings": [
-      {
-       "raw": "ヤングアンリアルコミックス",
-       "rows": 4,
-       "years": [
-        "2018",
-        "2024"
        ]
       }
      ]
