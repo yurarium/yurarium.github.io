@@ -705,6 +705,39 @@ def inv_every_credit_role_has_an_english_gloss(ctx):
             if FLOOR_TOKEN in out or interface.KANA_KANJI.search(out)]
 
 
+def inv_every_update_kind_has_a_badge(ctx):
+    """Every kind an update can be given comes out of the interface as a badge that says so.
+
+    WHY AN INVARIANT AND NOT A COUNT. A kind is a closed vocabulary `build.py` writes down, so a
+    kind with no badge is a missing table entry rather than something nobody has researched yet.
+    The same argument as `every credit role has an English gloss`, one field along.
+
+    WHAT IT COST. `kindTag` falls back to `KIND.unknown`, whose tooltip reads "no chapter
+    information available", so a kind the table has never heard of tells a reader the OPPOSITE of
+    what the corpus knows. 男子高校生だけどギャルにTSしました published `休載イラスト` on 2026-08-22,
+    which the corpus classified `skipped` with the basis "the publisher posted a hiatus notice in
+    this release slot", and the interface rendered it as an em dash and no information.
+
+    §14b, WHAT IT SHARES WITH ITS SUBJECT. The vocabulary is read from the SHIPPED ROWS and the
+    badge from the JavaScript table, and nothing produces both. What it cannot see is a kind
+    `build.py` can write that no row carries today, which is why the pipeline's own suite asserts
+    the list it writes; here the population is what a reader can actually meet.
+    """
+    kinds = sorted({str(r.get("kind") or "") for r in ctx["releases"] if r.get("kind")})
+    if not kinds:
+        return ["no update kinds were collected, so nothing here was checked"]
+    src = ctx.get("interface_js") or ""
+    if not src:
+        return ["the interface source was not loaded, so nothing here was checked"]
+    import re as _re
+    table = _re.search(r"const KIND = \{(.*?)\n\};", src, _re.S)
+    if not table:
+        return ["kari/app.js states no KIND table, so no update can carry a badge"]
+    known = set(_re.findall(r"'([a-z-]+)'\s*:\s*\[", table.group(1)))
+    return [f"an update of kind {k!r} reaches a reader with no badge, so it renders as "
+            f"'no chapter information available'" for k in kinds if k not in known]
+
+
 def inv_a_byline_never_states_the_default_role(ctx):
     """A byline names people and the jobs that distinguish them, and never the unmarked author.
 
@@ -1067,6 +1100,7 @@ INVARIANTS = [
     ("every renderer is ruled", inv_every_renderer_is_ruled),
     ("the interface folds a name key as the build does", inv_interface_folds_a_name_key_as_the_build_does),
     ("every credit role has an English gloss", inv_every_credit_role_has_an_english_gloss),
+    ("every update kind has a badge", inv_every_update_kind_has_a_badge),
     ("a byline never states the default role", inv_a_byline_never_states_the_default_role),
     ("no name is spelled with question marks", inv_no_name_is_spelled_with_question_marks),
     ("no cataloguing notation in an English rendering",
@@ -1150,6 +1184,13 @@ def canaries(ctx):
         ("every credit role has an English gloss", inv_every_credit_role_has_an_english_gloss,
          lambda c: c.update({"interface_js": (c.get("interface_js") or "").replace(
              "'著': 'author', '著者': 'author',", "'著者': 'author',")})),
+
+        # THE ENTRY REMOVED FROM THE TABLE, which is the state the file was actually in: `skipped`
+        # was never added when `build.py` began writing it, so 男子高校生だけどギャルにTSしました's
+        # 休載イラスト rendered as an em dash reading 'no chapter information available'.
+        ("every update kind has a badge", inv_every_update_kind_has_a_badge,
+         lambda c: c.update({"interface_js": (c.get("interface_js") or "").replace(
+             "  'new-chapter': ['新話',   'k-ch',  'a later numbered chapter'],", "")})),
 
         # 著 stops eliding and 578 catalogue bylines state a job the catalogue never distinguished,
         # while 著者 and 作 go on eliding, so the word this scans for is still derived and the

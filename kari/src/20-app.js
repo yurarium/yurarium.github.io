@@ -2856,6 +2856,7 @@ const EN = {
   /* badges: initial capital */
   '更新中':'Updating', '停滞':'Slow', '休眠':'Dormant', '不明':'Unknown', '完結':'Completed',
   '読切':'One-shot', '最終回':'Final', '新連載':'New', '新話':'Chapter', 'その他':'Other',
+  '休載':'Hiatus',
   '更新予定':'Expected',
   '公式予告':'Announced',
   '予告日超過':'Overdue',
@@ -2890,6 +2891,12 @@ const KIND = {
   'new-series':  ['新連載', 'k-new', 'first numbered chapter, or a one-shot'],
   'new-chapter': ['新話',   'k-ch',  'a later numbered chapter'],
   'other':       ['その他', 'k-oth', 'notice, trial, reprint or artwork'],
+  // THE SLOT THE SERIES DID NOT PUBLISH IN. `休載イラスト` is a publisher posting a notice or a
+  // drawing where the chapter would be, and the corpus tells it from a chapter precisely, so
+  // rendering it as 'no chapter information available' says the opposite of what is known. It is
+  // its own badge rather than その他 because a reader deciding whether to open the series wants
+  // "paused this week" and not "something other than a chapter".
+  'skipped':     ['休載',   'k-oth', 'the publisher posted a hiatus notice in place of a chapter'],
   'unknown':     ['—',      'k-unk', 'no chapter information available'],
   // A prediction, and the only kind here that describes something which has not happened. It gets
   // its own badge because reusing 新話 would state that a chapter exists, which is exactly the
@@ -2948,7 +2955,7 @@ function byDate(rows) {
 // outranks a notice, so a new series arriving with several chapters still reads as 新連載.
 // An ending outranks an ordinary chapter but not a new series: a series starting is the thing a
 // reader most wants surfaced, and a finale should not be shouting over it.
-const KIND_RANK = { 'new-series': 4, 'oneshot': 4, 'final': 3, 'new-chapter': 2, 'announced': 2, 'overdue': 2, 'expected': 2, 'overdue-inferred': 2, 'other': 1, 'unknown': 0 };
+const KIND_RANK = { 'new-series': 4, 'oneshot': 4, 'final': 3, 'new-chapter': 2, 'announced': 2, 'overdue': 2, 'expected': 2, 'overdue-inferred': 2, 'other': 1, 'skipped': 1, 'unknown': 0 };
 
 function compactList(rows) {
   let html = '';
