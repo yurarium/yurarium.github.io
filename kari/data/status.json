@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-26T09:12:19+00:00",
+ "generated": "2026-08-26T12:28:10+00:00",
  "since_last": {
-  "at": "2026-08-25T19:31:26+00:00",
+  "at": "2026-08-26T09:12:19+00:00",
   "statistics": {}
  },
  "means": {
@@ -24,14 +24,14 @@
  },
  "last_run": {
   "at": "2026-08-26",
-  "releases": 1282,
+  "releases": 1283,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3036,
   "assembled": 3084,
   "awaiting_identifier": 48,
   "identification": {
-   "discovery-candidate": 874,
+   "discovery-candidate": 875,
    "known-work-match": 23,
    "platform-genre": 385
   },
@@ -43,7 +43,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 54,
+  "invariants_passing": 55,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -132,11 +132,8 @@
    },
    {
     "name": "state agrees with its own date",
-    "violations": 2,
-    "examples": [
-     "はるか咲きそふ、刻どきの: slow beside a chapter 45 days old (basis: no chapter for 46 days, and nothing states it has ended)",
-     "ねことちよ: dormant beside a chapter 365 days old (basis: no chapter for 366 days, and nothing states it has ended)"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "undated works say where and why",
@@ -705,7 +702,7 @@
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 44,
-    "value": 42
+    "value": 43
    },
    {
     "name": "works whose first publication country is unattested",
@@ -753,7 +750,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 104,
-    "value": 101
+    "value": 102
    },
    {
     "name": "works without English",
@@ -903,8 +900,8 @@
   {
    "source": "gigaviewer",
    "files": 71,
-   "works": 769,
-   "rows": 7846,
+   "works": 770,
+   "rows": 7847,
    "retrieved": "2026-08-26",
    "age_days": 0,
    "in_scope": true,
@@ -973,7 +970,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-24T05:55:23+00:00",
+  "previous_at": "2026-08-25T19:30:33+00:00",
   "drops": []
  },
  "outstanding": [
