@@ -1,8 +1,10 @@
 {
- "generated": "2026-08-26T14:37:33+00:00",
+ "generated": "2026-08-27T15:32:14+00:00",
  "since_last": {
-  "at": "2026-08-26T12:28:10+00:00",
-  "statistics": {}
+  "at": "2026-08-26T14:37:33+00:00",
+  "statistics": {
+   "chapters": -45
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,17 +25,17 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-08-26",
-  "releases": 1283,
+  "at": "2026-08-28",
+  "releases": 1273,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3036,
   "assembled": 3084,
   "awaiting_identifier": 48,
   "identification": {
-   "discovery-candidate": 875,
+   "discovery-candidate": 861,
    "known-work-match": 23,
-   "platform-genre": 385
+   "platform-genre": 389
   },
   "collapsed": {
    "duplicate_chapters": 103,
@@ -43,7 +45,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 55,
+  "invariants_passing": 54,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -132,8 +134,10 @@
    },
    {
     "name": "state agrees with its own date",
-    "violations": 0,
-    "examples": []
+    "violations": 1,
+    "examples": [
+     "田所さん: slow beside a chapter 45 days old (basis: no chapter for 46 days on any platform we watch; the newest we hold is 2026-07-13)"
+    ]
    },
    {
     "name": "undated works say where and why",
@@ -494,7 +498,7 @@
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
     "budget": 56,
-    "value": 57
+    "value": 55
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -702,7 +706,7 @@
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 44,
-    "value": 43
+    "value": 41
    },
    {
     "name": "works whose first publication country is unattested",
@@ -750,7 +754,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 104,
-    "value": 102
+    "value": 103
    },
    {
     "name": "works without English",
@@ -791,7 +795,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 24,
+   "age_days": 26,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -805,7 +809,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 21,
+   "age_days": 23,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -819,7 +823,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 21,
+   "age_days": 23,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -833,7 +837,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 20,
+   "age_days": 22,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -847,7 +851,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 19,
+   "age_days": 21,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -861,7 +865,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 19,
+   "age_days": 21,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -875,7 +879,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 18,
+   "age_days": 20,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -888,7 +892,7 @@
    "files": 2,
    "works": 129,
    "rows": 6189,
-   "retrieved": "2026-08-26",
+   "retrieved": "2026-08-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -900,9 +904,9 @@
   {
    "source": "gigaviewer",
    "files": 71,
-   "works": 770,
-   "rows": 7847,
-   "retrieved": "2026-08-26",
+   "works": 774,
+   "rows": 7851,
+   "retrieved": "2026-08-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -915,14 +919,14 @@
    "source": "kadokomi",
    "files": 5,
    "works": 975,
-   "rows": 7469,
-   "retrieved": "2026-08-26",
+   "rows": 7481,
+   "retrieved": "2026-08-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6797,
-   "well_formed": 6453,
-   "malformed": 344,
+   "checked_rows": 6809,
+   "well_formed": 6474,
+   "malformed": 335,
    "drop": null
   },
   {
@@ -930,7 +934,7 @@
    "files": 3,
    "works": 1337,
    "rows": 11458,
-   "retrieved": "2026-08-26",
+   "retrieved": "2026-08-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -944,7 +948,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-08-26",
+   "retrieved": "2026-08-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -957,20 +961,20 @@
    "source": "webpages",
    "files": 48,
    "works": 575,
-   "rows": 7886,
-   "retrieved": "2026-08-26",
+   "rows": 7890,
+   "retrieved": "2026-08-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7835,
-   "well_formed": 7835,
+   "checked_rows": 7839,
+   "well_formed": 7839,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-25T19:30:33+00:00",
+  "previous_at": "2026-08-26T12:27:11+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1090,9 +1094,9 @@
    "print": 1661,
    "oneshot": 432,
    "dormant": 297,
-   "completed": 281,
-   "active": 247,
-   "slow": 69,
+   "completed": 282,
+   "active": 244,
+   "slow": 71,
    "unknown": 49
   },
   "english_basis": {
@@ -1105,7 +1109,7 @@
   "print_only": 1661,
   "volumes": 6105,
   "with_identifier": 3036,
-  "chapters": 27706,
+  "chapters": 27661,
   "delivery_dated": 1034
  }
 }
