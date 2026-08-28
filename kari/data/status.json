@@ -1,8 +1,10 @@
 {
- "generated": "2026-08-28T21:31:55+00:00",
+ "generated": "2026-08-28T22:45:30+00:00",
  "since_last": {
-  "at": "2026-08-27T15:32:14+00:00",
-  "statistics": {}
+  "at": "2026-08-28T21:31:55+00:00",
+  "statistics": {
+   "chapters": 19
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,27 +25,27 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-08-28",
-  "releases": 1273,
+  "at": "2026-08-29",
+  "releases": 1283,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3036,
   "assembled": 3084,
   "awaiting_identifier": 48,
   "identification": {
-   "discovery-candidate": 861,
+   "discovery-candidate": 865,
    "known-work-match": 23,
-   "platform-genre": 389
+   "platform-genre": 395
   },
   "collapsed": {
-   "duplicate_chapters": 103,
-   "resolver": 48,
-   "samples": 32,
+   "duplicate_chapters": 105,
+   "resolver": 49,
+   "samples": 26,
    "thin_sitemap": 8
   }
  },
  "gate": {
-  "invariants_passing": 54,
+  "invariants_passing": 55,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -132,10 +134,8 @@
    },
    {
     "name": "state agrees with its own date",
-    "violations": 1,
-    "examples": [
-     "田所さん: slow beside a chapter 45 days old (basis: no chapter for 46 days on any platform we watch; the newest we hold is 2026-07-13)"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "undated works say where and why",
@@ -417,8 +417,8 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1195,
-    "value": 1196
+    "budget": 1196,
+    "value": 1198
    },
    {
     "name": "divisions read back from a romanisation",
@@ -442,7 +442,7 @@
     "name": "renderings with nothing to show",
     "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
     "budget": 24,
-    "value": 24
+    "value": 23
    },
    {
     "name": "kana names with no stated division",
@@ -459,8 +459,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 427,
-    "value": 428
+    "budget": 428,
+    "value": 430
    },
    {
     "name": "credits the corpus files as a venue",
@@ -495,8 +495,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 56,
-    "value": 55
+    "budget": 55,
+    "value": 56
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -550,7 +550,7 @@
     "name": "data reaching the site around the store",
     "means": "fields a reader is served that the relational store could not answer. STORE-PLAN §1: the store becomes the sole compiled form, and this is what says whether a migration is happening. Asked of what the site SERVES, so it cannot fall by adding a table nobody reads, and it reaches 0 when the plan is done.",
     "budget": 0,
-    "value": 1
+    "value": 0
    },
    {
     "name": "works showing a romanisation",
@@ -703,7 +703,7 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 44,
+    "budget": 41,
     "value": 41
    },
    {
@@ -751,8 +751,8 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 104,
-    "value": 103
+    "budget": 103,
+    "value": 104
    },
    {
     "name": "works without English",
@@ -793,7 +793,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 26,
+   "age_days": 27,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -807,7 +807,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 23,
+   "age_days": 24,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -821,7 +821,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 23,
+   "age_days": 24,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -835,7 +835,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 22,
+   "age_days": 23,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -849,7 +849,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 21,
+   "age_days": 22,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -863,7 +863,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 21,
+   "age_days": 22,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -877,7 +877,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 20,
+   "age_days": 21,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -890,7 +890,7 @@
    "files": 2,
    "works": 129,
    "rows": 6189,
-   "retrieved": "2026-08-28",
+   "retrieved": "2026-08-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -902,9 +902,9 @@
   {
    "source": "gigaviewer",
    "files": 71,
-   "works": 774,
-   "rows": 7851,
-   "retrieved": "2026-08-28",
+   "works": 777,
+   "rows": 7854,
+   "retrieved": "2026-08-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -917,28 +917,28 @@
    "source": "kadokomi",
    "files": 5,
    "works": 975,
-   "rows": 7481,
-   "retrieved": "2026-08-28",
+   "rows": 7496,
+   "retrieved": "2026-08-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6809,
+   "checked_rows": 6824,
    "well_formed": 6474,
-   "malformed": 335,
+   "malformed": 350,
    "drop": null
   },
   {
    "source": "nicovideo",
    "files": 3,
-   "works": 1337,
-   "rows": 11458,
-   "retrieved": "2026-08-28",
+   "works": 1335,
+   "rows": 11467,
+   "retrieved": "2026-08-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10614,
+   "checked_rows": 10625,
    "well_formed": 0,
-   "malformed": 10614,
+   "malformed": 10625,
    "drop": null
   },
   {
@@ -946,7 +946,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-08-28",
+   "retrieved": "2026-08-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -959,20 +959,20 @@
    "source": "webpages",
    "files": 48,
    "works": 575,
-   "rows": 7890,
-   "retrieved": "2026-08-28",
+   "rows": 7892,
+   "retrieved": "2026-08-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7839,
-   "well_formed": 7839,
+   "checked_rows": 7841,
+   "well_formed": 7841,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-26T12:27:11+00:00",
+  "previous_at": "2026-08-27T15:31:21+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1022,20 +1022,20 @@
     "credit phrases spelling a person otherwise": 3,
     "names rendered two ways": 0,
     "one work named two ways across its rows": 0,
-    "author names romanised as one word": 1195,
+    "author names romanised as one word": 1196,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 88,
     "publisher readings nobody has settled": 22,
     "renderings with nothing to show": 24,
     "kana names with no stated division": 269,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 427,
+    "author readings no source states": 428,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 56,
+    "credit fields an identifier does not cover": 55,
     "credit pages listing a work that does not name them": 8,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
@@ -1069,7 +1069,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 7,
-    "updates naming a work we do not hold": 44,
+    "updates naming a work we do not hold": 41,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 4,
@@ -1077,7 +1077,7 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 4,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 104,
+    "incomplete attested rows": 103,
     "works without English": 0,
     "volume rows with no publication date": 2436,
     "predicted updates already behind the run": 0,
@@ -1093,8 +1093,8 @@
    "oneshot": 432,
    "dormant": 297,
    "completed": 282,
-   "active": 244,
-   "slow": 71,
+   "active": 243,
+   "slow": 72,
    "unknown": 49
   },
   "english_basis": {
@@ -1107,7 +1107,7 @@
   "print_only": 1661,
   "volumes": 6105,
   "with_identifier": 3036,
-  "chapters": 27661,
+  "chapters": 27680,
   "delivery_dated": 1034
  }
 }
