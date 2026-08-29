@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-29",
+ "generated": "2026-08-30",
  "note": "English renderings and readings, keyed by NFKC-folded title/author. Joined onto feed rows at render time so archived months — which are never rewritten — still show current names.",
  "titles": {
   "#うちらが最強~陰キャ除霊師とギャルJK~": {
@@ -87650,6 +87650,34 @@
    },
    "reading_basis": "analyser"
   },
+  "私の彼女はボディビルダー": {
+   "reading": "ワタシ ノ カノジョ ワ ボディ ビルダー",
+   "ruby": [
+    [
+     "私",
+     "わたし"
+    ],
+    [
+     "の",
+     null
+    ],
+    [
+     "彼女",
+     "かのじょ"
+    ],
+    [
+     "はボディビルダー",
+     null
+    ]
+   ],
+   "romaji": {
+    "macron": "Watashi no Kanojo wa Bodi Birudā",
+    "double": "Watashi no Kanojo wa Bodi Birudaa",
+    "plain": "Watashi no Kanojo wa Bodi Biruda"
+   },
+   "basis": "romaji",
+   "reading_basis": "analyser"
+  },
   "私の彼女は私に興味がなさすぎる": {
    "reading": "ワタシ ノ カノジョ ワ ワタシ ニ キョウミ ガ ナサ スギル",
    "ruby": [
@@ -149337,6 +149365,13 @@
   }
  },
  "imprints": {
+  "ガンガンコミックス": {
+   "id": "gangan-comics",
+   "name": "ガンガンコミックス",
+   "publishers": [
+    "スクウェア・エニックス"
+   ]
+  },
   "コロコロコミックススペシャル": {
    "id": "corocoro-comics-special",
    "name": "コロコロコミックススペシャル",
@@ -149898,13 +149933,6 @@
    "parent": "ブレイドコミックス",
    "publishers": [
     "マッグガーデン"
-   ]
-  },
-  "ガンガンコミックス": {
-   "id": "gangan-comics",
-   "name": "ガンガンコミックス",
-   "publishers": [
-    "スクウェア・エニックス"
    ]
   },
   "集英社ホームコミックス. オギャー!!": {
@@ -152260,6 +152288,31 @@
   }
  },
  "credit_parts": {
+  "宮澤伊織/水野英多/shirakaba": {
+   "j": " / ",
+   "p": [
+    {
+     "n": "宮澤伊織",
+     "r": "原作"
+    },
+    {
+     "n": "水野英多",
+     "r": "作画"
+    },
+    {
+     "n": "shirakaba",
+     "r": "キャラクター原案"
+    }
+   ]
+  },
+  "まめ魚": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "まめ魚"
+    }
+   ]
+  },
   "とりから": {
    "j": ", ",
    "p": [
@@ -153336,36 +153389,11 @@
     }
    ]
   },
-  "宮澤伊織/水野英多/shirakaba": {
-   "j": " / ",
-   "p": [
-    {
-     "n": "宮澤伊織",
-     "r": "原作"
-    },
-    {
-     "n": "水野英多",
-     "r": "作画"
-    },
-    {
-     "n": "shirakaba",
-     "r": "キャラクター原案"
-    }
-   ]
-  },
   "中村カンコ": {
    "j": ", ",
    "p": [
     {
      "n": "中村カンコ"
-    }
-   ]
-  },
-  "まめ魚": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "まめ魚"
     }
    ]
   },
@@ -185972,11 +186000,6 @@
    "double": "#14 Gaarumiitogaaru-2",
    "plain": "#14 Garumitogaru-2"
   },
-  "#18#育てましょう": {
-   "macron": "#18 #Sodatemashō",
-   "double": "#18 #Sodatemashou",
-   "plain": "#18 #Sodatemasho"
-  },
   "#18私を使って": "#18 Watashi O Tsukatte",
   "#2傷だらけの天使": "#2 Kizudarake No Tenshi",
   "#22#デジャブってる": "#22 #Dejabutteru",
@@ -190224,68 +190247,14 @@
    "double": "[Dai104Hanashi]Ryuujinsai",
    "plain": "[Dai104Hanashi]Ryujinsai"
   },
-  "【第10話】スケスケ大暴走!前編": {
-   "macron": "[Dai10Hanashi]Sukesuke Dai Bōsō! Zenpen",
-   "double": "[Dai10Hanashi]Sukesuke Dai Bousou! Zenpen",
-   "plain": "[Dai10Hanashi]Sukesuke Dai Boso! Zenpen"
-  },
-  "【第11話】スケスケ大暴走!後編": {
-   "macron": "[Dai11Hanashi]Sukesuke Dai Bōsō! Kōhen",
-   "double": "[Dai11Hanashi]Sukesuke Dai Bousou! Kouhen",
-   "plain": "[Dai11Hanashi]Sukesuke Dai Boso! Kohen"
-  },
-  "【第12話】あつまれ!妖怪の森前編": {
-   "macron": "[Dai12Hanashi]Atsumare!Yōkai No Mori Zenpen",
-   "double": "[Dai12Hanashi]Atsumare!Youkai No Mori Zenpen",
-   "plain": "[Dai12Hanashi]Atsumare!Yokai No Mori Zenpen"
-  },
   "【第132話(1)】": "[Dai132Hanashi(1)]",
-  "【第13話】あつまれ!妖怪の森後編": {
-   "macron": "[Dai13Hanashi]Atsumare!Yōkai No Mori Kōhen",
-   "double": "[Dai13Hanashi]Atsumare!Youkai No Mori Kouhen",
-   "plain": "[Dai13Hanashi]Atsumare!Yokai No Mori Kohen"
-  },
-  "【第14話】テンアゲ降霊行事!前編": {
-   "macron": "[Dai14Hanashi]Ten'age Kōrei Gyōji! Zenpen",
-   "double": "[Dai14Hanashi]Ten'age Kourei Gyouji! Zenpen",
-   "plain": "[Dai14Hanashi]Ten'age Korei Gyoji! Zenpen"
-  },
-  "【第15話】テンアゲ降霊行事!後編": {
-   "macron": "[Dai15Hanashi]Ten'age Kōrei Gyōji! Kōhen",
-   "double": "[Dai15Hanashi]Ten'age Kourei Gyouji! Kouhen",
-   "plain": "[Dai15Hanashi]Ten'age Korei Gyoji! Kohen"
-  },
   "【第15話】終着点(1)": {
    "macron": "[Dai15Hanashi]Shūchaku Ten(1)",
    "double": "[Dai15Hanashi]Shuuchaku Ten(1)",
    "plain": "[Dai15Hanashi]Shuchaku Ten(1)"
   },
-  "【第16話】マネッコの宿命": "[Dai16Hanashi]Manekko No Shukumei",
-  "【第17話】清廉アイドル!前編": "[Dai17Hanashi]Seiren Aidoru! Zenpen",
-  "【第18話】清廉アイドル!後編": {
-   "macron": "[Dai18Hanashi]Seiren Aidoru! Kōhen",
-   "double": "[Dai18Hanashi]Seiren Aidoru! Kouhen",
-   "plain": "[Dai18Hanashi]Seiren Aidoru! Kohen"
-  },
-  "【第19話】忍び寄るニャイトメア": "[Dai19Hanashi]Shinobiyoru Nyaitomea",
   "【第1話】ぐっすん!ドキドキ!別れは出会いのシグナル": "[Dai1Hanashi]Gussun!Dokidoki!Wakare Wa Deai No Shigunaru",
-  "【第1話】ハザマ学園怪奇新聞部": "[Dai1Hanashi]Hazama Gakuen Kaiki Shinbun Bu",
   "【第20話(1)】": "[Dai20Hanashi(1)]",
-  "【第20話】激映え!異階の迷宮(ラビリンス)": {
-   "macron": "[Dai20Hanashi]Gekiei E!I Kai No Meikyū(Rabirinsu)",
-   "double": "[Dai20Hanashi]Gekiei E!I Kai No Meikyuu(Rabirinsu)",
-   "plain": "[Dai20Hanashi]Gekiei E!I Kai No Meikyu(Rabirinsu)"
-  },
-  "【第21話】キケンな学園祭デート!?前編": {
-   "macron": "[Dai21Hanashi]Kikenna Gakuensai Dēto!? Zenpen",
-   "double": "[Dai21Hanashi]Kikenna Gakuensai Deeto!? Zenpen",
-   "plain": "[Dai21Hanashi]Kikenna Gakuensai Deto!? Zenpen"
-  },
-  "【第22話】キケンな学園祭デート!?後編": {
-   "macron": "[Dai22Hanashi]Kikenna Gakuensai Dēto!? Kōhen",
-   "double": "[Dai22Hanashi]Kikenna Gakuensai Deeto!? Kouhen",
-   "plain": "[Dai22Hanashi]Kikenna Gakuensai Deto!? Kohen"
-  },
   "【第23話】厄立たずの新聞前編": "[Dai23Hanashi]Yaku Tatazu No Shinbun Zenpen",
   "【第24.5話】メイド・イン・学園祭!": "[Dai24.5Hanashi]Meido · In · Gakuensai!",
   "【第24回角川漫画新人大賞】入選": {
@@ -190319,7 +190288,6 @@
    "plain": "[Dai2Hanashi]Totsuzen(Totsuzen)Tandemu!?Dogimagi Sancho Dee To"
   },
   "【第2話】悪夢にも勝る": "[Dai2Hanashi]Akumu Ni Mo Masaru",
-  "【第2話】暗闇に響く声": "[Dai2Hanashi]Kurayami Ni Hibiku Koe",
   "【第32回角川漫画新人大賞】佳作": {
    "macron": "[Dai32Kai Kadokawa Manga Shinjin Taishō]Kasaku",
    "double": "[Dai32Kai Kadokawa Manga Shinjin Taishou]Kasaku",
@@ -190329,7 +190297,6 @@
   "【第32話】ほどいて(1)": "[Dai32Hanashi]Hodoite(1)",
   "【第38話】「汚搦」": "[Dai38Hanashi]“O Karami”",
   "【第3話】手も品も変えるな": "[Dai3Hanashi]Te Mo Shina Mo Kaeru Na",
-  "【第3話】空からの侵略者": "[Dai3Hanashi]Sora Kara No Shinryakusha",
   "【第41話】うそつき(1)": "[Dai41Hanashi]Usotsuki(1)",
   "【第42話】将来的に死んでくれ": {
    "macron": "[Dai42Hanashi]Shōraitekini Shinde Kure",
@@ -190346,7 +190313,6 @@
    "double": "[Dai49Hanashi]Genkai☆Waakahorikku☆Gaaru",
    "plain": "[Dai49Hanashi]Genkai☆Wakahorikku☆Garu"
   },
-  "【第4話】山に潜む獣": "[Dai4Hanashi]Yama Ni Hisomu Kemono",
   "【第4話】怨天様": "[Dai4Hanashi]Ontensama",
   "【第4話】水泡にすら帰さず": {
    "macron": "[Dai4Hanashi]Suihō Ni Sura Kaesazu",
@@ -190378,35 +190344,10 @@
    "double": "[Dai54Hanashi]Chikara O Awasete☆Ikinokore☆Gaaru",
    "plain": "[Dai54Hanashi]Chikara O Awasete☆Ikinokore☆Garu"
   },
-  "【第5話】UMAい話にご用心": {
-   "macron": "[Dai5Hanashi]UMAI Hanashi Ni Go Yōjin",
-   "double": "[Dai5Hanashi]UMAI Hanashi Ni Go Youjin",
-   "plain": "[Dai5Hanashi]UMAI Hanashi Ni Go Yojin"
-  },
-  "【第6話】チョベリグなビート": {
-   "macron": "[Dai6Hanashi]Choberigunabīto",
-   "double": "[Dai6Hanashi]Choberigunabiito",
-   "plain": "[Dai6Hanashi]Choberigunabito"
-  },
-  "【第7話】不死身の料理人": {
-   "macron": "[Dai7Hanashi]Fujimi No Ryōrinin",
-   "double": "[Dai7Hanashi]Fujimi No Ryourinin",
-   "plain": "[Dai7Hanashi]Fujimi No Ryorinin"
-  },
-  "【第8話】天才偏執者の誘惑": {
-   "macron": "[Dai8Hanashi]Tensai Henshitsusha No Yūwaku",
-   "double": "[Dai8Hanashi]Tensai Henshitsusha No Yuuwaku",
-   "plain": "[Dai8Hanashi]Tensai Henshitsusha No Yuwaku"
-  },
   "【第99話】竜の叫び声": {
    "macron": "[Dai99Hanashi]Ryū No Sakebigoe",
    "double": "[Dai99Hanashi]Ryuu No Sakebigoe",
    "plain": "[Dai99Hanashi]Ryu No Sakebigoe"
-  },
-  "【第9話】熱血!お手当てチュウ": {
-   "macron": "[Dai9Hanashi]Nekketsu!O Teate Chū",
-   "double": "[Dai9Hanashi]Nekketsu!O Teate Chuu",
-   "plain": "[Dai9Hanashi]Nekketsu!O Teate Chu"
   },
   "【試し読み】永久少女信仰": {
    "macron": "[Tameshiyomi]Eikyū Shōjo Shinkō",
@@ -206734,6 +206675,11 @@
    "double": "Watashi No Yuurei",
    "plain": "Watashi No Yurei"
   },
+  "私の彼女はボディビルダー": {
+   "macron": "Watashi No Kanojo Wa Bodi Birudā",
+   "double": "Watashi No Kanojo Wa Bodi Birudaa",
+   "plain": "Watashi No Kanojo Wa Bodi Biruda"
+  },
   "私の彼女は私に興味がなさすぎる": {
    "macron": "Watashi No Kanojo Wa Watashi Ni Kyōmi Ga Nasa Sugiru",
    "double": "Watashi No Kanojo Wa Watashi Ni Kyoumi Ga Nasa Sugiru",
@@ -207043,6 +206989,7 @@
    "double": "Dai118Tama:Doushiyoumonaittehodoja(Kouhen)",
    "plain": "Dai118Tama:Doshiyomonaittehodoja(Kohen)"
   },
+  "第11回わかんなくなっちゃった": "Dai11Kai Wakannakunatchatta",
   "第11巻特典情報": {
    "macron": "Dai11Maki Tokuten Jōhō",
    "double": "Dai11Maki Tokuten Jouhou",
@@ -207544,11 +207491,6 @@
   "第36話(1)": "Dai36Hanashi(1)",
   "第36話(2)": "Dai36Hanashi(2)",
   "第36話ルイくんとお隣さん": "Dai36Hanashi Ruikun To O Tonarisan",
-  "第36話後編": {
-   "macron": "Dai36Hanashi Kōhen",
-   "double": "Dai36Hanashi Kouhen",
-   "plain": "Dai36Hanashi Kohen"
-  },
   "第37話(1)": "Dai37Hanashi(1)",
   "第37話後編1": {
    "macron": "Dai37Hanashi Kōhen1",
@@ -207807,8 +207749,12 @@
   },
   "第8話:EXjp": "Dai8Hanashi:EXjp",
   "第90話": "Dai90Hanashi",
-  "第90話-2八尺様リバイバルV": "Dai90Hanashi-2 Yasakasama RibaibaruV",
   "第90話-3八尺様リバイバルV": "Dai90Hanashi-3 Yasakasama RibaibaruV",
+  "第91話-1トイレット・ペーパームーンI": {
+   "macron": "Dai91Hanashi-1 Toiretto · PēpāmūnI",
+   "double": "Dai91Hanashi-1 Toiretto · PeepaamuunI",
+   "plain": "Dai91Hanashi-1 Toiretto · PepamunI"
+  },
   "第92話": "Dai92Hanashi",
   "第93話": "Dai93Hanashi",
   "第94話": "Dai94Hanashi",
@@ -208043,11 +207989,6 @@
   },
   "第3話試着室": "Dai3Hanashi Shichakushitsu",
   "第3話麻倉さんの投げ銭": "Dai3Hanashi Asakurasan No Nagesen",
-  "第334話「身体の主導権」": {
-   "macron": "Dai334Hanashi “Shintai No Shudōken”",
-   "double": "Dai334Hanashi “Shintai No Shudouken”",
-   "plain": "Dai334Hanashi “Shintai No Shudoken”"
-  },
   "第335話「高IQレスラー」": {
    "macron": "Dai335Hanashi “KōIQResurā”",
    "double": "Dai335Hanashi “KouIQResuraa”",
@@ -211007,7 +210948,6 @@
   "18.世界が終わるまでは": "18. Sekai Ga Owaru Made Wa",
   "19.海に沈める": "19. Umi Ni Shizumeru",
   "2巻第13話": "2Maki Dai13Hanashi",
-  "2巻第18話": "2Maki Dai18Hanashi",
   "2巻第19話": "2Maki Dai19Hanashi",
   "2巻第20話": "2Maki Dai20Hanashi",
   "2巻第21話": "2Maki Dai21Hanashi",
@@ -217037,6 +216977,7 @@
   "私の宝箱": "Watashi no Takarabako",
   "私の小さなおひめさま": "Watashi no Chiisana o Himesama",
   "私の幽霊": "Watashi no Yūrei",
+  "私の彼女はボディビルダー": "Watashi no Kanojo wa Bodi Birudā",
   "私の彼女は私に興味がなさすぎる": "Watashi no Kanojo wa Watashi ni Kyōmi ga Nasa Sugiru",
   "私の彼女は私に興味がなさすぎる(ライトリーズン)": "Watashi no Kanojo wa Watashi ni Kyōmi ga Nasa Sugiru (Raito Rīzun)",
   "私の拳をうけとめて!": "Watashi no Kobushi o Uketomete!",
@@ -217781,6 +217722,7 @@
   "第90話-3八尺様リバイバルV": "Ch. 90-3 Hasshakusama Ribaibaru V",
   "第91-92話": "Ch. 91-92",
   "第91話": "Ch. 91",
+  "第91話-1トイレット・ペーパームーンI": "Ch. 91-1 Toiretto Pēpā Mūn I",
   "第92話": "Ch. 92",
   "第93-96話": "Ch. 93-96",
   "第93話": "Ch. 93",
