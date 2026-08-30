@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-30T23:14:13+00:00",
+ "generated": "2026-08-30T23:26:32+00:00",
  "since_last": {
-  "at": "2026-08-30T17:31:36+00:00",
+  "at": "2026-08-30T23:14:13+00:00",
   "statistics": {}
  },
  "means": {
@@ -493,8 +493,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 55,
-    "value": 55
+    "budget": 63,
+    "value": 63
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -553,8 +553,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 25,
-    "value": 25
+    "budget": 24,
+    "value": 24
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -701,8 +701,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 32,
-    "value": 28
+    "budget": 76,
+    "value": 76
    },
    {
     "name": "works whose first publication country is unattested",
@@ -749,7 +749,7 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 95,
+    "budget": 91,
     "value": 91
    },
    {
@@ -970,7 +970,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-29T15:34:48+00:00",
+  "previous_at": "2026-08-30T16:57:10+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1033,7 +1033,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 55,
+    "credit fields an identifier does not cover": 63,
     "credit pages listing a work that does not name them": 8,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
@@ -1043,7 +1043,7 @@
     "titles read by a machine, unmarked": 1175,
     "uncertain readings": 53,
     "data reaching the site around the store": 0,
-    "works showing a romanisation": 25,
+    "works showing a romanisation": 24,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
     "one work under two names in a list": 3,
@@ -1067,7 +1067,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 8,
-    "updates naming a work we do not hold": 32,
+    "updates naming a work we do not hold": 76,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 4,
@@ -1075,7 +1075,7 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 4,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 95,
+    "incomplete attested rows": 91,
     "works without English": 0,
     "volume rows with no publication date": 2436,
     "predicted updates already behind the run": 0,
@@ -1096,10 +1096,10 @@
    "unknown": 49
   },
   "english_basis": {
-   "translated": 2674,
+   "translated": 2675,
    "official-jp": 229,
    "licensed": 108,
-   "romaji": 25
+   "romaji": 24
   },
   "print_works": 2459,
   "print_only": 1661,
