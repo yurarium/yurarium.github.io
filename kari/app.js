@@ -329,11 +329,13 @@ function ruby(ja, rec) {
     : esc(text)).join('');
 }
 
-/* Names for rows that carry none. An archived month is written once and never rewritten (that is
-   what protects its dates), so 2026-07 was frozen before any of this existed and every row in it
-   showed Japanese only. Dates must not change; a romanisation improving is the system working. So
-   the archive keeps its rows as published and the current names are joined on here, at render
-   time, from one file covering every month.
+/* Names for rows that carry none. What an archived month locks is its ROW SET and not its bytes:
+   the file is rewritten on every build and a row it once held is carried forward, which is what
+   protects the record of an update from the platform withdrawing it. Dates must not change; a
+   romanisation improving is the system working. So the archive keeps its rows as published and the
+   current names are joined on here, at render time, from one file covering every month. 2026-07 was
+   written before any of this existed and every row in it showed Japanese only, which is the case
+   that made joining at render time the answer rather than baking names in.
 
    Folded exactly as the build folds, because （私に） and (私に) are different strings and the same
    work arrives as both. */
