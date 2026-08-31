@@ -1,8 +1,13 @@
 {
- "generated": "2026-08-31T15:47:38+00:00",
+ "generated": "2026-08-31T16:12:31+00:00",
  "since_last": {
-  "at": "2026-08-31T06:49:46+00:00",
-  "statistics": {}
+  "at": "2026-08-31T15:47:38+00:00",
+  "statistics": {
+   "works": 2,
+   "print_only": -13,
+   "with_identifier": 2,
+   "chapters": 615
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -27,9 +32,9 @@
   "releases": 1228,
   "works": 2574,
   "platforms": 23,
-  "series_rows": 3036,
-  "assembled": 3085,
-  "awaiting_identifier": 49,
+  "series_rows": 3038,
+  "assembled": 3072,
+  "awaiting_identifier": 34,
   "identification": {
    "discovery-candidate": 825,
    "known-work-match": 23,
@@ -523,8 +528,8 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 196,
-    "value": 196
+    "budget": 197,
+    "value": 197
    },
    {
     "name": "implausible ruby spans",
@@ -670,8 +675,8 @@
    {
     "name": "works holding fewer volumes than the shop states",
     "means": "works コミックシーモア sells more volumes of than the corpus holds, which is a capture that has fallen behind. The shop is Tier C and this asserts only that two parties disagree about a countable thing. A rise is ordinary, and is what a series publishing ahead of the next capture looks like.",
-    "budget": 69,
-    "value": 69
+    "budget": 70,
+    "value": 70
    },
    {
     "name": "works holding more volumes than the shop states",
@@ -701,8 +706,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 76,
-    "value": 68
+    "budget": 57,
+    "value": 57
    },
    {
     "name": "works whose first publication country is unattested",
@@ -970,7 +975,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-08-30T23:25:38+00:00",
+  "previous_at": "2026-08-31T15:46:40+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1038,7 +1043,7 @@
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
     "credits sharing a reading nobody has ruled on": 22,
-    "ruby asserting a reading per character": 196,
+    "ruby asserting a reading per character": 197,
     "implausible ruby spans": 0,
     "titles read by a machine, unmarked": 1175,
     "uncertain readings": 53,
@@ -1062,12 +1067,12 @@
     "macron boundaries nobody has ruled on": 0,
     "works whose records number one volume twice": 8,
     "volume numbers a page draws twice": 10,
-    "works holding fewer volumes than the shop states": 69,
+    "works holding fewer volumes than the shop states": 70,
     "works holding more volumes than the shop states": 26,
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 8,
-    "updates naming a work we do not hold": 76,
+    "updates naming a work we do not hold": 57,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 4,
@@ -1085,27 +1090,27 @@
   }
  ],
  "statistics": {
-  "works": 3036,
+  "works": 3038,
   "states": {
-   "print": 1661,
-   "oneshot": 432,
+   "print": 1648,
+   "oneshot": 431,
    "dormant": 297,
    "completed": 281,
-   "active": 238,
+   "active": 254,
    "slow": 78,
    "unknown": 49
   },
   "english_basis": {
    "translated": 2675,
-   "official-jp": 229,
-   "licensed": 108,
+   "official-jp": 230,
+   "licensed": 109,
    "romaji": 24
   },
   "print_works": 2459,
-  "print_only": 1661,
+  "print_only": 1648,
   "volumes": 6105,
-  "with_identifier": 3036,
-  "chapters": 27685,
+  "with_identifier": 3038,
+  "chapters": 28300,
   "delivery_dated": 1034
  }
 }
