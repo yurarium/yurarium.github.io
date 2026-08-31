@@ -1135,7 +1135,14 @@ RECORDED = {
     # THE TWO THAT ROSE ON THE WAY ACROSS, and the reason is the data rather than the move: this
     # site is built from a store compiled today and the numbers recorded in the pipeline were
     # measured against yesterday's. Recorded where they stand, so the ratchet starts from the truth.
-    "renderings resting on a mechanical romanisation": 638,
+    # 638 -> 648 ON 2026-08-31, and the rise is sixteen works arriving rather than ten renderings
+    # getting worse. `identity.for_row` began consulting the work-level address the row already
+    # carried, so sixteen works that had been compiled and then dropped for want of an identifier
+    # entered the corpus, ゆるゆり and 大室家 among them. They bring their credits with them and ten
+    # of those credits have no stated reading, which is exactly what this counts. A reader can now
+    # open sixteen works that reached nobody yesterday, and ten of them show a marked romanisation
+    # for a name; that is the trade, and it is the right way round.
+    "renderings resting on a mechanical romanisation": 648,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
