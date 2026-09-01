@@ -1142,7 +1142,12 @@ RECORDED = {
     # of those credits have no stated reading, which is exactly what this counts. A reader can now
     # open sixteen works that reached nobody yesterday, and ten of them show a marked romanisation
     # for a name; that is the trade, and it is the right way round.
-    "renderings resting on a mechanical romanisation": 648,
+    # 648 -> 654 ON 2026-09-01, thirty more works arriving for the same reason as the sixteen.
+    # The identifiers that were missing were minted, so the works the pipeline had been compiling
+    # and dropping every night reach a reader at last, and six of their credits state no reading.
+    # Each shows a marked romanisation with a tooltip saying the reading is not attested, which is
+    # the floor doing its job rather than a rendering getting worse.
+    "renderings resting on a mechanical romanisation": 654,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
