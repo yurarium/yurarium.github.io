@@ -1,6 +1,179 @@
 {
  "releases": [
   {
+   "id": "kadokomi:KC_0083870000900011_E",
+   "work": "ウェイバーズ",
+   "ep": "第八話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-31",
+   "seen": "2026-09-01",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_008387_S/episodes/KC_0083870000900011_E",
+   "series_url": "https://comic-walker.com/detail/KC_008387_S",
+   "author": "山本和音",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-09-01",
+   "late_discovered": true,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 8",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [
+    "ニコニコ漫画"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-09-01",
+   "wid": "w02008",
+   "work_en": {
+    "reading": "ウェイバーズ",
+    "romaji": {
+     "macron": "Weibāzu",
+     "double": "Weibaazu",
+     "plain": "Weibazu"
+    },
+    "en": "WAVER(S)",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "WAVER(S)",
+     "translated": "Wavers"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "comic-walker.com",
+     "url": "https://comic-walker.com/detail/KC_008387_S",
+     "kind": "platform",
+     "reviewed": "2026-08-07"
+    }
+   },
+   "author_en": {
+    "reading": "ヤマモト カズネ",
+    "ruby": [
+     [
+      "山本和音",
+      "やまもとかずね"
+     ]
+    ],
+    "romaji": {
+     "macron": "Yamamoto Kazune",
+     "double": "Yamamoto Kazune",
+     "plain": "Yamamoto Kazune"
+    },
+    "en": "Kazune Yamamoto",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1034899",
+     "kind": "national-library",
+     "reviewed": "2026-08-08"
+    },
+    "id": "c00159"
+   }
+  },
+  {
+   "id": "nicovideo:72472:2026-08-31",
+   "work": "恋する罪人",
+   "ep": "第30話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-31",
+   "seen": "2026-09-01",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1130839",
+   "author": "羽印(ういん)",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-09-01",
+   "late_discovered": true,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 30, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 30,
+   "free_episodes": 30,
+   "started": "2025-04-01",
+   "work_level": true,
+   "feed_date": "2026-09-01",
+   "wid": "w02260",
+   "work_en": {
+    "reading": "コイ スル ザイニン",
+    "ruby": [
+     [
+      "恋",
+      "こい"
+     ],
+     [
+      "する",
+      null
+     ],
+     [
+      "罪人",
+      "ざいにん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Koi Suru Zainin",
+     "double": "Koi Suru Zainin",
+     "plain": "Koi Suru Zainin"
+    },
+    "en": "The Sinner in Love",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Sinner in Love"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ウイン",
+    "ruby": [
+     [
+      "羽印",
+      "ういん"
+     ],
+     [
+      "(ういん)",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Uin",
+     "double": "Uin",
+     "plain": "Uin"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "researched",
+    "id": "c01145"
+   }
+  },
+  {
    "id": "sunday_webry:episode:12207421984173613088",
    "work": "#ギャルとギャルの百合",
    "ep": "#25 #きさらぎ駅",
@@ -121,6 +294,292 @@
     "reading_basis": "analyser",
     "unverified": true,
     "id": "c00228"
+   }
+  },
+  {
+   "id": "nicovideo:77287:2026-09-01",
+   "work": "タイムトラベル少女 ～ミライのサキ～",
+   "ep": "第6話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-01",
+   "seen": "2026-09-01",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1129300",
+   "author": "ぱぺっときゃすと！",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 6, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 6,
+   "free_episodes": 6,
+   "started": "2026-03-31",
+   "work_level": true,
+   "feed_date": "2026-09-01",
+   "wid": "w03226",
+   "work_en": {
+    "reading": "タイムトラベル ショウジョ ～ ミライ ノ サキ ～",
+    "ruby": [
+     [
+      "タイムトラベル",
+      null
+     ],
+     [
+      "少女",
+      "しょうじょ"
+     ],
+     [
+      " ～ミライのサキ～",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Taimutoraberu Shōjo ~ Mirai no Saki ~",
+     "double": "Taimutoraberu Shoujo ~ Mirai no Saki ~",
+     "plain": "Taimutoraberu Shojo ~ Mirai no Saki ~"
+    },
+    "en": "Time Travel Girl: Saki from the Future",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Time Travel Girl: Saki from the Future"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "パペットキャスト！",
+    "romaji": {
+     "macron": "Papettokyasuto!",
+     "double": "Papettokyasuto!",
+     "plain": "Papettokyasuto!"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface"
+   }
+  },
+  {
+   "id": "nicovideo:34558:2026-09-01",
+   "work": "おやすみシェヘラザード",
+   "ep": "",
+   "type": "unclassified",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-01",
+   "seen": "2026-09-01",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/comic/34558",
+   "author": "篠房六郎",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work is attested elsewhere in this database",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": null,
+   "free_episodes": null,
+   "started": "2018-05-10",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on やわらかスピリッツ, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-09-01",
+   "wid": "w01352",
+   "work_en": {
+    "reading": "オヤスミシェヘラザード",
+    "romaji": {
+     "macron": "Oyasumisheherazādo",
+     "double": "Oyasumisheherazaado",
+     "plain": "Oyasumisheherazado"
+    },
+    "en": "Nighty night, Sheherazade",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "小学館",
+     "url": "https://bookwalker.jp/series/167971/",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-10"
+    }
+   },
+   "author_en": {
+    "reading": "シノフサ ロクロウ",
+    "ruby": [
+     [
+      "篠房六郎",
+      "しのふさろくろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Shinofusa Rokurō",
+     "double": "Shinofusa Rokurou",
+     "plain": "Shinofusa Rokuro"
+    },
+    "en": "Rokurō Shinofusa",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "openBD",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-06",
+     "isbn": "9784098600908"
+    },
+    "id": "c01306"
+   }
+  },
+  {
+   "id": "nicovideo:44519:2026-09-01",
+   "work": "ロボットJSにスキはありません!!",
+   "ep": "ロボ22-1",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-01",
+   "seen": "2026-09-01",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1130944",
+   "author": "とりから",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work is attested elsewhere in this database",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 127,
+   "free_episodes": 127,
+   "started": "2019-10-20",
+   "work_level": true,
+   "feed_date": "2026-09-01",
+   "wid": "w01878",
+   "work_en": {
+    "reading": "ロボット JS ニ スキ ワ アリマセン！！",
+    "romaji": {
+     "macron": "Robotto JS ni Suki wa Arimasen!!",
+     "double": "Robotto JS ni Suki wa Arimasen!!",
+     "plain": "Robotto JS ni Suki wa Arimasen!!"
+    },
+    "en": "The Robot Schoolgirl Leaves No Opening!!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Robot Schoolgirl Leaves No Opening!!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トリカラ",
+    "romaji": {
+     "macron": "Torikara",
+     "double": "Torikara",
+     "plain": "Torikara"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01082"
+   }
+  },
+  {
+   "id": "nicovideo:60084:2026-09-01",
+   "work": "ハッピーシュート！",
+   "ep": "第7話の4",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-01",
+   "seen": "2026-09-01",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1130948",
+   "author": "とりから",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 7, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 102,
+   "free_episodes": 102,
+   "started": "2022-08-31",
+   "work_level": true,
+   "feed_date": "2026-09-01",
+   "wid": "w02099",
+   "work_en": {
+    "reading": "ハッピーシュート！",
+    "romaji": {
+     "macron": "Happīshūto!",
+     "double": "Happiishuuto!",
+     "plain": "Happishuto!"
+    },
+    "en": "Happy Shoot!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Happy Shoot!"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "トリカラ",
+    "romaji": {
+     "macron": "Torikara",
+     "double": "Torikara",
+     "plain": "Torikara"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01082"
    }
   }
  ],
