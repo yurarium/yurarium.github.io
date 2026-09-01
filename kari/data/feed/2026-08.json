@@ -1178,6 +1178,9 @@
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
    "free_from": "2026-08-27T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -1227,6 +1230,9 @@
    "plat_name": "Seasons",
    "ident": "discovery-candidate",
    "free_from": "2026-08-28T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -1305,6 +1311,9 @@
    "plat_name": "少年ジャンプ+",
    "ident": "discovery-candidate",
    "free_from": "2026-08-27T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -1387,6 +1396,9 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-27T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -4630,6 +4642,9 @@
    "plat_name": "となりのヤングジャンプ",
    "ident": "discovery-candidate",
    "free_from": "2026-08-27T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -6939,6 +6954,9 @@
    "plat_name": "となりのヤングジャンプ",
    "ident": "discovery-candidate",
    "free_from": "2026-08-26T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -6947,6 +6965,26 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-08-26",
+   "work_en": {
+    "reading": "シニガミ デリート",
+    "ruby": [
+     [
+      "死神",
+      "しにがみ"
+     ],
+     [
+      "デリート",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Shinigami Derīto",
+     "double": "Shinigami Deriito",
+     "plain": "Shinigami Derito"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser"
+   },
    "author_en": {
     "reading": "タニノ シブキ",
     "romaji": {
@@ -7573,6 +7611,9 @@
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -7632,6 +7673,9 @@
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -7691,6 +7735,9 @@
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -7749,7 +7796,10 @@
    "plat": "kuragebunch",
    "plat_name": "くらげバンチ",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-29",
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -9752,7 +9802,10 @@
    "plat": "comic-days",
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-05",
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -10684,6 +10737,9 @@
    "plat_name": "COMIC OGYAAA!!",
    "ident": "discovery-candidate",
    "free_from": "2026-08-21T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -10762,16 +10818,18 @@
    "plat_name": "Seasons",
    "ident": "discovery-candidate",
    "free_from": "2026-08-21T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
-   "kind_basis": "numbered 2, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 2",
    "kind_inferred": true,
    "preferred": "Seasons",
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-08-21",
-   "wid": "w00391",
    "work_en": {
     "reading": "コンヤ、 エーテル デ マチアワセ",
     "ruby": [
@@ -10836,6 +10894,9 @@
    "plat_name": "コミックトレイル",
    "ident": "discovery-candidate",
    "free_from": "2026-08-21T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -10914,6 +10975,9 @@
    "plat_name": "少年ジャンプ+",
    "ident": "discovery-candidate",
    "free_from": "2026-08-20T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -10998,6 +11062,9 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-20T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -12010,7 +12077,7 @@
    "plat": "comic-days",
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-03",
    "access_modes": [
     "purchase"
    ],
@@ -14260,7 +14327,7 @@
    "plat": "comic-action",
    "plat_name": "webアクション",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-01",
    "access_modes": [
     "free"
    ],
@@ -14358,6 +14425,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -14443,6 +14513,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -14528,6 +14601,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -14613,6 +14689,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -14710,6 +14789,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -14807,6 +14889,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -16899,7 +16984,10 @@
    "plat": "magcomi",
    "plat_name": "MAGCOMI",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-01",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -17089,6 +17177,9 @@
    "plat_name": "となりのヤングジャンプ",
    "ident": "discovery-candidate",
    "free_from": "2026-08-18T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -19389,6 +19480,9 @@
    "plat_name": "コミックガルド",
    "ident": "discovery-candidate",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -19399,12 +19493,44 @@
    "is_preferred": true,
    "feed_date": "2026-08-17",
    "work_en": {
+    "reading": "ユウトウセイ ガ アダルト グッズ ヲ カイ ニ キタ",
+    "ruby": [
+     [
+      "優等生",
+      "ゆうとうせい"
+     ],
+     [
+      "がアダルトグッズを",
+      null
+     ],
+     [
+      "買",
+      "か"
+     ],
+     [
+      "いに",
+      null
+     ],
+     [
+      "来",
+      "き"
+     ],
+     [
+      "た",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Yūtōsei ga Adaruto Guzzu o Kai ni Kita",
+     "double": "Yuutousei ga Adaruto Guzzu o Kai ni Kita",
+     "plain": "Yutosei ga Adaruto Guzzu o Kai ni Kita"
+    },
     "en": "The Honour Student Came in to Buy a Sex Toy",
     "basis": "translated",
     "en_forms": {
      "translated": "The Honour Student Came in to Buy a Sex Toy"
     },
-    "unverified": true
+    "reading_basis": "analyser"
    },
    "author_en": {
     "reading": "コナタ エル / 4ka エンピツ / チグサ ミノリ",
@@ -19461,7 +19587,10 @@
    "plat": "comic-gardo",
    "plat_name": "コミックガルド",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-07",
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -19472,12 +19601,44 @@
    "is_preferred": true,
    "feed_date": "2026-08-17",
    "work_en": {
+    "reading": "ユウトウセイ ガ アダルト グッズ ヲ カイ ニ キタ",
+    "ruby": [
+     [
+      "優等生",
+      "ゆうとうせい"
+     ],
+     [
+      "がアダルトグッズを",
+      null
+     ],
+     [
+      "買",
+      "か"
+     ],
+     [
+      "いに",
+      null
+     ],
+     [
+      "来",
+      "き"
+     ],
+     [
+      "た",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Yūtōsei ga Adaruto Guzzu o Kai ni Kita",
+     "double": "Yuutousei ga Adaruto Guzzu o Kai ni Kita",
+     "plain": "Yutosei ga Adaruto Guzzu o Kai ni Kita"
+    },
     "en": "The Honour Student Came in to Buy a Sex Toy",
     "basis": "translated",
     "en_forms": {
      "translated": "The Honour Student Came in to Buy a Sex Toy"
     },
-    "unverified": true
+    "reading_basis": "analyser"
    },
    "author_en": {
     "reading": "コナタ エル / 4ka エンピツ / チグサ ミノリ",
@@ -19535,6 +19696,9 @@
    "plat_name": "コミックガルド",
    "ident": "discovery-candidate",
    "free_from": "2026-08-17T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -19545,12 +19709,44 @@
    "is_preferred": true,
    "feed_date": "2026-08-17",
    "work_en": {
+    "reading": "ユウトウセイ ガ アダルト グッズ ヲ カイ ニ キタ",
+    "ruby": [
+     [
+      "優等生",
+      "ゆうとうせい"
+     ],
+     [
+      "がアダルトグッズを",
+      null
+     ],
+     [
+      "買",
+      "か"
+     ],
+     [
+      "いに",
+      null
+     ],
+     [
+      "来",
+      "き"
+     ],
+     [
+      "た",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Yūtōsei ga Adaruto Guzzu o Kai ni Kita",
+     "double": "Yuutousei ga Adaruto Guzzu o Kai ni Kita",
+     "plain": "Yutosei ga Adaruto Guzzu o Kai ni Kita"
+    },
     "en": "The Honour Student Came in to Buy a Sex Toy",
     "basis": "translated",
     "en_forms": {
      "translated": "The Honour Student Came in to Buy a Sex Toy"
     },
-    "unverified": true
+    "reading_basis": "analyser"
    },
    "author_en": {
     "reading": "コナタ エル / 4ka エンピツ / チグサ ミノリ",
@@ -19608,6 +19804,9 @@
    "plat_name": "コミックガルド",
    "ident": "discovery-candidate",
    "free_from": "2026-08-17T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-series",
@@ -19618,12 +19817,44 @@
    "is_preferred": true,
    "feed_date": "2026-08-17",
    "work_en": {
+    "reading": "ユウトウセイ ガ アダルト グッズ ヲ カイ ニ キタ",
+    "ruby": [
+     [
+      "優等生",
+      "ゆうとうせい"
+     ],
+     [
+      "がアダルトグッズを",
+      null
+     ],
+     [
+      "買",
+      "か"
+     ],
+     [
+      "いに",
+      null
+     ],
+     [
+      "来",
+      "き"
+     ],
+     [
+      "た",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Yūtōsei ga Adaruto Guzzu o Kai ni Kita",
+     "double": "Yuutousei ga Adaruto Guzzu o Kai ni Kita",
+     "plain": "Yutosei ga Adaruto Guzzu o Kai ni Kita"
+    },
     "en": "The Honour Student Came in to Buy a Sex Toy",
     "basis": "translated",
     "en_forms": {
      "translated": "The Honour Student Came in to Buy a Sex Toy"
     },
-    "unverified": true
+    "reading_basis": "analyser"
    },
    "author_en": {
     "reading": "コナタ エル / 4ka エンピツ / チグサ ミノリ",
@@ -25135,6 +25366,9 @@
    "plat_name": "COMIC OGYAAA!!",
    "ident": "discovery-candidate",
    "free_from": "2026-08-14T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -25203,6 +25437,9 @@
    "plat_name": "MAGCOMI",
    "ident": "discovery-candidate",
    "free_from": "2026-08-14T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -25212,11 +25449,52 @@
    "is_preferred": true,
    "feed_date": "2026-08-14",
    "work_en": {
+    "reading": "【キョウ ノ 10 ページ】 ジョシコウセイ VS クビキリ ジゾウ",
+    "ruby": [
+     [
+      "【",
+      null
+     ],
+     [
+      "今日",
+      "きょう"
+     ],
+     [
+      "の10ページ】",
+      null
+     ],
+     [
+      "女子高生",
+      "じょしこうせい"
+     ],
+     [
+      "VS",
+      null
+     ],
+     [
+      "首切",
+      "くびき"
+     ],
+     [
+      "り",
+      null
+     ],
+     [
+      "地蔵",
+      "じぞう"
+     ]
+    ],
+    "romaji": {
+     "macron": "[Kyō no 10 Pēji] Joshikōsei VS Kubikiri Jizō",
+     "double": "[Kyou no 10 Peeji] Joshikousei VS Kubikiri Jizou",
+     "plain": "[Kyo no 10 Peji] Joshikosei VS Kubikiri Jizo"
+    },
     "en": "Today's Ten Pages: High-School Girls vs the Beheading Jizo",
     "basis": "translated",
     "en_forms": {
      "translated": "Today's Ten Pages: High-School Girls vs the Beheading Jizo"
     },
+    "reading_basis": "analyser",
     "unverified": true
    },
    "author_en": {
@@ -25252,6 +25530,9 @@
    "plat_name": "少年ジャンプ+",
    "ident": "discovery-candidate",
    "free_from": "2026-08-13T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -25334,6 +25615,9 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-13T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -25585,6 +25869,9 @@
    "plat_name": "となりのヤングジャンプ",
    "ident": "discovery-candidate",
    "free_from": "2026-08-14T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -25594,12 +25881,28 @@
    "is_preferred": true,
    "feed_date": "2026-08-14",
    "work_en": {
+    "reading": "リント シテ キュン",
+    "ruby": [
+     [
+      "凛",
+      "りん"
+     ],
+     [
+      "としてきゅん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Rinto Shite Kyun",
+     "double": "Rinto Shite Kyun",
+     "plain": "Rinto Shite Kyun"
+    },
     "en": "Poised, and a Pang",
     "basis": "translated",
     "en_forms": {
      "translated": "Poised, and a Pang"
     },
-    "unverified": true
+    "reading_basis": "analyser"
    },
    "author_en": {
     "unverified": true,
@@ -26724,6 +27027,9 @@
    "plat_name": "コミック アース・スター",
    "ident": "discovery-candidate",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -26866,6 +27172,9 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-12T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -26876,11 +27185,32 @@
    "is_preferred": true,
    "feed_date": "2026-08-13",
    "work_en": {
+    "reading": "モモ ト ミヤ ムラ",
+    "ruby": [
+     [
+      "ももと",
+      null
+     ],
+     [
+      "宮",
+      "みや"
+     ],
+     [
+      "村",
+      "むら"
+     ]
+    ],
+    "romaji": {
+     "macron": "Momo to Miya Mura",
+     "double": "Momo to Miya Mura",
+     "plain": "Momo to Miya Mura"
+    },
     "en": "Momo and Miyamura",
     "basis": "translated",
     "en_forms": {
      "translated": "Momo and Miyamura"
     },
+    "reading_basis": "analyser",
     "unverified": true
    },
    "author_en": {
@@ -28814,7 +29144,7 @@
   },
   {
    "id": "younganimal:https://younganimal.com/episodes/24a3e6bcb998e:第ニ話",
-   "work": "最恐呪物令嬢",
+   "work": "最恐呪物令嬢 〜彼女は呪物を愛しすぎている〜",
    "ep": "第ニ話",
    "type": "chapter",
    "adv": true,
@@ -28826,7 +29156,8 @@
    "why": "",
    "moved": "",
    "url": "https://younganimal.com/episodes/24a3e6bcb998e",
-   "author": "",
+   "author": "保坂歩,藤津一,法螺貝こゐ",
+   "author_basis": "carried from another record of the same work",
    "plat": "younganimal",
    "plat_name": "ヤングアニマルWeb",
    "ident": "discovery-candidate",
@@ -28846,73 +29177,6 @@
    "is_preferred": true,
    "feed_date": "2026-08-11",
    "wid": "w03269",
-   "work_en": {
-    "reading": "サイ オソレ ジュブツ レイジョウ",
-    "ruby": [
-     [
-      "最",
-      "さい"
-     ],
-     [
-      "恐",
-      "おそれ"
-     ],
-     [
-      "呪物",
-      "じゅぶつ"
-     ],
-     [
-      "令嬢",
-      "れいじょう"
-     ]
-    ],
-    "romaji": {
-     "macron": "Sai Osore Jubutsu Reijō",
-     "double": "Sai Osore Jubutsu Reijou",
-     "plain": "Sai Osore Jubutsu Reijo"
-    },
-    "en": "The Most Frightening Lady of Cursed Objects",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Most Frightening Lady of Cursed Objects"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   }
-  },
-  {
-   "id": "younganimal:https://younganimal.com/series/060a6130e55b2:第ニ話",
-   "work": "最恐呪物令嬢 〜彼女は呪物を愛しすぎている〜",
-   "ep": "第ニ話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-11",
-   "seen": "2026-09-02",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://younganimal.com/series/060a6130e55b2",
-   "author": "保坂歩,藤津一,法螺貝こゐ",
-   "plat": "younganimal",
-   "plat_name": "ヤングアニマルWeb",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "work has an earlier release here",
-   "kind_inferred": true,
-   "preferred": "ヤングアニマルWeb",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-08-11",
    "work_en": {
     "en": "The Most Frightening Lady of Cursed Objects: She Loves Cursed Objects Far Too Much",
     "basis": "translated",
@@ -29533,6 +29797,81 @@
     "basis": "romaji",
     "reading_basis": "researched",
     "id": "c01242"
+   }
+  },
+  {
+   "id": "younganimal:https://younganimal.com/series/060a6130e55b2:第ニ話",
+   "work": "最恐呪物令嬢 〜彼女は呪物を愛しすぎている〜",
+   "ep": "第ニ話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-11",
+   "seen": "2026-09-02",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://younganimal.com/series/060a6130e55b2",
+   "author": "保坂歩,藤津一,法螺貝こゐ",
+   "plat": "younganimal",
+   "plat_name": "ヤングアニマルWeb",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "ヤングアニマルWeb",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-08-11",
+   "work_en": {
+    "en": "The Most Frightening Lady of Cursed Objects: She Loves Cursed Objects Far Too Much",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Most Frightening Lady of Cursed Objects: She Loves Cursed Objects Far Too Much"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ホサカアユミ, フジツハジメ, ホラカイコイ",
+    "ruby": [
+     [
+      "保坂歩",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "藤津一",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "法螺貝こゐ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hosakāyumi, Fujitsuhajime, Horakaikoi",
+     "double": "Hosakaayumi, Fujitsuhajime, Horakaikoi",
+     "plain": "Hosakayumi, Fujitsuhajime, Horakaikoi"
+    },
+    "reading_basis": "analyser",
+    "basis": "romaji",
+    "unverified": true
    }
   },
   {
@@ -32792,7 +33131,10 @@
    "plat": "comic-action",
    "plat_name": "webアクション",
    "ident": "known-work-match",
-   "free_from": null,
+   "free_from": "2026-09-04",
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -32903,6 +33245,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -32978,6 +33323,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -33053,6 +33401,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -33128,6 +33479,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -33203,6 +33557,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -33278,6 +33635,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -33353,6 +33713,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -33428,6 +33791,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -33503,6 +33869,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -33578,6 +33947,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -33653,6 +34025,9 @@
    "plat_name": "コミックDAYS",
    "ident": "known-work-match",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -33728,6 +34103,9 @@
    "plat_name": "コミックトレイル",
    "ident": "known-work-match",
    "free_from": "2026-08-07T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -33806,6 +34184,9 @@
    "plat_name": "まんがタイムSquare",
    "ident": "known-work-match",
    "free_from": "2026-08-07T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -33891,6 +34272,9 @@
    "plat_name": "少年ジャンプ+",
    "ident": "known-work-match",
    "free_from": "2026-08-06T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -46224,7 +46608,7 @@
    "plat": "comic-days",
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-08-20",
    "access_modes": [
     "free"
    ],
@@ -47953,7 +48337,7 @@
    "provenance": "attested",
    "free": false,
    "kind": "other",
-   "kind_basis": "reads as a volume, artwork or notice, and only 8 of 97 chapters in this series do (8%) — not how this series names its instalments",
+   "kind_basis": "reads as a volume, artwork or notice, and only 8 of 119 chapters in this series do (7%) — not how this series names its instalments",
    "kind_inferred": true,
    "preferred": "マガポケ",
    "also_on": [],
@@ -48303,6 +48687,9 @@
    "plat_name": "コミックゼノン",
    "ident": "discovery-candidate",
    "free_from": "2026-08-05T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -48355,6 +48742,9 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-04T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -49831,7 +50221,7 @@
    "plat": "comic-action",
    "plat_name": "webアクション",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-08-18",
    "access_modes": [
     "free"
    ],
@@ -49928,7 +50318,10 @@
    "plat": "magcomi",
    "plat_name": "MAGCOMI",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-08-18",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -50118,6 +50511,9 @@
    "plat_name": "となりのヤングジャンプ",
    "ident": "discovery-candidate",
    "free_from": "2026-08-04T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -52802,7 +53198,7 @@
    "ident": "discovery-candidate",
    "free_from": "2026-08-22",
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
    "free": false,

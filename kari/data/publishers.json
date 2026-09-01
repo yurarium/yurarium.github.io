@@ -17,9 +17,9 @@
     "w00066",
     "w00070",
     "w01225",
+    "w00115",
     "w00146",
     "w00100",
-    "w00115",
     "w00168",
     "w00016",
     "w00167",
@@ -959,6 +959,95 @@
     }
    ]
   },
+  "h00017": {
+   "id": "h00017",
+   "name": "マッグガーデン",
+   "rows": 7,
+   "works": [
+    "w00128",
+    "w00379",
+    "w00546",
+    "w00901",
+    "w02202",
+    "w02587"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "blade-comics",
+     "name": "ブレイドコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 5,
+     "works": [
+      "w00379",
+      "w00546",
+      "w00901",
+      "w02587"
+     ],
+     "spellings": [
+      {
+       "raw": "Blade comics",
+       "rows": 4,
+       "years": [
+        "2018",
+        "2023"
+       ]
+      },
+      {
+       "raw": "ブレイドコミックス",
+       "rows": 1,
+       "years": [
+        "2010",
+        "2010"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "blade-comics-pixiv",
+     "name": "Blade comics. Pixiv",
+     "parent": "ブレイドコミックス",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00128"
+     ],
+     "spellings": [
+      {
+       "raw": "Blade comics. Pixiv",
+       "rows": 1,
+       "years": [
+        "2026",
+        "2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mag-garden-comics-beats",
+     "name": "マッグガーデンコミックスBeat'sシリーズ",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w02202"
+     ],
+     "spellings": [
+      {
+       "raw": "マッグガーデンコミックスBeat'sシリーズ",
+       "rows": 1,
+       "years": [
+        "2015",
+        "2015"
+       ]
+      }
+     ]
+    }
+   ]
+  },
   "h00003": {
    "id": "h00003",
    "name": "小学館",
@@ -966,6 +1055,7 @@
    "works": [
     "w01352",
     "w00021",
+    "w00102",
     "w00522",
     "w00044",
     "w03101",
@@ -973,7 +1063,6 @@
     "w02200",
     "w00033",
     "w00079",
-    "w00102",
     "w00313",
     "w00282",
     "w00302",
@@ -5488,69 +5577,15 @@
     }
    ]
   },
-  "h00048": {
-   "id": "h00048",
-   "name": "マンガボックス",
-   "rows": 2,
-   "works": [
-    "w02263",
-    "w02346"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "comic-melo",
-     "name": "コミックMELO",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w02346"
-     ],
-     "spellings": [
-      {
-       "raw": "コミックMELO",
-       "rows": 1,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    },
-    {
-     "id": null,
-     "name": "マンガボックス",
-     "parent": null,
-     "resolved": false,
-     "rows": 1,
-     "works": [
-      "w02263"
-     ],
-     "spellings": [
-      {
-       "raw": "マンガボックス",
-       "rows": 1,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    }
-   ]
-  },
   "h00009": {
    "id": "h00009",
    "name": "集英社",
    "rows": 19,
    "works": [
+    "w00029",
     "w03221",
     "w00072",
     "w00716",
-    "w00029",
     "w00051",
     "w00157",
     "w00378",
@@ -5731,6 +5766,93 @@
     }
    ]
   },
+  "h00048": {
+   "id": "h00048",
+   "name": "マンガボックス",
+   "rows": 2,
+   "works": [
+    "w02263",
+    "w02346"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "comic-melo",
+     "name": "コミックMELO",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w02346"
+     ],
+     "spellings": [
+      {
+       "raw": "コミックMELO",
+       "rows": 1,
+       "years": [
+        null,
+        null
+       ]
+      }
+     ]
+    },
+    {
+     "id": null,
+     "name": "マンガボックス",
+     "parent": null,
+     "resolved": false,
+     "rows": 1,
+     "works": [
+      "w02263"
+     ],
+     "spellings": [
+      {
+       "raw": "マンガボックス",
+       "rows": 1,
+       "years": [
+        null,
+        null
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00014": {
+   "id": "h00014",
+   "name": "文藝春秋",
+   "rows": 1,
+   "works": [
+    "w00106"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "seasons-fantasy",
+     "name": "Seasons Fantasy",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00106"
+     ],
+     "spellings": [
+      {
+       "raw": "Seasons Fantasy",
+       "rows": 1,
+       "years": [
+        "2025",
+        "2025"
+       ]
+      }
+     ]
+    }
+   ]
+  },
   "h00001": {
    "id": "h00001",
    "name": "芳文社",
@@ -5746,6 +5868,7 @@
     "w01869",
     "w03159",
     "w00041",
+    "w00155",
     "w00202",
     "w03212",
     "w00170",
@@ -5774,7 +5897,6 @@
     "w00112",
     "w02150",
     "w00140",
-    "w00155",
     "w00181",
     "w02790",
     "w02250",
@@ -6855,95 +6977,6 @@
     }
    ]
   },
-  "h00017": {
-   "id": "h00017",
-   "name": "マッグガーデン",
-   "rows": 7,
-   "works": [
-    "w00128",
-    "w00379",
-    "w00546",
-    "w00901",
-    "w02202",
-    "w02587"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "blade-comics",
-     "name": "ブレイドコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 5,
-     "works": [
-      "w00379",
-      "w00546",
-      "w00901",
-      "w02587"
-     ],
-     "spellings": [
-      {
-       "raw": "Blade comics",
-       "rows": 4,
-       "years": [
-        "2018",
-        "2023"
-       ]
-      },
-      {
-       "raw": "ブレイドコミックス",
-       "rows": 1,
-       "years": [
-        "2010",
-        "2010"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "blade-comics-pixiv",
-     "name": "Blade comics. Pixiv",
-     "parent": "ブレイドコミックス",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00128"
-     ],
-     "spellings": [
-      {
-       "raw": "Blade comics. Pixiv",
-       "rows": 1,
-       "years": [
-        "2026",
-        "2026"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "mag-garden-comics-beats",
-     "name": "マッグガーデンコミックスBeat'sシリーズ",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w02202"
-     ],
-     "spellings": [
-      {
-       "raw": "マッグガーデンコミックスBeat'sシリーズ",
-       "rows": 1,
-       "years": [
-        "2015",
-        "2015"
-       ]
-      }
-     ]
-    }
-   ]
-  },
   "h00019": {
    "id": "h00019",
    "name": "ホーム社",
@@ -6983,6 +7016,39 @@
        "years": [
         "2023",
         "2023"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00011": {
+   "id": "h00011",
+   "name": "アース・スターエンターテイメント",
+   "rows": 1,
+   "works": [
+    "w00043"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "earth-star-comics",
+     "name": "EARTH STAR COMICS",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00043"
+     ],
+     "spellings": [
+      {
+       "raw": "EARTH STAR COMICS",
+       "rows": 1,
+       "years": [
+        "2025",
+        "2025"
        ]
       }
      ]
@@ -7034,72 +7100,6 @@
        "rows": 3,
        "years": [
         "2020",
-        "2025"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00011": {
-   "id": "h00011",
-   "name": "アース・スターエンターテイメント",
-   "rows": 1,
-   "works": [
-    "w00043"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "earth-star-comics",
-     "name": "EARTH STAR COMICS",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00043"
-     ],
-     "spellings": [
-      {
-       "raw": "EARTH STAR COMICS",
-       "rows": 1,
-       "years": [
-        "2025",
-        "2025"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00014": {
-   "id": "h00014",
-   "name": "文藝春秋",
-   "rows": 1,
-   "works": [
-    "w00106"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "seasons-fantasy",
-     "name": "Seasons Fantasy",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00106"
-     ],
-     "spellings": [
-      {
-       "raw": "Seasons Fantasy",
-       "rows": 1,
-       "years": [
-        "2025",
         "2025"
        ]
       }

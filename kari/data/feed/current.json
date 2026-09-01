@@ -392,7 +392,7 @@
    "plat": "comic-action",
    "plat_name": "webアクション",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-15",
    "access_modes": [
     "purchase"
    ],
@@ -489,7 +489,10 @@
    "plat": "magcomi",
    "plat_name": "MAGCOMI",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-15",
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -538,6 +541,160 @@
    }
   },
   {
+   "id": "magcomi:episode:12207421984174948874",
+   "work": "東京つけものがたり",
+   "ep": "第2話「大根と林檎の柚子はちみつ漬け」",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-01",
+   "seen": "2026-09-02",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://magcomi.com/episode/12207421984174948874",
+   "author": "ぜろわん/あずやちとせ",
+   "plat": "magcomi",
+   "plat_name": "MAGCOMI",
+   "ident": "discovery-candidate",
+   "free_from": "2026-10-06",
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 2",
+   "kind_inferred": true,
+   "preferred": "MAGCOMI",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-09-01",
+   "work_en": {
+    "reading": "トウキョウ ツケ モノガタリ",
+    "ruby": [
+     [
+      "東京",
+      "とうきょう"
+     ],
+     [
+      "つけものがたり",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Tōkyō Tsuke Monogatari",
+     "double": "Toukyou Tsuke Monogatari",
+     "plain": "Tokyo Tsuke Monogatari"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ゼロワン / アズヤチトセ",
+    "ruby": [
+     [
+      "ぜろわん",
+      null
+     ],
+     [
+      "/",
+      null
+     ],
+     [
+      "あずやちとせ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Zerowan / Azuyachitose",
+     "double": "Zerowan / Azuyachitose",
+     "plain": "Zerowan / Azuyachitose"
+    },
+    "reading_basis": "surface",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "magcomi:episode:12207421984122057940",
+   "work": "東京つけものがたり",
+   "ep": "第1話「スイカの皮の白だし漬け」",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-01",
+   "seen": "2026-09-02",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://magcomi.com/episode/12207421984122057940",
+   "author": "ぜろわん/あずやちとせ",
+   "plat": "magcomi",
+   "plat_name": "MAGCOMI",
+   "ident": "discovery-candidate",
+   "free_from": "2026-09-01T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-series",
+   "kind_basis": "episode numbered 1",
+   "kind_inferred": true,
+   "preferred": "MAGCOMI",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-09-01",
+   "work_en": {
+    "reading": "トウキョウ ツケ モノガタリ",
+    "ruby": [
+     [
+      "東京",
+      "とうきょう"
+     ],
+     [
+      "つけものがたり",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Tōkyō Tsuke Monogatari",
+     "double": "Toukyou Tsuke Monogatari",
+     "plain": "Tokyo Tsuke Monogatari"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ゼロワン / アズヤチトセ",
+    "ruby": [
+     [
+      "ぜろわん",
+      null
+     ],
+     [
+      "/",
+      null
+     ],
+     [
+      "あずやちとせ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Zerowan / Azuyachitose",
+     "double": "Zerowan / Azuyachitose",
+     "plain": "Zerowan / Azuyachitose"
+    },
+    "reading_basis": "surface",
+    "basis": "romaji"
+   }
+  },
+  {
    "id": "sunday_webry:episode:12207421984173613088",
    "work": "#ギャルとギャルの百合",
    "ep": "#25 #きさらぎ駅",
@@ -556,6 +713,9 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-31T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -623,6 +783,9 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-31T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -679,6 +842,9 @@
    "plat_name": "となりのヤングジャンプ",
    "ident": "discovery-candidate",
    "free_from": "2026-09-01T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -1059,6 +1225,83 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00058"
+   }
+  },
+  {
+   "id": "nicovideo:76421:2026-09-01",
+   "work": "#ギャルとギャルの百合",
+   "ep": "#9",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-01",
+   "seen": "2026-09-02",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1124608",
+   "author": "イノウエ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 9",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 3,
+   "free_episodes": 3,
+   "started": "2026-01-20",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on サンデーうぇぶり, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-09-01",
+   "wid": "w00060",
+   "work_en": {
+    "reading": "# ギャル ト ギャル ノ ユリ",
+    "ruby": [
+     [
+      "#ギャルとギャルの",
+      null
+     ],
+     [
+      "百合",
+      "ゆり"
+     ]
+    ],
+    "romaji": {
+     "macron": "# Gyaru to Gyaru no Yuri",
+     "double": "# Gyaru to Gyaru no Yuri",
+     "plain": "# Gyaru to Gyaru no Yuri"
+    },
+    "en": "#Gyaru and Gyaru Yuri",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "#Gyaru and Gyaru Yuri"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "イノウエ",
+    "romaji": {
+     "macron": "Inoue",
+     "double": "Inoue",
+     "plain": "Inoue"
+    },
+    "undivided": true,
+    "en": "Inoue",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00124"
    }
   },
   {
@@ -2398,6 +2641,9 @@
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
    "free_from": "2026-08-27T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -2447,6 +2693,9 @@
    "plat_name": "Seasons",
    "ident": "discovery-candidate",
    "free_from": "2026-08-28T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -2525,6 +2774,9 @@
    "plat_name": "少年ジャンプ+",
    "ident": "discovery-candidate",
    "free_from": "2026-08-27T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -2607,6 +2859,9 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-27T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -5850,6 +6105,9 @@
    "plat_name": "となりのヤングジャンプ",
    "ident": "discovery-candidate",
    "free_from": "2026-08-27T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -8159,6 +8417,9 @@
    "plat_name": "となりのヤングジャンプ",
    "ident": "discovery-candidate",
    "free_from": "2026-08-26T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -8167,6 +8428,26 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-08-26",
+   "work_en": {
+    "reading": "シニガミ デリート",
+    "ruby": [
+     [
+      "死神",
+      "しにがみ"
+     ],
+     [
+      "デリート",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Shinigami Derīto",
+     "double": "Shinigami Deriito",
+     "plain": "Shinigami Derito"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser"
+   },
    "author_en": {
     "reading": "タニノ シブキ",
     "romaji": {
@@ -8793,6 +9074,9 @@
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -8852,6 +9136,9 @@
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -8911,6 +9198,9 @@
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
    "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -8969,7 +9259,10 @@
    "plat": "kuragebunch",
    "plat_name": "くらげバンチ",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-29",
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -10889,7 +11182,10 @@
    "plat": "comic-days",
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-05",
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -11821,6 +12117,9 @@
    "plat_name": "COMIC OGYAAA!!",
    "ident": "discovery-candidate",
    "free_from": "2026-08-21T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -11899,16 +12198,18 @@
    "plat_name": "Seasons",
    "ident": "discovery-candidate",
    "free_from": "2026-08-21T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
-   "kind_basis": "numbered 2, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 2",
    "kind_inferred": true,
    "preferred": "Seasons",
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-08-21",
-   "wid": "w00391",
    "work_en": {
     "reading": "コンヤ、 エーテル デ マチアワセ",
     "ruby": [
@@ -11973,6 +12274,9 @@
    "plat_name": "コミックトレイル",
    "ident": "discovery-candidate",
    "free_from": "2026-08-21T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -12051,6 +12355,9 @@
    "plat_name": "少年ジャンプ+",
    "ident": "discovery-candidate",
    "free_from": "2026-08-20T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -12135,6 +12442,9 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-20T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -13147,7 +13457,7 @@
    "plat": "comic-days",
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-09-03",
    "access_modes": [
     "purchase"
    ],
