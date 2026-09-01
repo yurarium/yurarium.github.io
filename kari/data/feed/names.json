@@ -24189,6 +24189,9 @@
     "double": "Yuatosaki",
     "plain": "Yuatosaki"
    },
+   "translation_refused": "Read aloud it is ユア ト サキ, which is two given names joined by と, and it is also あとさき, before and after, with a ゆ in front. Nothing available settles which: コミックDAYS carries no synopsis for it, only 【アフタヌーン四季賞2025冬 佳作】, and the one-shot itself is the only place the answer is. A translation would have to pick two characters out of the air or a phrase out of the other reading, so ours is the romanisation until somebody reads it.",
+   "en": "Yuatosaki",
+   "basis": "romaji",
    "reading_basis": "surface"
   },
   "ゆうやけトリップ": {
@@ -74297,7 +74300,7 @@
    "reading_basis": "analyser"
   },
   "東京つけものがたり": {
-   "reading": "トウキョウ ツケ モノガタリ",
+   "reading": "トウキョウ ツケモノガタリ",
    "ruby": [
     [
      "東京",
@@ -74309,13 +74312,16 @@
     ]
    ],
    "romaji": {
-    "macron": "Tōkyō Tsuke Monogatari",
-    "double": "Toukyou Tsuke Monogatari",
-    "plain": "Tokyo Tsuke Monogatari"
+    "macron": "Tōkyō Tsukemonogatari",
+    "double": "Toukyou Tsukemonogatari",
+    "plain": "Tokyo Tsukemonogatari"
    },
-   "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "en": "A Tokyo Pickle Tale",
+   "basis": "translated",
+   "en_forms": {
+    "translated": "A Tokyo Pickle Tale"
+   },
+   "reading_basis": "surface"
   },
   "東方Project二次創作シリーズSPELL": {
    "reading": "トウホウ Project ニジ ソウサク シリーズ 　 SPELL",
@@ -75936,8 +75942,12 @@
     "double": "Shinigami Deriito",
     "plain": "Shinigami Derito"
    },
-   "basis": "romaji",
-   "reading_basis": "analyser"
+   "en": "Reaper Delete",
+   "basis": "translated",
+   "en_forms": {
+    "translated": "Reaper Delete"
+   },
+   "reading_basis": "surface"
   },
   "死神少女は陰から推しを眺めたい─悪役にTS転生したけど、こっそり原作キャラを観察しに行きます!─": {
    "reading": "シニガミ ショウジョ ワ カゲ カラ オシ ヲ ナガメタイ 　 ─ アクヤク ニ TS テンセイ シタケド、 コッソリ ゲンサク キャラ ヲ カンサツ シ ニ イキマス！ ─",
@@ -87784,7 +87794,11 @@
      "ひと"
     ],
     [
-     "はとても〇〇",
+     "はとても",
+     null
+    ],
+    [
+     "〇〇",
      null
     ]
    ],
@@ -87793,9 +87807,12 @@
     "double": "Watashi no Sukina Hito wa Totemo 〇〇",
     "plain": "Watashi no Sukina Hito wa Totemo 〇〇"
    },
-   "basis": "romaji",
-   "reading_basis": "analyser",
-   "unverified": true
+   "en": "The Person I Like Is Very ○○",
+   "basis": "translated",
+   "en_forms": {
+    "translated": "The Person I Like Is Very ○○"
+   },
+   "reading_basis": "surface"
   },
   "私の好きは雪に解けない。": {
    "reading": "ワタシ ノ スキ ワ ユキ ニ トケナイ。",
