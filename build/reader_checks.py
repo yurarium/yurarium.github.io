@@ -1147,7 +1147,13 @@ RECORDED = {
     # and dropping every night reach a reader at last, and six of their credits state no reading.
     # Each shows a marked romanisation with a tooltip saying the reading is not attested, which is
     # the floor doing its job rather than a rendering getting worse.
-    "renderings resting on a mechanical romanisation": 654,
+    # 654 -> 658 ON 2026-09-02, the four titles that had no English at all arriving with bylines.
+    # 東京つけものがたり, 死神デリート, 私の好きな人はとても〇〇 and ゆあとさき were curated the day
+    # before; their credits came with them, and 谷之しぶき, 松まか and 灯立夏 each carry a reading
+    # the analyser worked out and no source states, which is exactly this population. Each is shown
+    # with its mark and its tooltip. A title a reader can read against a byline shown as a marked
+    # guess is the trade, and it is the right way round.
+    "renderings resting on a mechanical romanisation": 658,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
