@@ -1153,7 +1153,18 @@ RECORDED = {
     # the analyser worked out and no source states, which is exactly this population. Each is shown
     # with its mark and its tooltip. A title a reader can read against a byline shown as a marked
     # guess is the trade, and it is the right way round.
-    "renderings resting on a mechanical romanisation": 658,
+    # 658 -> 678 ON 2026-09-06, and the cause is the floor set turning over rather than twenty
+    # names getting worse. 33 strings entered it and 27 left; almost every arrival is an instalment
+    # name, 第124話, ロボ22-5, 幕間話5, 第133話(最終話), which is what a chapter is called and what
+    # nothing states a reading for. The rendered count moves by more than the net six because a
+    # count of MARKUP counts instances: an arriving chapter name appears on more rows than a
+    # departing one did.
+    #
+    # A NUMBER THAT CHURNS DAILY IS A POOR RATCHET, and this one has gone 638, 648, 654, 658, 678
+    # over five days with a reason recorded each time. What it was written to measure is the data
+    # gap in NAMES; what it mostly counts is chapters, which publish and expire whatever anybody
+    # researches. Recorded in docs/GAPS.md in the pipeline repository rather than fixed here.
+    "renderings resting on a mechanical romanisation": 678,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
