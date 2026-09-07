@@ -1164,7 +1164,11 @@ RECORDED = {
     # over five days with a reason recorded each time. What it was written to measure is the data
     # gap in NAMES; what it mostly counts is chapters, which publish and expire whatever anybody
     # researches. Recorded in docs/GAPS.md in the pipeline repository rather than fixed here.
-    "renderings resting on a mechanical romanisation": 678,
+    # 678 -> 679 ON 2026-09-08, one more than yesterday and the same churn: the floor set turns over
+    # as chapters publish and expire, and a count of MARKUP moves with how many rows an arriving
+    # name appears on. Recorded rather than argued with; docs/GAPS.md carries the note that this
+    # number churns daily and is a poor ratchet.
+    "renderings resting on a mechanical romanisation": 679,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
