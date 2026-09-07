@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-07",
+ "generated": "2026-09-08",
  "note": "English renderings and readings, keyed by NFKC-folded title/author. Joined onto feed rows at render time so archived months — which are never rewritten — still show current names.",
  "titles": {
   "#うちらが最強~陰キャ除霊師とギャルJK~": {
@@ -149872,20 +149872,6 @@
   }
  },
  "imprints": {
-  "ヴァルキリーコミックス": {
-   "id": "valkyrie-comics",
-   "name": "ヴァルキリーコミックス",
-   "publishers": [
-    "キルタイムコミュニケーション"
-   ]
-  },
-  "ガンガンコミックス": {
-   "id": "gangan-comics",
-   "name": "ガンガンコミックス",
-   "publishers": [
-    "スクウェア・エニックス"
-   ]
-  },
   "電撃コミックスNEXT": {
    "id": "dengeki-comics-next",
    "name": "電撃コミックスNEXT",
@@ -149898,6 +149884,78 @@
    "name": "電撃コミックスNEXT",
    "publishers": [
     "KADOKAWA"
+   ]
+  },
+  "ヒーローズコミックス ふらっと": {
+   "id": "heros-comics-furatto",
+   "name": "ヒーローズコミックスふらっと",
+   "parent": "HCヒーローズコミックス",
+   "publishers": [
+    "ヒーローズ"
+   ]
+  },
+  "ヒーローズコミックスふらっと": {
+   "id": "heros-comics-furatto",
+   "name": "ヒーローズコミックスふらっと",
+   "parent": "HCヒーローズコミックス",
+   "publishers": [
+    "ヒーローズ"
+   ]
+  },
+  "カドコミ": {
+   "id": "kadocomi",
+   "name": "カドコミ",
+   "publishers": [
+    "KADOKAWA"
+   ]
+  },
+  "PASH! コミックス": {
+   "id": "pash-comics",
+   "name": "PASH! コミックス",
+   "publishers": [
+    "主婦と生活社"
+   ]
+  },
+  "pash!コミックス": {
+   "id": "pash-comics",
+   "name": "PASH! コミックス",
+   "publishers": [
+    "主婦と生活社"
+   ]
+  },
+  "ヴァルキリーコミックス": {
+   "id": "valkyrie-comics",
+   "name": "ヴァルキリーコミックス",
+   "publishers": [
+    "キルタイムコミュニケーション"
+   ]
+  },
+  "百合コレ": {
+   "id": "yuri-kore",
+   "name": "百合コレ",
+   "publishers": [
+    "ナンバーナイン"
+   ]
+  },
+  "ガンガンコミックス": {
+   "id": "gangan-comics",
+   "name": "ガンガンコミックス",
+   "publishers": [
+    "スクウェア・エニックス"
+   ]
+  },
+  "ACTION COMICS": {
+   "id": "action-comics",
+   "name": "アクションコミックス",
+   "publishers": [
+    "双葉社"
+   ]
+  },
+  "actioncomics": {
+   "id": "action-comics",
+   "name": "アクションコミックス",
+   "publishers": [
+    "双葉社"
    ]
   },
   "ヤンマガKC": {
@@ -149930,34 +149988,6 @@
     "KADOKAWA"
    ]
   },
-  "ACTION COMICS": {
-   "id": "action-comics",
-   "name": "アクションコミックス",
-   "publishers": [
-    "双葉社"
-   ]
-  },
-  "actioncomics": {
-   "id": "action-comics",
-   "name": "アクションコミックス",
-   "publishers": [
-    "双葉社"
-   ]
-  },
-  "PASH! コミックス": {
-   "id": "pash-comics",
-   "name": "PASH! コミックス",
-   "publishers": [
-    "主婦と生活社"
-   ]
-  },
-  "pash!コミックス": {
-   "id": "pash-comics",
-   "name": "PASH! コミックス",
-   "publishers": [
-    "主婦と生活社"
-   ]
-  },
   "KITORA": {
    "id": "kitora",
    "name": "KITORA",
@@ -149984,13 +150014,6 @@
    "id": "mfc-flapper",
    "name": "MFコミックス フラッパーシリーズ",
    "parent": "MFC",
-   "publishers": [
-    "KADOKAWA"
-   ]
-  },
-  "カドコミ": {
-   "id": "kadocomi",
-   "name": "カドコミ",
    "publishers": [
     "KADOKAWA"
    ]
@@ -150308,13 +150331,6 @@
     "芳文社"
    ]
   },
-  "百合コレ": {
-   "id": "yuri-kore",
-   "name": "百合コレ",
-   "publishers": [
-    "ナンバーナイン"
-   ]
-  },
   "HARTA COMIX": {
    "id": "harta-comix",
    "name": "ハルタコミックス",
@@ -150604,22 +150620,6 @@
    "parent": "MFC",
    "publishers": [
     "KADOKAWA"
-   ]
-  },
-  "ヒーローズコミックス ふらっと": {
-   "id": "heros-comics-furatto",
-   "name": "ヒーローズコミックスふらっと",
-   "parent": "HCヒーローズコミックス",
-   "publishers": [
-    "ヒーローズ"
-   ]
-  },
-  "ヒーローズコミックスふらっと": {
-   "id": "heros-comics-furatto",
-   "name": "ヒーローズコミックスふらっと",
-   "parent": "HCヒーローズコミックス",
-   "publishers": [
-    "ヒーローズ"
    ]
   },
   "集英社ホームコミックス. オギャー!!": {
@@ -152795,14 +152795,6 @@
   }
  },
  "credit_parts": {
-  "瑠夏子": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "瑠夏子"
-    }
-   ]
-  },
   "棚木防衛": {
    "j": ", ",
    "p": [
@@ -152811,11 +152803,90 @@
     }
    ]
   },
+  "とりから": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "とりから"
+    }
+   ]
+  },
+  "柚原もけ/入間人間/のん": {
+   "j": " / ",
+   "p": [
+    {
+     "n": "柚原もけ"
+    },
+    {
+     "n": "入間人間"
+    },
+    {
+     "n": "のん",
+     "r": "キャラクターデザイン"
+    }
+   ]
+  },
+  "三倉ゆめ": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "三倉ゆめ"
+    }
+   ]
+  },
+  "瑠夏子": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "瑠夏子"
+    }
+   ]
+  },
+  "矢坂しゅう": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "矢坂しゅう"
+    }
+   ]
+  },
+  "河野スイ": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "河野スイ"
+    }
+   ]
+  },
+  "藤本セツナ": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "藤本セツナ"
+    }
+   ]
+  },
+  "砂泉文": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "砂泉文"
+    }
+   ]
+  },
   "涼海来夏": {
    "j": ", ",
    "p": [
     {
      "n": "涼海来夏"
+    }
+   ]
+  },
+  "なをををををを": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "なをををををを"
     }
    ]
   },
@@ -152836,11 +152907,11 @@
     }
    ]
   },
-  "とりから": {
+  "中村カンコ": {
    "j": ", ",
    "p": [
     {
-     "n": "とりから"
+     "n": "中村カンコ"
     }
    ]
   },
@@ -152879,22 +152950,6 @@
     },
     {
      "n": "Spider Lily"
-    }
-   ]
-  },
-  "中村カンコ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "中村カンコ"
-    }
-   ]
-  },
-  "河野スイ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "河野スイ"
     }
    ]
   },
@@ -153587,14 +153642,6 @@
     }
    ]
   },
-  "砂泉文": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "砂泉文"
-    }
-   ]
-  },
   "当麻": {
    "j": ", ",
    "p": [
@@ -153682,14 +153729,6 @@
     {
      "n": "ウオズミアミ",
      "r": "著"
-    }
-   ]
-  },
-  "なをををををを": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "なをををををを"
     }
    ]
   },
@@ -153903,22 +153942,6 @@
    "p": [
     {
      "n": "霜月汐"
-    }
-   ]
-  },
-  "矢坂しゅう": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "矢坂しゅう"
-    }
-   ]
-  },
-  "藤本セツナ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "藤本セツナ"
     }
    ]
   },
@@ -154328,34 +154351,11 @@
     }
    ]
   },
-  "柚原もけ/入間人間/のん": {
-   "j": " / ",
-   "p": [
-    {
-     "n": "柚原もけ"
-    },
-    {
-     "n": "入間人間"
-    },
-    {
-     "n": "のん",
-     "r": "キャラクターデザイン"
-    }
-   ]
-  },
   "吉村佳": {
    "j": ", ",
    "p": [
     {
      "n": "吉村佳"
-    }
-   ]
-  },
-  "三倉ゆめ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "三倉ゆめ"
     }
    ]
   },
@@ -186681,12 +186681,6 @@
    "plain": "1. 1Kai Hyo Dentonoissen!? Zenpen"
   },
   "1.第1話": "1. Dai1Hanashi",
-  "10.第10話ふたりのなれそめ・前編": "10. Dai10Hanashi Futari No Naresome · Zenpen",
-  "100.第94話しんゆうのたのみ": {
-   "macron": "100. Dai94Hanashi Shin'yū No Tanomi",
-   "double": "100. Dai94Hanashi Shin'yuu No Tanomi",
-   "plain": "100. Dai94Hanashi Shin'yu No Tanomi"
-  },
   "100万円貰った女子高生の話": {
    "macron": "100Man En Moratta Joshikōsei No Hanashi",
    "double": "100Man En Moratta Joshikousei No Hanashi",
@@ -186698,105 +186692,36 @@
    "plain": "100Nichigo NixxxSuru Onna Shacho To Shinnyushain"
   },
   "100日後に咲く百合": "100Nichigo Ni Saku Yuri",
-  "101.第95話みぢかなおじゃまむし": "101. Dai95Hanashi Mijika Na Ojamamushi",
-  "102.第96話おんなのこのりそう": {
-   "macron": "102. Dai96Hanashi Onnanoko No Risō",
-   "double": "102. Dai96Hanashi Onnanoko No Risou",
-   "plain": "102. Dai96Hanashi Onnanoko No Riso"
-  },
-  "103.第97話ごきげんないちにち": "103. Dai97Hanashi Gokigen Na Ichinichi",
-  "104.第98話とくべつないちにち": "104. Dai98Hanashi Tokubetsu Na Ichinichi",
-  "105.第99話りそうのかぞく": {
-   "macron": "105. Dai99Hanashi Risō No Kazoku",
-   "double": "105. Dai99Hanashi Risou No Kazoku",
-   "plain": "105. Dai99Hanashi Riso No Kazoku"
-  },
-  "106.第100話ゆきのふるよる": "106. Dai100Hanashi Yuki No Furu Yoru",
-  "107.第101話おそろいのくちびる": "107. Dai101Hanashi Osoroi No Kuchibiru",
-  "108.第102話らいねんのもくひょう・なのは編": {
-   "macron": "108. Dai102Hanashi Rainen No Mokuhyō · Na No Wa Hen",
-   "double": "108. Dai102Hanashi Rainen No Mokuhyou · Na No Wa Hen",
-   "plain": "108. Dai102Hanashi Rainen No Mokuhyo · Na No Wa Hen"
-  },
-  "109.第103話らいねんのもくひょう・千鳥編": {
-   "macron": "109. Dai103Hanashi Rainen No Mokuhyō · Chidori Hen",
-   "double": "109. Dai103Hanashi Rainen No Mokuhyou · Chidori Hen",
-   "plain": "109. Dai103Hanashi Rainen No Mokuhyo · Chidori Hen"
-  },
   "10年前に幼馴染と結婚する約束したけど": "10Nen Mae Ni Osananajimi To Kekkon Suru Yakusoku Shitakedo",
   "10話": "10Hanashi",
-  "10話ずつ": "10Hanashi Zutsu",
-  "10話ずつ前へ1": "10Hanashi Zutsu Mae E 1",
-  "11.第11話ふたりのなれそめ・後編": {
-   "macron": "11. Dai11Hanashi Futari No Naresome · Kōhen",
-   "double": "11. Dai11Hanashi Futari No Naresome · Kouhen",
-   "plain": "11. Dai11Hanashi Futari No Naresome · Kohen"
-  },
-  "110.第104話きもちはかさなる": "110. Dai104Hanashi Kimochi Ha Kasanaru",
-  "111.第105話あのこのかおり": "111. Dai105Hanashi Anoko No Kaori",
-  "112.第106話しゃっくりのとめかた": "112. Dai106Hanashi Shakkuri No Tomekata",
-  "113.第107話かんびなゆうわく": {
-   "macron": "113. Dai107Hanashi Kanbi Na Yūwaku",
-   "double": "113. Dai107Hanashi Kanbi Na Yuuwaku",
-   "plain": "113. Dai107Hanashi Kanbi Na Yuwaku"
-  },
-  "114.第108話ふたりのかんけい": "114. Dai108Hanashi Futari No Kankei",
-  "115.第109話せんぱいからのじょげん": "115. Dai109Hanashi Senpaikara No Jogen",
-  "116.第110話しあわせのつめあわせ": "116. Dai110Hanashi Shiawase No Tsumeawase",
-  "117.第111話はるのゆめ": "117. Dai111Hanashi Haru No Yume",
-  "118.第112話それぞれのせんたく": "118. Dai112Hanashi Sorezore No Sentaku",
-  "119.第113話ふたりのけつい": "119. Dai113Hanashi Futari No Ketsui",
   "11話": "11Hanashi",
-  "12.第12話こんどはふたりで": "12. Dai12Hanashi Kondo Ha Futaride",
-  "120.第114話からまわりのしんがっき": "120. Dai114Hanashi Karamawari No Shingakki",
-  "121.第115話いつものばしょで": "121. Dai115Hanashi Itsumo No Bashode",
-  "122.第116話さいしょのきねんび・前編": "122. Dai116Hanashi Saisho No Kinenbi · Zenpen",
-  "123.第117話さいしょのきねんび・後編": {
-   "macron": "123. Dai117Hanashi Saisho No Kinenbi · Kōhen",
-   "double": "123. Dai117Hanashi Saisho No Kinenbi · Kouhen",
-   "plain": "123. Dai117Hanashi Saisho No Kinenbi · Kohen"
-  },
-  "124.第118話のこりのじかん": "124. Dai118Hanashi Nokori No Jikan",
-  "125.第119話とくべつなてほどき": "125. Dai119Hanashi Tokubetsu Na Tehodoki",
-  "126.第120話こくはくのたいみんぐ": "126. Dai120Hanashi Kokuhaku No Taimingu",
   "12分のエチュード": {
    "macron": "12Bun No Echūdo",
    "double": "12Bun No Echuudo",
    "plain": "12Bun No Echudo"
   },
   "12話": "12Hanashi",
-  "13.第13話かれしとかのじょ": "13. Dai13Hanashi Kareshi To Kanojo",
   "13にちめ:推しのため!?": "13Nichime:Oshi No Tame!?",
   "13話": "13Hanashi",
-  "14.第14話いつものじかん": "14. Dai14Hanashi Itsumo No Jikan",
   "14gの逃避行": {
    "macron": "14gNo Tōhikō",
    "double": "14gNo Touhikou",
    "plain": "14gNo Tohiko"
   },
   "14話": "14Hanashi",
-  "15.第15話けんかのあとは": "15. Dai15Hanashi Kenka No Atoha",
   "15才": "15Sai",
   "15話": "15Hanashi",
-  "16.第16話ほんきのおうえん": {
-   "macron": "16. Dai16Hanashi Honki No Ōen",
-   "double": "16. Dai16Hanashi Honki No Ouen",
-   "plain": "16. Dai16Hanashi Honki No Oen"
-  },
   "169.第162話わたしのこいびと": "169. Dai162Hanashi Watashi No Koibito",
   "17第4夜『君の名は。』を更新しました。": {
    "macron": "17 Dai4Yoru “Kimi No Na Wa.” O Kōshin Shimashita.",
    "double": "17 Dai4Yoru “Kimi No Na Wa.” O Koushin Shimashita.",
    "plain": "17 Dai4Yoru “Kimi No Na Wa.” O Koshin Shimashita."
   },
-  "17.第17話ふたりのせかい": "17. Dai17Hanashi Futari No Sekai",
   "17歳": "17Toshi",
   "17話": "17Hanashi",
   "17輪目:ヒペリカム": "17Wame:Hiperikamu",
   "17食目。(1)": "17Shokume.(1)",
-  "18.第18話ひんやりでもちもち": "18. Dai18Hanashi Hin'yari De Mochimochi",
   "18話": "18Hanashi",
-  "19.1巻PR": "19. 1MakiPR",
   "1~3短編まとめ": "1~3 Tanpen Matome",
   "1×1/2-イチトニブンノイチ-": "1x1/2-Ichitonibunnoichi-",
   "1いいねでスカートが0.1mm短くなるクラスの地味な女の子": {
@@ -186889,7 +186814,6 @@
    "double": "20 Dai2Yoru “Fantasutikku Mr.FOX” O Koushin Shimashita.",
    "plain": "20 Dai2Yoru “Fantasutikku Mr.FOX” O Koshin Shimashita."
   },
-  "20.第19話せいふくでおでかけ": "20. Dai19Hanashi Seifuku De Odekake",
   "2016年9月号増刊(2016年8月19日発売)": {
    "macron": "2016Nen9Gatsu Gō Zōkan(2016Nen8Tsuki19Hi Hatsubai)",
    "double": "2016Nen9Gatsu Gou Zoukan(2016Nen8Tsuki19Hi Hatsubai)",
@@ -187522,24 +187446,7 @@
   },
   "20話": "20Hanashi",
   "20話(2)": "20Hanashi(2)",
-  "21.第20話じょしのたしなみ": "21. Dai20Hanashi Joshi No Tashinami",
   "21話": "21Hanashi",
-  "22.第21話がいけんとないめん": "22. Dai21Hanashi Gaiken To Naimen",
-  "23.第22話続ふたりのなれそめ・前編": "23. Dai22Hanashi Zoku Futari No Naresome · Zenpen",
-  "24.第23話続ふたりのなれそめ・後編": {
-   "macron": "24. Dai23Hanashi Zoku Futari No Naresome · Kōhen",
-   "double": "24. Dai23Hanashi Zoku Futari No Naresome · Kouhen",
-   "plain": "24. Dai23Hanashi Zoku Futari No Naresome · Kohen"
-  },
-  "25.第24話なつのはじまり": "25. Dai24Hanashi Natsu No Hajimari",
-  "26.第25話やたらとどきどき": "26. Dai25Hanashi Yatara To Dokidoki",
-  "27.第26話ひみつのまちあわせ・前編": "27. Dai26Hanashi Himitsu No Machiawase · Zenpen",
-  "28.第27話ひみつのまちあわせ・後編": {
-   "macron": "28. Dai27Hanashi Himitsu No Machiawase · Kōhen",
-   "double": "28. Dai27Hanashi Himitsu No Machiawase · Kouhen",
-   "plain": "28. Dai27Hanashi Himitsu No Machiawase · Kohen"
-  },
-  "29.第28話ふたりのひかげん": "29. Dai28Hanashi Futari No Hikagen",
   "2C=がろあ": "2C=Garoa",
   "2C=がろあ/安田剛助・文尾文/たいぼく/未来電機/郷本/紀ノ上晟一/胡原おみ/びよら/佐喜ハジメ/とこみち/秋月伊槻/おたき/林家志弦": {
    "macron": "2C=Garoa / Yasuda Takesuke · Bunbi Bun / Taiboku / Mirai Denki / Gōmoto / Kinōe Seiichi / Ko Gen O Mi / Biyora / Saki Hajime / Tokomichi / Akizuki Itsuki / Otaki / Hayashiya Shizuru",
@@ -187613,38 +187520,16 @@
    "double": "3/6 Dai1Yoru “Uragiri No Saakasu” O Koushin Shimashita.",
    "plain": "3/6 Dai1Yoru “Uragiri No Sakasu” O Koshin Shimashita."
   },
-  "30.第29話ちどりとめがね": "30. Dai29Hanashi Chidori To Megane",
   "30まで独りだったら一緒に暮らそうって言ったよね?": {
    "macron": "30Ma De Hitoridattara Issho Ni Kurasōtte Itta Yo Ne?",
    "double": "30Ma De Hitoridattara Issho Ni Kurasoutte Itta Yo Ne?",
    "plain": "30Ma De Hitoridattara Issho Ni Kurasotte Itta Yo Ne?"
   },
-  "31.第30話おたんじょうびのさぷらいず": {
-   "macron": "31. Dai30Hanashi Otanjōbi No Sapuraizu",
-   "double": "31. Dai30Hanashi Otanjoubi No Sapuraizu",
-   "plain": "31. Dai30Hanashi Otanjobi No Sapuraizu"
-  },
   "31夜目": "31Yome",
-  "32.第31話ごほうびちょうだい": {
-   "macron": "32. Dai31Hanashi Gohōbi Chōdai",
-   "double": "32. Dai31Hanashi Gohoubi Choudai",
-   "plain": "32. Dai31Hanashi Gohobi Chodai"
-  },
   "32歳のふたりとごはんと": "32Toshi No Futari To Gohan To",
-  "33.第32話さいこうのなつやすみ": {
-   "macron": "33. Dai32Hanashi Saikō No Natsuyasumi",
-   "double": "33. Dai32Hanashi Saikou No Natsuyasumi",
-   "plain": "33. Dai32Hanashi Saiko No Natsuyasumi"
-  },
   "333日目": "333Nichimoku",
-  "34.第33話ねんがんのおとまり1": "34. Dai33Hanashi Nengan No Otomari 1",
   "34話我慢しなくて...いいですか!?︎2": "34Hanashi Gaman Shinakute...Iidesuka!?︎2",
-  "35.第34話ねんがんのおとまり2": "35. Dai34Hanashi Nengan No Otomari 2",
-  "36.第35話ねんがんのおとまり3": "36. Dai35Hanashi Nengan No Otomari 3",
-  "37.第36話ねんがんのおとまり4": "37. Dai36Hanashi Nengan No Otomari 4",
-  "38.第37話ちどりのかくれんぼ": "38. Dai37Hanashi Chidori No Kakurenbo",
   "38話": "38Hanashi",
-  "39.第38話みんなでかいすいよく1": "39. Dai38Hanashi Minna De Kaisuiyoku 1",
   "39話": "39Hanashi",
   "3かめ:初耳だぞ!?": "3Kame:Hatsumimida Zo!?",
   "3できそこないの姫君たち番外編": "3Deki Sokonai No Himekuntachi Bangaihen",
@@ -187683,42 +187568,23 @@
    "plain": "4 Tsuki Ni Kaeru Imoto Zenpen Koin No Shimai · Sai"
   },
   "4独り占め": "4 Hitorijime",
-  "4.第4話ぶしつでいっしょ": "4. Dai4Hanashi Bushitsu De Issho",
   "4/3第3夜『呪怨』を更新しました。": {
    "macron": "4/3 Dai3Yoru “Juon” O Kōshin Shimashita.",
    "double": "4/3 Dai3Yoru “Juon” O Koushin Shimashita.",
    "plain": "4/3 Dai3Yoru “Juon” O Koshin Shimashita."
   },
-  "40.第39話みんなでかいすいよく2": "40. Dai39Hanashi Minna De Kaisuiyoku 2",
   "407号室のふたり": {
    "macron": "407Gōshitsu No Futari",
    "double": "407Goushitsu No Futari",
    "plain": "407Goshitsu No Futari"
   },
   "40原": "40Hara",
-  "41.第40話みんなでかいすいよく3": "41. Dai40Hanashi Minna De Kaisuiyoku 3",
-  "42.第41話なつのあらし": "42. Dai41Hanashi Natsu No Arashi",
-  "43.第42話いつかのこと・前編": "43. Dai42Hanashi Itsuka No Koto · Zenpen",
   "43話": "43Hanashi",
-  "44.第43話いつかのこと・中編": {
-   "macron": "44. Dai43Hanashi Itsuka No Koto · Chūhen",
-   "double": "44. Dai43Hanashi Itsuka No Koto · Chuuhen",
-   "plain": "44. Dai43Hanashi Itsuka No Koto · Chuhen"
-  },
-  "45.第44話いつかのこと・後編": {
-   "macron": "45. Dai44Hanashi Itsuka No Koto · Kōhen",
-   "double": "45. Dai44Hanashi Itsuka No Koto · Kouhen",
-   "plain": "45. Dai44Hanashi Itsuka No Koto · Kohen"
-  },
   "45分間の魔法使い": {
    "macron": "45Bunken No Mahō Tsukai",
    "double": "45Bunken No Mahou Tsukai",
    "plain": "45Bunken No Maho Tsukai"
   },
-  "46.第45話ふたりのしれん": "46. Dai45Hanashi Futari No Shiren",
-  "47.第46話けついとわかれ": "47. Dai46Hanashi Ketsui To Wakare",
-  "48.3巻PR": "48. 3MakiPR",
-  "49.第47話あめあがりのはな前編": "49. Dai47Hanashi Ameagari No Hana Zenpen",
   "49話": "49Hanashi",
   "4kaエンピツ": "4ka Enpitsu",
   "4kaえんぴつ": "4kaEnpitsu",
@@ -187746,31 +187612,12 @@
    "double": "5 Zettai Souda!",
    "plain": "5 Zettai Soda!"
   },
-  "5.第5話すみっことまんなか": "5. Dai5Hanashi Sumikko To Mannaka",
   "5/1第5夜『アウトレイジ』を更新しました。": {
    "macron": "5/1 Dai5Yoru “Autoreiji” O Kōshin Shimashita.",
    "double": "5/1 Dai5Yoru “Autoreiji” O Koushin Shimashita.",
    "plain": "5/1 Dai5Yoru “Autoreiji” O Koshin Shimashita."
   },
-  "50.第47話あめあがりのはな後編": {
-   "macron": "50. Dai47Hanashi Ameagari No Hana Kōhen",
-   "double": "50. Dai47Hanashi Ameagari No Hana Kouhen",
-   "plain": "50. Dai47Hanashi Ameagari No Hana Kohen"
-  },
-  "51.第48話かのじょのじじょう": {
-   "macron": "51. Dai48Hanashi Kanojo No Jijō",
-   "double": "51. Dai48Hanashi Kanojo No Jijou",
-   "plain": "51. Dai48Hanashi Kanojo No Jijo"
-  },
-  "52.第49話はなびのよいん": "52. Dai49Hanashi Hanabi No Yoin",
-  "53.第50話ぎこちないふたり": "53. Dai50Hanashi Gikochinai Futari",
-  "54.第51話しあわせなじかん": "54. Dai51Hanashi Shiawase Na Jikan",
   "54話": "54Hanashi",
-  "55.第52話なつのおもいで": "55. Dai52Hanashi Natsu No Omoide",
-  "56.第53話おんなのこのかくしごと": "56. Dai53Hanashi Onnanoko No Kakushigoto",
-  "57.第54話こいのかくれが": "57. Dai54Hanashi Koi No Kakurega",
-  "58.第55話くらやみのひめごと": "58. Dai55Hanashi Kurayami No Himegoto",
-  "59.第56話ふたりのがくえんさい前編": "59. Dai56Hanashi Futari No Gakuensai Zenpen",
   "5できそこないの姫君たち番外編": "5Deki Sokonai No Himekuntachi Bangaihen",
   "5年ぶりに同居しはじめた姉妹の話": {
    "macron": "5Nenburi Ni Dōkyo Shi Hajimeta Shimai No Hanashi",
@@ -187778,91 +187625,13 @@
    "plain": "5Nenburi Ni Dokyo Shi Hajimeta Shimai No Hanashi"
   },
   "5話": "5Hanashi",
-  "6.第6話かーてんのむこう": {
-   "macron": "6. Dai6Hanashi Kāten No Mukō",
-   "double": "6. Dai6Hanashi Kaaten No Mukou",
-   "plain": "6. Dai6Hanashi Katen No Muko"
-  },
-  "60.第56話ふたりのがくえんさい後編": {
-   "macron": "60. Dai56Hanashi Futari No Gakuensai Kōhen",
-   "double": "60. Dai56Hanashi Futari No Gakuensai Kouhen",
-   "plain": "60. Dai56Hanashi Futari No Gakuensai Kohen"
-  },
-  "61.第57話たいせつなともだち": "61. Dai57Hanashi Taisetsu Na Tomodachi",
-  "62.第58話かわらないきもち": "62. Dai58Hanashi Kawaranai Kimochi",
-  "63.第59話あのことのきょり": "63. Dai59Hanashi Anoko Tono Kyori",
   "63.質問募集": {
    "macron": "63. Shitsumon Boshū",
    "double": "63. Shitsumon Boshuu",
    "plain": "63. Shitsumon Boshu"
   },
-  "64.第60話しんゆうとこいびと": {
-   "macron": "64. Dai60Hanashi Shin'yū To Koibito",
-   "double": "64. Dai60Hanashi Shin'yuu To Koibito",
-   "plain": "64. Dai60Hanashi Shin'yu To Koibito"
-  },
   "64話": "64Hanashi",
-  "65.第61話おもいでのあるばむ": "65. Dai61Hanashi Omoide No Arubamu",
-  "66.第62話ささやかなていこう": {
-   "macron": "66. Dai62Hanashi Sasayaka Na Teikō",
-   "double": "66. Dai62Hanashi Sasayaka Na Teikou",
-   "plain": "66. Dai62Hanashi Sasayaka Na Teiko"
-  },
-  "67.第63話ひみつのらぶれたー": {
-   "macron": "67. Dai63Hanashi Himitsu No Raburetā",
-   "double": "67. Dai63Hanashi Himitsu No Raburetaa",
-   "plain": "67. Dai63Hanashi Himitsu No Rabureta"
-  },
-  "68.第64話いじわるのだいしょう": {
-   "macron": "68. Dai64Hanashi Ijiwaru No Daishō",
-   "double": "68. Dai64Hanashi Ijiwaru No Daishou",
-   "plain": "68. Dai64Hanashi Ijiwaru No Daisho"
-  },
-  "69.第65話どきどきのかえりみち": "69. Dai65Hanashi Dokidoki No Kaerimichi",
   "6服目": "6Fukume",
-  "7.第7話こそっといたずら": "7. Dai7Hanashi Koso To Itazura",
-  "70.第66話だいじなとき": "70. Dai66Hanashi Daijina Toki",
-  "71.第67話ひみつのそうだん": {
-   "macron": "71. Dai67Hanashi Himitsu No Sōdan",
-   "double": "71. Dai67Hanashi Himitsu No Soudan",
-   "plain": "71. Dai67Hanashi Himitsu No Sodan"
-  },
-  "72.第68話あらしのしゅうがくりょこう1": {
-   "macron": "72. Dai68Hanashi Arashi No Shūgakuryokō1",
-   "double": "72. Dai68Hanashi Arashi No Shuugakuryokou1",
-   "plain": "72. Dai68Hanashi Arashi No Shugakuryoko1"
-  },
-  "73.第69話あらしのしゅうがくりょこう2": {
-   "macron": "73. Dai69Hanashi Arashi No Shūgakuryokō2",
-   "double": "73. Dai69Hanashi Arashi No Shuugakuryokou2",
-   "plain": "73. Dai69Hanashi Arashi No Shugakuryoko2"
-  },
-  "74.第70話あらしのしゅうがくりょこう3": {
-   "macron": "74. Dai70Hanashi Arashi No Shūgakuryokō3",
-   "double": "74. Dai70Hanashi Arashi No Shuugakuryokou3",
-   "plain": "74. Dai70Hanashi Arashi No Shugakuryoko3"
-  },
-  "75.第71話あらしのしゅうがくりょこう4": {
-   "macron": "75. Dai71Hanashi Arashi No Shūgakuryokō4",
-   "double": "75. Dai71Hanashi Arashi No Shuugakuryokou4",
-   "plain": "75. Dai71Hanashi Arashi No Shugakuryoko4"
-  },
-  "76.第72話あらしのしゅうがくりょこう5": {
-   "macron": "76. Dai72Hanashi Arashi No Shūgakuryokō5",
-   "double": "76. Dai72Hanashi Arashi No Shuugakuryokou5",
-   "plain": "76. Dai72Hanashi Arashi No Shugakuryoko5"
-  },
-  "77.第73話あらしのしゅうがくりょこう6": {
-   "macron": "77. Dai73Hanashi Arashi No Shūgakuryokō6",
-   "double": "77. Dai73Hanashi Arashi No Shuugakuryokou6",
-   "plain": "77. Dai73Hanashi Arashi No Shugakuryoko6"
-  },
-  "78.第74話はだかのつきあい前編": "78. Dai74Hanashi Hadaka No Tsukiai Zenpen",
-  "79.第75話はだかのつきあい後編": {
-   "macron": "79. Dai75Hanashi Hadaka No Tsukiai Kōhen",
-   "double": "79. Dai75Hanashi Hadaka No Tsukiai Kouhen",
-   "plain": "79. Dai75Hanashi Hadaka No Tsukiai Kohen"
-  },
   "7ページ連載予告マンガ": {
    "macron": "7Pēji Rensai Yokoku Manga",
    "double": "7Peeji Rensai Yokoku Manga",
@@ -187870,49 +187639,7 @@
   },
   "7日間限定彼女": "7Kakan Gentei Kanojo",
   "7話": "7Hanashi",
-  "8.第8話ほんねとほんい": "8. Dai8Hanashi Honne To Hon'i",
-  "80.第76話たびのおみやげ": "80. Dai76Hanashi Tabi No Omiyage",
-  "81.第77話うらはらなおもい": "81. Dai77Hanashi Urahara Na Omoi",
-  "82.第78話からっぽのこころ": "82. Dai78Hanashi Karappo No Kokoro",
-  "83.第79話なーちゃんがえらんだひと": {
-   "macron": "83. Dai79Hanashi Nāchan Ga Erandahito",
-   "double": "83. Dai79Hanashi Naachan Ga Erandahito",
-   "plain": "83. Dai79Hanashi Nachan Ga Erandahito"
-  },
-  "84.第80話だいじなはなし": "84. Dai80Hanashi Daiji Na Hanashi",
-  "85.第81話うそとしんじつ前編": "85. Dai81Hanashi Uso To Shinjitsu Zenpen",
-  "86.第81話うそとしんじつ後編": {
-   "macron": "86. Dai81Hanashi Uso To Shinjitsu Kōhen",
-   "double": "86. Dai81Hanashi Uso To Shinjitsu Kouhen",
-   "plain": "86. Dai81Hanashi Uso To Shinjitsu Kohen"
-  },
-  "87.第82話それぞれのおもい前編": "87. Dai82Hanashi Sorezore No Omoi Zenpen",
-  "88.第82話それぞれのおもい後編": {
-   "macron": "88. Dai82Hanashi Sorezore No Omoi Kōhen",
-   "double": "88. Dai82Hanashi Sorezore No Omoi Kouhen",
-   "plain": "88. Dai82Hanashi Sorezore No Omoi Kohen"
-  },
-  "89.第83話おしゃべりなゆびさき": "89. Dai83Hanashi Oshaberi Na Yubisaki",
   "8話": "8Hanashi",
-  "9.第9話みらいのかんけい": "9. Dai9Hanashi Mirai No Kankei",
-  "90.第84話ときをかさねて": "90. Dai84Hanashi Toki O Kasanete",
-  "91.第85話いつものおかえし": "91. Dai85Hanashi Itsumo No Okaeshi",
-  "92.第86話わたしのとっけん": "92. Dai86Hanashi Watashi No Tokken",
-  "93.第87話いたずらとしかえし": "93. Dai87Hanashi Itazura To Shikaeshi",
-  "94.第88話なのはのおもいつき": "94. Dai88Hanashi Nanoha No Omoitsuki",
-  "95.第89話ゆめのとうきょう": {
-   "macron": "95. Dai89Hanashi Yume No Tōkyō",
-   "double": "95. Dai89Hanashi Yume No Toukyou",
-   "plain": "95. Dai89Hanashi Yume No Tokyo"
-  },
-  "96.第90話わたしたちのみらい": "96. Dai90Hanashi Watashitachi No Mirai",
-  "97.第91話おもいはめぐる": "97. Dai91Hanashi Omoi Ha Meguru",
-  "98.第92話なのはのれんあいそうだんしつ": {
-   "macron": "98. Dai92Hanashi Nanoha No Ren'aisōdanshitsu",
-   "double": "98. Dai92Hanashi Nanoha No Ren'aisoudanshitsu",
-   "plain": "98. Dai92Hanashi Nanoha No Ren'aisodanshitsu"
-  },
-  "99.第93話なにげないひとこと": "99. Dai93Hanashi Nanigenai Hitokoto",
   "9話": "9Hanashi",
   "AM:TIGER総集編": {
    "macron": "AM:TIGERSōshūhen",
@@ -188590,7 +188317,6 @@
    "double": "SSSS.GRIDMAN Komikkuansorojii",
    "plain": "SSSS.GRIDMAN Komikkuansoroji"
   },
-  "SSSオフショット91": "SSSOfushotto91",
   "SSSオフショット92": "SSSOfushotto92",
   "SSSオフショット93": "SSSOfushotto93",
   "SWAV/アサウラ/西馬ごめゆき": "SWAV / Asaura / Saiba Gome Yuki",
@@ -190802,7 +190528,6 @@
    "double": "[Dai15Hanashi]Shuuchaku Ten(1)",
    "plain": "[Dai15Hanashi]Shuchaku Ten(1)"
   },
-  "【第1話】ぐっすん!ドキドキ!別れは出会いのシグナル": "[Dai1Hanashi]Gussun!Dokidoki!Wakare Wa Deai No Shigunaru",
   "【第20話(1)】": "[Dai20Hanashi(1)]",
   "【第24.5話】メイド・イン・学園祭!": "[Dai24.5Hanashi]Meido · In · Gakuensai!",
   "【第24回角川漫画新人大賞】入選": {
@@ -190840,7 +190565,6 @@
    "double": "[Dai2Hanashi]Totsuzen(Totsuzen)Tandemu!?Dogimagi Sanchou Dee To",
    "plain": "[Dai2Hanashi]Totsuzen(Totsuzen)Tandemu!?Dogimagi Sancho Dee To"
   },
-  "【第2話】悪夢にも勝る": "[Dai2Hanashi]Akumu Ni Mo Masaru",
   "【第32回角川漫画新人大賞】佳作": {
    "macron": "[Dai32Kai Kadokawa Manga Shinjin Taishō]Kasaku",
    "double": "[Dai32Kai Kadokawa Manga Shinjin Taishou]Kasaku",
@@ -195003,6 +194727,7 @@
    "plain": "Orenjiiero"
   },
   "オンニって呼んでもいいですか?": "Onnitte Yonde Mo Iidesu Ka?",
+  "オンラインくじ第2弾告知PR": "Onrain Kuji Dai2Tama KokuchiPR",
   "オーガスト": {
    "macron": "Ōgasuto",
    "double": "Oogasuto",
@@ -198936,7 +198661,7 @@
    "double": "Ropi Shima Kou",
    "plain": "Ropi Shima Ko"
   },
-  "ロボ22-5": "Robo22-5",
+  "ロボ23-1": "Robo23-1",
   "ロボットJSにスキはありません!!": {
    "macron": "RobottoJSNisukihārimasen!!",
    "double": "RobottoJSNisukihaarimasen!!",
@@ -204627,10 +204352,10 @@
    "double": "Saishuuwa(2)",
    "plain": "Saishuwa(2)"
   },
-  "最終話)10年後...無料": {
-   "macron": "Saishūwa) 10Nengo... Muryō",
-   "double": "Saishuuwa) 10Nengo... Muryou",
-   "plain": "Saishuwa) 10Nengo... Muryo"
+  "最終話)10年後...": {
+   "macron": "Saishūwa) 10Nengo...",
+   "double": "Saishuuwa) 10Nengo...",
+   "plain": "Saishuwa) 10Nengo..."
   },
   "最終話-1": {
    "macron": "Saishūwa-1",
@@ -206105,6 +205830,11 @@
    "macron": "Muryō Dai17Hanashi(1) Zenpen Bādozōnsabaibu!1",
    "double": "Muryou Dai17Hanashi(1) Zenpen Baadozoonsabaibu!1",
    "plain": "Muryo Dai17Hanashi(1) Zenpen Badozonsabaibu!1"
+  },
+  "無料第17話(2)後編バードゾーンサバイブ!2": {
+   "macron": "Muryō Dai17Hanashi(2) Kōhen Bādozōnsabaibu!2",
+   "double": "Muryou Dai17Hanashi(2) Kouhen Baadozoonsabaibu!2",
+   "plain": "Muryo Dai17Hanashi(2) Kohen Badozonsabaibu!2"
   },
   "無料第5話(2)あなたのとなり-シロの場合-(後編)": {
    "macron": "Muryō Dai5Hanashi(2) Anatanotonari-Shiro No Bāi-(Kōhen)",
@@ -207669,7 +207399,6 @@
   "第15話-1": "Dai15Hanashi-1",
   "第15話-2": "Dai15Hanashi-2",
   "第15話-3": "Dai15Hanashi-3",
-  "第15話-4": "Dai15Hanashi-4",
   "第15話1": "Dai15Hanashi1",
   "第15話2": "Dai15Hanashi2",
   "第15話3": "Dai15Hanashi3",
@@ -207856,9 +207585,6 @@
   },
   "第22話": "Dai22Hanashi",
   "第22話-1": "Dai22Hanashi-1",
-  "第22話-2": "Dai22Hanashi-2",
-  "第22話-3": "Dai22Hanashi-3",
-  "第22話-4": "Dai22Hanashi-4",
   "第22話1": "Dai22Hanashi1",
   "第22話2": "Dai22Hanashi2",
   "第22話3": "Dai22Hanashi3",
@@ -207870,10 +207596,6 @@
   "第236話": "Dai236Hanashi",
   "第237話": "Dai237Hanashi",
   "第23話": "Dai23Hanashi",
-  "第23話-1": "Dai23Hanashi-1",
-  "第23話-2": "Dai23Hanashi-2",
-  "第23話-3": "Dai23Hanashi-3",
-  "第23話-4": "Dai23Hanashi-4",
   "第23話1": "Dai23Hanashi1",
   "第23話2": "Dai23Hanashi2",
   "第23話3": "Dai23Hanashi3",
@@ -207896,11 +207618,11 @@
    "double": "Dai25Hanashi Asu Chikyuu Ga Konagona Ni Natte Mo,Kawaii Fuku Kite,Kimi To Iru",
    "plain": "Dai25Hanashi Asu Chikyu Ga Konagona Ni Natte Mo,Kawaii Fuku Kite,Kimi To Iru"
   },
-  "第269話": "Dai269Hanashi",
   "第26話": "Dai26Hanashi",
   "第26話1": "Dai26Hanashi1",
   "第26話2": "Dai26Hanashi2",
   "第26話3": "Dai26Hanashi3",
+  "第270話": "Dai270Hanashi",
   "第27話": "Dai27Hanashi",
   "第27話錯綜": {
    "macron": "Dai27Hanashi Sakusō",
@@ -207949,8 +207671,6 @@
   },
   "第2話悪夢にも勝る": "Dai2Hanashi Akumu Ni Mo Masaru",
   "第2話運命の出会いは致命の出会い": "Dai2Hanashi Unmei No Deai Wa Chimei No Deai",
-  "第2話-1": "Dai2Hanashi-1",
-  "第2話-2": "Dai2Hanashi-2",
   "第2話1": "Dai2Hanashi1",
   "第2話2": "Dai2Hanashi2",
   "第2話「その日、私はダメ人間だと気付いた": "Dai2Hanashi“Sono Hi,Watashi Wa Dame Ningenda To Kizuita",
@@ -207984,8 +207704,8 @@
   "第32節雫へ(1)": "Dai32Fushi Shizuku E(1)",
   "第32話": "Dai32Hanashi",
   "第32話-1": "Dai32Hanashi-1",
-  "第32話来客1": "Dai32Hanashi Raikyaku1",
   "第33話": "Dai33Hanashi",
+  "第33話捕獲作戦": "Dai33Hanashi Hokaku Sakusen",
   "第34話": "Dai34Hanashi",
   "第34話前編": "Dai34Hanashi Zenpen",
   "第34話後編": {
@@ -208046,6 +207766,7 @@
   "第3話1:生きるための「訓練」": "Dai3Hanashi1:Ikiru Tame No“Kunren”",
   "第3話2": "Dai3Hanashi2",
   "第3話2:生きるための「訓練」": "Dai3Hanashi2:Ikiru Tame No“Kunren”",
+  "第3話「そっちの穴も開けてあげるから」(1)": "Dai3Hanashi“Sotchi No Ana Mo Akete Agerukara”(1)",
   "第3話「友には言えないモカの闇": "Dai3Hanashi“Tomo Ni Wa Ienai Moka No Yami",
   "第3話前編": "Dai3Hanashi Zenpen",
   "第3話後編": {
@@ -208056,7 +207777,6 @@
   "第40話": "Dai40Hanashi",
   "第40話ママ(1)": "Dai40Hanashi Mama(1)",
   "第40話ママ(2)": "Dai40Hanashi Mama(2)",
-  "第40話1": "Dai40Hanashi1",
   "第40話2": "Dai40Hanashi2",
   "第41話": "Dai41Hanashi",
   "第41話うそつき(1)": "Dai41Hanashi Usotsuki(1)",
@@ -208069,7 +207789,11 @@
   "第42話わたしの恋": "Dai42Hanashi Watashi No Koi",
   "第42話引っ越し": "Dai42Hanashi Hikkoshi",
   "第45話-1": "Dai45Hanashi-1",
-  "第45話もし敵が来なかったら...(前編)": "Dai45Hanashi Moshi Teki Ga Konakattara...(Zenpen)",
+  "第45話もし敵が来なかったら...(後編)": {
+   "macron": "Dai45Hanashi Moshi Teki Ga Konakattara...(Kōhen)",
+   "double": "Dai45Hanashi Moshi Teki Ga Konakattara...(Kouhen)",
+   "plain": "Dai45Hanashi Moshi Teki Ga Konakattara...(Kohen)"
+  },
   "第48話1": "Dai48Hanashi1",
   "第48話2": "Dai48Hanashi2",
   "第4夜『君の名は。』": "Dai4Yoru “Kimi No Na Wa.”",
@@ -208137,6 +207861,7 @@
    "double": "Dai60Hanashi Houkago To,Tesutoto,Ongaku To.",
    "plain": "Dai60Hanashi Hokago To,Tesutoto,Ongaku To."
   },
+  "第60話「CherryBlossomsfortheTwoofUs2」1": "Dai60Hanashi“Cherry Blossoms for the Two of Us2”1",
   "第61話バズと、歓喜と、戸惑いと。": "Dai61Hanashi Bazuto,Kanki To,Tomadoi To.",
   "第62話": "Dai62Hanashi",
   "第63話": "Dai63Hanashi",
@@ -208190,8 +207915,6 @@
   },
   "第6話紅血": "Dai6Hanashi Kurenai Chi",
   "第6話-1": "Dai6Hanashi-1",
-  "第6話-2": "Dai6Hanashi-2",
-  "第6話-3": "Dai6Hanashi-3",
   "第6話1": "Dai6Hanashi1",
   "第6話2": "Dai6Hanashi2",
   "第7-1話": "Dai7-1Hanashi",
@@ -208203,13 +207926,12 @@
   "第7話": "Dai7Hanashi",
   "第7話屈しない!": "Dai7Hanashi Kusshinai!",
   "第7話晴々": "Dai7Hanashi Harebare",
-  "第7話-1": "Dai7Hanashi-1",
   "第7話-2": "Dai7Hanashi-2",
   "第7話1": "Dai7Hanashi1",
   "第7話2": "Dai7Hanashi2",
   "第7話3": "Dai7Hanashi3",
   "第7話隣にいるのに寂しい話2": "Dai7Hanashi Tonari Ni Iru No Ni Sabishii Hanashi2",
-  "第7話の8": "Dai7Hanashi No8",
+  "第7話の10": "Dai7Hanashi No10",
   "第80話": "Dai80Hanashi",
   "第81話": "Dai81Hanashi",
   "第84話(1)": "Dai84Hanashi(1)",
@@ -208230,11 +207952,6 @@
    "macron": "Dai8Hanashi Tanuki Onna Ni Kanbyō Sareru Hanashi1",
    "double": "Dai8Hanashi Tanuki Onna Ni Kanbyou Sareru Hanashi1",
    "plain": "Dai8Hanashi Tanuki Onna Ni Kanbyo Sareru Hanashi1"
-  },
-  "第8話後編": {
-   "macron": "Dai8Hanashi Kōhen",
-   "double": "Dai8Hanashi Kouhen",
-   "plain": "Dai8Hanashi Kohen"
   },
   "第90話": "Dai90Hanashi",
   "第91話-1トイレット・ペーパームーンI": {
@@ -208314,7 +208031,6 @@
   "第一話未来": "Daiichi Hanashi Mirai",
   "第一話絆": "Daiichi Hanashi Kizuna",
   "第一話:くらがりの子": "Daiichi Hanashi:Kuragari No Ko",
-  "第七話": "Dai Nana Hanashi",
   "第七話3": "Dai Nana Hanashi3",
   "第三十五話魔法を捨てた女の子(後編)": {
    "macron": "Dai Sanjūgo Hanashi Mahō O Suteta Onnanoko(Kōhen)",
@@ -208345,11 +208061,6 @@
   },
   "第五話": "Dai Go Hanashi",
   "第八話": "Dai Hachi Hanashi",
-  "第十一話-1": {
-   "macron": "Dai Jūichi Hanashi-1",
-   "double": "Dai Juuichi Hanashi-1",
-   "plain": "Dai Juichi Hanashi-1"
-  },
   "第十一話-2": {
    "macron": "Dai Jūichi Hanashi-2",
    "double": "Dai Juuichi Hanashi-2",
@@ -211388,7 +211099,6 @@
   "13巻第16話": "13Maki Dai16Hanashi",
   "13巻第78球「体力と自信」(1)": "13Maki Dai78Tama “Tairyoku To Jishin”(1)",
   "13巻第78球「体力と自信」(2)": "13Maki Dai78Tama “Tairyoku To Jishin”(2)",
-  "14巻第174話": "14Maki Dai174Hanashi",
   "14巻第175話": "14Maki Dai175Hanashi",
   "14巻第176話": "14Maki Dai176Hanashi",
   "14巻第177話": "14Maki Dai177Hanashi",
@@ -215038,6 +214748,7 @@
   "ロボ22-2": "Robo 22 - 2",
   "ロボ22-3": "Robo 22 - 3",
   "ロボ22-5": "Robo 22 - 5",
+  "ロボ23-1": "Robo 23 - 1",
   "ロボットJSにスキはありません!!": "Robotto JS ni Suki wa Arimasen!!",
   "ロマンスコード": "Romansu Kōdo",
   "ロリースイートロリー": "Rorīsuītororī",
@@ -216650,6 +216361,7 @@
   "最終話魔王と妃の結末": "Final Maō to Hi no Ketsumatsu",
   "最終話(1)": "Final (1)",
   "最終話(2)": "Final (2)",
+  "最終話)10年後...": "Final 10 Nengo...",
   "最終話)10年後...無料": "Final 10 Nengo... Muryō",
   "最終話-1": "Final -1",
   "最終話-1さよならヴィーナス": "Final - 1 Sayonara Vīnasu",
@@ -217896,6 +217608,7 @@
   "第26話2": "Ch. 26-2",
   "第26話3": "Ch. 26-3",
   "第26話カイ": "Ch. 26 Kai",
+  "第270話": "Ch. 270",
   "第27話": "Ch. 27",
   "第27話錯綜": "Ch. 27 Sakusō",
   "第27話錯綜(1)": "Ch. 27 Sakusō (1)",
@@ -217972,6 +217685,7 @@
   "第32話-1": "Ch. 32-1",
   "第32話来客1": "Ch. 32 Raikyaku - 1",
   "第33話": "Ch. 33",
+  "第33話捕獲作戦": "Ch. 33 Hokaku Sakusen",
   "第33話後編": "Ch. 33 Kōhen",
   "第34話": "Ch. 34",
   "第34話「乞楽」": "Ch. 34 “Kotsuraku”",
@@ -218037,6 +217751,7 @@
   "第3話2": "Ch. 3-2",
   "第3話2:生きるための「訓練」": "Ch. 3-2 Ikiru Tame no “Kunren”",
   "第3話教育実習の先生に恋する話2": "Ch. 3 Kyōiku Jisshū no Sensei ni Koi Suru Hanashi - 2",
+  "第3話「そっちの穴も開けてあげるから」(1)": "Ch. 3 “Sotchi no Ana mo Akete Agerukara” (1)",
   "第3話「友には言えないモカの闇": "Ch. 3 “Tomo ni wa Ienai Moka no Yami",
   "第3話前半": "Ch. 3 Zenhan",
   "第3話前編": "Ch. 3 Zenpen",
@@ -218067,6 +217782,7 @@
   "第45話": "Ch. 45",
   "第45話-1": "Ch. 45-1",
   "第45話もし敵が来なかったら...(前編)": "Ch. 45 Moshi Teki ga Konakattara... (Zenpen)",
+  "第45話もし敵が来なかったら...(後編)": "Ch. 45 Moshi Teki ga Konakattara... (Kōhen)",
   "第46話": "Ch. 46",
   "第47話": "Ch. 47",
   "第47話1": "Ch. 47-1",
@@ -218165,6 +217881,7 @@
   "第6.5話": "Ch. 6.5",
   "第6.5話5日前UP": "Ch. 6.5 5Ka Mae UP",
   "第60話放課後と、テストと、音楽と。": "Ch. 60 Hōkago to, Tesuto to, Ongaku to.",
+  "第60話「CherryBlossomsfortheTwoofUs2」1": "Ch. 60 “Cherry Blossoms for the Two of Us2”-1",
   "第61話": "Ch. 61",
   "第61話バズと、歓喜と、戸惑いと。(1)": "Ch. 61 Bazu to, Kanki to, Tomadoi to. (1)",
   "第61話バズと、歓喜と、戸惑いと。": "Ch. 61 Bazu to, Kanki to, Tomadoi to.",
@@ -218223,6 +217940,7 @@
   "第7話1": "Ch. 7-1",
   "第7話2": "Ch. 7-2",
   "第7話3": "Ch. 7-3",
+  "第7話の10": "Ch. 7 No 10",
   "第7話の2": "Ch. 7 No 2",
   "第7話の4": "Ch. 7 No 4",
   "第7話の5": "Ch. 7 No 5",
