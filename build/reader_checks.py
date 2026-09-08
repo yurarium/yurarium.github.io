@@ -1168,7 +1168,12 @@ RECORDED = {
     # as chapters publish and expire, and a count of MARKUP moves with how many rows an arriving
     # name appears on. Recorded rather than argued with; docs/GAPS.md carries the note that this
     # number churns daily and is a poor ratchet.
-    "renderings resting on a mechanical romanisation": 679,
+    # 679 -> 719 ON 2026-09-09, and the jump is instances rather than names. The floor set itself
+    # moved by three, 17 strings in and 14 out, while this count moved by forty: it counts MARKUP,
+    # so a name arriving on many rows counts many times. The arrivals are one work's run of ten
+    # consecutive chapters, 第88話 to 第97話, plus 【第3話】 and 【第56話】 forms, which is what a
+    # chapter is called and what nothing states a reading for.
+    "renderings resting on a mechanical romanisation": 719,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
