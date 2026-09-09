@@ -1173,7 +1173,11 @@ RECORDED = {
     # so a name arriving on many rows counts many times. The arrivals are one work's run of ten
     # consecutive chapters, 第88話 to 第97話, plus 【第3話】 and 【第56話】 forms, which is what a
     # chapter is called and what nothing states a reading for.
-    "renderings resting on a mechanical romanisation": 719,
+    # 719 -> 725 ON 2026-09-10, the ordinary churn again after yesterday's batch of forty. The
+    # floor set FELL by four, nine strings in and thirteen out, while this count rose by six, which
+    # is the instance arithmetic doing what it does: an arriving chapter name appears on more rows
+    # than a departing one did. 第119球:披露する場(前編), ロボ23-3, 32夜目, 夏休み特別編.
+    "renderings resting on a mechanical romanisation": 725,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
