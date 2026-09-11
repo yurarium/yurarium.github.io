@@ -1177,7 +1177,11 @@ RECORDED = {
     # floor set FELL by four, nine strings in and thirteen out, while this count rose by six, which
     # is the instance arithmetic doing what it does: an arriving chapter name appears on more rows
     # than a departing one did. 第119球:披露する場(前編), ロボ23-3, 32夜目, 夏休み特別編.
-    "renderings resting on a mechanical romanisation": 725,
+    # 725 -> 727 ON 2026-09-12, and for once the two are named. 悪役令嬢覇王伝 arrived on カドコミ
+    # with five rows, and the run added exactly two author entries for it, 伝子れんぢ and 砂礫レキ.
+    # Both carry a reading the analyser worked out with `unverified` set and no source behind it,
+    # which is this population exactly, and both are shown with the mark and the tooltip that say so.
+    "renderings resting on a mechanical romanisation": 727,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
