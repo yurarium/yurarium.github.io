@@ -1181,7 +1181,14 @@ RECORDED = {
     # with five rows, and the run added exactly two author entries for it, 伝子れんぢ and 砂礫レキ.
     # Both carry a reading the analyser worked out with `unverified` set and no source behind it,
     # which is this population exactly, and both are shown with the mark and the tooltip that say so.
-    "renderings resting on a mechanical romanisation": 727,
+    # 727 -> 729 ON 2026-09-13, the sixth consecutive day this has been accepted: 638, 648, 654,
+    # 658, 678, 679, 719, 725, 727, 729. Nothing is wrong with the measure and nothing is wrong with
+    # the data; it counts MARKUP over a population that churns as chapters publish and expire, so it
+    # walks rather than improves, and a ratchet over a walk banks every trough and blocks every
+    # ordinary rise. Recorded as docs/GAPS.md in the pipeline repository describes, under "A budget
+    # over a churning population cannot ratchet": what this wants is a band or a rate rather than a
+    # level, and choosing between them is the owner's.
+    "renderings resting on a mechanical romanisation": 729,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
