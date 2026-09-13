@@ -1,8 +1,10 @@
 {
- "generated": "2026-09-13T12:17:15+00:00",
+ "generated": "2026-09-13T18:15:42+00:00",
  "since_last": {
-  "at": "2026-09-12T16:39:02+00:00",
-  "statistics": {}
+  "at": "2026-09-13T12:17:15+00:00",
+  "statistics": {
+   "chapters": 6
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,23 +25,23 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-09-13",
-  "releases": 1039,
+  "at": "2026-09-14",
+  "releases": 1035,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3066,
   "assembled": 3089,
   "awaiting_identifier": 23,
   "identification": {
-   "discovery-candidate": 641,
+   "discovery-candidate": 640,
    "known-work-match": 23,
-   "platform-genre": 375
+   "platform-genre": 372
   },
   "collapsed": {
-   "duplicate_chapters": 180,
-   "resolver": 42,
+   "duplicate_chapters": 181,
+   "resolver": 43,
    "samples": 26,
-   "thin_sitemap": 8
+   "thin_sitemap": 5
   }
  },
  "gate": {
@@ -755,8 +757,8 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 42,
-    "value": 43
+    "budget": 39,
+    "value": 39
    },
    {
     "name": "works without English",
@@ -773,8 +775,8 @@
    {
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
-    "budget": 0,
-    "value": 0
+    "budget": 1,
+    "value": 1
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -797,7 +799,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 42,
+   "age_days": 43,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -811,7 +813,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 39,
+   "age_days": 40,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -825,7 +827,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 39,
+   "age_days": 40,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -839,7 +841,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 38,
+   "age_days": 39,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -853,7 +855,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 37,
+   "age_days": 38,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -867,7 +869,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 37,
+   "age_days": 38,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -881,7 +883,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 36,
+   "age_days": 37,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -894,7 +896,7 @@
    "files": 2,
    "works": 129,
    "rows": 6189,
-   "retrieved": "2026-09-13",
+   "retrieved": "2026-09-14",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -908,7 +910,7 @@
    "files": 71,
    "works": 829,
    "rows": 7985,
-   "retrieved": "2026-09-13",
+   "retrieved": "2026-09-14",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -921,13 +923,13 @@
    "source": "kadokomi",
    "files": 5,
    "works": 978,
-   "rows": 7558,
-   "retrieved": "2026-09-13",
+   "rows": 7563,
+   "retrieved": "2026-09-14",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6886,
-   "well_formed": 6521,
+   "checked_rows": 6891,
+   "well_formed": 6526,
    "malformed": 365,
    "drop": null
   },
@@ -936,7 +938,7 @@
    "files": 3,
    "works": 1335,
    "rows": 11393,
-   "retrieved": "2026-09-13",
+   "retrieved": "2026-09-14",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -950,7 +952,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-09-13",
+   "retrieved": "2026-09-14",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -963,20 +965,20 @@
    "source": "webpages",
    "files": 48,
    "works": 576,
-   "rows": 7924,
-   "retrieved": "2026-09-13",
+   "rows": 7926,
+   "retrieved": "2026-09-14",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7873,
-   "well_formed": 7873,
+   "checked_rows": 7875,
+   "well_formed": 7875,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-09-11T17:31:44+00:00",
+  "previous_at": "2026-09-13T17:37:50+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1008,7 +1010,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 47,
+   "count": 48,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1082,10 +1084,10 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 42,
+    "incomplete attested rows": 39,
     "works without English": 0,
     "volume rows with no publication date": 2436,
-    "predicted updates already behind the run": 0,
+    "predicted updates already behind the run": 1,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
    }
@@ -1097,8 +1099,8 @@
    "print": 1645,
    "oneshot": 441,
    "dormant": 304,
-   "completed": 292,
-   "active": 230,
+   "completed": 291,
+   "active": 231,
    "slow": 103,
    "unknown": 51
   },
@@ -1112,7 +1114,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3066,
-  "chapters": 28618,
+  "chapters": 28624,
   "delivery_dated": 1034
  }
 }
