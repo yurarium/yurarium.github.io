@@ -1188,7 +1188,16 @@ RECORDED = {
     # ordinary rise. Recorded as docs/GAPS.md in the pipeline repository describes, under "A budget
     # over a churning population cannot ratchet": what this wants is a band or a rate rather than a
     # level, and choosing between them is the owner's.
-    "renderings resting on a mechanical romanisation": 729,
+    # 729 -> 735 ON 2026-09-14. The floor set turned over without changing size, 18 strings in and
+    # 18 out, so this is the instance arithmetic again: it counts MARKUP, and an arriving chapter
+    # name appears on more rows than a departing one did. 無料第11話(1)丑の刻参り後編, ロボ24-1,
+    # TVドラマ対談記事前編 and the rest.
+    #
+    # A HYPOTHESIS CHECKED AND WRONG. The day's junk bylines, pixivコミック's フォローする on five
+    # works and マガポケ's あなたへのオススメ！ on one, were fixed in the pipeline and their surfaces
+    # were still in the published store, so they looked like the cause. Rebuilding the store without
+    # them leaves this at 735 exactly, which says they never were.
+    "renderings resting on a mechanical romanisation": 735,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
