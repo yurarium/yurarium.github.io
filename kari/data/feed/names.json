@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15",
+ "generated": "2026-09-16",
  "note": "English renderings and readings, keyed by NFKC-folded title/author. Joined onto feed rows at render time so archived months — which are never rewritten — still show current names.",
  "titles": {
   "#うちらが最強~陰キャ除霊師とギャルJK~": {
@@ -101841,21 +101841,6 @@
    "reading_basis": "analyser",
    "unverified": true
   },
-  "怪異部:M県Y市の怪現象について": {
-   "reading": "カイイ ブ",
-   "romaji": {
-    "macron": "Kaii Bu",
-    "double": "Kaii Bu",
-    "plain": "Kaii Bu"
-   },
-   "en": "The Uncanny Club: On the Strange Phenomena of Y City, M Prefecture",
-   "basis": "translated",
-   "en_forms": {
-    "translated": "The Uncanny Club: On the Strange Phenomena of Y City, M Prefecture"
-   },
-   "reading_basis": "researched",
-   "alias_of": "怪異部~M県Y市の怪現象について~"
-  },
   "公爵令嬢の籠絡ミッション:魔王との政略結婚が、人類最後の切り札です!...って、魔王が女の子の場合はどうすればいいのですか!": {
    "reading": "コウシャク レイジョウ ノ ロウラク ミッション",
    "romaji": {
@@ -101870,6 +101855,21 @@
    },
    "reading_basis": "researched",
    "alias_of": "公爵令嬢の籠絡ミッション~魔王との政略結婚が、人類最後の切り札です!...って、魔王が女の子の場合はどうすればいいのですか!?~"
+  },
+  "怪異部:M県Y市の怪現象について": {
+   "reading": "カイイ ブ",
+   "romaji": {
+    "macron": "Kaii Bu",
+    "double": "Kaii Bu",
+    "plain": "Kaii Bu"
+   },
+   "en": "The Uncanny Club: On the Strange Phenomena of Y City, M Prefecture",
+   "basis": "translated",
+   "en_forms": {
+    "translated": "The Uncanny Club: On the Strange Phenomena of Y City, M Prefecture"
+   },
+   "reading_basis": "researched",
+   "alias_of": "怪異部~M県Y市の怪現象について~"
   },
   "ゆりゆりぱにっく:尊すぎる事案が発生しています": {
    "reading": "ユリ ユリ パニック ～ トウト スギル ジアン ガ ハッセイ シテ イマス ! ～",
@@ -149896,22 +149896,6 @@
     "reviewed": "2026-08-07"
    }
   },
-  "MFコミックス ジーンシリーズ": {
-   "en": "MF Comics Gene Series",
-   "basis": "romaji"
-  },
-  "MFコミックスジーンシリーズ": {
-   "en": "MF Comics Gene Series",
-   "basis": "romaji"
-  },
-  "MFコミックス フラッパーシリーズ": {
-   "en": "MF Comics Flapper Series",
-   "basis": "romaji"
-  },
-  "MFコミックスフラッパーシリーズ": {
-   "en": "MF Comics Flapper Series",
-   "basis": "romaji"
-  },
   "ハルタコミックス": {
    "en": "HARTA COMIX",
    "basis": "official-jp",
@@ -149931,6 +149915,22 @@
     "kind": "national-library",
     "reviewed": "2026-08-08"
    }
+  },
+  "MFコミックス ジーンシリーズ": {
+   "en": "MF Comics Gene Series",
+   "basis": "romaji"
+  },
+  "MFコミックスジーンシリーズ": {
+   "en": "MF Comics Gene Series",
+   "basis": "romaji"
+  },
+  "MFコミックス フラッパーシリーズ": {
+   "en": "MF Comics Flapper Series",
+   "basis": "romaji"
+  },
+  "MFコミックスフラッパーシリーズ": {
+   "en": "MF Comics Flapper Series",
+   "basis": "romaji"
   },
   "FUZコミックス": {
    "en": "FUZ Comics",
@@ -150145,10 +150145,219 @@
   }
  },
  "imprints": {
+  "Yuri-hime comics": {
+   "id": "yurihime-comics",
+   "name": "百合姫コミックス",
+   "parent": "IDコミックス",
+   "publishers": [
+    "一迅社"
+   ]
+  },
+  "yurihimecomics": {
+   "id": "yurihime-comics",
+   "name": "百合姫コミックス",
+   "parent": "IDコミックス",
+   "publishers": [
+    "一迅社"
+   ]
+  },
+  "Yurihime comics": {
+   "id": "yurihime-comics",
+   "name": "百合姫コミックス",
+   "parent": "IDコミックス",
+   "publishers": [
+    "一迅社"
+   ]
+  },
+  "IDコミックス　／　Yuri-hime comics": {
+   "id": "yurihime-comics",
+   "name": "百合姫コミックス",
+   "parent": "IDコミックス",
+   "publishers": [
+    "一迅社"
+   ]
+  },
+  "idコミックス/yurihimecomics": {
+   "id": "yurihime-comics",
+   "name": "百合姫コミックス",
+   "parent": "IDコミックス",
+   "publishers": [
+    "一迅社"
+   ]
+  },
+  "講談社コミックス. 週刊少年マガジン": {
+   "id": "kodansha-comics-shonen-magazine",
+   "name": "講談社コミックス. 週刊少年マガジン",
+   "parent": "講談社コミックス",
+   "publishers": [
+    "講談社"
+   ]
+  },
+  "講談社コミックス.週刊少年マガジン": {
+   "id": "kodansha-comics-shonen-magazine",
+   "name": "講談社コミックス. 週刊少年マガジン",
+   "parent": "講談社コミックス",
+   "publishers": [
+    "講談社"
+   ]
+  },
+  "ヤングチャンピオン・コミックス": {
+   "id": "young-champion-comics",
+   "name": "ヤングチャンピオン・コミックス",
+   "publishers": [
+    "秋田書店"
+   ]
+  },
+  "ヤングチャンピオンコミックス": {
+   "id": "young-champion-comics",
+   "name": "ヤングチャンピオン・コミックス",
+   "publishers": [
+    "秋田書店"
+   ]
+  },
+  "ACTION COMICS": {
+   "id": "action-comics",
+   "name": "アクションコミックス",
+   "publishers": [
+    "双葉社"
+   ]
+  },
+  "actioncomics": {
+   "id": "action-comics",
+   "name": "アクションコミックス",
+   "publishers": [
+    "双葉社"
+   ]
+  },
+  "まんがタイムコミックス": {
+   "id": "manga-time-comics",
+   "name": "まんがタイムコミックス",
+   "publishers": [
+    "芳文社"
+   ]
+  },
+  "角川コミックス・エース": {
+   "id": "kadokawa-comics-ace",
+   "name": "角川コミックス・エース",
+   "publishers": [
+    "KADOKAWA",
+    "角川書店"
+   ]
+  },
+  "角川コミックスエース": {
+   "id": "kadokawa-comics-ace",
+   "name": "角川コミックス・エース",
+   "publishers": [
+    "KADOKAWA",
+    "角川書店"
+   ]
+  },
+  "IDコミックス. Yurihime comics": {
+   "id": "yurihime-comics",
+   "name": "百合姫コミックス",
+   "parent": "IDコミックス",
+   "publishers": [
+    "一迅社"
+   ]
+  },
+  "idコミックス.yurihimecomics": {
+   "id": "yurihime-comics",
+   "name": "百合姫コミックス",
+   "parent": "IDコミックス",
+   "publishers": [
+    "一迅社"
+   ]
+  },
+  "Kirara menu": {
+   "id": "manga-time-kr-comics",
+   "name": "まんがタイムKRコミックス",
+   "publishers": [
+    "芳文社"
+   ]
+  },
+  "kiraramenu": {
+   "id": "manga-time-kr-comics",
+   "name": "まんがタイムKRコミックス",
+   "publishers": [
+    "芳文社"
+   ]
+  },
+  "HARTA COMIX": {
+   "id": "harta-comix",
+   "name": "ハルタコミックス",
+   "publishers": [
+    "KADOKAWA"
+   ]
+  },
+  "hartacomix": {
+   "id": "harta-comix",
+   "name": "ハルタコミックス",
+   "publishers": [
+    "KADOKAWA"
+   ]
+  },
+  "MFコミックス": {
+   "id": "mfc",
+   "name": "MFC",
+   "publishers": [
+    "KADOKAWA"
+   ]
+  },
+  "mfコミックス": {
+   "id": "mfc",
+   "name": "MFC",
+   "publishers": [
+    "KADOKAWA"
+   ]
+  },
+  "Manga time KR comics. Kirara menu": {
+   "id": "manga-time-kr-comics",
+   "name": "まんがタイムKRコミックス",
+   "publishers": [
+    "芳文社"
+   ]
+  },
+  "mangatimekrcomics.kiraramenu": {
+   "id": "manga-time-kr-comics",
+   "name": "まんがタイムKRコミックス",
+   "publishers": [
+    "芳文社"
+   ]
+  },
   "裏少年サンデーコミックス": {
    "id": "ura-shonen-sunday-comics",
    "name": "裏少年サンデーコミックス",
    "parent": "少年サンデーコミックス",
+   "publishers": [
+    "小学館"
+   ]
+  },
+  "MFCキューンシリーズ": {
+   "id": "mfc-kyun",
+   "name": "MFC キューンシリーズ",
+   "parent": "MFC",
+   "publishers": [
+    "KADOKAWA"
+   ]
+  },
+  "mfcキューンシリーズ": {
+   "id": "mfc-kyun",
+   "name": "MFC キューンシリーズ",
+   "parent": "MFC",
+   "publishers": [
+    "KADOKAWA"
+   ]
+  },
+  "Big Spirits Comics": {
+   "id": "big-spirits-comics",
+   "name": "ビッグスピリッツコミックス",
+   "publishers": [
+    "小学館"
+   ]
+  },
+  "bigspiritscomics": {
+   "id": "big-spirits-comics",
+   "name": "ビッグスピリッツコミックス",
    "publishers": [
     "小学館"
    ]
@@ -150183,20 +150392,6 @@
     "KADOKAWA"
    ]
   },
-  "ACTION COMICS": {
-   "id": "action-comics",
-   "name": "アクションコミックス",
-   "publishers": [
-    "双葉社"
-   ]
-  },
-  "actioncomics": {
-   "id": "action-comics",
-   "name": "アクションコミックス",
-   "publishers": [
-    "双葉社"
-   ]
-  },
   "電撃コミックスNEXT": {
    "id": "dengeki-comics-next",
    "name": "電撃コミックスNEXT",
@@ -150211,20 +150406,6 @@
     "KADOKAWA"
    ]
   },
-  "Big Spirits Comics": {
-   "id": "big-spirits-comics",
-   "name": "ビッグスピリッツコミックス",
-   "publishers": [
-    "小学館"
-   ]
-  },
-  "bigspiritscomics": {
-   "id": "big-spirits-comics",
-   "name": "ビッグスピリッツコミックス",
-   "publishers": [
-    "小学館"
-   ]
-  },
   "コロコロコミックススペシャル": {
    "id": "corocoro-comics-special",
    "name": "コロコロコミックススペシャル",
@@ -150237,20 +150418,6 @@
    "name": "カドコミ",
    "publishers": [
     "KADOKAWA"
-   ]
-  },
-  "Manga time KR comics. Kirara menu": {
-   "id": "manga-time-kr-comics",
-   "name": "まんがタイムKRコミックス",
-   "publishers": [
-    "芳文社"
-   ]
-  },
-  "mangatimekrcomics.kiraramenu": {
-   "id": "manga-time-kr-comics",
-   "name": "まんがタイムKRコミックス",
-   "publishers": [
-    "芳文社"
    ]
   },
   "KITORA": {
@@ -150279,22 +150446,6 @@
    "name": "まんがタイムKRコミックス",
    "publishers": [
     "芳文社"
-   ]
-  },
-  "角川コミックス・エース": {
-   "id": "kadokawa-comics-ace",
-   "name": "角川コミックス・エース",
-   "publishers": [
-    "KADOKAWA",
-    "角川書店"
-   ]
-  },
-  "角川コミックスエース": {
-   "id": "kadokawa-comics-ace",
-   "name": "角川コミックス・エース",
-   "publishers": [
-    "KADOKAWA",
-    "角川書店"
    ]
   },
   "集英社ホームコミックス. オギャー!!": {
@@ -150429,36 +150580,6 @@
     "スクウェア・エニックス"
    ]
   },
-  "講談社コミックス. 週刊少年マガジン": {
-   "id": "kodansha-comics-shonen-magazine",
-   "name": "講談社コミックス. 週刊少年マガジン",
-   "parent": "講談社コミックス",
-   "publishers": [
-    "講談社"
-   ]
-  },
-  "講談社コミックス.週刊少年マガジン": {
-   "id": "kodansha-comics-shonen-magazine",
-   "name": "講談社コミックス. 週刊少年マガジン",
-   "parent": "講談社コミックス",
-   "publishers": [
-    "講談社"
-   ]
-  },
-  "ヤングチャンピオン・コミックス": {
-   "id": "young-champion-comics",
-   "name": "ヤングチャンピオン・コミックス",
-   "publishers": [
-    "秋田書店"
-   ]
-  },
-  "ヤングチャンピオンコミックス": {
-   "id": "young-champion-comics",
-   "name": "ヤングチャンピオン・コミックス",
-   "publishers": [
-    "秋田書店"
-   ]
-  },
   "MFコミックス. ジーンシリーズ": {
    "id": "mfc-gene",
    "name": "MFコミックス ジーンシリーズ",
@@ -150476,14 +150597,6 @@
    ]
   },
   "IDコミックス　／　Yurihime comics": {
-   "id": "yurihime-comics",
-   "name": "百合姫コミックス",
-   "parent": "IDコミックス",
-   "publishers": [
-    "一迅社"
-   ]
-  },
-  "idコミックス/yurihimecomics": {
    "id": "yurihime-comics",
    "name": "百合姫コミックス",
    "parent": "IDコミックス",
@@ -150517,38 +150630,6 @@
    "name": "it COMICS",
    "publishers": [
     "KADOKAWA"
-   ]
-  },
-  "IDコミックス. Yurihime comics": {
-   "id": "yurihime-comics",
-   "name": "百合姫コミックス",
-   "parent": "IDコミックス",
-   "publishers": [
-    "一迅社"
-   ]
-  },
-  "idコミックス.yurihimecomics": {
-   "id": "yurihime-comics",
-   "name": "百合姫コミックス",
-   "parent": "IDコミックス",
-   "publishers": [
-    "一迅社"
-   ]
-  },
-  "Yurihime comics": {
-   "id": "yurihime-comics",
-   "name": "百合姫コミックス",
-   "parent": "IDコミックス",
-   "publishers": [
-    "一迅社"
-   ]
-  },
-  "yurihimecomics": {
-   "id": "yurihime-comics",
-   "name": "百合姫コミックス",
-   "parent": "IDコミックス",
-   "publishers": [
-    "一迅社"
    ]
   },
   "IDコミックス. コミック百合姫": {
@@ -150726,20 +150807,6 @@
     "講談社"
    ]
   },
-  "MFコミックス": {
-   "id": "mfc",
-   "name": "MFC",
-   "publishers": [
-    "KADOKAWA"
-   ]
-  },
-  "mfコミックス": {
-   "id": "mfc",
-   "name": "MFC",
-   "publishers": [
-    "KADOKAWA"
-   ]
-  },
   "Blade comics. Pixiv": {
    "id": "blade-comics-pixiv",
    "name": "Blade comics. Pixiv",
@@ -150762,20 +150829,6 @@
    "parent": "ガンガンコミックス",
    "publishers": [
     "スクウェア・エニックス"
-   ]
-  },
-  "HARTA COMIX": {
-   "id": "harta-comix",
-   "name": "ハルタコミックス",
-   "publishers": [
-    "KADOKAWA"
-   ]
-  },
-  "hartacomix": {
-   "id": "harta-comix",
-   "name": "ハルタコミックス",
-   "publishers": [
-    "KADOKAWA"
    ]
   },
   "ヤングジャンプコミックス": {
@@ -150816,21 +150869,6 @@
     "KADOKAWA"
    ]
   },
-  "mfcキューンシリーズ": {
-   "id": "mfc-kyun",
-   "name": "MFC キューンシリーズ",
-   "parent": "MFC",
-   "publishers": [
-    "KADOKAWA"
-   ]
-  },
-  "まんがタイムコミックス": {
-   "id": "manga-time-comics",
-   "name": "まんがタイムコミックス",
-   "publishers": [
-    "芳文社"
-   ]
-  },
   "KC Kiss": {
    "id": "kc-kiss",
    "name": "KC Kiss",
@@ -150843,20 +150881,6 @@
    "name": "KC Kiss",
    "publishers": [
     "講談社"
-   ]
-  },
-  "Kirara menu": {
-   "id": "manga-time-kr-comics",
-   "name": "まんがタイムKRコミックス",
-   "publishers": [
-    "芳文社"
-   ]
-  },
-  "kiraramenu": {
-   "id": "manga-time-kr-comics",
-   "name": "まんがタイムKRコミックス",
-   "publishers": [
-    "芳文社"
    ]
   },
   "Bamboo comics": {
@@ -150893,22 +150917,6 @@
    "name": "青騎士コミックス",
    "publishers": [
     "KADOKAWA"
-   ]
-  },
-  "Yuri-hime comics": {
-   "id": "yurihime-comics",
-   "name": "百合姫コミックス",
-   "parent": "IDコミックス",
-   "publishers": [
-    "一迅社"
-   ]
-  },
-  "IDコミックス　／　Yuri-hime comics": {
-   "id": "yurihime-comics",
-   "name": "百合姫コミックス",
-   "parent": "IDコミックス",
-   "publishers": [
-    "一迅社"
    ]
   },
   "バーズコミックス": {
@@ -150955,14 +150963,6 @@
    "name": "シャイニーコミックス",
    "publishers": [
     "キルタイムコミュニケーション"
-   ]
-  },
-  "MFCキューンシリーズ": {
-   "id": "mfc-kyun",
-   "name": "MFC キューンシリーズ",
-   "parent": "MFC",
-   "publishers": [
-    "KADOKAWA"
    ]
   },
   "EARTH STAR COMICS": {
@@ -153068,6 +153068,47 @@
   }
  },
  "credit_parts": {
+  "なもり": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "なもり",
+     "r": "著"
+    }
+   ]
+  },
+  "ヒロユキ": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "ヒロユキ"
+    }
+   ]
+  },
+  "大鷹シン/ホマレ": {
+   "j": " / ",
+   "p": [
+    {
+     "n": "大鷹シン",
+     "r": "原作"
+    },
+    {
+     "n": "ホマレ",
+     "r": "漫画"
+    }
+   ]
+  },
+  "りんご飴サード,川田暁生": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "りんご飴サード"
+    },
+    {
+     "n": "川田暁生"
+    }
+   ]
+  },
   "棚木防衛": {
    "j": ", ",
    "p": [
@@ -153076,19 +153117,127 @@
     }
    ]
   },
-  "たみふる": {
+  "クール教信者": {
    "j": ", ",
    "p": [
     {
-     "n": "たみふる"
+     "n": "クール教信者"
     }
    ]
   },
-  "瑠夏子": {
+  "ビーノ": {
    "j": ", ",
    "p": [
     {
-     "n": "瑠夏子"
+     "n": "ビーノ"
+    }
+   ]
+  },
+  "とりから": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "とりから"
+    }
+   ]
+  },
+  "岩見樹代子": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "岩見樹代子"
+    }
+   ]
+  },
+  "金子ある": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "金子ある"
+    }
+   ]
+  },
+  "竹嶋えく": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "竹嶋えく",
+     "r": "著"
+    }
+   ]
+  },
+  "ひさまくまこ": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "ひさまくまこ"
+    }
+   ]
+  },
+  "渋谷圭一郎": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "渋谷圭一郎",
+     "r": "著者"
+    }
+   ]
+  },
+  "La-na/佐島勤/石田可奈": {
+   "j": " / ",
+   "p": [
+    {
+     "n": "La-na"
+    },
+    {
+     "n": "佐島勤"
+    },
+    {
+     "n": "石田可奈"
+    }
+   ]
+  },
+  "イノウエ": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "イノウエ"
+    }
+   ]
+  },
+  "栗崎きんぐ": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "栗崎きんぐ"
+    }
+   ]
+  },
+  "アルト/絵本奈央": {
+   "j": " / ",
+   "p": [
+    {
+     "n": "アルト"
+    },
+    {
+     "n": "絵本奈央"
+    }
+   ]
+  },
+  "吉富昭仁": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "吉富昭仁",
+     "r": "著"
+    }
+   ]
+  },
+  "鮎川あお": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "鮎川あお"
     }
    ]
   },
@@ -153100,11 +153249,67 @@
     }
    ]
   },
-  "とりから": {
+  "sasa熊": {
    "j": ", ",
    "p": [
     {
-     "n": "とりから"
+     "n": "sasa熊"
+    }
+   ]
+  },
+  "たみふる": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "たみふる"
+    }
+   ]
+  },
+  "九郎": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "九郎",
+     "r": "著者"
+    }
+   ]
+  },
+  "奥たまむし": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "奥たまむし",
+     "r": "著者"
+    }
+   ]
+  },
+  "瑠夏子": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "瑠夏子"
+    }
+   ]
+  },
+  "篠房六郎": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "篠房六郎"
+    }
+   ]
+  },
+  "珠樹みつね/恥谷きゆう/桜河ゆう": {
+   "j": " / ",
+   "p": [
+    {
+     "n": "珠樹みつね"
+    },
+    {
+     "n": "恥谷きゆう"
+    },
+    {
+     "n": "桜河ゆう"
     }
    ]
   },
@@ -153155,14 +153360,6 @@
    "p": [
     {
      "n": "まめ魚"
-    }
-   ]
-  },
-  "篠房六郎": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "篠房六郎"
     }
    ]
   },
@@ -153555,38 +153752,6 @@
     }
    ]
   },
-  "ヒロユキ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "ヒロユキ"
-    }
-   ]
-  },
-  "大鷹シン/ホマレ": {
-   "j": " / ",
-   "p": [
-    {
-     "n": "大鷹シン",
-     "r": "原作"
-    },
-    {
-     "n": "ホマレ",
-     "r": "漫画"
-    }
-   ]
-  },
-  "りんご飴サード,川田暁生": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "りんご飴サード"
-    },
-    {
-     "n": "川田暁生"
-    }
-   ]
-  },
   "美鈴ちょこ": {
    "j": ", ",
    "p": [
@@ -153640,23 +153805,6 @@
    "p": [
     {
      "n": "ゆざきさかおみ"
-    }
-   ]
-  },
-  "金子ある": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "金子ある"
-    }
-   ]
-  },
-  "竹嶋えく": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "竹嶋えく",
-     "r": "著"
     }
    ]
   },
@@ -153840,14 +153988,6 @@
    "p": [
     {
      "n": "藤本セツナ"
-    }
-   ]
-  },
-  "ずんだコロッケ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "ずんだコロッケ"
     }
    ]
   },
@@ -154086,28 +154226,6 @@
     }
    ]
   },
-  "クール教信者": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "クール教信者"
-    }
-   ]
-  },
-  "La-na/佐島勤/石田可奈": {
-   "j": " / ",
-   "p": [
-    {
-     "n": "La-na"
-    },
-    {
-     "n": "佐島勤"
-    },
-    {
-     "n": "石田可奈"
-    }
-   ]
-  },
   "ハンバーガー": {
    "j": ", ",
    "p": [
@@ -154133,38 +154251,11 @@
     }
    ]
   },
-  "イノウエ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "イノウエ"
-    }
-   ]
-  },
   "夏草": {
    "j": ", ",
    "p": [
     {
      "n": "夏草"
-    }
-   ]
-  },
-  "栗崎きんぐ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "栗崎きんぐ"
-    }
-   ]
-  },
-  "アルト/絵本奈央": {
-   "j": " / ",
-   "p": [
-    {
-     "n": "アルト"
-    },
-    {
-     "n": "絵本奈央"
     }
    ]
   },
@@ -154182,23 +154273,6 @@
     {
      "n": "ちさこ",
      "r": "著者"
-    }
-   ]
-  },
-  "吉富昭仁": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "吉富昭仁",
-     "r": "著"
-    }
-   ]
-  },
-  "鮎川あお": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "鮎川あお"
     }
    ]
   },
@@ -154273,14 +154347,6 @@
    "p": [
     {
      "n": "ｓｏｎｏ．Ｎ"
-    }
-   ]
-  },
-  "岩見樹代子": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "岩見樹代子"
     }
    ]
   },
@@ -154428,8 +154494,15 @@
    "j": ", ",
    "p": [
     {
-     "n": "せらみっく",
-     "r": "著者"
+     "n": "せらみっく"
+    }
+   ]
+  },
+  "徳永パン": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "徳永パン"
     }
    ]
   },
@@ -154463,11 +154536,47 @@
     }
    ]
   },
+  "あおと響": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "あおと響",
+     "r": "著"
+    }
+   ]
+  },
+  "小畠泪/今安": {
+   "j": " / ",
+   "p": [
+    {
+     "n": "小畠泪"
+    },
+    {
+     "n": "今安"
+    }
+   ]
+  },
   "杉谷エコ": {
    "j": ", ",
    "p": [
     {
      "n": "杉谷エコ"
+    }
+   ]
+  },
+  "若鶏にこみ": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "若鶏にこみ"
+    }
+   ]
+  },
+  "涼風そら": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "涼風そら"
     }
    ]
   },
@@ -154556,20 +154665,6 @@
    "p": [
     {
      "n": "霜月汐"
-    }
-   ]
-  },
-  "珠樹みつね/恥谷きゆう/桜河ゆう": {
-   "j": " / ",
-   "p": [
-    {
-     "n": "珠樹みつね"
-    },
-    {
-     "n": "恥谷きゆう"
-    },
-    {
-     "n": "桜河ゆう"
     }
    ]
   },
@@ -154743,23 +154838,6 @@
     }
    ]
   },
-  "なもり": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "なもり",
-     "r": "著"
-    }
-   ]
-  },
-  "ビーノ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "ビーノ"
-    }
-   ]
-  },
   "未幡": {
    "j": ", ",
    "p": [
@@ -154778,11 +154856,11 @@
     }
    ]
   },
-  "ひさまくまこ": {
+  "ずんだコロッケ": {
    "j": ", ",
    "p": [
     {
-     "n": "ひさまくまこ"
+     "n": "ずんだコロッケ"
     }
    ]
   },
@@ -154856,14 +154934,6 @@
    "p": [
     {
      "n": "餡実ツキ"
-    }
-   ]
-  },
-  "sasa熊": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "sasa熊"
     }
    ]
   },
@@ -155012,15 +155082,6 @@
     },
     {
      "n": "法螺貝こゐ"
-    }
-   ]
-  },
-  "九郎": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "九郎",
-     "r": "著者"
     }
    ]
   },
@@ -155517,56 +155578,12 @@
     }
    ]
   },
-  "徳永パン": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "徳永パン"
-    }
-   ]
-  },
   "銃爺": {
    "j": ", ",
    "p": [
     {
      "n": "銃爺",
      "r": "漫画"
-    }
-   ]
-  },
-  "あおと響": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "あおと響",
-     "r": "著"
-    }
-   ]
-  },
-  "小畠泪/今安": {
-   "j": " / ",
-   "p": [
-    {
-     "n": "小畠泪"
-    },
-    {
-     "n": "今安"
-    }
-   ]
-  },
-  "若鶏にこみ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "若鶏にこみ"
-    }
-   ]
-  },
-  "涼風そら": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "涼風そら"
     }
    ]
   },
@@ -155802,15 +155819,6 @@
    "p": [
     {
      "n": "TATSUBON"
-    }
-   ]
-  },
-  "奥たまむし": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "奥たまむし",
-     "r": "著者"
     }
    ]
   },
@@ -157667,15 +157675,6 @@
     },
     {
      "n": "紗嶋"
-    }
-   ]
-  },
-  "渋谷圭一郎": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "渋谷圭一郎",
-     "r": "著者"
     }
    ]
   },
@@ -178806,17 +178805,6 @@
     " / ハチコ"
    ]
   },
-  "はちこ,能代リョウ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "はちこ"
-    },
-    {
-     "n": "能代リョウ"
-    }
-   ]
-  },
   "はっとりまさき": {
    "j": ", ",
    "p": [
@@ -181955,17 +181943,6 @@
     " / ナダカハルツグ"
    ]
   },
-  "博(ひろ)": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "博"
-    }
-   ],
-   "drop": [
-    "（ひろ）"
-   ]
-  },
   "卯崎ひとみ": {
    "j": ", ",
    "p": [
@@ -184627,6 +184604,15 @@
    "p": [
     {
      "n": "深見真"
+    }
+   ]
+  },
+  "渋谷圭一郎(著者)": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "渋谷圭一郎",
+     "r": "著者"
     }
    ]
   },
@@ -187913,7 +187899,6 @@
    "double": "3 Bannou Maryoku Ga Areba Kizoku Shakai Mo Yoyuu De Ikirareru To Kiita Nodesuga",
    "plain": "3 Banno Maryoku Ga Areba Kizoku Shakai Mo Yoyu De Ikirareru To Kiita Nodesuga"
   },
-  "3覚悟は決まった": "3 Kakugo Wa Kimatta",
   "3.25のねぼけた世界-Saturday": "3.25No Neboketa Sekai -Saturday",
   "3/6第1夜『裏切りのサーカス』を更新しました。": {
    "macron": "3/6 Dai1Yoru “Uragiri No Sākasu” O Kōshin Shimashita.",
@@ -188029,7 +188014,6 @@
    "double": "63. Shitsumon Boshuu",
    "plain": "63. Shitsumon Boshu"
   },
-  "64話": "64Hanashi",
   "6億年の博物旅": "6Oku Nen No Hakubutsu Tabi",
   "6服目": "6Fukume",
   "7ページ連載予告マンガ": {
@@ -188144,14 +188128,14 @@
   "COMICアンブル": "COMICAnburu",
   "Chalk-WhitePromise-白亜の約束": "Chalk-White Promise-Hakua No Yakusoku",
   "Chapter.1第1話-1": "Chapter.1 Dai1Hanashi-1",
-  "Chapter.14第7話-2": "Chapter.14 Dai7Hanashi-2",
+  "Chapter.10第5話_1": "Chapter.10 Dai5Hanashi_1",
   "Chapter.15第8話-1": "Chapter.15 Dai8Hanashi-1",
   "Chapter.16第8話-2": "Chapter.16 Dai8Hanashi-2",
-  "Chapter.17第16話": "Chapter.17 Dai16Hanashi",
+  "Chapter.17第9話-1": "Chapter.17 Dai9Hanashi-1",
   "Chapter.18第17話": "Chapter.18 Dai17Hanashi",
   "Chapter.19第18話": "Chapter.19 Dai18Hanashi",
   "Chapter.1第1巻第1話-1": "Chapter.1 Dai1Maki Dai1Hanashi-1",
-  "Chapter.7第3話_2": "Chapter.7 Dai3Hanashi_2",
+  "Chapter.20第19話": "Chapter.20 Dai19Hanashi",
   "Chapter.8第4話_1": "Chapter.8 Dai4Hanashi_1",
   "Chapter.9第4話_2": "Chapter.9 Dai4Hanashi_2",
   "Chapter55羽根井凛4": "Chapter55 Hanei Rin4",
@@ -188993,11 +188977,6 @@
    "double": "[ep.17]Gyaru To Iinchou Ga Guuzen Saikai Suru Hanashi",
    "plain": "[ep.17]Gyaru To Iincho Ga Guzen Saikai Suru Hanashi"
   },
-  "[おまけ11]春雷卓球": {
-   "macron": "[Omake11]Shunrai Takkyū",
-   "double": "[Omake11]Shunrai Takkyuu",
-   "plain": "[Omake11]Shunrai Takkyu"
-  },
   "[おまけ12]春雷卓球": {
    "macron": "[Omake12]Shunrai Takkyū",
    "double": "[Omake12]Shunrai Takkyuu",
@@ -189288,6 +189267,11 @@
    "macron": "[Dai8Hanashi Zenpen] Eiyū Shōjo To Noroware No Ginki",
    "double": "[Dai8Hanashi Zenpen] Eiyuu Shoujo To Noroware No Ginki",
    "plain": "[Dai8Hanashi Zenpen] Eiyu Shojo To Noroware No Ginki"
+  },
+  "[第8話後編]英雄少女と呪われの銀姫": {
+   "macron": "[Dai8Hanashi Kōhen] Eiyū Shōjo To Noroware No Ginki",
+   "double": "[Dai8Hanashi Kouhen] Eiyuu Shoujo To Noroware No Ginki",
+   "plain": "[Dai8Hanashi Kohen] Eiyu Shojo To Noroware No Ginki"
   },
   "[第90話]明日(あけび)ちゃんのセーラー服": {
    "macron": "[Dai90Hanashi] Asu(Akebi)Chan No Sērāfuku",
@@ -190912,7 +190896,6 @@
   },
   "【特別読み切り】": "[Tokubetsu Yomikiri]",
   "【百合】奴隷扱いの娘が足を舐めて幸せになる(かもしれない)話": "[Yuri]Dorei Atsukai No Musume Ga Ashi O Namete Shiawaseni Naru(Kamoshirenai)Hanashi",
-  "【第100話】心あわせて": "[Dai100Hanashi]Kokoro Awasete",
   "【第101話】飛行戦闘": {
    "macron": "[Dai101Hanashi]Hikō Sentō",
    "double": "[Dai101Hanashi]Hikou Sentou",
@@ -191021,6 +191004,11 @@
    "macron": "[Dai56Hanashi]Nakama Zen'in☆NTR☆Gāru",
    "double": "[Dai56Hanashi]Nakama Zen'in☆NTR☆Gaaru",
    "plain": "[Dai56Hanashi]Nakama Zen'in☆NTR☆Garu"
+  },
+  "【第57話】不安は☆友達☆ガール": {
+   "macron": "[Dai57Hanashi]Fuan Wa☆Tomodachi☆Gāru",
+   "double": "[Dai57Hanashi]Fuan Wa☆Tomodachi☆Gaaru",
+   "plain": "[Dai57Hanashi]Fuan Wa☆Tomodachi☆Garu"
   },
   "【試し読み】永久少女信仰": {
    "macron": "[Tameshiyomi]Eikyū Shōjo Shinkō",
@@ -193284,11 +193272,6 @@
    "double": "Hachiko / Noshiro Ryou / Noshiroryou / Hachiko",
    "plain": "Hachiko / Noshiro Ryo / Noshiroryo / Hachiko"
   },
-  "はちこ,能代リョウ": {
-   "macron": "Hachiko, Noshiro Ryō",
-   "double": "Hachiko, Noshiro Ryou",
-   "plain": "Hachiko, Noshiro Ryo"
-  },
   "はちべ": "Hachibe",
   "はちべもつ": "Hachibe Motsu",
   "はちや": "Hachiya",
@@ -193471,7 +193454,6 @@
   "ひより": "Hiyori",
   "ひらり、コミックス": "Hirari,Komikkusu",
   "ひるのつき子": "Hiru No Tsuki Ko",
-  "ひろ": "Hiro",
   "びじゅつの「び」!": "Bijutsuno“Bi”!",
   "びの": "Bino",
   "びよら": "Biyora",
@@ -195618,6 +195600,11 @@
   "ギロチン": "Girochin",
   "ギロチン銀座": "Girochin Ginza",
   "ギロチン銀座ギロチン銀座": "Girochin Ginza Girochin Ginza",
+  "クイズ第65回直4&amp;アルミフレーム全盛時代に現れた反逆児!なんてバイク?": {
+   "macron": "Kuizu Dai65Kai Jika4&amp;Arumi Furēmu Zensei Jidai Ni Arawareta Hangyakuji! Nantebaiku?",
+   "double": "Kuizu Dai65Kai Jika4&amp;Arumi Fureemu Zensei Jidai Ni Arawareta Hangyakuji! Nantebaiku?",
+   "plain": "Kuizu Dai65Kai Jika4&amp;Arumi Furemu Zensei Jidai Ni Arawareta Hangyakuji! Nantebaiku?"
+  },
   "クスミ": "Kusumi",
   "クスミ/原初/キッカイキ": "Kusumi / Gensho / Kikkaiki",
   "クズ浪人生、人生が辛いので夜のお姉さんを呼んでみた": {
@@ -196323,11 +196310,6 @@
    "macron": "Shōtoshōto Kore Ga Kanojora No Senshadō",
    "double": "Shootoshooto Kore Ga Kanojora No Senshadou",
    "plain": "Shotoshoto Kore Ga Kanojora No Senshado"
-  },
-  "ショートショート人類学生化計画": {
-   "macron": "Shōtoshōto Jinrui Gakuseika Keikaku",
-   "double": "Shootoshooto Jinrui Gakuseika Keikaku",
-   "plain": "Shotoshoto Jinrui Gakuseika Keikaku"
   },
   "ショートショート初見の二人": {
    "macron": "Shōtoshōto Shoken No Futari",
@@ -199082,7 +199064,7 @@
    "double": "Ropi Shima Kou",
    "plain": "Ropi Shima Ko"
   },
-  "ロボ24-1": "Robo24-1",
+  "ロボ24-3": "Robo24-3",
   "ロボットJSにスキはありません!!": {
    "macron": "RobottoJSNisukihārimasen!!",
    "double": "RobottoJSNisukihaarimasen!!",
@@ -201113,7 +201095,6 @@
    "plain": "Tanko Hon Dai1Shu HatsubaiPR!!"
   },
   "博": "Hiroshi",
-  "博(ひろ)": "Hiroshi(Hiro)",
   "卯崎ひとみ": "Usaki Hitomi",
   "卯崎遥": "Usaki Haruka",
   "卯花つかさ": "Uka Tsukasa",
@@ -206102,6 +206083,11 @@
    "double": "Shibuya Keiichirou",
    "plain": "Shibuya Keiichiro"
   },
+  "渋谷圭一郎(著者)": {
+   "macron": "Shibuya Keiichirō(Chosha)",
+   "double": "Shibuya Keiichirou(Chosha)",
+   "plain": "Shibuya Keiichiro(Chosha)"
+  },
   "渡りに船": "Watari Ni Fune",
   "渡りに船/ワタリニフネ": "Watari Ni Fune / Watarinifune",
   "渡辺零": "Watanabe Rei",
@@ -206759,7 +206745,6 @@
    "double": "Hatsujou Aidoru Wa Unmei No Doruota To Tsukiaitai",
    "plain": "Hatsujo Aidoru Wa Unmei No Doruota To Tsukiaitai"
   },
-  "発見!第1回いすゞの初代「ジェミニ」はGMとの提携から生まれた世界戦略車!": "Hakken! Dai1Kai Isuzu No Shodai“Jemini”HaGMTo No Teikei Kara Umareta Sekai Senryakusha!",
   "登坂いさ": "Tohan I Sa",
   "白き乙女の人狼": {
    "macron": "Shiroki Otome No Jinrō",
@@ -207707,7 +207692,6 @@
    "double": "Dai10Hanashi Kareshi No Onnatomodachi To Deeto(?)Suru Hanashi1",
    "plain": "Dai10Hanashi Kareshi No Onnatomodachi To Deto(?)Suru Hanashi1"
   },
-  "第10話〈2〉": "Dai10Hanashi<2>",
   "第10話(2)": "Dai10Hanashi(2)",
   "第10話<前半>": "Dai10Hanashi<Zenhan>",
   "第119球:披露する場(前編)": {
@@ -207741,6 +207725,7 @@
   "第11話-8": "Dai11Hanashi-8",
   "第11話1": "Dai11Hanashi1",
   "第11話2": "Dai11Hanashi2",
+  "第11話3": "Dai11Hanashi3",
   "第11話〈1〉": "Dai11Hanashi<1>",
   "第11話〈2〉": "Dai11Hanashi<2>",
   "第11話「フィアナ、無事クエストを達成する」(1)": "Dai11Hanashi“Fiana,Buji Kuesuto O Tassei Suru”(1)",
@@ -207757,7 +207742,6 @@
    "double": "Dai12Hanashi Kouhen:Arisu No Ibasho",
    "plain": "Dai12Hanashi Kohen:Arisu No Ibasho"
   },
-  "第12話恋願う": "Dai12Hanashi Koi Negau",
   "第12話登録者数完全破壊してみた2": {
    "macron": "Dai12Hanashi Tōrokusha Sū Kanzen Hakai Shite Mita2",
    "double": "Dai12Hanashi Tourokusha Suu Kanzen Hakai Shite Mita2",
@@ -207789,6 +207773,7 @@
    "plain": "Dai133Hanashi(Saishuwa)"
   },
   "第137話": "Dai137Hanashi",
+  "第138話": "Dai138Hanashi",
   "第13話": "Dai13Hanashi",
   "第13話嫌われたくない": "Dai13Hanashi Kirawaretaku Nai",
   "第13話(前編)": "Dai13Hanashi(Zenpen)",
@@ -207808,13 +207793,10 @@
    "double": "Dai13Hanashi Namida No Hoshi[Kouhen]",
    "plain": "Dai13Hanashi Namida No Hoshi[Kohen]"
   },
-  "第146話後半": {
-   "macron": "Dai146Hanashi Kōhan",
-   "double": "Dai146Hanashi Kouhan",
-   "plain": "Dai146Hanashi Kohan"
-  },
   "第147話じっけん": "Dai147Hanashi Jikken",
+  "第147話前半": "Dai147Hanashi Zenhan",
   "第148話けつろん": "Dai148Hanashi Ketsuron",
+  "第149話でんせつ": "Dai149Hanashi Densetsu",
   "第14話": "Dai14Hanashi",
   "第14話フォルテシモ-2": "Dai14Hanashi Foruteshimo-2",
   "第14話(前編)": "Dai14Hanashi(Zenpen)",
@@ -207879,7 +207861,6 @@
   "第17話決別する女の子の話2": "Dai17Hanashi Ketsubetsu Suru Onnanoko No Hanashi2",
   "第17話「Thenextstationis」": "Dai17Hanashi“The next station is”",
   "第17話【完結】": "Dai17Hanashi[Kanketsu]",
-  "第18.5話": "Dai18.5Hanashi",
   "第189話エルマとユタラマ": "Dai189Hanashi Erumatoyutarama",
   "第18話": "Dai18Hanashi",
   "第18話-1": "Dai18Hanashi-1",
@@ -207910,6 +207891,11 @@
    "macron": "Dai191Hanashi Shintopuraibētosupēsu",
    "double": "Dai191Hanashi Shintopuraibeetosupeesu",
    "plain": "Dai191Hanashi Shintopuraibetosupesu"
+  },
+  "第192話カンナとメンシーラー才川(前編)": {
+   "macron": "Dai192Hanashi Kanna To Menshīrā Saikawa(Zenpen)",
+   "double": "Dai192Hanashi Kanna To Menshiiraa Saikawa(Zenpen)",
+   "plain": "Dai192Hanashi Kanna To Menshira Saikawa(Zenpen)"
   },
   "第19話": "Dai19Hanashi",
   "第19話生肌魅惑のマーメイド": {
@@ -207945,7 +207931,6 @@
    "plain": "Dai19Hanashi Kohen"
   },
   "第19話(2)": "Dai19Hanashi(2)",
-  "第19輪「来ちゃった」2": "Dai19Wa“Kichatta”2",
   "第1夜『裏切りのサーカス』": {
    "macron": "Dai1Yoru “Uragiri No Sākasu”",
    "double": "Dai1Yoru “Uragiri No Saakasu”",
@@ -208042,6 +208027,7 @@
    "plain": "Dai22Hanashi Kopi Hon O Tsukuro!"
   },
   "第237話": "Dai237Hanashi",
+  "第238話": "Dai238Hanashi",
   "第23話": "Dai23Hanashi",
   "第23話1": "Dai23Hanashi1",
   "第23話2": "Dai23Hanashi2",
@@ -208181,6 +208167,7 @@
   "第36話(2)": "Dai36Hanashi(2)",
   "第36話ルイくんとお隣さん": "Dai36Hanashi Ruikun To O Tonarisan",
   "第37話(1)": "Dai37Hanashi(1)",
+  "第37話「姦穽」": "Dai37Hanashi“Kan Wana”",
   "第37話後編2": {
    "macron": "Dai37Hanashi Kōhen2",
    "double": "Dai37Hanashi Kouhen2",
@@ -208260,7 +208247,6 @@
    "double": "Dai4Hanashi Suihou Ni Sura Kaesazu",
    "plain": "Dai4Hanashi Suiho Ni Sura Kaesazu"
   },
-  "第4話-1": "Dai4Hanashi-1",
   "第4話-2": "Dai4Hanashi-2",
   "第4話1": "Dai4Hanashi1",
   "第4話1:「物語」のはじまり": "Dai4Hanashi1:“Monogatari”Nohajimari",
@@ -208270,7 +208256,8 @@
   "第4話4": "Dai4Hanashi4",
   "第4話「ひとりぼっちは嫌だから": "Dai4Hanashi“Hitoribotchi Wa Iyadakara",
   "第4話前編": "Dai4Hanashi Zenpen",
-  "第50話": "Dai50Hanashi",
+  "第51話-1": "Dai51Hanashi-1",
+  "第51話-2": "Dai51Hanashi-2",
   "第54話": "Dai54Hanashi",
   "第55話": "Dai55Hanashi",
   "第55話2": "Dai55Hanashi2",
@@ -208306,6 +208293,7 @@
   "第5話-1": "Dai5Hanashi-1",
   "第5話-2": "Dai5Hanashi-2",
   "第5話1": "Dai5Hanashi1",
+  "第5話1:再会": "Dai5Hanashi1:Saikai",
   "第5話2": "Dai5Hanashi2",
   "第5話3": "Dai5Hanashi3",
   "第5話4": "Dai5Hanashi4",
@@ -208318,6 +208306,7 @@
   },
   "第60話「CherryBlossomsfortheTwoofUs2」1": "Dai60Hanashi“Cherry Blossoms for the Two of Us2”1",
   "第61話バズと、歓喜と、戸惑いと。": "Dai61Hanashi Bazuto,Kanki To,Tomadoi To.",
+  "第62話説明と、想い出と、手紙と。": "Dai62Hanashi Setsumei To,Omoide To,Tegami To.",
   "第63話": "Dai63Hanashi",
   "第64話出会いと、別れと、後悔と。(1)": {
    "macron": "Dai64Hanashi Deai To,Wakare To,Kōkai To.(1)",
@@ -208352,10 +208341,10 @@
   "第64話:終わりは一瞬": "Dai64Hanashi:Owari Wa Isshun",
   "第65話": "Dai65Hanashi",
   "第65話:力の差": "Dai65Hanashi:Chikara No Sa",
+  "第66話": "Dai66Hanashi",
   "第67話": "Dai67Hanashi",
   "第6巻": "Dai6Maki",
   "第6話": "Dai6Hanashi",
-  "第6話アカツキ": "Dai6Hanashi Akatsuki",
   "第6話卒業式": {
    "macron": "Dai6Hanashi Sotsugyōshiki",
    "double": "Dai6Hanashi Sotsugyoushiki",
@@ -208408,7 +208397,7 @@
   "第8話-3": "Dai8Hanashi-3",
   "第8話1": "Dai8Hanashi1",
   "第8話2": "Dai8Hanashi2",
-  "第8話の3": "Dai8Hanashi No3",
+  "第8話の5": "Dai8Hanashi No5",
   "第90話": "Dai90Hanashi",
   "第91話-2トイレット・ペーパームーンI": {
    "macron": "Dai91Hanashi-2 Toiretto · PēpāmūnI",
@@ -208636,6 +208625,11 @@
   "第336話「人たらしめるもの」": "Dai336Hanashi “Hito Tara Shimeru Mono”",
   "第337話「仇討ち」": "Dai337Hanashi “Adauchi”",
   "第338話「発破」": "Dai338Hanashi “Happa”",
+  "第339話1「射銃」": {
+   "macron": "Dai339Hanashi1 “Sha Jū”",
+   "double": "Dai339Hanashi1 “Sha Juu”",
+   "plain": "Dai339Hanashi1 “Sha Ju”"
+  },
   "第36話": "Dai36Hanashi",
   "第37話乙女たちのブートキャンプ": {
    "macron": "Dai37Hanashi Otometachi No Būtokyanpu",
@@ -211588,6 +211582,14 @@
    "plain": "사이좋은 조장들 - Kumichotachi No Nakayoshi"
   },
   "서아-栖鴉": "서아-Sumika Karasu",
+  "#34カイタク": "#34 Kaitaku",
+  "#36レスバ": "#36 Resuba",
+  "#37ファン": "#37 Fan",
+  "#39ゴウドウライブ": {
+   "macron": "#39 Gōdōraibu",
+   "double": "#39 Goudouraibu",
+   "plain": "#39 Godoraibu"
+  },
   "1巻Lesson1(1)": "1Maki Lesson1(1)",
   "1巻第0話": "1Maki Dai0Hanashi",
   "1巻第10話": "1Maki Dai10Hanashi",
@@ -211608,7 +211610,6 @@
   "12巻第158話": "12Maki Dai158Hanashi",
   "12巻第159話": "12Maki Dai159Hanashi",
   "13巻第16話": "13Maki Dai16Hanashi",
-  "13巻第78球「体力と自信」(2)": "13Maki Dai78Tama “Tairyoku To Jishin”(2)",
   "14巻第176話": "14Maki Dai176Hanashi",
   "14巻第177話": "14Maki Dai177Hanashi",
   "14巻第178話": "14Maki Dai178Hanashi",
@@ -211697,11 +211698,6 @@
   "7巻第9話": "7Maki Dai9Hanashi",
   "8巻第11話": "8Maki Dai11Hanashi",
   "8巻第13話": "8Maki Dai13Hanashi",
-  "9巻注文63みやげ話(1)": {
-   "macron": "9Maki Chūmon63 Miyagebanashi(1)",
-   "double": "9Maki Chuumon63 Miyagebanashi(1)",
-   "plain": "9Maki Chumon63 Miyagebanashi(1)"
-  },
   "9巻注文63みやげ話(2)": {
    "macron": "9Maki Chūmon63 Miyagebanashi(2)",
    "double": "9Maki Chuumon63 Miyagebanashi(2)",
@@ -212304,6 +212300,7 @@
   "CHALLENGE10.5": "CHALLENGE10.5",
   "Chalk-WhitePromise-白亜の約束": "Chalk - White Promise - Hakua no Yakusoku",
   "Chapter.1第1話-1": "Ch. 1-1",
+  "Chapter.10第5話_1": "Ch. 5 _1",
   "Chapter.11第6話-1": "Ch. 6-1",
   "Chapter.12第6話-2": "Ch. 6-2",
   "Chapter.13第7話-1": "Ch. 7-1",
@@ -212314,11 +212311,13 @@
   "Chapter.16第15話": "Ch. 15",
   "Chapter.16第8話-2": "Ch. 8-2",
   "Chapter.17第16話": "Ch. 16",
+  "Chapter.17第9話-1": "Ch. 9-1",
   "Chapter.18第17話": "Ch. 17",
   "Chapter.19第18話": "Ch. 18",
   "Chapter.1第1巻第1話-1": "Ch. 1 Maki Dai 1Wa - 1",
   "Chapter.1第1話_1": "Ch. 1 _1",
   "Chapter.2第1話-2": "Ch. 1-2",
+  "Chapter.20第19話": "Ch. 19",
   "Chapter.2第1話_2": "Ch. 1 _2",
   "Chapter.3第1話_3": "Ch. 1 _3",
   "Chapter.4第2話_1": "Ch. 2 _1",
@@ -212618,6 +212617,7 @@
   "[第7話後編]英雄少女と呪われの銀姫": "Ch. 7 Kōhen Eiyū Shōjo to Noroware no Ginki",
   "[第89話]明日(あけび)ちゃんのセーラー服": "Ch. 89 Asuchan no Sērāfuku",
   "[第8話前編]英雄少女と呪われの銀姫": "Ch. 8 Zenpen Eiyū Shōjo to Noroware no Ginki",
+  "[第8話後編]英雄少女と呪われの銀姫": "Ch. 8 Kōhen Eiyū Shōjo to Noroware no Ginki",
   "[第90話]明日(あけび)ちゃんのセーラー服": "Ch. 90 Asuchan no Sērāfuku",
   "auprintemps(ナンバーナイン)": "Au Printemps (Nanbā Nain)",
   "awkward(ナンバーナイン)": "Awkward (Nanbā Nain)",
@@ -212889,6 +212889,7 @@
   "【第54話】力を合わせて☆生き残れ☆ガール": "Ch. 54 Chikara o Awasete ☆ Ikinokore ☆ Gāru",
   "【第55話】全力☆買収☆ガール": "Ch. 55 Zenryoku ☆ Baishū ☆ Gāru",
   "【第56話】仲間全員☆NTR☆ガール": "Ch. 56 Nakama Zen'in ☆ NTR ☆ Gāru",
+  "【第57話】不安は☆友達☆ガール": "Ch. 57 Fuan wa ☆ Tomodachi ☆ Gāru",
   "【第5話】UMAい話にご用心": "Ch. 5 UMA I Hanashi ni Go Yōjin",
   "【第5話】罪のお味は": "Ch. 5 Tsumi no o Aji wa",
   "【第6話】チョベリグなビート": "Ch. 6 Choberiguna Bīto",
@@ -215268,6 +215269,7 @@
   "ロボ23-3": "Robo 23 - 3",
   "ロボ23-5": "Robo 23 - 5",
   "ロボ24-1": "Robo 24 - 1",
+  "ロボ24-3": "Robo 24 - 3",
   "ロボットJSにスキはありません!!": "Robotto JS ni Suki wa Arimasen!!",
   "ロマンスコード": "Romansu Kōdo",
   "ロリースイートロリー": "Rorīsuītororī",
@@ -217857,6 +217859,7 @@
   "第11話-8": "Ch. 11-8",
   "第11話1": "Ch. 11-1",
   "第11話2": "Ch. 11-2",
+  "第11話3": "Ch. 11-3",
   "第11話〈1〉": "Ch. 11 <1>",
   "第11話〈2〉": "Ch. 11 <2>",
   "第11話「フィアナ、無事クエストを達成する」(1)": "Ch. 11 “Fiana, Buji Kuesuto o Tassei Suru” (1)",
@@ -217907,6 +217910,7 @@
   "第135話": "Ch. 135",
   "第136話": "Ch. 136",
   "第137話": "Ch. 137",
+  "第138話": "Ch. 138",
   "第13回舞台の演技に圧倒!!終演後、彼女は主役の元へ駆け寄って、衝撃の言葉を口にする/": "Ch. 13 Butai no Engi ni Attō!! Shūengo, Kanojo wa Shuyaku no Moto e Kakeyotte, Shōgeki no Kotoba o Kuchi ni Suru /",
   "第13話": "Ch. 13",
   "第13話嫌われたくない": "Ch. 13 Kirawaretaku Nai",
@@ -217930,7 +217934,9 @@
   "第146話前半": "Ch. 146 Zenhan",
   "第146話後半": "Ch. 146 Kōhan",
   "第147話じっけん": "Ch. 147 Jikken",
+  "第147話前半": "Ch. 147 Zenhan",
   "第148話けつろん": "Ch. 148 Ketsuron",
+  "第149話でんせつ": "Ch. 149 Densetsu",
   "第14話": "Ch. 14",
   "第14話フォルテシモ-2": "Ch. 14 Foruteshimō 2",
   "第14話隠れた想いは": "Ch. 14 Kakureta Omoi wa",
@@ -218029,6 +218035,7 @@
   "第18輪「お前達との関係も終わりですわ」2": "Ch. 18 “Omaetachi to no Kankei mo Owaridesu Wa” - 2",
   "第190話ルコアとゲーム大会": "Ch. 190 Rukoa to Gēmu Taikai",
   "第191話シンとプライベートスペース": "Ch. 191 Shin to Puraibēto Supēsu",
+  "第192話カンナとメンシーラー才川(前編)": "Ch. 192 Kanna to Menshīrā Saikawa (Zenpen)",
   "第19話": "Ch. 19",
   "第19話生肌魅惑のマーメイド": "Ch. 19 Nama Hada Miwaku no Māmeido",
   "第19話(1)": "Ch. 19 (1)",
@@ -218112,6 +218119,7 @@
   "第235話": "Ch. 235",
   "第236話": "Ch. 236",
   "第237話": "Ch. 237",
+  "第238話": "Ch. 238",
   "第23話": "Ch. 23",
   "第23話-1": "Ch. 23-1",
   "第23話-2": "Ch. 23-2",
@@ -218248,6 +218256,7 @@
   "第37話": "Ch. 37",
   "第37話(1)": "Ch. 37 (1)",
   "第37話2": "Ch. 37-2",
+  "第37話「姦穽」": "Ch. 37 “Kan Wana”",
   "第37話中編": "Ch. 37 Chūhen",
   "第37話後編1": "Ch. 37 Kōhen - 1",
   "第37話後編2": "Ch. 37 Kōhen - 2",
@@ -218367,6 +218376,8 @@
   "第4話:対ありでした": "Ch. 4 Tai Arideshita",
   "第4話<後半>": "Ch. 4 < Kōhan >",
   "第50話": "Ch. 50",
+  "第51話-1": "Ch. 51-1",
+  "第51話-2": "Ch. 51-2",
   "第52話甘くておいしい": "Ch. 52 Amakute Oishii",
   "第53話": "Ch. 53",
   "第54話": "Ch. 54",
@@ -218416,6 +218427,7 @@
   "第5話-1": "Ch. 5-1",
   "第5話-2": "Ch. 5-2",
   "第5話1": "Ch. 5-1",
+  "第5話1:再会": "Ch. 5-1 Saikai",
   "第5話2": "Ch. 5-2",
   "第5話3": "Ch. 5-3",
   "第5話300": "Ch. 5-3 0 0",
@@ -218432,6 +218444,7 @@
   "第61話バズと、歓喜と、戸惑いと。": "Ch. 61 Bazu to, Kanki to, Tomadoi to.",
   "第61話バズと、歓喜と、戸惑いと。(1)": "Ch. 61 Bazu to, Kanki to, Tomadoi to. (1)",
   "第62話": "Ch. 62",
+  "第62話説明と、想い出と、手紙と。": "Ch. 62 Setsumei to, Omoide to, Tegami to.",
   "第63話": "Ch. 63",
   "第63話焼肉と、報告と、未来と。(1)": "Ch. 63 Yakiniku to, Hōkoku to, Mirai to. (1)",
   "第63話焼肉と、報告と、未来と。(2)": "Ch. 63 Yakiniku to, Hōkoku to, Mirai to. (2)",
@@ -218447,6 +218460,7 @@
   "第64話:終わりは一瞬": "Ch. 64 Owari wa Isshun",
   "第65話": "Ch. 65",
   "第65話:力の差": "Ch. 65 Chikara no Sa",
+  "第66話": "Ch. 66",
   "第67話": "Ch. 67",
   "第6巻": "Ch. 6 Maki",
   "第6話": "Ch. 6",
@@ -218519,6 +218533,7 @@
   "第8話3": "Ch. 8-3",
   "第8話の1": "Ch. 8 No 1",
   "第8話の3": "Ch. 8 No 3",
+  "第8話の5": "Ch. 8 No 5",
   "第8話前半": "Ch. 8 Zenhan",
   "第8話前編": "Ch. 8 Zenpen",
   "第8話後半": "Ch. 8 Kōhan",
@@ -218680,6 +218695,7 @@
   "第336話「人たらしめるもの」": "Ch. 336 “Hitotarashimeru Mono”",
   "第337話「仇討ち」": "Ch. 337 “Adauchi”",
   "第338話「発破」": "Ch. 338 “Happa”",
+  "第339話1「射銃」": "Ch. 339-1 “Sha Jū”",
   "第35話「名前呼びしたい双子姉妹」": "Ch. 35 “Namae Yobi Shitai Futago Shimai”",
   "第36話うさぎの国の乙女": "Ch. 36 Usagi no Kuni no Otome",
   "第37話乙女たちのブートキャンプ": "Ch. 37 Otometachi no Būtokyanpu",
@@ -219512,6 +219528,15 @@
   "#29ジコアイ": "Ch. 29 Jikoai",
   "#30ダツラクシャ": "Ch. 30 Datsurakusha",
   "#31Recover": "Ch. 31 Recover",
+  "#324thstage": "Ch. 32 4th stage",
+  "#33flame": "Ch. 33 flame",
+  "#34カイタク": "Ch. 34 Kaitaku",
+  "#35setup": "Ch. 35 set up",
+  "#36レスバ": "Ch. 36 Resuba",
+  "#37ファン": "Ch. 37 Fan",
+  "#38Butterfly": "Ch. 38 Butterfly",
+  "#39ゴウドウライブ": "Ch. 39 Gōdōraibu",
+  "#40Performance": "Ch. 40 Performance",
   "1st": "1st",
   "1巻Lesson1(1)": "Vol. 1 Lesson1(1)",
   "1巻第0話": "Vol. 1, Ch. 0",
