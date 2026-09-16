@@ -1188,16 +1188,26 @@ RECORDED = {
     # ordinary rise. Recorded as docs/GAPS.md in the pipeline repository describes, under "A budget
     # over a churning population cannot ratchet": what this wants is a band or a rate rather than a
     # level, and choosing between them is the owner's.
-    # 729 -> 735 ON 2026-09-14. The floor set turned over without changing size, 18 strings in and
-    # 18 out, so this is the instance arithmetic again: it counts MARKUP, and an arriving chapter
-    # name appears on more rows than a departing one did. 無料第11話(1)丑の刻参り後編, ロボ24-1,
-    # TVドラマ対談記事前編 and the rest.
+    # STANDING: THIS NUMBER WALKS AND IS NOT A RATCHET. Recorded once rather than rewritten every
+    # day, which is what was happening and which threw the history away each time.
     #
-    # A HYPOTHESIS CHECKED AND WRONG. The day's junk bylines, pixivコミック's フォローする on five
-    # works and マガポケ's あなたへのオススメ！ on one, were fixed in the pipeline and their surfaces
-    # were still in the published store, so they looked like the cause. Rebuilding the store without
-    # them leaves this at 735 exactly, which says they never were.
-    "renderings resting on a mechanical romanisation": 735,
+    # 638, 648, 654, 658, 678, 679, 719, 725, 727, 729, 735, 738 over consecutive runs. It counts
+    # MARKUP, so it moves with how many rows an arriving chapter name appears on rather than with
+    # how many names are unread: the floor set has gone UP, DOWN and nowhere under it, once turning
+    # over eighteen in and eighteen out while this rose by six. Almost every arrival is an
+    # instalment name, 第119球:披露する場(前編), ロボ24-1, 無料第11話(1)丑の刻参り後編, which is what
+    # a chapter is called and what nothing states a reading for.
+    #
+    # ONE HYPOTHESIS WAS CHECKED AND WRONG, on 2026-09-14: the day's junk bylines, pixivコミック's
+    # フォローする on five works and マガポケ's あなたへのオススメ！ on one, had been fixed in the
+    # pipeline while their surfaces were still in the published store. Rebuilding without them left
+    # this at 735 exactly, so they never were the cause.
+    #
+    # docs/GAPS.md in the pipeline repository carries the argument under "A budget over a churning
+    # population cannot ratchet": what this wants is a band or a rate rather than a level, and
+    # choosing between them is the owner's. Until then a rise here wants the floor-set composition
+    # checked and nothing else.
+    "renderings resting on a mechanical romanisation": 738,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
