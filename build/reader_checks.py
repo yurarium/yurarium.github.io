@@ -1191,8 +1191,8 @@ RECORDED = {
     # STANDING: THIS NUMBER WALKS AND IS NOT A RATCHET. Recorded once rather than rewritten every
     # day, which is what was happening and which threw the history away each time.
     #
-    # 638, 648, 654, 658, 678, 679, 719, 725, 727, 729, 735, 738, 744 over consecutive runs. It
-    # counts MARKUP, so it moves with how many rows an arriving chapter name appears on rather
+    # 638, 648, 654, 658, 678, 679, 719, 725, 727, 729, 735, 738, 744, 746 over consecutive runs.
+    # It counts MARKUP, so it moves with how many rows an arriving chapter name appears on rather
     # than with how many names are unread: the floor set has gone UP, DOWN and nowhere under it,
     # once turning over eighteen in and eighteen out while this rose by six. Almost every arrival
     # is an instalment name, 第119球:披露する場(前編), ロボ24-1, 無料第11話(1)丑の刻参り後編, which
@@ -1206,10 +1206,12 @@ RECORDED = {
     # docs/GAPS.md in the pipeline repository carries the argument under "A budget over a churning
     # population cannot ratchet": what this wants is a band or a rate rather than a level, and
     # choosing between them is the owner's. Until then a rise here wants the floor-set composition
-    # checked and nothing else. The sharpest reading of that yet is 2026-09-18, 735 to 744: the
-    # marked NAMES were the same set but one that left, and the whole rise is three bylines
-    # gaining four rows each as their works published chapters.
-    "renderings resting on a mechanical romanisation": 744,
+    # checked and nothing else. Two consecutive checks have now read the same way and neither
+    # found a name arriving. 735 to 744 on 2026-09-18 was the same set but one that left, three
+    # bylines taking four more rows each as their works published; 744 to 746 on 2026-09-19 was
+    # the set unchanged outright, 涼川りん taking four rows against two that left with the window.
+    # A number whose population is fixed and whose count moves is measuring the window.
+    "renderings resting on a mechanical romanisation": 746,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
