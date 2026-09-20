@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-20T15:37:25+00:00",
+ "generated": "2026-09-20T16:47:29+00:00",
  "since_last": {
-  "at": "2026-09-20T11:49:08+00:00",
+  "at": "2026-09-20T15:37:25+00:00",
   "statistics": {
-   "chapters": 11
+   "chapters": 53
   }
  },
  "means": {
@@ -26,20 +26,20 @@
  },
  "last_run": {
   "at": "2026-09-21",
-  "releases": 1047,
+  "releases": 1107,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3066,
   "assembled": 3095,
   "awaiting_identifier": 29,
   "identification": {
-   "discovery-candidate": 634,
+   "discovery-candidate": 694,
    "known-work-match": 35,
    "platform-genre": 378
   },
   "collapsed": {
-   "duplicate_chapters": 238,
-   "resolver": 38,
+   "duplicate_chapters": 240,
+   "resolver": 58,
    "samples": 26,
    "thin_sitemap": 5
   }
@@ -709,7 +709,7 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 53,
+    "budget": 52,
     "value": 52
    },
    {
@@ -757,7 +757,7 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 45,
+    "budget": 43,
     "value": 43
    },
    {
@@ -965,20 +965,20 @@
    "source": "webpages",
    "files": 48,
    "works": 578,
-   "rows": 7928,
+   "rows": 8029,
    "retrieved": "2026-09-21",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7877,
-   "well_formed": 7877,
-   "malformed": 0,
+   "checked_rows": 7978,
+   "well_formed": 7975,
+   "malformed": 3,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-09-19T16:36:54+00:00",
+  "previous_at": "2026-09-20T15:36:31+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1076,7 +1076,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 15,
-    "updates naming a work we do not hold": 53,
+    "updates naming a work we do not hold": 52,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 6,
@@ -1084,7 +1084,7 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 45,
+    "incomplete attested rows": 43,
     "works without English": 0,
     "volume rows with no publication date": 2436,
     "predicted updates already behind the run": 1,
@@ -1099,10 +1099,10 @@
    "print": 1645,
    "oneshot": 440,
    "dormant": 303,
-   "completed": 292,
-   "active": 226,
-   "slow": 110,
-   "unknown": 50
+   "completed": 294,
+   "active": 246,
+   "slow": 89,
+   "unknown": 49
   },
   "english_basis": {
    "translated": 2703,
@@ -1114,7 +1114,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3066,
-  "chapters": 28738,
+  "chapters": 28791,
   "delivery_dated": 1034
  }
 }

@@ -1211,12 +1211,12 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
-   "kind_basis": "numbered 7, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 7",
    "kind_inferred": true,
    "preferred": "竹コミ",
    "also_on": [],
@@ -2857,7 +2857,7 @@
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
-   "kind_basis": "numbered 37, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 37",
    "kind_inferred": true,
    "preferred": "ライコミ",
    "also_on": [],
@@ -5114,9 +5114,7 @@
    "kind_basis": "episode numbered 336",
    "kind_inferred": true,
    "preferred": "コミックDAYS",
-   "also_on": [
-    "ヤンマガWeb"
-   ],
+   "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-07-28",
    "wid": "w00054",
@@ -5193,7 +5191,7 @@
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
-   "kind_basis": "numbered 70, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 70",
    "kind_inferred": true,
    "preferred": "チャンピオンクロス",
    "also_on": [],
@@ -6003,98 +6001,6 @@
    }
   },
   {
-   "id": "yanmaga:https://yanmaga.jp/comics/%E4%B9%99%E5%A5%B3%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%9A/858fed430526c198bb786291936537cd",
-   "work": "乙女のおかず",
-   "ep": "第３８話　ちきゅうに優しく",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-07-28",
-   "seen": "2026-09-21",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://yanmaga.jp/comics/%E4%B9%99%E5%A5%B3%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%9A/858fed430526c198bb786291936537cd",
-   "author": "藤川よつ葉/かかとぶし",
-   "author_basis": "carried from another record of the same work",
-   "plat": "yanmaga",
-   "plat_name": "ヤンマガWeb",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "purchase"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 38",
-   "kind_inferred": true,
-   "preferred": "ヤンマガWeb",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-07-28",
-   "wid": "w00004",
-   "work_en": {
-    "reading": "オトメ ノ オカズ",
-    "ruby": [
-     [
-      "乙女",
-      "おとめ"
-     ],
-     [
-      "のおかず",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Otome no Okazu",
-     "double": "Otome no Okazu",
-     "plain": "Otome no Okazu"
-    },
-    "en": "Otome's Side Dish",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Otome's Side Dish"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "フジカワ ヨツバ / カカトブシ",
-    "ruby": [
-     [
-      "藤川",
-      "ふじかわ"
-     ],
-     [
-      "よつ",
-      null
-     ],
-     [
-      "葉",
-      "ば"
-     ],
-     [
-      "/",
-      null
-     ],
-     [
-      "かかとぶし",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Fujikawa Yotsuba / Kakatobushi",
-     "double": "Fujikawa Yotsuba / Kakatobushi",
-     "plain": "Fujikawa Yotsuba / Kakatobushi"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji"
-   }
-  },
-  {
    "id": "younganimal:https://younganimal.com/episodes/24a3e6bcb998e:第一話",
    "work": "最恐呪物令嬢 〜彼女は呪物を愛しすぎている〜",
    "ep": "第一話",
@@ -6369,6 +6275,98 @@
     "reading_basis": "community-printed",
     "basis": "romaji",
     "unverified": true
+   }
+  },
+  {
+   "id": "yanmaga:https://yanmaga.jp/comics/%E4%B9%99%E5%A5%B3%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%9A/858fed430526c198bb786291936537cd",
+   "work": "乙女のおかず",
+   "ep": "第３８話　ちきゅうに優しく",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-07-28",
+   "seen": "2026-09-21",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://yanmaga.jp/comics/%E4%B9%99%E5%A5%B3%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%9A/858fed430526c198bb786291936537cd",
+   "author": "藤川よつ葉/かかとぶし",
+   "author_basis": "carried from another record of the same work",
+   "plat": "yanmaga",
+   "plat_name": "ヤンマガWeb",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 38",
+   "kind_inferred": true,
+   "preferred": "ヤンマガWeb",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-07-28",
+   "wid": "w00004",
+   "work_en": {
+    "reading": "オトメ ノ オカズ",
+    "ruby": [
+     [
+      "乙女",
+      "おとめ"
+     ],
+     [
+      "のおかず",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Otome no Okazu",
+     "double": "Otome no Okazu",
+     "plain": "Otome no Okazu"
+    },
+    "en": "Otome's Side Dish",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Otome's Side Dish"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "フジカワ ヨツバ / カカトブシ",
+    "ruby": [
+     [
+      "藤川",
+      "ふじかわ"
+     ],
+     [
+      "よつ",
+      null
+     ],
+     [
+      "葉",
+      "ば"
+     ],
+     [
+      "/",
+      null
+     ],
+     [
+      "かかとぶし",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Fujikawa Yotsuba / Kakatobushi",
+     "double": "Fujikawa Yotsuba / Kakatobushi",
+     "plain": "Fujikawa Yotsuba / Kakatobushi"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
    }
   },
   {
@@ -8473,7 +8471,7 @@
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
-   "kind_basis": "numbered 18, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 18",
    "kind_inferred": true,
    "preferred": "ビッコミ",
    "also_on": [],
@@ -8549,7 +8547,7 @@
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
-   "kind_basis": "numbered 20, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 20",
    "kind_inferred": true,
    "preferred": "ライコミ",
    "also_on": [],
@@ -8668,7 +8666,7 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "free"
+    "free-timed"
    ],
    "provenance": "attested",
    "free": true,
@@ -9537,7 +9535,7 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "free"
+    "free-timed"
    ],
    "provenance": "attested",
    "free": true,
@@ -12739,12 +12737,12 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "provenance": "attested",
-   "free": true,
+   "free": false,
    "kind": "new-chapter",
-   "kind_basis": "numbered 54, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 54",
    "kind_inferred": true,
    "preferred": "竹コミ",
    "also_on": [],
@@ -14365,10 +14363,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 34",
    "kind_inferred": true,
