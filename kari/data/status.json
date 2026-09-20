@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-20T16:47:29+00:00",
+ "generated": "2026-09-20T23:06:11+00:00",
  "since_last": {
-  "at": "2026-09-20T15:37:25+00:00",
+  "at": "2026-09-20T16:47:29+00:00",
   "statistics": {
-   "chapters": 53
+   "chapters": 6
   }
  },
  "means": {
@@ -26,19 +26,19 @@
  },
  "last_run": {
   "at": "2026-09-21",
-  "releases": 1107,
+  "releases": 1231,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3066,
   "assembled": 3095,
   "awaiting_identifier": 29,
   "identification": {
-   "discovery-candidate": 694,
+   "discovery-candidate": 818,
    "known-work-match": 35,
    "platform-genre": 378
   },
   "collapsed": {
-   "duplicate_chapters": 240,
+   "duplicate_chapters": 312,
    "resolver": 58,
    "samples": 26,
    "thin_sitemap": 5
@@ -758,7 +758,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 43,
-    "value": 43
+    "value": 42
    },
    {
     "name": "works without English",
@@ -895,13 +895,13 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6219,
+   "rows": 6252,
    "retrieved": "2026-09-21",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6172,
-   "well_formed": 6172,
+   "checked_rows": 6205,
+   "well_formed": 6205,
    "malformed": 0,
    "drop": null
   },
@@ -937,14 +937,14 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1335,
-   "rows": 11393,
+   "rows": 11394,
    "retrieved": "2026-09-21",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10550,
+   "checked_rows": 10551,
    "well_formed": 0,
-   "malformed": 10550,
+   "malformed": 10551,
    "drop": null
   },
   {
@@ -965,20 +965,20 @@
    "source": "webpages",
    "files": 48,
    "works": 578,
-   "rows": 8029,
+   "rows": 8049,
    "retrieved": "2026-09-21",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7978,
-   "well_formed": 7975,
+   "checked_rows": 7998,
+   "well_formed": 7995,
    "malformed": 3,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-09-20T15:36:31+00:00",
+  "previous_at": "2026-09-20T16:43:08+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1100,8 +1100,8 @@
    "oneshot": 440,
    "dormant": 303,
    "completed": 294,
-   "active": 246,
-   "slow": 89,
+   "active": 258,
+   "slow": 77,
    "unknown": 49
   },
   "english_basis": {
@@ -1114,7 +1114,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3066,
-  "chapters": 28791,
+  "chapters": 28797,
   "delivery_dated": 1034
  }
 }
