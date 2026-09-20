@@ -1191,8 +1191,8 @@ RECORDED = {
     # STANDING: THIS NUMBER WALKS AND IS NOT A RATCHET. Recorded once rather than rewritten every
     # day, which is what was happening and which threw the history away each time.
     #
-    # 638, 648, 654, 658, 678, 679, 719, 725, 727, 729, 735, 738, 744, 746 over consecutive runs.
-    # It counts MARKUP, so it moves with how many rows an arriving chapter name appears on rather
+    # 638, 648, 654, 658, 678, 679, 719, 725, 727, 729, 735, 738, 744, 746, 775 over consecutive
+    # runs. It counts MARKUP, so it moves with how many rows a chapter name appears on rather
     # than with how many names are unread: the floor set has gone UP, DOWN and nowhere under it,
     # once turning over eighteen in and eighteen out while this rose by six. Almost every arrival
     # is an instalment name, 第119球:披露する場(前編), ロボ24-1, 無料第11話(1)丑の刻参り後編, which
@@ -1211,7 +1211,13 @@ RECORDED = {
     # bylines taking four more rows each as their works published; 744 to 746 on 2026-09-19 was
     # the set unchanged outright, 涼川りん taking four rows against two that left with the window.
     # A number whose population is fixed and whose count moves is measuring the window.
-    "renderings resting on a mechanical romanisation": 746,
+    #
+    # 746 to 775 ON 2026-09-20 IS THE SAME SHAPE WITH A CAUSE WORTH HAVING. A fetcher in the
+    # pipeline repository had eleven platforms frozen at the day each was first read, and fixing it
+    # brought back 89 chapters; the marked names are again the same 139, and every one of the 30 is
+    # a byline already in the set appearing on more rows, 真田一輝 on sixteen of them. A rise here
+    # can mean coverage arriving, which is the opposite of a regression and reads identically.
+    "renderings resting on a mechanical romanisation": 775,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
