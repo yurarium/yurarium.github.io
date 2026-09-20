@@ -1191,8 +1191,8 @@ RECORDED = {
     # STANDING: THIS NUMBER WALKS AND IS NOT A RATCHET. Recorded once rather than rewritten every
     # day, which is what was happening and which threw the history away each time.
     #
-    # 638, 648, 654, 658, 678, 679, 719, 725, 727, 729, 735, 738, 744, 746, 775 over consecutive
-    # runs. It counts MARKUP, so it moves with how many rows a chapter name appears on rather
+    # 638, 648, 654, 658, 678, 679, 719, 725, 727, 729, 735, 738, 744, 746, 775, 799 over
+    # consecutive runs. It counts MARKUP, so it moves with how many rows a chapter name appears on rather
     # than with how many names are unread: the floor set has gone UP, DOWN and nowhere under it,
     # once turning over eighteen in and eighteen out while this rose by six. Almost every arrival
     # is an instalment name, 第119球:披露する場(前編), ロボ24-1, 無料第11話(1)丑の刻参り後編, which
@@ -1217,7 +1217,13 @@ RECORDED = {
     # brought back 89 chapters; the marked names are again the same 139, and every one of the 30 is
     # a byline already in the set appearing on more rows, 真田一輝 on sixteen of them. A rise here
     # can mean coverage arriving, which is the opposite of a regression and reads identically.
-    "renderings resting on a mechanical romanisation": 775,
+    #
+    # 775 to 799 THE SAME EVENING, when the fetcher fix reached COMIC FUZ and brought back 33
+    # chapters there: 得能正太郎 on twenty more rows and two other bylines on two each. FOUR
+    # consecutive composition checks have now found the marked set unchanged at 139 names while
+    # this moved by 2, 30 and 24. Nothing has entered the population it is supposed to measure
+    # since 2026-09-18.
+    "renderings resting on a mechanical romanisation": 799,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
