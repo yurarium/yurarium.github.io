@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-24T17:08:54+00:00",
+ "generated": "2026-09-24T21:35:06+00:00",
  "since_last": {
-  "at": "2026-09-24T12:12:29+00:00",
+  "at": "2026-09-24T17:08:54+00:00",
   "statistics": {
-   "chapters": 3
+   "chapters": 8
   }
  },
  "means": {
@@ -26,19 +26,19 @@
  },
  "last_run": {
   "at": "2026-09-25",
-  "releases": 1176,
+  "releases": 1213,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3066,
   "assembled": 3095,
   "awaiting_identifier": 29,
   "identification": {
-   "discovery-candidate": 770,
+   "discovery-candidate": 773,
    "known-work-match": 35,
-   "platform-genre": 371
+   "platform-genre": 405
   },
   "collapsed": {
-   "duplicate_chapters": 239,
+   "duplicate_chapters": 250,
    "resolver": 53,
    "samples": 26,
    "thin_sitemap": 5
@@ -535,6 +535,12 @@
     "value": 0
    },
    {
+    "name": "readings an analyser no longer installed produced",
+    "means": "analyser readings stamped with a version other than the one this run holds. requirements.txt pins the analyser so an upgrade is a decision rather than whatever pip resolved that morning, and this is the other half of that: the day the pin moves, every reading made under the old version still says what that analyser thought. It falls as those are re-made or overridden and it rises when the pin does, which is the only time it should. On 2026-09-24 an unpinned upgrade took 40 titles out of `ordinary` and put the mark on 36, and no measure was asking whether the analyser under the rule had changed.",
+    "budget": 194,
+    "value": 194
+   },
+   {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
     "budget": 1183,
@@ -709,7 +715,7 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 52,
+    "budget": 49,
     "value": 49
    },
    {
@@ -757,8 +763,8 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 44,
-    "value": 51
+    "budget": 51,
+    "value": 46
    },
    {
     "name": "works without English",
@@ -909,13 +915,13 @@
    "source": "gigaviewer",
    "files": 71,
    "works": 915,
-   "rows": 8133,
+   "rows": 8139,
    "retrieved": "2026-09-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7827,
-   "well_formed": 7827,
+   "checked_rows": 7833,
+   "well_formed": 7833,
    "malformed": 0,
    "drop": null
   },
@@ -923,14 +929,14 @@
    "source": "kadokomi",
    "files": 5,
    "works": 978,
-   "rows": 7594,
+   "rows": 7599,
    "retrieved": "2026-09-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6922,
-   "well_formed": 6553,
-   "malformed": 369,
+   "checked_rows": 6927,
+   "well_formed": 6586,
+   "malformed": 341,
    "drop": null
   },
   {
@@ -965,20 +971,20 @@
    "source": "webpages",
    "files": 48,
    "works": 578,
-   "rows": 8059,
+   "rows": 8060,
    "retrieved": "2026-09-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8008,
-   "well_formed": 8007,
+   "checked_rows": 8009,
+   "well_formed": 8008,
    "malformed": 1,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-09-23T19:29:01+00:00",
+  "previous_at": "2026-09-24T17:07:40+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1010,7 +1016,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 48,
+   "count": 49,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1048,6 +1054,7 @@
     "credits sharing a reading nobody has ruled on": 22,
     "ruby asserting a reading per character": 199,
     "implausible ruby spans": 0,
+    "readings an analyser no longer installed produced": 194,
     "titles read by a machine, unmarked": 1183,
     "uncertain readings": 57,
     "data reaching the site around the store": 0,
@@ -1076,7 +1083,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 15,
-    "updates naming a work we do not hold": 52,
+    "updates naming a work we do not hold": 49,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 6,
@@ -1084,7 +1091,7 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 44,
+    "incomplete attested rows": 51,
     "works without English": 0,
     "volume rows with no publication date": 2436,
     "predicted updates already behind the run": 1,
@@ -1100,8 +1107,8 @@
    "oneshot": 440,
    "dormant": 303,
    "completed": 294,
-   "active": 250,
-   "slow": 85,
+   "active": 251,
+   "slow": 84,
    "unknown": 49
   },
   "english_basis": {
@@ -1114,7 +1121,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3066,
-  "chapters": 28876,
+  "chapters": 28884,
   "delivery_dated": 1034
  }
 }
