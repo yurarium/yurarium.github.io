@@ -1,8 +1,11 @@
 {
- "generated": "2026-09-26T11:47:46+00:00",
+ "generated": "2026-09-26T17:38:34+00:00",
  "since_last": {
-  "at": "2026-09-26T00:14:17+00:00",
-  "statistics": {}
+  "at": "2026-09-26T11:47:46+00:00",
+  "statistics": {
+   "print_only": -1,
+   "chapters": 128
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,23 +26,23 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-09-26",
-  "releases": 1253,
+  "at": "2026-09-27",
+  "releases": 1226,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3094,
   "assembled": 3096,
   "awaiting_identifier": 2,
   "identification": {
-   "discovery-candidate": 784,
+   "discovery-candidate": 761,
    "known-work-match": 35,
-   "platform-genre": 434
+   "platform-genre": 430
   },
   "collapsed": {
-   "duplicate_chapters": 249,
-   "resolver": 54,
-   "samples": 26,
-   "thin_sitemap": 6
+   "duplicate_chapters": 233,
+   "resolver": 52,
+   "samples": 13,
+   "thin_sitemap": 5
   }
  },
  "gate": {
@@ -416,7 +419,7 @@
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
     "budget": 1209,
-    "value": 1209
+    "value": 1210
    },
    {
     "name": "divisions read back from a romanisation",
@@ -458,7 +461,7 @@
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
     "budget": 441,
-    "value": 441
+    "value": 442
    },
    {
     "name": "credits the corpus files as a venue",
@@ -494,7 +497,7 @@
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
     "budget": 83,
-    "value": 83
+    "value": 84
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -548,7 +551,7 @@
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
     "budget": 57,
-    "value": 57
+    "value": 58
    },
    {
     "name": "data reaching the site around the store",
@@ -714,7 +717,7 @@
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 2,
-    "value": 2
+    "value": 4
    },
    {
     "name": "works whose first publication country is unattested",
@@ -762,7 +765,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 45,
-    "value": 46
+    "value": 47
    },
    {
     "name": "works without English",
@@ -803,7 +806,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 55,
+   "age_days": 56,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -817,7 +820,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 52,
+   "age_days": 53,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -831,7 +834,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 52,
+   "age_days": 53,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -845,7 +848,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 51,
+   "age_days": 52,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -859,7 +862,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 50,
+   "age_days": 51,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -873,7 +876,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 50,
+   "age_days": 51,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -887,7 +890,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 49,
+   "age_days": 50,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -900,7 +903,7 @@
    "files": 2,
    "works": 130,
    "rows": 6262,
-   "retrieved": "2026-09-26",
+   "retrieved": "2026-09-27",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -912,14 +915,14 @@
   {
    "source": "gigaviewer",
    "files": 71,
-   "works": 920,
-   "rows": 8147,
-   "retrieved": "2026-09-26",
+   "works": 923,
+   "rows": 8150,
+   "retrieved": "2026-09-27",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7838,
-   "well_formed": 7838,
+   "checked_rows": 7839,
+   "well_formed": 7839,
    "malformed": 0,
    "drop": null
   },
@@ -928,7 +931,7 @@
    "files": 5,
    "works": 978,
    "rows": 7614,
-   "retrieved": "2026-09-26",
+   "retrieved": "2026-09-27",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -941,14 +944,14 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1335,
-   "rows": 11434,
-   "retrieved": "2026-09-26",
+   "rows": 11445,
+   "retrieved": "2026-09-27",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10591,
+   "checked_rows": 10602,
    "well_formed": 0,
-   "malformed": 10591,
+   "malformed": 10602,
    "drop": null
   },
   {
@@ -956,7 +959,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-09-26",
+   "retrieved": "2026-09-27",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -969,20 +972,20 @@
    "source": "webpages",
    "files": 48,
    "works": 578,
-   "rows": 8066,
-   "retrieved": "2026-09-26",
+   "rows": 8067,
+   "retrieved": "2026-09-27",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8015,
-   "well_formed": 8015,
+   "checked_rows": 8016,
+   "well_formed": 8016,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-09-24T21:34:11+00:00",
+  "previous_at": "2026-09-26T00:13:23+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1101,12 +1104,12 @@
  "statistics": {
   "works": 3094,
   "states": {
-   "print": 1646,
+   "print": 1645,
    "oneshot": 460,
-   "dormant": 303,
+   "dormant": 302,
    "completed": 294,
    "active": 256,
-   "slow": 82,
+   "slow": 84,
    "unknown": 53
   },
   "english_basis": {
@@ -1116,10 +1119,10 @@
    "romaji": 24
   },
   "print_works": 2459,
-  "print_only": 1646,
+  "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3094,
-  "chapters": 28838,
+  "chapters": 28966,
   "delivery_dated": 1034
  }
 }
