@@ -52,9 +52,16 @@ import rules                                                            # noqa: 
 #: kana and the licensor prints `Scarlet`, so our translation would be the same string. Nothing here
 #: reads the column directly, the pipeline's `emit.names` doing that, and the digest moves all the
 #: same because the stamp answers for the shape rather than for what this build touches.
-#: `6d3bb09b1f977b25` stays listed because a store published before the change is still readable by
+#: `441bd66205d1fc64` makes `admission.record` nullable, where NULL means the grounds belong to the
+#: work instead of to one catalogue record, and widens the uniqueness index to coalesce the columns
+#: that can now be NULL. It is what lets a web-native work say which comparator admitted it, since
+#: it has no record to hang the block on. Nothing here reads the table, `emit.series` in the
+#: pipeline doing that, and the digest moves anyway because the stamp answers for the shape.
+#: `7065ca642b650e09` stays listed because a store published before the change is still readable by
 #: this build, which is what "either order" means; it comes out when nothing in flight needs it.
-KNOWN_SCHEMAS = ("7065ca642b650e09", "6d3bb09b1f977b25")
+#: `6d3bb09b1f977b25` came out with this change. Two digests is the in-flight pair and a third is a
+#: store two schemas old, which nothing publishes and which this would have gone on accepting.
+KNOWN_SCHEMAS = ("441bd66205d1fc64", "7065ca642b650e09")
 
 
 def open_store(path):
