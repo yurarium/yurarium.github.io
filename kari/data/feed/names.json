@@ -42342,6 +42342,8 @@
     "double": "Riyunaiteddo Runa",
     "plain": "Riyunaiteddo Runa"
    },
+   "translation_refused": "Ours would come out Reunited Luna, which is what the entry already ships. The kana spell two English words and nothing is being carried across, so a reader who ranks a translation above a romanisation would be handed the same string twice: the スカーレット case, where the rendering and the translation are one name.",
+   "en": "Reunited Luna",
    "basis": "romaji",
    "reading_basis": "surface"
   },
@@ -85224,7 +85226,11 @@
     "double": "Mayonaka ni Aishite Yo",
     "plain": "Mayonaka ni Aishite Yo"
    },
-   "basis": "romaji",
+   "en": "Love Me at Midnight",
+   "basis": "translated",
+   "en_forms": {
+    "translated": "Love Me at Midnight"
+   },
    "reading_basis": "analyser"
   },
   "真夜中ぱんチ": {
@@ -153615,6 +153621,22 @@
     }
    ]
   },
+  "梢": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "梢"
+    }
+   ]
+  },
+  "甘崎水菓": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "甘崎水菓"
+    }
+   ]
+  },
   "クール教信者": {
    "j": ", ",
    "p": [
@@ -157517,14 +157539,6 @@
    "p": [
     {
      "n": "ＩＳＡＫＡ"
-    }
-   ]
-  },
-  "甘崎水菓": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "甘崎水菓"
     }
    ]
   },
@@ -184362,14 +184376,6 @@
     }
    ]
   },
-  "梢": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "梢"
-    }
-   ]
-  },
   "梧桐柾木": {
    "j": ", ",
    "p": [
@@ -208576,7 +208582,6 @@
   },
   "第35話": "Dai35Hanashi",
   "第35話ダイスキナヒトヘ(1)": "Dai35Hanashi Daisukinahitohe(1)",
-  "第35話(2)": "Dai35Hanashi(2)",
   "第35話前編": "Dai35Hanashi Zenpen",
   "第36話「懐孤」": "Dai36Hanashi “Futokoro Ko”",
   "第36話(1)": "Dai36Hanashi(1)",
