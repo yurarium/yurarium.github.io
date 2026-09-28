@@ -1,8 +1,10 @@
 {
- "generated": "2026-09-28T14:29:38+00:00",
+ "generated": "2026-09-28T16:08:16+00:00",
  "since_last": {
-  "at": "2026-09-27T20:40:49+00:00",
-  "statistics": {}
+  "at": "2026-09-28T14:29:38+00:00",
+  "statistics": {
+   "chapters": 1
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,20 +25,20 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-09-28",
-  "releases": 1245,
+  "at": "2026-09-29",
+  "releases": 1240,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3097,
   "assembled": 3098,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 775,
+   "discovery-candidate": 772,
    "known-work-match": 35,
-   "platform-genre": 435
+   "platform-genre": 433
   },
   "collapsed": {
-   "duplicate_chapters": 236,
+   "duplicate_chapters": 235,
    "resolver": 55,
    "samples": 13,
    "thin_sitemap": 5
@@ -803,7 +805,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 57,
+   "age_days": 58,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -817,7 +819,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 54,
+   "age_days": 55,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -831,7 +833,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 54,
+   "age_days": 55,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -845,7 +847,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 53,
+   "age_days": 54,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -859,7 +861,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 52,
+   "age_days": 53,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -873,7 +875,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 52,
+   "age_days": 53,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -887,7 +889,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 51,
+   "age_days": 52,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -900,7 +902,7 @@
    "files": 2,
    "works": 130,
    "rows": 6279,
-   "retrieved": "2026-09-28",
+   "retrieved": "2026-09-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -912,9 +914,9 @@
   {
    "source": "gigaviewer",
    "files": 72,
-   "works": 924,
-   "rows": 8152,
-   "retrieved": "2026-09-28",
+   "works": 926,
+   "rows": 8154,
+   "retrieved": "2026-09-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -928,7 +930,7 @@
    "files": 5,
    "works": 980,
    "rows": 7628,
-   "retrieved": "2026-09-28",
+   "retrieved": "2026-09-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -942,7 +944,7 @@
    "files": 3,
    "works": 1335,
    "rows": 11445,
-   "retrieved": "2026-09-28",
+   "retrieved": "2026-09-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -956,7 +958,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-09-28",
+   "retrieved": "2026-09-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -969,20 +971,20 @@
    "source": "webpages",
    "files": 48,
    "works": 578,
-   "rows": 8074,
-   "retrieved": "2026-09-28",
+   "rows": 8070,
+   "retrieved": "2026-09-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8023,
-   "well_formed": 8023,
+   "checked_rows": 8019,
+   "well_formed": 8019,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-09-27T19:46:00+00:00",
+  "previous_at": "2026-09-27T20:40:00+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1102,12 +1104,12 @@
   "works": 3097,
   "states": {
    "print": 1645,
-   "oneshot": 462,
+   "oneshot": 459,
    "dormant": 302,
    "completed": 294,
    "active": 257,
    "slow": 83,
-   "unknown": 54
+   "unknown": 57
   },
   "english_basis": {
    "translated": 2731,
@@ -1119,7 +1121,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3097,
-  "chapters": 29021,
+  "chapters": 29022,
   "delivery_dated": 1034
  }
 }
