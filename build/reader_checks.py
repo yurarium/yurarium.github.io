@@ -1223,7 +1223,23 @@ RECORDED = {
     # consecutive composition checks have now found the marked set unchanged at 139 names while
     # this moved by 2, 30 and 24. Nothing has entered the population it is supposed to measure
     # since 2026-09-18.
-    "renderings resting on a mechanical romanisation": 799,
+    #
+    # 799 to 807 ON 2026-09-29, AND THIS ONE STOPPED A DEPLOY. The fifth composition check and the
+    # plainest yet: 88 marked names before and 88 after, none entering, none leaving, and exactly
+    # two counts moving. 入間人間 goes from 28 rows to 35, which is 人妻教師が教え子の女子高生に
+    # ドはまりする話 going from 3 releases by that byline to 10, and 椋木ななつ from 38 to 36 as two
+    # rows leave with the window. The measurement is in the
+    # session log for 2026-09-29: build the site data from each store in turn, then count the
+    # marked names, because the check reads what `from_store.py` wrote and not the store handed to
+    # it, and measuring the new store against yesterday's `kari/data` answers 793 for neither.
+    #
+    # WHAT MAKES THIS ONE WORTH A DECISION rather than another line here. The number ratchets down
+    # and moves with how many chapters a byline's works published that fortnight, so a quiet week
+    # banks a floor that the next busy one cannot meet, and the site stops publishing over a
+    # correctly rendered name. Five rises, no new name, one blocked deploy. Either this counts
+    # records instead of renderings, which is `author readings no source states` in the pipeline
+    # and already exists, or it keeps counting renderings and stops being a gate. Owner's call.
+    "renderings resting on a mechanical romanisation": 807,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
