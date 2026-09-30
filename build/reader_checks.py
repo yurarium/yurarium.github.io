@@ -1239,7 +1239,14 @@ RECORDED = {
     # correctly rendered name. Five rises, no new name, one blocked deploy. Either this counts
     # records instead of renderings, which is `author readings no source states` in the pipeline
     # and already exists, or it keeps counting renderings and stops being a gate. Owner's call.
-    "renderings resting on a mechanical romanisation": 807,
+    #
+    # 807 to 809 ON 2026-09-30, THE SIXTH, AND THE SECOND BLOCKED DEPLOY IN TWO NIGHTS. 88 marked
+    # names before and after, none entering, none leaving, one count moving: 得能正太郎 from 41 rows
+    # to 43 as IDOL×IDOL STORY！ publishes its ninth. Raised so the site ships tonight, and this is
+    # the last time it should be raised without the question above being answered. Six rises, no new
+    # name, two nights of readers served stale files by a number that cannot fall for the reason it
+    # names.
+    "renderings resting on a mechanical romanisation": 809,
     "full-width forms in English renderings": 44,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
