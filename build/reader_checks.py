@@ -1258,6 +1258,24 @@ RECORDED = {
 }
 
 
+#: BUDGETS THAT REPORT AND DO NOT GATE, with the reason each one is here.
+#:
+#: `renderings resting on a mechanical romanisation` rose six times between 2026-09-18 and
+#: 2026-09-30 and blocked the deploy on the last two, and six composition checks found the same
+#: answer every time: the marked name set does not change, and the count moves because a byline
+#: already in it appears on more rows as its works publish. It is a rolling window with a floor
+#: under it, so a quiet fortnight records a number the next busy one cannot meet, and what a reader
+#: lost each time was a day of fresh data over a name that was correctly rendered and correctly
+#: marked. The data gap it names is gated in the pipeline by `author readings no source states`,
+#: which counts RECORDS and does not move with the window, so nothing stops being watched here.
+#:
+#: WHAT IT COSTS AND WHERE THAT IS ANSWERED. The number's only consumer was this exit code, so a
+#: reported budget rests on the `::warning::` above and on somebody reading the run. Putting it on
+#: `status.html`, where this project already files what it is unsure of, is the follow-up, and it
+#: needs the reader checks to write a file, which they do not yet.
+REPORTED = {"renderings resting on a mechanical romanisation"}
+
+
 def canaries(ctx):
     """Plant each fault as it actually arrived, and fail if the check does not notice.
 
@@ -1358,8 +1376,21 @@ def main(argv=None):
         n = fn(ctx)
         limit = RECORDED.get(name)
         if n is UNMEASURED:
+            # STILL A FAILURE FOR A REPORTED BUDGET. Not gating on the VALUE is a decision about
+            # what the number means; a measurement that did not happen is a broken measure, and
+            # the whole point of reporting one is that somebody can believe the figure.
             bad += 1
             print(f"  FAIL  {name}: could not be measured")
+        elif name in REPORTED:
+            over = limit is not None and n > limit
+            print(f"  note  {name}: {n}"
+                  + (f" (was {limit}, reported not gated)" if over else " (reported not gated)"))
+            if over:
+                # THE ONLY THING THAT CONSUMES THIS NUMBER NOW. `reader_checks.py` writes no file
+                # and its exit code was the whole of its audience, so taking a budget off the gate
+                # without this would leave it printing into a log nobody opens, which is a control
+                # that reads as working because nothing can tell it is not.
+                print(f"::warning title=budget::{name}: {n}, recorded {limit}. {why}")
         elif limit is not None and n > limit:
             bad += 1
             print(f"  FAIL  {name}: {n} (budget {limit}) — {why}")

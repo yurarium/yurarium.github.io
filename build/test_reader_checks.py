@@ -122,6 +122,50 @@ def main(s):
     finally:
         rc.READER_TEXT = text
 
+    # ── A BUDGET THAT REPORTS AND DOES NOT GATE ───────────────────────────────────────────────
+    #
+    # `REPORTED` exists because one budget's population is a rolling window under a floor, so it
+    # blocked two deploys over a name that was correctly rendered. Taking a number off the gate is
+    # exactly the change that can quietly take it out of the run altogether, so what is asserted
+    # here is both halves: an overrun does not fail, AND it still says so where somebody sees it.
+    for name in rc.REPORTED:
+        s.check(any(b[0] == name for b in rc.BUDGETS),
+                f"{name} is a budget that exists, so REPORTED names no ghost")
+        s.check(name in rc.RECORDED,
+                f"{name} keeps a recorded value, which is what an overrun is measured against")
+
+    # RUN THE REAL LOOP over a stub context, because the decision lives in `main` and a test that
+    # reimplemented the branch would agree with itself. The store is stubbed out to the point where
+    # the budget functions are replaced, which is what lets this run offline.
+    import io, contextlib
+    reported = sorted(rc.REPORTED)[0]
+    budgets, recorded, canaries, ctxfn = rc.BUDGETS, rc.RECORDED, rc.canaries, rc.context
+    try:
+        rc.BUDGETS = [(reported, lambda _c: 500, "the window moved")]
+        rc.RECORDED = {reported: 1}
+        rc.INVARIANTS_SAVED = rc.INVARIANTS
+        rc.INVARIANTS = []
+        rc.canaries = lambda _c: True
+        rc.context = lambda _s: {}
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            code = rc.main(["--store", "unread"])
+        out = buf.getvalue()
+        s.eq(code, 0, "a reported budget over its recorded value does not fail the build")
+        s.check("::warning" in out, "and the run is told, which is the whole of its audience now")
+        s.check("500" in out and "note" in out, "and the number itself is printed")
+
+        # THE OTHER HALF, because not gating on a VALUE must not become not noticing a MEASUREMENT
+        # that did not happen. A reported budget that cannot be measured is still a broken measure.
+        rc.BUDGETS = [(reported, lambda _c: rc.UNMEASURED, "the window moved")]
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            code = rc.main(["--store", "unread"])
+        s.eq(code, 1, "a reported budget that could not be measured still fails")
+    finally:
+        rc.BUDGETS, rc.RECORDED, rc.canaries, rc.context = budgets, recorded, canaries, ctxfn
+        rc.INVARIANTS = rc.INVARIANTS_SAVED
+
 
 if __name__ == "__main__":
     sys.exit(testkit.run(main, __file__))
