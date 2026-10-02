@@ -50,13 +50,19 @@ def context(store):
     series = json.loads((DATA / "series.json").read_text(encoding="utf-8"))
     names = json.loads((DATA / "feed" / "names.json").read_text(encoding="utf-8"))
     releases = []
+    # KEPT PER FILE AS WELL, because order is a property of a file and the flat list above has
+    # none: the rows of four files run together and an order check over them asks nothing.
+    feeds = {}
     for f in sorted((DATA / "feed").glob("*.json")):
         got = json.loads(f.read_text(encoding="utf-8"))
         releases += got.get("releases") or []
+        if "releases" in got:
+            feeds[f"feed/{f.name}"] = got.get("releases") or []
     return {
         "store": db,
         "series": series.get("series") or [],
         "releases": releases,
+        "feeds": feeds,
         "names_shipped": names,
         "index": json.loads((DATA / "index.json").read_text(encoding="utf-8")),
         "works": (json.loads((DATA / "works.json").read_text(encoding="utf-8")) or {}).get("works")
@@ -1090,8 +1096,34 @@ def budget_interface_reads_outside_an_entry_point(ctx):
 
 #: What runs, and what each is. An invariant returns the offending rows; a budget returns a number
 #: that may not exceed the one recorded beside it.
+def inv_the_feed_is_newest_first(ctx):
+    """Every feed file this site serves lists its rows newest first, by the date each is filed under.
+
+    THE PIPELINE ASKS THE SAME OF WHAT IT EMITS, and it cannot see this repository: `from_store.py`
+    keeps rows the store no longer builds and re-sorts the file, so the order a reader gets is
+    decided here a second time. That re-sort used `pub` while every row is filed under `feed_date`,
+    and on 2026-10-03 it left eleven rows across the August, September and October archives above a
+    newer day, with not one of those files out of order by `pub`.
+
+    WHY ONE ROW IS A WHOLE DAY. `byDate` in kari/src groups rows into days in the order each day is
+    first met, so a row out of place carries its day with it. That is what a reader reported: 27 Sep
+    drawn between 3 Oct and 2 Oct, all eighteen of its rows lifted by the one at the top.
+
+    A finding names the row standing above a newer one, which is the row that moved.
+    """
+    out = []
+    for name, rows in sorted((ctx.get("feeds") or {}).items()):
+        dated = [(str(r.get("feed_date") or r.get("pub") or "")[:10], r) for r in rows]
+        for (d0, r0), (d1, _r1) in zip(dated, dated[1:]):
+            if d0 and d1 and d1 > d0:
+                out.append(f"{name}: {str(r0.get('work'))[:30]} filed {d0} stands above a row "
+                           f"filed {d1}")
+    return out
+
+
 INVARIANTS = [
     ("names reach a page only through their renderer", inv_names_reach_a_page_only_through_their_renderer),
+    ("the feed is newest first", inv_the_feed_is_newest_first),
     ("no stock phrasing in public text", inv_no_stock_phrasing_in_public_text),
     ("a name reaches both lines of a bilingual row", inv_a_name_in_both_mode_is_rendered_in_both),
     ("status.html shows no Japanese of its own", inv_status_page_shows_no_japanese_of_its_own),
@@ -1284,7 +1316,18 @@ def canaries(ctx):
     """
     import copy
     ok = True
+    def _late_row_above_its_day(c):
+        # THE FAULT AS IT ARRIVED, §14b: the first row filed earlier than the head of
+        # `feed/current.json` lifted to third place, which is where リユナイテッド・ルナ stood.
+        rows = (c.get("feeds") or {}).get("feed/current.json") or []
+        head = str(rows[0].get("feed_date") or rows[0].get("pub") or "")[:10] if rows else ""
+        i = next((i for i, r in enumerate(rows)
+                  if str(r.get("feed_date") or r.get("pub") or "")[:10] < head), None)
+        if i is not None:
+            rows.insert(min(2, i), rows.pop(i))
+
     probes = [
+        ("the feed is newest first", inv_the_feed_is_newest_first, _late_row_above_its_day),
         # A NAME PUT ON A PAGE WITHOUT GOING THROUGH THE RENDERER, which is how a reader came to see
         # `????·Bun?Bun`: the row's raw field reached the DOM and the store's spelling did not.
         ("names reach a page only through their renderer",

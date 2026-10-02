@@ -122,6 +122,22 @@ def main(s):
     finally:
         rc.READER_TEXT = text
 
+    # ── THE FEED IS NEWEST FIRST ──────────────────────────────────────────────────────────────
+    #
+    # A row filed under a late discovery date carries `feed_date` and an older `pub`, and the order
+    # that matters is the first: that is the date the interface draws its day under. The second
+    # list is 2026-10-03's `feed/current.json` in miniature, a 27 Sep row standing among 3 Oct.
+    ordered = [{"work": "a", "pub": "2026-09-19", "feed_date": "2026-10-03"},
+               {"work": "b", "pub": "2026-10-03", "feed_date": "2026-10-03"},
+               {"work": "c", "pub": "2026-10-02", "feed_date": "2026-10-02"}]
+    s.eq(rc.inv_the_feed_is_newest_first({"feeds": {"feed/current.json": ordered}}), [],
+         "a feed ordered by the date each row is filed under passes, whatever its `pub`")
+    lifted = [ordered[0], {"work": "lifted", "pub": "2026-09-27", "feed_date": "2026-09-27"},
+              ordered[1], ordered[2]]
+    got = rc.inv_the_feed_is_newest_first({"feeds": {"feed/current.json": lifted}})
+    s.eq(len(got), 1, "one row out of place is one finding")
+    s.check(got and "lifted" in got[0], "and it names the row that moved, not its neighbour")
+
     # ── A BUDGET THAT REPORTS AND DOES NOT GATE ───────────────────────────────────────────────
     #
     # `REPORTED` exists because one budget's population is a rolling window under a floor, so it

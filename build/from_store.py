@@ -216,8 +216,16 @@ def main(argv=None):
         # question: it accepts the loss rather than preventing it, and the archive eroded a little
         # on every platform that moves an address or retires a chapter. Keeping the row is what the
         # rule always meant.
+        # ON THE DATE EACH ROW IS FILED UNDER, which is `feed_date` and not `pub`. The two differ
+        # for a row found late, which the pipeline files under the day it was found, and the
+        # interface draws each day where that day's first row falls (`byDate` in kari/src). Sorting
+        # on `pub` put every such row among the rows of its publication date while it stayed filed
+        # under its discovery date, and the day went with it: on 2026-10-03 the September archive
+        # held five rows above a newer day and August six, and neither file was out of order by
+        # `pub`, which is why reading the dates in the file never showed it.
         doc["releases"] = sorted((doc.get("releases") or []) + gone,
-                                 key=lambda r: str(r.get("pub") or ""), reverse=True)
+                                 key=lambda r: str(r.get("feed_date") or r.get("pub") or "")[:10],
+                                 reverse=True)
         written[name] = _emit.as_text(doc)
         carried.append((name, len(gone), gone))
 

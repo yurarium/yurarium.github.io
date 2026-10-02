@@ -151,6 +151,27 @@ def main(s):
             "said out loud with the rows, because an archive diverging in silence is the fault "
             "the refusal was protecting against")
 
+    # FILED BY THE DATE THE ROW IS FILED UNDER, which for a row found late is not its `pub`. The
+    # case above cannot see the difference, every row in it having one date, and that is how a
+    # re-sort on `pub` reached production: on 2026-10-03 it held eleven rows of the August,
+    # September and October archives above a newer day, and the interface draws a day where its
+    # first row falls. `late` was published 07-02 and found 07-25; it belongs at the head.
+    month = [{"id": "late", "pub": "2026-07-02", "feed_date": "2026-07-25"},
+             {"id": "x", "pub": "2026-07-20", "feed_date": "2026-07-20"},
+             {"id": "y", "pub": "2026-07-10", "feed_date": "2026-07-10"}]
+    (site / "data" / "feed" / "2026-07.json").write_text(
+        json.dumps({"releases": month}, ensure_ascii=False), encoding="utf-8")
+    produced["feed/2026-07.json"] = json.dumps(
+        {"releases": [month[0], month[2]]}, ensure_ascii=False)
+    code, said = run()
+    s.eq([r["id"] for r in
+          json.loads((site / "data" / "feed" / "2026-07.json").read_text())["releases"]],
+         ["late", "x", "y"],
+         "a carried month is ordered by the date each row is filed under, not by `pub`")
+    (site / "data" / "feed" / "2026-07.json").write_text(_dated(published), encoding="utf-8")
+    produced["feed/2026-07.json"] = _dated([("a", "2026-07-30"), ("c", "2026-07-10")])
+    run()
+
     # WHAT KEEPS MOVING IS EVERY ROW THE STORE STILL STATES. This is not a freeze: a corrected name
     # or a re-read access state has to reach the archive, and only the rows the store has stopped
     # producing are held as they were.
