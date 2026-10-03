@@ -1,15 +1,178 @@
 {
- "generated": "2026-10-03",
+ "generated": "2026-10-04",
  "note": "One record per publishing house, holding the imprint lines it runs with the spellings each line is catalogued under and the years those cover. Publishers and distributors share one namespace: the seat is on the edge to the book.",
  "count": 163,
  "publishers": {
+  "h00006": {
+   "id": "h00006",
+   "name": "スクウェア・エニックス",
+   "rows": 13,
+   "works": [
+    "w00013",
+    "w00197",
+    "w00232",
+    "w00175",
+    "w00117",
+    "w03239",
+    "w03236",
+    "w01358",
+    "w01268",
+    "w01434",
+    "w01455",
+    "w01459"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "gangan-comics-up",
+     "name": "ガンガンコミックスup!",
+     "parent": "ガンガンコミックス",
+     "resolved": true,
+     "rows": 4,
+     "works": [
+      "w00175",
+      "w01434",
+      "w01455",
+      "w01459"
+     ],
+     "spellings": [
+      {
+       "raw": "ガンガンコミックスup!",
+       "rows": 4,
+       "years": [
+        "2021",
+        "2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "young-gangan-comics",
+     "name": "ヤングガンガンコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 3,
+     "works": [
+      "w01358",
+      "w01268"
+     ],
+     "spellings": [
+      {
+       "raw": "ヤングガンガンコミックス",
+       "rows": 3,
+       "years": [
+        "2014",
+        "2018"
+       ]
+      }
+     ]
+    },
+    {
+     "id": null,
+     "name": "ガンガンコミックスjoker",
+     "parent": null,
+     "resolved": false,
+     "rows": 2,
+     "works": [
+      "w03239",
+      "w03236"
+     ],
+     "spellings": [
+      {
+       "raw": "ガンガンコミックスjoker",
+       "rows": 2,
+       "years": [
+        "2024",
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gangan-comics-online",
+     "name": "ガンガンコミックスonline",
+     "parent": "ガンガンコミックス",
+     "resolved": true,
+     "rows": 2,
+     "works": [
+      "w00197",
+      "w00232"
+     ],
+     "spellings": [
+      {
+       "raw": "ガンガンコミックスonline　／　GC ONLIN",
+       "rows": 1,
+       "years": [
+        "2012",
+        "2012"
+       ]
+      },
+      {
+       "raw": "ガンガンコミックスonline",
+       "rows": 1,
+       "years": [
+        "2025",
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gangan-comics",
+     "name": "ガンガンコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00013"
+     ],
+     "spellings": [
+      {
+       "raw": "ガンガンコミックス",
+       "rows": 1,
+       "years": [
+        "2018",
+        "2018"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "big-gangan-comics",
+     "name": "ビッグガンガンコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00117"
+     ],
+     "spellings": [
+      {
+       "raw": "ビッグガンガンコミックス",
+       "rows": 1,
+       "years": [
+        "2022",
+        "2022"
+       ]
+      }
+     ]
+    }
+   ]
+  },
   "h00001": {
    "id": "h00001",
    "name": "芳文社",
    "rows": 222,
    "works": [
+    "w01826",
+    "w00140",
+    "w00010",
     "w01787",
     "w00015",
+    "w03228",
+    "w03231",
     "w00026",
     "w01737",
     "w00155",
@@ -18,9 +181,6 @@
     "w01897",
     "w00041",
     "w00006",
-    "w01826",
-    "w00140",
-    "w00010",
     "w03159",
     "w00028",
     "w00109",
@@ -46,8 +206,6 @@
     "w03225",
     "w01922",
     "w02129",
-    "w03228",
-    "w03231",
     "w02959",
     "w02734",
     "w02350",
@@ -237,14 +395,16 @@
      "resolved": true,
      "rows": 160,
      "works": [
+      "w01826",
+      "w00010",
       "w00015",
+      "w03228",
+      "w03231",
       "w00026",
       "w01737",
       "w01897",
       "w00041",
       "w00006",
-      "w01826",
-      "w00010",
       "w03159",
       "w00112",
       "w02729",
@@ -267,8 +427,6 @@
       "w03225",
       "w01922",
       "w02129",
-      "w03228",
-      "w03231",
       "w02959",
       "w02734",
       "w02352",
@@ -447,8 +605,8 @@
      "resolved": true,
      "rows": 23,
      "works": [
-      "w00040",
       "w00140",
+      "w00040",
       "w00028",
       "w02250",
       "w02350",
@@ -681,35 +839,52 @@
     }
    ]
   },
-  "h00039": {
-   "id": "h00039",
-   "name": "とりからの巣",
-   "rows": 2,
+  "h00007": {
+   "id": "h00007",
+   "name": "マイクロマガジン社",
+   "rows": 8,
    "works": [
-    "w01878",
-    "w02099"
+    "w00011",
+    "w00075",
+    "w00048",
+    "w01814",
+    "w01920",
+    "w02423",
+    "w02770"
    ],
    "seats": [
     "publisher"
    ],
    "lines": [
     {
-     "id": null,
-     "name": "とりからの巣",
+     "id": "ride-comics",
+     "name": "ライドコミックス",
      "parent": null,
-     "resolved": false,
-     "rows": 2,
+     "resolved": true,
+     "rows": 7,
      "works": [
-      "w01878",
-      "w02099"
+      "w00075",
+      "w00048",
+      "w01814",
+      "w01920",
+      "w02423",
+      "w02770"
      ],
      "spellings": [
       {
-       "raw": "とりからの巣",
-       "rows": 2,
+       "raw": "ライドコミックス",
+       "rows": 4,
        "years": [
-        null,
-        null
+        "2020",
+        "2025"
+       ]
+      },
+      {
+       "raw": "Ride Comics",
+       "rows": 3,
+       "years": [
+        "2020",
+        "2025"
        ]
       }
      ]
@@ -721,6 +896,11 @@
    "name": "KADOKAWA",
    "rows": 392,
    "works": [
+    "w00014",
+    "w02337",
+    "w02301",
+    "w00018",
+    "w00094",
     "w01975",
     "w01998",
     "w01860",
@@ -740,7 +920,6 @@
     "w00017",
     "w00147",
     "w00022",
-    "w00094",
     "w02180",
     "w00098",
     "w00027",
@@ -761,8 +940,6 @@
     "w00065",
     "w00139",
     "w00141",
-    "w02301",
-    "w00018",
     "w00176",
     "w02518",
     "w01871",
@@ -777,8 +954,6 @@
     "w00053",
     "w00129",
     "w00076",
-    "w00014",
-    "w02337",
     "w02065",
     "w00211",
     "w01772",
@@ -1119,6 +1294,9 @@
      "resolved": true,
      "rows": 98,
      "works": [
+      "w00014",
+      "w02337",
+      "w00018",
       "w01975",
       "w00042",
       "w00061",
@@ -1129,10 +1307,7 @@
       "w00186",
       "w00277",
       "w00005",
-      "w00018",
       "w00159",
-      "w00014",
-      "w02337",
       "w00024",
       "w00225",
       "w00274",
@@ -1429,10 +1604,10 @@
      "resolved": true,
      "rows": 20,
      "works": [
+      "w00094",
       "w00122",
       "w00017",
       "w00147",
-      "w00094",
       "w00103",
       "w00077",
       "w00176",
@@ -1513,8 +1688,8 @@
      "resolved": true,
      "rows": 11,
      "works": [
-      "w00030",
       "w02301",
+      "w00030",
       "w01684",
       "w03081",
       "w02209",
@@ -2165,6 +2340,97 @@
        "years": [
         "2019",
         "2019"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00039": {
+   "id": "h00039",
+   "name": "とりからの巣",
+   "rows": 2,
+   "works": [
+    "w01878",
+    "w02099"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": null,
+     "name": "とりからの巣",
+     "parent": null,
+     "resolved": false,
+     "rows": 2,
+     "works": [
+      "w01878",
+      "w02099"
+     ],
+     "spellings": [
+      {
+       "raw": "とりからの巣",
+       "rows": 2,
+       "years": [
+        null,
+        null
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00021": {
+   "id": "h00021",
+   "name": "主婦と生活社",
+   "rows": 3,
+   "works": [
+    "w02103",
+    "w00248",
+    "w01630"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "pash-comics",
+     "name": "PASH! コミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 2,
+     "works": [
+      "w02103",
+      "w00248"
+     ],
+     "spellings": [
+      {
+       "raw": "PASH! コミックス",
+       "rows": 2,
+       "years": [
+        "2023",
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "r-comics",
+     "name": "アールコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w01630"
+     ],
+     "spellings": [
+      {
+       "raw": "アールコミックス",
+       "rows": 1,
+       "years": [
+        null,
+        null
        ]
       }
      ]
@@ -2878,62 +3144,6 @@
        "years": [
         "2019",
         "2019"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00021": {
-   "id": "h00021",
-   "name": "主婦と生活社",
-   "rows": 3,
-   "works": [
-    "w02103",
-    "w00248",
-    "w01630"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "pash-comics",
-     "name": "PASH! コミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 2,
-     "works": [
-      "w02103",
-      "w00248"
-     ],
-     "spellings": [
-      {
-       "raw": "PASH! コミックス",
-       "rows": 2,
-       "years": [
-        "2023",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "r-comics",
-     "name": "アールコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w01630"
-     ],
-     "spellings": [
-      {
-       "raw": "アールコミックス",
-       "rows": 1,
-       "years": [
-        null,
-        null
        ]
       }
      ]
@@ -5196,164 +5406,6 @@
     }
    ]
   },
-  "h00006": {
-   "id": "h00006",
-   "name": "スクウェア・エニックス",
-   "rows": 13,
-   "works": [
-    "w00197",
-    "w00232",
-    "w00013",
-    "w00175",
-    "w00117",
-    "w03239",
-    "w03236",
-    "w01358",
-    "w01268",
-    "w01434",
-    "w01455",
-    "w01459"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "gangan-comics-up",
-     "name": "ガンガンコミックスup!",
-     "parent": "ガンガンコミックス",
-     "resolved": true,
-     "rows": 4,
-     "works": [
-      "w00175",
-      "w01434",
-      "w01455",
-      "w01459"
-     ],
-     "spellings": [
-      {
-       "raw": "ガンガンコミックスup!",
-       "rows": 4,
-       "years": [
-        "2021",
-        "2026"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "young-gangan-comics",
-     "name": "ヤングガンガンコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 3,
-     "works": [
-      "w01358",
-      "w01268"
-     ],
-     "spellings": [
-      {
-       "raw": "ヤングガンガンコミックス",
-       "rows": 3,
-       "years": [
-        "2014",
-        "2018"
-       ]
-      }
-     ]
-    },
-    {
-     "id": null,
-     "name": "ガンガンコミックスjoker",
-     "parent": null,
-     "resolved": false,
-     "rows": 2,
-     "works": [
-      "w03239",
-      "w03236"
-     ],
-     "spellings": [
-      {
-       "raw": "ガンガンコミックスjoker",
-       "rows": 2,
-       "years": [
-        "2024",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "gangan-comics-online",
-     "name": "ガンガンコミックスonline",
-     "parent": "ガンガンコミックス",
-     "resolved": true,
-     "rows": 2,
-     "works": [
-      "w00197",
-      "w00232"
-     ],
-     "spellings": [
-      {
-       "raw": "ガンガンコミックスonline　／　GC ONLIN",
-       "rows": 1,
-       "years": [
-        "2012",
-        "2012"
-       ]
-      },
-      {
-       "raw": "ガンガンコミックスonline",
-       "rows": 1,
-       "years": [
-        "2025",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "gangan-comics",
-     "name": "ガンガンコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00013"
-     ],
-     "spellings": [
-      {
-       "raw": "ガンガンコミックス",
-       "rows": 1,
-       "years": [
-        "2018",
-        "2018"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "big-gangan-comics",
-     "name": "ビッグガンガンコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00117"
-     ],
-     "spellings": [
-      {
-       "raw": "ビッグガンガンコミックス",
-       "rows": 1,
-       "years": [
-        "2022",
-        "2022"
-       ]
-      }
-     ]
-    }
-   ]
-  },
   "h00013": {
    "id": "h00013",
    "name": "秋田書店",
@@ -6665,58 +6717,6 @@
        "years": [
         "2007",
         "2007"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00007": {
-   "id": "h00007",
-   "name": "マイクロマガジン社",
-   "rows": 8,
-   "works": [
-    "w00075",
-    "w00011",
-    "w00048",
-    "w01814",
-    "w01920",
-    "w02423",
-    "w02770"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "ride-comics",
-     "name": "ライドコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 7,
-     "works": [
-      "w00075",
-      "w00048",
-      "w01814",
-      "w01920",
-      "w02423",
-      "w02770"
-     ],
-     "spellings": [
-      {
-       "raw": "ライドコミックス",
-       "rows": 4,
-       "years": [
-        "2020",
-        "2025"
-       ]
-      },
-      {
-       "raw": "Ride Comics",
-       "rows": 3,
-       "years": [
-        "2020",
-        "2025"
        ]
       }
      ]
