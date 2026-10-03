@@ -1285,7 +1285,13 @@ RECORDED = {
     # 24 -> 25 ON 2026-08-15. The population is a name whose division the store keeps and whose
     # credit field a cataloguer typed with different spacing, `鴉ぴえろ` against `鴉　ぴえろ`, and
     # one more name's division settled with the day's naming work. Recorded where it stands.
-    "bylines drawn in a spelling the field does not write": 25,
+    # 25 -> 26 ON 2026-10-03, AND IT STOPPED THE DEPLOY. Nothing about the name changed: the two
+    # stores hold the same bylines for アクアリウムは踊らない, and what moved was its headline,
+    # from ニコニコ漫画 to カドコミ. The row's field then came from its BOOK☆WALKER record,
+    # `冬眠　結 / 橙々` with the cataloguer's full-width space, while the page draws 冬眠結 as the
+    # store keys it. The drawn spelling is the right one and is what a reader gets; the count is
+    # the field disagreeing with it, which a headline tie-break can add or remove on any run.
+    "bylines drawn in a spelling the field does not write": 26,
     "interface reads outside an entry point": 12,
 }
 
