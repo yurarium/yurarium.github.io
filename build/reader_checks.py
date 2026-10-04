@@ -1324,13 +1324,17 @@ def canaries(ctx):
     ok = True
     def _late_row_above_its_day(c):
         # THE FAULT AS IT ARRIVED, §14b: the first row filed earlier than the head of
-        # `feed/current.json` lifted to third place, which is where リユナイテッド・ルナ stood.
+        # `feed/current.json` lifted above it, the shape リユナイテッド・ルナ had. To the HEAD and not
+        # to third place, where the real row stood: third place is only above a newer row when the
+        # newest day holds three, and the pipeline's copy of this canary put the row back where it
+        # was on a morning run and failed the update of 2026-10-04 with nothing planted.
         rows = (c.get("feeds") or {}).get("feed/current.json") or []
         head = str(rows[0].get("feed_date") or rows[0].get("pub") or "")[:10] if rows else ""
         i = next((i for i, r in enumerate(rows)
                   if str(r.get("feed_date") or r.get("pub") or "")[:10] < head), None)
-        if i is not None:
-            rows.insert(min(2, i), rows.pop(i))
+        if i is None:
+            raise RuntimeError("the feed holds one date only, so no row can be planted out of order")
+        rows.insert(0, rows.pop(i))
 
     probes = [
         ("the feed is newest first", inv_the_feed_is_newest_first, _late_row_above_its_day),
