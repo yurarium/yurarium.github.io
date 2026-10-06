@@ -1,8 +1,10 @@
 {
- "generated": "2026-10-06T13:37:58+00:00",
+ "generated": "2026-10-06T19:25:23+00:00",
  "since_last": {
-  "at": "2026-10-05T19:04:30+00:00",
-  "statistics": {}
+  "at": "2026-10-06T13:37:58+00:00",
+  "statistics": {
+   "chapters": 11
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,20 +25,20 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-06",
-  "releases": 1243,
+  "at": "2026-10-07",
+  "releases": 1108,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3101,
   "assembled": 3102,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 802,
+   "discovery-candidate": 772,
    "known-work-match": 32,
-   "platform-genre": 409
+   "platform-genre": 304
   },
   "collapsed": {
-   "duplicate_chapters": 228,
+   "duplicate_chapters": 210,
    "resolver": 55,
    "samples": 13,
    "thin_sitemap": 4
@@ -498,14 +500,14 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 94,
+    "budget": 91,
     "value": 91
    },
    {
     "name": "credit pages listing a work that does not name them",
     "means": "pairings a credit page would show whose work does not carry that credit's spelling in its own credit field. Substring arithmetic on two shipped fields, so it owes the splitter, the fold and the registry lookup nothing and cannot be satisfied by them agreeing. It will not reach zero: six of the eight are merges, where the surviving spelling is by construction not the one on the retired spelling's works, and two are release-row edges. A rise with neither behind it is a page claiming somebody worked on a book that does not name them.",
     "budget": 9,
-    "value": 9
+    "value": 12
    },
    {
     "name": "publisher pages listing a work from another house",
@@ -766,8 +768,8 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 49,
-    "value": 50
+    "budget": 50,
+    "value": 51
    },
    {
     "name": "works without English",
@@ -808,7 +810,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 65,
+   "age_days": 66,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -822,7 +824,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 62,
+   "age_days": 63,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -836,7 +838,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 62,
+   "age_days": 63,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -850,7 +852,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 61,
+   "age_days": 62,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -864,7 +866,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 60,
+   "age_days": 61,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -878,7 +880,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 60,
+   "age_days": 61,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -892,7 +894,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 59,
+   "age_days": 60,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -904,27 +906,27 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6285,
-   "retrieved": "2026-10-06",
+   "rows": 6286,
+   "retrieved": "2026-10-07",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6238,
-   "well_formed": 6238,
+   "checked_rows": 6239,
+   "well_formed": 6239,
    "malformed": 0,
    "drop": null
   },
   {
    "source": "gigaviewer",
    "files": 72,
-   "works": 938,
-   "rows": 8172,
-   "retrieved": "2026-10-06",
+   "works": 942,
+   "rows": 8179,
+   "retrieved": "2026-10-07",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7848,
-   "well_formed": 7848,
+   "checked_rows": 7851,
+   "well_formed": 7851,
    "malformed": 0,
    "drop": null
   },
@@ -932,14 +934,14 @@
    "source": "kadokomi",
    "files": 5,
    "works": 982,
-   "rows": 7664,
-   "retrieved": "2026-10-06",
+   "rows": 7667,
+   "retrieved": "2026-10-07",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6992,
-   "well_formed": 6702,
-   "malformed": 290,
+   "checked_rows": 6995,
+   "well_formed": 6704,
+   "malformed": 291,
    "drop": null
   },
   {
@@ -947,7 +949,7 @@
    "files": 3,
    "works": 1335,
    "rows": 11445,
-   "retrieved": "2026-10-06",
+   "retrieved": "2026-10-07",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -961,7 +963,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-06",
+   "retrieved": "2026-10-07",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -975,19 +977,19 @@
    "files": 48,
    "works": 579,
    "rows": 8093,
-   "retrieved": "2026-10-06",
+   "retrieved": "2026-10-07",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
    "checked_rows": 8042,
-   "well_formed": 8041,
-   "malformed": 1,
+   "well_formed": 8042,
+   "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-04T16:13:51+00:00",
+  "previous_at": "2026-10-05T19:02:46+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1050,7 +1052,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 94,
+    "credit fields an identifier does not cover": 91,
     "credit pages listing a work that does not name them": 9,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
@@ -1094,7 +1096,7 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 49,
+    "incomplete attested rows": 50,
     "works without English": 0,
     "volume rows with no publication date": 2436,
     "predicted updates already behind the run": 1,
@@ -1110,9 +1112,9 @@
    "oneshot": 462,
    "dormant": 302,
    "completed": 296,
-   "active": 254,
+   "active": 255,
    "slow": 86,
-   "unknown": 56
+   "unknown": 55
   },
   "english_basis": {
    "translated": 2735,
@@ -1124,7 +1126,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3101,
-  "chapters": 29092,
+  "chapters": 29103,
   "delivery_dated": 1034
  }
 }
