@@ -1,10 +1,8 @@
 {
- "generated": "2026-10-06T19:25:23+00:00",
+ "generated": "2026-10-06T20:07:06+00:00",
  "since_last": {
-  "at": "2026-10-06T13:37:58+00:00",
-  "statistics": {
-   "chapters": 11
-  }
+  "at": "2026-10-06T19:25:23+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -26,19 +24,19 @@
  },
  "last_run": {
   "at": "2026-10-07",
-  "releases": 1108,
+  "releases": 1107,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3101,
   "assembled": 3102,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 772,
+   "discovery-candidate": 771,
    "known-work-match": 32,
    "platform-genre": 304
   },
   "collapsed": {
-   "duplicate_chapters": 210,
+   "duplicate_chapters": 209,
    "resolver": 55,
    "samples": 13,
    "thin_sitemap": 4
@@ -506,8 +504,8 @@
    {
     "name": "credit pages listing a work that does not name them",
     "means": "pairings a credit page would show whose work does not carry that credit's spelling in its own credit field. Substring arithmetic on two shipped fields, so it owes the splitter, the fold and the registry lookup nothing and cannot be satisfied by them agreeing. It will not reach zero: six of the eight are merges, where the surviving spelling is by construction not the one on the retired spelling's works, and two are release-row edges. A rise with neither behind it is a page claiming somebody worked on a book that does not name them.",
-    "budget": 9,
-    "value": 12
+    "budget": 12,
+    "value": 9
    },
    {
     "name": "publisher pages listing a work from another house",
@@ -768,7 +766,7 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 50,
+    "budget": 51,
     "value": 51
    },
    {
@@ -975,21 +973,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 579,
-   "rows": 8093,
+   "works": 578,
+   "rows": 8095,
    "retrieved": "2026-10-07",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8042,
-   "well_formed": 8042,
+   "checked_rows": 8044,
+   "well_formed": 8044,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-05T19:02:46+00:00",
+  "previous_at": "2026-10-06T19:24:17+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1053,7 +1051,7 @@
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
     "credit fields an identifier does not cover": 91,
-    "credit pages listing a work that does not name them": 9,
+    "credit pages listing a work that does not name them": 12,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
     "credits sharing a reading nobody has ruled on": 23,
@@ -1096,7 +1094,7 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 50,
+    "incomplete attested rows": 51,
     "works without English": 0,
     "volume rows with no publication date": 2436,
     "predicted updates already behind the run": 1,
