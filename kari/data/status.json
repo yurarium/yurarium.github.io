@@ -1,9 +1,11 @@
 {
- "generated": "2026-10-07T18:15:56+00:00",
+ "generated": "2026-10-07T18:47:38+00:00",
  "since_last": {
-  "at": "2026-10-07T13:56:53+00:00",
+  "at": "2026-10-07T18:15:56+00:00",
   "statistics": {
-   "chapters": 1
+   "works": 1,
+   "with_identifier": 1,
+   "chapters": 4
   }
  },
  "means": {
@@ -29,9 +31,9 @@
   "releases": 1101,
   "works": 2574,
   "platforms": 23,
-  "series_rows": 3101,
+  "series_rows": 3102,
   "assembled": 3103,
-  "awaiting_identifier": 2,
+  "awaiting_identifier": 1,
   "identification": {
    "discovery-candidate": 770,
    "known-work-match": 32,
@@ -500,7 +502,7 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 91,
+    "budget": 92,
     "value": 92
    },
    {
@@ -721,7 +723,7 @@
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 2,
-    "value": 4
+    "value": 2
    },
    {
     "name": "works whose first publication country is unattested",
@@ -768,7 +770,7 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 51,
+    "budget": 59,
     "value": 59
    },
    {
@@ -786,7 +788,7 @@
    {
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
-    "budget": 1,
+    "budget": 2,
     "value": 2
    },
    {
@@ -989,7 +991,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-06T20:05:58+00:00",
+  "previous_at": "2026-10-07T18:14:48+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1052,7 +1054,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 91,
+    "credit fields an identifier does not cover": 92,
     "credit pages listing a work that does not name them": 9,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
@@ -1096,28 +1098,28 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 51,
+    "incomplete attested rows": 59,
     "works without English": 0,
     "volume rows with no publication date": 2436,
-    "predicted updates already behind the run": 1,
+    "predicted updates already behind the run": 2,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
    }
   }
  ],
  "statistics": {
-  "works": 3101,
+  "works": 3102,
   "states": {
    "print": 1645,
    "oneshot": 462,
    "dormant": 302,
    "completed": 296,
-   "active": 255,
+   "active": 256,
    "slow": 86,
    "unknown": 55
   },
   "english_basis": {
-   "translated": 2735,
+   "translated": 2736,
    "official-jp": 232,
    "licensed": 109,
    "romaji": 25
@@ -1125,8 +1127,8 @@
   "print_works": 2459,
   "print_only": 1645,
   "volumes": 6105,
-  "with_identifier": 3101,
-  "chapters": 29104,
+  "with_identifier": 3102,
+  "chapters": 29108,
   "delivery_dated": 1034
  }
 }
