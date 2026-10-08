@@ -1,8 +1,10 @@
 {
- "generated": "2026-10-08T14:02:36+00:00",
+ "generated": "2026-10-08T16:45:06+00:00",
  "since_last": {
-  "at": "2026-10-07T18:47:38+00:00",
-  "statistics": {}
+  "at": "2026-10-08T14:02:36+00:00",
+  "statistics": {
+   "chapters": 54
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,20 +25,20 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-08",
-  "releases": 1101,
+  "at": "2026-10-09",
+  "releases": 1124,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3102,
   "assembled": 3103,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 770,
-   "known-work-match": 32,
-   "platform-genre": 299
+   "discovery-candidate": 794,
+   "known-work-match": 30,
+   "platform-genre": 300
   },
   "collapsed": {
-   "duplicate_chapters": 209,
+   "duplicate_chapters": 217,
    "resolver": 55,
    "samples": 13,
    "thin_sitemap": 7
@@ -713,7 +715,7 @@
     "name": "announced works the corpus does not hold",
     "means": "works a comparator announced on a platform this reads openly that the corpus does not hold. The policy is that such a work is ingested and presented without waiting for a person; a rise means an adapter cannot reach it, the platform titles it differently, or the promotion stopped happening",
     "budget": 0,
-    "value": 0
+    "value": 1
    },
    {
     "name": "updates naming a work we do not hold",
@@ -767,7 +769,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 59,
-    "value": 59
+    "value": 60
    },
    {
     "name": "works without English",
@@ -808,7 +810,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 67,
+   "age_days": 68,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -822,7 +824,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 64,
+   "age_days": 65,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -836,7 +838,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 64,
+   "age_days": 65,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -850,7 +852,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 63,
+   "age_days": 64,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -864,7 +866,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 62,
+   "age_days": 63,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -878,7 +880,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 62,
+   "age_days": 63,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -892,7 +894,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 61,
+   "age_days": 62,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -904,27 +906,27 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6286,
-   "retrieved": "2026-10-08",
+   "rows": 6289,
+   "retrieved": "2026-10-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6239,
-   "well_formed": 6239,
+   "checked_rows": 6242,
+   "well_formed": 6242,
    "malformed": 0,
    "drop": null
   },
   {
    "source": "gigaviewer",
    "files": 72,
-   "works": 947,
-   "rows": 8184,
-   "retrieved": "2026-10-08",
+   "works": 950,
+   "rows": 8189,
+   "retrieved": "2026-10-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7851,
-   "well_formed": 7851,
+   "checked_rows": 7853,
+   "well_formed": 7853,
    "malformed": 0,
    "drop": null
   },
@@ -932,28 +934,28 @@
    "source": "kadokomi",
    "files": 5,
    "works": 982,
-   "rows": 7667,
-   "retrieved": "2026-10-08",
+   "rows": 7669,
+   "retrieved": "2026-10-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6995,
-   "well_formed": 6704,
-   "malformed": 291,
+   "checked_rows": 6997,
+   "well_formed": 6688,
+   "malformed": 309,
    "drop": null
   },
   {
    "source": "nicovideo",
    "files": 3,
    "works": 1335,
-   "rows": 11445,
-   "retrieved": "2026-10-08",
+   "rows": 11495,
+   "retrieved": "2026-10-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10602,
+   "checked_rows": 10652,
    "well_formed": 0,
-   "malformed": 10602,
+   "malformed": 10652,
    "drop": null
   },
   {
@@ -961,7 +963,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-08",
+   "retrieved": "2026-10-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -974,20 +976,20 @@
    "source": "webpages",
    "files": 48,
    "works": 579,
-   "rows": 8102,
-   "retrieved": "2026-10-08",
+   "rows": 8108,
+   "retrieved": "2026-10-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8051,
-   "well_formed": 8051,
+   "checked_rows": 8057,
+   "well_formed": 8057,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-07T18:14:48+00:00",
+  "previous_at": "2026-10-07T18:46:32+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1108,11 +1110,11 @@
   "states": {
    "print": 1645,
    "oneshot": 462,
-   "dormant": 302,
-   "completed": 296,
-   "active": 256,
-   "slow": 86,
-   "unknown": 55
+   "dormant": 304,
+   "completed": 297,
+   "active": 257,
+   "slow": 81,
+   "unknown": 56
   },
   "english_basis": {
    "translated": 2736,
@@ -1124,7 +1126,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3102,
-  "chapters": 29108,
+  "chapters": 29162,
   "delivery_dated": 1034
  }
 }
