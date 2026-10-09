@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09",
+ "generated": "2026-10-10",
  "note": "One record per publishing house, holding the imprint lines it runs with the spellings each line is catalogued under and the years those cover. Publishers and distributors share one namespace: the seat is on the edge to the book.",
  "count": 163,
  "publishers": {
@@ -8,10 +8,10 @@
    "name": "小学館",
    "rows": 47,
    "works": [
+    "w00021",
     "w00522",
     "w00102",
     "w01352",
-    "w00021",
     "w00079",
     "w00044",
     "w01317",
@@ -1199,6 +1199,51 @@
        "years": [
         "2018",
         "2018"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00019": {
+   "id": "h00019",
+   "name": "ホーム社",
+   "rows": 5,
+   "works": [
+    "w00188",
+    "w00526",
+    "w00731"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "ogyaa",
+     "name": "オギャー!!",
+     "parent": "集英社ホームコミックス",
+     "resolved": true,
+     "rows": 5,
+     "works": [
+      "w00188",
+      "w00526",
+      "w00731"
+     ],
+     "spellings": [
+      {
+       "raw": "オギャー!!",
+       "rows": 4,
+       "years": [
+        "2022",
+        "2023"
+       ]
+      },
+      {
+       "raw": "集英社ホームコミックス. オギャー!!",
+       "rows": 1,
+       "years": [
+        "2023",
+        "2023"
        ]
       }
      ]
@@ -7056,51 +7101,6 @@
        "years": [
         "2014",
         "2014"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00019": {
-   "id": "h00019",
-   "name": "ホーム社",
-   "rows": 5,
-   "works": [
-    "w00188",
-    "w00526",
-    "w00731"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "ogyaa",
-     "name": "オギャー!!",
-     "parent": "集英社ホームコミックス",
-     "resolved": true,
-     "rows": 5,
-     "works": [
-      "w00188",
-      "w00526",
-      "w00731"
-     ],
-     "spellings": [
-      {
-       "raw": "オギャー!!",
-       "rows": 4,
-       "years": [
-        "2022",
-        "2023"
-       ]
-      },
-      {
-       "raw": "集英社ホームコミックス. オギャー!!",
-       "rows": 1,
-       "years": [
-        "2023",
-        "2023"
        ]
       }
      ]
