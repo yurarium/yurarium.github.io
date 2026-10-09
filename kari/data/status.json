@@ -1,11 +1,10 @@
 {
- "generated": "2026-10-09T18:10:22+00:00",
+ "generated": "2026-10-09T18:39:22+00:00",
  "since_last": {
-  "at": "2026-10-09T17:29:29+00:00",
+  "at": "2026-10-09T18:10:22+00:00",
   "statistics": {
-   "works": 6,
-   "with_identifier": 6,
-   "chapters": 168
+   "print_only": 1,
+   "chapters": -27
   }
  },
  "means": {
@@ -28,14 +27,14 @@
  },
  "last_run": {
   "at": "2026-10-10",
-  "releases": 1142,
+  "releases": 1148,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3108,
-  "assembled": 3111,
-  "awaiting_identifier": 3,
+  "assembled": 3110,
+  "awaiting_identifier": 2,
   "identification": {
-   "discovery-candidate": 809,
+   "discovery-candidate": 815,
    "known-work-match": 30,
    "platform-genre": 303
   },
@@ -424,7 +423,7 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1221,
+    "budget": 1224,
     "value": 1224
    },
    {
@@ -454,7 +453,7 @@
    {
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-    "budget": 272,
+    "budget": 273,
     "value": 273
    },
    {
@@ -466,7 +465,7 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 454,
+    "budget": 456,
     "value": 456
    },
    {
@@ -502,7 +501,7 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 96,
+    "budget": 102,
     "value": 102
    },
    {
@@ -722,8 +721,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 6,
-    "value": 2
+    "budget": 2,
+    "value": 6
    },
    {
     "name": "works whose first publication country is unattested",
@@ -770,7 +769,7 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 62,
+    "budget": 61,
     "value": 61
    },
    {
@@ -788,7 +787,7 @@
    {
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
-    "budget": 2,
+    "budget": 3,
     "value": 3
    },
    {
@@ -950,14 +949,14 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1337,
-   "rows": 11505,
+   "rows": 11497,
    "retrieved": "2026-10-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10662,
+   "checked_rows": 10652,
    "well_formed": 0,
-   "malformed": 10662,
+   "malformed": 10652,
    "drop": null
   },
   {
@@ -977,21 +976,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 587,
-   "rows": 8169,
+   "works": 588,
+   "rows": 8205,
    "retrieved": "2026-10-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8118,
-   "well_formed": 8118,
+   "checked_rows": 8154,
+   "well_formed": 8154,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-09T17:28:22+00:00",
+  "previous_at": "2026-10-09T18:09:14+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1041,20 +1040,20 @@
     "credit phrases spelling a person otherwise": 3,
     "names rendered two ways": 0,
     "one work named two ways across its rows": 0,
-    "author names romanised as one word": 1221,
+    "author names romanised as one word": 1224,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 88,
     "publisher readings nobody has settled": 22,
     "renderings with nothing to show": 0,
-    "kana names with no stated division": 272,
+    "kana names with no stated division": 273,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 454,
+    "author readings no source states": 456,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 96,
+    "credit fields an identifier does not cover": 102,
     "credit pages listing a work that does not name them": 9,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
@@ -1090,7 +1089,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
-    "updates naming a work we do not hold": 6,
+    "updates naming a work we do not hold": 2,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 6,
@@ -1098,10 +1097,10 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 62,
+    "incomplete attested rows": 61,
     "works without English": 0,
     "volume rows with no publication date": 2436,
-    "predicted updates already behind the run": 2,
+    "predicted updates already behind the run": 3,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
    }
@@ -1110,12 +1109,12 @@
  "statistics": {
   "works": 3108,
   "states": {
-   "print": 1645,
+   "print": 1646,
    "oneshot": 462,
    "dormant": 304,
    "completed": 298,
    "active": 264,
-   "slow": 78,
+   "slow": 77,
    "unknown": 57
   },
   "english_basis": {
@@ -1125,10 +1124,10 @@
    "romaji": 24
   },
   "print_works": 2459,
-  "print_only": 1645,
+  "print_only": 1646,
   "volumes": 6105,
   "with_identifier": 3108,
-  "chapters": 29351,
+  "chapters": 29324,
   "delivery_dated": 1034
  }
 }
