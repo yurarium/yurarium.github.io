@@ -1,9 +1,11 @@
 {
- "generated": "2026-10-09T17:29:29+00:00",
+ "generated": "2026-10-09T18:10:22+00:00",
  "since_last": {
-  "at": "2026-10-09T15:58:32+00:00",
+  "at": "2026-10-09T17:29:29+00:00",
   "statistics": {
-   "chapters": 19
+   "works": 6,
+   "with_identifier": 6,
+   "chapters": 168
   }
  },
  "means": {
@@ -26,19 +28,19 @@
  },
  "last_run": {
   "at": "2026-10-10",
-  "releases": 1162,
+  "releases": 1142,
   "works": 2574,
   "platforms": 23,
-  "series_rows": 3102,
-  "assembled": 3109,
-  "awaiting_identifier": 7,
+  "series_rows": 3108,
+  "assembled": 3111,
+  "awaiting_identifier": 3,
   "identification": {
-   "discovery-candidate": 829,
+   "discovery-candidate": 809,
    "known-work-match": 30,
    "platform-genre": 303
   },
   "collapsed": {
-   "duplicate_chapters": 213,
+   "duplicate_chapters": 217,
    "resolver": 54,
    "samples": 13,
    "thin_sitemap": 7
@@ -422,8 +424,8 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1218,
-    "value": 1221
+    "budget": 1221,
+    "value": 1224
    },
    {
     "name": "divisions read back from a romanisation",
@@ -453,7 +455,7 @@
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
     "budget": 272,
-    "value": 272
+    "value": 273
    },
    {
     "name": "claims whose evidence their basis does not admit",
@@ -464,8 +466,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 451,
-    "value": 454
+    "budget": 454,
+    "value": 456
    },
    {
     "name": "credits the corpus files as a venue",
@@ -500,8 +502,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 92,
-    "value": 96
+    "budget": 96,
+    "value": 102
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -549,13 +551,13 @@
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
     "budget": 1150,
-    "value": 1151
+    "value": 1150
    },
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
     "budget": 59,
-    "value": 60
+    "value": 59
    },
    {
     "name": "data reaching the site around the store",
@@ -714,14 +716,14 @@
    {
     "name": "announced works the corpus does not hold",
     "means": "works a comparator announced on a platform this reads openly that the corpus does not hold. The policy is that such a work is ingested and presented without waiting for a person; a rise means an adapter cannot reach it, the platform titles it differently, or the promotion stopped happening",
-    "budget": 1,
-    "value": 1
+    "budget": 0,
+    "value": 0
    },
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 2,
-    "value": 28
+    "budget": 6,
+    "value": 2
    },
    {
     "name": "works whose first publication country is unattested",
@@ -769,7 +771,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 62,
-    "value": 62
+    "value": 61
    },
    {
     "name": "works without English",
@@ -787,7 +789,7 @@
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
     "budget": 2,
-    "value": 2
+    "value": 3
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -948,14 +950,14 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1337,
-   "rows": 11497,
+   "rows": 11505,
    "retrieved": "2026-10-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10652,
+   "checked_rows": 10662,
    "well_formed": 0,
-   "malformed": 10652,
+   "malformed": 10662,
    "drop": null
   },
   {
@@ -975,21 +977,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 584,
-   "rows": 8162,
+   "works": 587,
+   "rows": 8169,
    "retrieved": "2026-10-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8111,
-   "well_formed": 8111,
+   "checked_rows": 8118,
+   "well_formed": 8118,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-09T15:57:36+00:00",
+  "previous_at": "2026-10-09T17:28:22+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1021,7 +1023,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 49,
+   "count": 48,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1039,20 +1041,20 @@
     "credit phrases spelling a person otherwise": 3,
     "names rendered two ways": 0,
     "one work named two ways across its rows": 0,
-    "author names romanised as one word": 1218,
+    "author names romanised as one word": 1221,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 88,
     "publisher readings nobody has settled": 22,
     "renderings with nothing to show": 0,
     "kana names with no stated division": 272,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 451,
+    "author readings no source states": 454,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 92,
+    "credit fields an identifier does not cover": 96,
     "credit pages listing a work that does not name them": 9,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
@@ -1087,8 +1089,8 @@
     "works holding more volumes than the shop states": 26,
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
-    "announced works the corpus does not hold": 1,
-    "updates naming a work we do not hold": 2,
+    "announced works the corpus does not hold": 0,
+    "updates naming a work we do not hold": 6,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 6,
@@ -1106,27 +1108,27 @@
   }
  ],
  "statistics": {
-  "works": 3102,
+  "works": 3108,
   "states": {
    "print": 1645,
    "oneshot": 462,
    "dormant": 304,
    "completed": 298,
-   "active": 259,
+   "active": 264,
    "slow": 78,
-   "unknown": 56
+   "unknown": 57
   },
   "english_basis": {
-   "translated": 2736,
+   "translated": 2741,
    "official-jp": 233,
-   "licensed": 109,
+   "licensed": 110,
    "romaji": 24
   },
   "print_works": 2459,
   "print_only": 1645,
   "volumes": 6105,
-  "with_identifier": 3102,
-  "chapters": 29183,
+  "with_identifier": 3108,
+  "chapters": 29351,
   "delivery_dated": 1034
  }
 }
