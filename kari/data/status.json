@@ -1,10 +1,12 @@
 {
- "generated": "2026-10-09T18:39:22+00:00",
+ "generated": "2026-10-09T19:00:21+00:00",
  "since_last": {
-  "at": "2026-10-09T18:10:22+00:00",
+  "at": "2026-10-09T18:39:22+00:00",
   "statistics": {
-   "print_only": 1,
-   "chapters": -27
+   "works": 2,
+   "print_only": -1,
+   "with_identifier": 2,
+   "chapters": 42
   }
  },
  "means": {
@@ -30,9 +32,9 @@
   "releases": 1148,
   "works": 2574,
   "platforms": 23,
-  "series_rows": 3108,
-  "assembled": 3110,
-  "awaiting_identifier": 2,
+  "series_rows": 3110,
+  "assembled": 3111,
+  "awaiting_identifier": 1,
   "identification": {
    "discovery-candidate": 815,
    "known-work-match": 30,
@@ -721,8 +723,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 2,
-    "value": 6
+    "budget": 6,
+    "value": 2
    },
    {
     "name": "works whose first publication country is unattested",
@@ -948,15 +950,15 @@
   {
    "source": "nicovideo",
    "files": 3,
-   "works": 1337,
-   "rows": 11497,
+   "works": 1339,
+   "rows": 11507,
    "retrieved": "2026-10-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10652,
+   "checked_rows": 10662,
    "well_formed": 0,
-   "malformed": 10652,
+   "malformed": 10662,
    "drop": null
   },
   {
@@ -990,7 +992,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-09T18:09:14+00:00",
+  "previous_at": "2026-10-09T18:38:13+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1089,7 +1091,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
-    "updates naming a work we do not hold": 2,
+    "updates naming a work we do not hold": 6,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 6,
@@ -1107,27 +1109,27 @@
   }
  ],
  "statistics": {
-  "works": 3108,
+  "works": 3110,
   "states": {
-   "print": 1646,
+   "print": 1645,
    "oneshot": 462,
    "dormant": 304,
    "completed": 298,
-   "active": 264,
+   "active": 267,
    "slow": 77,
    "unknown": 57
   },
   "english_basis": {
-   "translated": 2741,
+   "translated": 2743,
    "official-jp": 233,
    "licensed": 110,
    "romaji": 24
   },
   "print_works": 2459,
-  "print_only": 1646,
+  "print_only": 1645,
   "volumes": 6105,
-  "with_identifier": 3108,
-  "chapters": 29324,
+  "with_identifier": 3110,
+  "chapters": 29366,
   "delivery_dated": 1034
  }
 }

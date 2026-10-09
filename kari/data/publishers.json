@@ -1205,6 +1205,160 @@
     }
    ]
   },
+  "h00013": {
+   "id": "h00013",
+   "name": "秋田書店",
+   "rows": 19,
+   "works": [
+    "w00092",
+    "w00201",
+    "w00177",
+    "w00118",
+    "w00057",
+    "w00120",
+    "w00270",
+    "w00296",
+    "w00521",
+    "w00638",
+    "w00719",
+    "w01287",
+    "w01388",
+    "w01404",
+    "w01420",
+    "w02445"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "shonen-champion-comics",
+     "name": "少年チャンピオン・コミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 8,
+     "works": [
+      "w00092",
+      "w00270",
+      "w00521",
+      "w01404",
+      "w01420",
+      "w02445"
+     ],
+     "spellings": [
+      {
+       "raw": "SHŌNEN CHAMPION COMICS",
+       "rows": 4,
+       "years": [
+        "2023",
+        "2026"
+       ]
+      },
+      {
+       "raw": "SH?NEN CHAMPION COMICS",
+       "rows": 2,
+       "years": [
+        "2020",
+        "2021"
+       ]
+      },
+      {
+       "raw": "少年チャンピオン・コミックス",
+       "rows": 2,
+       "years": [
+        "2020",
+        "2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "young-champion-comics",
+     "name": "ヤングチャンピオン・コミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 6,
+     "works": [
+      "w00201",
+      "w00177",
+      "w00118",
+      "w00057",
+      "w00120"
+     ],
+     "spellings": [
+      {
+       "raw": "ヤングチャンピオン・コミックス",
+       "rows": 6,
+       "years": [
+        "2020",
+        "2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bonita-comics",
+     "name": "BONITA COMICS",
+     "parent": null,
+     "resolved": true,
+     "rows": 2,
+     "works": [
+      "w00296",
+      "w00638"
+     ],
+     "spellings": [
+      {
+       "raw": "BONITA COMICS",
+       "rows": 2,
+       "years": [
+        "2023",
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "shonen-champion-comics-extra",
+     "name": "SHŌNEN CHAMPION COMICS EXTRA",
+     "parent": "少年チャンピオン・コミックス",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w01388"
+     ],
+     "spellings": [
+      {
+       "raw": "SHŌNEN CHAMPION COMICS EXTRA",
+       "rows": 1,
+       "years": [
+        "2019",
+        "2019"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "champion-red-comics",
+     "name": "チャンピオンREDコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00719"
+     ],
+     "spellings": [
+      {
+       "raw": "チャンピオンREDコミックス",
+       "rows": 1,
+       "years": [
+        "2023",
+        "2023"
+       ]
+      }
+     ]
+    }
+   ]
+  },
   "h00039": {
    "id": "h00039",
    "name": "とりからの巣",
@@ -3873,160 +4027,6 @@
        "years": [
         "2017",
         "2017"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00013": {
-   "id": "h00013",
-   "name": "秋田書店",
-   "rows": 19,
-   "works": [
-    "w00201",
-    "w00177",
-    "w00118",
-    "w00057",
-    "w00120",
-    "w00270",
-    "w00296",
-    "w00521",
-    "w00638",
-    "w00719",
-    "w01287",
-    "w01388",
-    "w01404",
-    "w01420",
-    "w02445",
-    "w00092"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "shonen-champion-comics",
-     "name": "少年チャンピオン・コミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 8,
-     "works": [
-      "w00270",
-      "w00521",
-      "w01404",
-      "w01420",
-      "w02445",
-      "w00092"
-     ],
-     "spellings": [
-      {
-       "raw": "SHŌNEN CHAMPION COMICS",
-       "rows": 4,
-       "years": [
-        "2023",
-        "2026"
-       ]
-      },
-      {
-       "raw": "SH?NEN CHAMPION COMICS",
-       "rows": 2,
-       "years": [
-        "2020",
-        "2021"
-       ]
-      },
-      {
-       "raw": "少年チャンピオン・コミックス",
-       "rows": 2,
-       "years": [
-        "2020",
-        "2026"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "young-champion-comics",
-     "name": "ヤングチャンピオン・コミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 6,
-     "works": [
-      "w00201",
-      "w00177",
-      "w00118",
-      "w00057",
-      "w00120"
-     ],
-     "spellings": [
-      {
-       "raw": "ヤングチャンピオン・コミックス",
-       "rows": 6,
-       "years": [
-        "2020",
-        "2026"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "bonita-comics",
-     "name": "BONITA COMICS",
-     "parent": null,
-     "resolved": true,
-     "rows": 2,
-     "works": [
-      "w00296",
-      "w00638"
-     ],
-     "spellings": [
-      {
-       "raw": "BONITA COMICS",
-       "rows": 2,
-       "years": [
-        "2023",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "shonen-champion-comics-extra",
-     "name": "SHŌNEN CHAMPION COMICS EXTRA",
-     "parent": "少年チャンピオン・コミックス",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w01388"
-     ],
-     "spellings": [
-      {
-       "raw": "SHŌNEN CHAMPION COMICS EXTRA",
-       "rows": 1,
-       "years": [
-        "2019",
-        "2019"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "champion-red-comics",
-     "name": "チャンピオンREDコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00719"
-     ],
-     "spellings": [
-      {
-       "raw": "チャンピオンREDコミックス",
-       "rows": 1,
-       "years": [
-        "2023",
-        "2023"
        ]
       }
      ]
