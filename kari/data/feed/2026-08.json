@@ -1312,10 +1312,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 2,
+   "ahead_n": 1,
    "ahead_ep": "番外編 その2・万里花",
-   "ahead_next_free": "2026-10-10",
-   "ahead_next_ep": "番外編 その1・梨絵",
+   "ahead_next_free": "2026-10-17",
+   "ahead_next_ep": "番外編 その2・万里花",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 55",
    "kind_inferred": true,
@@ -1408,10 +1408,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 3,
+   "ahead_n": 2,
    "ahead_ep": "１３巻 第１７０話",
-   "ahead_next_free": "2026-10-10",
-   "ahead_next_ep": "１３巻 第１６８話",
+   "ahead_next_free": "2026-10-17",
+   "ahead_next_ep": "１３巻 第１６９話",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 162",
    "kind_inferred": true,
@@ -11561,6 +11561,101 @@
    }
   },
   {
+   "id": "pixivcomic:https://comic.pixiv.net/works/13609:第1話",
+   "work": "姫騎士と姫巫女",
+   "ep": "第1話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-25",
+   "seen": "2026-10-10",
+   "basis": "rendered",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic.pixiv.net/works/13609",
+   "author": "真くん",
+   "plat": "pixivcomic",
+   "plat_name": "pixivコミック",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-series",
+   "kind_basis": "episode numbered 1",
+   "kind_inferred": true,
+   "preferred": "pixivコミック",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-08-25",
+   "work_en": {
+    "reading": "ヒメ キシ ト ヒメ ミコ",
+    "ruby": [
+     [
+      "姫",
+      "ひめ"
+     ],
+     [
+      "騎士",
+      "きし"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "姫",
+      "ひめ"
+     ],
+     [
+      "巫女",
+      "みこ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Hime Kishi to Hime Miko",
+     "double": "Hime Kishi to Hime Miko",
+     "plain": "Hime Kishi to Hime Miko"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "シンクン",
+    "ruby": [
+     [
+      "真",
+      "しん"
+     ],
+     [
+      "くん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Shinkun",
+     "double": "Shinkun",
+     "plain": "Shinkun"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033517222",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00008"
+   }
+  },
+  {
    "id": "younganimal:https://younganimal.com/episodes/24a3e6bcb998e:第三話",
    "work": "最恐呪物令嬢 〜彼女は呪物を愛しすぎている〜",
    "ep": "第三話",
@@ -13026,6 +13121,84 @@
    }
   },
   {
+   "id": "kadokomi:KC_0094910001300011_E",
+   "work": "彗星、ロック・ユー",
+   "ep": "特別イラスト④",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-24",
+   "seen": "2026-10-10",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_009491_S/episodes/KC_0094910001300011_E",
+   "series_url": "https://comic-walker.com/detail/KC_009491_S",
+   "author": "晴瀬ひろき",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-08-24",
+   "work_en": {
+    "reading": "スイセイ、 ロック・ ユー",
+    "ruby": [
+     [
+      "彗星",
+      "すいせい"
+     ],
+     [
+      "、ロック・ユー",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Suisei, Rokku Yū",
+     "double": "Suisei, Rokku Yuu",
+     "plain": "Suisei, Rokku Yu"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ハルセ ヒロキ",
+    "ruby": [
+     [
+      "晴瀬",
+      "はるせ"
+     ],
+     [
+      "ひろき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Haruse Hiroki",
+     "double": "Haruse Hiroki",
+     "plain": "Haruse Hiroki"
+    },
+    "en": "Hiroki Haruse",
+    "basis": "romaji",
+    "reading_basis": "researched",
+    "id": "c01124"
+   }
+  },
+  {
    "id": "hanayume-plus:https://hanayume.com/series/f3ce082d639de:＃17①",
    "work": "フレンドガールフレンド",
    "ep": "＃17①",
@@ -13862,10 +14035,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 2,
+   "ahead_n": 1,
    "ahead_ep": "番外編 その2・万里花",
-   "ahead_next_free": "2026-10-10",
-   "ahead_next_ep": "番外編 その1・梨絵",
+   "ahead_next_free": "2026-10-17",
+   "ahead_next_ep": "番外編 その2・万里花",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 54",
    "kind_inferred": true,
@@ -13958,10 +14131,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 3,
+   "ahead_n": 2,
    "ahead_ep": "１３巻 第１７０話",
-   "ahead_next_free": "2026-10-10",
-   "ahead_next_ep": "１３巻 第１６８話",
+   "ahead_next_free": "2026-10-17",
+   "ahead_next_ep": "１３巻 第１６９話",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 161",
    "kind_inferred": true,
@@ -26375,6 +26548,84 @@
    }
   },
   {
+   "id": "kadokomi:KC_0094910001100021_E",
+   "work": "彗星、ロック・ユー",
+   "ep": "第５話★これでよかったんだ②",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-17",
+   "seen": "2026-10-10",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_009491_S/episodes/KC_0094910001100021_E",
+   "series_url": "https://comic-walker.com/detail/KC_009491_S",
+   "author": "晴瀬ひろき",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 5",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-08-17",
+   "work_en": {
+    "reading": "スイセイ、 ロック・ ユー",
+    "ruby": [
+     [
+      "彗星",
+      "すいせい"
+     ],
+     [
+      "、ロック・ユー",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Suisei, Rokku Yū",
+     "double": "Suisei, Rokku Yuu",
+     "plain": "Suisei, Rokku Yu"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ハルセ ヒロキ",
+    "ruby": [
+     [
+      "晴瀬",
+      "はるせ"
+     ],
+     [
+      "ひろき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Haruse Hiroki",
+     "double": "Haruse Hiroki",
+     "plain": "Haruse Hiroki"
+    },
+    "en": "Hiroki Haruse",
+    "basis": "romaji",
+    "reading_basis": "researched",
+    "id": "c01124"
+   }
+  },
+  {
    "id": "hanayume-plus:https://hanayume.com/series/f3ce082d639de:＃16②",
    "work": "フレンドガールフレンド",
    "ep": "＃16②",
@@ -31006,10 +31257,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 2,
+   "ahead_n": 1,
    "ahead_ep": "番外編 その2・万里花",
-   "ahead_next_free": "2026-10-10",
-   "ahead_next_ep": "番外編 その1・梨絵",
+   "ahead_next_free": "2026-10-17",
+   "ahead_next_ep": "番外編 その2・万里花",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 53",
    "kind_inferred": true,
@@ -31102,10 +31353,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 3,
+   "ahead_n": 2,
    "ahead_ep": "１３巻 第１７０話",
-   "ahead_next_free": "2026-10-10",
-   "ahead_next_ep": "１３巻 第１６８話",
+   "ahead_next_free": "2026-10-17",
+   "ahead_next_ep": "１３巻 第１６９話",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 160",
    "kind_inferred": true,
@@ -32332,10 +32583,19 @@
      "double": "Marusessensu",
      "plain": "Marusessensu"
     },
-    "translation_refused": "A coinage in kana. COMIC OGYAAA!!'s own synopsis names the sisters the story turns on, 央 and 白湯, and glosses the title nowhere, so there is nothing under it to render and our rendering is the romanisation already held. Checked 2026-09-04.",
-    "en": "Marusessensu",
-    "basis": "romaji",
-    "reading_basis": "surface"
+    "translation_refused": "Ours would come out Marcescence, which is the publisher's MARCESCENCE in another case, so a reader ranking a translation first would be handed the same word twice.",
+    "en": "MARCESCENCE",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "MARCESCENCE"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "series-art",
+     "url": "https://cdn-img.comic-ogyaaa.com/public/series-thumbnail/12207421983372417929-125fc1337b68bd3431113a62b7eeba44",
+     "kind": "platform",
+     "reviewed": "2026-10-09"
+    }
    },
    "author_en": {
     "reading": "タタミ ユカ",
@@ -34225,10 +34485,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "provenance": "attested",
-   "free": true,
+   "free": false,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 44",
    "kind_inferred": true,
