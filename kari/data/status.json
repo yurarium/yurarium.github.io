@@ -1,9 +1,11 @@
 {
- "generated": "2026-10-11T17:09:42+00:00",
+ "generated": "2026-10-11T17:45:15+00:00",
  "since_last": {
-  "at": "2026-10-11T16:19:13+00:00",
+  "at": "2026-10-11T17:09:42+00:00",
   "statistics": {
-   "chapters": -37
+   "works": 2,
+   "with_identifier": 2,
+   "chapters": 5
   }
  },
  "means": {
@@ -29,8 +31,8 @@
   "releases": 1135,
   "works": 2574,
   "platforms": 23,
-  "series_rows": 3110,
-  "assembled": 3111,
+  "series_rows": 3112,
+  "assembled": 3113,
   "awaiting_identifier": 1,
   "identification": {
    "discovery-candidate": 808,
@@ -38,7 +40,7 @@
    "platform-genre": 297
   },
   "collapsed": {
-   "duplicate_chapters": 215,
+   "duplicate_chapters": 221,
    "resolver": 56,
    "samples": 13,
    "thin_sitemap": 7
@@ -590,8 +592,8 @@
    {
     "name": "one work under two names in a list",
     "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
-    "budget": 3,
-    "value": 3
+    "budget": 5,
+    "value": 5
    },
    {
     "name": "facts with more than one home",
@@ -787,7 +789,7 @@
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
     "budget": 2,
-    "value": 1
+    "value": 2
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -975,21 +977,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 589,
-   "rows": 8219,
+   "works": 590,
+   "rows": 8225,
    "retrieved": "2026-10-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8168,
-   "well_formed": 8168,
+   "checked_rows": 8174,
+   "well_formed": 8174,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-11T16:18:16+00:00",
+  "previous_at": "2026-10-11T17:08:55+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1067,7 +1069,7 @@
     "works showing a romanisation": 24,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
-    "one work under two names in a list": 3,
+    "one work under two names in a list": 5,
     "facts with more than one home": 12,
     "impossibilities asserted without evidence": 0,
     "invented markup in tests": 76,
@@ -1106,18 +1108,18 @@
   }
  ],
  "statistics": {
-  "works": 3110,
+  "works": 3112,
   "states": {
    "print": 1645,
-   "oneshot": 461,
+   "oneshot": 462,
    "dormant": 303,
    "completed": 298,
    "active": 269,
-   "slow": 77,
+   "slow": 78,
    "unknown": 57
   },
   "english_basis": {
-   "translated": 2742,
+   "translated": 2744,
    "official-jp": 234,
    "licensed": 110,
    "romaji": 24
@@ -1125,8 +1127,8 @@
   "print_works": 2459,
   "print_only": 1645,
   "volumes": 6105,
-  "with_identifier": 3110,
-  "chapters": 29343,
+  "with_identifier": 3112,
+  "chapters": 29348,
   "delivery_dated": 1034
  }
 }
