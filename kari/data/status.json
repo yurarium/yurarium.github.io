@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-11T17:45:15+00:00",
+ "generated": "2026-10-11T18:29:06+00:00",
  "since_last": {
-  "at": "2026-10-11T17:09:42+00:00",
+  "at": "2026-10-11T17:45:15+00:00",
   "statistics": {
    "works": 2,
    "with_identifier": 2,
-   "chapters": 5
+   "chapters": 2
   }
  },
  "means": {
@@ -31,9 +31,9 @@
   "releases": 1135,
   "works": 2574,
   "platforms": 23,
-  "series_rows": 3112,
-  "assembled": 3113,
-  "awaiting_identifier": 1,
+  "series_rows": 3114,
+  "assembled": 3114,
+  "awaiting_identifier": 0,
   "identification": {
    "discovery-candidate": 808,
    "known-work-match": 30,
@@ -532,8 +532,8 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 202,
-    "value": 202
+    "budget": 203,
+    "value": 203
    },
    {
     "name": "implausible ruby spans",
@@ -592,8 +592,8 @@
    {
     "name": "one work under two names in a list",
     "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
-    "budget": 5,
-    "value": 5
+    "budget": 6,
+    "value": 6
    },
    {
     "name": "facts with more than one home",
@@ -991,7 +991,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-11T17:08:55+00:00",
+  "previous_at": "2026-10-11T17:44:09+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1059,7 +1059,7 @@
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
     "credits sharing a reading nobody has ruled on": 23,
-    "ruby asserting a reading per character": 202,
+    "ruby asserting a reading per character": 203,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 192,
     "titles read by a machine, unmarked": 1150,
@@ -1069,7 +1069,7 @@
     "works showing a romanisation": 24,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
-    "one work under two names in a list": 5,
+    "one work under two names in a list": 6,
     "facts with more than one home": 12,
     "impossibilities asserted without evidence": 0,
     "invented markup in tests": 76,
@@ -1108,18 +1108,18 @@
   }
  ],
  "statistics": {
-  "works": 3112,
+  "works": 3114,
   "states": {
    "print": 1645,
-   "oneshot": 462,
+   "oneshot": 464,
    "dormant": 303,
-   "completed": 298,
+   "completed": 299,
    "active": 269,
-   "slow": 78,
+   "slow": 77,
    "unknown": 57
   },
   "english_basis": {
-   "translated": 2744,
+   "translated": 2746,
    "official-jp": 234,
    "licensed": 110,
    "romaji": 24
@@ -1127,8 +1127,8 @@
   "print_works": 2459,
   "print_only": 1645,
   "volumes": 6105,
-  "with_identifier": 3112,
-  "chapters": 29348,
+  "with_identifier": 3114,
+  "chapters": 29350,
   "delivery_dated": 1034
  }
 }

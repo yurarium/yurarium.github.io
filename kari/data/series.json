@@ -10951,6 +10951,17 @@
    "collection": null,
    "id": "w03314",
    "skipped": [],
+   "related": [
+    {
+     "id": "w00336",
+     "work": "怨霊日和",
+     "order": "follows",
+     "chapters": 4,
+     "first": "2026-02-18",
+     "latest": "2026-03-11",
+     "note": "マガポケ lists 怨霊日和【読み切り版】 at title/03125, a 短期集中連載 of four chapters from 2026-02-18 to 2026-03-11, and 怨霊日和 at title/03338, serialised in 週刊少年マガジン from 2026-09-09 and restarting at 【第1話】. The two versions are not identical, so they are related and not merged; ruled by the project owner on 2026-10-11"
+    }
+   ],
    "completed_basis_ja": null,
    "state_basis_ja": "5日間新しい話がなく、終了したとする情報もない",
    "work": "怨霊日和",
@@ -33144,6 +33155,17 @@
    "collection": null,
    "id": "w03271",
    "skipped": [],
+   "related": [
+    {
+     "id": "w00391",
+     "work": "今夜、エーテルで待ちあわせ",
+     "order": "follows",
+     "chapters": 1,
+     "first": "2025-12-05",
+     "latest": "2025-12-05",
+     "note": "Seasons lists 今夜、エーテルで待ちあわせ by ヨン as a 読切 on 2025-12-05 at series 2551460909766155404 and as a serial from 2026-07 at series 12207421983858392884. A short version and its serialisation are related and not merged; ruled by the project owner on 2026-10-11"
+    }
+   ],
    "completed_basis_ja": null,
    "state_basis_ja": "24日間新しい話がなく、終了したとする情報もない",
    "work": "今夜、エーテルで待ちあわせ",
@@ -34642,23 +34664,22 @@
      "partial": true,
      "format": "standard",
      "retrieved": "2026-10-12"
-    },
-    {
-     "platform": "一迅プラス",
-     "url": "https://ichicomi.com/episode/2550912965919401588",
-     "chapters": 1,
-     "free": 1,
-     "free_timed": 0,
-     "priced": 0,
-     "latest": "2025-08-08",
-     "partial": false,
-     "format": "standard",
-     "retrieved": "2026-10-12"
     }
    ],
    "collection": null,
    "id": "w00156",
    "skipped": [],
+   "related": [
+    {
+     "id": "w00486",
+     "work": "超深宇宙より愛をこめて【読み切り版】",
+     "order": "follows",
+     "chapters": 1,
+     "first": "2025-08-08",
+     "latest": "2025-08-08",
+     "note": "一迅プラス lists 超深宇宙より愛をこめて【読み切り版】 as its own series beside the serialisation. Merged on 2026-08-07 as an edition and un-merged on 2026-10-11 on the owner's ruling that a short version and its serialisation are not identical. The 読み切り版 came first: its series id on ichicomi.com is the lower of the two, and its only date, 2025-08-08, is the platform's import stamp, while the serialisation's real start is 2025-03-08 on pixivコミック"
+    }
+   ],
    "completed_basis_ja": null,
    "state_basis_ja": "26日間新しい話がなく、終了したとする情報もない",
    "work": "超深宇宙より愛をこめて",
@@ -63078,23 +63099,22 @@
      "partial": false,
      "format": "standard",
      "retrieved": "2026-08-04"
-    },
-    {
-     "platform": "comicブースト",
-     "url": "https://comic-boost.com/content/01470001",
-     "chapters": 1,
-     "free": 1,
-     "free_timed": 0,
-     "priced": 0,
-     "latest": "2024-09-13",
-     "partial": false,
-     "format": "standard",
-     "retrieved": "2026-08-04"
     }
    ],
    "collection": null,
    "id": "w00314",
    "skipped": [],
+   "related": [
+    {
+     "id": "w00650",
+     "work": "白妙様、秘密ですよ／読切版",
+     "order": "follows",
+     "chapters": 1,
+     "first": "2024-09-13",
+     "latest": "2024-09-13",
+     "note": "comicブースト lists 白妙様、秘密ですよ／読切版 at content/01470001, one chapter on 2024-09-13, and the serialisation at content/01650001 from 2025-08-22. Merged as an edition and un-merged on 2026-10-11 on the owner's ruling that a short version and its serialisation are not identical"
+    }
+   ],
    "completed_basis_ja": null,
    "state_basis_ja": "185日間新しい話がなく、終了したとする情報もない",
    "work": "白妙様、秘密ですよ",
@@ -65831,10 +65851,10 @@
    "latest": "2026-03-11",
    "latest_ep": "【第4話】怨天様",
    "first": "2026-02-18",
-   "state": "slow",
+   "state": "completed",
    "oneshot": false,
-   "completed_basis": null,
-   "state_basis": "no chapter for 215 days, and nothing states it has ended",
+   "completed_basis": "continued as 怨霊日和 (w03314), which has published since this version's last chapter of 2026-03-11; its newest is 2026-10-07",
+   "state_basis": "continued as 怨霊日和 (w03314), which has published since this version's last chapter of 2026-03-11; its newest is 2026-10-07",
    "free": 4,
    "free_timed": 0,
    "priced": 0,
@@ -65857,8 +65877,19 @@
    "collection": null,
    "id": "w00336",
    "skipped": [],
-   "completed_basis_ja": null,
-   "state_basis_ja": "215日間新しい話がなく、終了したとする情報もない",
+   "related": [
+    {
+     "id": "w03314",
+     "work": "怨霊日和",
+     "order": "precedes",
+     "chapters": 6,
+     "first": "2026-09-09",
+     "latest": "2026-10-07",
+     "note": "マガポケ lists 怨霊日和【読み切り版】 at title/03125, a 短期集中連載 of four chapters from 2026-02-18 to 2026-03-11, and 怨霊日和 at title/03338, serialised in 週刊少年マガジン from 2026-09-09 and restarting at 【第1話】. The two versions are not identical, so they are related and not merged; ruled by the project owner on 2026-10-11"
+    }
+   ],
+   "completed_basis_ja": "怨霊日和（w03314）として続いている。この版の最終話は2026-03-11、続きの最新話は2026-10-07",
+   "state_basis_ja": "怨霊日和（w03314）として続いている。この版の最終話は2026-03-11、続きの最新話は2026-10-07",
    "work": "怨霊日和",
    "author": "イマイ悠",
    "evidence": [],
@@ -74447,6 +74478,17 @@
    "collection": null,
    "id": "w00391",
    "skipped": [],
+   "related": [
+    {
+     "id": "w03271",
+     "work": "今夜、エーテルで待ちあわせ",
+     "order": "precedes",
+     "chapters": 3,
+     "first": "2026-07-17",
+     "latest": "2026-09-18",
+     "note": "Seasons lists 今夜、エーテルで待ちあわせ by ヨン as a 読切 on 2025-12-05 at series 2551460909766155404 and as a serial from 2026-07 at series 12207421983858392884. A short version and its serialisation are related and not merged; ruled by the project owner on 2026-10-11"
+    }
+   ],
    "completed_basis_ja": null,
    "state_basis_ja": "掲載されている話すべてに読切の表示がある",
    "work": "今夜、エーテルで待ちあわせ",
@@ -88506,6 +88548,145 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c00608"
+   },
+   "admitted_by": [
+    {
+     "comparator": "webcomics.jp",
+     "shelf": "百合 tag",
+     "retrieved": "2026-10-12",
+     "note": "An aggregator listing a work under its yuri tag is a comparator (DEFINITIONS §2). It says the work exists and where, attests nothing about it, and is never a marketing_label (§4).",
+     "url": "https://webcomics.jp/tag/%E7%99%BE%E5%90%88"
+    }
+   ]
+  },
+  {
+   "chapters": 1,
+   "partial": false,
+   "latest": "2025-08-08",
+   "latest_ep": "読み切り作品",
+   "first": "2025-08-08",
+   "state": "oneshot",
+   "oneshot": true,
+   "completed_basis": null,
+   "state_basis": "every instalment here is marked 読切",
+   "free": 1,
+   "free_timed": 0,
+   "priced": 0,
+   "url": "https://ichicomi.com/episode/2550912965919401588",
+   "series_url": "https://ichicomi.com/atom/series/2550912965919360655",
+   "sources": [
+    {
+     "platform": "一迅プラス",
+     "url": "https://ichicomi.com/episode/2550912965919401588",
+     "chapters": 1,
+     "free": 1,
+     "free_timed": 0,
+     "priced": 0,
+     "latest": "2025-08-08",
+     "partial": false,
+     "format": "standard",
+     "retrieved": "2026-10-12"
+    }
+   ],
+   "collection": null,
+   "id": "w00486",
+   "skipped": [],
+   "related": [
+    {
+     "id": "w00156",
+     "work": "超深宇宙より愛をこめて",
+     "order": "precedes",
+     "chapters": 16,
+     "first": "2025-03-08",
+     "latest": "2026-09-16",
+     "note": "一迅プラス lists 超深宇宙より愛をこめて【読み切り版】 as its own series beside the serialisation. Merged on 2026-08-07 as an edition and un-merged on 2026-10-11 on the owner's ruling that a short version and its serialisation are not identical. The 読み切り版 came first: its series id on ichicomi.com is the lower of the two, and its only date, 2025-08-08, is the platform's import stamp, while the serialisation's real start is 2025-03-08 on pixivコミック"
+    }
+   ],
+   "completed_basis_ja": null,
+   "state_basis_ja": "掲載されている話すべてに読切の表示がある",
+   "work": "超深宇宙より愛をこめて【読み切り版】",
+   "author": "アシダカヲズ",
+   "evidence": [],
+   "state_claims": [],
+   "stated_next": null,
+   "latest_any": "2025-08-08",
+   "latest_any_kind": "chapter",
+   "work_en": {
+    "reading": "チョウシン ウチュウ ヨリ アイ ヲ コメテ 【ヨミキリ バン】",
+    "ruby": [
+     [
+      "超",
+      "ちょう"
+     ],
+     [
+      "深",
+      "しん"
+     ],
+     [
+      "宇宙",
+      "うちゅう"
+     ],
+     [
+      "より",
+      null
+     ],
+     [
+      "愛",
+      "あい"
+     ],
+     [
+      "をこめて【",
+      null
+     ],
+     [
+      "読",
+      "よ"
+     ],
+     [
+      "み",
+      null
+     ],
+     [
+      "切",
+      "き"
+     ],
+     [
+      "り",
+      null
+     ],
+     [
+      "版",
+      "ばん"
+     ],
+     [
+      "】",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Chōshin Uchū yori Ai o Komete [Yomikiri Ban]",
+     "double": "Choushin Uchuu yori Ai o Komete [Yomikiri Ban]",
+     "plain": "Choshin Uchu yori Ai o Komete [Yomikiri Ban]"
+    },
+    "en": "Big love from ultra deep space (One-Shot Version)",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Big love from ultra deep space (One-Shot Version)"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "アシダカ ヲズ",
+    "romaji": {
+     "macron": "Ashidaka Ozu",
+     "double": "Ashidaka Ozu",
+     "plain": "Ashidaka Ozu"
+    },
+    "en": "ASHIDAKA Woz",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00254"
    },
    "admitted_by": [
     {
@@ -113980,6 +114161,138 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00420"
+   },
+   "admitted_by": [
+    {
+     "comparator": "webcomics.jp",
+     "shelf": "百合 tag",
+     "retrieved": "2026-10-12",
+     "note": "An aggregator listing a work under its yuri tag is a comparator (DEFINITIONS §2). It says the work exists and where, attests nothing about it, and is never a marketing_label (§4).",
+     "url": "https://webcomics.jp/tag/%E7%99%BE%E5%90%88"
+    }
+   ]
+  },
+  {
+   "chapters": 1,
+   "partial": false,
+   "latest": "2024-09-13",
+   "latest_ep": "読み切り『白妙様、秘密ですよ』",
+   "first": "2024-09-13",
+   "state": "oneshot",
+   "oneshot": true,
+   "completed_basis": null,
+   "state_basis": "every instalment here is marked 読切",
+   "free": 1,
+   "free_timed": 0,
+   "priced": 0,
+   "url": "https://comic-boost.com/content/01470001",
+   "series_url": null,
+   "sources": [
+    {
+     "platform": "comicブースト",
+     "url": "https://comic-boost.com/content/01470001",
+     "chapters": 1,
+     "free": 1,
+     "free_timed": 0,
+     "priced": 0,
+     "latest": "2024-09-13",
+     "partial": false,
+     "format": "standard",
+     "retrieved": "2026-08-04"
+    }
+   ],
+   "collection": null,
+   "id": "w00650",
+   "skipped": [],
+   "related": [
+    {
+     "id": "w00314",
+     "work": "白妙様、秘密ですよ",
+     "order": "precedes",
+     "chapters": 6,
+     "first": "2025-08-22",
+     "latest": "2026-04-10",
+     "note": "comicブースト lists 白妙様、秘密ですよ／読切版 at content/01470001, one chapter on 2024-09-13, and the serialisation at content/01650001 from 2025-08-22. Merged as an edition and un-merged on 2026-10-11 on the owner's ruling that a short version and its serialisation are not identical"
+    }
+   ],
+   "completed_basis_ja": null,
+   "state_basis_ja": "掲載されている話すべてに読切の表示がある",
+   "work": "白妙様、秘密ですよ／読切版",
+   "author": "雪子",
+   "evidence": [],
+   "state_claims": [],
+   "stated_next": null,
+   "latest_any": "2024-09-13",
+   "latest_any_kind": "chapter",
+   "work_en": {
+    "reading": "シロタエサマ、 ヒミツデス ヨ ／ ヨミキリ バン",
+    "ruby": [
+     [
+      "白妙",
+      "しろたえ"
+     ],
+     [
+      "様",
+      "さま"
+     ],
+     [
+      "、",
+      null
+     ],
+     [
+      "秘密",
+      "ひみつ"
+     ],
+     [
+      "ですよ／",
+      null
+     ],
+     [
+      "読切",
+      "よみきり"
+     ],
+     [
+      "版",
+      "ばん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Shirotaesama, Himitsudesu Yo / Yomikiri Ban",
+     "double": "Shirotaesama, Himitsudesu Yo / Yomikiri Ban",
+     "plain": "Shirotaesama, Himitsudesu Yo / Yomikiri Ban"
+    },
+    "en": "It's Our Secret, Lady Shirotae (One-Shot)",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "It's Our Secret, Lady Shirotae (One-Shot)"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ユキコ",
+    "ruby": [
+     [
+      "雪子",
+      "ゆきこ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Yukiko",
+     "double": "Yukiko",
+     "plain": "Yukiko"
+    },
+    "undivided": true,
+    "en": "Yukiko",
+    "basis": "romaji",
+    "reading_basis": "community-printed",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q98399901",
+     "kind": "community-db"
+    },
+    "unverified": true,
+    "id": "c00222"
    },
    "admitted_by": [
     {
@@ -166479,6 +166792,16 @@
    "collection": null,
    "id": "w00961",
    "skipped": [],
+   "related": [
+    {
+     "id": "w03202",
+     "work": "異種族女子に○○する話",
+     "chapters": 49,
+     "first": null,
+     "latest": "2021-03-11",
+     "note": "one print record matches both titles and a shared author"
+    }
+   ],
    "completed_basis_ja": null,
    "state_basis_ja": "1759日間新しい話がなく、終了したとする情報もない",
    "work": "異種族女子に〇〇する話",
@@ -172804,6 +173127,16 @@
    "collection": null,
    "id": "w03202",
    "skipped": [],
+   "related": [
+    {
+     "id": "w00961",
+     "work": "異種族女子に〇〇する話",
+     "chapters": 3,
+     "first": "2019-09",
+     "latest": "2021-12-18",
+     "note": "one print record matches both titles and a shared author"
+    }
+   ],
    "completed_basis_ja": null,
    "state_basis_ja": "2041日間新しい話がなく、終了したとする情報もない",
    "work": "異種族女子に○○する話",
@@ -400555,8 +400888,6 @@
  "merged": {
   "w00253": "w00097",
   "w00281": "w00225",
-  "w00486": "w00156",
-  "w00650": "w00314",
   "w01087": "w01016",
   "w01136": "w01041",
   "w01137": "w01119",
