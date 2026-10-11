@@ -1,8 +1,10 @@
 {
- "generated": "2026-10-11T13:32:04+00:00",
+ "generated": "2026-10-11T15:39:38+00:00",
  "since_last": {
-  "at": "2026-10-10T13:03:37+00:00",
-  "statistics": {}
+  "at": "2026-10-11T13:32:04+00:00",
+  "statistics": {
+   "chapters": 11
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,21 +25,21 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-10",
-  "releases": 1148,
+  "at": "2026-10-12",
+  "releases": 1127,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3110,
   "assembled": 3111,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 815,
+   "discovery-candidate": 800,
    "known-work-match": 30,
-   "platform-genre": 303
+   "platform-genre": 297
   },
   "collapsed": {
-   "duplicate_chapters": 217,
-   "resolver": 54,
+   "duplicate_chapters": 219,
+   "resolver": 56,
    "samples": 13,
    "thin_sitemap": 7
   }
@@ -718,7 +720,7 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 6,
+    "budget": 2,
     "value": 2
    },
    {
@@ -767,7 +769,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 61,
-    "value": 61
+    "value": 62
    },
    {
     "name": "works without English",
@@ -785,7 +787,7 @@
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
     "budget": 3,
-    "value": 3
+    "value": 4
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -808,7 +810,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 69,
+   "age_days": 71,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -822,7 +824,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 66,
+   "age_days": 68,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -836,7 +838,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 66,
+   "age_days": 68,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -850,7 +852,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 65,
+   "age_days": 67,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -864,7 +866,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 64,
+   "age_days": 66,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -878,7 +880,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 64,
+   "age_days": 66,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -892,7 +894,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 63,
+   "age_days": 65,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -901,11 +903,25 @@
    "drop": null
   },
   {
+   "source": "kadokomi",
+   "files": 5,
+   "works": 983,
+   "rows": 7699,
+   "retrieved": "2026-10-10",
+   "age_days": 2,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 7027,
+   "well_formed": 6717,
+   "malformed": 310,
+   "drop": null
+  },
+  {
    "source": "comicfuz",
    "files": 2,
    "works": 130,
    "rows": 6289,
-   "retrieved": "2026-10-10",
+   "retrieved": "2026-10-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -918,42 +934,28 @@
    "source": "gigaviewer",
    "files": 72,
    "works": 953,
-   "rows": 8199,
-   "retrieved": "2026-10-10",
+   "rows": 8200,
+   "retrieved": "2026-10-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7860,
-   "well_formed": 7860,
+   "checked_rows": 7861,
+   "well_formed": 7861,
    "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "kadokomi",
-   "files": 5,
-   "works": 983,
-   "rows": 7699,
-   "retrieved": "2026-10-10",
-   "age_days": 0,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 7027,
-   "well_formed": 6717,
-   "malformed": 310,
    "drop": null
   },
   {
    "source": "nicovideo",
    "files": 3,
    "works": 1339,
-   "rows": 11507,
-   "retrieved": "2026-10-10",
+   "rows": 11519,
+   "retrieved": "2026-10-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10662,
+   "checked_rows": 10674,
    "well_formed": 0,
-   "malformed": 10662,
+   "malformed": 10674,
    "drop": null
   },
   {
@@ -961,7 +963,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-10",
+   "retrieved": "2026-10-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -974,20 +976,20 @@
    "source": "webpages",
    "files": 48,
    "works": 588,
-   "rows": 8205,
-   "retrieved": "2026-10-10",
+   "rows": 8213,
+   "retrieved": "2026-10-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8154,
-   "well_formed": 8154,
+   "checked_rows": 8162,
+   "well_formed": 8162,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-09T18:38:13+00:00",
+  "previous_at": "2026-10-09T18:59:18+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1086,7 +1088,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
-    "updates naming a work we do not hold": 6,
+    "updates naming a work we do not hold": 2,
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 6,
@@ -1108,10 +1110,10 @@
   "states": {
    "print": 1645,
    "oneshot": 462,
-   "dormant": 304,
+   "dormant": 303,
    "completed": 298,
-   "active": 267,
-   "slow": 77,
+   "active": 265,
+   "slow": 80,
    "unknown": 57
   },
   "english_basis": {
@@ -1124,7 +1126,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3110,
-  "chapters": 29366,
+  "chapters": 29377,
   "delivery_dated": 1034
  }
 }

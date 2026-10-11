@@ -1,83 +1,1450 @@
 {
  "releases": [
   {
-   "id": "comic-days:https://comic-days.com/episode/12207421983484134830",
-   "work": "笑顔のたえない職場です。",
-   "ep": "第１２１話　なんて縛りプレイ...",
+   "id": "comicfuz:64788",
+   "work": "星屑テレパス",
+   "ep": "５巻 第４７話「冥土インヘヴン」",
    "type": "chapter",
    "adv": true,
    "web": "serialised",
-   "pub": "2026-08-15",
-   "seen": "2026-10-10",
+   "pub": "2026-10-12",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
    "moved": "",
-   "url": "https://comic-days.com/episode/12207421983484134830",
-   "author": "くずしろ",
-   "plat": "comic-days",
-   "plat_name": "コミックDAYS",
+   "url": "https://comic-fuz.com/manga/viewer/64788",
+   "series_url": "https://comic-fuz.com/manga/2062",
+   "author": "大熊らすこ",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
    "ident": "discovery-candidate",
-   "free_from": "2026-08-29",
-   "discovered_on": "2026-10-10",
-   "late_discovered": true,
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "became_free": false,
+   "access_changed": null,
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": false,
+   "ahead_n": 9,
+   "ahead_ep": "５巻 第５６話「彗星エンカウント」",
+   "ahead_next_free": "2026-10-19",
+   "ahead_next_ep": "５巻 第４８話「銀狼フロウ」",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 47",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-12",
+   "wid": "w00006",
+   "work_en": {
+    "reading": "ホシクズ テレパス",
+    "ruby": [
+     [
+      "星屑",
+      "ほしくず"
+     ],
+     [
+      "テレパス",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hoshikuzu Terepasu",
+     "double": "Hoshikuzu Terepasu",
+     "plain": "Hoshikuzu Terepasu"
+    },
+    "en": "Stardust Telepath",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Stardust Telepath"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "オオクマ ラスコ",
+    "ruby": [
+     [
+      "大熊",
+      "おおくま"
+     ],
+     [
+      "らすこ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Ōkuma Rasuko",
+     "double": "Ookuma Rasuko",
+     "plain": "Okuma Rasuko"
+    },
+    "en": "Rasuko Ookuma",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034783226",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00147"
+   }
+  },
+  {
+   "id": "comicfuz:80953",
+   "work": "魔法使いロゼの佐渡ライフ",
+   "ep": "第38話(1)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-12",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/80953",
+   "series_url": "https://comic-fuz.com/manga/3152",
+   "author": "おみなえし",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "became_free": false,
+   "access_changed": null,
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": false,
+   "ahead_n": 1,
+   "ahead_ep": "第38話(2)",
+   "ahead_next_free": "2026-10-26",
+   "ahead_next_ep": "第38話(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 38",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-12",
+   "wid": "w02129",
+   "work_en": {
+    "reading": "マホウ ツカイ ロゼ ノ サド ライフ",
+    "ruby": [
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "使",
+      "つか"
+     ],
+     [
+      "いロゼの",
+      null
+     ],
+     [
+      "佐渡",
+      "さど"
+     ],
+     [
+      "ライフ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mahō Tsukai Roze no Sado Raifu",
+     "double": "Mahou Tsukai Roze no Sado Raifu",
+     "plain": "Maho Tsukai Roze no Sado Raifu"
+    },
+    "en": "Rose the Witch's Life on Sado",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Rose the Witch's Life on Sado"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "オミナエシ",
+    "romaji": {
+     "macron": "Ominaeshi",
+     "double": "Ominaeshi",
+     "plain": "Ominaeshi"
+    },
+    "undivided": true,
+    "en": "Ominaeshi",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00148"
+   }
+  },
+  {
+   "id": "hanayume-plus:https://hanayume.com/series/f3ce082d639de:＃20②",
+   "work": "フレンドガールフレンド",
+   "ep": "＃20②",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-12",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://hanayume.com/series/f3ce082d639de",
+   "author": "瑠夏子",
+   "plat": "hanayume",
+   "plat_name": "花とゆめ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 202",
+   "kind_inferred": true,
+   "preferred": "花とゆめ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-12",
+   "wid": "w00007",
+   "work_en": {
+    "reading": "フレンドガールフレンド",
+    "romaji": {
+     "macron": "Furendogārufurendo",
+     "double": "Furendogaarufurendo",
+     "plain": "Furendogarufurendo"
+    },
+    "en": "Friend Girlfriend",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Friend Girlfriend"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ルカコ",
+    "ruby": [
+     [
+      "瑠夏子",
+      "るかこ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Rukako",
+     "double": "Rukako",
+     "plain": "Rukako"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I592XXXXXfrgirlf00111",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00054"
+   }
+  },
+  {
+   "id": "kimicomi:https://kimicomi.com/series/3e22b763a1c0f:60th management",
+   "work": "新米錬金術師の店舗経営",
+   "ep": "60th management",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-12",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://kimicomi.com/series/3e22b763a1c0f",
+   "author": "kirero,いつきみずほ,ふーみ",
+   "plat": "kimicomi",
+   "plat_name": "キミコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work is attested elsewhere in this database",
+   "kind_inferred": true,
+   "preferred": "キミコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-12",
+   "wid": "w01987",
+   "work_en": {
+    "reading": "シンマイ レンキン ジュツシ ノ テンポ ケイエイ",
+    "ruby": [
+     [
+      "新米",
+      "しんまい"
+     ],
+     [
+      "錬金",
+      "れんきん"
+     ],
+     [
+      "術師",
+      "じゅつし"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "店舗",
+      "てんぽ"
+     ],
+     [
+      "経営",
+      "けいえい"
+     ]
+    ],
+    "romaji": {
+     "macron": "Shinmai Renkin Jutsushi no Tenpo Keiei",
+     "double": "Shinmai Renkin Jutsushi no Tenpo Keiei",
+     "plain": "Shinmai Renkin Jutsushi no Tenpo Keiei"
+    },
+    "en": "The Rookie Alchemist Runs a Shop",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Rookie Alchemist Runs a Shop"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "kirero, イツキ ミズホ, フーミ",
+    "ruby": [
+     [
+      "kirero",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "いつきみずほ",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "ふーみ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "kirero, Itsuki Mizuho, Fūmi",
+     "double": "kirero, Itsuki Mizuho, Fuumi",
+     "plain": "kirero, Itsuki Mizuho, Fumi"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "kimicomi:https://kimicomi.com/series/0cd32d6a7efc2:OPERATION13",
+   "work": "魔王城デート大作戦!",
+   "ep": "OPERATION13",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-12",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://kimicomi.com/series/0cd32d6a7efc2",
+   "author": "涼海来夏",
+   "plat": "kimicomi",
+   "plat_name": "キミコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "キミコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-12",
+   "wid": "w00009",
+   "work_en": {
+    "reading": "マオウジョウ デート ダイ サクセン !",
+    "ruby": [
+     [
+      "魔王",
+      "まおう"
+     ],
+     [
+      "城",
+      "じょう"
+     ],
+     [
+      "デート",
+      null
+     ],
+     [
+      "大",
+      "だい"
+     ],
+     [
+      "作戦",
+      "さくせん"
+     ],
+     [
+      "!",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Maōjō Dēto Dai Sakusen !",
+     "double": "Maoujou Deeto Dai Sakusen !",
+     "plain": "Maojo Deto Dai Sakusen !"
+    },
+    "en": "Operation Date at the Demon Lord's Castle!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Operation Date at the Demon Lord's Castle!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "スズミ ライカ",
+    "ruby": [
+     [
+      "涼海来夏",
+      "すずみらいか"
+     ]
+    ],
+    "romaji": {
+     "macron": "Suzumi Raika",
+     "double": "Suzumi Raika",
+     "plain": "Suzumi Raika"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I031650150",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00058"
+   }
+  },
+  {
+   "id": "comicfuz:79559",
+   "work": "君が一等星に光るまで",
+   "ep": "episode7（1）",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/79559",
+   "series_url": "https://comic-fuz.com/manga/4133",
+   "author": "なうち",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 1,
+   "ahead_ep": "episode7（2）",
+   "ahead_next_free": "2026-10-18",
+   "ahead_next_ep": "episode7（2）",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 7",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-11",
+   "wid": "w03169",
+   "work_en": {
+    "reading": "キミ ガ デネブ ニ ヒカル マデ",
+    "ruby": [
+     [
+      "君",
+      "きみ"
+     ],
+     [
+      "が",
+      null
+     ],
+     [
+      "一等星",
+      "でねぶ"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "光",
+      "ひか"
+     ],
+     [
+      "るまで",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kimi ga Denebu ni Hikaru made",
+     "double": "Kimi ga Denebu ni Hikaru made",
+     "plain": "Kimi ga Denebu ni Hikaru made"
+    },
+    "en": "The Brightest Star",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "The Brightest Star",
+     "translated": "Until You Shine as a First-Magnitude Star"
+    },
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "COMIC FUZ",
+     "url": "https://comic-fuz.com/manga/4133",
+     "kind": "platform",
+     "reviewed": "2026-08-10"
+    },
+    "en_cite": {
+     "source": "COMIC FUZ",
+     "url": "https://comic-fuz.com/manga/4133",
+     "kind": "platform",
+     "reviewed": "2026-08-10"
+    }
+   },
+   "author_en": {
+    "reading": "ナウチ",
+    "romaji": {
+     "macron": "Nauchi",
+     "double": "Nauchi",
+     "plain": "Nauchi"
+    },
+    "undivided": true,
+    "en": "Nauchi",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00572"
+   }
+  },
+  {
+   "id": "comicfuz:78623",
+   "work": "江口さんちの純情サキュバス",
+   "ep": "２巻 第１８話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/78623",
+   "series_url": "https://comic-fuz.com/manga/3776",
+   "author": "工藤える",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "became_free": false,
+   "access_changed": null,
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": false,
+   "ahead_n": 6,
+   "ahead_ep": "２巻 第２４話",
+   "ahead_next_free": "2026-10-18",
+   "ahead_next_ep": "２巻 第１９話",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 18",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-11",
+   "wid": "w00010",
+   "work_en": {
+    "reading": "エグチサン チ ノ ジュンジョウ サキュバス",
+    "ruby": [
+     [
+      "江口",
+      "えぐち"
+     ],
+     [
+      "さんちの",
+      null
+     ],
+     [
+      "純情",
+      "じゅんじょう"
+     ],
+     [
+      "サキュバス",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Eguchisan Chi no Junjō Sakyubasu",
+     "double": "Eguchisan Chi no Junjou Sakyubasu",
+     "plain": "Eguchisan Chi no Junjo Sakyubasu"
+    },
+    "en": "The Eguchi Household's Innocent Succubus",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Eguchi Household's Innocent Succubus"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "クドウ エル",
+    "ruby": [
+     [
+      "工藤",
+      "くどう"
+     ],
+     [
+      "える",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kudō Eru",
+     "double": "Kudou Eru",
+     "plain": "Kudo Eru"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034096344",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00172"
+   }
+  },
+  {
+   "id": "comicfuz:80989",
+   "work": "６億年の博物旅",
+   "ep": "16話（1）",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/80989",
+   "series_url": "https://comic-fuz.com/manga/3818",
+   "author": "みなぱか, 泉賢太郎",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "became_free": false,
+   "access_changed": null,
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": false,
+   "ahead_n": 1,
+   "ahead_ep": "16話（2）",
+   "ahead_next_free": "2026-10-25",
+   "ahead_next_ep": "16話（2）",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 16",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-11",
+   "wid": "w03277",
+   "work_en": {
+    "reading": "ロクオク ネン ノ ハクブツ タビ",
+    "ruby": [
+     [
+      "６億",
+      "ろくおく"
+     ],
+     [
+      "年",
+      "ねん"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "博物",
+      "はくぶつ"
+     ],
+     [
+      "旅",
+      "たび"
+     ]
+    ],
+    "romaji": {
+     "macron": "Rokuoku Nen no Hakubutsu Tabi",
+     "double": "Rokuoku Nen no Hakubutsu Tabi",
+     "plain": "Rokuoku Nen no Hakubutsu Tabi"
+    },
+    "en": "A 600-Million-Year Natural History Journey",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A 600-Million-Year Natural History Journey"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ミナパカ, イズミケンタロウ",
+    "ruby": [
+     [
+      "みなぱか",
+      null
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "泉賢太郎",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Minapaka, Izumikentarō",
+     "double": "Minapaka, Izumikentarou",
+     "plain": "Minapaka, Izumikentaro"
+    },
+    "reading_basis": "analyser",
+    "basis": "romaji",
+    "unverified": true
+   }
+  },
+  {
+   "id": "comicfuz:48178",
+   "work": "ななどなどなど",
+   "ep": "３巻 第２話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/48178",
+   "series_url": "https://comic-fuz.com/manga/1913",
+   "author": "宇崎うそ",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 23,
+   "ahead_ep": "４巻 第１１話",
+   "ahead_next_free": "2026-10-18",
+   "ahead_next_ep": "３巻 第３話",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 2",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-11",
+   "wid": "w01826",
+   "work_en": {
+    "reading": "ナナドナドナド",
+    "romaji": {
+     "macron": "Nanadonadonado",
+     "double": "Nanadonadonado",
+     "plain": "Nanadonadonado"
+    },
+    "en": "Nana, and So On, and So On",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Nana, and So On, and So On"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ウザキウソ",
+    "ruby": [
+     [
+      "宇崎",
+      "うざき"
+     ],
+     [
+      "うそ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Uzakiuso",
+     "double": "Uzakiuso",
+     "plain": "Uzakiuso"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1034523",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00817"
+   }
+  },
+  {
+   "id": "gangan-online:https://www.ganganonline.com/title/38:第92話-2 トイレット・ペーパームーンII",
+   "work": "裏世界ピクニック",
+   "ep": "第92話-2 トイレット・ペーパームーンII",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "platform-stated",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://www.ganganonline.com/title/38",
+   "author": "原作／宮澤伊織(早川書房刊)　作画／水野英多　キャラクター原案／shirakaba",
+   "plat": "ganganonline",
+   "plat_name": "ガンガンONLINE",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
    "access_modes": [
     "free"
    ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
-   "kind_basis": "episode numbered 121",
+   "kind_basis": "episode numbered 92",
    "kind_inferred": true,
-   "preferred": "コミックDAYS",
+   "preferred": "ガンガンONLINE",
    "also_on": [],
    "is_preferred": true,
-   "feed_date": "2026-10-10",
-   "wid": "w00091",
+   "feed_date": "2026-10-11",
+   "wid": "w00013",
    "work_en": {
-    "reading": "エガオ ノ タエナイ ショクバデス。",
+    "reading": "ウラ セカイ ピクニック",
     "ruby": [
      [
-      "笑顔",
-      "えがお"
+      "裏",
+      "うら"
      ],
      [
-      "のたえない",
-      null
+      "世界",
+      "せかい"
      ],
      [
-      "職場",
-      "しょくば"
-     ],
-     [
-      "です。",
+      "ピクニック",
       null
      ]
     ],
     "romaji": {
-     "macron": "Egao no Taenai Shokubadesu.",
-     "double": "Egao no Taenai Shokubadesu.",
-     "plain": "Egao no Taenai Shokubadesu."
+     "macron": "Ura Sekai Pikunikku",
+     "double": "Ura Sekai Pikunikku",
+     "plain": "Ura Sekai Pikunikku"
     },
-    "en": "A Workplace Where the Smiles Never Stop.",
+    "en": "Otherside Picnic",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "Otherside Picnic",
+     "translated": "Picnic in the World Behind"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "Square Enix Manga & Books",
+     "url": "https://squareenixmangaandbooks.square-enix-games.com/en-us/series/otherside-picnic",
+     "kind": "licensor",
+     "reviewed": "2026-08-03"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ミヤザワ イオリ / ミズノ エイタ / shirakaba",
+    "ruby": [
+     [
+      "原作／",
+      null
+     ],
+     [
+      "宮澤",
+      "みやざわ"
+     ],
+     [
+      "伊織",
+      "いおり"
+     ],
+     [
+      "(早川書房刊)　作画／",
+      null
+     ],
+     [
+      "水野",
+      "みずの"
+     ],
+     [
+      "英多",
+      "えいた"
+     ],
+     [
+      "　キャラクター原案／",
+      null
+     ],
+     [
+      "shirakaba",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Miyazawa Iori / Mizuno Eita / shirakaba",
+     "double": "Miyazawa Iori / Mizuno Eita / shirakaba",
+     "plain": "Miyazawa Iori / Mizuno Eita / shirakaba"
+    },
+    "reading_basis": "community-printed",
+    "basis": "romaji",
+    "unverified": true
+   }
+  },
+  {
+   "id": "hanayume-plus:https://hanayume.com/series/ca4ef0eb47ea3:16話",
+   "work": "運命は役に立たない",
+   "ep": "16話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://hanayume.com/series/ca4ef0eb47ea3",
+   "author": "まめ魚",
+   "plat": "hanayume",
+   "plat_name": "花とゆめ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 16",
+   "kind_inferred": true,
+   "preferred": "花とゆめ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-11",
+   "wid": "w00012",
+   "work_en": {
+    "reading": "ウンメイ ワ ヤク ニ タタナイ",
+    "ruby": [
+     [
+      "運命",
+      "うんめい"
+     ],
+     [
+      "は",
+      null
+     ],
+     [
+      "役",
+      "やく"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "立",
+      "た"
+     ],
+     [
+      "たない",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Unmei wa Yaku ni Tatanai",
+     "double": "Unmei wa Yaku ni Tatanai",
+     "plain": "Unmei wa Yaku ni Tatanai"
+    },
+    "en": "Fate Is No Help",
     "basis": "translated",
     "en_forms": {
-     "translated": "A Workplace Where the Smiles Never Stop."
+     "translated": "Fate Is No Help"
+    },
+    "reading_basis": "back-converted",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q138095935",
+     "kind": "community-db"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "マメザカナ",
+    "ruby": [
+     [
+      "まめ",
+      null
+     ],
+     [
+      "魚",
+      "ざかな"
+     ]
+    ],
+    "romaji": {
+     "macron": "Mamezakana",
+     "double": "Mamezakana",
+     "plain": "Mamezakana"
+    },
+    "undivided": true,
+    "en": "Zakana Mame",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I592XXXXXunyakut00111",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00063"
+   }
+  },
+  {
+   "id": "kimicomi:https://kimicomi.com/series/f42014b3e7df6:熟成26",
+   "work": "ワインガールズ",
+   "ep": "熟成26",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://kimicomi.com/series/f42014b3e7df6",
+   "author": "真田一輝",
+   "plat": "kimicomi",
+   "plat_name": "キミコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "キミコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-11",
+   "wid": "w00011",
+   "work_en": {
+    "reading": "ワインガールズ",
+    "romaji": {
+     "macron": "Waingāruzu",
+     "double": "Waingaaruzu",
+     "plain": "Waingaruzu"
+    },
+    "en": "Wine Girls",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Wine Girls"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "サナダ イッキ",
+    "ruby": [
+     [
+      "真田",
+      "さなだ"
+     ],
+     [
+      "一輝",
+      "いっき"
+     ]
+    ],
+    "romaji": {
+     "macron": "Sanada Ikki",
+     "double": "Sanada Ikki",
+     "plain": "Sanada Ikki"
+    },
+    "en": "Ikki Sanada",
+    "basis": "romaji",
+    "reading_basis": "community-printed",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q11583352",
+     "kind": "community-db"
+    },
+    "unverified": true,
+    "id": "c00062"
+   }
+  },
+  {
+   "id": "nicovideo:74657:2026-10-11",
+   "work": "きみは終末",
+   "ep": "第11話 世界がまだ無事な理由①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1161282",
+   "author": "仲谷鳰(著者)",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 11",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 2,
+   "free_episodes": 2,
+   "started": "2025-10-26",
+   "work_level": true,
+   "origin_note": "a work of this title also appears on カドコミ. Whether it is the same run is not established — we hold no chapter list on that side to compare, and a shared title is not evidence of a shared work.",
+   "same_title_elsewhere": "カドコミ",
+   "channel": null,
+   "feed_date": "2026-10-11",
+   "wid": "w02969",
+   "work_en": {
+    "reading": "キミ ワ シュウマツ",
+    "ruby": [
+     [
+      "きみは",
+      null
+     ],
+     [
+      "終末",
+      "しゅうまつ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kimi wa Shūmatsu",
+     "double": "Kimi wa Shuumatsu",
+     "plain": "Kimi wa Shumatsu"
+    },
+    "en": "You Are the End of the World",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "You Are the End of the World"
     },
     "reading_basis": "analyser"
    },
    "author_en": {
-    "reading": "クズシロ",
+    "reading": "ナカタニ ニオ",
+    "ruby": [
+     [
+      "仲谷鳰",
+      "なかたににお"
+     ],
+     [
+      "(著者)",
+      null
+     ]
+    ],
     "romaji": {
-     "macron": "Kuzushiro",
-     "double": "Kuzushiro",
-     "plain": "Kuzushiro"
+     "macron": "Nakatani Nio",
+     "double": "Nakatani Nio",
+     "plain": "Nakatani Nio"
+    },
+    "en": "Nio Nakatani",
+    "basis": "romaji",
+    "reading_basis": "community-printed",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q60627554",
+     "kind": "community-db"
+    },
+    "unverified": true,
+    "id": "c00173"
+   }
+  },
+  {
+   "id": "nicovideo:44519:2026-10-11",
+   "work": "ロボットJSにスキはありません!!",
+   "ep": "ロボ28-5",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1165669",
+   "author": "とりから",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work is attested elsewhere in this database",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 167,
+   "free_episodes": 167,
+   "started": "2019-10-20",
+   "work_level": true,
+   "feed_date": "2026-10-11",
+   "wid": "w01878",
+   "work_en": {
+    "reading": "ロボット JS ニ スキ ワ アリマセン！！",
+    "romaji": {
+     "macron": "Robotto JS ni Suki wa Arimasen!!",
+     "double": "Robotto JS ni Suki wa Arimasen!!",
+     "plain": "Robotto JS ni Suki wa Arimasen!!"
+    },
+    "en": "The Robot Schoolgirl Leaves No Opening!!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Robot Schoolgirl Leaves No Opening!!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トリカラ",
+    "romaji": {
+     "macron": "Torikara",
+     "double": "Torikara",
+     "plain": "Torikara"
     },
     "undivided": true,
-    "en": "Kuzushiro",
     "basis": "romaji",
     "reading_basis": "surface",
-    "id": "c00064"
+    "id": "c01082"
+   }
+  },
+  {
+   "id": "nicovideo:60084:2026-10-11",
+   "work": "ハッピーシュート！",
+   "ep": "第10話の4",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1165672",
+   "author": "とりから",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 10, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 142,
+   "free_episodes": 142,
+   "started": "2022-08-31",
+   "work_level": true,
+   "feed_date": "2026-10-11",
+   "wid": "w02099",
+   "work_en": {
+    "reading": "ハッピーシュート！",
+    "romaji": {
+     "macron": "Happīshūto!",
+     "double": "Happiishuuto!",
+     "plain": "Happishuto!"
+    },
+    "en": "Happy Shoot!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Happy Shoot!"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "トリカラ",
+    "romaji": {
+     "macron": "Torikara",
+     "double": "Torikara",
+     "plain": "Torikara"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01082"
+   }
+  },
+  {
+   "id": "webaction:https://gaugau.futabanet.jp/list/work/EnQ4mmd2IQQHmeBN3H2KsMU5P:無料 第12話(1) E・E・S① 前編",
+   "work": "オカワリいただけただろうか?",
+   "ep": "無料 第12話(1) E・E・S① 前編",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "heuristic",
+   "conf": "low",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://gaugau.futabanet.jp/list/work/EnQ4mmd2IQQHmeBN3H2KsMU5P",
+   "author": "U-temo",
+   "author_basis": "carried from another record of the same work",
+   "plat": "gaugau-futabanet-jp",
+   "plat_name": "webアクション",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 12",
+   "kind_inferred": true,
+   "preferred": "webアクション",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-11",
+   "wid": "w00105",
+   "work_en": {
+    "reading": "オカワリ イタダケタ ダロウカ？",
+    "romaji": {
+     "macron": "Okawari Itadaketa Darōka?",
+     "double": "Okawari Itadaketa Darouka?",
+     "plain": "Okawari Itadaketa Daroka?"
+    },
+    "en": "Would You Like Seconds?",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Would You Like Seconds?"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "ユウテモ",
+    "romaji": {
+     "macron": "Yūtemo",
+     "double": "Yuutemo",
+     "plain": "Yutemo"
+    },
+    "undivided": true,
+    "en": "U-temo",
+    "basis": "stated",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "openBD",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-06",
+     "isbn": "9784758022651"
+    },
+    "id": "c00202"
    }
   },
   {
@@ -88,7 +1455,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-08-21",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -171,86 +1538,6 @@
    }
   },
   {
-   "id": "comic-days:https://comic-days.com/episode/12207421983484134833",
-   "work": "笑顔のたえない職場です。",
-   "ep": "第１２２話　あいさつ教えてください！",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-29",
-   "seen": "2026-10-10",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-days.com/episode/12207421983484134833",
-   "author": "くずしろ",
-   "plat": "comic-days",
-   "plat_name": "コミックDAYS",
-   "ident": "discovery-candidate",
-   "free_from": "2026-09-19",
-   "discovered_on": "2026-10-10",
-   "late_discovered": true,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 122",
-   "kind_inferred": true,
-   "preferred": "コミックDAYS",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-10",
-   "wid": "w00091",
-   "work_en": {
-    "reading": "エガオ ノ タエナイ ショクバデス。",
-    "ruby": [
-     [
-      "笑顔",
-      "えがお"
-     ],
-     [
-      "のたえない",
-      null
-     ],
-     [
-      "職場",
-      "しょくば"
-     ],
-     [
-      "です。",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Egao no Taenai Shokubadesu.",
-     "double": "Egao no Taenai Shokubadesu.",
-     "plain": "Egao no Taenai Shokubadesu."
-    },
-    "en": "A Workplace Where the Smiles Never Stop.",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "A Workplace Where the Smiles Never Stop."
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "クズシロ",
-    "romaji": {
-     "macron": "Kuzushiro",
-     "double": "Kuzushiro",
-     "plain": "Kuzushiro"
-    },
-    "undivided": true,
-    "en": "Kuzushiro",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00064"
-   }
-  },
-  {
    "id": "nicovideo:75450:2026-09-15",
    "work": "なーんもうまくいかん！",
    "ep": "第12話",
@@ -258,7 +1545,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-15",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -318,86 +1605,6 @@
    }
   },
   {
-   "id": "comic-days:https://comic-days.com/episode/12207421983484134836",
-   "work": "笑顔のたえない職場です。",
-   "ep": "第１２３話　懸ける思いは",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-09-19",
-   "seen": "2026-10-10",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-days.com/episode/12207421983484134836",
-   "author": "くずしろ",
-   "plat": "comic-days",
-   "plat_name": "コミックDAYS",
-   "ident": "discovery-candidate",
-   "free_from": "2026-10-10",
-   "discovered_on": "2026-10-10",
-   "late_discovered": true,
-   "access_modes": [
-    "purchase"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 123",
-   "kind_inferred": true,
-   "preferred": "コミックDAYS",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-10",
-   "wid": "w00091",
-   "work_en": {
-    "reading": "エガオ ノ タエナイ ショクバデス。",
-    "ruby": [
-     [
-      "笑顔",
-      "えがお"
-     ],
-     [
-      "のたえない",
-      null
-     ],
-     [
-      "職場",
-      "しょくば"
-     ],
-     [
-      "です。",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Egao no Taenai Shokubadesu.",
-     "double": "Egao no Taenai Shokubadesu.",
-     "plain": "Egao no Taenai Shokubadesu."
-    },
-    "en": "A Workplace Where the Smiles Never Stop.",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "A Workplace Where the Smiles Never Stop."
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "クズシロ",
-    "romaji": {
-     "macron": "Kuzushiro",
-     "double": "Kuzushiro",
-     "plain": "Kuzushiro"
-    },
-    "undivided": true,
-    "en": "Kuzushiro",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00064"
-   }
-  },
-  {
    "id": "tonarinoyj:https://tonarinoyj.jp/episode/12207421984250783481",
    "work": "明日ちゃんのセーラー服",
    "ep": "[第92話] 明日（あけび）ちゃんのセーラー服",
@@ -405,7 +1612,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-25",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -495,7 +1702,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-10",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -508,13 +1715,13 @@
    "ident": "discovery-candidate",
    "free_from": null,
    "access_modes": [
-    "purchase"
+    "free-timed"
    ],
-   "became_free": false,
-   "access_changed": null,
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
    "date_means": "free-from",
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "ahead_n": 1,
    "ahead_ep": "番外編 その2・万里花",
    "ahead_next_free": "2026-10-17",
@@ -588,7 +1795,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-10",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -601,13 +1808,13 @@
    "ident": "discovery-candidate",
    "free_from": null,
    "access_modes": [
-    "purchase"
+    "free-timed"
    ],
-   "became_free": false,
-   "access_changed": null,
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
    "date_means": "free-from",
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "ahead_n": 2,
    "ahead_ep": "１３巻 第１７０話",
    "ahead_next_free": "2026-10-17",
@@ -694,7 +1901,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-10",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -795,7 +2002,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-10",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -809,10 +2016,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 105",
    "kind_inferred": true,
@@ -864,6 +2071,872 @@
     },
     "reading_basis": "stated",
     "basis": "romaji"
+   }
+  },
+  {
+   "id": "comic-days:https://comic-days.com/episode/12207421983484134839",
+   "work": "笑顔のたえない職場です。",
+   "ep": "第１２４話　色んなものが進んで始まって",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-10",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421983484134839",
+   "author": "くずしろ",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "discovery-candidate",
+   "free_from": "2026-10-24",
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 124",
+   "kind_inferred": true,
+   "preferred": "コミックDAYS",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-10",
+   "wid": "w00091",
+   "work_en": {
+    "reading": "エガオ ノ タエナイ ショクバデス。",
+    "ruby": [
+     [
+      "笑顔",
+      "えがお"
+     ],
+     [
+      "のたえない",
+      null
+     ],
+     [
+      "職場",
+      "しょくば"
+     ],
+     [
+      "です。",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Egao no Taenai Shokubadesu.",
+     "double": "Egao no Taenai Shokubadesu.",
+     "plain": "Egao no Taenai Shokubadesu."
+    },
+    "en": "A Workplace Where the Smiles Never Stop.",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Workplace Where the Smiles Never Stop."
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "クズシロ",
+    "romaji": {
+     "macron": "Kuzushiro",
+     "double": "Kuzushiro",
+     "plain": "Kuzushiro"
+    },
+    "undivided": true,
+    "en": "Kuzushiro",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00064"
+   }
+  },
+  {
+   "id": "nicovideo:67095:2026-10-10",
+   "work": "このままモブじゃ終われない!",
+   "ep": "第31話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-10",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1160015",
+   "author": "優しい内臓",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 31",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 5,
+   "free_episodes": 5,
+   "started": "2024-03-09",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on COMIC FUZ, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-10-10",
+   "wid": "w00058",
+   "work_en": {
+    "reading": "コノ ママ モブ ジャ オワレナイ！",
+    "ruby": [
+     [
+      "このままモブじゃ",
+      null
+     ],
+     [
+      "終",
+      "お"
+     ],
+     [
+      "われない！",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kono Mama Mobu Ja Owarenai!",
+     "double": "Kono Mama Mobu Ja Owarenai!",
+     "plain": "Kono Mama Mobu Ja Owarenai!"
+    },
+    "en": "I Won't End Up a Background Character!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "I Won't End Up a Background Character!"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ヤサシイ ナイゾウ",
+    "ruby": [
+     [
+      "優",
+      "やさ"
+     ],
+     [
+      "しい",
+      null
+     ],
+     [
+      "内臓",
+      "ないぞう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Yasashii Naizō",
+     "double": "Yasashii Naizou",
+     "plain": "Yasashii Naizo"
+    },
+    "en": "Yasashii Naizo",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033900175",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00123"
+   }
+  },
+  {
+   "id": "nicovideo:72638:2026-10-10",
+   "work": "子供部屋ドラゴン",
+   "ep": "第17話　ぎゃおと真夏のドラゴン？",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-10",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1160019",
+   "author": "*sow*",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 17, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 4,
+   "free_episodes": 4,
+   "started": "2025-07-12",
+   "work_level": true,
+   "channel": null,
+   "feed_date": "2026-10-10",
+   "wid": "w03233",
+   "work_en": {
+    "reading": "コドモベヤ ドラゴン",
+    "ruby": [
+     [
+      "子供部屋",
+      "こどもべや"
+     ],
+     [
+      "ドラゴン",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kodomobeya Doragon",
+     "double": "Kodomobeya Doragon",
+     "plain": "Kodomobeya Doragon"
+    },
+    "en": "The Dragon in the Kids' Room",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Dragon in the Kids' Room"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "en": "*sow*",
+    "basis": "stated",
+    "id": "c01199"
+   }
+  },
+  {
+   "id": "nicovideo:67557:2026-10-10",
+   "work": "エルフ先生のトイレはどこですか？",
+   "ep": "第25話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-10",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1164168",
+   "author": "中嶋ちずな(著者)",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 25, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 3,
+   "free_episodes": 3,
+   "started": "2024-02-26",
+   "work_level": true,
+   "channel": null,
+   "feed_date": "2026-10-10",
+   "wid": "w02236",
+   "work_en": {
+    "reading": "エルフ センセイ ノ トイレ ワ ドコデス カ？",
+    "ruby": [
+     [
+      "エルフ",
+      null
+     ],
+     [
+      "先生",
+      "せんせい"
+     ],
+     [
+      "のトイレはどこですか？",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Erufu Sensei no Toire wa Dokodesu Ka?",
+     "double": "Erufu Sensei no Toire wa Dokodesu Ka?",
+     "plain": "Erufu Sensei no Toire wa Dokodesu Ka?"
+    },
+    "en": "Where Is the Toilet, Miss Elf?",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Where Is the Toilet, Miss Elf?"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ナカジマ チズナ",
+    "ruby": [
+     [
+      "中嶋",
+      "なかじま"
+     ],
+     [
+      "ちずな",
+      null
+     ],
+     [
+      "(著者)",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Nakajima Chizuna",
+     "double": "Nakajima Chizuna",
+     "plain": "Nakajima Chizuna"
+    },
+    "en": "Chizuna Nakajima",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1060749",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00687"
+   }
+  },
+  {
+   "id": "nicovideo:67976:2026-10-10",
+   "work": "男子高校生だけどギャルにTSしました",
+   "ep": "第29話後編②",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-10",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1164696",
+   "author": "太陽まりい(著者)",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 29",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 26,
+   "free_episodes": 26,
+   "started": "2024-03-23",
+   "work_level": true,
+   "origin_note": "a work of this title also appears on カドコミ. Whether it is the same run is not established — we hold no chapter list on that side to compare, and a shared title is not evidence of a shared work.",
+   "same_title_elsewhere": "カドコミ",
+   "channel": null,
+   "feed_date": "2026-10-10",
+   "wid": "w02301",
+   "work_en": {
+    "reading": "ダンシ コウコウセイダケド ギャル ニ TS シマシタ",
+    "ruby": [
+     [
+      "男子",
+      "だんし"
+     ],
+     [
+      "高校生",
+      "こうこうせい"
+     ],
+     [
+      "だけどギャルにTSしました",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Danshi Kōkōseidakedo Gyaru ni TS Shimashita",
+     "double": "Danshi Koukouseidakedo Gyaru ni TS Shimashita",
+     "plain": "Danshi Kokoseidakedo Gyaru ni TS Shimashita"
+    },
+    "en": "I Was a Schoolboy and I TS'd into a Gyaru",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "I Was a Schoolboy and I TS'd into a Gyaru"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "タイヨウ マリイ",
+    "ruby": [
+     [
+      "太陽",
+      "たいよう"
+     ],
+     [
+      "まりい",
+      null
+     ],
+     [
+      "(著者)",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Taiyō Marii",
+     "double": "Taiyou Marii",
+     "plain": "Taiyo Marii"
+    },
+    "en": "Marii Taiyō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1034211",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00240"
+   }
+  },
+  {
+   "id": "nicovideo:68749:2026-10-10",
+   "work": "はるか咲きそふ、刻どきの",
+   "ep": "第23話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-10",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1160016",
+   "author": "ぴらそん",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 23, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 4,
+   "free_episodes": 4,
+   "started": "2024-09-14",
+   "work_level": true,
+   "channel": null,
+   "feed_date": "2026-10-10",
+   "wid": "w02790",
+   "work_en": {
+    "reading": "ハルカ サキ ソ フ、 コク ドキ ノ",
+    "ruby": [
+     [
+      "はるか",
+      null
+     ],
+     [
+      "咲",
+      "さ"
+     ],
+     [
+      "きそふ、",
+      null
+     ],
+     [
+      "刻",
+      "こく"
+     ],
+     [
+      "どきの",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Haruka Saki So Fu, Koku Doki no",
+     "double": "Haruka Saki So Fu, Koku Doki no",
+     "plain": "Haruka Saki So Fu, Koku Doki no"
+    },
+    "en": "Blooming Far Off, from Hour to Hour",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Blooming Far Off, from Hour to Hour"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ピラソン",
+    "romaji": {
+     "macron": "Pirason",
+     "double": "Pirason",
+     "plain": "Pirason"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01238"
+   }
+  },
+  {
+   "id": "nicovideo:82942:2026-10-10",
+   "work": "ほのぼの呪詛ライフ",
+   "ep": "第15話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-10",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1165606",
+   "author": "ふぁゆ瀬",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 15, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 15,
+   "free_episodes": 15,
+   "started": "2026-06-20",
+   "work_level": true,
+   "feed_date": "2026-10-10",
+   "wid": "w02584",
+   "work_en": {
+    "reading": "ホノボノ ズソ ライフ",
+    "ruby": [
+     [
+      "ほのぼの",
+      null
+     ],
+     [
+      "呪詛",
+      "ずそ"
+     ],
+     [
+      "ライフ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Honobono Zuso Raifu",
+     "double": "Honobono Zuso Raifu",
+     "plain": "Honobono Zuso Raifu"
+    },
+    "en": "A Heartwarming Life of Curses",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Heartwarming Life of Curses"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ファユセ",
+    "ruby": [
+     [
+      "ふぁゆ",
+      null
+     ],
+     [
+      "瀬",
+      "せ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Fayuse",
+     "double": "Fayuse",
+     "plain": "Fayuse"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034452191",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00347"
+   }
+  },
+  {
+   "id": "comic-days:https://comic-days.com/episode/12207421983484134830",
+   "work": "笑顔のたえない職場です。",
+   "ep": "第１２１話　なんて縛りプレイ...",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-15",
+   "seen": "2026-10-10",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421983484134830",
+   "author": "くずしろ",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "discovery-candidate",
+   "free_from": "2026-08-29",
+   "discovered_on": "2026-10-10",
+   "late_discovered": true,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 121",
+   "kind_inferred": true,
+   "preferred": "コミックDAYS",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-10",
+   "wid": "w00091",
+   "work_en": {
+    "reading": "エガオ ノ タエナイ ショクバデス。",
+    "ruby": [
+     [
+      "笑顔",
+      "えがお"
+     ],
+     [
+      "のたえない",
+      null
+     ],
+     [
+      "職場",
+      "しょくば"
+     ],
+     [
+      "です。",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Egao no Taenai Shokubadesu.",
+     "double": "Egao no Taenai Shokubadesu.",
+     "plain": "Egao no Taenai Shokubadesu."
+    },
+    "en": "A Workplace Where the Smiles Never Stop.",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Workplace Where the Smiles Never Stop."
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "クズシロ",
+    "romaji": {
+     "macron": "Kuzushiro",
+     "double": "Kuzushiro",
+     "plain": "Kuzushiro"
+    },
+    "undivided": true,
+    "en": "Kuzushiro",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00064"
+   }
+  },
+  {
+   "id": "comic-days:https://comic-days.com/episode/12207421983484134833",
+   "work": "笑顔のたえない職場です。",
+   "ep": "第１２２話　あいさつ教えてください！",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-29",
+   "seen": "2026-10-10",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421983484134833",
+   "author": "くずしろ",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "discovery-candidate",
+   "free_from": "2026-09-19",
+   "discovered_on": "2026-10-10",
+   "late_discovered": true,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 122",
+   "kind_inferred": true,
+   "preferred": "コミックDAYS",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-10",
+   "wid": "w00091",
+   "work_en": {
+    "reading": "エガオ ノ タエナイ ショクバデス。",
+    "ruby": [
+     [
+      "笑顔",
+      "えがお"
+     ],
+     [
+      "のたえない",
+      null
+     ],
+     [
+      "職場",
+      "しょくば"
+     ],
+     [
+      "です。",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Egao no Taenai Shokubadesu.",
+     "double": "Egao no Taenai Shokubadesu.",
+     "plain": "Egao no Taenai Shokubadesu."
+    },
+    "en": "A Workplace Where the Smiles Never Stop.",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Workplace Where the Smiles Never Stop."
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "クズシロ",
+    "romaji": {
+     "macron": "Kuzushiro",
+     "double": "Kuzushiro",
+     "plain": "Kuzushiro"
+    },
+    "undivided": true,
+    "en": "Kuzushiro",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00064"
+   }
+  },
+  {
+   "id": "comic-days:https://comic-days.com/episode/12207421983484134836",
+   "work": "笑顔のたえない職場です。",
+   "ep": "第１２３話　懸ける思いは",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-19",
+   "seen": "2026-10-10",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421983484134836",
+   "author": "くずしろ",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "discovery-candidate",
+   "free_from": "2026-10-10",
+   "discovered_on": "2026-10-10",
+   "late_discovered": true,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 123",
+   "kind_inferred": true,
+   "preferred": "コミックDAYS",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-10",
+   "wid": "w00091",
+   "work_en": {
+    "reading": "エガオ ノ タエナイ ショクバデス。",
+    "ruby": [
+     [
+      "笑顔",
+      "えがお"
+     ],
+     [
+      "のたえない",
+      null
+     ],
+     [
+      "職場",
+      "しょくば"
+     ],
+     [
+      "です。",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Egao no Taenai Shokubadesu.",
+     "double": "Egao no Taenai Shokubadesu.",
+     "plain": "Egao no Taenai Shokubadesu."
+    },
+    "en": "A Workplace Where the Smiles Never Stop.",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Workplace Where the Smiles Never Stop."
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "クズシロ",
+    "romaji": {
+     "macron": "Kuzushiro",
+     "double": "Kuzushiro",
+     "plain": "Kuzushiro"
+    },
+    "undivided": true,
+    "en": "Kuzushiro",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00064"
    }
   },
   {
@@ -3021,7 +5094,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -3121,7 +5194,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -3197,7 +5270,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4484,7 +6557,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4577,7 +6650,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -4681,7 +6754,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -4774,7 +6847,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4879,7 +6952,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4966,7 +7039,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -5036,7 +7109,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -6702,7 +8775,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6775,7 +8848,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6862,7 +8935,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6950,7 +9023,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7265,7 +9338,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -7358,7 +9431,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7459,7 +9532,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -7520,7 +9593,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -7581,7 +9654,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -7652,7 +9725,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -7731,7 +9804,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -7801,7 +9874,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -7871,7 +9944,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7979,7 +10052,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -8044,7 +10117,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -8124,7 +10197,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -8217,7 +10290,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -8308,7 +10381,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -8853,7 +10926,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-07",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8873,10 +10946,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 2,
+   "ahead_n": 1,
    "ahead_ep": "第38話(2)",
-   "ahead_next_free": "2026-10-12",
-   "ahead_next_ep": "第38話(1)",
+   "ahead_next_free": "2026-10-26",
+   "ahead_next_ep": "第38話(2)",
    "kind": "other",
    "kind_basis": "notice, artwork, trial or announcement",
    "preferred": "COMIC FUZ",
@@ -8943,7 +11016,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-07",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9025,7 +11098,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-07",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9094,7 +11167,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-07",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9190,7 +11263,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-07",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9276,7 +11349,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-07",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9352,7 +11425,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-07",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9435,7 +11508,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-07",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9550,7 +11623,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-28",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -9628,7 +11701,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-28",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -9953,7 +12026,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10269,7 +12342,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10381,7 +12454,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -10472,7 +12545,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10564,7 +12637,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -10670,7 +12743,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -10757,7 +12830,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -10863,7 +12936,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -10940,7 +13013,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -11006,7 +13079,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -11080,7 +13153,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -11189,6 +13262,126 @@
    }
   },
   {
+   "id": "nicovideo:70296:2026-10-06",
+   "work": "不器用ビンボーダンス　３",
+   "ep": "第273話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-06",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1163992",
+   "author": "なをををををを",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 273, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 73,
+   "free_episodes": 73,
+   "started": "2024-10-05",
+   "work_level": true,
+   "feed_date": "2026-10-06",
+   "work_en": {
+    "en": "Clumsy Broke Dance 3",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Clumsy Broke Dance 3"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ナヲヲヲヲヲヲ",
+    "romaji": {
+     "macron": "Naoooooo",
+     "double": "Naoooooo",
+     "plain": "Naoooooo"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00332"
+   }
+  },
+  {
+   "id": "nicovideo:74195:2026-10-06",
+   "work": "ガールズ・スキャット・オーケストラ！",
+   "ep": "第14話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-06",
+   "seen": "2026-10-12",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1159955",
+   "author": "ゐぬゐ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 14, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 6,
+   "free_episodes": 6,
+   "started": "2025-10-07",
+   "work_level": true,
+   "channel": null,
+   "feed_date": "2026-10-06",
+   "wid": "w02959",
+   "work_en": {
+    "reading": "ガールズ・スキャット・オーケストラ！",
+    "romaji": {
+     "macron": "Gāruzu Sukyatto Ōkesutora!",
+     "double": "Gaaruzu Sukyatto Ookesutora!",
+     "plain": "Garuzu Sukyatto Okesutora!"
+    },
+    "en": "Girls Scat Orchestra!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Girls Scat Orchestra!"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ヰヌヰ",
+    "romaji": {
+     "macron": "Inui",
+     "double": "Inui",
+     "plain": "Inui"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00643"
+   }
+  },
+  {
    "id": "nicovideo:67976:2026-10-06",
    "work": "男子高校生だけどギャルにTSしました",
    "ep": "単行本第3巻発売告知",
@@ -11286,126 +13479,6 @@
      "reviewed": "2026-08-06"
     },
     "id": "c00240"
-   }
-  },
-  {
-   "id": "nicovideo:70296:2026-10-06",
-   "work": "不器用ビンボーダンス　３",
-   "ep": "第273話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-06",
-   "seen": "2026-10-10",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1163992",
-   "author": "なをををををを",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 273, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 73,
-   "free_episodes": 73,
-   "started": "2024-10-05",
-   "work_level": true,
-   "feed_date": "2026-10-06",
-   "work_en": {
-    "en": "Clumsy Broke Dance 3",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Clumsy Broke Dance 3"
-    },
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ナヲヲヲヲヲヲ",
-    "romaji": {
-     "macron": "Naoooooo",
-     "double": "Naoooooo",
-     "plain": "Naoooooo"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00332"
-   }
-  },
-  {
-   "id": "nicovideo:74195:2026-10-06",
-   "work": "ガールズ・スキャット・オーケストラ！",
-   "ep": "第14話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-06",
-   "seen": "2026-10-10",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1159955",
-   "author": "ゐぬゐ",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 14, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 6,
-   "free_episodes": 6,
-   "started": "2025-10-07",
-   "work_level": true,
-   "channel": null,
-   "feed_date": "2026-10-06",
-   "wid": "w02959",
-   "work_en": {
-    "reading": "ガールズ・スキャット・オーケストラ！",
-    "romaji": {
-     "macron": "Gāruzu Sukyatto Ōkesutora!",
-     "double": "Gaaruzu Sukyatto Ookesutora!",
-     "plain": "Garuzu Sukyatto Okesutora!"
-    },
-    "en": "Girls Scat Orchestra!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Girls Scat Orchestra!"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "ヰヌヰ",
-    "romaji": {
-     "macron": "Inui",
-     "double": "Inui",
-     "plain": "Inui"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00643"
    }
   },
   {
@@ -11623,7 +13696,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-05",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11643,10 +13716,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 10,
+   "ahead_n": 9,
    "ahead_ep": "５巻 第５６話「彗星エンカウント」",
-   "ahead_next_free": "2026-10-12",
-   "ahead_next_ep": "５巻 第４７話「冥土インヘヴン」",
+   "ahead_next_free": "2026-10-19",
+   "ahead_next_ep": "５巻 第４８話「銀狼フロウ」",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 46",
    "kind_inferred": true,
@@ -12136,7 +14209,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-05",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12150,10 +14223,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 201",
    "kind_inferred": true,
@@ -12209,7 +14282,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-05",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12308,7 +14381,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-05",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -12610,7 +14683,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-04",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12630,10 +14703,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 2,
+   "ahead_n": 1,
    "ahead_ep": "episode7（2）",
-   "ahead_next_free": "2026-10-11",
-   "ahead_next_ep": "episode7（1）",
+   "ahead_next_free": "2026-10-18",
+   "ahead_next_ep": "episode7（2）",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 6",
    "kind_inferred": true,
@@ -12717,7 +14790,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-04",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12737,10 +14810,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 7,
+   "ahead_n": 6,
    "ahead_ep": "２巻 第２４話",
-   "ahead_next_free": "2026-10-11",
-   "ahead_next_ep": "２巻 第１８話",
+   "ahead_next_free": "2026-10-18",
+   "ahead_next_ep": "２巻 第１９話",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 17",
    "kind_inferred": true,
@@ -12818,7 +14891,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-04",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12903,7 +14976,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-04",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12923,10 +14996,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 24,
+   "ahead_n": 23,
    "ahead_ep": "４巻 第１１話",
-   "ahead_next_free": "2026-10-11",
-   "ahead_next_ep": "３巻 第２話",
+   "ahead_next_free": "2026-10-18",
+   "ahead_next_ep": "３巻 第３話",
    "kind": "new-series",
    "kind_basis": "episode numbered 1",
    "kind_inferred": true,
@@ -13181,7 +15254,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-04",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -13195,10 +15268,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "provenance": "attested",
-   "free": true,
+   "free": false,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 92",
    "kind_inferred": true,
@@ -13297,7 +15370,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-04",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13374,7 +15447,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-04",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -13571,7 +15644,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13665,7 +15738,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14291,7 +16364,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -14406,7 +16479,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -14501,7 +16574,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -14585,7 +16658,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -14683,7 +16756,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -14762,7 +16835,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -14858,7 +16931,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -16686,7 +18759,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16762,7 +18835,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17325,7 +19398,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17420,7 +19493,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17591,7 +19664,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -17685,7 +19758,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17786,7 +19859,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17857,7 +19930,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -18263,7 +20336,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-30",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -18341,7 +20414,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-30",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -18739,7 +20812,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18812,7 +20885,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18900,7 +20973,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -19258,7 +21331,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -19375,7 +21448,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -19457,7 +21530,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -19533,7 +21606,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -19822,5 +21895,5 @@
   }
  ],
  "month": "2026-10",
- "generated": "2026-10-10"
+ "generated": "2026-10-12"
 }
