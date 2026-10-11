@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-11T15:39:38+00:00",
+ "generated": "2026-10-11T16:19:13+00:00",
  "since_last": {
-  "at": "2026-10-11T13:32:04+00:00",
+  "at": "2026-10-11T15:39:38+00:00",
   "statistics": {
-   "chapters": 11
+   "chapters": 3
   }
  },
  "means": {
@@ -26,19 +26,19 @@
  },
  "last_run": {
   "at": "2026-10-12",
-  "releases": 1127,
+  "releases": 1129,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3110,
   "assembled": 3111,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 800,
+   "discovery-candidate": 802,
    "known-work-match": 30,
    "platform-genre": 297
   },
   "collapsed": {
-   "duplicate_chapters": 219,
+   "duplicate_chapters": 215,
    "resolver": 56,
    "samples": 13,
    "thin_sitemap": 7
@@ -768,7 +768,7 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 61,
+    "budget": 62,
     "value": 62
    },
    {
@@ -786,8 +786,8 @@
    {
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
-    "budget": 3,
-    "value": 4
+    "budget": 2,
+    "value": 2
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -903,20 +903,6 @@
    "drop": null
   },
   {
-   "source": "kadokomi",
-   "files": 5,
-   "works": 983,
-   "rows": 7699,
-   "retrieved": "2026-10-10",
-   "age_days": 2,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 7027,
-   "well_formed": 6717,
-   "malformed": 310,
-   "drop": null
-  },
-  {
    "source": "comicfuz",
    "files": 2,
    "works": 130,
@@ -942,6 +928,20 @@
    "checked_rows": 7861,
    "well_formed": 7861,
    "malformed": 0,
+   "drop": null
+  },
+  {
+   "source": "kadokomi",
+   "files": 5,
+   "works": 983,
+   "rows": 7702,
+   "retrieved": "2026-10-12",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 7030,
+   "well_formed": 6722,
+   "malformed": 308,
    "drop": null
   },
   {
@@ -989,7 +989,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-09T18:59:18+00:00",
+  "previous_at": "2026-10-11T15:38:32+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1096,10 +1096,10 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 61,
+    "incomplete attested rows": 62,
     "works without English": 0,
     "volume rows with no publication date": 2436,
-    "predicted updates already behind the run": 3,
+    "predicted updates already behind the run": 2,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
    }
@@ -1112,8 +1112,8 @@
    "oneshot": 462,
    "dormant": 303,
    "completed": 298,
-   "active": 265,
-   "slow": 80,
+   "active": 267,
+   "slow": 78,
    "unknown": 57
   },
   "english_basis": {
@@ -1126,7 +1126,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3110,
-  "chapters": 29377,
+  "chapters": 29380,
   "delivery_dated": 1034
  }
 }

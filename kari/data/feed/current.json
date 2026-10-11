@@ -487,8 +487,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -798,8 +798,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -856,6 +856,91 @@
      "reviewed": "2026-08-06"
     },
     "id": "c00817"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0071130001400011_E",
+   "work": "きみは終末",
+   "ep": "第11話 世界がまだ無事な理由①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_007113_S/episodes/KC_0071130001400011_E",
+   "series_url": "https://comic-walker.com/detail/KC_007113_S",
+   "author": "仲谷鳰",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 11",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [
+    "ニコニコ漫画"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-11",
+   "wid": "w02969",
+   "work_en": {
+    "reading": "キミ ワ シュウマツ",
+    "ruby": [
+     [
+      "きみは",
+      null
+     ],
+     [
+      "終末",
+      "しゅうまつ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kimi wa Shūmatsu",
+     "double": "Kimi wa Shuumatsu",
+     "plain": "Kimi wa Shumatsu"
+    },
+    "en": "You Are the End of the World",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "You Are the End of the World"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ナカタニ ニオ",
+    "ruby": [
+     [
+      "仲谷鳰",
+      "なかたににお"
+     ]
+    ],
+    "romaji": {
+     "macron": "Nakatani Nio",
+     "double": "Nakatani Nio",
+     "plain": "Nakatani Nio"
+    },
+    "en": "Nio Nakatani",
+    "basis": "romaji",
+    "reading_basis": "community-printed",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q60627554",
+     "kind": "community-db"
+    },
+    "unverified": true,
+    "id": "c00173"
    }
   },
   {
@@ -1159,98 +1244,6 @@
     },
     "unverified": true,
     "id": "c00062"
-   }
-  },
-  {
-   "id": "nicovideo:74657:2026-10-11",
-   "work": "きみは終末",
-   "ep": "第11話 世界がまだ無事な理由①",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-11",
-   "seen": "2026-10-12",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1161282",
-   "author": "仲谷鳰(著者)",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 11",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 2,
-   "free_episodes": 2,
-   "started": "2025-10-26",
-   "work_level": true,
-   "origin_note": "a work of this title also appears on カドコミ. Whether it is the same run is not established — we hold no chapter list on that side to compare, and a shared title is not evidence of a shared work.",
-   "same_title_elsewhere": "カドコミ",
-   "channel": null,
-   "feed_date": "2026-10-11",
-   "wid": "w02969",
-   "work_en": {
-    "reading": "キミ ワ シュウマツ",
-    "ruby": [
-     [
-      "きみは",
-      null
-     ],
-     [
-      "終末",
-      "しゅうまつ"
-     ]
-    ],
-    "romaji": {
-     "macron": "Kimi wa Shūmatsu",
-     "double": "Kimi wa Shuumatsu",
-     "plain": "Kimi wa Shumatsu"
-    },
-    "en": "You Are the End of the World",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "You Are the End of the World"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "ナカタニ ニオ",
-    "ruby": [
-     [
-      "仲谷鳰",
-      "なかたににお"
-     ],
-     [
-      "(著者)",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Nakatani Nio",
-     "double": "Nakatani Nio",
-     "plain": "Nakatani Nio"
-    },
-    "en": "Nio Nakatani",
-    "basis": "romaji",
-    "reading_basis": "community-printed",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q60627554",
-     "kind": "community-db"
-    },
-    "unverified": true,
-    "id": "c00173"
    }
   },
   {
@@ -1717,8 +1710,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -1810,8 +1803,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -1891,6 +1884,194 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00001"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0053770002600011_E",
+   "work": "エルフ先生のトイレはどこですか？",
+   "ep": "第25話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-10",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_005377_S/episodes/KC_0053770002600011_E",
+   "series_url": "https://comic-walker.com/detail/KC_005377_S",
+   "author": "中嶋ちずな",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 25",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [
+    "ニコニコ漫画"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-10",
+   "wid": "w02236",
+   "work_en": {
+    "reading": "エルフ センセイ ノ トイレ ワ ドコデス カ？",
+    "ruby": [
+     [
+      "エルフ",
+      null
+     ],
+     [
+      "先生",
+      "せんせい"
+     ],
+     [
+      "のトイレはどこですか？",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Erufu Sensei no Toire wa Dokodesu Ka?",
+     "double": "Erufu Sensei no Toire wa Dokodesu Ka?",
+     "plain": "Erufu Sensei no Toire wa Dokodesu Ka?"
+    },
+    "en": "Where Is the Toilet, Miss Elf?",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Where Is the Toilet, Miss Elf?"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ナカジマ チズナ",
+    "ruby": [
+     [
+      "中嶋",
+      "なかじま"
+     ],
+     [
+      "ちずな",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Nakajima Chizuna",
+     "double": "Nakajima Chizuna",
+     "plain": "Nakajima Chizuna"
+    },
+    "en": "Chizuna Nakajima",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1060749",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00687"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0054470003900031_E",
+   "work": "男子高校生だけどギャルにTSしました",
+   "ep": "第29話後編②",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-10",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_005447_S/episodes/KC_0054470003900031_E",
+   "series_url": "https://comic-walker.com/detail/KC_005447_S",
+   "author": "太陽まりい",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 29",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [
+    "ニコニコ漫画"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-10",
+   "wid": "w02301",
+   "work_en": {
+    "reading": "ダンシ コウコウセイダケド ギャル ニ TS シマシタ",
+    "ruby": [
+     [
+      "男子",
+      "だんし"
+     ],
+     [
+      "高校生",
+      "こうこうせい"
+     ],
+     [
+      "だけどギャルにTSしました",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Danshi Kōkōseidakedo Gyaru ni TS Shimashita",
+     "double": "Danshi Koukouseidakedo Gyaru ni TS Shimashita",
+     "plain": "Danshi Kokoseidakedo Gyaru ni TS Shimashita"
+    },
+    "en": "I Was a Schoolboy and I TS'd into a Gyaru",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "I Was a Schoolboy and I TS'd into a Gyaru"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "タイヨウ マリイ",
+    "ruby": [
+     [
+      "太陽",
+      "たいよう"
+     ],
+     [
+      "まりい",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Taiyō Marii",
+     "double": "Taiyou Marii",
+     "plain": "Taiyo Marii"
+    },
+    "en": "Marii Taiyō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1034211",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00240"
    }
   },
   {
@@ -2318,206 +2499,6 @@
     "en": "*sow*",
     "basis": "stated",
     "id": "c01199"
-   }
-  },
-  {
-   "id": "nicovideo:67557:2026-10-10",
-   "work": "エルフ先生のトイレはどこですか？",
-   "ep": "第25話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-10",
-   "seen": "2026-10-12",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1164168",
-   "author": "中嶋ちずな(著者)",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 25, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 3,
-   "free_episodes": 3,
-   "started": "2024-02-26",
-   "work_level": true,
-   "channel": null,
-   "feed_date": "2026-10-10",
-   "wid": "w02236",
-   "work_en": {
-    "reading": "エルフ センセイ ノ トイレ ワ ドコデス カ？",
-    "ruby": [
-     [
-      "エルフ",
-      null
-     ],
-     [
-      "先生",
-      "せんせい"
-     ],
-     [
-      "のトイレはどこですか？",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Erufu Sensei no Toire wa Dokodesu Ka?",
-     "double": "Erufu Sensei no Toire wa Dokodesu Ka?",
-     "plain": "Erufu Sensei no Toire wa Dokodesu Ka?"
-    },
-    "en": "Where Is the Toilet, Miss Elf?",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Where Is the Toilet, Miss Elf?"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ナカジマ チズナ",
-    "ruby": [
-     [
-      "中嶋",
-      "なかじま"
-     ],
-     [
-      "ちずな",
-      null
-     ],
-     [
-      "(著者)",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Nakajima Chizuna",
-     "double": "Nakajima Chizuna",
-     "plain": "Nakajima Chizuna"
-    },
-    "en": "Chizuna Nakajima",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "MADB",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1060749",
-     "kind": "national-library",
-     "reviewed": "2026-08-06"
-    },
-    "id": "c00687"
-   }
-  },
-  {
-   "id": "nicovideo:67976:2026-10-10",
-   "work": "男子高校生だけどギャルにTSしました",
-   "ep": "第29話後編②",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-10",
-   "seen": "2026-10-12",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1164696",
-   "author": "太陽まりい(著者)",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 29",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 26,
-   "free_episodes": 26,
-   "started": "2024-03-23",
-   "work_level": true,
-   "origin_note": "a work of this title also appears on カドコミ. Whether it is the same run is not established — we hold no chapter list on that side to compare, and a shared title is not evidence of a shared work.",
-   "same_title_elsewhere": "カドコミ",
-   "channel": null,
-   "feed_date": "2026-10-10",
-   "wid": "w02301",
-   "work_en": {
-    "reading": "ダンシ コウコウセイダケド ギャル ニ TS シマシタ",
-    "ruby": [
-     [
-      "男子",
-      "だんし"
-     ],
-     [
-      "高校生",
-      "こうこうせい"
-     ],
-     [
-      "だけどギャルにTSしました",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Danshi Kōkōseidakedo Gyaru ni TS Shimashita",
-     "double": "Danshi Koukouseidakedo Gyaru ni TS Shimashita",
-     "plain": "Danshi Kokoseidakedo Gyaru ni TS Shimashita"
-    },
-    "en": "I Was a Schoolboy and I TS'd into a Gyaru",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "I Was a Schoolboy and I TS'd into a Gyaru"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "タイヨウ マリイ",
-    "ruby": [
-     [
-      "太陽",
-      "たいよう"
-     ],
-     [
-      "まりい",
-      null
-     ],
-     [
-      "(著者)",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Taiyō Marii",
-     "double": "Taiyou Marii",
-     "plain": "Taiyo Marii"
-    },
-    "en": "Marii Taiyō",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "MADB",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1034211",
-     "kind": "national-library",
-     "reviewed": "2026-08-06"
-    },
-    "id": "c00240"
    }
   },
   {
@@ -3485,7 +3466,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -3577,7 +3558,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -3673,7 +3654,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -3808,7 +3789,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -3928,7 +3909,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4049,7 +4030,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4124,7 +4105,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4186,7 +4167,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4300,7 +4281,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4366,7 +4347,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4446,7 +4427,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4587,7 +4568,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-09",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5974,7 +5955,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6094,7 +6075,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-08",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8612,7 +8593,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8741,7 +8722,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-06",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8817,6 +8798,97 @@
     "reading_basis": "surface",
     "basis": "romaji",
     "unverified": true
+   }
+  },
+  {
+   "id": "kadokomi:KC_0054470004000011_E",
+   "work": "男子高校生だけどギャルにTSしました",
+   "ep": "単行本第3巻発売告知",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-06",
+   "seen": "2026-10-12",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_005447_S/episodes/KC_0054470004000011_E",
+   "series_url": "https://comic-walker.com/detail/KC_005447_S",
+   "author": "太陽まりい",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "other",
+   "kind_basis": "notice, artwork, trial or announcement",
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-06",
+   "wid": "w02301",
+   "work_en": {
+    "reading": "ダンシ コウコウセイダケド ギャル ニ TS シマシタ",
+    "ruby": [
+     [
+      "男子",
+      "だんし"
+     ],
+     [
+      "高校生",
+      "こうこうせい"
+     ],
+     [
+      "だけどギャルにTSしました",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Danshi Kōkōseidakedo Gyaru ni TS Shimashita",
+     "double": "Danshi Koukouseidakedo Gyaru ni TS Shimashita",
+     "plain": "Danshi Kokoseidakedo Gyaru ni TS Shimashita"
+    },
+    "en": "I Was a Schoolboy and I TS'd into a Gyaru",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "I Was a Schoolboy and I TS'd into a Gyaru"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "タイヨウ マリイ",
+    "ruby": [
+     [
+      "太陽",
+      "たいよう"
+     ],
+     [
+      "まりい",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Taiyō Marii",
+     "double": "Taiyou Marii",
+     "plain": "Taiyo Marii"
+    },
+    "en": "Marii Taiyō",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1034211",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00240"
    }
   },
   {
@@ -9967,7 +10039,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-05",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10072,7 +10144,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-05",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10126,7 +10198,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-05",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10220,7 +10292,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-05",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10306,7 +10378,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-05",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11030,7 +11102,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-04",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11148,7 +11220,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-04",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11732,7 +11804,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11820,7 +11892,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11896,7 +11968,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11957,7 +12029,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12073,7 +12145,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12165,7 +12237,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-03",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13497,7 +13569,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13570,7 +13642,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13689,7 +13761,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13755,7 +13827,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13852,7 +13924,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15336,7 +15408,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15412,7 +15484,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15476,7 +15548,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15540,7 +15612,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-01",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16059,7 +16131,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-30",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16134,7 +16206,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-30",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17222,7 +17294,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-29",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17350,7 +17422,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-29",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17480,7 +17552,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-29",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17585,7 +17657,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-29",
-   "seen": "2026-10-10",
+   "seen": "2026-10-12",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
