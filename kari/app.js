@@ -3106,6 +3106,22 @@ function renderWorkPage() {
     // last title on the page still stuck in one script under 併記.
     fact(T('収録', 'Part of'), bilingual(() => floorHtml(esc(workTextOf(r.collection)))));
   }
+  /* WORKS THIS ONE IS RELATED TO AND NOT MERGED WITH. A short version and its serialisation are
+     two works, ruled by the owner on 2026-10-11, and they often share a title: 怨霊日和's
+     【読み切り版】 and its serialisation are both 怨霊日和. So the line says which way the relation
+     runs and gives the other work's length and dates, or it reads as a link to this page. The
+     registry's reason for the relation is not drawn: it is English alone, for a person checking. */
+  for (const rel of (r.related || [])) {
+    const label = rel.order === 'precedes' ? T('その後の版', 'Continued as')
+      : rel.order === 'follows' ? T('前の版', 'Earlier version') : T('関連作品', 'Related work');
+    const span = [rel.first, rel.latest].filter(Boolean).map(d => fmtDate(d, { year: true }));
+    const when = span.length ? (span[0] === span[span.length - 1] ? span[0] : `${span[0]} – ${span[span.length - 1]}`) : '';
+    const len = rel.chapters ? T(`${rel.chapters}話`, `${rel.chapters} chapter${rel.chapters === 1 ? '' : 's'}`) : '';
+    const sub = [len, when].filter(Boolean).join(', ');
+    fact(label, `<a class="wlink" href="${esc(BASE)}work/${esc(rel.id)}/">${
+      bilingual(() => workLabel(rel))}</a>${
+      sub ? `<span class="wf-sub">${esc(sub)}</span>` : ''}`);
+  }
 
 
   /* THE PAGE IS THE WORK, SO THE WORK NEEDS NO HEADING. What follows it does: a reader has to be
