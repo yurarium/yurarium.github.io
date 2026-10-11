@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-11T16:19:13+00:00",
+ "generated": "2026-10-11T17:09:42+00:00",
  "since_last": {
-  "at": "2026-10-11T15:39:38+00:00",
+  "at": "2026-10-11T16:19:13+00:00",
   "statistics": {
-   "chapters": 3
+   "chapters": -37
   }
  },
  "means": {
@@ -26,14 +26,14 @@
  },
  "last_run": {
   "at": "2026-10-12",
-  "releases": 1129,
+  "releases": 1135,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3110,
   "assembled": 3111,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 802,
+   "discovery-candidate": 808,
    "known-work-match": 30,
    "platform-genre": 297
   },
@@ -787,7 +787,7 @@
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
     "budget": 2,
-    "value": 2
+    "value": 1
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -975,21 +975,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 588,
-   "rows": 8213,
+   "works": 589,
+   "rows": 8219,
    "retrieved": "2026-10-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8162,
-   "well_formed": 8162,
+   "checked_rows": 8168,
+   "well_formed": 8168,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-11T15:38:32+00:00",
+  "previous_at": "2026-10-11T16:18:16+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1109,16 +1109,16 @@
   "works": 3110,
   "states": {
    "print": 1645,
-   "oneshot": 462,
+   "oneshot": 461,
    "dormant": 303,
    "completed": 298,
-   "active": 267,
-   "slow": 78,
+   "active": 269,
+   "slow": 77,
    "unknown": 57
   },
   "english_basis": {
-   "translated": 2743,
-   "official-jp": 233,
+   "translated": 2742,
+   "official-jp": 234,
    "licensed": 110,
    "romaji": 24
   },
@@ -1126,7 +1126,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3110,
-  "chapters": 29380,
+  "chapters": 29343,
   "delivery_dated": 1034
  }
 }
