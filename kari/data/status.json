@@ -1,11 +1,9 @@
 {
- "generated": "2026-10-11T18:29:06+00:00",
+ "generated": "2026-10-12T15:51:37+00:00",
  "since_last": {
-  "at": "2026-10-11T17:45:15+00:00",
+  "at": "2026-10-11T18:29:06+00:00",
   "statistics": {
-   "works": 2,
-   "with_identifier": 2,
-   "chapters": 2
+   "chapters": 6
   }
  },
  "means": {
@@ -27,8 +25,8 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-12",
-  "releases": 1135,
+  "at": "2026-10-13",
+  "releases": 1136,
   "works": 2574,
   "platforms": 23,
   "series_rows": 3114,
@@ -37,10 +35,10 @@
   "identification": {
    "discovery-candidate": 808,
    "known-work-match": 30,
-   "platform-genre": 297
+   "platform-genre": 298
   },
   "collapsed": {
-   "duplicate_chapters": 221,
+   "duplicate_chapters": 224,
    "resolver": 56,
    "samples": 13,
    "thin_sitemap": 7
@@ -771,7 +769,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 62,
-    "value": 62
+    "value": 63
    },
    {
     "name": "works without English",
@@ -812,7 +810,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 71,
+   "age_days": 72,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -826,7 +824,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 68,
+   "age_days": 69,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -840,7 +838,7 @@
    "works": 9,
    "rows": 9,
    "retrieved": "2026-08-05",
-   "age_days": 68,
+   "age_days": 69,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -854,7 +852,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 67,
+   "age_days": 68,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -868,7 +866,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 66,
+   "age_days": 67,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -882,7 +880,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 66,
+   "age_days": 67,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -896,7 +894,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 65,
+   "age_days": 66,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -909,7 +907,7 @@
    "files": 2,
    "works": 130,
    "rows": 6289,
-   "retrieved": "2026-10-12",
+   "retrieved": "2026-10-13",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -921,14 +919,14 @@
   {
    "source": "gigaviewer",
    "files": 72,
-   "works": 953,
-   "rows": 8200,
-   "retrieved": "2026-10-12",
+   "works": 956,
+   "rows": 8204,
+   "retrieved": "2026-10-13",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7861,
-   "well_formed": 7861,
+   "checked_rows": 7862,
+   "well_formed": 7862,
    "malformed": 0,
    "drop": null
   },
@@ -936,13 +934,13 @@
    "source": "kadokomi",
    "files": 5,
    "works": 983,
-   "rows": 7702,
-   "retrieved": "2026-10-12",
+   "rows": 7705,
+   "retrieved": "2026-10-13",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7030,
-   "well_formed": 6722,
+   "checked_rows": 7033,
+   "well_formed": 6725,
    "malformed": 308,
    "drop": null
   },
@@ -951,7 +949,7 @@
    "files": 3,
    "works": 1339,
    "rows": 11519,
-   "retrieved": "2026-10-12",
+   "retrieved": "2026-10-13",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -965,7 +963,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-12",
+   "retrieved": "2026-10-13",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -978,20 +976,20 @@
    "source": "webpages",
    "files": 48,
    "works": 590,
-   "rows": 8225,
-   "retrieved": "2026-10-12",
+   "rows": 8228,
+   "retrieved": "2026-10-13",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8174,
-   "well_formed": 8174,
+   "checked_rows": 8177,
+   "well_formed": 8177,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-11T17:44:09+00:00",
+  "previous_at": "2026-10-11T18:28:01+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1111,12 +1109,12 @@
   "works": 3114,
   "states": {
    "print": 1645,
-   "oneshot": 464,
+   "oneshot": 463,
    "dormant": 303,
    "completed": 299,
-   "active": 269,
-   "slow": 77,
-   "unknown": 57
+   "active": 267,
+   "slow": 79,
+   "unknown": 58
   },
   "english_basis": {
    "translated": 2746,
@@ -1128,7 +1126,7 @@
   "print_only": 1645,
   "volumes": 6105,
   "with_identifier": 3114,
-  "chapters": 29350,
+  "chapters": 29356,
   "delivery_dated": 1034
  }
 }
