@@ -1,6 +1,85 @@
 {
  "releases": [
   {
+   "id": "comic-boost:https://comic-boost.com/content/00010001:第82話",
+   "work": "このはな綺譚",
+   "ep": "第82話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-25",
+   "seen": "2026-10-13",
+   "basis": "stated",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-boost.com/content/00010001",
+   "author": "天乃咲哉",
+   "author_basis": "carried from another record of the same work",
+   "plat": "comic-boost",
+   "plat_name": "comicブースト",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-10-14",
+   "late_discovered": true,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 82, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "comicブースト",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w01491",
+   "work_en": {
+    "reading": "コノ ハナ キタン",
+    "ruby": [
+     [
+      "このはな",
+      null
+     ],
+     [
+      "綺譚",
+      "きたん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kono Hana Kitan",
+     "double": "Kono Hana Kitan",
+     "plain": "Kono Hana Kitan"
+    },
+    "en": "The Konohana Chronicle",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Konohana Chronicle"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "アマノサクヤ",
+    "ruby": [
+     [
+      "天乃咲哉",
+      "あまのさくや"
+     ]
+    ],
+    "romaji": {
+     "macron": "Amanosakuya",
+     "double": "Amanosakuya",
+     "plain": "Amanosakuya"
+    },
+    "undivided": true,
+    "en": "Sakuya Amano",
+    "basis": "romaji",
+    "reading_basis": "researched",
+    "id": "c00384"
+   }
+  },
+  {
    "id": "comicdays:episode:12207421983566481761",
    "work": "サタノファニ",
    "ep": "第３４２話　「逸した洞察」",
@@ -25,7 +104,9 @@
    "kind_basis": "episode numbered 342",
    "kind_inferred": true,
    "preferred": "コミックDAYS",
-   "also_on": [],
+   "also_on": [
+    "ヤンマガWeb"
+   ],
    "is_preferred": true,
    "feed_date": "2026-10-14",
    "wid": "w00054",
@@ -73,6 +154,440 @@
     },
     "unverified": true,
     "id": "c00115"
+   }
+  },
+  {
+   "id": "comicfuz:79676",
+   "work": "好都合セミフレンド",
+   "ep": "第４２話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/79676",
+   "series_url": "https://comic-fuz.com/manga/3397",
+   "author": "千種みのり",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "became_free": false,
+   "access_changed": null,
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": false,
+   "ahead_n": 1,
+   "ahead_ep": "第４３話",
+   "ahead_next_free": "2026-11-11",
+   "ahead_next_ep": "第４３話",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 42",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00202",
+   "work_en": {
+    "reading": "コウツゴウ セミフレンド",
+    "ruby": [
+     [
+      "好都合",
+      "こうつごう"
+     ],
+     [
+      "セミフレンド",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōtsugō Semifurendo",
+     "double": "Koutsugou Semifurendo",
+     "plain": "Kotsugo Semifurendo"
+    },
+    "en": "Convenient Semi-Friend",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Convenient Semi-Friend"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "チグサ ミノリ",
+    "ruby": [
+     [
+      "千種",
+      "ちぐさ"
+     ],
+     [
+      "みのり",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Chigusa Minori",
+     "double": "Chigusa Minori",
+     "plain": "Chigusa Minori"
+    },
+    "en": "Minori Chigusa",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034681747",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00286"
+   }
+  },
+  {
+   "id": "comicfuz:80962",
+   "work": "花唄メモワール",
+   "ep": "第三十六唄(1)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/80962",
+   "series_url": "https://comic-fuz.com/manga/3274",
+   "author": "一ノ瀬けい",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "became_free": false,
+   "access_changed": null,
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": false,
+   "ahead_n": 1,
+   "ahead_ep": "第三十六唄(2)",
+   "ahead_next_free": "2026-10-28",
+   "ahead_next_ep": "第三十六唄(2)",
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w02150",
+   "work_en": {
+    "reading": "ハナ ウタ メモワール",
+    "ruby": [
+     [
+      "花",
+      "はな"
+     ],
+     [
+      "唄",
+      "うた"
+     ],
+     [
+      "メモワール",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hana Uta Memowāru",
+     "double": "Hana Uta Memowaaru",
+     "plain": "Hana Uta Memowaru"
+    },
+    "en": "Flower Song Memoir",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Flower Song Memoir"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "イチノセ ケイ",
+    "ruby": [
+     [
+      "一",
+      "いち"
+     ],
+     [
+      "ノ",
+      null
+     ],
+     [
+      "瀬",
+      "せ"
+     ],
+     [
+      "けい",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Ichinose Kei",
+     "double": "Ichinose Kei",
+     "plain": "Ichinose Kei"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1036644",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00215"
+   }
+  },
+  {
+   "id": "raicomi:https://comicride.jp/series/7b86cbca64ebe:第38話後編①",
+   "work": "「お前ごときが魔王に勝てると思うな」と勇者パーティを追放されたので、王都で気ままに暮らしたい",
+   "ep": "第38話後編①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comicride.jp/series/7b86cbca64ebe",
+   "author": "南方純,kiki,キンタ",
+   "plat": "comicride",
+   "plat_name": "ライコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 38",
+   "kind_inferred": true,
+   "preferred": "ライコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00048",
+   "work_en": {
+    "reading": "「オマエゴトキガ マオウ ニ カテル ト オモウ ナ」 ト ユウシャ パーティ ヲ ツイホウ サレタ ノデ、 オウト デ キママニ クラシタイ",
+    "ruby": [
+     [
+      "「お",
+      null
+     ],
+     [
+      "前",
+      "まえ"
+     ],
+     [
+      "ごときが",
+      null
+     ],
+     [
+      "魔王",
+      "まおう"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "勝",
+      "か"
+     ],
+     [
+      "てると",
+      null
+     ],
+     [
+      "思",
+      "おも"
+     ],
+     [
+      "うな」と",
+      null
+     ],
+     [
+      "勇者",
+      "ゆうしゃ"
+     ],
+     [
+      "パーティを",
+      null
+     ],
+     [
+      "追放",
+      "ついほう"
+     ],
+     [
+      "されたので、",
+      null
+     ],
+     [
+      "王都",
+      "おうと"
+     ],
+     [
+      "で",
+      null
+     ],
+     [
+      "気",
+      "き"
+     ],
+     [
+      "ままに",
+      null
+     ],
+     [
+      "暮",
+      "く"
+     ],
+     [
+      "らしたい",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "“Omaegotokiga Maō ni Kateru to Omō Na” to Yūsha Pāti o Tsuihō Sareta Node, Ōto de Kimamani Kurashitai",
+     "double": "“Omaegotokiga Maou ni Kateru to Omou Na” to Yuusha Paati o Tsuihou Sareta Node, Outo de Kimamani Kurashitai",
+     "plain": "“Omaegotokiga Mao ni Kateru to Omo Na” to Yusha Pati o Tsuiho Sareta Node, Oto de Kimamani Kurashitai"
+    },
+    "en": "They Threw Me Out of the Hero's Party Saying Someone Like Me Could Never Beat the Demon Lord, So Now I'd Like to Take It Easy in the Capital",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "They Threw Me Out of the Hero's Party Saying Someone Like Me Could Never Beat the Demon Lord, So Now I'd Like to Take It Easy in the Capital"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ミナカタ スナオ, kiki, キンタ",
+    "ruby": [
+     [
+      "南方純",
+      "みなかたすなお"
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "kiki",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "キンタ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Minakata Sunao, kiki, Kinta",
+     "double": "Minakata Sunao, kiki, Kinta",
+     "plain": "Minakata Sunao, kiki, Kinta"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "kimicomi:https://kimicomi.com/series/397963f4f9cfd:第九話",
+   "work": "暗殺組合の山田さん",
+   "ep": "第九話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://kimicomi.com/series/397963f4f9cfd",
+   "author": "BLZ",
+   "plat": "kimicomi",
+   "plat_name": "キミコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 9",
+   "kind_inferred": true,
+   "preferred": "キミコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w03262",
+   "work_en": {
+    "reading": "アンサツ クミアイ ノ ヤマダサン",
+    "ruby": [
+     [
+      "暗殺",
+      "あんさつ"
+     ],
+     [
+      "組合",
+      "くみあい"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "山田",
+      "やまだ"
+     ],
+     [
+      "さん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Ansatsu Kumiai no Yamadasan",
+     "double": "Ansatsu Kumiai no Yamadasan",
+     "plain": "Ansatsu Kumiai no Yamadasan"
+    },
+    "en": "Yamada of the Assassins' Union",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Yamada of the Assassins' Union"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "en": "BLZ",
+    "basis": "stated"
    }
   },
   {
@@ -395,7 +910,9 @@
    "kind_basis": "episode numbered 12",
    "kind_inferred": true,
    "preferred": "チャンピオンクロス",
-   "also_on": [],
+   "also_on": [
+    "ヤングチャンピオン"
+   ],
    "is_preferred": true,
    "feed_date": "2026-10-14",
    "wid": "w00177",
@@ -540,6 +1057,805 @@
    }
   },
   {
+   "id": "young-champion:https://youngchampion.jp/series/90af950945671:第41話②",
+   "work": "限界OLさんは悪役令嬢さまに仕えたい",
+   "ep": "第41話②",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://youngchampion.jp/series/90af950945671",
+   "author": "ネコ太郎",
+   "plat": "youngchampion",
+   "plat_name": "ヤングチャンピオン",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 41",
+   "kind_inferred": true,
+   "preferred": "ヤングチャンピオン",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00201",
+   "work_en": {
+    "reading": "ゲンカイ OLサン ワ アクヤク レイジョウサマ ニ ツカエタイ",
+    "ruby": [
+     [
+      "限界",
+      "げんかい"
+     ],
+     [
+      "OLさんは",
+      null
+     ],
+     [
+      "悪役",
+      "あくやく"
+     ],
+     [
+      "令嬢",
+      "れいじょう"
+     ],
+     [
+      "さまに",
+      null
+     ],
+     [
+      "仕",
+      "つか"
+     ],
+     [
+      "えたい",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Genkai OLsan wa Akuyaku Reijōsama ni Tsukaetai",
+     "double": "Genkai OLsan wa Akuyaku Reijousama ni Tsukaetai",
+     "plain": "Genkai OLsan wa Akuyaku Reijosama ni Tsukaetai"
+    },
+    "en": "The Fed-Up Office Lady Wants to Serve the Villainess",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "The Fed-Up Office Lady Wants to Serve the Villainess",
+     "translated": "The Burned-Out Office Worker Wants to Serve the Villainess"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "sevenseasentertainment.com",
+     "url": "https://sevenseasentertainment.com/series/the-fed-up-office-lady-wants-to-serve-the-villainess/",
+     "kind": "licensor",
+     "reviewed": "2026-08-05"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ネコタロウ",
+    "ruby": [
+     [
+      "ネコ",
+      null
+     ],
+     [
+      "太郎",
+      "たろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Nekotarō",
+     "double": "Nekotarou",
+     "plain": "Nekotaro"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034681755",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00313"
+   }
+  },
+  {
+   "id": "shonenjumpplus:https://shonenjumpplus.com/episode/9253191257203124653",
+   "work": "魔法少女201",
+   "ep": "[第53話]魔法少女201",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://shonenjumpplus.com/episode/9253191257203124653",
+   "author": "むちゃ",
+   "plat": "shonenjumpplus",
+   "plat_name": "少年ジャンプ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 53",
+   "kind_inferred": true,
+   "preferred": "少年ジャンプ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00716",
+   "work_en": {
+    "reading": "マホウ ショウジョ 201",
+    "ruby": [
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "少女",
+      "しょうじょ"
+     ],
+     [
+      "201",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mahō Shōjo 201",
+     "double": "Mahou Shoujo 201",
+     "plain": "Maho Shojo 201"
+    },
+    "en": "Magical Girl 201",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Magical Girl 201"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ムチャ",
+    "romaji": {
+     "macron": "Mucha",
+     "double": "Mucha",
+     "plain": "Mucha"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00828"
+   }
+  },
+  {
+   "id": "shonenjumpplus:https://shonenjumpplus.com/episode/9253191257203124640",
+   "work": "魔法少女201",
+   "ep": "[第52話]魔法少女201",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://shonenjumpplus.com/episode/9253191257203124640",
+   "author": "むちゃ",
+   "plat": "shonenjumpplus",
+   "plat_name": "少年ジャンプ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 52",
+   "kind_inferred": true,
+   "preferred": "少年ジャンプ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00716",
+   "work_en": {
+    "reading": "マホウ ショウジョ 201",
+    "ruby": [
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "少女",
+      "しょうじょ"
+     ],
+     [
+      "201",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mahō Shōjo 201",
+     "double": "Mahou Shoujo 201",
+     "plain": "Maho Shojo 201"
+    },
+    "en": "Magical Girl 201",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Magical Girl 201"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ムチャ",
+    "romaji": {
+     "macron": "Mucha",
+     "double": "Mucha",
+     "plain": "Mucha"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00828"
+   }
+  },
+  {
+   "id": "shonenjumpplus:https://shonenjumpplus.com/episode/9253191257203124620",
+   "work": "魔法少女201",
+   "ep": "[第51話]魔法少女201",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://shonenjumpplus.com/episode/9253191257203124620",
+   "author": "むちゃ",
+   "plat": "shonenjumpplus",
+   "plat_name": "少年ジャンプ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 51",
+   "kind_inferred": true,
+   "preferred": "少年ジャンプ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00716",
+   "work_en": {
+    "reading": "マホウ ショウジョ 201",
+    "ruby": [
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "少女",
+      "しょうじょ"
+     ],
+     [
+      "201",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mahō Shōjo 201",
+     "double": "Mahou Shoujo 201",
+     "plain": "Maho Shojo 201"
+    },
+    "en": "Magical Girl 201",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Magical Girl 201"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ムチャ",
+    "romaji": {
+     "macron": "Mucha",
+     "double": "Mucha",
+     "plain": "Mucha"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00828"
+   }
+  },
+  {
+   "id": "shonenjumpplus:https://shonenjumpplus.com/episode/9253191257203124606",
+   "work": "魔法少女201",
+   "ep": "[第50話]魔法少女201",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://shonenjumpplus.com/episode/9253191257203124606",
+   "author": "むちゃ",
+   "plat": "shonenjumpplus",
+   "plat_name": "少年ジャンプ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 50",
+   "kind_inferred": true,
+   "preferred": "少年ジャンプ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00716",
+   "work_en": {
+    "reading": "マホウ ショウジョ 201",
+    "ruby": [
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "少女",
+      "しょうじょ"
+     ],
+     [
+      "201",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mahō Shōjo 201",
+     "double": "Mahou Shoujo 201",
+     "plain": "Maho Shojo 201"
+    },
+    "en": "Magical Girl 201",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Magical Girl 201"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ムチャ",
+    "romaji": {
+     "macron": "Mucha",
+     "double": "Mucha",
+     "plain": "Mucha"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00828"
+   }
+  },
+  {
+   "id": "shonenjumpplus:https://shonenjumpplus.com/episode/9253191257203124586",
+   "work": "魔法少女201",
+   "ep": "[第49話]魔法少女201",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://shonenjumpplus.com/episode/9253191257203124586",
+   "author": "むちゃ",
+   "plat": "shonenjumpplus",
+   "plat_name": "少年ジャンプ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 49",
+   "kind_inferred": true,
+   "preferred": "少年ジャンプ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00716",
+   "work_en": {
+    "reading": "マホウ ショウジョ 201",
+    "ruby": [
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "少女",
+      "しょうじょ"
+     ],
+     [
+      "201",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mahō Shōjo 201",
+     "double": "Mahou Shoujo 201",
+     "plain": "Maho Shojo 201"
+    },
+    "en": "Magical Girl 201",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Magical Girl 201"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ムチャ",
+    "romaji": {
+     "macron": "Mucha",
+     "double": "Mucha",
+     "plain": "Mucha"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00828"
+   }
+  },
+  {
+   "id": "shonenjumpplus:https://shonenjumpplus.com/episode/9253191257203124566",
+   "work": "魔法少女201",
+   "ep": "[第48話]魔法少女201",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://shonenjumpplus.com/episode/9253191257203124566",
+   "author": "むちゃ",
+   "plat": "shonenjumpplus",
+   "plat_name": "少年ジャンプ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 48",
+   "kind_inferred": true,
+   "preferred": "少年ジャンプ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00716",
+   "work_en": {
+    "reading": "マホウ ショウジョ 201",
+    "ruby": [
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "少女",
+      "しょうじょ"
+     ],
+     [
+      "201",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mahō Shōjo 201",
+     "double": "Mahou Shoujo 201",
+     "plain": "Maho Shojo 201"
+    },
+    "en": "Magical Girl 201",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Magical Girl 201"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ムチャ",
+    "romaji": {
+     "macron": "Mucha",
+     "double": "Mucha",
+     "plain": "Mucha"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00828"
+   }
+  },
+  {
+   "id": "shonenjumpplus:https://shonenjumpplus.com/episode/9253191257203124552",
+   "work": "魔法少女201",
+   "ep": "[第47話]魔法少女201",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://shonenjumpplus.com/episode/9253191257203124552",
+   "author": "むちゃ",
+   "plat": "shonenjumpplus",
+   "plat_name": "少年ジャンプ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 47",
+   "kind_inferred": true,
+   "preferred": "少年ジャンプ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00716",
+   "work_en": {
+    "reading": "マホウ ショウジョ 201",
+    "ruby": [
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "少女",
+      "しょうじょ"
+     ],
+     [
+      "201",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mahō Shōjo 201",
+     "double": "Mahou Shoujo 201",
+     "plain": "Maho Shojo 201"
+    },
+    "en": "Magical Girl 201",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Magical Girl 201"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ムチャ",
+    "romaji": {
+     "macron": "Mucha",
+     "double": "Mucha",
+     "plain": "Mucha"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00828"
+   }
+  },
+  {
+   "id": "shonenjumpplus:https://shonenjumpplus.com/episode/9253191257203124537",
+   "work": "魔法少女201",
+   "ep": "[第46話]魔法少女201",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://shonenjumpplus.com/episode/9253191257203124537",
+   "author": "むちゃ",
+   "plat": "shonenjumpplus",
+   "plat_name": "少年ジャンプ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 46",
+   "kind_inferred": true,
+   "preferred": "少年ジャンプ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00716",
+   "work_en": {
+    "reading": "マホウ ショウジョ 201",
+    "ruby": [
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "少女",
+      "しょうじょ"
+     ],
+     [
+      "201",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mahō Shōjo 201",
+     "double": "Mahou Shoujo 201",
+     "plain": "Maho Shojo 201"
+    },
+    "en": "Magical Girl 201",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Magical Girl 201"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ムチャ",
+    "romaji": {
+     "macron": "Mucha",
+     "double": "Mucha",
+     "plain": "Mucha"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00828"
+   }
+  },
+  {
+   "id": "shonenjumpplus:https://shonenjumpplus.com/episode/9253191257203124518",
+   "work": "魔法少女201",
+   "ep": "[第45話]魔法少女201",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-14",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://shonenjumpplus.com/episode/9253191257203124518",
+   "author": "むちゃ",
+   "plat": "shonenjumpplus",
+   "plat_name": "少年ジャンプ+",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 45",
+   "kind_inferred": true,
+   "preferred": "少年ジャンプ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-14",
+   "wid": "w00716",
+   "work_en": {
+    "reading": "マホウ ショウジョ 201",
+    "ruby": [
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "少女",
+      "しょうじょ"
+     ],
+     [
+      "201",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mahō Shōjo 201",
+     "double": "Mahou Shoujo 201",
+     "plain": "Maho Shojo 201"
+    },
+    "en": "Magical Girl 201",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Magical Girl 201"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ムチャ",
+    "romaji": {
+     "macron": "Mucha",
+     "double": "Mucha",
+     "plain": "Mucha"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00828"
+   }
+  },
+  {
    "id": "magcomi:episode:12207421984355613624",
    "work": "忍者アシスタントとアナログ漫画家",
    "ep": "特別読切",
@@ -569,6 +1885,7 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-10-13",
+   "wid": "w03315",
    "work_en": {
     "reading": "ニンジャ アシスタント ト アナログ マンガカ",
     "ruby": [
@@ -590,8 +1907,12 @@
      "double": "Ninja Ashisutanto to Anarogu Mangaka",
      "plain": "Ninja Ashisutanto to Anarogu Mangaka"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser"
+    "en": "The Ninja Assistant and the Analog Manga Artist",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Ninja Assistant and the Analog Manga Artist"
+    },
+    "reading_basis": "researched"
    },
    "author_en": {
     "reading": "オトハシリタ",
@@ -756,13 +2077,13 @@
    "ident": "discovery-candidate",
    "free_from": null,
    "access_modes": [
-    "purchase"
+    "free-timed"
    ],
-   "became_free": false,
-   "access_changed": null,
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
    "date_means": "free-from",
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "ahead_n": 1,
    "ahead_ep": "第32皿(2)",
    "ahead_next_free": "2026-10-27",
@@ -833,13 +2154,13 @@
    "ident": "discovery-candidate",
    "free_from": null,
    "access_modes": [
-    "purchase"
+    "free-timed"
    ],
-   "became_free": false,
-   "access_changed": null,
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
    "date_means": "free-from",
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "ahead_n": 1,
    "ahead_ep": "第15話（2）",
    "ahead_next_free": "2026-10-27",
@@ -1545,6 +2866,553 @@
    }
   },
   {
+   "id": "kadokomi:KC_0064310001400021_E",
+   "work": "ホームセンターごと呼び出された私の大迷宮リノベーション！",
+   "ep": "第10話後編",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_006431_S/episodes/KC_0064310001400021_E",
+   "series_url": "https://comic-walker.com/detail/KC_006431_S",
+   "author": "ばたっち, 星崎崑, 志田",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 10",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-13",
+   "wid": "w00061",
+   "work_en": {
+    "reading": "ホームセンターゴト ヨビダサレタ ワタシ ノ ダイ メイキュウ リノベーション！",
+    "ruby": [
+     [
+      "ホームセンターごと",
+      null
+     ],
+     [
+      "呼",
+      "よ"
+     ],
+     [
+      "び",
+      null
+     ],
+     [
+      "出",
+      "だ"
+     ],
+     [
+      "された",
+      null
+     ],
+     [
+      "私",
+      "わたし"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "大",
+      "だい"
+     ],
+     [
+      "迷宮",
+      "めいきゅう"
+     ],
+     [
+      "リノベーション！",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hōmusentāgoto Yobidasareta Watashi no Dai Meikyū Rinobēshon!",
+     "double": "Hoomusentaagoto Yobidasareta Watashi no Dai Meikyuu Rinobeeshon!",
+     "plain": "Homusentagoto Yobidasareta Watashi no Dai Meikyu Rinobeshon!"
+    },
+    "en": "Summoned Along with My Hardware Store: My Great Labyrinth Renovation!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Summoned Along with My Hardware Store: My Great Labyrinth Renovation!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "バタッチ, ホシザキ コン, サネダ",
+    "ruby": [
+     [
+      "ばたっち",
+      null
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "星崎",
+      "ほしざき"
+     ],
+     [
+      "崑",
+      "こん"
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "志田",
+      "さねだ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Batatchi, Hoshizaki Kon, Saneda",
+     "double": "Batatchi, Hoshizaki Kon, Saneda",
+     "plain": "Batatchi, Hoshizaki Kon, Saneda"
+    },
+    "reading_basis": "surface",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0119280000700011_E",
+   "work": "あたし達って付き合ってるよね!?",
+   "ep": "第6話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_011928_S/episodes/KC_0119280000700011_E",
+   "series_url": "https://comic-walker.com/detail/KC_011928_S",
+   "author": "涼風そら",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 6",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-13",
+   "wid": "w00087",
+   "work_en": {
+    "reading": "アタシタチ ッテ ツキアッテル ヨ ネ ! ?",
+    "ruby": [
+     [
+      "あたし",
+      null
+     ],
+     [
+      "達",
+      "たち"
+     ],
+     [
+      "って",
+      null
+     ],
+     [
+      "付",
+      "つ"
+     ],
+     [
+      "き",
+      null
+     ],
+     [
+      "合",
+      "あ"
+     ],
+     [
+      "ってるよね!?",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Atashitachi Tte Tsukiatteru Yo Ne ! ?",
+     "double": "Atashitachi Tte Tsukiatteru Yo Ne ! ?",
+     "plain": "Atashitachi Tte Tsukiatteru Yo Ne ! ?"
+    },
+    "en": "WE ARE DATING, RIGHT!?",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "WE ARE DATING, RIGHT!?",
+     "translated": "We're Going Out, Aren't We?!"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "series-art",
+     "url": "https://cdn.comic-walker.com/integration/cdpf/resources/011928/99fa1075-a222-48c0-9827-a28d61c5a311.jpg",
+     "kind": "platform",
+     "reviewed": "2026-08-05"
+    }
+   },
+   "author_en": {
+    "reading": "スズカゼ ソラ",
+    "ruby": [
+     [
+      "涼風",
+      "すずかぜ"
+     ],
+     [
+      "そら",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Suzukaze Sora",
+     "double": "Suzukaze Sora",
+     "plain": "Suzukaze Sora"
+    },
+    "en": "SUZUKAZE Sora",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I06A0000000000961495H",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00168"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0194750000500011_E",
+   "work": "姉妹傭兵",
+   "ep": "第4話①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_019475_S/episodes/KC_0194750000500011_E",
+   "series_url": "https://comic-walker.com/detail/KC_019475_S",
+   "author": "坂南加, 三河ごーすと, kappe",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 4",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-13",
+   "wid": "w00133",
+   "work_en": {
+    "reading": "シマイ ヨウヘイ",
+    "ruby": [
+     [
+      "姉妹",
+      "しまい"
+     ],
+     [
+      "傭兵",
+      "ようへい"
+     ]
+    ],
+    "romaji": {
+     "macron": "Shimai Yōhei",
+     "double": "Shimai Youhei",
+     "plain": "Shimai Yohei"
+    },
+    "en": "MERCENARY SISTERS",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "MERCENARY SISTERS",
+     "translated": "Sister Mercenaries"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "カドコミ",
+     "url": "https://comic-walker.com/detail/KC_019475_S",
+     "kind": "platform",
+     "reviewed": "2026-08-10"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "サカミナミカ, ミカワ ゴースト, kappe",
+    "ruby": [
+     [
+      "坂南加",
+      null
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "三河",
+      "みかわ"
+     ],
+     [
+      "ごーすと",
+      null
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "kappe",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Sakaminamika, Mikawa Gōsuto, kappe",
+     "double": "Sakaminamika, Mikawa Goosuto, kappe",
+     "plain": "Sakaminamika, Mikawa Gosuto, kappe"
+    },
+    "reading_basis": "analyser",
+    "basis": "romaji",
+    "unverified": true
+   }
+  },
+  {
+   "id": "kadokomi:KC_0196580000600011_E",
+   "work": "ハウリング・ブレイズ　葬焔の剣士と不死の魔女",
+   "ep": "第5話①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_019658_S/episodes/KC_0196580000600011_E",
+   "series_url": "https://comic-walker.com/detail/KC_019658_S",
+   "author": "koko, 志瑞祐, 遠坂あさぎ",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 5",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-13",
+   "wid": "w00182",
+   "work_en": {
+    "reading": "ハウリング・ ブレイズ 　 ソウエン ノ ケンシ ト フシ ノ マジョ",
+    "ruby": [
+     [
+      "ハウリング・ブレイズ　",
+      null
+     ],
+     [
+      "葬焔",
+      "そうえん"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "剣士",
+      "けんし"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "不死",
+      "ふし"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "魔女",
+      "まじょ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Hauringu Bureizu Sōen no Kenshi to Fushi no Majo",
+     "double": "Hauringu Bureizu Souen no Kenshi to Fushi no Majo",
+     "plain": "Hauringu Bureizu Soen no Kenshi to Fushi no Majo"
+    },
+    "en": "Howling Blaze: The Cremation-Flame Swordswoman and the Undying Witch",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Howling Blaze: The Cremation-Flame Swordswoman and the Undying Witch"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "koko, シミズ ユウ, トオサカ アサギ",
+    "ruby": [
+     [
+      "koko",
+      null
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "志瑞祐",
+      "しみずゆう"
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "遠坂",
+      "とおさか"
+     ],
+     [
+      "あさぎ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "koko, Shimizu Yū, Tōsaka Asagi",
+     "double": "koko, Shimizu Yuu, Toosaka Asagi",
+     "plain": "koko, Shimizu Yu, Tosaka Asagi"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji",
+    "unverified": true
+   }
+  },
+  {
+   "id": "kadokomi:KC_0006960032900011_E",
+   "work": "女子高生の無駄づかい",
+   "ep": "第150話　じゅんばん",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_000696_S/episodes/KC_0006960032900011_E",
+   "series_url": "https://comic-walker.com/detail/KC_000696_S",
+   "author": "ビーノ",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 150",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [
+    "ニコニコ漫画"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-13",
+   "wid": "w02518",
+   "work_en": {
+    "reading": "ジョシコウセイ ノ ムダヅカイ",
+    "ruby": [
+     [
+      "女子高生",
+      "じょしこうせい"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "無駄",
+      "むだ"
+     ],
+     [
+      "づかい",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Joshikōsei no Mudazukai",
+     "double": "Joshikousei no Mudazukai",
+     "plain": "Joshikosei no Mudazukai"
+    },
+    "en": "The Wasteful Days of High School Girls",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Wasteful Days of High School Girls"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ビーノ",
+    "romaji": {
+     "macron": "Bīno",
+     "double": "Biino",
+     "plain": "Bino"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00116"
+   }
+  },
+  {
    "id": "gangan-online:https://www.ganganonline.com/title/2349:第11話-2",
    "work": "限界社会人さんを救えるのはクソデカ感情ストーカーちゃんだけでした",
    "ep": "第11話-2",
@@ -1634,206 +3502,6 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c00343"
-   }
-  },
-  {
-   "id": "comic-gardo:https://comic-gardo.com/episode/2550912966011803878:第13話「フィアナ、拉致される」(1)",
-   "work": "病弱少女、転生して健康な肉体（最強）を手に入れる　～友達が欲しくて魔境から旅立ったのですが、どうやら私の魔法は少しおかしいようです！？～",
-   "ep": "第13話「フィアナ、拉致される」(1)",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-13",
-   "seen": "2026-10-14",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-gardo.com/episode/2550912966011803878",
-   "author": "あらた伊里/アトハ/狐印",
-   "plat": "remaining",
-   "plat_name": "コミックガルド",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "purchase"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 13",
-   "kind_inferred": true,
-   "preferred": "コミックガルド",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-13",
-   "wid": "w00059",
-   "work_en": {
-    "reading": "ビョウジャク ショウジョ、 テンセイ シテ ケンコウナ ニクタイ （サイキョウ） ヲ テ ニ イレル 　 ～ トモダチ ガ ホシクテ マキョウ カラ タビダッタ ノデスガ、 ドウ ヤラ ワタシ ノ マホウ ワ スコシ オカシイ ヨウデス！？ ～",
-    "ruby": [
-     [
-      "病弱少女",
-      "びょうじゃくしょうじょ"
-     ],
-     [
-      "、",
-      null
-     ],
-     [
-      "転生",
-      "てんせい"
-     ],
-     [
-      "して",
-      null
-     ],
-     [
-      "健康",
-      "けんこう"
-     ],
-     [
-      "な",
-      null
-     ],
-     [
-      "肉体",
-      "にくたい"
-     ],
-     [
-      "（",
-      null
-     ],
-     [
-      "最強",
-      "さいきょう"
-     ],
-     [
-      "）を",
-      null
-     ],
-     [
-      "手",
-      "て"
-     ],
-     [
-      "に",
-      null
-     ],
-     [
-      "入",
-      "い"
-     ],
-     [
-      "れる　～",
-      null
-     ],
-     [
-      "友達",
-      "ともだち"
-     ],
-     [
-      "が",
-      null
-     ],
-     [
-      "欲",
-      "ほ"
-     ],
-     [
-      "しくて",
-      null
-     ],
-     [
-      "魔境",
-      "まきょう"
-     ],
-     [
-      "から",
-      null
-     ],
-     [
-      "旅立",
-      "たびだ"
-     ],
-     [
-      "ったのですが、どうやら",
-      null
-     ],
-     [
-      "私",
-      "わたし"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "魔法",
-      "まほう"
-     ],
-     [
-      "は",
-      null
-     ],
-     [
-      "少",
-      "すこ"
-     ],
-     [
-      "しおかしいようです！？～",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Byōjaku Shōjo, Tensei Shite Kenkōna Nikutai (Saikyō) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyō kara Tabidatta Nodesuga, Dō Yara Watashi no Mahō wa Sukoshi Okashii Yōdesu!? ~",
-     "double": "Byoujaku Shoujo, Tensei Shite Kenkouna Nikutai (Saikyou) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyou kara Tabidatta Nodesuga, Dou Yara Watashi no Mahou wa Sukoshi Okashii Youdesu!? ~",
-     "plain": "Byojaku Shojo, Tensei Shite Kenkona Nikutai (Saikyo) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyo kara Tabidatta Nodesuga, Do Yara Watashi no Maho wa Sukoshi Okashii Yodesu!? ~"
-    },
-    "en": "A Sickly Girl Reincarnates and Gets a Healthy (Overpowered) Body ~I Left the Demon Wilds Because I Wanted Friends, but It Seems My Magic Is a Little Strange!?~",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "A Sickly Girl Reincarnates and Gets a Healthy (Overpowered) Body ~I Left the Demon Wilds Because I Wanted Friends, but It Seems My Magic Is a Little Strange!?~"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "アラタ イリ / アトハ / コイン",
-    "ruby": [
-     [
-      "あらた",
-      null
-     ],
-     [
-      "伊里",
-      "いり"
-     ],
-     [
-      "/",
-      null
-     ],
-     [
-      "アトハ",
-      null
-     ],
-     [
-      "/",
-      null
-     ],
-     [
-      "狐印",
-      "こいん"
-     ]
-    ],
-    "romaji": {
-     "macron": "Arata Iri / Atoha / Koin",
-     "double": "Arata Iri / Atoha / Koin",
-     "plain": "Arata Iri / Atoha / Koin"
-    },
-    "reading_basis": "community-printed",
-    "basis": "romaji",
-    "unverified": true
    }
   },
   {
@@ -2113,6 +3781,659 @@
    }
   },
   {
+   "id": "comic-gardo:https://comic-gardo.com/episode/12207421984350401600",
+   "work": "病弱少女、転生して健康な肉体（最強）を手に入れる　～友達が欲しくて魔境から旅立ったのですが、どうやら私の魔法は少しおかしいようです！？～",
+   "ep": "第13話「フィアナ、拉致される」(1)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-gardo.com/episode/12207421984350401600",
+   "author": "あらた伊里/アトハ/狐印",
+   "plat": "comic-gardo",
+   "plat_name": "コミックガルド",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 13",
+   "kind_inferred": true,
+   "preferred": "コミックガルド",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-13",
+   "wid": "w00059",
+   "work_en": {
+    "reading": "ビョウジャク ショウジョ、 テンセイ シテ ケンコウナ ニクタイ （サイキョウ） ヲ テ ニ イレル 　 ～ トモダチ ガ ホシクテ マキョウ カラ タビダッタ ノデスガ、 ドウ ヤラ ワタシ ノ マホウ ワ スコシ オカシイ ヨウデス！？ ～",
+    "ruby": [
+     [
+      "病弱少女",
+      "びょうじゃくしょうじょ"
+     ],
+     [
+      "、",
+      null
+     ],
+     [
+      "転生",
+      "てんせい"
+     ],
+     [
+      "して",
+      null
+     ],
+     [
+      "健康",
+      "けんこう"
+     ],
+     [
+      "な",
+      null
+     ],
+     [
+      "肉体",
+      "にくたい"
+     ],
+     [
+      "（",
+      null
+     ],
+     [
+      "最強",
+      "さいきょう"
+     ],
+     [
+      "）を",
+      null
+     ],
+     [
+      "手",
+      "て"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "入",
+      "い"
+     ],
+     [
+      "れる　～",
+      null
+     ],
+     [
+      "友達",
+      "ともだち"
+     ],
+     [
+      "が",
+      null
+     ],
+     [
+      "欲",
+      "ほ"
+     ],
+     [
+      "しくて",
+      null
+     ],
+     [
+      "魔境",
+      "まきょう"
+     ],
+     [
+      "から",
+      null
+     ],
+     [
+      "旅立",
+      "たびだ"
+     ],
+     [
+      "ったのですが、どうやら",
+      null
+     ],
+     [
+      "私",
+      "わたし"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "は",
+      null
+     ],
+     [
+      "少",
+      "すこ"
+     ],
+     [
+      "しおかしいようです！？～",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Byōjaku Shōjo, Tensei Shite Kenkōna Nikutai (Saikyō) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyō kara Tabidatta Nodesuga, Dō Yara Watashi no Mahō wa Sukoshi Okashii Yōdesu!? ~",
+     "double": "Byoujaku Shoujo, Tensei Shite Kenkouna Nikutai (Saikyou) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyou kara Tabidatta Nodesuga, Dou Yara Watashi no Mahou wa Sukoshi Okashii Youdesu!? ~",
+     "plain": "Byojaku Shojo, Tensei Shite Kenkona Nikutai (Saikyo) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyo kara Tabidatta Nodesuga, Do Yara Watashi no Maho wa Sukoshi Okashii Yodesu!? ~"
+    },
+    "en": "A Sickly Girl Reincarnates and Gets a Healthy (Overpowered) Body ~I Left the Demon Wilds Because I Wanted Friends, but It Seems My Magic Is a Little Strange!?~",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Sickly Girl Reincarnates and Gets a Healthy (Overpowered) Body ~I Left the Demon Wilds Because I Wanted Friends, but It Seems My Magic Is a Little Strange!?~"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "アラタ イリ / アトハ / コイン",
+    "ruby": [
+     [
+      "あらた",
+      null
+     ],
+     [
+      "伊里",
+      "いり"
+     ],
+     [
+      "/",
+      null
+     ],
+     [
+      "アトハ",
+      null
+     ],
+     [
+      "/",
+      null
+     ],
+     [
+      "狐印",
+      "こいん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Arata Iri / Atoha / Koin",
+     "double": "Arata Iri / Atoha / Koin",
+     "plain": "Arata Iri / Atoha / Koin"
+    },
+    "reading_basis": "community-printed",
+    "basis": "romaji",
+    "unverified": true
+   }
+  },
+  {
+   "id": "nicovideo:53991:2026-10-13",
+   "work": "ばっどがーる",
+   "ep": "図書委員長の理想と現実",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1165392",
+   "author": "肉丸",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 45,
+   "free_episodes": 45,
+   "started": "2021-07-27",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on COMIC FUZ, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-10-13",
+   "wid": "w00194",
+   "work_en": {
+    "reading": "バッドガール",
+    "romaji": {
+     "macron": "Baddogāru",
+     "double": "Baddogaaru",
+     "plain": "Baddogaru"
+    },
+    "translation_refused": "ばっどがーる is the English bad girl written in kana and the licensor prints Bad Girl, so ours differs only in the capitals.",
+    "en": "Bad Girl",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "Bad Girl"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "yenpress.com",
+     "url": "https://yenpress.com/series/bad-girl",
+     "kind": "licensor",
+     "reviewed": "2026-08-06"
+    }
+   },
+   "author_en": {
+    "reading": "ニクマル",
+    "ruby": [
+     [
+      "肉丸",
+      "にくまる"
+     ]
+    ],
+    "romaji": {
+     "macron": "Nikumaru",
+     "double": "Nikumaru",
+     "plain": "Nikumaru"
+    },
+    "undivided": true,
+    "en": "Nikumaru",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I032637695",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00305"
+   }
+  },
+  {
+   "id": "nicovideo:56286:2026-10-13",
+   "work": "彩純ちゃんはレズ風俗に興味があります！",
+   "ep": "33夜目",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1163943",
+   "author": "伊月クロ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 33",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 4,
+   "free_episodes": 4,
+   "started": "2021-12-09",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on 一迅プラス, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-10-13",
+   "wid": "w00243",
+   "work_en": {
+    "reading": "アスミチャン ワ レズ フウゾク ニ キョウミ ガ アリマス！",
+    "ruby": [
+     [
+      "彩純",
+      "あすみ"
+     ],
+     [
+      "ちゃんはレズ",
+      null
+     ],
+     [
+      "風俗",
+      "ふうぞく"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "興味",
+      "きょうみ"
+     ],
+     [
+      "があります！",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Asumichan wa Rezu Fūzoku ni Kyōmi ga Arimasu!",
+     "double": "Asumichan wa Rezu Fuuzoku ni Kyoumi ga Arimasu!",
+     "plain": "Asumichan wa Rezu Fuzoku ni Kyomi ga Arimasu!"
+    },
+    "en": "Asumi-chan is Interested in Lesbian Brothels!",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "Asumi-chan is Interested in Lesbian Brothels!",
+     "translated": "Asumi Is Interested in Lesbian Sex Work!"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "sevenseasentertainment.com",
+     "url": "https://sevenseasentertainment.com/series/asumi-chan-is-interested-in-lesbian-brothels/",
+     "kind": "licensor",
+     "reviewed": "2026-08-05"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "イツキ クロ",
+    "ruby": [
+     [
+      "伊月",
+      "いつき"
+     ],
+     [
+      "クロ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Itsuki Kuro",
+     "double": "Itsuki Kuro",
+     "plain": "Itsuki Kuro"
+    },
+    "en": "Kuro Itsuki",
+    "basis": "romaji",
+    "reading_basis": "community-printed",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q114298643",
+     "kind": "community-db"
+    },
+    "unverified": true,
+    "id": "c00355"
+   }
+  },
+  {
+   "id": "nicovideo:22768:2026-10-13",
+   "work": "球詠",
+   "ep": "第120球：手を下すかもしれない(前編)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1119481",
+   "author": "マウンテンプクイチ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 120",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 5,
+   "free_episodes": 5,
+   "started": "2016-08-13",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on COMIC FUZ, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-10-13",
+   "wid": "w00026",
+   "work_en": {
+    "reading": "タマヨミ",
+    "ruby": [
+     [
+      "球詠",
+      "たまよみ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tamayomi",
+     "double": "Tamayomi",
+     "plain": "Tamayomi"
+    },
+    "translation_refused": "Reads as ball and song, and is also the two leads' names, 山崎珠姫 and 武田詠深. Either rendering discards the other, which is why the entry's own note settled on the romanisation.",
+    "en": "Tamayomi",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "comic-fuz",
+     "url": "https://comic-fuz.com/manga/441",
+     "kind": "platform",
+     "reviewed": "2026-08-03"
+    }
+   },
+   "author_en": {
+    "reading": "マウンテン プクイチ",
+    "romaji": {
+     "macron": "Maunten Pukuichi",
+     "double": "Maunten Pukuichi",
+     "plain": "Maunten Pukuichi"
+    },
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00080"
+   }
+  },
+  {
+   "id": "nicovideo:65853:2026-10-13",
+   "work": "陰キャギャルでもイキがりたい！",
+   "ep": "第27話　文化祭前の夜の学校の特別感はきっと写真には写らない",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1163937",
+   "author": "かしわぎつきこ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 27",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 3,
+   "free_episodes": 3,
+   "started": "2023-10-12",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on pixivコミック, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-10-13",
+   "wid": "w00244",
+   "work_en": {
+    "reading": "インキャ ギャル デモ イキガリタイ",
+    "ruby": [
+     [
+      "陰",
+      "いん"
+     ],
+     [
+      "キャギャルでもイキがりたい！",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Inkya Gyaru Demo Ikigaritai",
+     "double": "Inkya Gyaru Demo Ikigaritai",
+     "plain": "Inkya Gyaru Demo Ikigaritai"
+    },
+    "en": "Even an Introverted Gal Wants to Act Tough!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Even an Introverted Gal Wants to Act Tough!"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "カシワギ ツキコ",
+    "romaji": {
+     "macron": "Kashiwagi Tsukiko",
+     "double": "Kashiwagi Tsukiko",
+     "plain": "Kashiwagi Tsukiko"
+    },
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01537"
+   }
+  },
+  {
+   "id": "nicovideo:82893:2026-10-13",
+   "work": "骨に願いを、星に呪いを",
+   "ep": "第4片",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1163920",
+   "author": "いくたはな",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 4",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 3,
+   "free_episodes": 3,
+   "started": "2026-07-14",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on pixivコミック, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-10-13",
+   "wid": "w00068",
+   "work_en": {
+    "reading": "ホネ ニ ネガイ ヲ、 ホシ ニ ノロイ ヲ",
+    "ruby": [
+     [
+      "骨",
+      "ほね"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "願",
+      "ねが"
+     ],
+     [
+      "いを、",
+      null
+     ],
+     [
+      "星",
+      "ほし"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "呪",
+      "のろ"
+     ],
+     [
+      "いを",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hone ni Negai o, Hoshi ni Noroi o",
+     "double": "Hone ni Negai o, Hoshi ni Noroi o",
+     "plain": "Hone ni Negai o, Hoshi ni Noroi o"
+    },
+    "en": "A Wish upon the Bones, a Curse upon the Stars",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Wish upon the Bones, a Curse upon the Stars"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "イクタハナ",
+    "romaji": {
+     "macron": "Ikutahana",
+     "double": "Ikutahana",
+     "plain": "Ikutahana"
+    },
+    "undivided": true,
+    "en": "IKUTA Hana",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00140"
+   }
+  },
+  {
    "id": "nicovideo:69929:2026-10-13",
    "work": "セーラー服と関西弁",
    "ep": "第23話",
@@ -2148,6 +4469,34 @@
    "work_level": true,
    "channel": null,
    "feed_date": "2026-10-13",
+   "work_en": {
+    "reading": "セーラーフク ト カンサイベン",
+    "ruby": [
+     [
+      "セーラー",
+      null
+     ],
+     [
+      "服",
+      "ふく"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "関西弁",
+      "かんさいべん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Sērāfuku to Kansaiben",
+     "double": "Seeraafuku to Kansaiben",
+     "plain": "Serafuku to Kansaiben"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser"
+   },
    "author_en": {
     "reading": "ライムマン",
     "romaji": {
@@ -2158,6 +4507,403 @@
     "undivided": true,
     "basis": "romaji",
     "reading_basis": "surface"
+   }
+  },
+  {
+   "id": "nicovideo:59722:2026-10-13",
+   "work": "ごきげんよう、一局いかが?",
+   "ep": "第42話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1160020",
+   "author": "卯花つかさ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 42, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 5,
+   "free_episodes": 5,
+   "started": "2022-09-13",
+   "work_level": true,
+   "channel": null,
+   "feed_date": "2026-10-13",
+   "wid": "w03225",
+   "work_en": {
+    "reading": "ゴキゲンヨウ 、 イッキョク イカガ ?",
+    "ruby": [
+     [
+      "ごきげんよう、",
+      null
+     ],
+     [
+      "一局",
+      "いっきょく"
+     ],
+     [
+      "いかが?",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Gokigen'yō , Ikkyoku Ikaga ?",
+     "double": "Gokigen'you , Ikkyoku Ikaga ?",
+     "plain": "Gokigen'yo , Ikkyoku Ikaga ?"
+    },
+    "en": "Good Day to You. Care for a Game?",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Good Day to You. Care for a Game?"
+    },
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "ndlsearch.ndl.go.jp",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034783227",
+     "kind": "national-library",
+     "reviewed": "2026-08-08"
+    }
+   },
+   "author_en": {
+    "reading": "ウノハナ ツカサ",
+    "ruby": [
+     [
+      "卯花",
+      "うのはな"
+     ],
+     [
+      "つかさ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Unohana Tsukasa",
+     "double": "Unohana Tsukasa",
+     "plain": "Unohana Tsukasa"
+    },
+    "en": "Tsukasa Unohana",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I032777113",
+     "kind": "national-library",
+     "reviewed": "2026-08-05"
+    },
+    "id": "c00710"
+   }
+  },
+  {
+   "id": "nicovideo:34558:2026-10-13",
+   "work": "おやすみシェヘラザード",
+   "ep": "",
+   "type": "unclassified",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/comic/34558",
+   "author": "篠房六郎",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work is attested elsewhere in this database",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": null,
+   "free_episodes": null,
+   "started": "2018-05-10",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on やわらかスピリッツ, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-10-13",
+   "wid": "w01352",
+   "work_en": {
+    "reading": "オヤスミシェヘラザード",
+    "romaji": {
+     "macron": "Oyasumisheherazādo",
+     "double": "Oyasumisheherazaado",
+     "plain": "Oyasumisheherazado"
+    },
+    "en": "Nighty night, Sheherazade",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "Nighty night, Sheherazade",
+     "translated": "Good Night, Scheherazade"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "小学館",
+     "url": "https://bookwalker.jp/series/167971/",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-10"
+    }
+   },
+   "author_en": {
+    "reading": "シノフサ ロクロウ",
+    "ruby": [
+     [
+      "篠房六郎",
+      "しのふさろくろう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Shinofusa Rokurō",
+     "double": "Shinofusa Rokurou",
+     "plain": "Shinofusa Rokuro"
+    },
+    "en": "Rokurō Shinofusa",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "openBD",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-06",
+     "isbn": "9784098600908"
+    },
+    "id": "c01306"
+   }
+  },
+  {
+   "id": "nicovideo:44519:2026-10-13",
+   "work": "ロボットJSにスキはありません!!",
+   "ep": "ロボ29-1",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1165922",
+   "author": "とりから",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work is attested elsewhere in this database",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 169,
+   "free_episodes": 169,
+   "started": "2019-10-20",
+   "work_level": true,
+   "feed_date": "2026-10-13",
+   "wid": "w01878",
+   "work_en": {
+    "reading": "ロボット JS ニ スキ ワ アリマセン！！",
+    "romaji": {
+     "macron": "Robotto JS ni Suki wa Arimasen!!",
+     "double": "Robotto JS ni Suki wa Arimasen!!",
+     "plain": "Robotto JS ni Suki wa Arimasen!!"
+    },
+    "en": "The Robot Schoolgirl Leaves No Opening!!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Robot Schoolgirl Leaves No Opening!!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トリカラ",
+    "romaji": {
+     "macron": "Torikara",
+     "double": "Torikara",
+     "plain": "Torikara"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01082"
+   }
+  },
+  {
+   "id": "nicovideo:74042:2026-10-13",
+   "work": "ざこのみなさんお大事に",
+   "ep": "第15話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1160022",
+   "author": "薗田かんきつ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 15, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 4,
+   "free_episodes": 4,
+   "started": "2025-09-09",
+   "work_level": true,
+   "channel": null,
+   "feed_date": "2026-10-13",
+   "wid": "w01922",
+   "work_en": {
+    "reading": "ザ コノ ミナサン オ ダイジニ",
+    "ruby": [
+     [
+      "ざこのみなさんお",
+      null
+     ],
+     [
+      "大事",
+      "だいじ"
+     ],
+     [
+      "に",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Za Kono Minasan o Daijini",
+     "double": "Za Kono Minasan o Daijini",
+     "plain": "Za Kono Minasan o Daijini"
+    },
+    "en": "Get Well Soon, All You Weaklings",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Get Well Soon, All You Weaklings"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ソノダ カンキツ",
+    "ruby": [
+     [
+      "薗田",
+      "そのだ"
+     ],
+     [
+      "かんきつ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Sonoda Kankitsu",
+     "double": "Sonoda Kankitsu",
+     "plain": "Sonoda Kankitsu"
+    },
+    "basis": "romaji",
+    "reading_basis": "researched",
+    "id": "c01242"
+   }
+  },
+  {
+   "id": "nicovideo:60084:2026-10-13",
+   "work": "ハッピーシュート！",
+   "ep": "第10話の6",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-13",
+   "seen": "2026-10-14",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1165923",
+   "author": "とりから",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 10, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 144,
+   "free_episodes": 144,
+   "started": "2022-08-31",
+   "work_level": true,
+   "feed_date": "2026-10-13",
+   "wid": "w02099",
+   "work_en": {
+    "reading": "ハッピーシュート！",
+    "romaji": {
+     "macron": "Happīshūto!",
+     "double": "Happiishuuto!",
+     "plain": "Happishuto!"
+    },
+    "en": "Happy Shoot!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Happy Shoot!"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "トリカラ",
+    "romaji": {
+     "macron": "Torikara",
+     "double": "Torikara",
+     "plain": "Torikara"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01082"
    }
   },
   {
@@ -2290,13 +5036,13 @@
    "ident": "discovery-candidate",
    "free_from": null,
    "access_modes": [
-    "purchase"
+    "free-timed"
    ],
-   "became_free": false,
-   "access_changed": null,
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
    "date_means": "free-from",
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "ahead_n": 9,
    "ahead_ep": "５巻 第５６話「彗星エンカウント」",
    "ahead_next_free": "2026-10-19",
@@ -3033,216 +5779,6 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00058"
-   }
-  },
-  {
-   "id": "nicovideo:34558:2026-10-12",
-   "work": "おやすみシェヘラザード",
-   "ep": "",
-   "type": "unclassified",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-12",
-   "seen": "2026-10-14",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/comic/34558",
-   "author": "篠房六郎",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "work is attested elsewhere in this database",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": null,
-   "free_episodes": null,
-   "started": "2018-05-10",
-   "work_level": true,
-   "syndicated": true,
-   "origin_note": "carried on ニコニコ漫画; originates on やわらかスピリッツ, which is where it should be read",
-   "channel": null,
-   "feed_date": "2026-10-12",
-   "wid": "w01352",
-   "work_en": {
-    "reading": "オヤスミシェヘラザード",
-    "romaji": {
-     "macron": "Oyasumisheherazādo",
-     "double": "Oyasumisheherazaado",
-     "plain": "Oyasumisheherazado"
-    },
-    "en": "Nighty night, Sheherazade",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "Nighty night, Sheherazade",
-     "translated": "Good Night, Scheherazade"
-    },
-    "reading_basis": "surface",
-    "en_cite": {
-     "source": "小学館",
-     "url": "https://bookwalker.jp/series/167971/",
-     "kind": "publisher-jp",
-     "reviewed": "2026-08-10"
-    }
-   },
-   "author_en": {
-    "reading": "シノフサ ロクロウ",
-    "ruby": [
-     [
-      "篠房六郎",
-      "しのふさろくろう"
-     ]
-    ],
-    "romaji": {
-     "macron": "Shinofusa Rokurō",
-     "double": "Shinofusa Rokurou",
-     "plain": "Shinofusa Rokuro"
-    },
-    "en": "Rokurō Shinofusa",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "openBD",
-     "kind": "publisher-jp",
-     "reviewed": "2026-08-06",
-     "isbn": "9784098600908"
-    },
-    "id": "c01306"
-   }
-  },
-  {
-   "id": "nicovideo:44519:2026-10-12",
-   "work": "ロボットJSにスキはありません!!",
-   "ep": "ロボ28-6",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-12",
-   "seen": "2026-10-14",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1165796",
-   "author": "とりから",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "work is attested elsewhere in this database",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 168,
-   "free_episodes": 168,
-   "started": "2019-10-20",
-   "work_level": true,
-   "feed_date": "2026-10-12",
-   "wid": "w01878",
-   "work_en": {
-    "reading": "ロボット JS ニ スキ ワ アリマセン！！",
-    "romaji": {
-     "macron": "Robotto JS ni Suki wa Arimasen!!",
-     "double": "Robotto JS ni Suki wa Arimasen!!",
-     "plain": "Robotto JS ni Suki wa Arimasen!!"
-    },
-    "en": "The Robot Schoolgirl Leaves No Opening!!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Robot Schoolgirl Leaves No Opening!!"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "トリカラ",
-    "romaji": {
-     "macron": "Torikara",
-     "double": "Torikara",
-     "plain": "Torikara"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c01082"
-   }
-  },
-  {
-   "id": "nicovideo:60084:2026-10-12",
-   "work": "ハッピーシュート！",
-   "ep": "第10話の5",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-12",
-   "seen": "2026-10-14",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1165797",
-   "author": "とりから",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 10, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 143,
-   "free_episodes": 143,
-   "started": "2022-08-31",
-   "work_level": true,
-   "feed_date": "2026-10-12",
-   "wid": "w02099",
-   "work_en": {
-    "reading": "ハッピーシュート！",
-    "romaji": {
-     "macron": "Happīshūto!",
-     "double": "Happiishuuto!",
-     "plain": "Happishuto!"
-    },
-    "en": "Happy Shoot!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Happy Shoot!"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "トリカラ",
-    "romaji": {
-     "macron": "Torikara",
-     "double": "Torikara",
-     "plain": "Torikara"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c01082"
    }
   },
   {
@@ -4185,6 +6721,91 @@
      "isbn": "9784758022651"
     },
     "id": "c00202"
+   }
+  },
+  {
+   "id": "mynavi-news:https://news.mynavi.jp/series/carfairy/:相談室 第10回 バイクのドライブチェーンのメンテナンス方法は? 清掃・注油の頻度と遊び調整の注",
+   "work": "自動車の妖精 パッソちゃんの恩返し",
+   "ep": "相談室 第10回 バイクのドライブチェーンのメンテナンス方法は? 清掃・注油の頻度と遊び調整の注",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-11",
+   "seen": "2026-10-14",
+   "basis": "heuristic",
+   "conf": "low",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://news.mynavi.jp/series/carfairy/",
+   "author": "ずんだコロッケ",
+   "author_basis": "carried from another record of the same work",
+   "plat": "news-mynavi-jp",
+   "plat_name": "マイナビニュース",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 10",
+   "kind_inferred": true,
+   "preferred": "マイナビニュース",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-11",
+   "wid": "w00038",
+   "work_en": {
+    "reading": "ジドウシャ ノ ヨウセイ   パッソチャン ノ オンガエシ",
+    "ruby": [
+     [
+      "自動車",
+      "じどうしゃ"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "妖精",
+      "ようせい"
+     ],
+     [
+      " パッソちゃんの",
+      null
+     ],
+     [
+      "恩返",
+      "おんがえ"
+     ],
+     [
+      "し",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Jidōsha no Yōsei Passochan no Ongaeshi",
+     "double": "Jidousha no Yousei Passochan no Ongaeshi",
+     "plain": "Jidosha no Yosei Passochan no Ongaeshi"
+    },
+    "en": "Passo the Car Fairy Returns the Favour",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Passo the Car Fairy Returns the Favour"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ズンダ コロッケ",
+    "romaji": {
+     "macron": "Zunda Korokke",
+     "double": "Zunda Korokke",
+     "plain": "Zunda Korokke"
+    },
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00084"
    }
   },
   {
@@ -5427,6 +8048,91 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c01238"
+   }
+  },
+  {
+   "id": "mynavi-news:https://news.mynavi.jp/series/carfairy/:相談室 第9回 バイクのドライブチェーン交換時期は? 異音・サビなどの危険サインと交換費用を解",
+   "work": "自動車の妖精 パッソちゃんの恩返し",
+   "ep": "相談室 第9回 バイクのドライブチェーン交換時期は? 異音・サビなどの危険サインと交換費用を解",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-10",
+   "seen": "2026-10-14",
+   "basis": "heuristic",
+   "conf": "low",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://news.mynavi.jp/series/carfairy/",
+   "author": "ずんだコロッケ",
+   "author_basis": "carried from another record of the same work",
+   "plat": "news-mynavi-jp",
+   "plat_name": "マイナビニュース",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 9",
+   "kind_inferred": true,
+   "preferred": "マイナビニュース",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-10",
+   "wid": "w00038",
+   "work_en": {
+    "reading": "ジドウシャ ノ ヨウセイ   パッソチャン ノ オンガエシ",
+    "ruby": [
+     [
+      "自動車",
+      "じどうしゃ"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "妖精",
+      "ようせい"
+     ],
+     [
+      " パッソちゃんの",
+      null
+     ],
+     [
+      "恩返",
+      "おんがえ"
+     ],
+     [
+      "し",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Jidōsha no Yōsei Passochan no Ongaeshi",
+     "double": "Jidousha no Yousei Passochan no Ongaeshi",
+     "plain": "Jidosha no Yosei Passochan no Ongaeshi"
+    },
+    "en": "Passo the Car Fairy Returns the Favour",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Passo the Car Fairy Returns the Favour"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ズンダ コロッケ",
+    "romaji": {
+     "macron": "Zunda Korokke",
+     "double": "Zunda Korokke",
+     "plain": "Zunda Korokke"
+    },
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00084"
    }
   },
   {
@@ -11492,10 +14198,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 41",
    "kind_inferred": true,
@@ -17375,6 +20081,60 @@
    }
   },
   {
+   "id": "comic-boost:https://comic-boost.com/content/01780001:読み切り",
+   "work": "葵とおねーちゃん",
+   "ep": "読み切り",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-02",
+   "seen": "2026-10-13",
+   "basis": "stated",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-boost.com/content/01780001",
+   "author": "",
+   "plat": "comic-boost",
+   "plat_name": "comicブースト",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "oneshot",
+   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
+   "kind_inferred": true,
+   "preferred": "comicブースト",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-02",
+   "work_en": {
+    "reading": "アオイ ト オ ネーチャン",
+    "ruby": [
+     [
+      "葵",
+      "あおい"
+     ],
+     [
+      "とおねーちゃん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Aoi to o Nēchan",
+     "double": "Aoi to o Neechan",
+     "plain": "Aoi to o Nechan"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser"
+   }
+  },
+  {
    "id": "g-comi:https://g-comi.jp/series/58238b3987c11:第4話",
    "work": "世界をすくってもお腹はすくから",
    "ep": "第4話",
@@ -19307,7 +22067,7 @@
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
-   "kind_basis": "numbered 57, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 57",
    "kind_inferred": true,
    "preferred": "ニコニコ漫画",
    "also_on": [],
