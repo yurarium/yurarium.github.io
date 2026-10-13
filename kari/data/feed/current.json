@@ -2079,8 +2079,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -2156,8 +2156,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -4469,6 +4469,7 @@
    "work_level": true,
    "channel": null,
    "feed_date": "2026-10-13",
+   "wid": "w03316",
    "work_en": {
     "reading": "セーラーフク ト カンサイベン",
     "ruby": [
@@ -4494,8 +4495,12 @@
      "double": "Seeraafuku to Kansaiben",
      "plain": "Serafuku to Kansaiben"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser"
+    "en": "Sailor Uniforms and the Kansai Dialect",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Sailor Uniforms and the Kansai Dialect"
+    },
+    "reading_basis": "researched"
    },
    "author_en": {
     "reading": "ライムマン",
@@ -5038,8 +5043,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -20113,8 +20118,9 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-10-02",
+   "wid": "w03317",
    "work_en": {
-    "reading": "アオイ ト オ ネーチャン",
+    "reading": "アオイ ト オネーチャン",
     "ruby": [
      [
       "葵",
@@ -20126,12 +20132,16 @@
      ]
     ],
     "romaji": {
-     "macron": "Aoi to o Nēchan",
-     "double": "Aoi to o Neechan",
-     "plain": "Aoi to o Nechan"
+     "macron": "Aoi to Onēchan",
+     "double": "Aoi to Oneechan",
+     "plain": "Aoi to Onechan"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser"
+    "en": "Aoi and Her Big Sister",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Aoi and Her Big Sister"
+    },
+    "reading_basis": "researched"
    }
   },
   {

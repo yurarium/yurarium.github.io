@@ -5036,6 +5036,100 @@
    "free": 4,
    "free_timed": 0,
    "priced": 0,
+   "url": "https://manga.nicovideo.jp/comic/69929",
+   "series_url": null,
+   "sources": [
+    {
+     "platform": "ニコニコ漫画",
+     "url": "https://manga.nicovideo.jp/comic/69929",
+     "chapters": 4,
+     "free": 4,
+     "free_timed": 0,
+     "priced": 0,
+     "latest": "2026-10-13",
+     "partial": true,
+     "format": "standard",
+     "retrieved": "2026-10-13",
+     "latest_work_level": true
+    }
+   ],
+   "collection": null,
+   "id": "w03316",
+   "skipped": [],
+   "completed_basis_ja": null,
+   "state_basis_ja": "1日間新しい話がなく、終了したとする情報もない",
+   "work": "セーラー服と関西弁",
+   "author": "ライムマン",
+   "evidence": [],
+   "state_claims": [],
+   "sourced_from": [
+    {
+     "source": "ニコニコ漫画",
+     "holds": "attribution",
+     "read": "2026-10-14",
+     "url": "https://manga.nicovideo.jp/comic/69929"
+    }
+   ],
+   "stated_next": null,
+   "latest_any": "2026-10-13",
+   "latest_any_kind": "chapter",
+   "work_en": {
+    "reading": "セーラーフク ト カンサイベン",
+    "ruby": [
+     [
+      "セーラー",
+      null
+     ],
+     [
+      "服",
+      "ふく"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "関西弁",
+      "かんさいべん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Sērāfuku to Kansaiben",
+     "double": "Seeraafuku to Kansaiben",
+     "plain": "Serafuku to Kansaiben"
+    },
+    "en": "Sailor Uniforms and the Kansai Dialect",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Sailor Uniforms and the Kansai Dialect"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "ライムマン",
+    "romaji": {
+     "macron": "Raimuman",
+     "double": "Raimuman",
+     "plain": "Raimuman"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface"
+   }
+  },
+  {
+   "chapters": 4,
+   "partial": true,
+   "latest": "2026-10-13",
+   "latest_ep": "",
+   "first": null,
+   "state": "active",
+   "oneshot": false,
+   "completed_basis": null,
+   "state_basis": "no chapter for 1 day, and nothing states it has ended",
+   "free": 4,
+   "free_timed": 0,
+   "priced": 0,
    "url": "https://manga.nicovideo.jp/comic/74042",
    "series_url": null,
    "sources": [
@@ -22685,6 +22779,81 @@
     "basis": "romaji",
     "reading_basis": "stated",
     "id": "c00899"
+   },
+   "admitted_by": [
+    {
+     "comparator": "webcomics.jp",
+     "shelf": "百合 tag",
+     "retrieved": "2026-10-14",
+     "note": "An aggregator listing a work under its yuri tag is a comparator (DEFINITIONS §2). It says the work exists and where, attests nothing about it, and is never a marketing_label (§4).",
+     "url": "https://webcomics.jp/tag/%E7%99%BE%E5%90%88"
+    }
+   ]
+  },
+  {
+   "chapters": 1,
+   "partial": false,
+   "latest": "2026-10-02",
+   "latest_ep": "読み切り",
+   "first": "2026-10-02",
+   "state": "oneshot",
+   "oneshot": true,
+   "completed_basis": null,
+   "state_basis": "every instalment here is marked 読切",
+   "free": 1,
+   "free_timed": 0,
+   "priced": 0,
+   "url": "https://comic-boost.com/content/01780001",
+   "series_url": null,
+   "sources": [
+    {
+     "platform": "comicブースト",
+     "url": "https://comic-boost.com/content/01780001",
+     "chapters": 1,
+     "free": 1,
+     "free_timed": 0,
+     "priced": 0,
+     "latest": "2026-10-02",
+     "partial": false,
+     "format": "standard",
+     "retrieved": "2026-10-13"
+    }
+   ],
+   "collection": null,
+   "id": "w03317",
+   "skipped": [],
+   "completed_basis_ja": null,
+   "state_basis_ja": "掲載されている話すべてに読切の表示がある",
+   "work": "葵とおねーちゃん",
+   "author": "",
+   "evidence": [],
+   "state_claims": [],
+   "stated_next": null,
+   "latest_any": "2026-10-02",
+   "latest_any_kind": "chapter",
+   "work_en": {
+    "reading": "アオイ ト オネーチャン",
+    "ruby": [
+     [
+      "葵",
+      "あおい"
+     ],
+     [
+      "とおねーちゃん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Aoi to Onēchan",
+     "double": "Aoi to Oneechan",
+     "plain": "Aoi to Onechan"
+    },
+    "en": "Aoi and Her Big Sister",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Aoi and Her Big Sister"
+    },
+    "reading_basis": "researched"
    },
    "admitted_by": [
     {
@@ -44172,7 +44341,10 @@
      "read": "2026-08-08"
     }
    ],
-   "stated_next": null,
+   "stated_next": {
+    "cadence": "毎月18日前後",
+    "platform": "マガポケ"
+   },
    "print": [
     {
      "work_id": "C417731",
@@ -103695,6 +103867,82 @@
     "reading_basis": "researched",
     "id": "c00693"
    }
+  },
+  {
+   "chapters": 9,
+   "partial": false,
+   "latest": "2025-01-31",
+   "latest_ep": "猫に離人",
+   "first": "2025-01-31",
+   "state": "unknown",
+   "oneshot": false,
+   "completed_basis": null,
+   "state_basis": "every chapter we hold arrived on the day a platform imported the series, so nothing here says when it last published",
+   "free": 3,
+   "free_timed": 0,
+   "priced": 6,
+   "url": "https://comic-boost.com/content/01560001",
+   "series_url": null,
+   "sources": [
+    {
+     "platform": "comicブースト",
+     "url": "https://comic-boost.com/content/01560001",
+     "chapters": 9,
+     "free": 3,
+     "free_timed": 0,
+     "priced": 6,
+     "latest": "2025-01-31",
+     "partial": false,
+     "format": "standard",
+     "retrieved": "2026-10-13"
+    }
+   ],
+   "collection": null,
+   "id": "w03318",
+   "skipped": [],
+   "completed_basis_ja": null,
+   "state_basis_ja": null,
+   "work": "猫とシュガーポット",
+   "author": "",
+   "evidence": [],
+   "state_claims": [],
+   "stated_next": null,
+   "latest_any": "2025-01-31",
+   "latest_any_kind": "chapter",
+   "work_en": {
+    "reading": "ネコ ト シュガーポット",
+    "ruby": [
+     [
+      "猫",
+      "ねこ"
+     ],
+     [
+      "とシュガーポット",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Neko to Shugāpotto",
+     "double": "Neko to Shugaapotto",
+     "plain": "Neko to Shugapotto"
+    },
+    "en": "Cats and the Sugar Pot",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Cats and the Sugar Pot",
+     "licensed": "Cats and Sugar Bowls"
+    },
+    "reading_basis": "researched"
+   },
+   "admitted_by": [
+    {
+     "comparator": "webcomics.jp",
+     "shelf": "百合 tag",
+     "retrieved": "2026-10-14",
+     "note": "An aggregator listing a work under its yuri tag is a comparator (DEFINITIONS §2). It says the work exists and where, attests nothing about it, and is never a marketing_label (§4).",
+     "url": "https://webcomics.jp/tag/%E7%99%BE%E5%90%88"
+    }
+   ]
   },
   {
    "chapters": 8,
@@ -234426,19 +234674,13 @@
      "double": "Neko to Shugaapotto",
      "plain": "Neko to Shugapotto"
     },
-    "en": "Cats and Sugar Bowls",
-    "basis": "licensed",
+    "en": "Cats and the Sugar Pot",
+    "basis": "translated",
     "en_forms": {
-     "licensed": "Cats and Sugar Bowls",
-     "translated": "The Cat and the Sugar Pot"
+     "translated": "Cats and the Sugar Pot",
+     "licensed": "Cats and Sugar Bowls"
     },
-    "reading_basis": "analyser",
-    "en_cite": {
-     "source": "sevenseasentertainment.com",
-     "url": "https://sevenseasentertainment.com/series/cats-and-sugar-bowls/",
-     "kind": "licensor",
-     "reviewed": "2026-08-06"
-    }
+    "reading_basis": "researched"
    },
    "author_en": {
     "reading": "ユキコ",
