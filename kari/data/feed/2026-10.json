@@ -559,8 +559,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -653,8 +653,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -846,6 +846,7 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-10-14",
+   "wid": "w03319",
    "work_en": {
     "reading": "ノスフェルワイス",
     "romaji": {
@@ -853,7 +854,11 @@
      "double": "Nosuferuwaisu",
      "plain": "Nosuferuwaisu"
     },
-    "basis": "romaji",
+    "en": "Nosferweiss",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Nosferweiss"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -901,6 +906,7 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-10-14",
+   "wid": "w03320",
    "work_en": {
     "reading": "シニガミサン ト ショウテン ゴハン",
     "ruby": [
@@ -926,8 +932,12 @@
      "double": "Shinigamisan to Shouten Gohan",
      "plain": "Shinigamisan to Shoten Gohan"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser"
+    "en": "Miss Reaper and Meals to Die For",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Miss Reaper and Meals to Die For"
+    },
+    "reading_basis": "researched"
    },
    "author_en": {
     "reading": "スガノ マナミ",

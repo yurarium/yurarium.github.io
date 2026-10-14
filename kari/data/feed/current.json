@@ -289,98 +289,6 @@
    }
   },
   {
-   "id": "gangan-online:https://www.ganganonline.com/title/11:第1話-1 レベルMAXになっていた 作品インフォメーション 『スライム倒して300年",
-   "work": "スライム倒して300年、知らないうちにレベルMAXになってました",
-   "ep": "第1話-1 レベルMAXになっていた 作品インフォメーション 『スライム倒して300年",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-15",
-   "seen": "2026-10-15",
-   "basis": "rendered",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://www.ganganonline.com/title/11",
-   "author": "原作／森田季節(GAノベル／SBクリエイティブ刊)　漫画／シバユウスケ　キャラクター原案／紅緒",
-   "author_basis": "carried from another record of the same work",
-   "plat": "ganganonline",
-   "plat_name": "ガンガンONLINE",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 1 but the work has a higher-numbered chapter dated earlier — the date is not trustworthy, so not read as a start",
-   "kind_inferred": true,
-   "preferred": "ガンガンONLINE",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-15",
-   "wid": "w03308",
-   "work_en": {
-    "reading": "スライム タオシテ サンビャクネン、シラナイ ウチニ レベル マックス ニ ナッテマシタ",
-    "romaji": {
-     "macron": "Suraimu Taoshite Sanbyakunen, Shiranai Uchini Reberu Makkusu ni Nattemashita",
-     "double": "Suraimu Taoshite Sanbyakunen, Shiranai Uchini Reberu Makkusu ni Nattemashita",
-     "plain": "Suraimu Taoshite Sanbyakunen, Shiranai Uchini Reberu Makkusu ni Nattemashita"
-    },
-    "en": "I've Been Killing Slimes for 300 Years and Maxed Out My Level",
-    "basis": "licensed",
-    "en_forms": {
-     "licensed": "I've Been Killing Slimes for 300 Years and Maxed Out My Level",
-     "translated": "Three Hundred Years of Killing Slimes, and My Level Hit MAX Without My Noticing"
-    },
-    "reading_basis": "researched",
-    "en_cite": {
-     "source": "yenpress.com",
-     "url": "https://yenpress.com/series/i-ve-been-killing-slimes-for-300-years-and-maxed-out-my-level-manga",
-     "kind": "licensor",
-     "reviewed": "2026-10-09"
-    }
-   },
-   "author_en": {
-    "reading": "モリタキセツ / シバユウスケ / クレナイイトグチ",
-    "ruby": [
-     [
-      "原作／",
-      null
-     ],
-     [
-      "森田季節",
-      null
-     ],
-     [
-      "(GAノベル／SBクリエイティブ刊)　漫画／",
-      null
-     ],
-     [
-      "シバユウスケ",
-      null
-     ],
-     [
-      "　キャラクター原案／",
-      null
-     ],
-     [
-      "紅緒",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Moritakisetsu / Shibayūsuke / Kurenaiitoguchi",
-     "double": "Moritakisetsu / Shibayuusuke / Kurenaiitoguchi",
-     "plain": "Moritakisetsu / Shibayusuke / Kurenaiitoguchi"
-    },
-    "reading_basis": "analyser",
-    "basis": "romaji",
-    "unverified": true
-   }
-  },
-  {
    "id": "comic-boost:https://comic-boost.com/content/00010001:第82話",
    "work": "このはな綺譚",
    "ep": "第82話",
@@ -559,8 +467,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -653,8 +561,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -846,6 +754,7 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-10-14",
+   "wid": "w03319",
    "work_en": {
     "reading": "ノスフェルワイス",
     "romaji": {
@@ -853,7 +762,11 @@
      "double": "Nosuferuwaisu",
      "plain": "Nosuferuwaisu"
     },
-    "basis": "romaji",
+    "en": "Nosferweiss",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Nosferweiss"
+    },
     "reading_basis": "surface"
    },
    "author_en": {
@@ -901,6 +814,7 @@
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-10-14",
+   "wid": "w03320",
    "work_en": {
     "reading": "シニガミサン ト ショウテン ゴハン",
     "ruby": [
@@ -926,8 +840,12 @@
      "double": "Shinigamisan to Shouten Gohan",
      "plain": "Shinigamisan to Shoten Gohan"
     },
-    "basis": "romaji",
-    "reading_basis": "analyser"
+    "en": "Miss Reaper and Meals to Die For",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Miss Reaper and Meals to Die For"
+    },
+    "reading_basis": "researched"
    },
    "author_en": {
     "reading": "スガノ マナミ",
