@@ -1,15 +1,12 @@
 {
- "generated": "2026-10-15T21:46:12+00:00",
+ "generated": "2026-10-15T23:58:31+00:00",
  "since_last": {
-  "at": "2026-10-15T20:01:54+00:00",
+  "at": "2026-10-15T21:46:12+00:00",
   "statistics": {
-   "works": 83,
-   "print_works": 83,
-   "print_only": 83,
-   "volumes": 159,
-   "with_identifier": 83,
-   "chapters": -1,
-   "delivery_dated": 66
+   "works": 29,
+   "volumes": 9,
+   "with_identifier": 29,
+   "chapters": 117
   }
  },
  "means": {
@@ -35,9 +32,9 @@
   "releases": 1023,
   "works": 2657,
   "platforms": 19,
-  "series_rows": 3208,
-  "assembled": 3239,
-  "awaiting_identifier": 31,
+  "series_rows": 3237,
+  "assembled": 3240,
+  "awaiting_identifier": 3,
   "identification": {
    "discovery-candidate": 753,
    "known-work-match": 19,
@@ -51,7 +48,7 @@
   }
  },
  "gate": {
-  "invariants_passing": 55,
+  "invariants_passing": 57,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -180,10 +177,8 @@
    },
    {
     "name": "a person is spelled one way",
-    "violations": 1,
-    "examples": [
-     "レオパード・ゲッコー: the phrase map says 'Reopādo, Gekkō' and the name store says 'Reopādo Gekkō'"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "nicovideo channels agree with our own records",
@@ -277,10 +272,8 @@
    },
    {
     "name": "every platform a reader is shown is registered",
-    "violations": 1,
-    "examples": [
-     "('comicグラスト',)"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "the store refused no row",
@@ -515,13 +508,13 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 154,
-    "value": 154
+    "budget": 166,
+    "value": 165
    },
    {
     "name": "credit pages listing a work that does not name them",
     "means": "pairings a credit page would show whose work does not carry that credit's spelling in its own credit field. Substring arithmetic on two shipped fields, so it owes the splitter, the fold and the registry lookup nothing and cannot be satisfied by them agreeing. It will not reach zero: six of the eight are merges, where the surviving spelling is by construction not the one on the retired spelling's works, and two are release-row edges. A rise with neither behind it is a page claiming somebody worked on a book that does not name them.",
-    "budget": 9,
+    "budget": 13,
     "value": 13
    },
    {
@@ -545,8 +538,8 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 208,
-    "value": 208
+    "budget": 219,
+    "value": 219
    },
    {
     "name": "implausible ruby spans",
@@ -662,7 +655,7 @@
    {
     "name": "bookwalker series unread",
     "means": "BOOK☆WALKER rows whose series listing has not been read to the end, so their volume list and the first publication drawn from it rest on whichever volumes were fetched. The shelf linked one volume for 1,175 of them and this module read only page one of a paginated listing for a few more. Falls as adapters/recon/bookwalker_volumes.py --follow-series works through them, and reaches zero, because every row counted here names a series to fetch.",
-    "budget": 39,
+    "budget": 0,
     "value": 0
    },
    {
@@ -710,8 +703,8 @@
    {
     "name": "works holding more volumes than the shop states",
     "means": "the other direction, counted apart so a fixed over-count cannot hide a new under-count. Mostly products counted as volumes: BOOK☆WALKER lists free sample editions among a series' items and the ingest numbers every item, which is how MURCIÉLAGO came to have 32 volumes where the shop and the bibliography both say 29. Should fall to near nothing once a volume number is read from the product title; what is left is a work the shop has delisted from.",
-    "budget": 26,
-    "value": 26
+    "budget": 28,
+    "value": 28
    },
    {
     "name": "shelf admissions a reader cannot follow",
@@ -735,8 +728,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 2,
-    "value": 15
+    "budget": 4,
+    "value": 4
    },
    {
     "name": "works whose first publication country is unattested",
@@ -789,7 +782,7 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 42,
+    "budget": 46,
     "value": 46
    },
    {
@@ -801,14 +794,14 @@
    {
     "name": "volume rows with no publication date",
     "means": "volumes on a work's print run that state no printing date, which is what the dating passes work through",
-    "budget": 2572,
-    "value": 2572
+    "budget": 2580,
+    "value": 2580
    },
    {
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
     "budget": 2,
-    "value": 2
+    "value": 1
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -899,7 +892,7 @@
    "source": "bookwalker",
    "files": 1727,
    "works": 1727,
-   "rows": 4094,
+   "rows": 4107,
    "retrieved": "2026-10-15",
    "age_days": 1,
    "in_scope": true,
@@ -940,14 +933,14 @@
   {
    "source": "gigaviewer",
    "files": 89,
-   "works": 1588,
-   "rows": 17122,
+   "works": 1589,
+   "rows": 17123,
    "retrieved": "2026-10-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 16776,
-   "well_formed": 16776,
+   "checked_rows": 16777,
+   "well_formed": 16777,
    "malformed": 0,
    "drop": null
   },
@@ -996,21 +989,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 606,
-   "rows": 8171,
+   "works": 605,
+   "rows": 8170,
    "retrieved": "2026-10-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8118,
-   "well_formed": 8117,
+   "checked_rows": 8117,
+   "well_formed": 8116,
    "malformed": 1,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-15T19:44:18+00:00",
+  "previous_at": "2026-10-15T21:45:03+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1125,7 +1118,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 51,
+   "count": 50,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1156,12 +1149,12 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 154,
-    "credit pages listing a work that does not name them": 9,
+    "credit fields an identifier does not cover": 166,
+    "credit pages listing a work that does not name them": 13,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
     "credits sharing a reading nobody has ruled on": 24,
-    "ruby asserting a reading per character": 208,
+    "ruby asserting a reading per character": 219,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 192,
     "titles read by a machine, unmarked": 1194,
@@ -1180,7 +1173,7 @@
     "adapters fetching without net.py": 31,
     "captures with no floor": 8,
     "unreadable bookwalker rows": 15,
-    "bookwalker series unread": 39,
+    "bookwalker series unread": 0,
     "bookwalker listings unconfirmed": 0,
     "volumes with an isbn and no date": 0,
     "undated cmoa candidates": 11,
@@ -1188,11 +1181,11 @@
     "works whose records number one volume twice": 8,
     "volume numbers a page draws twice": 10,
     "works holding fewer volumes than the shop states": 70,
-    "works holding more volumes than the shop states": 26,
+    "works holding more volumes than the shop states": 28,
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
-    "updates naming a work we do not hold": 2,
+    "updates naming a work we do not hold": 4,
     "works whose first publication country is unattested": 2657,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 6,
@@ -1201,9 +1194,9 @@
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 42,
+    "incomplete attested rows": 46,
     "works without English": 0,
-    "volume rows with no publication date": 2572,
+    "volume rows with no publication date": 2580,
     "predicted updates already behind the run": 2,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
@@ -1211,27 +1204,27 @@
   }
  ],
  "statistics": {
-  "works": 3208,
+  "works": 3237,
   "states": {
    "print": 1726,
-   "oneshot": 470,
-   "completed": 462,
+   "oneshot": 487,
+   "completed": 484,
    "active": 273,
-   "dormant": 153,
-   "slow": 76,
-   "unknown": 48
+   "dormant": 144,
+   "slow": 69,
+   "unknown": 54
   },
   "english_basis": {
-   "translated": 2757,
-   "official-jp": 235,
+   "translated": 2785,
+   "official-jp": 236,
    "licensed": 110,
    "romaji": 106
   },
   "print_works": 2542,
   "print_only": 1726,
-  "volumes": 6264,
-  "with_identifier": 3208,
-  "chapters": 30564,
+  "volumes": 6273,
+  "with_identifier": 3237,
+  "chapters": 30681,
   "delivery_dated": 1100
  }
 }
