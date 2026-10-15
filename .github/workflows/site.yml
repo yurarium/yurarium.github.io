@@ -35,6 +35,15 @@ on:
 permissions:
   contents: write
 
+# ONE SITE BUILD AT A TIME, IN ORDER. On 2026-10-15 the scheduled run started twelve seconds before
+# the pipeline published its store, built yesterday's data and pushed; the run the pipeline then
+# dispatched built the new store and its push was rejected, so the site served the old corpus. A
+# queued run waits for the one ahead to finish and checks out what that one pushed. Not cancelled,
+# because the later run is the one carrying the newer store.
+concurrency:
+  group: site-build
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
