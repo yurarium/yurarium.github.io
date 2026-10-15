@@ -1,9 +1,12 @@
 {
- "generated": "2026-10-15T12:12:54+00:00",
+ "generated": "2026-10-15T20:01:54+00:00",
  "since_last": {
-  "at": "2026-10-15T12:08:06+00:00",
+  "at": "2026-10-15T12:12:54+00:00",
   "statistics": {
-   "chapters": 1133
+   "works": 5,
+   "print_only": -2,
+   "with_identifier": 5,
+   "chapters": 94
   }
  },
  "means": {
@@ -25,27 +28,27 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-15",
-  "releases": 1166,
+  "at": "2026-10-16",
+  "releases": 1325,
   "works": 2574,
-  "platforms": 23,
-  "series_rows": 3120,
-  "assembled": 3120,
+  "platforms": 19,
+  "series_rows": 3125,
+  "assembled": 3125,
   "awaiting_identifier": 0,
   "identification": {
-   "discovery-candidate": 835,
+   "discovery-candidate": 993,
    "known-work-match": 30,
-   "platform-genre": 301
+   "platform-genre": 302
   },
   "collapsed": {
-   "duplicate_chapters": 218,
-   "resolver": 56,
+   "duplicate_chapters": 423,
+   "resolver": 55,
    "samples": 13,
-   "thin_sitemap": 7
+   "thin_sitemap": 10
   }
  },
  "gate": {
-  "invariants_passing": 57,
+  "invariants_passing": 55,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -174,8 +177,10 @@
    },
    {
     "name": "a person is spelled one way",
-    "violations": 0,
-    "examples": []
+    "violations": 1,
+    "examples": [
+     "レオパード・ゲッコー: the phrase map says 'Reopādo, Gekkō' and the name store says 'Reopādo Gekkō'"
+    ]
    },
    {
     "name": "nicovideo channels agree with our own records",
@@ -269,8 +274,10 @@
    },
    {
     "name": "every platform a reader is shown is registered",
-    "violations": 0,
-    "examples": []
+    "violations": 1,
+    "examples": [
+     "('comicグラスト',)"
+    ]
    },
    {
     "name": "the store refused no row",
@@ -343,8 +350,8 @@
    {
     "name": "one page cited for two claims",
     "means": "records whose reading and whose English name cite the same page while naming different kinds of source, so at most one of the two can be right about where it came from. A rise means an entry carried one address for two claims again.",
-    "budget": 11,
-    "value": 11
+    "budget": 1,
+    "value": 1
    },
    {
     "name": "kana left in a romanisation",
@@ -427,8 +434,8 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1227,
-    "value": 1228
+    "budget": 1242,
+    "value": 1242
    },
    {
     "name": "divisions read back from a romanisation",
@@ -457,8 +464,8 @@
    {
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-    "budget": 275,
-    "value": 275
+    "budget": 279,
+    "value": 279
    },
    {
     "name": "claims whose evidence their basis does not admit",
@@ -469,8 +476,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 457,
-    "value": 458
+    "budget": 471,
+    "value": 471
    },
    {
     "name": "credits the corpus files as a venue",
@@ -505,14 +512,14 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 105,
-    "value": 106
+    "budget": 116,
+    "value": 116
    },
    {
     "name": "credit pages listing a work that does not name them",
     "means": "pairings a credit page would show whose work does not carry that credit's spelling in its own credit field. Substring arithmetic on two shipped fields, so it owes the splitter, the fold and the registry lookup nothing and cannot be satisfied by them agreeing. It will not reach zero: six of the eight are merges, where the surviving spelling is by construction not the one on the retired spelling's works, and two are release-row edges. A rise with neither behind it is a page claiming somebody worked on a book that does not name them.",
     "budget": 9,
-    "value": 9
+    "value": 13
    },
    {
     "name": "publisher pages listing a work from another house",
@@ -553,14 +560,14 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1149,
-    "value": 1149
+    "budget": 1157,
+    "value": 1157
    },
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 59,
-    "value": 59
+    "budget": 60,
+    "value": 60
    },
    {
     "name": "data reaching the site around the store",
@@ -634,14 +641,14 @@
    {
     "name": "adapters fetching without net.py",
     "means": "modules that call urlopen themselves instead of going through adapters/net.py, and so have no per-host pause, no retry for a 503, no status code to tell an absent work from a refused request, and no sight of a redirect. Falls as each one is migrated. Its floor is not zero: adapters/editions/capture.py sends one route an extra header and keeps everything else net.py has, and a route that must not be fetched at all should not be made convenient.",
-    "budget": 34,
-    "value": 34
+    "budget": 31,
+    "value": 31
    },
    {
     "name": "captures with no floor",
     "means": "adapters that fetch from a host, write into data/source, and have nothing to refuse on. A host serving nonsense replaces the last good capture and reports success. adapters/ledger.py reports the damage afterwards; a floor prevents it.",
-    "budget": 10,
-    "value": 10
+    "budget": 8,
+    "value": 8
    },
    {
     "name": "unreadable bookwalker rows",
@@ -720,13 +727,13 @@
     "name": "announced works the corpus does not hold",
     "means": "works a comparator announced on a platform this reads openly that the corpus does not hold. The policy is that such a work is ingested and presented without waiting for a person; a rise means an adapter cannot reach it, the platform titles it differently, or the promotion stopped happening",
     "budget": 0,
-    "value": 1
+    "value": 0
    },
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 2,
-    "value": 4
+    "value": 15
    },
    {
     "name": "works whose first publication country is unattested",
@@ -745,6 +752,12 @@
     "means": "works a platform pass was given as a target and wrote no row for. The pass put each in a `failed` list, printed it and dropped it, so until now a work asked for and not got left nothing in the repository at all. A rise means a pass has stopped resolving something it used to, which is either an address that moved or a platform that withdrew a work. It falls when the target is captured, or when a platform's refusal is written into a register the count reads, as data/source/kadokomi/withheld.yaml already is.",
     "budget": 6,
     "value": 6
+   },
+   {
+    "name": "producers not yet scheduled",
+    "means": "entries in adapters/producers.yaml whose files are read and kept current by nothing scheduled: producers run once by hand, files with no producer, and superseded files awaiting removal. Falls as each is wired onto a cadence or retired with its reader.",
+    "budget": 10,
+    "value": 10
    },
    {
     "name": "rows with a moving address",
@@ -773,8 +786,8 @@
    {
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
-    "budget": 65,
-    "value": 67
+    "budget": 42,
+    "value": 46
    },
    {
     "name": "works without English",
@@ -791,8 +804,8 @@
    {
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
-    "budget": 1,
-    "value": 1
+    "budget": 2,
+    "value": 2
    },
    {
     "name": "volume rows a page counts but cannot list",
@@ -815,7 +828,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 74,
+   "age_days": 75,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -829,21 +842,7 @@
    "works": 1644,
    "rows": 3935,
    "retrieved": "2026-08-05",
-   "age_days": 71,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 0,
-   "well_formed": 0,
-   "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "comparators",
-   "files": 5,
-   "works": 9,
-   "rows": 9,
-   "retrieved": "2026-08-05",
-   "age_days": 71,
+   "age_days": 72,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -857,7 +856,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 70,
+   "age_days": 71,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -871,7 +870,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 69,
+   "age_days": 70,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -885,7 +884,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 69,
+   "age_days": 70,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -899,7 +898,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 68,
+   "age_days": 69,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -911,41 +910,55 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6291,
-   "retrieved": "2026-10-15",
+   "rows": 6303,
+   "retrieved": "2026-10-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6244,
-   "well_formed": 6244,
+   "checked_rows": 6256,
+   "well_formed": 6256,
+   "malformed": 0,
+   "drop": null
+  },
+  {
+   "source": "comparators",
+   "files": 5,
+   "works": 9,
+   "rows": 9,
+   "retrieved": "2026-10-16",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 0,
+   "well_formed": 0,
    "malformed": 0,
    "drop": null
   },
   {
    "source": "gigaviewer",
-   "files": 91,
-   "works": 1574,
-   "rows": 17067,
-   "retrieved": "2026-10-15",
+   "files": 89,
+   "works": 1588,
+   "rows": 17122,
+   "retrieved": "2026-10-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 16720,
-   "well_formed": 16720,
+   "checked_rows": 16776,
+   "well_formed": 16776,
    "malformed": 0,
    "drop": null
   },
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 985,
-   "rows": 7713,
-   "retrieved": "2026-10-15",
+   "works": 1006,
+   "rows": 7738,
+   "retrieved": "2026-10-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7041,
-   "well_formed": 6740,
+   "checked_rows": 7048,
+   "well_formed": 6747,
    "malformed": 301,
    "drop": null
   },
@@ -954,7 +967,7 @@
    "files": 3,
    "works": 1341,
    "rows": 11524,
-   "retrieved": "2026-10-15",
+   "retrieved": "2026-10-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -968,7 +981,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-15",
+   "retrieved": "2026-10-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -979,22 +992,22 @@
   },
   {
    "source": "webpages",
-   "files": 47,
-   "works": 589,
-   "rows": 8258,
-   "retrieved": "2026-10-15",
+   "files": 48,
+   "works": 617,
+   "rows": 9200,
+   "retrieved": "2026-10-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8207,
-   "well_formed": 8206,
+   "checked_rows": 9147,
+   "well_formed": 9146,
    "malformed": 1,
    "drop": null
   }
  ],
  "ledger": {
-  "runs_held": 40,
-  "previous_at": "2026-10-14T20:02:26+00:00",
+  "runs_held": 0,
+  "previous_at": null,
   "drops": []
  },
  "outstanding": [
@@ -1026,11 +1039,11 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 48,
+   "count": 49,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
-    "one page cited for two claims": 11,
+    "one page cited for two claims": 1,
     "kana left in a romanisation": 0,
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
@@ -1044,20 +1057,20 @@
     "credit phrases spelling a person otherwise": 3,
     "names rendered two ways": 0,
     "one work named two ways across its rows": 0,
-    "author names romanised as one word": 1227,
+    "author names romanised as one word": 1242,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 88,
     "publisher readings nobody has settled": 22,
     "renderings with nothing to show": 0,
-    "kana names with no stated division": 275,
+    "kana names with no stated division": 279,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 457,
+    "author readings no source states": 471,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 105,
+    "credit fields an identifier does not cover": 116,
     "credit pages listing a work that does not name them": 9,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
@@ -1065,8 +1078,8 @@
     "ruby asserting a reading per character": 203,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 192,
-    "titles read by a machine, unmarked": 1149,
-    "uncertain readings": 59,
+    "titles read by a machine, unmarked": 1157,
+    "uncertain readings": 60,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
     "works showing a romanisation": 24,
@@ -1078,8 +1091,8 @@
     "invented markup in tests": 76,
     "nicovideo works with no rights": 80,
     "modules reading a corpus file": 16,
-    "adapters fetching without net.py": 34,
-    "captures with no floor": 10,
+    "adapters fetching without net.py": 31,
+    "captures with no floor": 8,
     "unreadable bookwalker rows": 15,
     "bookwalker series unread": 0,
     "bookwalker listings unconfirmed": 0,
@@ -1097,41 +1110,42 @@
     "works whose first publication country is unattested": 2574,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 6,
+    "producers not yet scheduled": 10,
     "rows with a moving address": 8,
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
-    "incomplete attested rows": 65,
+    "incomplete attested rows": 42,
     "works without English": 0,
     "volume rows with no publication date": 2436,
-    "predicted updates already behind the run": 1,
+    "predicted updates already behind the run": 2,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
    }
   }
  ],
  "statistics": {
-  "works": 3120,
+  "works": 3125,
   "states": {
-   "print": 1645,
-   "oneshot": 466,
-   "completed": 387,
+   "print": 1643,
+   "oneshot": 470,
+   "completed": 462,
    "active": 272,
-   "dormant": 228,
-   "slow": 74,
-   "unknown": 48
+   "dormant": 153,
+   "slow": 76,
+   "unknown": 49
   },
   "english_basis": {
-   "translated": 2753,
+   "translated": 2757,
    "official-jp": 234,
-   "licensed": 109,
+   "licensed": 110,
    "romaji": 24
   },
   "print_works": 2459,
-  "print_only": 1645,
+  "print_only": 1643,
   "volumes": 6105,
-  "with_identifier": 3120,
-  "chapters": 30471,
+  "with_identifier": 3125,
+  "chapters": 30565,
   "delivery_dated": 1034
  }
 }

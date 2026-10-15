@@ -1479,7 +1479,7 @@
    "ident": "discovery-candidate",
    "free_from": null,
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "provenance": "attested",
    "free": false,
@@ -9733,7 +9733,7 @@
    "id": "sunday_webry:episode:12207421983913735230",
    "work": "にせものターコイズ",
    "ep": "にせものターコイズ",
-   "type": "unclassified",
+   "type": "oneshot",
    "adv": false,
    "web": "serialised",
    "pub": "2026-07-25",
@@ -9753,8 +9753,8 @@
    ],
    "provenance": "attested",
    "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "work is attested elsewhere in this database",
+   "kind": "oneshot",
+   "kind_basis": "one-shot: the platform lists one episode",
    "kind_inferred": true,
    "preferred": "サンデーうぇぶり",
    "also_on": [],
@@ -25822,6 +25822,88 @@
    }
   },
   {
+   "id": "ichicomi:https://ichicomi.com/episode/12207421983947227343",
+   "work": "残り香に牙",
+   "ep": "読み切り作品",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-07-16",
+   "seen": "2026-10-16",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://ichicomi.com/episode/12207421983947227343",
+   "author": "金城まち",
+   "plat": "ichicomi",
+   "plat_name": "一迅プラス",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "oneshot",
+   "kind_basis": "a one-shot, complete in one instalment",
+   "preferred": "一迅プラス",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-07-16",
+   "wid": "w00172",
+   "work_en": {
+    "reading": "ノコリガ ニ キバ",
+    "ruby": [
+     [
+      "残",
+      "のこ"
+     ],
+     [
+      "り",
+      null
+     ],
+     [
+      "香",
+      "が"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "牙",
+      "きば"
+     ]
+    ],
+    "romaji": {
+     "macron": "Nokoriga ni Kiba",
+     "double": "Nokoriga ni Kiba",
+     "plain": "Nokoriga ni Kiba"
+    },
+    "en": "Fangs in the Lingering Scent",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Fangs in the Lingering Scent"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "キンジョウ マチ",
+    "romaji": {
+     "macron": "Kinjō Machi",
+     "double": "Kinjou Machi",
+     "plain": "Kinjo Machi"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true,
+    "id": "c00279"
+   }
+  },
+  {
    "id": "comicfuz:79346",
    "work": "IDOL×IDOL STORY！",
    "ep": "おまけ",
@@ -27939,89 +28021,6 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c00238"
-   }
-  },
-  {
-   "id": "ichicomi:https://ichicomi.com/episode/12207421983947227343",
-   "work": "残り香に牙",
-   "ep": "読み切り作品",
-   "type": "oneshot",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-07-16",
-   "seen": "2026-09-14",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://ichicomi.com/episode/12207421983947227343",
-   "author": "金城まち",
-   "plat": "ichicomi",
-   "plat_name": "一迅プラス",
-   "ident": "discovery-candidate",
-   "free_from": "2026-07-16",
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "oneshot",
-   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
-   "kind_inferred": true,
-   "preferred": "一迅プラス",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-07-16",
-   "wid": "w00172",
-   "work_en": {
-    "reading": "ノコリガ ニ キバ",
-    "ruby": [
-     [
-      "残",
-      "のこ"
-     ],
-     [
-      "り",
-      null
-     ],
-     [
-      "香",
-      "が"
-     ],
-     [
-      "に",
-      null
-     ],
-     [
-      "牙",
-      "きば"
-     ]
-    ],
-    "romaji": {
-     "macron": "Nokoriga ni Kiba",
-     "double": "Nokoriga ni Kiba",
-     "plain": "Nokoriga ni Kiba"
-    },
-    "en": "Fangs in the Lingering Scent",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Fangs in the Lingering Scent"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "キンジョウ マチ",
-    "romaji": {
-     "macron": "Kinjō Machi",
-     "double": "Kinjou Machi",
-     "plain": "Kinjo Machi"
-    },
-    "basis": "romaji",
-    "reading_basis": "analyser",
-    "unverified": true,
-    "id": "c00279"
    }
   },
   {
@@ -51840,7 +51839,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-06",
-   "seen": "2026-08-01",
+   "seen": "2026-10-16",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -60250,5 +60249,5 @@
   }
  ],
  "month": "2026-07",
- "generated": "2026-10-15"
+ "generated": "2026-10-16"
 }
