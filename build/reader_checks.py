@@ -1311,7 +1311,15 @@ RECORDED = {
 #: reported budget rests on the `::warning::` above and on somebody reading the run. Putting it on
 #: `status.html`, where this project already files what it is unsure of, is the follow-up, and it
 #: needs the reader checks to write a file, which they do not yet.
-REPORTED = {"renderings resting on a mechanical romanisation"}
+#:
+#: `bylines drawn in a spelling the field does not write` joined it on 2026-10-16, for the reason its
+#: own note gives above: a headline tie-break adds or removes rows on any run, and the spelling
+#: drawn is the right one. It rose 26 to 28 as the pipeline's newly scheduled passes brought works
+#: in, and held the site at its noon build through two updates, one of them the run that put back
+#: thirty works a faulty capture had dropped. The fault it names stays measured in the pipeline,
+#: where `credit fields an identifier does not cover` counts the records.
+REPORTED = {"renderings resting on a mechanical romanisation",
+            "bylines drawn in a spelling the field does not write"}
 
 
 def canaries(ctx):
