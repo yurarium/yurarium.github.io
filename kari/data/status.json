@@ -1,12 +1,15 @@
 {
- "generated": "2026-10-15T20:01:54+00:00",
+ "generated": "2026-10-15T21:46:12+00:00",
  "since_last": {
-  "at": "2026-10-15T12:12:54+00:00",
+  "at": "2026-10-15T20:01:54+00:00",
   "statistics": {
-   "works": 5,
-   "print_only": -2,
-   "with_identifier": 5,
-   "chapters": 94
+   "works": 83,
+   "print_works": 83,
+   "print_only": 83,
+   "volumes": 159,
+   "with_identifier": 83,
+   "chapters": -1,
+   "delivery_dated": 66
   }
  },
  "means": {
@@ -29,22 +32,22 @@
  },
  "last_run": {
   "at": "2026-10-16",
-  "releases": 1325,
-  "works": 2574,
+  "releases": 1023,
+  "works": 2657,
   "platforms": 19,
-  "series_rows": 3125,
-  "assembled": 3125,
-  "awaiting_identifier": 0,
+  "series_rows": 3208,
+  "assembled": 3239,
+  "awaiting_identifier": 31,
   "identification": {
-   "discovery-candidate": 993,
-   "known-work-match": 30,
-   "platform-genre": 302
+   "discovery-candidate": 753,
+   "known-work-match": 19,
+   "platform-genre": 251
   },
   "collapsed": {
-   "duplicate_chapters": 423,
-   "resolver": 55,
-   "samples": 13,
-   "thin_sitemap": 10
+   "duplicate_chapters": 216,
+   "resolver": 51,
+   "samples": 0,
+   "thin_sitemap": 9
   }
  },
  "gate": {
@@ -392,14 +395,14 @@
    {
     "name": "an imprint field repeating its publisher",
     "means": "print rows whose imprint field holds the same name as their publisher field, which a shop's individual-publishing service writes when an artist publishes their own book. There is no line to name; what moves this is the capture writing one name in one place.",
-    "budget": 360,
-    "value": 360
+    "budget": 370,
+    "value": 370
    },
    {
     "name": "imprint strings that reach no line",
     "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
-    "budget": 18,
-    "value": 18
+    "budget": 19,
+    "value": 19
    },
    {
     "name": "credit fields the division does not account for",
@@ -434,8 +437,8 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1242,
-    "value": 1242
+    "budget": 1266,
+    "value": 1266
    },
    {
     "name": "divisions read back from a romanisation",
@@ -452,8 +455,8 @@
    {
     "name": "publisher readings nobody has settled",
     "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
-    "budget": 22,
-    "value": 22
+    "budget": 23,
+    "value": 23
    },
    {
     "name": "renderings with nothing to show",
@@ -464,8 +467,8 @@
    {
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-    "budget": 279,
-    "value": 279
+    "budget": 285,
+    "value": 285
    },
    {
     "name": "claims whose evidence their basis does not admit",
@@ -476,8 +479,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 471,
-    "value": 471
+    "budget": 499,
+    "value": 499
    },
    {
     "name": "credits the corpus files as a venue",
@@ -512,8 +515,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 116,
-    "value": 116
+    "budget": 154,
+    "value": 154
    },
    {
     "name": "credit pages listing a work that does not name them",
@@ -536,14 +539,14 @@
    {
     "name": "credits sharing a reading nobody has ruled on",
     "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
-    "budget": 23,
-    "value": 23
+    "budget": 24,
+    "value": 24
    },
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 203,
-    "value": 203
+    "budget": 208,
+    "value": 208
    },
    {
     "name": "implausible ruby spans",
@@ -560,14 +563,14 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1157,
-    "value": 1157
+    "budget": 1194,
+    "value": 1194
    },
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 60,
-    "value": 60
+    "budget": 63,
+    "value": 63
    },
    {
     "name": "data reaching the site around the store",
@@ -578,14 +581,14 @@
    {
     "name": "titles showing a romanisation nobody has ruled on",
     "means": "titles falling through to a romanisation that nobody has examined. Distinct from the budget below, which counts every such title and cannot reach zero because a romanisation finishes a name; this counts the ones still owed a reading of the work, and it can. A rise means a new title nobody has looked at, which is ordinary and is the queue doing its job.",
-    "budget": 0,
-    "value": 0
+    "budget": 82,
+    "value": 82
    },
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 24,
-    "value": 24
+    "budget": 106,
+    "value": 106
    },
    {
     "name": "titles carrying cataloguing punctuation",
@@ -659,7 +662,7 @@
    {
     "name": "bookwalker series unread",
     "means": "BOOK☆WALKER rows whose series listing has not been read to the end, so their volume list and the first publication drawn from it rest on whichever volumes were fetched. The shelf linked one volume for 1,175 of them and this module read only page one of a paginated listing for a few more. Falls as adapters/recon/bookwalker_volumes.py --follow-series works through them, and reaches zero, because every row counted here names a series to fetch.",
-    "budget": 0,
+    "budget": 39,
     "value": 0
    },
    {
@@ -738,8 +741,8 @@
    {
     "name": "works whose first publication country is unattested",
     "means": "works whose `first_publication.country` is empty, which is DEFINITIONS §6's inclusion test not having run. It read 0 until now because build.py wrote the literal \"JP\" on every record, so the field asserted the answer and no check on it could fail. Every source here catalogues the Japanese EDITION and none states where the work first appeared, so this falls one work at a time as a serialisation venue is read off a publisher's page and recorded in data/scope.yaml. A rise means the corpus grew, which is expected, and the number to watch is the share rather than the count.",
-    "budget": 2574,
-    "value": 2574
+    "budget": 2657,
+    "value": 2657
    },
    {
     "name": "scope questions left open",
@@ -798,8 +801,8 @@
    {
     "name": "volume rows with no publication date",
     "means": "volumes on a work's print run that state no printing date, which is what the dating passes work through",
-    "budget": 2436,
-    "value": 2436
+    "budget": 2572,
+    "value": 2572
    },
    {
     "name": "predicted updates already behind the run",
@@ -829,20 +832,6 @@
    "rows": 246,
    "retrieved": "2026-08-02",
    "age_days": 75,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 0,
-   "well_formed": 0,
-   "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "bookwalker",
-   "files": 1644,
-   "works": 1644,
-   "rows": 3935,
-   "retrieved": "2026-08-05",
-   "age_days": 72,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -907,6 +896,20 @@
    "drop": null
   },
   {
+   "source": "bookwalker",
+   "files": 1727,
+   "works": 1727,
+   "rows": 4094,
+   "retrieved": "2026-10-15",
+   "age_days": 1,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 0,
+   "well_formed": 0,
+   "malformed": 0,
+   "drop": null
+  },
+  {
    "source": "comicfuz",
    "files": 2,
    "works": 130,
@@ -952,13 +955,13 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1006,
-   "rows": 7738,
+   "rows": 7740,
    "retrieved": "2026-10-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7048,
-   "well_formed": 6747,
+   "checked_rows": 7050,
+   "well_formed": 6749,
    "malformed": 301,
    "drop": null
   },
@@ -993,21 +996,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 617,
-   "rows": 9200,
+   "works": 606,
+   "rows": 8171,
    "retrieved": "2026-10-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9147,
-   "well_formed": 9146,
+   "checked_rows": 8118,
+   "well_formed": 8117,
    "malformed": 1,
    "drop": null
   }
  ],
  "ledger": {
-  "runs_held": 0,
-  "previous_at": null,
+  "runs_held": 40,
+  "previous_at": "2026-10-15T19:44:18+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1020,14 +1023,97 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 0,
+   "count": 82,
    "what": "Name in English the works that carry only a romanisation",
-   "rows": []
+   "rows": [
+    "100日後に人を〇す百合カップル",
+    "BCfアンソロジーマイクロシリーズ",
+    "orSiS百合アンソロジー",
+    "「あかりは雪姫になりたい —根暗な引きこもりがVtuberになった理由—」シリーズ",
+    "あの海に、色彩を唄う",
+    "あらしちゃんときさらちゃん",
+    "あんみき日記。",
+    "こころココロリ",
+    "こわくのこわいの",
+    "こんがりパンより焦がれる恋",
+    "つきあいきれないきみのこと",
+    "となりの魔法少女",
+    "とりこのため息",
+    "ぬくもりブランケット",
+    "ひめとやゆよ",
+    "もんれす―異種格闘モンスター娘―",
+    "ゆれる　百合短編集",
+    "ようこそこちらの世界へ",
+    "ようこそ和装お嬢様高校へ",
+    "アップルパイ・コミュニケーション",
+    "アフタープロミス",
+    "ウチから何キロメートル？",
+    "エルフはなぜ人間に恋をしたのか",
+    "ギャルと地味子が恋をする青春百合アンソロジー",
+    "ゲームセンターのこころ",
+    "サークル「ユーリカ」百合アンソロジー６　アクターズ・ラブ×君に出逢えたら",
+    "タチって言ってたよね？-元カノがこんなにかわいいなんて聞いてない-",
+    "タバコとか吸わなそうな後輩",
+    "ノアの渡航券",
+    "メイドアンドロイドの安全装置を突破したらぜ～んぶ暴かれちゃった話",
+    "ユリログ",
+    "ルナとヨーコのかわいい日常",
+    "一生一緒に！！",
+    "世界を滅ぼしたい君は麻婆豆腐",
+    "今日こそ、キスミー！",
+    "今日こそ彼女をドキドキさせたい！",
+    "仕事の後は色々と",
+    "保健室の吸血姫　～モブと姫との血婚契約～",
+    "元アイドルと保育士さん。",
+    "先輩付き合ってるんですか？",
+    "冬の終わり、春の縫い目　繭、纏う",
+    "冬の終わりに春を待つ",
+    "初凪ヒメリウム",
+    "勇者の運命",
+    "君と青と春の欠片",
+    "四十九日のお終いに　田沼朝作品集",
+    "図書室でふたり、誰もいないなら。",
+    "圧倒的に未来形",
+    "地雷女と聖女様",
+    "夏みくちゃんとちひろさん",
+    "夢中",
+    "天然のあたしと彼女日記",
+    "女にはそれぞれ裏がある",
+    "少女は今日も本を借りにくる",
+    "少女狂恋フォリ・ア・ドゥ【電子単行本】",
+    "幼なじみとの夏",
+    "彼方、彼方。",
+    "恋愛ミューティレーション",
+    "愛カラのゆるい本。",
+    "放課後drawing",
+    "春海に沈むアムネシア",
+    "正ヒロインに転生しましたが、運命の歯車は物理でぶち壊します",
+    "死角の寵児　前編",
+    "狼と子羊はいつだって求めあう",
+    "王子様系女子しかいないアイドルユニット",
+    "異世界の牧場を相続しました　～スタァストリームファーム～",
+    "異夢",
+    "白粉花の告白",
+    "真夏の昼の誘惑",
+    "短編オリジナルコミックアンソロジー 魔女と僕についての物語 ～誰も知らないきみのこと～",
+    "素直の裏顔",
+    "罪に溺れるクライム百合アンソロジー",
+    "花木姉妹へ愛をこめて",
+    "見送りしものに",
+    "誰が駒鳥逃がしたの？",
+    "近所のやさしいおねえさん",
+    "週末はおふたりさま",
+    "鈴木りつ短編集",
+    "陽がのぼり菜の花は咲く",
+    "飯モン",
+    "魔法なんかいらない",
+    "魔王さま、リリリベンジ！"
+   ]
   },
   {
    "kind": "candidate",
    "key": "shelf_rows",
-   "count": 2462,
+   "count": 2598,
    "what": "Decide which captured retailer shelf rows this database admits"
   },
   {
@@ -1039,7 +1125,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 49,
+   "count": 51,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1050,39 +1136,39 @@
     "labels with nothing to quote": 0,
     "titles with no translation of our own": 0,
     "publishers with no English": 0,
-    "an imprint field repeating its publisher": 360,
-    "imprint strings that reach no line": 18,
+    "an imprint field repeating its publisher": 370,
+    "imprint strings that reach no line": 19,
     "credit fields the division does not account for": 0,
     "works shaped like prose": 0,
     "credit phrases spelling a person otherwise": 3,
     "names rendered two ways": 0,
     "one work named two ways across its rows": 0,
-    "author names romanised as one word": 1242,
+    "author names romanised as one word": 1266,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 88,
-    "publisher readings nobody has settled": 22,
+    "publisher readings nobody has settled": 23,
     "renderings with nothing to show": 0,
-    "kana names with no stated division": 279,
+    "kana names with no stated division": 285,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 471,
+    "author readings no source states": 499,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 116,
+    "credit fields an identifier does not cover": 154,
     "credit pages listing a work that does not name them": 9,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 25,
-    "credits sharing a reading nobody has ruled on": 23,
-    "ruby asserting a reading per character": 203,
+    "credits sharing a reading nobody has ruled on": 24,
+    "ruby asserting a reading per character": 208,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 192,
-    "titles read by a machine, unmarked": 1157,
-    "uncertain readings": 60,
+    "titles read by a machine, unmarked": 1194,
+    "uncertain readings": 63,
     "data reaching the site around the store": 0,
-    "titles showing a romanisation nobody has ruled on": 0,
-    "works showing a romanisation": 24,
+    "titles showing a romanisation nobody has ruled on": 82,
+    "works showing a romanisation": 106,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
     "one work under two names in a list": 6,
@@ -1094,7 +1180,7 @@
     "adapters fetching without net.py": 31,
     "captures with no floor": 8,
     "unreadable bookwalker rows": 15,
-    "bookwalker series unread": 0,
+    "bookwalker series unread": 39,
     "bookwalker listings unconfirmed": 0,
     "volumes with an isbn and no date": 0,
     "undated cmoa candidates": 11,
@@ -1107,7 +1193,7 @@
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
     "updates naming a work we do not hold": 2,
-    "works whose first publication country is unattested": 2574,
+    "works whose first publication country is unattested": 2657,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 6,
     "producers not yet scheduled": 10,
@@ -1117,7 +1203,7 @@
     "ruby spans that do not spell their own name": 11,
     "incomplete attested rows": 42,
     "works without English": 0,
-    "volume rows with no publication date": 2436,
+    "volume rows with no publication date": 2572,
     "predicted updates already behind the run": 2,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
@@ -1125,27 +1211,27 @@
   }
  ],
  "statistics": {
-  "works": 3125,
+  "works": 3208,
   "states": {
-   "print": 1643,
+   "print": 1726,
    "oneshot": 470,
    "completed": 462,
-   "active": 272,
+   "active": 273,
    "dormant": 153,
    "slow": 76,
-   "unknown": 49
+   "unknown": 48
   },
   "english_basis": {
    "translated": 2757,
-   "official-jp": 234,
+   "official-jp": 235,
    "licensed": 110,
-   "romaji": 24
+   "romaji": 106
   },
-  "print_works": 2459,
-  "print_only": 1643,
-  "volumes": 6105,
-  "with_identifier": 3125,
-  "chapters": 30565,
-  "delivery_dated": 1034
+  "print_works": 2542,
+  "print_only": 1726,
+  "volumes": 6264,
+  "with_identifier": 3208,
+  "chapters": 30564,
+  "delivery_dated": 1100
  }
 }
