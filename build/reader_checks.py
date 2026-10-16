@@ -227,7 +227,7 @@ def inv_status_page_shows_no_japanese_of_its_own(ctx):
     doc = ctx.get("status") or {}
     if not iface or not doc:
         return []
-    sections = ["lastRun", "connectors", "outstanding", "stats", "gate"]
+    sections = ["lastRun", "sourceHealth", "connectors", "outstanding", "stats", "gate"]
     try:
         shown = iface.labels([(fn, doc) for fn in sections])
     except interface.Unavailable as e:
@@ -235,6 +235,10 @@ def inv_status_page_shows_no_japanese_of_its_own(ctx):
     ruled = {str(v) for row in (doc.get("outstanding") or [])
              for v in (row.get("rows") or []) if isinstance(v, str)}
     ruled |= {str(b.get("means") or "") for b in ((doc.get("gate") or {}).get("budgets") or [])}
+    # A FAILING SOURCE'S ERROR IS WHAT THE HOST OR THE RUN SAID, quoted, and a path or a page title
+    # in it is the subject being reported.
+    ruled |= {str(x.get("error") or "") for x in
+              ((doc.get("source_health") or {}).get("failing") or [])}
     bad = []
     for name, text in zip(sections, shown):
         for run in set(re.findall(r"[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff]+", text)):

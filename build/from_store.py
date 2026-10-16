@@ -47,18 +47,15 @@ import rules                                                            # noqa: 
 #: More than one is listed while a schema change is in flight, so the two repositories can be
 #: updated in either order rather than in lockstep.
 #:
+#: `514800d93712ae3f` adds `source_health`, each source's run of failures from the pipeline's
+#: source-health ledger, which `status.from_store` turns into the status page's Source health
+#: section, and `check_result.measure`, which says whether a budget's ceiling is a pass mark: a
+#: `regression` is held to it, an `arrival` rises with the corpus, a `report` has none.
 #: `488027d7634c5c45` adds `work_relation`, two works the registry relates and does not merge, such
-#: as 怨霊日和's 【読み切り版】 and the serialisation it became. `emit.series` turns it into each
-#: work's `related` list, which the work page draws as Continued as or Earlier version.
-#: `441bd66205d1fc64` makes `admission.record` nullable, where NULL means the grounds belong to the
-#: work instead of to one catalogue record, and widens the uniqueness index to coalesce the columns
-#: that can now be NULL. Nothing here reads either table directly, the pipeline's `emit.series`
-#: doing that, and the digest moves anyway because the stamp answers for the shape.
-#: `441bd66205d1fc64` stays listed because a store published before the change is still readable by
-#: this build, which is what "either order" means; it comes out when nothing in flight needs it.
-#: `7065ca642b650e09` came out with this change. Two digests is the in-flight pair and a third is a
-#: store two schemas old, which nothing publishes and which this would have gone on accepting.
-KNOWN_SCHEMAS = ("441bd66205d1fc64", "488027d7634c5c45")
+#: as 怨霊日和's 【読み切り版】 and the serialisation it became. It stays listed so a store published
+#: before the change is still readable, which is what "either order" means.
+#: `441bd66205d1fc64` came out with this change, being two schemas old.
+KNOWN_SCHEMAS = ("488027d7634c5c45", "514800d93712ae3f")
 
 
 def open_store(path):

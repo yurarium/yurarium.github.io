@@ -137,6 +137,30 @@ function connectors(d) {
              cell: x => x.checked_rows ? `<span class="${x.malformed ? 'st-old' : ''}">${esc(x.malformed)}</span>` : '—' }], c));
 }
 
+function sourceHealth(d) {
+  const h = d.source_health;
+  // A DOCUMENT WRITTEN BEFORE THE STORE CARRIED THE LEDGER has no section, and the page shows none
+  // rather than a list that would read as every source answering.
+  if (!h) return '';
+  const f = h.failing || [];
+  const open = f.filter(x => x.issue);
+  const lede = esc(f.length
+    ? T(`${f.length} 系統が直近の実行で失敗。うち ${open.length} 系統は ${h.threshold} 回以上続けて失敗し、課題が開いている。${h.healthy} 系統は応答。`,
+        `${f.length} sources failed their last run, ${open.length} of them ${h.threshold} or more runs in a row, which opens an issue for each. ${h.healthy} answered.`)
+    : T(`${h.healthy} 系統すべてが直近の実行で応答。`,
+        `All ${h.healthy} sources answered their last run.`))
+    + `<br><span class="dim">${esc(T(
+        '失敗した系統のファイルは前回の良好な取得のまま。stale: は取得が期限を過ぎたファイル。',
+        'A failing source keeps its last good capture. A stale: source is a file past the age its producer promises.'))}</span>`;
+  return section(T('ソースの健全性', 'Source health'), lede, T('失敗中の系統', 'Failing sources'),
+    f.length ? table([{ h: T('ソース', 'source'), cell: x => esc(x.source) },
+           { h: T('失敗開始', 'failing since'), cell: x => `<span class="${x.issue ? 'st-old' : ''}">${esc(x.failing_since)}</span>` },
+           { h: T('日数', 'days'), num: true, cell: x => esc(x.days) },
+           { h: T('連続', 'runs'), num: true, cell: x => esc(x.consecutive) },
+           { h: T('最終成功', 'last answered'), cell: x => esc(x.last_ok || '—') },
+           { h: T('理由', 'error'), cell: x => `<span class="dim">${esc(x.error || '')}</span>` }], f) : '');
+}
+
 const KIND = {
   decision:    ['判断', 'decision'],
   research:    ['調査', 'research'],
@@ -193,7 +217,7 @@ function gate(d) {
 
 function render(d) {
   document.getElementById('st').innerHTML =
-    lastRun(d) + connectors(d) + outstanding(d) + stats(d) + gate(d) +
+    lastRun(d) + sourceHealth(d) + connectors(d) + outstanding(d) + stats(d) + gate(d) +
     `<p class="dim" style="font-size:.85em">${esc(T('生成: ', 'generated '))}${esc(d.generated)}</p>`;
 }
 
