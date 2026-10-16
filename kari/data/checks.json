@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16",
+ "generated": "2026-10-17",
  "invariants": [
   {
    "name": "ruby covers its surface",
@@ -297,271 +297,316 @@
    "name": "citations withheld from readers",
    "means": "readings whose recorded address is on a route the site may not link to, so the citation is held back. All of them are NDL creator searches on the disallowed /api path. Falls as the record page is recorded in place of the query; a rise means a pass stored a query again.",
    "budget": 36,
-   "value": 36
+   "value": 36,
+   "measure": "arrival"
   },
   {
    "name": "one page cited for two claims",
    "means": "records whose reading and whose English name cite the same page while naming different kinds of source, so at most one of the two can be right about where it came from. A rise means an entry carried one address for two claims again.",
    "budget": 1,
-   "value": 1
+   "value": 1,
+   "measure": "regression"
   },
   {
    "name": "kana left in a romanisation",
    "means": "strings the shipped names file offers in place of Japanese that still hold a kana character, which undoes the one job a romanisation has. A rise means a renderer met a kana it has no table entry for and printed it.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "titles read past their own gloss",
    "means": "titles printing how a word in them is said, shipped with a reading that drops the kana or reads the bracket aloud. A publisher's furigana on the line outranks an analyser. A rise means a capture route reached the naming passes without the gloss rule.",
    "budget": 1,
-   "value": 1
+   "value": 1,
+   "measure": "regression"
   },
   {
    "name": "titles shorter than their own reading",
    "means": "MADB records whose stated reading carries ISBD's mark for other title information while the stored name carries none, so the work is held under a name shorter than the one the catalogue read out. Falls when a source states the missing words; a rise means a route went back to reading the title out of one field.",
    "budget": 3,
-   "value": 3
+   "value": 3,
+   "measure": "regression"
   },
   {
    "name": "labels with nothing to quote",
    "means": "records carrying a publisher-side yuri label whose imprint holds no term saying so, which is a label the work page cannot show a reader the evidence for. A rise means a pass has gone back to storing a field from a record other than the one that justified the label.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "titles with no translation of our own",
    "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "publishers with no English",
    "means": "distinct publisher and imprint names that render as Japanese in English-only mode. A rise means new publishers entered the corpus faster than their names were rendered.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "an imprint field repeating its publisher",
    "means": "print rows whose imprint field holds the same name as their publisher field, which a shop's individual-publishing service writes when an artist publishes their own book. There is no line to name; what moves this is the capture writing one name in one place.",
    "budget": 370,
-   "value": 370
+   "value": 370,
+   "measure": "arrival"
   },
   {
    "name": "imprint strings that reach no line",
    "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
    "budget": 19,
-   "value": 19
+   "value": 19,
+   "measure": "arrival"
   },
   {
    "name": "credit fields the division does not account for",
    "means": "credit fields whose shipped division leaves part of the field unexplained, so the interface renders the string as the catalogue wrote it instead of rebuilding a byline that would have lost something. A rise means the splitter met a shape it cannot divide.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "works shaped like prose",
    "means": "works credited to an author beside an illustrator whose only source is a retailer's shelf, which is how an illustrated novel is billed and how a work nothing catalogues is admitted. DEFINITIONS §6 refuses prose and had no test. A rise is a work somebody should look at before it reaches readers with a work record.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "credit phrases spelling a person otherwise",
    "means": "credit fields whose composed phrase spells one of the people in it differently from the name store, counted by asking the shipped division who the field names. It was 207 while a line of one person plus a role bracket was left exactly as the analyser first wrote it, so a reading sourced afterwards could not reach it. It was then 70 while a line was recomposed only where every person on it had a store record, which held back 60 lines on the strength of a name already in Latin that no store will ever hold. The residue is a field naming one person inside notation that states no job, which is the one shape the recomposition still refuses to touch.",
    "budget": 3,
-   "value": 3
+   "value": 3,
+   "measure": "regression"
   },
   {
    "name": "names rendered two ways",
    "means": "strings the shipped maps spell one way as a publisher and another way as a person, which happens because a self-published work names its own author as its publisher. A rise means a publisher name was written by hand where the name store already spelt it.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "one work named two ways across its rows",
    "means": "works whose rows render the same Japanese phrase two different ways, grouped on the name at the front of each rather than on the fold key, which folds an anthology apart from the work it collects. A rise means a row was named without looking at what its siblings already say.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "author names romanised as one word",
    "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
    "budget": 1266,
-   "value": 1266
+   "value": 1266,
+   "measure": "arrival"
   },
   {
    "name": "divisions read back from a romanisation",
    "means": "people whose name is divided on the strength of a space in a community editor's romanisation, recovered by reading that romanisation backwards. One of the two classes `a division cites its source` admits without a source that states readings, counted here so that admitting it is visible. It falls when a source states one of them.",
    "budget": 3,
-   "value": 3
+   "value": 3,
+   "measure": "regression"
   },
   {
    "name": "divisions resting on a community database",
    "means": "people whose name divides where Wikidata says it divides and where nothing else does, either because their reading came from there or because the space was carried onto a reading of their own. The project owner ruled the source noncanonical and admitted it as a floor, so this is what that admission costs, counted where somebody can watch it. It falls when a publisher or the national library states a division.",
    "budget": 88,
-   "value": 88
+   "value": 88,
+   "measure": "arrival"
   },
   {
    "name": "publisher readings nobody has settled",
    "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
    "budget": 23,
-   "value": 23
+   "value": 23,
+   "measure": "arrival"
   },
   {
    "name": "renderings with nothing to show",
    "means": "works whose English rendering holds neither a romanisation nor an English name while the surface is Japanese. A rise means a composed name lost its romanisation.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "kana names with no stated division",
    "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
    "budget": 285,
-   "value": 285
+   "value": 285,
+   "measure": "arrival"
   },
   {
    "name": "claims whose evidence their basis does not admit",
    "means": "records whose source kind is not one their basis admits, which is a citation outliving the claim it was written for. STORE-PLAN §5a: the composite key goes on `claim` when this reaches 0. The store answers the same question over its own tables and agrees.",
    "budget": 102,
-   "value": 102
+   "value": 102,
+   "measure": "regression"
   },
   {
    "name": "author readings no source states",
    "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
    "budget": 499,
-   "value": 499
+   "value": 499,
+   "measure": "arrival"
   },
   {
    "name": "credits the corpus files as a venue",
    "means": "credits in the author store that this corpus also records as a publisher or an imprint, and that carry no mark saying what they are. Candidates rather than faults, because a doujin artist is their own imprint. A rise means a route put a company where a byline goes.",
    "budget": 16,
-   "value": 16
+   "value": 16,
+   "measure": "arrival"
   },
   {
    "name": "interpunct credits nobody has ruled on",
    "means": "credit fields holding a ・ where the corpus points both ways: one of the names either side is credited elsewhere on its own and the other is not, so it cannot be said whether the mark separates two people or sits inside one name. It falls when somebody writes the answer into data/identity/interpunct-rulings.yaml, and a wrong guess either invents a person or erases one.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "credits carrying their own cataloguing",
    "means": "author records the build publishes no rendering for, which today is a name with a role welded on to it and the person held separately beside it. A rise means a capture started writing cataloguing into the author position again.",
    "budget": 38,
-   "value": 38
+   "value": 38,
+   "measure": "regression"
   },
   {
    "name": "credits that restate a name",
    "means": "author fields where one credit is the reading of another, so one person is counted twice. A rise means a route wrote a name and its reading into one field as two credits.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "credits matching a chapter",
    "means": "author fields holding a credit made only of digits or markup. A rise means a parser folded something that is not a name into a byline.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "credit fields an identifier does not cover",
    "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-   "budget": 165,
-   "value": 166
+   "budget": 18,
+   "value": 18,
+   "measure": "arrival"
   },
   {
    "name": "credit pages listing a work that does not name them",
    "means": "pairings a credit page would show whose work does not carry that credit's spelling in its own credit field. Substring arithmetic on two shipped fields, so it owes the splitter, the fold and the registry lookup nothing and cannot be satisfied by them agreeing. It will not reach zero: six of the eight are merges, where the surviving spelling is by construction not the one on the retired spelling's works, and two are release-row edges. A rise with neither behind it is a page claiming somebody worked on a book that does not name them.",
-   "budget": 13,
-   "value": 13
+   "budget": 11,
+   "value": 11,
+   "measure": "regression"
   },
   {
    "name": "publisher pages listing a work from another house",
    "means": "pairings a house page would show whose work names no such publisher on any print row. The publisher half of the measure above and independent the same way. A rise means one house is showing another's shelf, which is what an unmerged renaming looks like.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "credit identifiers naming nobody",
    "means": "live credit identifiers no work is credited to, so they get no page. All five are joined spellings the ampersand split left behind, each half now holding its own address. A rise means a credit left the corpus or another splitter change orphaned a spelling.",
-   "budget": 25,
-   "value": 25
+   "budget": 29,
+   "value": 29,
+   "measure": "regression"
   },
   {
    "name": "credits sharing a reading nobody has ruled on",
    "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
    "budget": 24,
-   "value": 24
+   "value": 24,
+   "measure": "regression"
   },
   {
    "name": "ruby asserting a reading per character",
    "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
    "budget": 220,
-   "value": 220
+   "value": 220,
+   "measure": "arrival"
   },
   {
    "name": "implausible ruby spans",
    "means": "furigana runs holding fewer kana than they have kanji. A rise means the aligner placed a boundary somewhere no reading could fall, which the spelling check cannot see.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "readings an analyser no longer installed produced",
    "means": "analyser readings stamped with a version other than the one this run holds. requirements.txt pins the analyser so an upgrade is a decision rather than whatever pip resolved that morning, and this is the other half of that: the day the pin moves, every reading made under the old version still says what that analyser thought. It falls as those are re-made or overridden and it rises when the pin does, which is the only time it should. On 2026-09-24 an unpinned upgrade took 40 titles out of `ordinary` and put the mark on 36, and no measure was asking whether the analyser under the rule had changed.",
    "budget": 192,
-   "value": 192
+   "value": 192,
+   "measure": "report"
   },
   {
    "name": "titles read by a machine, unmarked",
    "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
    "budget": 1194,
-   "value": 1195
+   "value": 1194,
+   "measure": "arrival"
   },
   {
    "name": "uncertain readings",
    "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
    "budget": 63,
-   "value": 63
+   "value": 63,
+   "measure": "arrival"
   },
   {
    "name": "data reaching the site around the store",
    "means": "fields a reader is served that the relational store could not answer. STORE-PLAN §1: the store becomes the sole compiled form, and this is what says whether a migration is happening. Asked of what the site SERVES, so it cannot fall by adding a table nobody reads, and it reaches 0 when the plan is done.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "titles showing a romanisation nobody has ruled on",
    "means": "titles falling through to a romanisation that nobody has examined. Distinct from the budget below, which counts every such title and cannot reach zero because a romanisation finishes a name; this counts the ones still owed a reading of the work, and it can. A rise means a new title nobody has looked at, which is ordinary and is the queue doing its job.",
-   "budget": 82,
-   "value": 82
+   "budget": 58,
+   "value": 58,
+   "measure": "arrival"
   },
   {
    "name": "works showing a romanisation",
    "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-   "budget": 106,
-   "value": 106
+   "budget": 82,
+   "value": 82,
+   "measure": "arrival"
   },
   {
    "name": "titles carrying cataloguing punctuation",
    "means": "titles a reader is shown that still hold a bibliography's own ISBD markup: an equals sign in any spelling, or a reissue marker from the closed set adapters/facts/cataloguing holds. A subtitle after the same colon is content and is not counted. A rise means a capture route wrote a catalogue string through as a name.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "works offered twice in a list",
    "means": "rows beyond the first that a shipped list gives to one identity work. 41 works were listed twice or three times in index.json, which emitted one row per source record and asked identity nothing. A rise means a collapse stopped running, or a new list shipped without asking which work a record belongs to.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "one work under two names in a list",
    "means": "pairs of rows in one list whose titles fold equal and whose credits share a person, which is one work offered twice under two names. Measured on the shipped rows and never on the identity registry, so it reports the pairs the registry has not joined. A queue rather than a fault count: each pair needs deciding, and the number falls by deciding them.",
    "budget": 6,
-   "value": 6
+   "value": 5,
+   "measure": "regression"
   },
   {
    "name": "facts with more than one home",
    "means": "a vocabulary, a shape or a rule typed into a second file",
    "budget": 12,
    "value": null,
+   "measure": "source",
    "not_measured": "source-quality budget; measured at check-in"
   },
   {
@@ -569,6 +614,7 @@
    "means": "a comment saying something cannot happen, naming nothing that proves it",
    "budget": 0,
    "value": null,
+   "measure": "source",
    "not_measured": "source-quality budget; measured at check-in"
   },
   {
@@ -576,6 +622,7 @@
    "means": "stock phrasing and filler in comments, docstrings and documentation, plus em dashes, which are a budget here and zero in public text. Public prose is an invariant instead; this is the backlog and it ratchets down. See adapters/lint/tics.py for what is deliberately not flagged, and why legibility beats camouflage.",
    "budget": 877,
    "value": null,
+   "measure": "source",
    "not_measured": "source-quality budget; measured at check-in"
   },
   {
@@ -583,110 +630,128 @@
    "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
    "budget": 76,
    "value": null,
+   "measure": "source",
    "not_measured": "source-quality budget; measured at check-in"
   },
   {
    "name": "nicovideo works with no rights",
    "means": "ニコニコ works captured with no copyright line read off their page, which is the only field the platform gives that names a publisher. Falls when the capture re-runs against the widened pattern; does not reach zero, because a work its own author posted carries no copyright element at all.",
    "budget": 80,
-   "value": 80
+   "value": 80,
+   "measure": "arrival"
   },
   {
    "name": "modules without a test",
    "means": "Python modules no suite covers. Offline tests are the enforcement for factoring as well: a module that cannot be tested without a network has not separated its logic from its I/O, so this number falling is the refactoring, not a proxy for it.",
    "budget": 0,
    "value": null,
+   "measure": "source",
    "not_measured": "source-quality budget; measured at check-in"
   },
   {
    "name": "modules reading a corpus file",
    "means": "modules that open one of the compiled JSON files by path instead of asking the store; §13 made the store the compiled form and `adapters/population.py` the one reader",
    "budget": 16,
-   "value": 16
+   "value": 16,
+   "measure": "regression"
   },
   {
    "name": "adapters fetching without net.py",
    "means": "modules that call urlopen themselves instead of going through adapters/net.py, and so have no per-host pause, no retry for a 503, no status code to tell an absent work from a refused request, and no sight of a redirect. Falls as each one is migrated. Its floor is not zero: adapters/editions/capture.py sends one route an extra header and keeps everything else net.py has, and a route that must not be fetched at all should not be made convenient.",
    "budget": 31,
-   "value": 31
+   "value": 31,
+   "measure": "regression"
   },
   {
    "name": "captures with no floor",
    "means": "adapters that fetch from a host, write into data/source, and have nothing to refuse on. A host serving nonsense replaces the last good capture and reports success. adapters/ledger.py reports the damage afterwards; a floor prevents it.",
    "budget": 8,
-   "value": 8
+   "value": 8,
+   "measure": "regression"
   },
   {
    "name": "unreadable bookwalker rows",
    "means": "rows admitted from BOOK☆WALKER's shelf with no first publication VENUE, which is what §6's scope test turns on since the 2026-08-05 amendment. A row without one has not been fetched yet, or its series page listed nothing readable. Falls as adapters/recon/bookwalker_volumes.py works through the queue, and reaches zero when it finishes. The date is deliberately not what is counted: 1,500 of these titles are digital-only, have no print edition anywhere, and are complete records without one.",
    "budget": 15,
-   "value": 15
+   "value": 15,
+   "measure": "arrival"
   },
   {
    "name": "bookwalker series unread",
    "means": "BOOK☆WALKER rows whose series listing has not been read to the end, so their volume list and the first publication drawn from it rest on whichever volumes were fetched. The shelf linked one volume for 1,175 of them and this module read only page one of a paginated listing for a few more. Falls as adapters/recon/bookwalker_volumes.py --follow-series works through them, and reaches zero, because every row counted here names a series to fetch.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "bookwalker listings unconfirmed",
    "means": "BOOK☆WALKER rows whose series listing was read before the reader compared what it read against the shop's own 全N件. Until 2026-08-06 the last row of a listing swallowed the markup printed underneath it and was identified by the related-series link in there, so it was dropped; a listing is sorted newest first, so the row dropped is the OLDEST volume and `first_publication` is the earliest date across the volumes read. Falls as adapters/recon/bookwalker_volumes.py --follow-series re-reads them, and reaches zero, because every row counted here names a series to fetch.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "volumes with an isbn and no date",
    "means": "volumes on a work page stating an ISBN and no publication date. An ISBN is a key into a registry that states one, so each of these is a lookup nobody has done. Falls as adapters/openbd/enrich.py --fetch works through the corpus. Its floor is the books openBD has no record of, which was 245 of 2,321 ISBNs when this was written.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "undated cmoa candidates",
    "means": "the same count for the コミックシーモア half of the queue, falling as adapters/cmoa_volumes.py works through it. Its floor is high and known: cmoa states an ISBN or an 出版年月 only where a volume was printed, and 754 of the 1,844 rows come from two digital distributors whose pages carry neither.",
    "budget": 11,
-   "value": 11
+   "value": 11,
+   "measure": "arrival"
   },
   {
    "name": "macron boundaries nobody has ruled on",
    "means": "names where our macron says a long vowel and a source spells the pair out, which nobody has read. Most of the class is a style, because MangaUpdates and Wikidata write ou for ō; what hides in it is a pair crossing a word boundary, where 御家's オウチ is o-uchi and `Ōchi` states a long o nobody says. Four of 21 were that. The owner ruled on 2026-08-12 that a morphology rule is not worth buying for four names, so the four are data in kana.NOT_LONG and this is what stops a fifth arriving unnoticed. A rise is a name to read.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "arrival"
   },
   {
    "name": "works whose records number one volume twice",
    "means": "works whose print records give one volume number to two rows, so the page draws vol. 1 twice and heads the halves as two runs. Its floor is 10 and the floor is real books: citrus was printed twice and MADB gave it two C-numbers, and a reader should see both. The other ten are one run described by two catalogues at two precisions, and those go when the volumes themselves are reconciled. A rise is a new pair worth looking at by hand.",
    "budget": 8,
-   "value": 8
+   "value": 8,
+   "measure": "regression"
   },
   {
    "name": "volume numbers a page draws twice",
    "means": "volume numbers a work page would draw more than once inside one print run. The measure beside `works whose records number one volume twice`, asking about the ROWS a reader sees rather than the records behind them, which is a different question once a run's records are folded into one list. Its floor is 5: 君と綴るうたかた numbers a volume 6 in 2024-03 and another in 2025-01-13, a second printing with its own ISBN that a date comparison cannot choose between. A rise means a fold stopped folding.",
    "budget": 10,
-   "value": 10
+   "value": 10,
+   "measure": "regression"
   },
   {
    "name": "works holding fewer volumes than the shop states",
    "means": "works コミックシーモア sells more volumes of than the corpus holds, which is a capture that has fallen behind. The shop is Tier C and this asserts only that two parties disagree about a countable thing. A rise is ordinary, and is what a series publishing ahead of the next capture looks like.",
    "budget": 70,
-   "value": 70
+   "value": 70,
+   "measure": "arrival"
   },
   {
    "name": "works holding more volumes than the shop states",
    "means": "the other direction, counted apart so a fixed over-count cannot hide a new under-count. Mostly products counted as volumes: BOOK☆WALKER lists free sample editions among a series' items and the ingest numbers every item, which is how MURCIÉLAGO came to have 32 volumes where the shop and the bibliography both say 29. Should fall to near nothing once a volume number is read from the product title; what is left is a work the shop has delisted from.",
    "budget": 28,
-   "value": 28
+   "value": 28,
+   "measure": "report"
   },
   {
    "name": "shelf admissions a reader cannot follow",
    "means": "works a retailer's yuri shelf admitted whose row offers no page on that retailer, so the source named as putting the work here cannot be reached from it. Falls as a route records which of the shop's pages it read the work off. Its floor is the works a shop lists under two titles where the bibliography holds one, for which no single page is the work's.",
    "budget": 5,
-   "value": 5
+   "value": 5,
+   "measure": "regression"
   },
   {
    "name": "three as an organising shape",
    "means": "lists of exactly three items, and runs of three bold-led paragraphs, in documents that ship at 1.0. Three reads as rhetoric; four reads as an inventory. When there really are three things, write them as prose or find the fourth that was left out to make the shape work.",
    "budget": 27,
    "value": null,
+   "measure": "source",
    "not_measured": "source-quality budget; measured at check-in"
   },
   {
@@ -694,6 +759,7 @@
    "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
    "budget": 0,
    "value": null,
+   "measure": "source",
    "not_measured": "source-quality budget; measured at check-in"
   },
   {
@@ -701,157 +767,174 @@
    "means": "names rebound more than 300 lines from their first binding. Two shipped bugs came from this; see adapters/lint/shadowing.py for why the count is not simply falling.",
    "budget": 40,
    "value": null,
+   "measure": "source",
    "not_measured": "source-quality budget; measured at check-in"
   },
   {
    "name": "announced works the corpus does not hold",
    "means": "works a comparator announced on a platform this reads openly that the corpus does not hold. The policy is that such a work is ingested and presented without waiting for a person; a rise means an adapter cannot reach it, the platform titles it differently, or the promotion stopped happening",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "updates naming a work we do not hold",
    "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-   "budget": 4,
-   "value": 8
+   "budget": 2,
+   "value": 2,
+   "measure": "arrival"
   },
   {
    "name": "works whose first publication country is unattested",
    "means": "works whose `first_publication.country` is empty, which is DEFINITIONS §6's inclusion test not having run. It read 0 until now because build.py wrote the literal \"JP\" on every record, so the field asserted the answer and no check on it could fail. Every source here catalogues the Japanese EDITION and none states where the work first appeared, so this falls one work at a time as a serialisation venue is read off a publisher's page and recorded in data/scope.yaml. A rise means the corpus grew, which is expected, and the number to watch is the share rather than the count.",
    "budget": 2657,
-   "value": 2657
+   "value": 2657,
+   "measure": "report"
   },
   {
    "name": "scope questions left open",
    "means": "works a scope signal flagged as a possible translation that nobody has ruled on. A credited translator and a publisher's foreign-comics line are evidence and not proof: a 現代語訳 is translated and Japanese. Falls as each is settled either way in data/scope.yaml, citing the page that settles it, and reaches zero.",
    "budget": 2,
-   "value": 2
+   "value": 2,
+   "measure": "arrival"
   },
   {
    "name": "targets a capture wrote no row for",
    "means": "works a platform pass was given as a target and wrote no row for. The pass put each in a `failed` list, printed it and dropped it, so until now a work asked for and not got left nothing in the repository at all. A rise means a pass has stopped resolving something it used to, which is either an address that moved or a platform that withdrew a work. It falls when the target is captured, or when a platform's refusal is written into a register the count reads, as data/source/kadokomi/withheld.yaml already is.",
    "budget": 6,
-   "value": 6
+   "value": 6,
+   "measure": "report"
   },
   {
    "name": "producers not yet scheduled",
    "means": "entries in adapters/producers.yaml whose files are read and kept current by nothing scheduled: producers run once by hand, files with no producer, and superseded files awaiting removal. Falls as each is wired onto a cadence or retired with its reader.",
    "budget": 10,
-   "value": 10
+   "value": 10,
+   "measure": "regression"
   },
   {
    "name": "rows with a moving address",
    "means": "rows anchored on a chapter address whose identifier holds no work-level address on the same host. A chapter address moves when the work publishes, so a rise means a work has arrived whose address nobody has read yet and which would be minted a second identifier the next time it updates. Run adapters/gigaviewer/workaddress.py and apply what it writes with identity.py --attachments.",
-   "budget": 8,
-   "value": 7
+   "budget": 7,
+   "value": 7,
+   "measure": "arrival"
   },
   {
    "name": "listing series with no feed of their own",
    "means": "series a GigaViewer platform's own yuri listing names that the last per-series feeds run did not resolve. The pairing of a name to a series id is positional and slipped by one on 2026-08-10, which cost 一迅プラス's second entry its chapter list while every other work came out renamed and looking right. Falls to zero on the first run after the fix; a rise means the pairing has slipped again, or a platform announced a series before its first chapter.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "series names holding a page title",
    "means": "works a GigaViewer feeds file holds under a name whose round brackets do not close, which is what a feed title read with a greedy match leaves behind: the platform's own bracketed name and its tagline, with the series trapped at the end. The match was replaced in c747b62 and the four rows it had already written are still in the source layer, kept by carry_over. Each goes when its platform's feeds are fetched again.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "ruby spans that do not spell their own name",
    "means": "name records whose stored furigana do not reconstruct the name they sit over, so a renderer splicing them lands them on the wrong characters",
    "budget": 11,
-   "value": 11
+   "value": 11,
+   "measure": "regression"
   },
   {
    "name": "incomplete attested rows",
    "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
    "budget": 46,
-   "value": 46
+   "value": 47,
+   "measure": "regression"
   },
   {
    "name": "works without English",
    "means": "works whose title reaches neither an English name nor a romanisation, so an English-only reader is shown the Japanese",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "volume rows with no publication date",
    "means": "volumes on a work's print run that state no printing date, which is what the dating passes work through",
    "budget": 2580,
-   "value": 2580
+   "value": 2580,
+   "measure": "arrival"
   },
   {
    "name": "predicted updates already behind the run",
    "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
    "budget": 1,
-   "value": 1
+   "value": 1,
+   "measure": "report"
   },
   {
    "name": "volume rows a page counts but cannot list",
    "means": "volume rows a catalogue counts and states nothing about, so a page can show the count and list nothing",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   },
   {
    "name": "works named by a truncation",
    "means": "titles ending in an ASCII ellipsis, which is a listing page truncating a long name and the pipeline storing the truncation as the work. A published month keeps its row set, so a row shipped that way stays until the archive ages out.",
    "budget": 0,
-   "value": 0
+   "value": 0,
+   "measure": "regression"
   }
  ],
  "seconds": {
-  "the pipeline runs from a clean checkout": 3.339,
-  "every name is defined where it is used": 3.255,
-  "content flags are accounted for": 2.821,
-  "the store has one writer": 1.725,
-  "credit fields an identifier does not cover": 1.263,
-  "modules reading a corpus file": 1.245,
-  "interpunct credits nobody has ruled on": 0.907,
-  "data reaching the site around the store": 0.889,
-  "curated values reach the store": 0.679,
-  "no record comes from a host that is not a source": 0.538,
-  "a fact is reached through its entry point": 0.494,
-  "a name is answered by one module": 0.488,
-  "divisions resting on a community database": 0.332,
-  "every Japanese field the data carries has a ruling": 0.326,
-  "a division cites its source": 0.305,
-  "a division names its donor in a field": 0.29,
-  "a fixture states where it came from": 0.287,
-  "readings an analyser no longer installed produced": 0.276,
-  "announced works the corpus does not hold": 0.264,
-  "no build-machine paths in published files": 0.231,
-  "works holding fewer volumes than the shop states": 0.216,
-  "scope rulings are accounted for": 0.098,
-  "one work under two names in a list": 0.086,
-  "unreadable bookwalker rows": 0.074,
-  "a stated reading names where it came from": 0.058,
-  "ruby spells the reading": 0.053,
-  "captures with no floor": 0.045,
+  "the pipeline runs from a clean checkout": 3.636,
+  "every name is defined where it is used": 3.341,
+  "content flags are accounted for": 2.751,
+  "the store has one writer": 1.648,
+  "credit fields an identifier does not cover": 1.337,
+  "modules reading a corpus file": 1.313,
+  "interpunct credits nobody has ruled on": 0.818,
+  "curated values reach the store": 0.803,
+  "data reaching the site around the store": 0.731,
+  "no record comes from a host that is not a source": 0.541,
+  "a fact is reached through its entry point": 0.45,
+  "a name is answered by one module": 0.385,
+  "every Japanese field the data carries has a ruling": 0.325,
+  "divisions resting on a community database": 0.307,
+  "a fixture states where it came from": 0.277,
+  "a division names its donor in a field": 0.27,
+  "a division cites its source": 0.266,
+  "readings an analyser no longer installed produced": 0.266,
+  "announced works the corpus does not hold": 0.266,
+  "works holding fewer volumes than the shop states": 0.243,
+  "no build-machine paths in published files": 0.233,
+  "one work named two ways across its rows": 0.216,
+  "scope rulings are accounted for": 0.096,
+  "one work under two names in a list": 0.095,
+  "unreadable bookwalker rows": 0.076,
+  "a stated reading names where it came from": 0.063,
+  "ruby spells the reading": 0.051,
+  "captures with no floor": 0.047,
   "no ruby over bare Latin": 0.038,
-  "works holding more volumes than the shop states": 0.031,
-  "a reading can show its source": 0.03,
-  "the feed is newest first": 0.021,
-  "one work named two ways across its rows": 0.02,
-  "publishers with no English": 0.018,
-  "implausible ruby spans": 0.018,
-  "claims whose evidence their basis does not admit": 0.016,
+  "works holding more volumes than the shop states": 0.034,
+  "a reading can show its source": 0.032,
+  "the feed is newest first": 0.023,
+  "implausible ruby spans": 0.02,
+  "publishers with no English": 0.017,
   "adapters fetching without net.py": 0.016,
   "rows with a moving address": 0.016,
   "ruby covers its surface": 0.015,
   "kana left in a romanisation": 0.015,
-  "labels with nothing to quote": 0.014,
-  "works offered twice in a list": 0.014,
+  "labels with nothing to quote": 0.015,
+  "claims whose evidence their basis does not admit": 0.015,
+  "works offered twice in a list": 0.015,
   "readings are stored as kana": 0.013,
   "ruby asserting a reading per character": 0.013,
-  "updates naming a work we do not hold": 0.012,
-  "a kana name's reading spells it": 0.01,
   "renderings with nothing to show": 0.01,
+  "updates naming a work we do not hold": 0.01,
   "citations withheld from readers": 0.009,
+  "a kana name's reading spells it": 0.009,
   "titles with no translation of our own": 0.009,
+  "works whose records number one volume twice": 0.009,
+  "volume numbers a page draws twice": 0.009,
   "a record makes one live claim per predicate": 0.008,
-  "works whose records number one volume twice": 0.008,
-  "volume numbers a page draws twice": 0.008,
   "credits that restate a name": 0.007,
   "a work shows the English its record holds": 0.007,
   "titles carrying cataloguing punctuation": 0.007,
@@ -864,18 +947,18 @@
   "a volume number is the shop's own": 0.005,
   "a delivery date never stands beside a printing": 0.005,
   "credit pages listing a work that does not name them": 0.005,
+  "shelf admissions a reader cannot follow": 0.005,
   "volume rows with no publication date": 0.005,
-  "an imprint field repeating its publisher": 0.004,
   "credit phrases spelling a person otherwise": 0.004,
+  "a stated printing precedes the delivery": 0.004,
+  "credits the corpus files as a venue": 0.004,
   "no source a reader sees is an adapter": 0.004,
-  "shelf admissions a reader cannot follow": 0.004,
   "producers not yet scheduled": 0.004,
   "volume rows a page counts but cannot list": 0.004,
   "titles read past their own gloss": 0.003,
+  "an imprint field repeating its publisher": 0.003,
   "credit fields the division does not account for": 0.003,
-  "works shaped like prose": 0.003,
-  "a stated printing precedes the delivery": 0.003,
-  "credits the corpus files as a venue": 0.003,
+  "first date precedes its editions": 0.003,
   "no HTML entity in a stored name": 0.003,
   "credits matching a chapter": 0.003,
   "titles showing a romanisation nobody has ruled on": 0.003,
@@ -886,10 +969,11 @@
   "listing series with no feed of their own": 0.003,
   "series names holding a page title": 0.003,
   "one page cited for two claims": 0.002,
+  "one row per identifier": 0.002,
   "every credit identifier resolves": 0.002,
   "a shipped identifier resolves": 0.002,
-  "imprint strings that reach no line": 0.002,
-  "first date precedes its editions": 0.002,
+  "works shaped like prose": 0.002,
+  "divisions read back from a romanisation": 0.002,
   "state agrees with its own date": 0.002,
   "kana names with no stated division": 0.002,
   "credits carrying their own cataloguing": 0.002,
@@ -898,16 +982,14 @@
   "undated cmoa candidates": 0.002,
   "incomplete attested rows": 0.002,
   "titles shorter than their own reading": 0.001,
-  "one row per identifier": 0.001,
+  "imprint strings that reach no line": 0.001,
   "author names romanised as one word": 0.001,
-  "divisions read back from a romanisation": 0.001,
   "undated works say where and why": 0.001,
   "per-book dates cite their page": 0.001,
   "author readings no source states": 0.001,
   "a publisher is a name, not a role": 0.001,
   "credit identifiers naming nobody": 0.001,
   "titles read by a machine, unmarked": 0.001,
-  "uncertain readings": 0.001,
   "a rendered file names a platform its targets hold": 0.001,
   "works showing a romanisation": 0.001,
   "bookwalker listings unconfirmed": 0.001,
@@ -918,6 +1000,7 @@
   "a record without a publisher says why": 0.0,
   "nicovideo channels agree with our own records": 0.0,
   "every kind the run reports has a gloss": 0.0,
+  "uncertain readings": 0.0,
   "facts with more than one home": 0.0,
   "the store carries what the checks answered": 0.0,
   "every platform a reader is shown is registered": 0.0,
