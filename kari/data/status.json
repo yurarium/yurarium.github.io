@@ -1,8 +1,12 @@
 {
- "generated": "2026-10-17T11:10:51+00:00",
+ "generated": "2026-10-17T18:14:32+00:00",
  "since_last": {
-  "at": "2026-10-17T08:07:09+00:00",
-  "statistics": {}
+  "at": "2026-10-17T11:10:51+00:00",
+  "statistics": {
+   "works": 1,
+   "with_identifier": 1,
+   "chapters": 3
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,23 +27,23 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-17",
-  "releases": 1056,
+  "at": "2026-10-18",
+  "releases": 1050,
   "works": 2657,
   "platforms": 19,
-  "series_rows": 3239,
-  "assembled": 3240,
+  "series_rows": 3240,
+  "assembled": 3241,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 758,
-   "known-work-match": 29,
-   "platform-genre": 269
+   "discovery-candidate": 753,
+   "known-work-match": 35,
+   "platform-genre": 262
   },
   "collapsed": {
-   "duplicate_chapters": 243,
-   "resolver": 106,
+   "duplicate_chapters": 213,
+   "resolver": 95,
    "samples": 0,
-   "thin_sitemap": 9
+   "thin_sitemap": 8
   }
  },
  "gate": {
@@ -378,7 +382,7 @@
     "name": "titles with no translation of our own",
     "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
     "budget": 0,
-    "value": 2,
+    "value": 3,
     "measure": "regression"
    },
    {
@@ -490,7 +494,7 @@
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
     "budget": 499,
-    "value": 499,
+    "value": 500,
     "measure": "arrival"
    },
    {
@@ -532,7 +536,7 @@
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
     "budget": 18,
-    "value": 18,
+    "value": 20,
     "measure": "arrival"
    },
    {
@@ -609,14 +613,14 @@
     "name": "titles showing a romanisation nobody has ruled on",
     "means": "titles falling through to a romanisation that nobody has examined. Distinct from the budget below, which counts every such title and cannot reach zero because a romanisation finishes a name; this counts the ones still owed a reading of the work, and it can. A rise means a new title nobody has looked at, which is ordinary and is the queue doing its job.",
     "budget": 58,
-    "value": 48,
+    "value": 38,
     "measure": "arrival"
    },
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
     "budget": 82,
-    "value": 72,
+    "value": 62,
     "measure": "arrival"
    },
    {
@@ -851,7 +855,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 46,
-    "value": 46,
+    "value": 45,
     "measure": "regression"
    },
    {
@@ -896,9 +900,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 5,
+    "consecutive": 6,
     "failing_since": "2026-10-16",
-    "days": 1,
+    "days": 2,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -906,9 +910,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 5,
+    "consecutive": 6,
     "failing_since": "2026-10-16",
-    "days": 1,
+    "days": 2,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -916,15 +920,25 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 5,
+    "consecutive": 6,
     "failing_since": "2026-10-16",
-    "days": 1,
+    "days": 2,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
+   },
+   {
+    "source": "stale:stage-a:generic",
+    "stage": "freshness",
+    "consecutive": 1,
+    "failing_since": "2026-10-18",
+    "days": 0,
+    "last_ok": "2026-10-17",
+    "error": "1 file(s) past their age, e.g. data/source/webpages/generic-news-mynavi-jp.yaml dated 2026-10-14",
+    "issue": false
    }
   ],
-  "healthy": 145,
+  "healthy": 144,
   "threshold": 3
  },
  "connectors": [
@@ -934,7 +948,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 76,
+   "age_days": 77,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -948,7 +962,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 72,
+   "age_days": 73,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -962,7 +976,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 71,
+   "age_days": 72,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -976,7 +990,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 71,
+   "age_days": 72,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -990,7 +1004,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 70,
+   "age_days": 71,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1004,7 +1018,7 @@
    "works": 1727,
    "rows": 4107,
    "retrieved": "2026-10-15",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1017,7 +1031,7 @@
    "files": 2,
    "works": 130,
    "rows": 6304,
-   "retrieved": "2026-10-17",
+   "retrieved": "2026-10-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1031,7 +1045,7 @@
    "files": 5,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-10-17",
+   "retrieved": "2026-10-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1043,14 +1057,14 @@
   {
    "source": "gigaviewer",
    "files": 89,
-   "works": 1624,
-   "rows": 17228,
-   "retrieved": "2026-10-17",
+   "works": 1635,
+   "rows": 17239,
+   "retrieved": "2026-10-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 16849,
-   "well_formed": 16849,
+   "checked_rows": 16850,
+   "well_formed": 16850,
    "malformed": 0,
    "drop": null
   },
@@ -1059,7 +1073,7 @@
    "files": 5,
    "works": 1006,
    "rows": 7744,
-   "retrieved": "2026-10-17",
+   "retrieved": "2026-10-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1073,7 +1087,7 @@
    "files": 3,
    "works": 1341,
    "rows": 11524,
-   "retrieved": "2026-10-17",
+   "retrieved": "2026-10-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1087,7 +1101,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-17",
+   "retrieved": "2026-10-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1100,20 +1114,20 @@
    "source": "webpages",
    "files": 48,
    "works": 627,
-   "rows": 8906,
-   "retrieved": "2026-10-17",
+   "rows": 8950,
+   "retrieved": "2026-10-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8853,
-   "well_formed": 8852,
+   "checked_rows": 8897,
+   "well_formed": 8896,
    "malformed": 1,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-16T19:46:43+00:00",
+  "previous_at": "2026-10-17T08:05:59+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1126,7 +1140,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 46,
+   "count": 35,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "100日後に人を〇す百合カップル",
@@ -1140,6 +1154,7 @@
     "こわくのこわいの",
     "こんがりパンより焦がれる恋",
     "つきあいきれないきみのこと",
+    "つるこさん",
     "となりの魔法少女",
     "とりこのため息",
     "ぬくもりブランケット",
@@ -1162,19 +1177,7 @@
     "ユリログ",
     "ルナとヨーコのかわいい日常",
     "一生一緒に！！",
-    "世界を滅ぼしたい君は麻婆豆腐",
-    "今日こそ、キスミー！",
-    "今日こそ彼女をドキドキさせたい！",
-    "仕事の後は色々と",
-    "保健室の吸血姫　～モブと姫との血婚契約～",
-    "元アイドルと保育士さん。",
-    "先輩付き合ってるんですか？",
-    "冬の終わり、春の縫い目　繭、纏う",
-    "冬の終わりに春を待つ",
-    "初凪ヒメリウム",
-    "勇者の運命",
-    "君と青と春の欠片",
-    "四十九日のお終いに　田沼朝作品集"
+    "世界を滅ぼしたい君は麻婆豆腐"
    ]
   },
   {
@@ -1278,27 +1281,27 @@
   }
  ],
  "statistics": {
-  "works": 3239,
+  "works": 3240,
   "states": {
    "print": 1726,
    "completed": 493,
-   "oneshot": 485,
+   "oneshot": 486,
    "active": 281,
    "dormant": 145,
    "slow": 61,
    "unknown": 48
   },
   "english_basis": {
-   "translated": 2821,
+   "translated": 2832,
    "official-jp": 236,
    "licensed": 110,
-   "romaji": 72
+   "romaji": 62
   },
   "print_works": 2542,
   "print_only": 1726,
   "volumes": 6273,
-  "with_identifier": 3239,
-  "chapters": 30799,
+  "with_identifier": 3240,
+  "chapters": 30802,
   "delivery_dated": 1100
  }
 }
