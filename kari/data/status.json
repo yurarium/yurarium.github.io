@@ -1,12 +1,10 @@
 {
- "generated": "2026-10-16T19:47:52+00:00",
+ "generated": "2026-10-17T08:07:09+00:00",
  "since_last": {
-  "at": "2026-10-16T11:54:52+00:00",
+  "at": "2026-10-16T19:47:52+00:00",
   "statistics": {
-   "works": 1,
-   "print_only": 1,
-   "with_identifier": 1,
-   "chapters": -43
+   "print_only": -1,
+   "chapters": 125
   }
  },
  "means": {
@@ -29,22 +27,22 @@
  },
  "last_run": {
   "at": "2026-10-17",
-  "releases": 1055,
+  "releases": 1056,
   "works": 2657,
   "platforms": 19,
   "series_rows": 3239,
-  "assembled": 3241,
-  "awaiting_identifier": 2,
+  "assembled": 3240,
+  "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 757,
+   "discovery-candidate": 758,
    "known-work-match": 29,
    "platform-genre": 269
   },
   "collapsed": {
-   "duplicate_chapters": 245,
-   "resolver": 102,
+   "duplicate_chapters": 243,
+   "resolver": 106,
    "samples": 0,
-   "thin_sitemap": 10
+   "thin_sitemap": 9
   }
  },
  "gate": {
@@ -383,7 +381,7 @@
     "name": "titles with no translation of our own",
     "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
     "budget": 0,
-    "value": 0,
+    "value": 2,
     "measure": "regression"
    },
    {
@@ -614,14 +612,14 @@
     "name": "titles showing a romanisation nobody has ruled on",
     "means": "titles falling through to a romanisation that nobody has examined. Distinct from the budget below, which counts every such title and cannot reach zero because a romanisation finishes a name; this counts the ones still owed a reading of the work, and it can. A rise means a new title nobody has looked at, which is ordinary and is the queue doing its job.",
     "budget": 58,
-    "value": 58,
+    "value": 48,
     "measure": "arrival"
    },
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
     "budget": 82,
-    "value": 82,
+    "value": 72,
     "measure": "arrival"
    },
    {
@@ -856,7 +854,7 @@
     "name": "incomplete attested rows",
     "means": "attested releases missing a chapter name, author or access state. The classic sign of a moved CSS selector: the adapter still returns rows, just emptier ones. It rose 37 to 52 when the store began taking the compiler's rows rather than the feed's: 1,270 releases against the 961 the feed publishes, and the window was never the population this asks about.",
     "budget": 46,
-    "value": 47,
+    "value": 46,
     "measure": "regression"
    },
    {
@@ -901,7 +899,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 4,
+    "consecutive": 5,
     "failing_since": "2026-10-16",
     "days": 1,
     "last_ok": null,
@@ -911,7 +909,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 4,
+    "consecutive": 5,
     "failing_since": "2026-10-16",
     "days": 1,
     "last_ok": null,
@@ -921,7 +919,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 4,
+    "consecutive": 5,
     "failing_since": "2026-10-16",
     "days": 1,
     "last_ok": null,
@@ -1048,8 +1046,8 @@
   {
    "source": "gigaviewer",
    "files": 89,
-   "works": 1623,
-   "rows": 17227,
+   "works": 1624,
+   "rows": 17228,
    "retrieved": "2026-10-17",
    "age_days": 0,
    "in_scope": true,
@@ -1063,14 +1061,14 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1006,
-   "rows": 7743,
+   "rows": 7744,
    "retrieved": "2026-10-17",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7053,
-   "well_formed": 6746,
-   "malformed": 307,
+   "checked_rows": 7054,
+   "well_formed": 6752,
+   "malformed": 302,
    "drop": null
   },
   {
@@ -1104,21 +1102,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 626,
-   "rows": 8781,
+   "works": 627,
+   "rows": 8906,
    "retrieved": "2026-10-17",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8728,
-   "well_formed": 8727,
+   "checked_rows": 8853,
+   "well_formed": 8852,
    "malformed": 1,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-16T08:41:46+00:00",
+  "previous_at": "2026-10-16T19:46:43+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1131,7 +1129,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 58,
+   "count": 46,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "100日後に人を〇す百合カップル",
@@ -1179,19 +1177,7 @@
     "初凪ヒメリウム",
     "勇者の運命",
     "君と青と春の欠片",
-    "四十九日のお終いに　田沼朝作品集",
-    "図書室でふたり、誰もいないなら。",
-    "圧倒的に未来形",
-    "地雷女と聖女様",
-    "夏みくちゃんとちひろさん",
-    "夢中",
-    "天然のあたしと彼女日記",
-    "女にはそれぞれ裏がある",
-    "少女は今日も本を借りにくる",
-    "少女狂恋フォリ・ア・ドゥ【電子単行本】",
-    "幼なじみとの夏",
-    "彼方、彼方。",
-    "恋愛ミューティレーション"
+    "四十九日のお終いに　田沼朝作品集"
    ]
   },
   {
@@ -1297,25 +1283,25 @@
  "statistics": {
   "works": 3239,
   "states": {
-   "print": 1727,
+   "print": 1726,
    "completed": 493,
    "oneshot": 485,
-   "active": 280,
+   "active": 281,
    "dormant": 145,
    "slow": 61,
    "unknown": 48
   },
   "english_basis": {
-   "translated": 2811,
+   "translated": 2821,
    "official-jp": 236,
    "licensed": 110,
-   "romaji": 82
+   "romaji": 72
   },
   "print_works": 2542,
-  "print_only": 1727,
+  "print_only": 1726,
   "volumes": 6273,
   "with_identifier": 3239,
-  "chapters": 30674,
+  "chapters": 30799,
   "delivery_dated": 1100
  }
 }

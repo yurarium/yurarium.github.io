@@ -1,6 +1,91 @@
 {
  "releases": [
   {
+   "id": "comicdays:episode:12207421983645810058",
+   "work": "雨夜の月",
+   "ep": "第５２−１話　相愛",
+   "type": "chapter",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-10-17",
+   "seen": "2026-10-17",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421983645810058",
+   "author": "くずしろ",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 52",
+   "kind_inferred": true,
+   "type_basis": "numbered chapter, though the platform feed did not say so",
+   "preferred": "コミックDAYS",
+   "also_on": [
+    "マガポケ"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-17",
+   "wid": "w00016",
+   "work_en": {
+    "reading": "アマヨ ノ ツキ",
+    "ruby": [
+     [
+      "雨夜",
+      "あまよ"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "月",
+      "つき"
+     ]
+    ],
+    "romaji": {
+     "macron": "Amayo no Tsuki",
+     "double": "Amayo no Tsuki",
+     "plain": "Amayo no Tsuki"
+    },
+    "translation_refused": "The publisher's own English is the literal rendering and sets it in lower case, so ours differs from it only in capitals.",
+    "en": "the moon on a rainy night",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "the moon on a rainy night",
+     "licensed": "The Moon on a Rainy Night"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "mediaarts-db",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C451264",
+     "kind": "bibliography",
+     "reviewed": "2026-08-07"
+    }
+   },
+   "author_en": {
+    "reading": "クズシロ",
+    "romaji": {
+     "macron": "Kuzushiro",
+     "double": "Kuzushiro",
+     "plain": "Kuzushiro"
+    },
+    "undivided": true,
+    "en": "Kuzushiro",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00064"
+   }
+  },
+  {
    "id": "sunday_webry:episode:12207421984387262030",
    "work": "上杉くんは女の子をやめたい",
    "ep": "第36話",
@@ -307,22 +392,109 @@
    }
   },
   {
-   "id": "magapoke:https://pocket.shonenmagazine.com/title/02202/episode/445500",
-   "work": "雨夜の月",
-   "ep": "【第52話(1)】相愛",
+   "id": "kadokomi:KC_0061800002100011_E",
+   "work": "アクアリウムは踊らない",
+   "ep": "第１７話①",
    "type": "chapter",
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-17",
    "seen": "2026-10-17",
-   "basis": "platform-stated",
+   "basis": "bootstrap",
    "conf": "reported",
    "why": "",
    "moved": "",
-   "url": "https://pocket.shonenmagazine.com/title/02202/episode/445500",
-   "author": "くずしろ",
-   "plat": "magapoke",
-   "plat_name": "マガポケ",
+   "url": "https://comic-walker.com/detail/KC_006180_S/episodes/KC_0061800002100011_E",
+   "series_url": "https://comic-walker.com/detail/KC_006180_S",
+   "author": "冬眠結, 橙々",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 17",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-17",
+   "wid": "w02337",
+   "work_en": {
+    "reading": "アクアリウム ワ オドラナイ",
+    "ruby": [
+     [
+      "アクアリウムは",
+      null
+     ],
+     [
+      "踊",
+      "おど"
+     ],
+     [
+      "らない",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Akuariumu wa Odoranai",
+     "double": "Akuariumu wa Odoranai",
+     "plain": "Akuariumu wa Odoranai"
+    },
+    "en": "The Aquarium Does Not Dance",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Aquarium Does Not Dance"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "トウミン ユウ, ダイダイ",
+    "ruby": [
+     [
+      "冬眠結",
+      "とうみんゆう"
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "橙々",
+      "だいだい"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tōmin Yū, Daidai",
+     "double": "Toumin Yuu, Daidai",
+     "plain": "Tomin Yu, Daidai"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "ciao:https://ciao.shogakukan.co.jp/comics/title/00392/episode/7392:読み切り",
+   "work": "メイドはお嬢様と笑いたい。",
+   "ep": "読み切り",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-17",
+   "seen": "2026-10-17",
+   "basis": "rendered",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://ciao.shogakukan.co.jp/comics/title/00392/episode/7392",
+   "author": "",
+   "plat": "remaining",
+   "plat_name": "ちゃおプラス",
    "ident": "discovery-candidate",
    "free_from": null,
    "discovered_on": null,
@@ -330,62 +502,49 @@
    "access_modes": [],
    "provenance": "attested",
    "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 52",
+   "kind": "oneshot",
+   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
    "kind_inferred": true,
-   "preferred": "マガポケ",
+   "preferred": "ちゃおプラス",
    "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-10-17",
-   "wid": "w00016",
+   "wid": "w03411",
    "work_en": {
-    "reading": "アマヨ ノ ツキ",
+    "reading": "メイド ワ オジョウサマ ト ワライタイ。",
     "ruby": [
      [
-      "雨夜",
-      "あまよ"
-     ],
-     [
-      "の",
+      "メイドはお",
       null
      ],
      [
-      "月",
-      "つき"
+      "嬢様",
+      "じょうさま"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "笑",
+      "わら"
+     ],
+     [
+      "いたい。",
+      null
      ]
     ],
     "romaji": {
-     "macron": "Amayo no Tsuki",
-     "double": "Amayo no Tsuki",
-     "plain": "Amayo no Tsuki"
+     "macron": "Meido wa Ojōsama to Waraitai.",
+     "double": "Meido wa Ojousama to Waraitai.",
+     "plain": "Meido wa Ojosama to Waraitai."
     },
-    "translation_refused": "The publisher's own English is the literal rendering and sets it in lower case, so ours differs from it only in capitals.",
-    "en": "the moon on a rainy night",
-    "basis": "official-jp",
+    "en": "The Maid Wants to Laugh with Her Young Lady",
+    "basis": "translated",
     "en_forms": {
-     "official-jp": "the moon on a rainy night",
-     "licensed": "The Moon on a Rainy Night"
+     "translated": "The Maid Wants to Laugh with Her Young Lady"
     },
-    "reading_basis": "analyser",
-    "en_cite": {
-     "source": "mediaarts-db",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C451264",
-     "kind": "bibliography",
-     "reviewed": "2026-08-07"
-    }
-   },
-   "author_en": {
-    "reading": "クズシロ",
-    "romaji": {
-     "macron": "Kuzushiro",
-     "double": "Kuzushiro",
-     "plain": "Kuzushiro"
-    },
-    "undivided": true,
-    "en": "Kuzushiro",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00064"
+    "reading_basis": "analyser"
    }
   },
   {
@@ -3322,8 +3481,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -3898,75 +4057,6 @@
     "reading_basis": "stated",
     "basis": "romaji",
     "unverified": true
-   }
-  },
-  {
-   "id": "ciao:https://ciao.shogakukan.co.jp/comics/title/00392/episode/7392:読み切り",
-   "work": "メイドはお嬢様と笑いたい。",
-   "ep": "読み切り",
-   "type": "oneshot",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-16",
-   "seen": "2026-10-17",
-   "basis": "rendered",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://ciao.shogakukan.co.jp/comics/title/00392/episode/7392",
-   "author": "",
-   "plat": "remaining",
-   "plat_name": "ちゃおプラス",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "oneshot",
-   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
-   "kind_inferred": true,
-   "preferred": "ちゃおプラス",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-16",
-   "wid": "w03411",
-   "work_en": {
-    "reading": "メイド ワ オジョウサマ ト ワライタイ。",
-    "ruby": [
-     [
-      "メイドはお",
-      null
-     ],
-     [
-      "嬢様",
-      "じょうさま"
-     ],
-     [
-      "と",
-      null
-     ],
-     [
-      "笑",
-      "わら"
-     ],
-     [
-      "いたい。",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Meido wa Ojōsama to Waraitai.",
-     "double": "Meido wa Ojousama to Waraitai.",
-     "plain": "Meido wa Ojosama to Waraitai."
-    },
-    "en": "The Maid Wants to Laugh with Her Young Lady",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Maid Wants to Laugh with Her Young Lady"
-    },
-    "reading_basis": "analyser"
    }
   },
   {
@@ -5050,8 +5140,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -5809,7 +5899,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-25",
-   "seen": "2026-10-16",
+   "seen": "2026-10-17",
    "basis": "stated",
    "conf": "reported",
    "why": "",
