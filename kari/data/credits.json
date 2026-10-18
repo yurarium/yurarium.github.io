@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-18",
+ "generated": "2026-10-19",
  "note": "One record per credit, with the works it is named on and the role on each edge. Addresses are opaque and minted: a credit read three ways in a day would have broken a name-shaped one twice. Fetched only when a credit page is opened.",
- "count": 2397,
+ "count": 2400,
  "credits": {
   "c00001": {
    "credit": "クール教信者",
@@ -24526,6 +24526,9 @@
      "roles": [
       "著"
      ]
+    },
+    {
+     "id": "w03443"
     }
    ],
    "spellings": [
@@ -37048,6 +37051,42 @@
    ],
    "spellings": [
     "馬頭ゆずお"
+   ]
+  },
+  "c02404": {
+   "credit": "ミルクセーキ",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03444"
+    }
+   ],
+   "spellings": [
+    "ミルクセーキ"
+   ]
+  },
+  "c02405": {
+   "credit": "くまのみそふと",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03444"
+    }
+   ],
+   "spellings": [
+    "くまのみそふと"
+   ]
+  },
+  "c02406": {
+   "credit": "chihiro",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03444"
+    }
+   ],
+   "spellings": [
+    "chihiro"
    ]
   }
  },
