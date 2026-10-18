@@ -2898,6 +2898,9 @@ const EN = {
   // tooltip beside it has always said "published 2026-06-17; we only learned of it on…", so the
   // badge was contradicting its own explanation.
   '公開予定':'Announced', '既出':'Published',
+  // A DATE THE PLATFORM NEVER STATED. ヤンジャン+ gives none, so such a row is filed on the day it
+  // was first seen, and the badge says that day is ours rather than the platform's.
+  '日付不明':'Date not stated',
   '作者未分離':'Author not split', '有料先行':'Paid early', '先行':'Early',
 
   /* words inside running text: lower case */
@@ -2905,6 +2908,9 @@ const EN = {
   '未設定':'not yet assigned', '他':'also',
 };
 // Counts are generated, so they cannot carry the "日本語 / english" form the rest of the chrome uses.
+/* WHAT A "DATE NOT STATED" ROW MEANS, in both languages, for the badge and the note that carry it. */
+const UNSTATED_DATE = ['プラットフォームは公開日を示していないため、初めて確認した日に置いている',
+  'the platform states no publication date; this is filed on the day we first saw it'];
 function nTotal(n) {
   return LANG === 'en' ? `${n} total` : LANG === 'ja' ? `${n} 件` : `${n} 件 / total`;
 }
@@ -3026,6 +3032,7 @@ function compactList(rows) {
         <span class="ccell"><span class="cmain">${goTo ? `<a href="${esc(goTo)}" target="_blank" rel="noopener noreferrer nofollow">${workLabel(lead)}</a>`
                    : `<span style="font-weight:600">${workLabel(lead)}</span>`}
         ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc(fmtDate(lead.pub))}</span>` : ''}
+        ${lead.basis === 'read' ? `<span class="k k-unk" title="${esc(T(UNSTATED_DATE[0], UNSTATED_DATE[1]))}">${esc(T('日付不明'))}</span>` : ''}
         ${lead.title_unsplit ? `<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">${esc(T('作者未分離'))}</span>` : ''}
         </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(platName(lead.plat_name || lead.plat))}</span>
         ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">${esc(T('転載'))}</span>` : ''}
@@ -3168,7 +3175,8 @@ function detailList(rows) {
         ${r.access_changed ? `<span class="tag">${esc(r.access_changed)}</span>` : ''}
       </div>
       ${epText(r) ? `<div class="ep">${esc(epText(r))}</div>` : ''}
-      ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(fmtDate(r.feed_date, { year: true }))}">${esc(T('公開'))} ${esc(fmtDate(r.pub, { year: true }))}</div>` : ''}`;
+      ${r.late_discovered && r.feed_date !== r.pub ? `<div class="pubnote" title="published earlier; it reached this list on ${esc(fmtDate(r.feed_date, { year: true }))}">${esc(T('公開'))} ${esc(fmtDate(r.pub, { year: true }))}</div>` : ''}
+      ${r.basis === 'read' ? `<div class="pubnote" title="${esc(T(UNSTATED_DATE[0], UNSTATED_DATE[1]))}">${esc(T('日付不明'))}</div>` : ''}`;
       const where = platName(r.plat_name || r.plat);
       return `${r.wid
         ? `<a class="wplink relmain" href="${esc(BASE)}work/${esc(r.wid)}/?tab=feed">${head}</a>`
