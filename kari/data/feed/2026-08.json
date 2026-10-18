@@ -584,10 +584,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 1,
-   "ahead_ep": "episode7（2）",
-   "ahead_next_free": "2026-10-18",
-   "ahead_next_ep": "episode7（2）",
+   "ahead_n": 2,
+   "ahead_ep": "episode8（2）",
+   "ahead_next_free": "2026-10-25",
+   "ahead_next_ep": "episode8（1）",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 4",
    "kind_inferred": true,
@@ -693,10 +693,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 6,
+   "ahead_n": 5,
    "ahead_ep": "２巻 第２４話",
-   "ahead_next_free": "2026-10-18",
-   "ahead_next_ep": "２巻 第１９話",
+   "ahead_next_free": "2026-10-25",
+   "ahead_next_ep": "２巻 第２０話",
    "kind": "new-chapter",
    "kind_basis": "extra or side story — content, not notice",
    "preferred": "COMIC FUZ",
@@ -795,8 +795,8 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 2,
-   "ahead_ep": "第38話(1)",
+   "ahead_n": 3,
+   "ahead_ep": "第38話(2)",
    "ahead_next_free": "2026-11-01",
    "ahead_next_ep": "第37話",
    "kind": "new-chapter",
@@ -4376,6 +4376,85 @@
     "basis": "stated",
     "unverified": true,
     "id": "c00087"
+   }
+  },
+  {
+   "id": "g-comi:https://g-comi.jp/series/74403f9e30641:第1話",
+   "work": "きっと、彼女が好きだから",
+   "ep": "第1話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-28",
+   "seen": "2026-10-18",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://g-comi.jp/series/74403f9e30641",
+   "author": "ヒロアキ",
+   "plat": "g-comi",
+   "plat_name": "Gコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-series",
+   "kind_basis": "episode numbered 1",
+   "kind_inferred": true,
+   "preferred": "Gコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-08-28",
+   "wid": "w03443",
+   "work_en": {
+    "reading": "キット、 カノジョ ガ スキダカラ",
+    "ruby": [
+     [
+      "きっと、",
+      null
+     ],
+     [
+      "彼女",
+      "かのじょ"
+     ],
+     [
+      "が",
+      null
+     ],
+     [
+      "好",
+      "す"
+     ],
+     [
+      "きだから",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kitto, Kanojo ga Sukidakara",
+     "double": "Kitto, Kanojo ga Sukidakara",
+     "plain": "Kitto, Kanojo ga Sukidakara"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ヒロアキ",
+    "romaji": {
+     "macron": "Hiroaki",
+     "double": "Hiroaki",
+     "plain": "Hiroaki"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01514"
    }
   },
   {
@@ -13984,10 +14063,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 1,
-   "ahead_ep": "episode7（2）",
-   "ahead_next_free": "2026-10-18",
-   "ahead_next_ep": "episode7（2）",
+   "ahead_n": 2,
+   "ahead_ep": "episode8（2）",
+   "ahead_next_free": "2026-10-25",
+   "ahead_next_ep": "episode8（1）",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 3",
    "kind_inferred": true,
@@ -14093,10 +14172,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 6,
+   "ahead_n": 5,
    "ahead_ep": "２巻 第２４話",
-   "ahead_next_free": "2026-10-18",
-   "ahead_next_ep": "２巻 第１９話",
+   "ahead_next_free": "2026-10-25",
+   "ahead_next_ep": "２巻 第２０話",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 12",
    "kind_inferred": true,
@@ -14521,7 +14600,7 @@
    "plat": "comic-days",
    "plat_name": "コミックDAYS",
    "ident": "discovery-candidate",
-   "free_from": "2026-09-05",
+   "free_from": null,
    "access_modes": [
     "purchase"
    ],
