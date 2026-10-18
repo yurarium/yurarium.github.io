@@ -47,15 +47,13 @@ import rules                                                            # noqa: 
 #: More than one is listed while a schema change is in flight, so the two repositories can be
 #: updated in either order rather than in lockstep.
 #:
-#: `514800d93712ae3f` adds `source_health`, each source's run of failures from the pipeline's
-#: source-health ledger, which `status.from_store` turns into the status page's Source health
-#: section, and `check_result.measure`, which says whether a budget's ceiling is a pass mark: a
-#: `regression` is held to it, an `arrival` rises with the corpus, a `report` has none.
-#: `488027d7634c5c45` adds `work_relation`, two works the registry relates and does not merge, such
-#: as 怨霊日和's 【読み切り版】 and the serialisation it became. It stays listed so a store published
-#: before the change is still readable, which is what "either order" means.
-#: `441bd66205d1fc64` came out with this change, being two schemas old.
-KNOWN_SCHEMAS = ("488027d7634c5c45", "514800d93712ae3f")
+#: `5eaea5c57b33455d` adds `work_relation.kind`, `series` for two titles of one series such as
+#: 加瀬さん's あさがおと加瀬さん。 and おべんとうと加瀬さん。, which the work page draws as the
+#: previous and next in the series rather than as two versions of one story.
+#: `514800d93712ae3f` adds `source_health` and `check_result.measure`, and stays listed so a store
+#: published before the change is still readable.
+#: `488027d7634c5c45` came out with this change, being two schemas old.
+KNOWN_SCHEMAS = ("514800d93712ae3f", "5eaea5c57b33455d")
 
 
 def open_store(path):

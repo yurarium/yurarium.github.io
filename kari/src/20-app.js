@@ -1543,8 +1543,16 @@ function renderWorkPage() {
      【読み切り版】 and its serialisation are both 怨霊日和. So the line says which way the relation
      runs and gives the other work's length and dates, or it reads as a link to this page. The
      registry's reason for the relation is not drawn: it is English alone, for a person checking. */
+  /* A TITLE OF THE SAME SERIES IS ANOTHER RELATION, ruled by the owner on 2026-10-18. 加瀬さん
+     renames itself every volume or two and each title is the work a shop sells under it, so the
+     page names the title before and after it, and a series listing that holds them all. */
   for (const rel of (r.related || [])) {
-    const label = rel.order === 'precedes' ? T('その後の版', 'Continued as')
+    const series = rel.kind === 'series';
+    const label = series
+      ? (rel.order === 'precedes' ? T('シリーズの次作', 'Next in the series')
+        : rel.order === 'follows' ? T('シリーズの前作', 'Previous in the series')
+        : T('同じシリーズ', 'Same series'))
+      : rel.order === 'precedes' ? T('その後の版', 'Continued as')
       : rel.order === 'follows' ? T('前の版', 'Earlier version') : T('関連作品', 'Related work');
     const span = [rel.first, rel.latest].filter(Boolean).map(d => fmtDate(d, { year: true }));
     const when = span.length ? (span[0] === span[span.length - 1] ? span[0] : `${span[0]} – ${span[span.length - 1]}`) : '';
