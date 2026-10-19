@@ -30,10 +30,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 9,
+   "ahead_n": 8,
    "ahead_ep": "５巻 第５６話「彗星エンカウント」",
-   "ahead_next_free": "2026-10-19",
-   "ahead_next_ep": "５巻 第４８話「銀狼フロウ」",
+   "ahead_next_free": "2026-10-26",
+   "ahead_next_ep": "５巻 第４９話「空撮シミュレーション」",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 43",
    "kind_inferred": true,
@@ -2298,18 +2298,18 @@
    "feed_date": "2026-08-28",
    "wid": "w00105",
    "work_en": {
-    "reading": "オカワリ イタダケタ ダロウカ？",
+    "reading": "オカワリイタダケタダロウカ?",
     "romaji": {
-     "macron": "Okawari Itadaketa Darōka?",
-     "double": "Okawari Itadaketa Darouka?",
-     "plain": "Okawari Itadaketa Daroka?"
+     "macron": "Okawariitadaketadarōka?",
+     "double": "Okawariitadaketadarouka?",
+     "plain": "Okawariitadaketadaroka?"
     },
     "en": "Would You Like Seconds?",
     "basis": "translated",
     "en_forms": {
      "translated": "Would You Like Seconds?"
     },
-    "reading_basis": "researched"
+    "reading_basis": "surface"
    },
    "author_en": {
     "reading": "ユウテモ",
@@ -7472,18 +7472,18 @@
    "feed_date": "2026-08-27",
    "wid": "w00084",
    "work_en": {
-    "reading": "キョウ ワ ナニ シヨウ？",
+    "reading": "キョウハナニシヨウ？",
     "romaji": {
-     "macron": "Kyō wa Nani Shiyō?",
-     "double": "Kyou wa Nani Shiyou?",
-     "plain": "Kyo wa Nani Shiyo?"
+     "macron": "Kyōhananishiyō?",
+     "double": "Kyouhananishiyou?",
+     "plain": "Kyohananishiyo?"
     },
     "en": "What Shall We Do Today?",
     "basis": "translated",
     "en_forms": {
      "translated": "What Shall We Do Today?"
     },
-    "reading_basis": "researched"
+    "reading_basis": "surface"
    },
    "author_en": {
     "reading": "サスケ",
@@ -8257,6 +8257,198 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00157"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0008480000300011_E",
+   "work": "晴れ晴れ日和",
+   "ep": "第3話　ルイくんとお花",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-27",
+   "seen": "2026-10-19",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_000848_S/episodes/KC_0008480000300011_E",
+   "series_url": "https://comic-walker.com/detail/KC_000848_S",
+   "author": "吉村佳",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 3",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-08-27",
+   "wid": "w00134",
+   "work_en": {
+    "reading": "ハレバレ ヒヨリ",
+    "ruby": [
+     [
+      "晴",
+      "は"
+     ],
+     [
+      "れ",
+      null
+     ],
+     [
+      "晴",
+      "ば"
+     ],
+     [
+      "れ",
+      null
+     ],
+     [
+      "日和",
+      "ひより"
+     ]
+    ],
+    "romaji": {
+     "macron": "Harebare Hiyori",
+     "double": "Harebare Hiyori",
+     "plain": "Harebare Hiyori"
+    },
+    "en": "A Bright, Clear Day",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Bright, Clear Day"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ヨシムラ ヨシ",
+    "ruby": [
+     [
+      "吉村佳",
+      "よしむらよし"
+     ]
+    ],
+    "romaji": {
+     "macron": "Yoshimura Yoshi",
+     "double": "Yoshimura Yoshi",
+     "plain": "Yoshimura Yoshi"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I031447538",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00229"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0008480000200011_E",
+   "work": "晴れ晴れ日和",
+   "ep": "第2話　ルイくん学校へ行く",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-27",
+   "seen": "2026-10-19",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_000848_S/episodes/KC_0008480000200011_E",
+   "series_url": "https://comic-walker.com/detail/KC_000848_S",
+   "author": "吉村佳",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 2",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-08-27",
+   "wid": "w00134",
+   "work_en": {
+    "reading": "ハレバレ ヒヨリ",
+    "ruby": [
+     [
+      "晴",
+      "は"
+     ],
+     [
+      "れ",
+      null
+     ],
+     [
+      "晴",
+      "ば"
+     ],
+     [
+      "れ",
+      null
+     ],
+     [
+      "日和",
+      "ひより"
+     ]
+    ],
+    "romaji": {
+     "macron": "Harebare Hiyori",
+     "double": "Harebare Hiyori",
+     "plain": "Harebare Hiyori"
+    },
+    "en": "A Bright, Clear Day",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Bright, Clear Day"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ヨシムラ ヨシ",
+    "ruby": [
+     [
+      "吉村佳",
+      "よしむらよし"
+     ]
+    ],
+    "romaji": {
+     "macron": "Yoshimura Yoshi",
+     "double": "Yoshimura Yoshi",
+     "plain": "Yoshimura Yoshi"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I031447538",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00229"
    }
   },
   {
@@ -13214,10 +13406,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 9,
+   "ahead_n": 8,
    "ahead_ep": "５巻 第５６話「彗星エンカウント」",
-   "ahead_next_free": "2026-10-19",
-   "ahead_next_ep": "５巻 第４８話「銀狼フロウ」",
+   "ahead_next_free": "2026-10-26",
+   "ahead_next_ep": "５巻 第４９話「空撮シミュレーション」",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 42",
    "kind_inferred": true,
@@ -13588,18 +13780,18 @@
    "feed_date": "2026-08-24",
    "wid": "w00084",
    "work_en": {
-    "reading": "キョウ ワ ナニ シヨウ？",
+    "reading": "キョウハナニシヨウ？",
     "romaji": {
-     "macron": "Kyō wa Nani Shiyō?",
-     "double": "Kyou wa Nani Shiyou?",
-     "plain": "Kyo wa Nani Shiyo?"
+     "macron": "Kyōhananishiyō?",
+     "double": "Kyouhananishiyou?",
+     "plain": "Kyohananishiyo?"
     },
     "en": "What Shall We Do Today?",
     "basis": "translated",
     "en_forms": {
      "translated": "What Shall We Do Today?"
     },
-    "reading_basis": "researched"
+    "reading_basis": "surface"
    },
    "author_en": {
     "reading": "サスケ",
@@ -22658,18 +22850,18 @@
    "feed_date": "2026-08-18",
    "wid": "w00247",
    "work_en": {
-    "reading": "マユ ノ ウタ",
+    "reading": "マユノウタ",
     "romaji": {
-     "macron": "Mayu no Uta",
-     "double": "Mayu no Uta",
-     "plain": "Mayu no Uta"
+     "macron": "Mayunōta",
+     "double": "Mayunouta",
+     "plain": "Mayunota"
     },
     "en": "Mayu's Song",
     "basis": "translated",
     "en_forms": {
      "translated": "Mayu's Song"
     },
-    "reading_basis": "researched"
+    "reading_basis": "surface"
    },
    "author_en": {
     "reading": "シクシク",
@@ -28492,13 +28684,7 @@
     "undivided": true,
     "en": "Tamifull",
     "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "openBD",
-     "kind": "publisher-jp",
-     "reviewed": "2026-08-06",
-     "isbn": "9784091287557"
-    },
+    "reading_basis": "surface",
     "id": "c00639"
    }
   },
@@ -32599,9 +32785,9 @@
    "web": "serialised",
    "pub": "2026-08-15",
    "seen": "2026-10-19",
-   "basis": "heuristic",
+   "basis": "read",
    "conf": "reported",
-   "why": "date matched as a pattern in the page, not stated by the platform",
+   "why": "the platform states no date; this is the day it was first seen",
    "moved": "",
    "url": "https://ynjn.jp/title/30352",
    "author": "",
@@ -32672,9 +32858,9 @@
    "web": "serialised",
    "pub": "2026-08-15",
    "seen": "2026-10-19",
-   "basis": "heuristic",
+   "basis": "read",
    "conf": "reported",
-   "why": "date matched as a pattern in the page, not stated by the platform",
+   "why": "the platform states no date; this is the day it was first seen",
    "moved": "",
    "url": "https://ynjn.jp/title/30352",
    "author": "",
@@ -34555,7 +34741,17 @@
     "reading_basis": "analyser"
    },
    "author_en": {
+    "reading": "フルカワヨウナリ",
+    "romaji": {
+     "macron": "Furukawayōnari",
+     "double": "Furukawayounari",
+     "plain": "Furukawayonari"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "analyser",
     "unverified": true,
+    "uncertain": true,
     "id": "c00529"
    }
   },
