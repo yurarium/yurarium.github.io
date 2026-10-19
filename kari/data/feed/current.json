@@ -1,6 +1,118 @@
 {
  "releases": [
   {
+   "id": "furacomi-like:https://flowercomics.jp/title/2258:読み切り",
+   "work": "セカンドバレンタイン",
+   "ep": "読み切り",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2025-02-17",
+   "seen": "2026-10-19",
+   "basis": "heuristic",
+   "conf": "reported",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://flowercomics.jp/title/2258",
+   "author": "",
+   "plat": "remaining",
+   "plat_name": "フラコミlike!",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-10-19",
+   "late_discovered": true,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "oneshot",
+   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
+   "kind_inferred": true,
+   "preferred": "フラコミlike!",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-19",
+   "wid": "w03446",
+   "work_en": {
+    "reading": "セカンドバレンタイン",
+    "romaji": {
+     "macron": "Sekandobarentain",
+     "double": "Sekandobarentain",
+     "plain": "Sekandobarentain"
+    },
+    "en": "Second Valentine",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Second Valentine"
+    },
+    "reading_basis": "surface"
+   }
+  },
+  {
+   "id": "furacomi-like:https://flowercomics.jp/title/3311:読み切り",
+   "work": "戻らない季節。",
+   "ep": "読み切り",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-02-15",
+   "seen": "2026-10-19",
+   "basis": "heuristic",
+   "conf": "reported",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://flowercomics.jp/title/3311",
+   "author": "",
+   "plat": "remaining",
+   "plat_name": "フラコミlike!",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-10-19",
+   "late_discovered": true,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "oneshot",
+   "kind_basis": "the title says 読切 — a one-shot, not an instalment",
+   "kind_inferred": true,
+   "preferred": "フラコミlike!",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-19",
+   "wid": "w03445",
+   "work_en": {
+    "reading": "モドラナイ キセツ。",
+    "ruby": [
+     [
+      "戻",
+      "もど"
+     ],
+     [
+      "らない",
+      null
+     ],
+     [
+      "季節",
+      "きせつ"
+     ],
+     [
+      "。",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Modoranai Kisetsu.",
+     "double": "Modoranai Kisetsu.",
+     "plain": "Modoranai Kisetsu."
+    },
+    "en": "Seasons That Won't Return",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Seasons That Won't Return"
+    },
+    "reading_basis": "analyser"
+   }
+  },
+  {
    "id": "comicdays:episode:2550689798616042974",
    "work": "オタクには人生を積むことしかできない",
    "ep": "第１６話「STAR」",
@@ -1573,8 +1685,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -1680,8 +1792,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -1781,8 +1893,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -14456,18 +14568,18 @@
    "feed_date": "2026-10-11",
    "wid": "w00105",
    "work_en": {
-    "reading": "オカワリイタダケタダロウカ?",
+    "reading": "オカワリ イタダケタ ダロウカ？",
     "romaji": {
-     "macron": "Okawariitadaketadarōka?",
-     "double": "Okawariitadaketadarouka?",
-     "plain": "Okawariitadaketadaroka?"
+     "macron": "Okawari Itadaketa Darōka?",
+     "double": "Okawari Itadaketa Darouka?",
+     "plain": "Okawari Itadaketa Daroka?"
     },
     "en": "Would You Like Seconds?",
     "basis": "translated",
     "en_forms": {
      "translated": "Would You Like Seconds?"
     },
-    "reading_basis": "surface"
+    "reading_basis": "researched"
    },
    "author_en": {
     "reading": "ユウテモ",
@@ -18239,7 +18351,13 @@
     "undivided": true,
     "en": "Tamifull",
     "basis": "romaji",
-    "reading_basis": "surface",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "openBD",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-06",
+     "isbn": "9784091287557"
+    },
     "id": "c00639"
    }
   },
@@ -18326,7 +18444,13 @@
     "undivided": true,
     "en": "Tamifull",
     "basis": "romaji",
-    "reading_basis": "surface",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "openBD",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-06",
+     "isbn": "9784091287557"
+    },
     "id": "c00639"
    }
   },
@@ -18591,29 +18715,6 @@
      "translated": "The Girl Who Can See"
     },
     "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "イズミアサキ",
-    "romaji": {
-     "macron": "Izumiasaki",
-     "double": "Izumiasaki",
-     "plain": "Izumiasaki"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "analyser",
-    "unverified": true,
-    "id": "c02286",
-    "ruby": [
-     [
-      "泉朝樹",
-      null
-     ],
-     [
-      "(著者)",
-      null
-     ]
-    ]
    }
   },
   {
@@ -23640,18 +23741,18 @@
    "feed_date": "2026-10-06",
    "wid": "w00247",
    "work_en": {
-    "reading": "マユノウタ",
+    "reading": "マユ ノ ウタ",
     "romaji": {
-     "macron": "Mayunōta",
-     "double": "Mayunouta",
-     "plain": "Mayunota"
+     "macron": "Mayu no Uta",
+     "double": "Mayu no Uta",
+     "plain": "Mayu no Uta"
     },
     "en": "Mayu's Song",
     "basis": "translated",
     "en_forms": {
      "translated": "Mayu's Song"
     },
-    "reading_basis": "surface"
+    "reading_basis": "researched"
    },
    "author_en": {
     "reading": "シクシク",
