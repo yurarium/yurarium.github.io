@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-19T13:57:34+00:00",
+ "generated": "2026-10-19T20:58:53+00:00",
  "since_last": {
-  "at": "2026-10-19T10:43:53+00:00",
+  "at": "2026-10-19T13:57:34+00:00",
   "statistics": {}
  },
  "means": {
@@ -23,23 +23,23 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-19",
-  "releases": 1059,
+  "at": "2026-10-20",
+  "releases": 1051,
   "works": 2657,
   "platforms": 19,
   "series_rows": 3243,
   "assembled": 3244,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 762,
+   "discovery-candidate": 757,
    "known-work-match": 35,
-   "platform-genre": 262
+   "platform-genre": 259
   },
   "collapsed": {
-   "duplicate_chapters": 233,
-   "resolver": 98,
+   "duplicate_chapters": 234,
+   "resolver": 95,
    "samples": 0,
-   "thin_sitemap": 13
+   "thin_sitemap": 14
   }
  },
  "gate": {
@@ -532,7 +532,7 @@
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
     "budget": 18,
-    "value": 18,
+    "value": 17,
     "measure": "arrival"
    },
    {
@@ -566,8 +566,8 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 221,
-    "value": 221,
+    "budget": 220,
+    "value": 220,
     "measure": "arrival"
    },
    {
@@ -580,8 +580,8 @@
    {
     "name": "readings an analyser no longer installed produced",
     "means": "analyser readings stamped with a version other than the one this run holds. requirements.txt pins the analyser so an upgrade is a decision rather than whatever pip resolved that morning, and this is the other half of that: the day the pin moves, every reading made under the old version still says what that analyser thought. It falls as those are re-made or overridden and it rises when the pin does, which is the only time it should. On 2026-09-24 an unpinned upgrade took 40 titles out of `ordinary` and put the mark on 36, and no measure was asking whether the analyser under the rule had changed.",
-    "budget": 192,
-    "value": 192,
+    "budget": 191,
+    "value": 191,
     "measure": "report"
    },
    {
@@ -615,8 +615,8 @@
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 27,
-    "value": 27,
+    "budget": 25,
+    "value": 25,
     "measure": "arrival"
    },
    {
@@ -644,22 +644,25 @@
     "name": "facts with more than one home",
     "means": "a vocabulary, a shape or a rule typed into a second file",
     "budget": 12,
-    "value": 12,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "impossibilities asserted without evidence",
     "means": "a comment saying something cannot happen, naming nothing that proves it",
     "budget": 0,
-    "value": 0,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 76,
-    "value": 76,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -770,8 +773,9 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 0,
-    "value": 0,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "announced works the corpus does not hold",
@@ -867,8 +871,8 @@
    {
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
-    "budget": 1,
-    "value": 1,
+    "budget": 0,
+    "value": 0,
     "measure": "report"
    },
    {
@@ -892,9 +896,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 10,
+    "consecutive": 11,
     "failing_since": "2026-10-16",
-    "days": 3,
+    "days": 4,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -902,9 +906,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 10,
+    "consecutive": 11,
     "failing_since": "2026-10-16",
-    "days": 3,
+    "days": 4,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -912,9 +916,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 10,
+    "consecutive": 11,
     "failing_since": "2026-10-16",
-    "days": 3,
+    "days": 4,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -922,9 +926,9 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 5,
+    "consecutive": 6,
     "failing_since": "2026-10-18",
-    "days": 1,
+    "days": 2,
     "last_ok": "2026-10-17",
     "error": "1 file(s) past their age, e.g. data/source/webpages/generic-news-mynavi-jp.yaml dated 2026-10-14",
     "issue": true
@@ -932,9 +936,9 @@
    {
     "source": "stale:stage-a:gigaviewer-platform-feeds",
     "stage": "freshness",
-    "consecutive": 3,
+    "consecutive": 4,
     "failing_since": "2026-10-19",
-    "days": 0,
+    "days": 1,
     "last_ok": "2026-10-18",
     "error": "3 file(s) past their age, e.g. data/source/gigaviewer/comics-series.yaml dated 2026-10-15",
     "issue": true
@@ -950,7 +954,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 78,
+   "age_days": 79,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -964,7 +968,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 74,
+   "age_days": 75,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -978,7 +982,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 73,
+   "age_days": 74,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -992,7 +996,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 73,
+   "age_days": 74,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1006,7 +1010,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 72,
+   "age_days": 73,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1020,7 +1024,7 @@
    "works": 1727,
    "rows": 4107,
    "retrieved": "2026-10-15",
-   "age_days": 4,
+   "age_days": 5,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1033,7 +1037,7 @@
    "files": 2,
    "works": 130,
    "rows": 6307,
-   "retrieved": "2026-10-19",
+   "retrieved": "2026-10-20",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1047,7 +1051,7 @@
    "files": 5,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-10-19",
+   "retrieved": "2026-10-20",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1059,14 +1063,14 @@
   {
    "source": "gigaviewer",
    "files": 89,
-   "works": 1637,
-   "rows": 17259,
-   "retrieved": "2026-10-19",
+   "works": 1638,
+   "rows": 17261,
+   "retrieved": "2026-10-20",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 16869,
-   "well_formed": 16869,
+   "checked_rows": 16871,
+   "well_formed": 16871,
    "malformed": 0,
    "drop": null
   },
@@ -1075,7 +1079,7 @@
    "files": 5,
    "works": 1006,
    "rows": 7752,
-   "retrieved": "2026-10-19",
+   "retrieved": "2026-10-20",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1089,7 +1093,7 @@
    "files": 3,
    "works": 1341,
    "rows": 11524,
-   "retrieved": "2026-10-19",
+   "retrieved": "2026-10-20",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1103,7 +1107,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-19",
+   "retrieved": "2026-10-20",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1117,7 +1121,7 @@
    "files": 48,
    "works": 630,
    "rows": 8962,
-   "retrieved": "2026-10-19",
+   "retrieved": "2026-10-20",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1128,8 +1132,8 @@
   }
  ],
  "ledger": {
-  "runs_held": 0,
-  "previous_at": null,
+  "runs_held": 40,
+  "previous_at": "2026-10-19T10:39:27+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1161,7 +1165,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 49,
+   "count": 48,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1197,14 +1201,14 @@
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
     "credits sharing a reading nobody has ruled on": 24,
-    "ruby asserting a reading per character": 221,
+    "ruby asserting a reading per character": 220,
     "implausible ruby spans": 0,
-    "readings an analyser no longer installed produced": 192,
+    "readings an analyser no longer installed produced": 191,
     "titles read by a machine, unmarked": 1196,
     "uncertain readings": 63,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
-    "works showing a romanisation": 27,
+    "works showing a romanisation": 25,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
     "one work under two names in a list": 5,
@@ -1240,7 +1244,7 @@
     "incomplete attested rows": 45,
     "works without English": 0,
     "volume rows with no publication date": 2580,
-    "predicted updates already behind the run": 1,
+    "predicted updates already behind the run": 0,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
    }
@@ -1252,16 +1256,16 @@
    "print": 1726,
    "completed": 493,
    "oneshot": 492,
-   "active": 285,
+   "active": 283,
    "dormant": 145,
-   "slow": 58,
+   "slow": 60,
    "unknown": 44
   },
   "english_basis": {
-   "translated": 2871,
-   "official-jp": 235,
+   "translated": 2872,
+   "official-jp": 236,
    "licensed": 110,
-   "romaji": 27
+   "romaji": 25
   },
   "print_works": 2542,
   "print_only": 1726,

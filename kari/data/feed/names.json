@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19",
+ "generated": "2026-10-20",
  "note": "English renderings and readings, keyed by NFKC-folded title/author. Joined onto feed rows at render time so archived months — which are never rewritten — still show current names.",
  "titles": {
   "#うちらが最強~陰キャ除霊師とギャルJK~": {
@@ -11043,7 +11043,6 @@
     "double": "Unausa",
     "plain": "Unausa"
    },
-   "translation_refused": "A coinage in kana. Our rendering is Unausa, which the romanisation says.",
    "en": "Eel-Rabbit",
    "basis": "translated",
    "en_forms": {
@@ -19883,9 +19882,11 @@
     "double": "Tsurukosan",
     "plain": "Tsurukosan"
    },
-   "translation_refused": "A given name and the polite さん are the whole title, so our rendering would be the romanisation again.",
    "en": "Tsuruko-san",
-   "basis": "romaji",
+   "basis": "translated",
+   "en_forms": {
+    "translated": "Tsuruko-san"
+   },
    "reading_basis": "surface"
   },
   "てあとるりりぃ": {
@@ -22996,7 +22997,6 @@
     "double": "Fuchure!otome",
     "plain": "Fuchure!otome"
    },
-   "translation_refused": "ふちゅれ is a coined word and オトメ stands as a name rather than as the word 乙女, which the entry's own note settles. Neither half is a phrase, so ours is the romanisation.",
    "en": "Future! Maiden",
    "basis": "translated",
    "en_forms": {
@@ -98672,9 +98672,11 @@
     "double": "Hanako San to Hanako Chan",
     "plain": "Hanako San to Hanako Chan"
    },
-   "translation_refused": "Two given names told apart by their honorifics alone, which is the whole title. Our rendering keeps both names and both suffixes, so it is the romanisation again. The note below flagged the ghost-story reading as likely rather than settled for want of a synopsis; サンデーうぇぶり's page for the one-shot was read on 2026-09-04 and carries none, so it stays likely and the disposition does not rest on it.",
    "en": "Hanako-san and Hanako-chan",
-   "basis": "romaji",
+   "basis": "translated",
+   "en_forms": {
+    "translated": "Hanako-san and Hanako-chan"
+   },
    "reading_basis": "researched"
   },
   "花木姉妹へ愛をこめて": {
@@ -101144,7 +101146,7 @@
    "unverified": true
   },
   "贋作の第十番": {
-   "reading": "ガンサク ノ ダイ ジュウ バン",
+   "reading": "ガンサク ノ ダイジュウバン",
    "ruby": [
     [
      "贋作",
@@ -101155,30 +101157,34 @@
      null
     ],
     [
-     "第",
-     "だい"
-    ],
-    [
-     "十",
-     "じゅう"
-    ],
-    [
-     "番",
-     "ばん"
+     "第十番",
+     "だいじゅうばん"
     ]
    ],
    "romaji": {
-    "macron": "Gansaku no Dai Jū Ban",
-    "double": "Gansaku no Dai Juu Ban",
-    "plain": "Gansaku no Dai Ju Ban"
+    "macron": "Gansaku no Daijūban",
+    "double": "Gansaku no Daijuuban",
+    "plain": "Gansaku no Daijuban"
    },
-   "en": "Forgery No. 10",
-   "basis": "translated",
+   "en": "Die 10. Sinfonie: Eine Geschichte zwischen Wahrheit und Fiktion",
+   "basis": "official-jp",
    "en_forms": {
-    "translated": "Forgery No. 10"
+    "official-jp": "Die 10. Sinfonie: Eine Geschichte zwischen Wahrheit und Fiktion",
+    "translated": "The Forged Tenth Symphony"
    },
-   "reading_basis": "analyser",
-   "unverified": true
+   "reading_basis": "stated",
+   "reading_cite": {
+    "source": "チャンピオンクロス",
+    "url": "https://championcross.jp/series/315c6e52824a3",
+    "kind": "platform",
+    "reviewed": "2026-10-19"
+   },
+   "en_cite": {
+    "source": "series-art",
+    "url": "https://cdn-public.comici.jp/series/3137310/20260507124705606D5F6E2AF5B8CCE9545AFF296EE6771C5-lg.webp",
+    "kind": "platform",
+    "reviewed": "2026-10-19"
+   }
   },
   "赤ずきんに食べられた狼": {
    "reading": "アカ ズキン ニ タベラレタ オオカミ",
@@ -160737,19 +160743,19 @@
     }
    ]
   },
-  "まにお": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "まにお"
-    }
-   ]
-  },
   "meji": {
    "j": ", ",
    "p": [
     {
      "n": "meji"
+    }
+   ]
+  },
+  "まにお": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "まにお"
     }
    ]
   },
@@ -161751,6 +161757,14 @@
     }
    ]
   },
+  "城生": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "城生"
+    }
+   ]
+  },
   "梶本レイカ": {
    "j": ", ",
    "p": [
@@ -162256,6 +162270,17 @@
     {
      "n": "ウオズミアミ",
      "r": "著"
+    }
+   ]
+  },
+  "東方Project/水山めろ": {
+   "j": " / ",
+   "p": [
+    {
+     "n": "東方Project"
+    },
+    {
+     "n": "水山めろ"
     }
    ]
   },
@@ -162842,14 +162867,6 @@
     }
    ]
   },
-  "城生": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "城生"
-    }
-   ]
-  },
   "みかん氏": {
    "j": ", ",
    "p": [
@@ -163002,17 +163019,6 @@
     },
     {
      "n": "WOOMA"
-    }
-   ]
-  },
-  "東方Project/水山めろ": {
-   "j": " / ",
-   "p": [
-    {
-     "n": "東方Project"
-    },
-    {
-     "n": "水山めろ"
     }
    ]
   },
@@ -186423,23 +186429,6 @@
     }
    ]
   },
-  "すめらぎひよこ,こゆき,MikaPikazo,mocha": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "すめらぎひよこ"
-    },
-    {
-     "n": "こゆき"
-    },
-    {
-     "n": "Mika Pikazo"
-    },
-    {
-     "n": "mocha"
-    }
-   ]
-  },
   "ずいの": {
    "j": ", ",
    "p": [
@@ -190973,15 +190962,6 @@
    ],
    "drop": [
     " / ヤマモトマト"
-   ]
-  },
-  "山本和音(著者)": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "山本和音",
-     "r": "著者"
-    }
    ]
   },
   "山東ユカ": {
@@ -196235,6 +196215,7 @@
    "double": "4Jihan,Koinrandoriinite",
    "plain": "4Jihan,Koinrandorinite"
   },
+  "4皿目": "4Sarame",
   "4話2<完>": "4Hanashi2<Kan>",
   "5もっとしたくて": "5 Mottoshitakute",
   "5月に還る妹後編真・さよなら姉さん": {
@@ -196274,7 +196255,6 @@
   "66話": "66Hanashi",
   "67話": "67Hanashi",
   "6億年の博物旅": "6Oku Nen No Hakubutsu Tabi",
-  "6話": "6Hanashi",
   "75.第31話(4)": "75. Dai31Hanashi (4)",
   "7ページ連載予告マンガ": {
    "macron": "7Pēji Rensai Yokoku Manga",
@@ -196988,7 +196968,6 @@
    "double": "SSSS.GRIDMAN Komikkuansorojii",
    "plain": "SSSS.GRIDMAN Komikkuansoroji"
   },
-  "SSSオフショット94": "SSSOfushotto94",
   "SSSオフショット95": "SSSOfushotto95",
   "SSSオフショット96": "SSSOfushotto96",
   "SSSオフショット97": "SSSOfushotto97",
@@ -199116,6 +199095,7 @@
    "double": "[Mooningu · Tsuu Yomikiri]Namae No Tsukanai Nichijou",
    "plain": "[Moningu · Tsu Yomikiri]Namae No Tsukanai Nichijo"
   },
+  "【三膳目】拉致られっ娘!?": "[San Zenme]Rachiraremmusume!?",
   "【中国語版】容易害羞的灵梦小姐-はずかしがりやの霊夢さん": {
    "macron": "[Chūgokugo Ban]Yōi Gai Hajiteki Reimu Shaoje-Hazukashigari Ya No Reimusan",
    "double": "[Chuugokugo Ban]Youi Gai Hajiteki Reimu Shaoje-Hazukashigari Ya No Reimusan",
@@ -201009,7 +200989,6 @@
   "すめらぎ": "Sumeragi",
   "すめらぎひよこ": "Sumeragi Hiyoko",
   "すめらぎひよこ/こゆき/MikaPikazo": "Sumeragi Hiyoko / Koyuki / MikaPikazo",
-  "すめらぎひよこ,こゆき,MikaPikazo,mocha": "Sumeragihiyoko, Koyuki, Mika Pikazo, mocha",
   "すれ違い巨大感情百合アンソロジー": {
    "macron": "Surechigai Kyodai Kanjō Yuri Ansorojī",
    "double": "Surechigai Kyodai Kanjou Yuri Ansorojii",
@@ -212107,7 +212086,6 @@
   "山本まと": "Yamamoto Ma To",
   "山本まと/ヤマモトマト": "Yamamoto Ma To / Yamamotomato",
   "山本ルンルン": "Yamamoto Runrun",
-  "山本和音(著者)": "Yamamoto Kazune(Chosha)",
   "山東ユカ": {
    "macron": "Santō Yuka",
    "double": "Santou Yuka",
@@ -217071,7 +217049,6 @@
    "plain": "Dai15Hanashi Watashi No Jiman No Onechan"
   },
   "第15話(2)": "Dai15Hanashi(2)",
-  "第15話(前編)": "Dai15Hanashi(Zenpen)",
   "第15話(後編)": {
    "macron": "Dai15Hanashi(Kōhen)",
    "double": "Dai15Hanashi(Kouhen)",
@@ -217411,7 +217388,6 @@
   "第32話": "Dai32Hanashi",
   "第32話ほどいて(1)": "Dai32Hanashi Hodoite(1)",
   "第32話ほどいて(2)": "Dai32Hanashi Hodoite(2)",
-  "第32話-1": "Dai32Hanashi-1",
   "第32話-2": "Dai32Hanashi-2",
   "第33話": "Dai33Hanashi",
   "第33話朱くて空っぽ(1)": "Dai33Hanashi Akakute Karappo(1)",
@@ -217548,7 +217524,6 @@
   "第49話2": "Dai49Hanashi2",
   "第4巻": "Dai4Maki",
   "第4片": "Dai4Kata",
-  "第4角-2": "Dai4Kaku-2",
   "第4話": "Dai4Hanashi",
   "第4話ノブレス・オブリージュ": {
    "macron": "Dai4Hanashi Noburesu · Oburīju",
@@ -217843,11 +217818,6 @@
    "macron": "Dai Jūni Gō Sosei Majutsu",
    "double": "Dai Juuni Gou Sosei Majutsu",
    "plain": "Dai Juni Go Sosei Majutsu"
-  },
-  "第十二話-2": {
-   "macron": "Dai Jūniwa-2",
-   "double": "Dai Juuniwa-2",
-   "plain": "Dai Juniwa-2"
   },
   "第十八話ゲート": {
    "macron": "Dai Jūhachi Hanashi Gēto",
@@ -221056,7 +221026,6 @@
   "13巻第167話": "13Maki Dai167Hanashi",
   "13巻第168話": "13Maki Dai168Hanashi",
   "13巻第169話": "13Maki Dai169Hanashi",
-  "14巻第180話": "14Maki Dai180Hanashi",
   "14巻第181話": "14Maki Dai181Hanashi",
   "14巻第182話": "14Maki Dai182Hanashi",
   "14巻第183話": "14Maki Dai183Hanashi",
@@ -221117,7 +221086,6 @@
   "3巻第13話": "3Maki Dai13Hanashi",
   "3巻第2話": "3Maki Dai2Hanashi",
   "3巻第3話": "3Maki Dai3Hanashi",
-  "3巻第30話": "3Maki Dai30Hanashi",
   "3巻第31話": "3Maki Dai31Hanashi",
   "3巻第32話": "3Maki Dai32Hanashi",
   "3巻第33話": "3Maki Dai33Hanashi",
