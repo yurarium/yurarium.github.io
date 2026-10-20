@@ -1,8 +1,12 @@
 {
- "generated": "2026-10-19T20:58:53+00:00",
+ "generated": "2026-10-20T08:47:15+00:00",
  "since_last": {
-  "at": "2026-10-19T13:57:34+00:00",
-  "statistics": {}
+  "at": "2026-10-19T20:58:53+00:00",
+  "statistics": {
+   "works": -1,
+   "with_identifier": -1,
+   "chapters": -59
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,20 +28,20 @@
  },
  "last_run": {
   "at": "2026-10-20",
-  "releases": 1051,
+  "releases": 1052,
   "works": 2657,
   "platforms": 19,
-  "series_rows": 3243,
-  "assembled": 3244,
+  "series_rows": 3242,
+  "assembled": 3243,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 757,
+   "discovery-candidate": 758,
    "known-work-match": 35,
    "platform-genre": 259
   },
   "collapsed": {
    "duplicate_chapters": 234,
-   "resolver": 95,
+   "resolver": 102,
    "samples": 0,
    "thin_sitemap": 14
   }
@@ -896,7 +900,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 11,
+    "consecutive": 12,
     "failing_since": "2026-10-16",
     "days": 4,
     "last_ok": null,
@@ -906,7 +910,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 11,
+    "consecutive": 12,
     "failing_since": "2026-10-16",
     "days": 4,
     "last_ok": null,
@@ -916,7 +920,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 11,
+    "consecutive": 12,
     "failing_since": "2026-10-16",
     "days": 4,
     "last_ok": null,
@@ -926,7 +930,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 6,
+    "consecutive": 7,
     "failing_since": "2026-10-18",
     "days": 2,
     "last_ok": "2026-10-17",
@@ -936,7 +940,7 @@
    {
     "source": "stale:stage-a:gigaviewer-platform-feeds",
     "stage": "freshness",
-    "consecutive": 4,
+    "consecutive": 5,
     "failing_since": "2026-10-19",
     "days": 1,
     "last_ok": "2026-10-18",
@@ -1063,8 +1067,8 @@
   {
    "source": "gigaviewer",
    "files": 89,
-   "works": 1638,
-   "rows": 17261,
+   "works": 1640,
+   "rows": 17263,
    "retrieved": "2026-10-20",
    "age_days": 0,
    "in_scope": true,
@@ -1119,21 +1123,21 @@
   {
    "source": "webpages",
    "files": 48,
-   "works": 630,
-   "rows": 8962,
+   "works": 631,
+   "rows": 9117,
    "retrieved": "2026-10-20",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 8909,
-   "well_formed": 8908,
+   "checked_rows": 9064,
+   "well_formed": 9063,
    "malformed": 1,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-19T10:39:27+00:00",
+  "previous_at": "2026-10-19T20:57:56+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1251,18 +1255,18 @@
   }
  ],
  "statistics": {
-  "works": 3243,
+  "works": 3242,
   "states": {
    "print": 1726,
    "completed": 493,
    "oneshot": 492,
-   "active": 283,
+   "active": 282,
    "dormant": 145,
    "slow": 60,
    "unknown": 44
   },
   "english_basis": {
-   "translated": 2872,
+   "translated": 2871,
    "official-jp": 236,
    "licensed": 110,
    "romaji": 25
@@ -1270,8 +1274,8 @@
   "print_works": 2542,
   "print_only": 1726,
   "volumes": 6273,
-  "with_identifier": 3243,
-  "chapters": 30821,
+  "with_identifier": 3242,
+  "chapters": 30762,
   "delivery_dated": 1100
  }
 }
