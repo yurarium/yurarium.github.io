@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21",
+ "generated": "2026-10-22",
  "note": "One record per publishing house, holding the imprint lines it runs with the spellings each line is catalogued under and the years those cover. Publishers and distributors share one namespace: the seat is on the edge to the book.",
  "count": 163,
  "publishers": {
@@ -765,6 +765,195 @@
        "years": [
         "2023",
         "2023"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00009": {
+   "id": "h00009",
+   "name": "集英社",
+   "rows": 19,
+   "works": [
+    "w00051",
+    "w00029",
+    "w00716",
+    "w00072",
+    "w00157",
+    "w03221",
+    "w00378",
+    "w00392",
+    "w00404",
+    "w00633",
+    "w00544",
+    "w00909",
+    "w00736",
+    "w00790",
+    "w00946",
+    "w00982",
+    "w01700",
+    "w01433"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "young-jump-comics",
+     "name": "ヤングジャンプコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 6,
+     "works": [
+      "w00051",
+      "w00157",
+      "w03221",
+      "w00378",
+      "w00392",
+      "w00790"
+     ],
+     "spellings": [
+      {
+       "raw": "ヤングジャンプコミックス",
+       "rows": 5,
+       "years": [
+        "2017",
+        "2026"
+       ]
+      },
+      {
+       "raw": "ヤングジャンプ・コミックス",
+       "rows": 1,
+       "years": [
+        "2012",
+        "2012"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "young-jump-comics-ultra",
+     "name": "ヤングジャンプコミックス・ウルトラ",
+     "parent": "ヤングジャンプコミックス",
+     "resolved": true,
+     "rows": 4,
+     "works": [
+      "w00716",
+      "w00633",
+      "w00909",
+      "w00946"
+     ],
+     "spellings": [
+      {
+       "raw": "ヤングジャンプコミックス・ウルトラ",
+       "rows": 4,
+       "years": [
+        "2022",
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "jump-comics",
+     "name": "ジャンプコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 3,
+     "works": [
+      "w00029",
+      "w00404",
+      "w00544"
+     ],
+     "spellings": [
+      {
+       "raw": "ジャンプコミックス",
+       "rows": 3,
+       "years": [
+        "2024",
+        "2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "jump-comics-plus",
+     "name": "JUMP COMICS+",
+     "parent": "ジャンプコミックス",
+     "resolved": true,
+     "rows": 2,
+     "works": [
+      "w00736"
+     ],
+     "spellings": [
+      {
+       "raw": "JUMP COMICS+",
+       "rows": 2,
+       "years": [
+        "2023",
+        "2024"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "margaret-comics",
+     "name": "マーガレットコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 2,
+     "works": [
+      "w00072",
+      "w01433"
+     ],
+     "spellings": [
+      {
+       "raw": "マーガレットコミックス",
+       "rows": 2,
+       "years": [
+        "2023",
+        "2024"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "young-jump-comics-digital",
+     "name": "ヤングジャンプコミックスDIGITAL",
+     "parent": "ヤングジャンプコミックス",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w01700"
+     ],
+     "spellings": [
+      {
+       "raw": "ヤングジャンプコミックスDIGITAL",
+       "rows": 1,
+       "years": [
+        null,
+        null
+       ]
+      }
+     ]
+    },
+    {
+     "id": "young-jump-comics-gj",
+     "name": "ヤングジャンプコミックスGJ",
+     "parent": "ヤングジャンプコミックス",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00982"
+     ],
+     "spellings": [
+      {
+       "raw": "ヤングジャンプコミックスGJ",
+       "rows": 1,
+       "years": [
+        "2019",
+        "2019"
        ]
       }
      ]
@@ -6740,195 +6929,6 @@
        "years": [
         null,
         null
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00009": {
-   "id": "h00009",
-   "name": "集英社",
-   "rows": 19,
-   "works": [
-    "w00029",
-    "w00716",
-    "w00072",
-    "w00157",
-    "w00051",
-    "w03221",
-    "w00378",
-    "w00392",
-    "w00404",
-    "w00633",
-    "w00544",
-    "w00909",
-    "w00736",
-    "w00790",
-    "w00946",
-    "w00982",
-    "w01700",
-    "w01433"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "young-jump-comics",
-     "name": "ヤングジャンプコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 6,
-     "works": [
-      "w00157",
-      "w00051",
-      "w03221",
-      "w00378",
-      "w00392",
-      "w00790"
-     ],
-     "spellings": [
-      {
-       "raw": "ヤングジャンプコミックス",
-       "rows": 5,
-       "years": [
-        "2017",
-        "2026"
-       ]
-      },
-      {
-       "raw": "ヤングジャンプ・コミックス",
-       "rows": 1,
-       "years": [
-        "2012",
-        "2012"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "young-jump-comics-ultra",
-     "name": "ヤングジャンプコミックス・ウルトラ",
-     "parent": "ヤングジャンプコミックス",
-     "resolved": true,
-     "rows": 4,
-     "works": [
-      "w00716",
-      "w00633",
-      "w00909",
-      "w00946"
-     ],
-     "spellings": [
-      {
-       "raw": "ヤングジャンプコミックス・ウルトラ",
-       "rows": 4,
-       "years": [
-        "2022",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "jump-comics",
-     "name": "ジャンプコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 3,
-     "works": [
-      "w00029",
-      "w00404",
-      "w00544"
-     ],
-     "spellings": [
-      {
-       "raw": "ジャンプコミックス",
-       "rows": 3,
-       "years": [
-        "2024",
-        "2026"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "jump-comics-plus",
-     "name": "JUMP COMICS+",
-     "parent": "ジャンプコミックス",
-     "resolved": true,
-     "rows": 2,
-     "works": [
-      "w00736"
-     ],
-     "spellings": [
-      {
-       "raw": "JUMP COMICS+",
-       "rows": 2,
-       "years": [
-        "2023",
-        "2024"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "margaret-comics",
-     "name": "マーガレットコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 2,
-     "works": [
-      "w00072",
-      "w01433"
-     ],
-     "spellings": [
-      {
-       "raw": "マーガレットコミックス",
-       "rows": 2,
-       "years": [
-        "2023",
-        "2024"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "young-jump-comics-digital",
-     "name": "ヤングジャンプコミックスDIGITAL",
-     "parent": "ヤングジャンプコミックス",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w01700"
-     ],
-     "spellings": [
-      {
-       "raw": "ヤングジャンプコミックスDIGITAL",
-       "rows": 1,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    },
-    {
-     "id": "young-jump-comics-gj",
-     "name": "ヤングジャンプコミックスGJ",
-     "parent": "ヤングジャンプコミックス",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00982"
-     ],
-     "spellings": [
-      {
-       "raw": "ヤングジャンプコミックスGJ",
-       "rows": 1,
-       "years": [
-        "2019",
-        "2019"
        ]
       }
      ]
