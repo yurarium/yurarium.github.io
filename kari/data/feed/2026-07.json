@@ -22,6 +22,7 @@
    "access_modes": [
     "free"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": true,
    "kind": "new-series",
@@ -111,6 +112,7 @@
    "access_modes": [
     "free"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -1481,6 +1483,7 @@
    "access_modes": [
     "purchase"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -2543,6 +2546,7 @@
    "access_modes": [
     "purchase"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -3395,8 +3399,9 @@
    "access_modes": [
     "free"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 3",
    "kind_inferred": true,
@@ -3454,6 +3459,7 @@
    "access_modes": [
     "free"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -3510,6 +3516,10 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-07-27T15:00:00Z",
+   "access_modes": [
+    "withdrawn"
+   ],
+   "access_basis": "the platform's own episode list marks this chapter no longer readable",
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -7010,6 +7020,7 @@
    "access_modes": [
     "free"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
@@ -9050,6 +9061,65 @@
    }
   },
   {
+   "id": "sunday_webry:episode:12207421983913735230",
+   "work": "にせものターコイズ",
+   "ep": "にせものターコイズ",
+   "type": "oneshot",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-07-26",
+   "seen": "2026-08-01",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "the platform's feed listed this chapter on 2026-07-25, and its own episode list says it opened on 2026-07-26",
+   "moved": "",
+   "url": "https://www.sunday-webry.com/episode/12207421983913735230",
+   "author": "内猫さかな",
+   "plat": "sundaywebry",
+   "plat_name": "サンデーうぇぶり",
+   "ident": "discovery-candidate",
+   "free_from": "2026-07-25T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "oneshot",
+   "kind_basis": "one-shot: the platform lists one episode",
+   "kind_inferred": true,
+   "preferred": "サンデーうぇぶり",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-07-26",
+   "wid": "w00090",
+   "work_en": {
+    "reading": "ニセモノターコイズ",
+    "romaji": {
+     "macron": "Nisemonotākoizu",
+     "double": "Nisemonotaakoizu",
+     "plain": "Nisemonotakoizu"
+    },
+    "en": "Imitation Turquoise",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Imitation Turquoise"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ウチネコ サカナ",
+    "romaji": {
+     "macron": "Uchineko Sakana",
+     "double": "Uchineko Sakana",
+     "plain": "Uchineko Sakana"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true,
+    "id": "c00174"
+   }
+  },
+  {
    "id": "comicfuz:79271",
    "work": "君が一等星に光るまで",
    "ep": "episode1（2）",
@@ -9727,65 +9797,6 @@
     },
     "unverified": true,
     "id": "c00062"
-   }
-  },
-  {
-   "id": "sunday_webry:episode:12207421983913735230",
-   "work": "にせものターコイズ",
-   "ep": "にせものターコイズ",
-   "type": "oneshot",
-   "adv": false,
-   "web": "serialised",
-   "pub": "2026-07-25",
-   "seen": "2026-08-01",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://www.sunday-webry.com/episode/12207421983913735230",
-   "author": "内猫さかな",
-   "plat": "sundaywebry",
-   "plat_name": "サンデーうぇぶり",
-   "ident": "discovery-candidate",
-   "free_from": "2026-07-25T15:00:00Z",
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "oneshot",
-   "kind_basis": "one-shot: the platform lists one episode",
-   "kind_inferred": true,
-   "preferred": "サンデーうぇぶり",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-07-25",
-   "wid": "w00090",
-   "work_en": {
-    "reading": "ニセモノターコイズ",
-    "romaji": {
-     "macron": "Nisemonotākoizu",
-     "double": "Nisemonotaakoizu",
-     "plain": "Nisemonotakoizu"
-    },
-    "en": "Imitation Turquoise",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Imitation Turquoise"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "ウチネコ サカナ",
-    "romaji": {
-     "macron": "Uchineko Sakana",
-     "double": "Uchineko Sakana",
-     "plain": "Uchineko Sakana"
-    },
-    "basis": "romaji",
-    "reading_basis": "analyser",
-    "unverified": true,
-    "id": "c00174"
    }
   },
   {
@@ -25829,7 +25840,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-07-16",
-   "seen": "2026-10-18",
+   "seen": "2026-10-23",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -25839,14 +25850,15 @@
    "plat": "ichicomi",
    "plat_name": "一迅プラス",
    "ident": "discovery-candidate",
-   "free_from": null,
+   "free_from": "2026-07-16",
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
     "free"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "oneshot",
    "kind_basis": "a one-shot, complete in one instalment",
    "preferred": "一迅プラス",
@@ -50314,6 +50326,103 @@
    }
   },
   {
+   "id": "comic-days:https://comic-days.com/episode/12207421983885192770",
+   "work": "下部七花はかく語りき",
+   "ep": "【コミックDAYS読み切り】下部七花はかく語りき",
+   "type": "oneshot",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-07-07",
+   "seen": "2026-10-23",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421983885192770",
+   "author": "暮みちる",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "discovery-candidate",
+   "free_from": "2026-07-06",
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "the platform's own episode list",
+   "provenance": "attested",
+   "free": true,
+   "kind": "oneshot",
+   "kind_basis": "a one-shot, complete in one instalment",
+   "preferred": "コミックDAYS",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-07-07",
+   "wid": "w00209",
+   "work_en": {
+    "reading": "カブ ナナ ハナ ワ カク カタリキ",
+    "ruby": [
+     [
+      "下部",
+      "かぶ"
+     ],
+     [
+      "七",
+      "なな"
+     ],
+     [
+      "花",
+      "はな"
+     ],
+     [
+      "はかく",
+      null
+     ],
+     [
+      "語",
+      "かた"
+     ],
+     [
+      "りき",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kabu Nana Hana wa Kaku Katariki",
+     "double": "Kabu Nana Hana wa Kaku Katariki",
+     "plain": "Kabu Nana Hana wa Kaku Katariki"
+    },
+    "en": "Thus Spoke Shimobe Nanaka",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Thus Spoke Shimobe Nanaka"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "クレ ミチル",
+    "ruby": [
+     [
+      "暮",
+      "くれ"
+     ],
+     [
+      "みちる",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kure Michiru",
+     "double": "Kure Michiru",
+     "plain": "Kure Michiru"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "id": "c00318"
+   }
+  },
+  {
    "id": "comicfuz:75451",
    "work": "このままモブじゃ終われない！",
    "ep": "２巻 第１９話",
@@ -51829,102 +51938,6 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00058"
-   }
-  },
-  {
-   "id": "comic-days:https://comic-days.com/episode/12207421983885192770",
-   "work": "下部七花はかく語りき",
-   "ep": "【コミックDAYS読み切り】下部七花はかく語りき",
-   "type": "oneshot",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-07-06",
-   "seen": "2026-10-22",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-days.com/episode/12207421983885192770",
-   "author": "暮みちる",
-   "plat": "comic-days",
-   "plat_name": "コミックDAYS",
-   "ident": "discovery-candidate",
-   "free_from": "2026-07-06",
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "oneshot",
-   "kind_basis": "a one-shot, complete in one instalment",
-   "preferred": "コミックDAYS",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-07-06",
-   "wid": "w00209",
-   "work_en": {
-    "reading": "カブ ナナ ハナ ワ カク カタリキ",
-    "ruby": [
-     [
-      "下部",
-      "かぶ"
-     ],
-     [
-      "七",
-      "なな"
-     ],
-     [
-      "花",
-      "はな"
-     ],
-     [
-      "はかく",
-      null
-     ],
-     [
-      "語",
-      "かた"
-     ],
-     [
-      "りき",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Kabu Nana Hana wa Kaku Katariki",
-     "double": "Kabu Nana Hana wa Kaku Katariki",
-     "plain": "Kabu Nana Hana wa Kaku Katariki"
-    },
-    "en": "Thus Spoke Shimobe Nanaka",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Thus Spoke Shimobe Nanaka"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "クレ ミチル",
-    "ruby": [
-     [
-      "暮",
-      "くれ"
-     ],
-     [
-      "みちる",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Kure Michiru",
-     "double": "Kure Michiru",
-     "plain": "Kure Michiru"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "id": "c00318"
    }
   },
   {
@@ -60249,5 +60262,5 @@
   }
  ],
  "month": "2026-07",
- "generated": "2026-10-22"
+ "generated": "2026-10-23"
 }
