@@ -4681,6 +4681,10 @@ function accessTag(r) {
   if (r.ahead_n)
     return `<span class="tag grey" title="this series runs chapters ahead of the free line, readable now for points; next free ${esc(r.ahead_next_ep || '')} on ${esc(r.ahead_next_free || '')}">${esc(T('先行'))}</span>`;
   if (m.includes('purchase')) return `<span class="tag grey">${esc(T('有料'))}</span>`;
+  // A CHAPTER ITS PLATFORM HAS ROTATED OUT OF READING. The platform's own episode list says so, and
+  // a row that said nothing left a reader to find out by clicking through.
+  if (m.includes('withdrawn'))
+    return `<span class="tag grey" title="${esc(T('配信元の話一覧で、この話は現在読めないとされている', 'the platform\'s own episode list says this chapter can no longer be read'))}">${esc(T('掲載終了', 'No longer readable'))}</span>`;
   return '';
 }
 
