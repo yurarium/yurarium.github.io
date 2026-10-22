@@ -83,7 +83,7 @@ def _page(title, depth, body, query):
         "<!doctype html>", '<html lang="ja">', "<head>", '<meta charset="utf-8">',
         '<meta name="viewport" content="width=device-width,initial-scale=1">',
         '<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">',
-        f"<title>{stubs.esc(title)} — Yurarium</title>",
+        f"<title>{stubs.esc(title)} — {stubs.SITE_NAME}</title>",
         f'<link rel="stylesheet" href="{up}app.css">',
         "</head>", "<body>",
         body,

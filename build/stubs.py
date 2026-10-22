@@ -28,6 +28,10 @@ import html
 import pathlib
 import re
 
+#: The site's name in a page title, as the app's own tab title spells it (`SITE_NAME` in
+#: kari/src/20-app.js). 仮 stays while the site is provisional.
+SITE_NAME = "Yurarium 仮"
+
 SAFE_ID = re.compile(r"^[A-Za-z0-9_-]+$")
 
 
@@ -90,7 +94,7 @@ def render(work, depth=2, names=None):
         '<meta charset="utf-8">',
         '<meta name="viewport" content="width=device-width,initial-scale=1">',
         '<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">',
-        f"<title>{esc(heading)} — Yurarium</title>",
+        f"<title>{esc(heading)} — {SITE_NAME}</title>",
         f'<link rel="stylesheet" href="{up}app.css">',
         "</head>",
         "<body>",
@@ -154,7 +158,7 @@ def forward(root, retired, surviving, depth=2):
         '<meta name="robots" content="noindex,nofollow">',
         f'<link rel="canonical" href="{to}">',
         f'<meta http-equiv="refresh" content="0; url={to}">',
-        f"<title>{esc(retired)} — Yurarium</title>", "</head>", "<body>",
+        f"<title>{esc(retired)} — {SITE_NAME}</title>", "</head>", "<body>",
         f'<p>This record is now <a href="{to}">{esc(surviving)}</a>.</p>',
         # The meta refresh serves a reader with no JavaScript; this is for everyone else and is
         # `replace` so the retired address does not sit in the history behind them.

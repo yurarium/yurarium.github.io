@@ -609,6 +609,7 @@ function applyLang(lang) {
     e.placeholder = splitLang(e.dataset.origPh, lang);
   });
   applyRomajiVisibility();
+  syncTitle();
   renderTrackNote();
   renderByline();
   renderFooter();
@@ -696,7 +697,43 @@ function navUrl(st) {
   return BASE + (qs ? '?' + qs : '');
 }
 
+/* ── What the browser tab calls this page ─────────────────────────────────────────────────────
+   THE APP NEVER SET IT, so every work, credit and house read `Yurarium 仮` in the tab, in
+   history and in a bookmark, while the pre-rendered page at the same address had the name. Each
+   page registers how its name renders in PAGE_TITLE, given a language, with the function its
+   heading is drawn with, so the tab follows the reader's language and English order the way the heading does.
+
+   PLAIN TEXT, AND WITHOUT THE MARKS. A tab cannot hold the `[?]` beside an unattested reading
+   or furigana over its kanji, and the heading below it still shows both. In 併記 the tab carries
+   both names, as the pre-rendered pages do, and one where the two are the same string. */
+const SITE_NAME = 'Yurarium 仮';
+const TAB_NAME = { feed: ['更新', 'Updates'], rel: ['発売', 'Releases'], ser: ['作品', 'Works'],
+                   cat: ['単行本', 'Volumes'] };
+let PAGE_TITLE = null;
+
+function titleText(render, lang) {
+  const t = document.createElement('template');
+  t.innerHTML = String(render(lang) ?? '');
+  t.content.querySelectorAll('sup, rt, rp').forEach(n => n.remove());
+  return t.content.textContent.replace(/\s+/g, ' ').trim();
+}
+
+function syncTitle() {
+  let name = '';
+  if ((PAGE_WORK || PAGE_REC) && PAGE_TITLE) {
+    const ja = titleText(PAGE_TITLE, 'ja');
+    const en = titleText(PAGE_TITLE, 'en');
+    name = LANG === 'ja' ? ja : LANG === 'en' ? (en || ja)
+         : (!en || en === ja ? ja : `${ja} / ${en}`);
+  } else {
+    const tab = document.querySelector('nav button[aria-selected=true]')?.dataset.tab || 'feed';
+    if (TAB_NAME[tab]) name = T(...TAB_NAME[tab]);
+  }
+  document.title = name ? `${name} — ${SITE_NAME}` : SITE_NAME;
+}
+
 function navSync(push) {
+  syncTitle();
   if (NAV_APPLYING) return;
   const st = navState();
   const url = navUrl(st);
@@ -1271,6 +1308,7 @@ function openWorkPage(id, push = true) {
 
 function closeWorkPage(push) {
   PAGE_WORK = null;
+  PAGE_TITLE = null;
   el('workpage').hidden = true;
   // Back to whichever tab is selected, which is not always the works tab: a release row links to a
   // work page, and closing it used to drop the reader onto a list they had not been looking at.
@@ -1395,6 +1433,8 @@ function renderWorkPage() {
   const r = (SERIES.series || []).find(x => x.id === PAGE_WORK);
   const box = el('workpage');
   if (!r || !box) return;
+  PAGE_TITLE = lang => inLang(lang, () => workLabel(r));
+  syncTitle();
   document.querySelector('nav').hidden = true;
   ['ser', 'feed', 'rel', 'cat'].forEach(x => { const s = el('tab-' + x); if (s) s.hidden = true; });
   box.hidden = false;
@@ -2011,6 +2051,8 @@ function renderCreditPage(doc) {
   const id = liveRecId(doc, 'credits', PAGE_REC.id);
   const fact = doc && doc.credits && doc.credits[id];
   if (!box) return;
+  PAGE_TITLE = fact ? lang => inLang(lang, () => authorLabel({ author: fact.credit })) : null;
+  syncTitle();
   document.querySelector('nav').hidden = true;
   ['ser', 'feed', 'rel', 'cat'].forEach(x => { const s = el('tab-' + x); if (s) s.hidden = true; });
   box.hidden = false;
@@ -2153,6 +2195,8 @@ function renderPublisherPage(doc) {
   const id = liveRecId(doc, 'publishers', PAGE_REC.id);
   const fact = doc && doc.publishers && doc.publishers[id];
   if (!box) return;
+  PAGE_TITLE = fact ? lang => inLang(lang, () => esc(pubBoth(fact.name))) : null;
+  syncTitle();
   document.querySelector('nav').hidden = true;
   ['ser', 'feed', 'rel', 'cat'].forEach(x => { const s = el('tab-' + x); if (s) s.hidden = true; });
   box.hidden = false;
