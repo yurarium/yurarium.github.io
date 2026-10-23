@@ -1,12 +1,15 @@
 {
- "generated": "2026-10-22T20:31:13+00:00",
+ "generated": "2026-10-23T09:13:23+00:00",
  "since_last": {
-  "at": "2026-10-22T12:27:24+00:00",
+  "at": "2026-10-22T20:31:13+00:00",
   "statistics": {
-   "works": 2,
-   "volumes": 13,
-   "with_identifier": 2,
-   "chapters": 86
+   "works": 3,
+   "print_works": 1,
+   "print_only": 1,
+   "volumes": 6,
+   "with_identifier": 3,
+   "chapters": 9,
+   "delivery_dated": 1
   }
  },
  "means": {
@@ -29,20 +32,20 @@
  },
  "last_run": {
   "at": "2026-10-23",
-  "releases": 1053,
+  "releases": 1055,
   "works": 2658,
   "platforms": 19,
-  "series_rows": 3243,
-  "assembled": 3245,
-  "awaiting_identifier": 2,
+  "series_rows": 3246,
+  "assembled": 3247,
+  "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 762,
+   "discovery-candidate": 763,
    "known-work-match": 33,
-   "platform-genre": 258
+   "platform-genre": 259
   },
   "collapsed": {
-   "duplicate_chapters": 230,
-   "resolver": 109,
+   "duplicate_chapters": 236,
+   "resolver": 118,
    "samples": 0,
    "thin_sitemap": 15
   }
@@ -504,8 +507,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 503,
-    "value": 503,
+    "budget": 504,
+    "value": 504,
     "measure": "arrival"
    },
    {
@@ -581,8 +584,8 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 220,
-    "value": 220,
+    "budget": 221,
+    "value": 221,
     "measure": "arrival"
    },
    {
@@ -812,8 +815,8 @@
    {
     "name": "works whose first publication country is unattested",
     "means": "works whose `first_publication.country` is empty, which is DEFINITIONS §6's inclusion test not having run. It read 0 until now because build.py wrote the literal \"JP\" on every record, so the field asserted the answer and no check on it could fail. Every source here catalogues the Japanese EDITION and none states where the work first appeared, so this falls one work at a time as a serialisation venue is read off a publisher's page and recorded in data/scope.yaml. A rise means the corpus grew, which is expected, and the number to watch is the share rather than the count.",
-    "budget": 2657,
-    "value": 2657,
+    "budget": 2658,
+    "value": 2658,
     "measure": "report"
    },
    {
@@ -840,8 +843,8 @@
    {
     "name": "rows with a moving address",
     "means": "rows anchored on a chapter address whose identifier holds no work-level address on the same host. A chapter address moves when the work publishes, so a rise means a work has arrived whose address nobody has read yet and which would be minted a second identifier the next time it updates. Run adapters/gigaviewer/workaddress.py and apply what it writes with identity.py --attachments.",
-    "budget": 8,
-    "value": 8,
+    "budget": 6,
+    "value": 6,
     "measure": "arrival"
    },
    {
@@ -875,8 +878,8 @@
    {
     "name": "attested rows with no access state",
     "means": "attested releases that state no access on a platform whose other rows do, nearly always because the route that read them reads none. `rows with no access state, by route` lists them. A number to work down by route, not a tripwire: `adapters/fieldaudit.py` is the one for a platform going silent.",
-    "budget": 12,
-    "value": 12,
+    "budget": 1,
+    "value": 1,
     "measure": "report"
    },
    {
@@ -889,8 +892,8 @@
    {
     "name": "volume rows with no publication date",
     "means": "volumes on a work's print run that state no printing date, which is what the dating passes work through",
-    "budget": 2580,
-    "value": 2592,
+    "budget": 2592,
+    "value": 2598,
     "measure": "arrival"
    },
    {
@@ -921,7 +924,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 16,
+    "consecutive": 17,
     "failing_since": "2026-10-16",
     "days": 7,
     "last_ok": null,
@@ -931,7 +934,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 16,
+    "consecutive": 17,
     "failing_since": "2026-10-16",
     "days": 7,
     "last_ok": null,
@@ -941,7 +944,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 16,
+    "consecutive": 17,
     "failing_since": "2026-10-16",
     "days": 7,
     "last_ok": null,
@@ -949,7 +952,7 @@
     "issue": true
    }
   ],
-  "healthy": 149,
+  "healthy": 151,
   "threshold": 3
  },
  "connectors": [
@@ -1068,28 +1071,28 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1649,
-   "rows": 17277,
+   "works": 1656,
+   "rows": 17576,
    "retrieved": "2026-10-23",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 16879,
-   "well_formed": 16879,
+   "checked_rows": 17176,
+   "well_formed": 17176,
    "malformed": 0,
    "drop": null
   },
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 1006,
-   "rows": 7760,
+   "works": 1008,
+   "rows": 7762,
    "retrieved": "2026-10-23",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7070,
-   "well_formed": 6770,
+   "checked_rows": 7072,
+   "well_formed": 6772,
    "malformed": 300,
    "drop": null
   },
@@ -1124,14 +1127,14 @@
   {
    "source": "webpages",
    "files": 50,
-   "works": 641,
-   "rows": 9336,
+   "works": 649,
+   "rows": 9376,
    "retrieved": "2026-10-23",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9283,
-   "well_formed": 9283,
+   "checked_rows": 9323,
+   "well_formed": 9323,
    "malformed": 0,
    "drop": null
   }
@@ -1195,7 +1198,7 @@
     "renderings with nothing to show": 0,
     "kana names with no stated division": 287,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 503,
+    "author readings no source states": 504,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
@@ -1206,7 +1209,7 @@
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
     "credits sharing a reading nobody has ruled on": 24,
-    "ruby asserting a reading per character": 220,
+    "ruby asserting a reading per character": 221,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 190,
     "titles read by a machine, unmarked": 1197,
@@ -1239,18 +1242,18 @@
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
     "updates naming a work we do not hold": 2,
-    "works whose first publication country is unattested": 2657,
+    "works whose first publication country is unattested": 2658,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 6,
     "producers not yet scheduled": 10,
-    "rows with a moving address": 8,
+    "rows with a moving address": 6,
     "listing series with no feed of their own": 0,
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
     "incomplete attested rows": 0,
-    "attested rows with no access state": 12,
+    "attested rows with no access state": 1,
     "works without English": 0,
-    "volume rows with no publication date": 2580,
+    "volume rows with no publication date": 2592,
     "predicted updates already behind the run": 0,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
@@ -1258,27 +1261,27 @@
   }
  ],
  "statistics": {
-  "works": 3243,
+  "works": 3246,
   "states": {
-   "print": 1726,
-   "completed": 494,
+   "print": 1727,
    "oneshot": 494,
-   "active": 283,
+   "completed": 494,
+   "active": 284,
    "dormant": 145,
    "slow": 58,
-   "unknown": 43
+   "unknown": 44
   },
   "english_basis": {
-   "translated": 2871,
+   "translated": 2874,
    "official-jp": 239,
    "licensed": 108,
    "romaji": 25
   },
-  "print_works": 2542,
-  "print_only": 1726,
-  "volumes": 6286,
-  "with_identifier": 3243,
-  "chapters": 30935,
-  "delivery_dated": 1100
+  "print_works": 2543,
+  "print_only": 1727,
+  "volumes": 6292,
+  "with_identifier": 3246,
+  "chapters": 30944,
+  "delivery_dated": 1101
  }
 }

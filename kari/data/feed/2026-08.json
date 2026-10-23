@@ -1891,7 +1891,9 @@
    "free_from": null,
    "discovered_on": null,
    "late_discovered": false,
-   "access_modes": [],
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -2712,6 +2714,10 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-27T15:00:00Z",
+   "access_modes": [
+    "withdrawn"
+   ],
+   "access_basis": "the platform's own episode list marks this chapter no longer readable",
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -34809,7 +34815,7 @@
    "provenance": "attested",
    "free": true,
    "kind": "other",
-   "kind_basis": "reads as a volume, artwork or notice, and only 3 of 28 chapters in this series do (11%) — not how this series names its instalments",
+   "kind_basis": "reads as a volume, artwork or notice, and only 4 of 44 chapters in this series do (9%) — not how this series names its instalments",
    "kind_inferred": true,
    "type_basis": "numbered chapter, though the platform feed did not say so",
    "preferred": "サンデーうぇぶり",
@@ -34894,6 +34900,10 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-08-13T15:00:00Z",
+   "access_modes": [
+    "withdrawn"
+   ],
+   "access_basis": "the platform's own episode list marks this chapter no longer readable",
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -63286,6 +63296,66 @@
    }
   },
   {
+   "id": "mangatime:episode:12207421984001577957",
+   "work": "ニセアイホンアイ",
+   "ep": "第6話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-08-06",
+   "seen": "2026-08-10",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "was 2026-08-06T03:00:00Z, now 2026-10-23T03:00:00Z",
+   "url": "https://mangatime-square.com/episode/12207421984001577957",
+   "author": "いくたはな",
+   "plat": "mangatime-square",
+   "plat_name": "まんがタイムSquare",
+   "ident": "discovery-candidate",
+   "free_from": "2026-10-23T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 6",
+   "kind_inferred": true,
+   "preferred": "まんがタイムSquare",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-08-06",
+   "wid": "w00109",
+   "work_en": {
+    "reading": "ニセアイホンアイ",
+    "romaji": {
+     "macron": "Niseaihon'ai",
+     "double": "Niseaihon'ai",
+     "plain": "Niseaihon'ai"
+    },
+    "en": "Fake Love, True Love",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Fake Love, True Love"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "イクタハナ",
+    "romaji": {
+     "macron": "Ikutahana",
+     "double": "Ikutahana",
+     "plain": "Ikutahana"
+    },
+    "undivided": true,
+    "en": "IKUTA Hana",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00140"
+   }
+  },
+  {
    "id": "mangatime:episode:12207421984001577953",
    "work": "ニセアイホンアイ",
    "ep": "第5話",
@@ -63539,63 +63609,6 @@
    "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 7",
-   "kind_inferred": true,
-   "preferred": "まんがタイムSquare",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-08-06",
-   "wid": "w00109",
-   "work_en": {
-    "reading": "ニセアイホンアイ",
-    "romaji": {
-     "macron": "Niseaihon'ai",
-     "double": "Niseaihon'ai",
-     "plain": "Niseaihon'ai"
-    },
-    "en": "Fake Love, True Love",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Fake Love, True Love"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "イクタハナ",
-    "romaji": {
-     "macron": "Ikutahana",
-     "double": "Ikutahana",
-     "plain": "Ikutahana"
-    },
-    "undivided": true,
-    "en": "IKUTA Hana",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00140"
-   }
-  },
-  {
-   "id": "mangatime:episode:12207421984001577957",
-   "work": "ニセアイホンアイ",
-   "ep": "第6話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-08-06",
-   "seen": "2026-08-10",
-   "basis": "observed",
-   "conf": "low",
-   "why": "7 releases of this work share this timestamp — consistent with a metadata refresh or a series import, not same-day publication",
-   "moved": "",
-   "url": "https://mangatime-square.com/episode/12207421984001577957",
-   "author": "いくたはな",
-   "plat": "mangatime-square",
-   "plat_name": "まんがタイムSquare",
-   "ident": "discovery-candidate",
-   "free_from": "2026-08-06T03:00:00Z",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 6",
    "kind_inferred": true,
    "preferred": "まんがタイムSquare",
    "also_on": [],

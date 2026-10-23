@@ -11797,6 +11797,10 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-09-24T15:00:00Z",
+   "access_modes": [
+    "withdrawn"
+   ],
+   "access_basis": "the platform's own episode list marks this chapter no longer readable",
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -30207,6 +30211,7 @@
    "access_modes": [
     "purchase"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -30336,6 +30341,7 @@
    "access_modes": [
     "purchase"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -30465,6 +30471,7 @@
    "access_modes": [
     "purchase"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -30594,6 +30601,7 @@
    "access_modes": [
     "purchase"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -31637,7 +31645,7 @@
    "ident": "discovery-candidate",
    "free_from": "2026-09-18T03:00:00Z",
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "provenance": "attested",
    "free": true,
@@ -38795,7 +38803,7 @@
    "provenance": "attested",
    "free": false,
    "kind": "other",
-   "kind_basis": "reads as a volume, artwork or notice, and only 7 of 188 chapters in this series do (4%) — not how this series names its instalments",
+   "kind_basis": "reads as a volume, artwork or notice, and only 7 of 190 chapters in this series do (4%) — not how this series names its instalments",
    "kind_inferred": true,
    "preferred": "マガポケ",
    "also_on": [],
@@ -46888,6 +46896,10 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-09-10T15:00:00Z",
+   "access_modes": [
+    "withdrawn"
+   ],
+   "access_basis": "the platform's own episode list marks this chapter no longer readable",
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -52080,7 +52092,9 @@
    "free_from": null,
    "discovered_on": null,
    "late_discovered": false,
-   "access_modes": [],
+   "access_modes": [
+    "free-timed"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -52159,7 +52173,9 @@
    "free_from": null,
    "discovered_on": null,
    "late_discovered": false,
-   "access_modes": [],
+   "access_modes": [
+    "purchase"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -67357,7 +67373,9 @@
    "free_from": null,
    "discovered_on": null,
    "late_discovered": false,
-   "access_modes": [],
+   "access_modes": [
+    "free-timed"
+   ],
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",

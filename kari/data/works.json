@@ -1,5 +1,5 @@
 {
- "count": 2657,
+ "count": 2658,
  "works": [
   {
    "work_id": "C256130",
@@ -191164,6 +191164,98 @@
     "retrieved": "2026-08-07",
     "note": "Identified by asking a licensed retailer what it stocks for a work this database already held. A shop's stock is not publisher-side labelling (§4), so this axis stays `none`, which says nothing about content."
    },
+   "explicit_content": false
+  },
+  {
+   "work_id": "bw-439005",
+   "title": {
+    "ja": "魔女は満月に咲く"
+   },
+   "creator": "原悠衣",
+   "publisher": "芳文社",
+   "imprint": "ＦＵＺコミックス",
+   "volume_count": 6,
+   "grouping": null,
+   "shop_url": "https://bookwalker.jp/series/439005/",
+   "sources": [
+    "bookwalker"
+   ],
+   "records": [
+    {
+     "source": "bookwalker",
+     "retrieved": "2026-10-22",
+     "url": "https://bookwalker.jp/series/439005/"
+    }
+   ],
+   "volumes": [
+    {
+     "number": "1",
+     "delivered": "2023-11-01",
+     "openbd": "absent",
+     "number_n": 1
+    },
+    {
+     "number": "2",
+     "delivered": "2024-04-01",
+     "openbd": "absent",
+     "number_n": 2
+    },
+    {
+     "number": "3",
+     "delivered": "2024-11-05",
+     "openbd": "absent",
+     "number_n": 3
+    },
+    {
+     "number": "4",
+     "delivered": "2025-06-02",
+     "openbd": "absent",
+     "number_n": 4
+    },
+    {
+     "number": "5",
+     "delivered": "2026-06-01",
+     "openbd": "absent",
+     "number_n": 5
+    },
+    {
+     "number": "6",
+     "delivered": "2026-11-02",
+     "openbd": "absent",
+     "number_n": 6
+    }
+   ],
+   "first_publication": {
+    "date": "2023-11-01",
+    "date_source": "bookwalker",
+    "date_basis": "shop-delivery-date",
+    "venue": "芳文社",
+    "venue_type": "imprint",
+    "country": null,
+    "country_basis": "japanese-edition-catalogued",
+    "country_note": "Every source consulted catalogues the Japanese edition. That places the EDITION in Japan and says nothing about where the work first appeared, so the scope test has not run. The route that closes it is a serialisation venue, which the bulk catalogues do not carry.",
+    "note": "The day the shop began delivering this file, which is the earliest 配信開始日 across the volumes it holds. The shop states no print edition and no ISBN for this work, so no paper record is reachable and no catalogue can be asked. This dates the delivery and claims nothing about an earlier edition, which for a self-published work may never have had a recorded date at all. The shop says nothing about this file's edition. Whether a better date exists is unknown, so this row counts toward neither the settled population nor a backlog.",
+    "date_event": "shop-delivery",
+    "date_followup": "unclassified",
+    "date_silence": "no-print-date-stated"
+   },
+   "marketing_label": "none",
+   "marketing_label_basis": {
+    "source": "bookwalker",
+    "url": "https://bookwalker.jp/series/439005/",
+    "retrieved": "2026-10-22",
+    "note": "Admitted on BOOK☆WALKER's yuri shelf. A shop's shelf is never publisher-side labelling (§4), so this axis stays `none`, which says nothing about content."
+   },
+   "admitted_by": [
+    {
+     "comparator": "bookwalker.jp",
+     "shelf": "tag 14 (百合)",
+     "retrieved": "2026-10-22",
+     "note": "A licensed retailer's yuri shelf is a comparator (DEFINITIONS §2). Presumptive and rebuttable, and never a marketing_label (§4).",
+     "url": "https://bookwalker.jp/tag/14/?qcat=2&order=title&page=30",
+     "page": 30
+    }
+   ],
    "explicit_content": false
   }
  ]
