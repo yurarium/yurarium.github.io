@@ -1,12 +1,8 @@
 {
- "generated": "2026-10-23T20:27:16+00:00",
+ "generated": "2026-10-24T08:29:20+00:00",
  "since_last": {
-  "at": "2026-10-23T12:07:52+00:00",
-  "statistics": {
-   "works": 2,
-   "with_identifier": 2,
-   "chapters": 17
-  }
+  "at": "2026-10-23T20:27:16+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -40,7 +36,7 @@
    "platform-genre": 264
   },
   "collapsed": {
-   "duplicate_chapters": 251,
+   "duplicate_chapters": 246,
    "resolver": 116,
    "samples": 0,
    "thin_sitemap": 14
@@ -454,7 +450,7 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1270,
+    "budget": 1269,
     "value": 1270,
     "measure": "arrival"
    },
@@ -503,7 +499,7 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 505,
+    "budget": 504,
     "value": 505,
     "measure": "arrival"
    },
@@ -546,7 +542,7 @@
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
     "budget": 18,
-    "value": 18,
+    "value": 17,
     "measure": "arrival"
    },
    {
@@ -580,7 +576,7 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 222,
+    "budget": 221,
     "value": 222,
     "measure": "arrival"
    },
@@ -608,7 +604,7 @@
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 62,
+    "budget": 61,
     "value": 62,
     "measure": "arrival"
    },
@@ -665,22 +661,25 @@
     "name": "facts with more than one home",
     "means": "a vocabulary, a shape or a rule typed into a second file",
     "budget": 12,
-    "value": 12,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "impossibilities asserted without evidence",
     "means": "a comment saying something cannot happen, naming nothing that proves it",
     "budget": 0,
-    "value": 0,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 76,
-    "value": 76,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -791,8 +790,9 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 0,
-    "value": 0,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "announced works the corpus does not hold",
@@ -874,7 +874,7 @@
    {
     "name": "attested rows with no access state",
     "means": "attested releases that state no access on a platform whose other rows do, nearly always because the route that read them reads none. `rows with no access state, by route` lists them. A number to work down by route, not a tripwire: `adapters/fieldaudit.py` is the one for a platform going silent.",
-    "budget": 0,
+    "budget": 1,
     "value": 0,
     "measure": "report"
    },
@@ -920,7 +920,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 18,
+    "consecutive": 19,
     "failing_since": "2026-10-16",
     "days": 8,
     "last_ok": null,
@@ -930,7 +930,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 18,
+    "consecutive": 19,
     "failing_since": "2026-10-16",
     "days": 8,
     "last_ok": null,
@@ -940,7 +940,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 18,
+    "consecutive": 19,
     "failing_since": "2026-10-16",
     "days": 8,
     "last_ok": null,
@@ -950,15 +950,35 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 1,
+    "consecutive": 2,
     "failing_since": "2026-10-24",
     "days": 0,
     "last_ok": "2026-10-23",
     "error": "1 file(s) past their age, e.g. data/source/webpages/generic-www-alphapolis-co-jp.yaml dated 2026-10-20",
     "issue": false
+   },
+   {
+    "source": "yurinavi-discover",
+    "stage": "stage-0",
+    "consecutive": 1,
+    "failing_since": "2026-10-24",
+    "days": 0,
+    "last_ok": "2026-10-24",
+    "error": "urllib.error.URLError: <urlopen error timed out>",
+    "issue": false
+   },
+   {
+    "source": "yurinavi-webyuri",
+    "stage": "stage-0",
+    "consecutive": 1,
+    "failing_since": "2026-10-24",
+    "days": 0,
+    "last_ok": "2026-10-24",
+    "error": "urllib.error.URLError: <urlopen error timed out>",
+    "issue": false
    }
   ],
-  "healthy": 150,
+  "healthy": 148,
   "threshold": 3
  },
  "connectors": [
@@ -1146,8 +1166,8 @@
   }
  ],
  "ledger": {
-  "runs_held": 0,
-  "previous_at": null,
+  "runs_held": 40,
+  "previous_at": "2026-10-23T20:20:11+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1179,7 +1199,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 47,
+   "count": 48,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1197,14 +1217,14 @@
     "credit phrases spelling a person otherwise": 3,
     "names rendered two ways": 0,
     "one work named two ways across its rows": 0,
-    "author names romanised as one word": 1270,
+    "author names romanised as one word": 1269,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 88,
     "publisher readings nobody has settled": 23,
     "renderings with nothing to show": 0,
     "kana names with no stated division": 287,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 505,
+    "author readings no source states": 504,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
@@ -1215,11 +1235,11 @@
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
     "credits sharing a reading nobody has ruled on": 24,
-    "ruby asserting a reading per character": 222,
+    "ruby asserting a reading per character": 221,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 190,
     "titles read by a machine, unmarked": 1197,
-    "uncertain readings": 62,
+    "uncertain readings": 61,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
     "works showing a romanisation": 25,
@@ -1257,7 +1277,7 @@
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
     "incomplete attested rows": 0,
-    "attested rows with no access state": 0,
+    "attested rows with no access state": 1,
     "works without English": 0,
     "volume rows with no publication date": 2598,
     "predicted updates already behind the run": 0,

@@ -1,7 +1,7 @@
 {
  "generated": "2026-10-24",
  "note": "One record per credit, with the works it is named on and the role on each edge. Addresses are opaque and minted: a credit read three ways in a day would have broken a name-shaped one twice. Fetched only when a credit page is opened.",
- "count": 2404,
+ "count": 2405,
  "credits": {
   "c00001": {
    "credit": "クール教信者",
@@ -9638,6 +9638,9 @@
     },
     {
      "id": "w03102"
+    },
+    {
+     "id": "w03451"
     }
    ],
    "spellings": [
@@ -31815,6 +31818,9 @@
    "works": [
     {
      "id": "w02391"
+    },
+    {
+     "id": "w03452"
     }
    ],
    "spellings": [
@@ -37156,6 +37162,18 @@
    ],
    "spellings": [
     "尾西たまも"
+   ]
+  },
+  "c02411": {
+   "credit": "米湯",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03452"
+    }
+   ],
+   "spellings": [
+    "米湯"
    ]
   }
  },
