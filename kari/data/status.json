@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-24T11:38:31+00:00",
+ "generated": "2026-10-24T18:43:23+00:00",
  "since_last": {
-  "at": "2026-10-24T08:29:20+00:00",
+  "at": "2026-10-24T11:38:31+00:00",
   "statistics": {}
  },
  "means": {
@@ -23,20 +23,20 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-24",
-  "releases": 1066,
+  "at": "2026-10-25",
+  "releases": 1056,
   "works": 2658,
   "platforms": 19,
   "series_rows": 3248,
   "assembled": 3249,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 769,
+   "discovery-candidate": 762,
    "known-work-match": 33,
-   "platform-genre": 264
+   "platform-genre": 261
   },
   "collapsed": {
-   "duplicate_chapters": 246,
+   "duplicate_chapters": 242,
    "resolver": 116,
    "samples": 0,
    "thin_sitemap": 14
@@ -920,9 +920,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 19,
+    "consecutive": 20,
     "failing_since": "2026-10-16",
-    "days": 8,
+    "days": 9,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -930,9 +930,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 19,
+    "consecutive": 20,
     "failing_since": "2026-10-16",
-    "days": 8,
+    "days": 9,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -940,9 +940,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 19,
+    "consecutive": 20,
     "failing_since": "2026-10-16",
-    "days": 8,
+    "days": 9,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -950,35 +950,15 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 2,
+    "consecutive": 3,
     "failing_since": "2026-10-24",
-    "days": 0,
+    "days": 1,
     "last_ok": "2026-10-23",
     "error": "1 file(s) past their age, e.g. data/source/webpages/generic-www-alphapolis-co-jp.yaml dated 2026-10-20",
-    "issue": false
-   },
-   {
-    "source": "yurinavi-discover",
-    "stage": "stage-0",
-    "consecutive": 1,
-    "failing_since": "2026-10-24",
-    "days": 0,
-    "last_ok": "2026-10-24",
-    "error": "urllib.error.URLError: <urlopen error timed out>",
-    "issue": false
-   },
-   {
-    "source": "yurinavi-webyuri",
-    "stage": "stage-0",
-    "consecutive": 1,
-    "failing_since": "2026-10-24",
-    "days": 0,
-    "last_ok": "2026-10-24",
-    "error": "urllib.error.URLError: <urlopen error timed out>",
-    "issue": false
+    "issue": true
    }
   ],
-  "healthy": 148,
+  "healthy": 150,
   "threshold": 3
  },
  "connectors": [
@@ -988,7 +968,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 83,
+   "age_days": 84,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1002,7 +982,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 79,
+   "age_days": 80,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1016,7 +996,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 78,
+   "age_days": 79,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1030,7 +1010,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 78,
+   "age_days": 79,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1044,7 +1024,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 77,
+   "age_days": 78,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1058,7 +1038,7 @@
    "works": 1728,
    "rows": 4126,
    "retrieved": "2026-10-22",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1071,7 +1051,7 @@
    "files": 2,
    "works": 130,
    "rows": 6310,
-   "retrieved": "2026-10-24",
+   "retrieved": "2026-10-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1085,7 +1065,7 @@
    "files": 5,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-10-24",
+   "retrieved": "2026-10-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1099,7 +1079,7 @@
    "files": 86,
    "works": 1661,
    "rows": 17597,
-   "retrieved": "2026-10-24",
+   "retrieved": "2026-10-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1111,9 +1091,9 @@
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 1011,
-   "rows": 7775,
-   "retrieved": "2026-10-24",
+   "works": 1012,
+   "rows": 7776,
+   "retrieved": "2026-10-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1127,7 +1107,7 @@
    "files": 3,
    "works": 1343,
    "rows": 11591,
-   "retrieved": "2026-10-24",
+   "retrieved": "2026-10-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1141,7 +1121,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-24",
+   "retrieved": "2026-10-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1155,7 +1135,7 @@
    "files": 50,
    "works": 649,
    "rows": 9380,
-   "retrieved": "2026-10-24",
+   "retrieved": "2026-10-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1167,7 +1147,7 @@
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-23T20:20:11+00:00",
+  "previous_at": "2026-10-24T08:28:02+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1292,9 +1272,9 @@
    "print": 1727,
    "completed": 494,
    "oneshot": 494,
-   "active": 285,
+   "active": 283,
    "dormant": 145,
-   "slow": 59,
+   "slow": 61,
    "unknown": 44
   },
   "english_basis": {
