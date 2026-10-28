@@ -1,8 +1,14 @@
 {
- "generated": "2026-10-28T13:32:32+00:00",
+ "generated": "2026-10-28T20:55:36+00:00",
  "since_last": {
-  "at": "2026-10-28T10:38:39+00:00",
-  "statistics": {}
+  "at": "2026-10-28T13:32:32+00:00",
+  "statistics": {
+   "works": -1,
+   "print_works": -1,
+   "print_only": -1,
+   "with_identifier": -1,
+   "chapters": -16
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,20 +29,20 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-28",
-  "releases": 1046,
+  "at": "2026-10-29",
+  "releases": 1037,
   "works": 2658,
   "platforms": 19,
-  "series_rows": 3251,
-  "assembled": 3252,
+  "series_rows": 3250,
+  "assembled": 3251,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 754,
+   "discovery-candidate": 749,
    "known-work-match": 33,
-   "platform-genre": 259
+   "platform-genre": 255
   },
   "collapsed": {
-   "duplicate_chapters": 247,
+   "duplicate_chapters": 245,
    "resolver": 117,
    "samples": 0,
    "thin_sitemap": 14
@@ -826,7 +832,7 @@
     "name": "targets a capture wrote no row for",
     "means": "works a platform pass was given as a target and wrote no row for. The pass put each in a `failed` list, printed it and dropped it, so until now a work asked for and not got left nothing in the repository at all. A rise means a pass has stopped resolving something it used to, which is either an address that moved or a platform that withdrew a work. It falls when the target is captured, or when a platform's refusal is written into a register the count reads, as data/source/kadokomi/withheld.yaml already is.",
     "budget": 6,
-    "value": 6,
+    "value": 7,
     "measure": "report"
    },
    {
@@ -895,8 +901,8 @@
    {
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
-    "budget": 0,
-    "value": 0,
+    "budget": 1,
+    "value": 1,
     "measure": "report"
    },
    {
@@ -920,9 +926,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 26,
+    "consecutive": 27,
     "failing_since": "2026-10-16",
-    "days": 12,
+    "days": 13,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -930,9 +936,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 26,
+    "consecutive": 27,
     "failing_since": "2026-10-16",
-    "days": 12,
+    "days": 13,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -940,9 +946,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 26,
+    "consecutive": 27,
     "failing_since": "2026-10-16",
-    "days": 12,
+    "days": 13,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -950,9 +956,9 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 9,
+    "consecutive": 10,
     "failing_since": "2026-10-24",
-    "days": 4,
+    "days": 5,
     "last_ok": "2026-10-23",
     "error": "1 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
     "issue": true
@@ -960,15 +966,25 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 5,
+    "consecutive": 6,
     "failing_since": "2026-10-26",
-    "days": 2,
+    "days": 3,
     "last_ok": "2026-10-25",
     "error": "16 file(s) past their age, e.g. data/source/webpages/asacomi.yaml dated 2026-10-22",
     "issue": true
+   },
+   {
+    "source": "shopquery",
+    "stage": "stage-post",
+    "consecutive": 1,
+    "failing_since": "2026-10-29",
+    "days": 0,
+    "last_ok": "2026-10-28",
+    "error": "HEALTH: 1 of 1 works had every query answer nothing (over the 35% ceiling). This shop says 'no results' with a 404, so a run being refused looks exactly like a shop with no stock. Refusing to write.",
+    "issue": false
    }
   ],
-  "healthy": 149,
+  "healthy": 148,
   "threshold": 3
  },
  "connectors": [
@@ -978,7 +994,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 87,
+   "age_days": 88,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -992,7 +1008,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 83,
+   "age_days": 84,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1006,7 +1022,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 82,
+   "age_days": 83,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1020,7 +1036,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 82,
+   "age_days": 83,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1034,7 +1050,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 81,
+   "age_days": 82,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1048,7 +1064,7 @@
    "works": 1728,
    "rows": 4126,
    "retrieved": "2026-10-22",
-   "age_days": 6,
+   "age_days": 7,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1061,7 +1077,7 @@
    "files": 2,
    "works": 130,
    "rows": 6331,
-   "retrieved": "2026-10-28",
+   "retrieved": "2026-10-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1075,7 +1091,7 @@
    "files": 5,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-10-28",
+   "retrieved": "2026-10-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1089,7 +1105,7 @@
    "files": 86,
    "works": 1668,
    "rows": 17634,
-   "retrieved": "2026-10-28",
+   "retrieved": "2026-10-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1103,7 +1119,7 @@
    "files": 5,
    "works": 1016,
    "rows": 7812,
-   "retrieved": "2026-10-28",
+   "retrieved": "2026-10-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1115,15 +1131,15 @@
   {
    "source": "nicovideo",
    "files": 3,
-   "works": 1344,
-   "rows": 11616,
-   "retrieved": "2026-10-28",
+   "works": 1343,
+   "rows": 11580,
+   "retrieved": "2026-10-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10769,
+   "checked_rows": 10733,
    "well_formed": 0,
-   "malformed": 10769,
+   "malformed": 10733,
    "drop": null
   },
   {
@@ -1131,7 +1147,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-28",
+   "retrieved": "2026-10-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1144,20 +1160,20 @@
    "source": "webpages",
    "files": 50,
    "works": 652,
-   "rows": 9433,
-   "retrieved": "2026-10-28",
+   "rows": 9435,
+   "retrieved": "2026-10-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9380,
-   "well_formed": 9379,
+   "checked_rows": 9382,
+   "well_formed": 9381,
    "malformed": 1,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-10-27T09:36:07+00:00",
+  "previous_at": "2026-10-28T10:36:39+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1189,7 +1205,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 47,
+   "count": 48,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1270,34 +1286,34 @@
     "attested rows with no access state": 0,
     "works without English": 0,
     "volume rows with no publication date": 2598,
-    "predicted updates already behind the run": 0,
+    "predicted updates already behind the run": 1,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
    }
   }
  ],
  "statistics": {
-  "works": 3251,
+  "works": 3250,
   "states": {
-   "print": 1727,
+   "print": 1726,
    "completed": 496,
    "oneshot": 495,
    "active": 284,
-   "dormant": 144,
-   "slow": 58,
-   "unknown": 47
+   "dormant": 146,
+   "slow": 57,
+   "unknown": 46
   },
   "english_basis": {
-   "translated": 2878,
+   "translated": 2877,
    "official-jp": 240,
    "licensed": 108,
    "romaji": 25
   },
-  "print_works": 2543,
-  "print_only": 1727,
+  "print_works": 2542,
+  "print_only": 1726,
   "volumes": 6292,
-  "with_identifier": 3251,
-  "chapters": 31046,
+  "with_identifier": 3250,
+  "chapters": 31030,
   "delivery_dated": 1101
  }
 }
