@@ -1,8 +1,10 @@
 {
- "generated": "2026-10-27T12:40:51+00:00",
+ "generated": "2026-10-28T10:38:39+00:00",
  "since_last": {
-  "at": "2026-10-27T09:42:33+00:00",
-  "statistics": {}
+  "at": "2026-10-27T12:40:51+00:00",
+  "statistics": {
+   "chapters": 16
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,21 +25,21 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-27",
-  "releases": 1061,
+  "at": "2026-10-28",
+  "releases": 1046,
   "works": 2658,
   "platforms": 19,
   "series_rows": 3251,
   "assembled": 3252,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 764,
+   "discovery-candidate": 754,
    "known-work-match": 33,
-   "platform-genre": 264
+   "platform-genre": 259
   },
   "collapsed": {
-   "duplicate_chapters": 249,
-   "resolver": 116,
+   "duplicate_chapters": 247,
+   "resolver": 117,
    "samples": 0,
    "thin_sitemap": 14
   }
@@ -661,22 +663,25 @@
     "name": "facts with more than one home",
     "means": "a vocabulary, a shape or a rule typed into a second file",
     "budget": 12,
-    "value": 12,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "impossibilities asserted without evidence",
     "means": "a comment saying something cannot happen, naming nothing that proves it",
     "budget": 0,
-    "value": 0,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 76,
-    "value": 76,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "nicovideo works with no rights",
@@ -787,8 +792,9 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 0,
-    "value": 0,
-    "measure": "source"
+    "value": null,
+    "measure": "source",
+    "not_measured": "source-quality budget; measured at check-in"
    },
    {
     "name": "announced works the corpus does not hold",
@@ -916,9 +922,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 25,
+    "consecutive": 26,
     "failing_since": "2026-10-16",
-    "days": 11,
+    "days": 12,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -926,9 +932,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 25,
+    "consecutive": 26,
     "failing_since": "2026-10-16",
-    "days": 11,
+    "days": 12,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -936,9 +942,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 25,
+    "consecutive": 26,
     "failing_since": "2026-10-16",
-    "days": 11,
+    "days": 12,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -946,19 +952,19 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 8,
+    "consecutive": 9,
     "failing_since": "2026-10-24",
-    "days": 3,
+    "days": 4,
     "last_ok": "2026-10-23",
-    "error": "2 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
+    "error": "1 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
     "issue": true
    },
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 4,
+    "consecutive": 5,
     "failing_since": "2026-10-26",
-    "days": 1,
+    "days": 2,
     "last_ok": "2026-10-25",
     "error": "16 file(s) past their age, e.g. data/source/webpages/asacomi.yaml dated 2026-10-22",
     "issue": true
@@ -974,7 +980,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 86,
+   "age_days": 87,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -988,7 +994,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 82,
+   "age_days": 83,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1002,7 +1008,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 81,
+   "age_days": 82,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1016,7 +1022,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 81,
+   "age_days": 82,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1030,7 +1036,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 80,
+   "age_days": 81,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1044,7 +1050,7 @@
    "works": 1728,
    "rows": 4126,
    "retrieved": "2026-10-22",
-   "age_days": 5,
+   "age_days": 6,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1056,13 +1062,13 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6329,
-   "retrieved": "2026-10-27",
+   "rows": 6331,
+   "retrieved": "2026-10-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6282,
-   "well_formed": 6282,
+   "checked_rows": 6284,
+   "well_formed": 6284,
    "malformed": 0,
    "drop": null
   },
@@ -1071,7 +1077,7 @@
    "files": 5,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-10-27",
+   "retrieved": "2026-10-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1083,43 +1089,43 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1666,
-   "rows": 17616,
-   "retrieved": "2026-10-27",
+   "works": 1668,
+   "rows": 17634,
+   "retrieved": "2026-10-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17209,
-   "well_formed": 17209,
+   "checked_rows": 17226,
+   "well_formed": 17226,
    "malformed": 0,
    "drop": null
   },
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 1013,
-   "rows": 7803,
-   "retrieved": "2026-10-27",
+   "works": 1016,
+   "rows": 7812,
+   "retrieved": "2026-10-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7110,
-   "well_formed": 6811,
+   "checked_rows": 7117,
+   "well_formed": 6818,
    "malformed": 299,
    "drop": null
   },
   {
    "source": "nicovideo",
    "files": 3,
-   "works": 1343,
-   "rows": 11603,
-   "retrieved": "2026-10-27",
+   "works": 1344,
+   "rows": 11616,
+   "retrieved": "2026-10-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10756,
+   "checked_rows": 10769,
    "well_formed": 0,
-   "malformed": 10756,
+   "malformed": 10769,
    "drop": null
   },
   {
@@ -1127,7 +1133,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-27",
+   "retrieved": "2026-10-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1140,20 +1146,20 @@
    "source": "webpages",
    "files": 50,
    "works": 652,
-   "rows": 9429,
-   "retrieved": "2026-10-27",
+   "rows": 9433,
+   "retrieved": "2026-10-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9376,
-   "well_formed": 9374,
-   "malformed": 2,
+   "checked_rows": 9380,
+   "well_formed": 9379,
+   "malformed": 1,
    "drop": null
   }
  ],
  "ledger": {
-  "runs_held": 0,
-  "previous_at": null,
+  "runs_held": 40,
+  "previous_at": "2026-10-27T09:36:07+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1276,12 +1282,12 @@
   "works": 3251,
   "states": {
    "print": 1727,
+   "completed": 496,
    "oneshot": 495,
-   "completed": 494,
-   "active": 286,
-   "dormant": 146,
-   "slow": 59,
-   "unknown": 44
+   "active": 284,
+   "dormant": 144,
+   "slow": 58,
+   "unknown": 47
   },
   "english_basis": {
    "translated": 2878,
@@ -1293,7 +1299,7 @@
   "print_only": 1727,
   "volumes": 6292,
   "with_identifier": 3251,
-  "chapters": 31030,
+  "chapters": 31046,
   "delivery_dated": 1101
  }
 }
