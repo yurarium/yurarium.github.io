@@ -1,13 +1,9 @@
 {
- "generated": "2026-10-28T20:55:36+00:00",
+ "generated": "2026-10-29T10:44:22+00:00",
  "since_last": {
-  "at": "2026-10-28T13:32:32+00:00",
+  "at": "2026-10-28T20:55:36+00:00",
   "statistics": {
-   "works": -1,
-   "print_works": -1,
-   "print_only": -1,
-   "with_identifier": -1,
-   "chapters": -16
+   "chapters": 4
   }
  },
  "means": {
@@ -30,19 +26,19 @@
  },
  "last_run": {
   "at": "2026-10-29",
-  "releases": 1037,
+  "releases": 1043,
   "works": 2658,
   "platforms": 19,
   "series_rows": 3250,
   "assembled": 3251,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 749,
+   "discovery-candidate": 753,
    "known-work-match": 33,
-   "platform-genre": 255
+   "platform-genre": 257
   },
   "collapsed": {
-   "duplicate_chapters": 245,
+   "duplicate_chapters": 246,
    "resolver": 117,
    "samples": 0,
    "thin_sitemap": 14
@@ -547,8 +543,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 17,
-    "value": 17,
+    "budget": 18,
+    "value": 18,
     "measure": "arrival"
    },
    {
@@ -582,8 +578,8 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 222,
-    "value": 222,
+    "budget": 221,
+    "value": 221,
     "measure": "arrival"
    },
    {
@@ -610,8 +606,8 @@
    {
     "name": "uncertain readings",
     "means": "readings assembled character by character because no analyser could read the word. A rise means new works whose kanji nothing can read, or a regression in the analyser passes.",
-    "budget": 62,
-    "value": 62,
+    "budget": 61,
+    "value": 61,
     "measure": "arrival"
    },
    {
@@ -667,25 +663,22 @@
     "name": "facts with more than one home",
     "means": "a vocabulary, a shape or a rule typed into a second file",
     "budget": 12,
-    "value": null,
-    "measure": "source",
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 12,
+    "measure": "source"
    },
    {
     "name": "impossibilities asserted without evidence",
     "means": "a comment saying something cannot happen, naming nothing that proves it",
     "budget": 0,
-    "value": null,
-    "measure": "source",
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 0,
+    "measure": "source"
    },
    {
     "name": "invented markup in tests",
     "means": "page-shaped string literals of 200 characters or more in test files, which is markup somebody wrote from memory standing in for a page. Falls as tests move to data/fixtures/; does not reach zero, because some platforms have no cached page to cut. A rise means a test went back to inventing one.",
     "budget": 76,
-    "value": null,
-    "measure": "source",
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 76,
+    "measure": "source"
    },
    {
     "name": "nicovideo works with no rights",
@@ -796,9 +789,8 @@
     "name": "scraped counters in chapter names",
     "means": "chapter names ending in the view or like counts printed next to them on the source page. A rise means an extractor has gone back to flattening a chapter block into one run of text instead of reading the element the page names as the title.",
     "budget": 0,
-    "value": null,
-    "measure": "source",
-    "not_measured": "source-quality budget; measured at check-in"
+    "value": 0,
+    "measure": "source"
    },
    {
     "name": "announced works the corpus does not hold",
@@ -831,7 +823,7 @@
    {
     "name": "targets a capture wrote no row for",
     "means": "works a platform pass was given as a target and wrote no row for. The pass put each in a `failed` list, printed it and dropped it, so until now a work asked for and not got left nothing in the repository at all. A rise means a pass has stopped resolving something it used to, which is either an address that moved or a platform that withdrew a work. It falls when the target is captured, or when a platform's refusal is written into a register the count reads, as data/source/kadokomi/withheld.yaml already is.",
-    "budget": 6,
+    "budget": 7,
     "value": 7,
     "measure": "report"
    },
@@ -926,7 +918,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 27,
+    "consecutive": 28,
     "failing_since": "2026-10-16",
     "days": 13,
     "last_ok": null,
@@ -936,7 +928,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 27,
+    "consecutive": 28,
     "failing_since": "2026-10-16",
     "days": 13,
     "last_ok": null,
@@ -946,7 +938,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 27,
+    "consecutive": 28,
     "failing_since": "2026-10-16",
     "days": 13,
     "last_ok": null,
@@ -956,7 +948,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 10,
+    "consecutive": 11,
     "failing_since": "2026-10-24",
     "days": 5,
     "last_ok": "2026-10-23",
@@ -966,7 +958,7 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 6,
+    "consecutive": 7,
     "failing_since": "2026-10-26",
     "days": 3,
     "last_ok": "2026-10-25",
@@ -976,7 +968,7 @@
    {
     "source": "shopquery",
     "stage": "stage-post",
-    "consecutive": 1,
+    "consecutive": 2,
     "failing_since": "2026-10-29",
     "days": 0,
     "last_ok": "2026-10-28",
@@ -1076,13 +1068,13 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6331,
+   "rows": 6333,
    "retrieved": "2026-10-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6284,
-   "well_formed": 6284,
+   "checked_rows": 6286,
+   "well_formed": 6286,
    "malformed": 0,
    "drop": null
   },
@@ -1118,14 +1110,14 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1016,
-   "rows": 7812,
+   "rows": 7816,
    "retrieved": "2026-10-29",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7117,
-   "well_formed": 6818,
-   "malformed": 299,
+   "checked_rows": 7121,
+   "well_formed": 6768,
+   "malformed": 353,
    "drop": null
   },
   {
@@ -1172,8 +1164,8 @@
   }
  ],
  "ledger": {
-  "runs_held": 40,
-  "previous_at": "2026-10-28T10:36:39+00:00",
+  "runs_held": 0,
+  "previous_at": null,
   "drops": []
  },
  "outstanding": [
@@ -1236,16 +1228,16 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 17,
+    "credit fields an identifier does not cover": 18,
     "credit pages listing a work that does not name them": 11,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
     "credits sharing a reading nobody has ruled on": 24,
-    "ruby asserting a reading per character": 222,
+    "ruby asserting a reading per character": 221,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 190,
     "titles read by a machine, unmarked": 1199,
-    "uncertain readings": 62,
+    "uncertain readings": 61,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
     "works showing a romanisation": 25,
@@ -1276,7 +1268,7 @@
     "updates naming a work we do not hold": 2,
     "works whose first publication country is unattested": 2658,
     "scope questions left open": 2,
-    "targets a capture wrote no row for": 6,
+    "targets a capture wrote no row for": 7,
     "producers not yet scheduled": 10,
     "rows with a moving address": 6,
     "listing series with no feed of their own": 0,
@@ -1296,12 +1288,12 @@
   "works": 3250,
   "states": {
    "print": 1726,
-   "completed": 496,
+   "completed": 497,
    "oneshot": 495,
-   "active": 284,
+   "active": 286,
    "dormant": 146,
-   "slow": 57,
-   "unknown": 46
+   "slow": 55,
+   "unknown": 45
   },
   "english_basis": {
    "translated": 2877,
@@ -1313,7 +1305,7 @@
   "print_only": 1726,
   "volumes": 6292,
   "with_identifier": 3250,
-  "chapters": 31030,
+  "chapters": 31034,
   "delivery_dated": 1101
  }
 }
