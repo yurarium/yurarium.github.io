@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-30",
+ "generated": "2026-10-31",
  "note": "One record per credit, with the works it is named on and the role on each edge. Addresses are opaque and minted: a credit read three ways in a day would have broken a name-shaped one twice. Fetched only when a credit page is opened.",
- "count": 2405,
+ "count": 2412,
  "credits": {
   "c00001": {
    "credit": "クール教信者",
@@ -1031,7 +1031,10 @@
    "shape": "person",
    "works": [
     {
-     "id": "w00016"
+     "id": "w00016",
+     "roles": [
+      "著"
+     ]
     },
     {
      "id": "w00091"
@@ -7784,6 +7787,12 @@
    "works": [
     {
      "id": "w00333"
+    },
+    {
+     "id": "w03464"
+    },
+    {
+     "id": "w03473"
     }
    ],
    "spellings": [
@@ -10359,6 +10368,9 @@
     },
     {
      "id": "w01661"
+    },
+    {
+     "id": "w03462"
     }
    ],
    "spellings": [
@@ -15045,6 +15057,9 @@
    "works": [
     {
      "id": "w00822"
+    },
+    {
+     "id": "w03461"
     }
    ],
    "spellings": [
@@ -15267,6 +15282,9 @@
     },
     {
      "id": "w03409"
+    },
+    {
+     "id": "w03470"
     }
    ],
    "spellings": [
@@ -18280,6 +18298,9 @@
      "roles": [
       "著者"
      ]
+    },
+    {
+     "id": "w03460"
     }
    ],
    "spellings": [
@@ -26589,6 +26610,9 @@
     },
     {
      "id": "w03095"
+    },
+    {
+     "id": "w03455"
     }
    ],
    "spellings": [
@@ -26947,6 +26971,9 @@
     },
     {
      "id": "w03393"
+    },
+    {
+     "id": "w03463"
     }
    ],
    "spellings": [
@@ -29255,6 +29282,9 @@
     },
     {
      "id": "w02943"
+    },
+    {
+     "id": "w03459"
     }
    ],
    "spellings": [
@@ -32259,6 +32289,9 @@
    "works": [
     {
      "id": "w02454"
+    },
+    {
+     "id": "w03468"
     }
    ],
    "spellings": [
@@ -32295,6 +32328,9 @@
    "works": [
     {
      "id": "w02462"
+    },
+    {
+     "id": "w03471"
     }
    ],
    "spellings": [
@@ -33420,6 +33456,9 @@
     },
     {
      "id": "w03058"
+    },
+    {
+     "id": "w03467"
     }
    ],
    "spellings": [
@@ -36593,6 +36632,9 @@
    "works": [
     {
      "id": "w03353"
+    },
+    {
+     "id": "w03466"
     }
    ],
    "spellings": [
@@ -37165,6 +37207,90 @@
    ],
    "spellings": [
     "米湯"
+   ]
+  },
+  "c02412": {
+   "credit": "守崎",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03456"
+    }
+   ],
+   "spellings": [
+    "守崎"
+   ]
+  },
+  "c02413": {
+   "credit": "ふゆつみ千明",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03457"
+    }
+   ],
+   "spellings": [
+    "ふゆつみ千明"
+   ]
+  },
+  "c02414": {
+   "credit": "三浦ぴのの",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03458"
+    }
+   ],
+   "spellings": [
+    "三浦ぴのの"
+   ]
+  },
+  "c02415": {
+   "credit": "白藍まこと",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03462"
+    }
+   ],
+   "spellings": [
+    "白藍まこと"
+   ]
+  },
+  "c02416": {
+   "credit": "わんころり",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03465"
+    }
+   ],
+   "spellings": [
+    "わんころり"
+   ]
+  },
+  "c02417": {
+   "credit": "國光恐竜",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03469"
+    }
+   ],
+   "spellings": [
+    "國光恐竜"
+   ]
+  },
+  "c02418": {
+   "credit": "はなうためありー",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03472"
+    }
+   ],
+   "spellings": [
+    "はなうためありー"
    ]
   }
  },

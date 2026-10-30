@@ -1,8 +1,11 @@
 {
- "generated": "2026-10-30T13:35:22+00:00",
+ "generated": "2026-10-30T20:29:54+00:00",
  "since_last": {
-  "at": "2026-10-30T10:46:36+00:00",
-  "statistics": {}
+  "at": "2026-10-30T13:35:22+00:00",
+  "statistics": {
+   "print_only": 1,
+   "chapters": -125
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,23 +26,23 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-10-30",
-  "releases": 1055,
+  "at": "2026-10-31",
+  "releases": 1051,
   "works": 2676,
   "platforms": 19,
   "series_rows": 3270,
-  "assembled": 3271,
-  "awaiting_identifier": 1,
+  "assembled": 3272,
+  "awaiting_identifier": 2,
   "identification": {
-   "discovery-candidate": 756,
+   "discovery-candidate": 753,
    "known-work-match": 33,
-   "platform-genre": 266
+   "platform-genre": 265
   },
   "collapsed": {
-   "duplicate_chapters": 250,
-   "resolver": 120,
+   "duplicate_chapters": 248,
+   "resolver": 121,
    "samples": 0,
-   "thin_sitemap": 14
+   "thin_sitemap": 15
   }
  },
  "gate": {
@@ -541,8 +544,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 26,
-    "value": 26,
+    "budget": 18,
+    "value": 18,
     "measure": "arrival"
    },
    {
@@ -597,8 +600,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1211,
-    "value": 1211,
+    "budget": 1206,
+    "value": 1206,
     "measure": "arrival"
    },
    {
@@ -618,15 +621,15 @@
    {
     "name": "titles showing a romanisation nobody has ruled on",
     "means": "titles falling through to a romanisation that nobody has examined. Distinct from the budget below, which counts every such title and cannot reach zero because a romanisation finishes a name; this counts the ones still owed a reading of the work, and it can. A rise means a new title nobody has looked at, which is ordinary and is the queue doing its job.",
-    "budget": 7,
-    "value": 7,
+    "budget": 0,
+    "value": 0,
     "measure": "arrival"
    },
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 32,
-    "value": 32,
+    "budget": 25,
+    "value": 25,
     "measure": "arrival"
    },
    {
@@ -916,9 +919,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 30,
+    "consecutive": 31,
     "failing_since": "2026-10-16",
-    "days": 14,
+    "days": 15,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -926,9 +929,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 30,
+    "consecutive": 31,
     "failing_since": "2026-10-16",
-    "days": 14,
+    "days": 15,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -936,9 +939,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 30,
+    "consecutive": 31,
     "failing_since": "2026-10-16",
-    "days": 14,
+    "days": 15,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -946,35 +949,25 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 13,
+    "consecutive": 14,
     "failing_since": "2026-10-24",
-    "days": 6,
+    "days": 7,
     "last_ok": "2026-10-23",
-    "error": "1 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
+    "error": "2 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
     "issue": true
    },
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 9,
+    "consecutive": 10,
     "failing_since": "2026-10-26",
-    "days": 4,
+    "days": 5,
     "last_ok": "2026-10-25",
-    "error": "16 file(s) past their age, e.g. data/source/webpages/asacomi.yaml dated 2026-10-22",
-    "issue": true
-   },
-   {
-    "source": "shopquery",
-    "stage": "stage-post",
-    "consecutive": 4,
-    "failing_since": "2026-10-29",
-    "days": 1,
-    "last_ok": "2026-10-28",
-    "error": "HEALTH: 1 of 1 works had every query answer nothing (over the 35% ceiling). This shop says 'no results' with a 404, so a run being refused looks exactly like a shop with no stock. Refusing to write.",
+    "error": "17 file(s) past their age, e.g. data/source/webpages/asacomi.yaml dated 2026-10-22",
     "issue": true
    }
   ],
-  "healthy": 148,
+  "healthy": 149,
   "threshold": 3
  },
  "connectors": [
@@ -984,7 +977,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 89,
+   "age_days": 90,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -998,7 +991,7 @@
    "works": 57,
    "rows": 57,
    "retrieved": "2026-08-06",
-   "age_days": 85,
+   "age_days": 86,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1012,7 +1005,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-08-07",
-   "age_days": 84,
+   "age_days": 85,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1026,7 +1019,7 @@
    "works": 943,
    "rows": 2436,
    "retrieved": "2026-08-07",
-   "age_days": 84,
+   "age_days": 85,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1040,7 +1033,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 83,
+   "age_days": 84,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1054,7 +1047,7 @@
    "works": 1746,
    "rows": 4177,
    "retrieved": "2026-10-29",
-   "age_days": 1,
+   "age_days": 2,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1067,7 +1060,7 @@
    "files": 2,
    "works": 130,
    "rows": 6335,
-   "retrieved": "2026-10-30",
+   "retrieved": "2026-10-31",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1081,7 +1074,7 @@
    "files": 5,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-10-30",
+   "retrieved": "2026-10-31",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1093,14 +1086,14 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1672,
-   "rows": 17635,
-   "retrieved": "2026-10-30",
+   "works": 1673,
+   "rows": 17636,
+   "retrieved": "2026-10-31",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17224,
-   "well_formed": 17224,
+   "checked_rows": 17225,
+   "well_formed": 17225,
    "malformed": 0,
    "drop": null
   },
@@ -1109,7 +1102,7 @@
    "files": 5,
    "works": 1016,
    "rows": 7825,
-   "retrieved": "2026-10-30",
+   "retrieved": "2026-10-31",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1123,7 +1116,7 @@
    "files": 3,
    "works": 1343,
    "rows": 11580,
-   "retrieved": "2026-10-30",
+   "retrieved": "2026-10-31",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1137,7 +1130,7 @@
    "files": 847,
    "works": 847,
    "rows": 2175,
-   "retrieved": "2026-10-30",
+   "retrieved": "2026-10-31",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1149,14 +1142,14 @@
   {
    "source": "webpages",
    "files": 50,
-   "works": 655,
-   "rows": 9457,
-   "retrieved": "2026-10-30",
+   "works": 656,
+   "rows": 9459,
+   "retrieved": "2026-10-31",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9403,
-   "well_formed": 9400,
+   "checked_rows": 9405,
+   "well_formed": 9402,
    "malformed": 3,
    "drop": null
   }
@@ -1176,17 +1169,9 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 7,
+   "count": 0,
    "what": "Name in English the works that carry only a romanisation",
-   "rows": [
-    "「アルカディア」への道",
-    "あめのちゆき",
-    "しちてんはっき！",
-    "どこまでほどいていいですか？",
-    "ひとひらのサクラスミレ",
-    "ひみつ暮らし",
-    "まみやとあおい"
-   ]
+   "rows": []
   },
   {
    "kind": "candidate",
@@ -1203,7 +1188,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 49,
+   "count": 48,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1234,7 +1219,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 26,
+    "credit fields an identifier does not cover": 18,
     "credit pages listing a work that does not name them": 11,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1242,11 +1227,11 @@
     "ruby asserting a reading per character": 223,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 190,
-    "titles read by a machine, unmarked": 1211,
+    "titles read by a machine, unmarked": 1206,
     "uncertain readings": 61,
     "data reaching the site around the store": 0,
-    "titles showing a romanisation nobody has ruled on": 7,
-    "works showing a romanisation": 32,
+    "titles showing a romanisation nobody has ruled on": 0,
+    "works showing a romanisation": 25,
     "works shown under an outranked spelling": 0,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
@@ -1293,25 +1278,25 @@
  "statistics": {
   "works": 3270,
   "states": {
-   "print": 1744,
+   "print": 1745,
    "completed": 497,
    "oneshot": 497,
-   "active": 291,
+   "active": 287,
    "dormant": 146,
-   "slow": 52,
+   "slow": 55,
    "unknown": 43
   },
   "english_basis": {
-   "translated": 2889,
+   "translated": 2896,
    "official-jp": 241,
    "licensed": 108,
-   "romaji": 32
+   "romaji": 25
   },
   "print_works": 2560,
-  "print_only": 1744,
+  "print_only": 1745,
   "volumes": 6344,
   "with_identifier": 3270,
-  "chapters": 31053,
+  "chapters": 30928,
   "delivery_dated": 1119
  }
 }
