@@ -111,6 +111,33 @@ def main(s):
     # AND A TITLE THAT DIFFERS IS STILL STACKED, or the rule above is just suppression.
     s.check("雨夜の月" in got[1]["text"] and "moon" in got[1]["text"],
             "a title whose two languages differ still shows both")
+    volume_names(s)
+
+
+def volume_names(s):
+    """A volume with a name of its own is named through the titles map, not romanised as a phrase.
+
+    考幻学入門 is the first of 鈴木りつ短編集's two books. As a designation it reached `phraseOf`
+    and an English reader got Kangae Maboroshigaku Nyūmon, the analyser's misreading, while the
+    name store held An Introduction to Phantasmology."""
+    names = {"titles": {"考幻学入門": {"en": "An Introduction to Phantasmology", "basis": "translated",
+                                     "en_forms": {"translated": "An Introduction to Phantasmology"}}},
+             "phrases": {"考幻学入門": "Kangae Maboroshigaku Nyūmon", "民宿かがや": "Minshuku Kagaya"}}
+    first = {"designation": "考幻学入門", "subtitle": "考幻学入門"}
+    placed = {"designation": "(2) -民宿かがや", "subtitle": "民宿かがや", "number_n": 2}
+
+    def label(row, lang):
+        return interface.render([("volLabel", row)], names=names, prefs={"LANG": lang})[0]["text"]
+
+    s.eq(label(first, "en"), "An Introduction to Phantasmology",
+         "a volume's own name is the English the name store holds for it")
+    s.eq(label(first, "ja"), "考幻学入門", "and in Japanese it is what the record calls it")
+    s.eq(label(first, "both"), "考幻学入門 / An Introduction to Phantasmology",
+         "併記 pairs the two the way a numbered volume's label does")
+    s.eq(label(placed, "en"), "vol. 2: Minshuku Kagaya",
+         "a name nobody has translated falls back to its romanisation, after the place the "
+         "build gave the book, so two books sharing a name are still two rows")
+    s.eq(label(placed, "ja"), "(2) -民宿かがや", "and the Japanese keeps the position as written")
 
 
 if __name__ == "__main__":

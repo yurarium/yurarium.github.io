@@ -2576,6 +2576,21 @@ function volLabel(v) {
   const raw = String(row.number || row.designation || '').trim();
   const at = row.number_n;
   if (!raw) return '';
+  /* A VOLUME WITH A NAME OF ITS OWN IS NAMED THE WAY A WORK IS. 考幻学入門 is the first of
+     鈴木りつ短編集's two books, and as a designation it went through `phraseOf`, which romanised
+     it as Kangae Maboroshigaku Nyūmon where the name store holds An Introduction to Phantasmology.
+     The build says which part of the designation is the name (`subtitle`) and where the book sits
+     (`number_n`); the name is asked of the titles map under the reader's English order, and the
+     Japanese stays what the record wrote, position and all. */
+  if (row.subtitle) {
+    if (LANG === 'ja') return raw;
+    const en = inLang('en', () => {
+      const name = workTextOf(row.subtitle);
+      return Number.isFinite(at) ? `vol. ${at}: ${name}` : name;
+    });
+    if (LANG === 'en' || en === raw) return en;
+    return `${raw} / ${en}`;
+  }
   const m = raw.match(VOLNUM);
   if (m) return T('第' + m[1] + '巻', 'vol. ' + m[1]);
   /* A TWO OR THREE VOLUME SET IS NUMBERED 上 中 下, NOT 1 2 3. VOLPART already orders them and
