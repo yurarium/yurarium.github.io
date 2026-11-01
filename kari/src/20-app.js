@@ -160,7 +160,7 @@ const evSource = e => ((e.type === 'publisher' || e.type === 'magazine')
    An imprint is a NAME and goes through imprintOf, which is the publisher store's job and not a
    glossary's. Nothing here invents an English form for one. */
 const TERM_EN = {
-  '百合': 'yuri', '百合・GL': 'yuri and GL', 'GL': 'GL', 'ゆり': 'yuri',
+  '百合': 'yuri', '百合・GL': 'yuri and GL', 'GL': 'GL', 'ゆり': 'yuri', 'ガールズラブ': "girls' love",
   'ongoing': 'ongoing', '連載中': 'ongoing', 'finished': 'finished', '完結': 'finished',
 };
 const evTerm = e => {
@@ -175,15 +175,17 @@ const evTermTitle = e => ((LANG === 'en' && TERM_EN[e.term] && TERM_EN[e.term] !
   ? e.term : '');
 
 /* THE CUE IS A SHAPE, NOT A COLOUR, so it carries for a reader who cannot tell two colours apart.
-   Three segments over five ranks: the publisher's own imprint fills all three, its other §4
-   labelling fills two, and a comparator fills one. That is the line the documents actually draw,
-   and grouping to it beats inventing five gradations nobody decided.
+   Three segments: the publisher's own imprint fills all three, its other §4 labelling fills two,
+   and a comparator fills one. That is the line the documents actually draw, and grouping to it
+   beats inventing a gradation per kind nobody decided. Keyed on the KIND and not the rank number,
+   which `classify/credence` renumbers when a kind arrives: the publisher's catalogue text took
+   rank 2 and moved every kind below it down one.
 
    It is hidden from assistive technology on purpose. The rows are sorted strongest first and the
    heading says so, so a bar repeating that in a language nobody wrote would be noise. */
-const RANK_BARS = { 1: 3, 2: 2, 3: 2, 4: 1, 5: 1 };
-const rankCue = rank => `<span class="wp-bars" aria-hidden="true">${
-  [1, 2, 3].map(i => `<i${i <= (RANK_BARS[rank] || 1) ? ' class="on"' : ''}></i>`).join('')}</span>`;
+const KIND_BARS = { imprint: 3, description: 2, 'platform-tag': 2, magazine: 2, shelf: 1, listing: 1 };
+const rankCue = kind => `<span class="wp-bars" aria-hidden="true">${
+  [1, 2, 3].map(i => `<i${i <= (KIND_BARS[kind] || 1) ? ' class="on"' : ''}></i>`).join('')}</span>`;
 
 /* THE DATE IS THE LINK, and the source name is not. What we hold is the page a claim was READ
    from, and that page belongs to whoever served it rather than to whoever made the claim: an
@@ -219,6 +221,9 @@ function readCell(x) {
 
 /* Set once from run.json, re-rendered on every language change like the rest of the chrome. */
 let TRACK_FROM = null;
+/* The bibliography release the records were read from, from run.json, so the footer cites the
+   release the data is and not the one that was current when the sentence was written. */
+let MADB_RELEASE = null;
 /* The footer, in whichever language is showing. The reasoning behind the dating caveat and the
    whole of the storage arrangement live on status.html; a footer states the consequence and points
    there, rather than explaining the machinery to somebody who came to read about manga. */
@@ -245,10 +250,10 @@ function renderFooter() {
   const MADB_URL = 'https://mediaarts-db.artmuseums.go.jp/';
   const OPENBD = '<a href="https://openbd.jp/">openBD</a>';
   el('ftsource').innerHTML = ftLine(
-    `書誌情報は<a href="${MADB_URL}">文化庁メディア芸術データベース</a>（1.2.18）と${OPENBD}、`
+    `書誌情報は<a href="${MADB_URL}">文化庁メディア芸術データベース</a>${MADB_RELEASE ? `（${esc(MADB_RELEASE)}）` : ''}と${OPENBD}、`
     + `更新情報は各プラットフォームの配信元から。事実に著作権はなく、独自の分類と注記は CC0。`
     + `表紙画像・あらすじ・漫画本編は掲載していません。`,
-    `Bibliographic facts from <a href="${MADB_URL}">Media Arts Database</a> (1.2.18) and ${OPENBD};`
+    `Bibliographic facts from <a href="${MADB_URL}">Media Arts Database</a>${MADB_RELEASE ? ` (${esc(MADB_RELEASE)})` : ''} and ${OPENBD};`
     + ` release data from publishers' own feeds. Facts are not copyrightable; original`
     + ` classifications and notes are CC0. No cover art, synopses or manga are hosted here.`);
 
@@ -1725,7 +1730,7 @@ function renderWorkPage() {
      then normalise to コミック百合姫 here and the table said the same thing twice on two works.
      What makes two rows one is what a reader sees, so the comparison belongs where that is made. */
   const evRows = onceEach((r.evidence || []).map(e => [
-      `<td class="wp-cue">${rankCue(e.rank)}</td>`,
+      `<td class="wp-cue">${rankCue(e.kind)}</td>`,
       `<td>${esc(evSource(e))}</td>`,
       `<td class="wp-kind">${esc(evType(e.type))}</td>`,
       `<td><span class="wp-term"${evTermTitle(e) ? ` title="${esc(evTermTitle(e))}"` : ''
@@ -4099,7 +4104,9 @@ Promise.all([
     .then(r => r.ok ? r.json() : null)
     .then(run => {
       TRACK_FROM = (run?.sources || []).map(s => s.retrieved).filter(Boolean).sort()[0] || null;
+      MADB_RELEASE = run?.madb_release || null;
       renderTrackNote();
+      renderFooter();
     }).catch(() => {});
 
   setPlatOptions();
