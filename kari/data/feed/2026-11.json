@@ -1,6 +1,185 @@
 {
  "releases": [
   {
+   "id": "comicfuz:64797",
+   "work": "星屑テレパス",
+   "ep": "５巻 第５０話「前進メソッド」",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-02",
+   "seen": "2026-11-02",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/64797",
+   "series_url": "https://comic-fuz.com/manga/2062",
+   "author": "大熊らすこ",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "became_free": false,
+   "access_changed": null,
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": false,
+   "ahead_n": 6,
+   "ahead_ep": "５巻 第５６話「彗星エンカウント」",
+   "ahead_next_free": "2026-11-09",
+   "ahead_next_ep": "５巻 第５１話「好敵ロケッティア」",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 50",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-02",
+   "wid": "w00006",
+   "work_en": {
+    "reading": "ホシクズ テレパス",
+    "ruby": [
+     [
+      "星屑",
+      "ほしくず"
+     ],
+     [
+      "テレパス",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hoshikuzu Terepasu",
+     "double": "Hoshikuzu Terepasu",
+     "plain": "Hoshikuzu Terepasu"
+    },
+    "en": "Stardust Telepath",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Stardust Telepath"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "オオクマ ラスコ",
+    "ruby": [
+     [
+      "大熊",
+      "おおくま"
+     ],
+     [
+      "らすこ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Ōkuma Rasuko",
+     "double": "Ookuma Rasuko",
+     "plain": "Okuma Rasuko"
+    },
+    "en": "Rasuko Ookuma",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034783226",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00147"
+   }
+  },
+  {
+   "id": "manga-park:https://manga-park.com/title/98459:第5話①",
+   "work": "私のブルーガーネット",
+   "ep": "第5話①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-02",
+   "seen": "2026-11-02",
+   "basis": "heuristic",
+   "conf": "low",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://manga-park.com/title/98459",
+   "author": "秋山はる",
+   "author_basis": "carried from another record of the same work",
+   "plat": "manga-park-com",
+   "plat_name": "マンガPark",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 5, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "マンガPark",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-02",
+   "wid": "w00360",
+   "work_en": {
+    "reading": "ワタシ ノ ブルーガーネット",
+    "ruby": [
+     [
+      "私",
+      "わたし"
+     ],
+     [
+      "のブルーガーネット",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Watashi no Burūgānetto",
+     "double": "Watashi no Buruugaanetto",
+     "plain": "Watashi no Buruganetto"
+    },
+    "en": "My Blue Garnet",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "My Blue Garnet"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "アキヤマ ハル",
+    "ruby": [
+     [
+      "秋山",
+      "あきやま"
+     ],
+     [
+      "はる",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Akiyama Haru",
+     "double": "Akiyama Haru",
+     "plain": "Akiyama Haru"
+    },
+    "en": "Haru Akiyama",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "openBD",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-06",
+     "isbn": "9784063106329"
+    },
+    "id": "c00483"
+   }
+  },
+  {
    "id": "nicovideo:77287:2026-10-31",
    "work": "タイムトラベル少女 ～ミライのサキ～",
    "ep": "第8話",
@@ -8,7 +187,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-01",
+   "seen": "2026-11-02",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -77,6 +256,834 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c02277"
+   }
+  },
+  {
+   "id": "comicfuz:80101",
+   "work": "君が一等星に光るまで",
+   "ep": "episode8（2）",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-02",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/80101",
+   "series_url": "https://comic-fuz.com/manga/4133",
+   "author": "なうち",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 2,
+   "ahead_ep": "episode9（2）",
+   "ahead_next_free": "2026-11-08",
+   "ahead_next_ep": "episode9（1）",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 8",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w03169",
+   "work_en": {
+    "reading": "キミ ガ デネブ ニ ヒカル マデ",
+    "ruby": [
+     [
+      "君",
+      "きみ"
+     ],
+     [
+      "が",
+      null
+     ],
+     [
+      "一等星",
+      "でねぶ"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "光",
+      "ひか"
+     ],
+     [
+      "るまで",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kimi ga Denebu ni Hikaru made",
+     "double": "Kimi ga Denebu ni Hikaru made",
+     "plain": "Kimi ga Denebu ni Hikaru made"
+    },
+    "en": "The Brightest Star",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "The Brightest Star",
+     "translated": "Until You Shine as a First-Magnitude Star"
+    },
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "COMIC FUZ",
+     "url": "https://comic-fuz.com/manga/4133",
+     "kind": "platform",
+     "reviewed": "2026-08-10"
+    },
+    "en_cite": {
+     "source": "COMIC FUZ",
+     "url": "https://comic-fuz.com/manga/4133",
+     "kind": "platform",
+     "reviewed": "2026-08-10"
+    }
+   },
+   "author_en": {
+    "reading": "ナウチ",
+    "romaji": {
+     "macron": "Nauchi",
+     "double": "Nauchi",
+     "plain": "Nauchi"
+    },
+    "undivided": true,
+    "en": "Nauchi",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00572"
+   }
+  },
+  {
+   "id": "comicfuz:78632",
+   "work": "江口さんちの純情サキュバス",
+   "ep": "２巻 第２１話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-02",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/78632",
+   "series_url": "https://comic-fuz.com/manga/3776",
+   "author": "工藤える",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 3,
+   "ahead_ep": "２巻 第２４話",
+   "ahead_next_free": "2026-11-08",
+   "ahead_next_ep": "２巻 第２２話",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 21",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w00010",
+   "work_en": {
+    "reading": "エグチサン チ ノ ジュンジョウ サキュバス",
+    "ruby": [
+     [
+      "江口",
+      "えぐち"
+     ],
+     [
+      "さんちの",
+      null
+     ],
+     [
+      "純情",
+      "じゅんじょう"
+     ],
+     [
+      "サキュバス",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Eguchisan Chi no Junjō Sakyubasu",
+     "double": "Eguchisan Chi no Junjou Sakyubasu",
+     "plain": "Eguchisan Chi no Junjo Sakyubasu"
+    },
+    "en": "The Eguchi Household's Innocent Succubus",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Eguchi Household's Innocent Succubus"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "クドウ エル",
+    "ruby": [
+     [
+      "工藤",
+      "くどう"
+     ],
+     [
+      "える",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kudō Eru",
+     "double": "Kudou Eru",
+     "plain": "Kudo Eru"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034096344",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00172"
+   }
+  },
+  {
+   "id": "comicfuz:80698",
+   "work": "百合SMでふたりの気持ちはつながりますか？",
+   "ep": "第37話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-02",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/80698",
+   "series_url": "https://comic-fuz.com/manga/2391",
+   "author": "みら",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "became_free": false,
+   "access_changed": null,
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 2,
+   "ahead_ep": "第38話(2)",
+   "ahead_next_free": "2026-11-29",
+   "ahead_next_ep": "第38話(1)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 37",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w00140",
+   "work_en": {
+    "reading": "ユリ SM デ フタリ ノ キモチ ワ ツナガリマス カ？",
+    "ruby": [
+     [
+      "百合",
+      "ゆり"
+     ],
+     [
+      "SMでふたりの",
+      null
+     ],
+     [
+      "気持",
+      "きも"
+     ],
+     [
+      "ちはつながりますか？",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Yuri SM de Futari no Kimochi wa Tsunagarimasu Ka?",
+     "double": "Yuri SM de Futari no Kimochi wa Tsunagarimasu Ka?",
+     "plain": "Yuri SM de Futari no Kimochi wa Tsunagarimasu Ka?"
+    },
+    "en": "Can Yuri SM Connect Our Feelings?",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Can Yuri SM Connect Our Feelings?"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ミラ",
+    "romaji": {
+     "macron": "Mira",
+     "double": "Mira",
+     "plain": "Mira"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00235"
+   }
+  },
+  {
+   "id": "comicfuz:48187",
+   "work": "ななどなどなど",
+   "ep": "３巻 第５話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-02",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/48187",
+   "series_url": "https://comic-fuz.com/manga/1913",
+   "author": "宇崎うそ",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 20,
+   "ahead_ep": "４巻 第１１話",
+   "ahead_next_free": "2026-11-08",
+   "ahead_next_ep": "３巻 第６話",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 5",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w01826",
+   "work_en": {
+    "reading": "ナナドナドナド",
+    "romaji": {
+     "macron": "Nanadonadonado",
+     "double": "Nanadonadonado",
+     "plain": "Nanadonadonado"
+    },
+    "en": "Nana, and So On, and So On",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Nana, and So On, and So On"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ウザキウソ",
+    "ruby": [
+     [
+      "宇崎",
+      "うざき"
+     ],
+     [
+      "うそ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Uzakiuso",
+     "double": "Uzakiuso",
+     "plain": "Uzakiuso"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1034523",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00817"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0055310002900011_E",
+   "work": "リリィズコンプレックス",
+   "ep": "第28話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-02",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_005531_S/episodes/KC_0055310002900011_E",
+   "series_url": "https://comic-walker.com/detail/KC_005531_S",
+   "author": "館山けーた",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 28",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w00019",
+   "work_en": {
+    "reading": "リリィズコンプレックス",
+    "romaji": {
+     "macron": "Ririizukonpurekkusu",
+     "double": "Ririizukonpurekkusu",
+     "plain": "Ririizukonpurekkusu"
+    },
+    "en": "Lilies' Complex",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Lilies' Complex"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "タテヤマ ケータ",
+    "ruby": [
+     [
+      "館山",
+      "たてやま"
+     ],
+     [
+      "けーた",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Tateyama Kēta",
+     "double": "Tateyama Keeta",
+     "plain": "Tateyama Keta"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033849957",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00075"
+   }
+  },
+  {
+   "id": "urasunday:https://urasunday.com/title/2087:最終話) マンガワンからの お知らせ",
+   "work": "宙-CHUU-",
+   "ep": "最終話) マンガワンからの お知らせ",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-02",
+   "basis": "rendered",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://urasunday.com/title/2087",
+   "author": "",
+   "plat": "remaining",
+   "plat_name": "裏サンデー",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "other",
+   "kind_basis": "notice, artwork, trial or announcement",
+   "preferred": "裏サンデー",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w03416",
+   "work_en": {
+    "reading": "チュウ - CHUU -",
+    "ruby": [
+     [
+      "宙",
+      "ちゅう"
+     ],
+     [
+      "-CHUU-",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Chū - CHUU -",
+     "double": "Chuu - CHUU -",
+     "plain": "Chu - CHUU -"
+    },
+    "en": "Chuu",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Chuu"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   }
+  },
+  {
+   "id": "manga-one:https://manga-one.com/manga/27253/chapter/307792:第10話",
+   "work": "ギャラクシーぷーちゃん 宇宙のはじっこでこんにちは",
+   "ep": "第10話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-02",
+   "basis": "rendered",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://manga-one.com/manga/27253/chapter/307792",
+   "author": "涼川りん",
+   "author_basis": "carried from another record of the same work",
+   "plat": "mangaone",
+   "plat_name": "マンガワン",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 10",
+   "kind_inferred": true,
+   "preferred": "マンガワン",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w00144",
+   "work_en": {
+    "reading": "ギャラクシー プーチャン   ウチュウ ノ ハジッコ デ コンニチハ",
+    "ruby": [
+     [
+      "ギャラクシーぷーちゃん ",
+      null
+     ],
+     [
+      "宇宙",
+      "うちゅう"
+     ],
+     [
+      "のはじっこでこんにちは",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Gyarakushī Pūchan Uchū no Hajikko de Konnichiha",
+     "double": "Gyarakushii Puuchan Uchuu no Hajikko de Konnichiha",
+     "plain": "Gyarakushi Puchan Uchu no Hajikko de Konnichiha"
+    },
+    "en": "Galaxy Puu-chan: Hello from the Edge of the Universe",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Galaxy Puu-chan: Hello from the Edge of the Universe"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "スズカワ リン",
+    "ruby": [
+     [
+      "涼川",
+      "すずかわ"
+     ],
+     [
+      "りん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Suzukawa Rin",
+     "double": "Suzukawa Rin",
+     "plain": "Suzukawa Rin"
+    },
+    "en": "Rin Suzukawa",
+    "basis": "romaji",
+    "reading_basis": "community-printed",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q27917710",
+     "kind": "community-db"
+    },
+    "unverified": true,
+    "id": "c00236"
+   }
+  },
+  {
+   "id": "nicovideo:44519:2026-11-01",
+   "work": "ロボットJSにスキはありません!!",
+   "ep": "ロボ32-2",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-02",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1172367",
+   "author": "とりから",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work is attested elsewhere in this database",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 188,
+   "free_episodes": 188,
+   "started": "2019-10-20",
+   "work_level": true,
+   "feed_date": "2026-11-01",
+   "wid": "w01878",
+   "work_en": {
+    "reading": "ロボット JS ニ スキ ワ アリマセン！！",
+    "romaji": {
+     "macron": "Robotto JS ni Suki wa Arimasen!!",
+     "double": "Robotto JS ni Suki wa Arimasen!!",
+     "plain": "Robotto JS ni Suki wa Arimasen!!"
+    },
+    "en": "The Robot Schoolgirl Leaves No Opening!!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Robot Schoolgirl Leaves No Opening!!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "トリカラ",
+    "romaji": {
+     "macron": "Torikara",
+     "double": "Torikara",
+     "plain": "Torikara"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01082"
+   }
+  },
+  {
+   "id": "nicovideo:60084:2026-11-01",
+   "work": "ハッピーシュート！",
+   "ep": "第14話の3",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-02",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1172368",
+   "author": "とりから",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 14, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 163,
+   "free_episodes": 163,
+   "started": "2022-08-31",
+   "work_level": true,
+   "feed_date": "2026-11-01",
+   "wid": "w02099",
+   "work_en": {
+    "reading": "ハッピーシュート！",
+    "romaji": {
+     "macron": "Happīshūto!",
+     "double": "Happiishuuto!",
+     "plain": "Happishuto!"
+    },
+    "en": "Happy Shoot!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Happy Shoot!"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "トリカラ",
+    "romaji": {
+     "macron": "Torikara",
+     "double": "Torikara",
+     "plain": "Torikara"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01082"
+   }
+  },
+  {
+   "id": "manga-park:https://manga-park.com/title/67724:第44話①",
+   "work": "ロックは淑女の嗜みでして",
+   "ep": "第44話①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-02",
+   "basis": "heuristic",
+   "conf": "low",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://manga-park.com/title/67724",
+   "author": "福田宏",
+   "author_basis": "carried from another record of the same work",
+   "plat": "manga-park-com",
+   "plat_name": "マンガPark",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 44, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "マンガPark",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w00432",
+   "work_en": {
+    "reading": "ロック ワ レディ ノ タシナミ デシテ",
+    "ruby": [
+     [
+      "ロックは",
+      null
+     ],
+     [
+      "淑女",
+      "れでぃ"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "嗜",
+      "たしな"
+     ],
+     [
+      "みでして",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Rokku wa Redi no Tashinami Deshite",
+     "double": "Rokku wa Redi no Tashinami Deshite",
+     "plain": "Rokku wa Redi no Tashinami Deshite"
+    },
+    "en": "Rock Is a Lady's Refinement",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Rock Is a Lady's Refinement"
+    },
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "ndlsearch.ndl.go.jp",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033124127",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    }
+   },
+   "author_en": {
+    "reading": "フクダ ヒロシ",
+    "ruby": [
+     [
+      "福田宏",
+      "ふくだひろし"
+     ]
+    ],
+    "romaji": {
+     "macron": "Fukuda Hiroshi",
+     "double": "Fukuda Hiroshi",
+     "plain": "Fukuda Hiroshi"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1060846",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00567"
    }
   },
   {
@@ -209,633 +1216,8 @@
     "reading_basis": "surface",
     "id": "c01082"
    }
-  },
-  {
-   "id": "comicfuz:80101",
-   "work": "君が一等星に光るまで",
-   "ep": "episode8（2）",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-01",
-   "seen": "2026-11-01",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/80101",
-   "series_url": "https://comic-fuz.com/manga/4133",
-   "author": "なうち",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "purchase"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": false,
-   "ahead_n": 2,
-   "ahead_ep": "episode9（2）",
-   "ahead_next_free": "2026-11-08",
-   "ahead_next_ep": "episode9（1）",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 8",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-11-01",
-   "wid": "w03169",
-   "work_en": {
-    "reading": "キミ ガ デネブ ニ ヒカル マデ",
-    "ruby": [
-     [
-      "君",
-      "きみ"
-     ],
-     [
-      "が",
-      null
-     ],
-     [
-      "一等星",
-      "でねぶ"
-     ],
-     [
-      "に",
-      null
-     ],
-     [
-      "光",
-      "ひか"
-     ],
-     [
-      "るまで",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Kimi ga Denebu ni Hikaru made",
-     "double": "Kimi ga Denebu ni Hikaru made",
-     "plain": "Kimi ga Denebu ni Hikaru made"
-    },
-    "en": "The Brightest Star",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "The Brightest Star",
-     "translated": "Until You Shine as a First-Magnitude Star"
-    },
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "COMIC FUZ",
-     "url": "https://comic-fuz.com/manga/4133",
-     "kind": "platform",
-     "reviewed": "2026-08-10"
-    },
-    "en_cite": {
-     "source": "COMIC FUZ",
-     "url": "https://comic-fuz.com/manga/4133",
-     "kind": "platform",
-     "reviewed": "2026-08-10"
-    }
-   },
-   "author_en": {
-    "reading": "ナウチ",
-    "romaji": {
-     "macron": "Nauchi",
-     "double": "Nauchi",
-     "plain": "Nauchi"
-    },
-    "undivided": true,
-    "en": "Nauchi",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00572"
-   }
-  },
-  {
-   "id": "comicfuz:78632",
-   "work": "江口さんちの純情サキュバス",
-   "ep": "２巻 第２１話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-01",
-   "seen": "2026-11-01",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/78632",
-   "series_url": "https://comic-fuz.com/manga/3776",
-   "author": "工藤える",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "purchase"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": false,
-   "ahead_n": 3,
-   "ahead_ep": "２巻 第２４話",
-   "ahead_next_free": "2026-11-08",
-   "ahead_next_ep": "２巻 第２２話",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 21",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-11-01",
-   "wid": "w00010",
-   "work_en": {
-    "reading": "エグチサン チ ノ ジュンジョウ サキュバス",
-    "ruby": [
-     [
-      "江口",
-      "えぐち"
-     ],
-     [
-      "さんちの",
-      null
-     ],
-     [
-      "純情",
-      "じゅんじょう"
-     ],
-     [
-      "サキュバス",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Eguchisan Chi no Junjō Sakyubasu",
-     "double": "Eguchisan Chi no Junjou Sakyubasu",
-     "plain": "Eguchisan Chi no Junjo Sakyubasu"
-    },
-    "en": "The Eguchi Household's Innocent Succubus",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Eguchi Household's Innocent Succubus"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "クドウ エル",
-    "ruby": [
-     [
-      "工藤",
-      "くどう"
-     ],
-     [
-      "える",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Kudō Eru",
-     "double": "Kudou Eru",
-     "plain": "Kudo Eru"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034096344",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00172"
-   }
-  },
-  {
-   "id": "comicfuz:80698",
-   "work": "百合SMでふたりの気持ちはつながりますか？",
-   "ep": "第37話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-01",
-   "seen": "2026-11-01",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/80698",
-   "series_url": "https://comic-fuz.com/manga/2391",
-   "author": "みら",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "ahead_n": 2,
-   "ahead_ep": "第38話(2)",
-   "ahead_next_free": "2026-11-29",
-   "ahead_next_ep": "第38話(1)",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 37",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-11-01",
-   "wid": "w00140",
-   "work_en": {
-    "reading": "ユリ SM デ フタリ ノ キモチ ワ ツナガリマス カ？",
-    "ruby": [
-     [
-      "百合",
-      "ゆり"
-     ],
-     [
-      "SMでふたりの",
-      null
-     ],
-     [
-      "気持",
-      "きも"
-     ],
-     [
-      "ちはつながりますか？",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Yuri SM de Futari no Kimochi wa Tsunagarimasu Ka?",
-     "double": "Yuri SM de Futari no Kimochi wa Tsunagarimasu Ka?",
-     "plain": "Yuri SM de Futari no Kimochi wa Tsunagarimasu Ka?"
-    },
-    "en": "Can Yuri SM Connect Our Feelings?",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Can Yuri SM Connect Our Feelings?"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ミラ",
-    "romaji": {
-     "macron": "Mira",
-     "double": "Mira",
-     "plain": "Mira"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00235"
-   }
-  },
-  {
-   "id": "comicfuz:48187",
-   "work": "ななどなどなど",
-   "ep": "３巻 第５話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-01",
-   "seen": "2026-11-01",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/48187",
-   "series_url": "https://comic-fuz.com/manga/1913",
-   "author": "宇崎うそ",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "purchase"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": false,
-   "ahead_n": 20,
-   "ahead_ep": "４巻 第１１話",
-   "ahead_next_free": "2026-11-08",
-   "ahead_next_ep": "３巻 第６話",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 5",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-11-01",
-   "wid": "w01826",
-   "work_en": {
-    "reading": "ナナドナドナド",
-    "romaji": {
-     "macron": "Nanadonadonado",
-     "double": "Nanadonadonado",
-     "plain": "Nanadonadonado"
-    },
-    "en": "Nana, and So On, and So On",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Nana, and So On, and So On"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "ウザキウソ",
-    "ruby": [
-     [
-      "宇崎",
-      "うざき"
-     ],
-     [
-      "うそ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Uzakiuso",
-     "double": "Uzakiuso",
-     "plain": "Uzakiuso"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "MADB",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1034523",
-     "kind": "national-library",
-     "reviewed": "2026-08-06"
-    },
-    "id": "c00817"
-   }
-  },
-  {
-   "id": "urasunday:https://urasunday.com/title/2087:最終話) マンガワンからの お知らせ",
-   "work": "宙-CHUU-",
-   "ep": "最終話) マンガワンからの お知らせ",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-01",
-   "seen": "2026-11-01",
-   "basis": "rendered",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://urasunday.com/title/2087",
-   "author": "",
-   "plat": "remaining",
-   "plat_name": "裏サンデー",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "other",
-   "kind_basis": "notice, artwork, trial or announcement",
-   "preferred": "裏サンデー",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-11-01",
-   "wid": "w03416",
-   "work_en": {
-    "reading": "チュウ - CHUU -",
-    "ruby": [
-     [
-      "宙",
-      "ちゅう"
-     ],
-     [
-      "-CHUU-",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Chū - CHUU -",
-     "double": "Chuu - CHUU -",
-     "plain": "Chu - CHUU -"
-    },
-    "en": "Chuu",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Chuu"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   }
-  },
-  {
-   "id": "manga-one:https://manga-one.com/manga/27253/chapter/307792:第10話",
-   "work": "ギャラクシーぷーちゃん 宇宙のはじっこでこんにちは",
-   "ep": "第10話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-01",
-   "seen": "2026-11-01",
-   "basis": "rendered",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://manga-one.com/manga/27253/chapter/307792",
-   "author": "涼川りん",
-   "author_basis": "carried from another record of the same work",
-   "plat": "mangaone",
-   "plat_name": "マンガワン",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "purchase"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 10",
-   "kind_inferred": true,
-   "preferred": "マンガワン",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-11-01",
-   "wid": "w00144",
-   "work_en": {
-    "reading": "ギャラクシー プーチャン   ウチュウ ノ ハジッコ デ コンニチハ",
-    "ruby": [
-     [
-      "ギャラクシーぷーちゃん ",
-      null
-     ],
-     [
-      "宇宙",
-      "うちゅう"
-     ],
-     [
-      "のはじっこでこんにちは",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Gyarakushī Pūchan Uchū no Hajikko de Konnichiha",
-     "double": "Gyarakushii Puuchan Uchuu no Hajikko de Konnichiha",
-     "plain": "Gyarakushi Puchan Uchu no Hajikko de Konnichiha"
-    },
-    "en": "Galaxy Puu-chan: Hello from the Edge of the Universe",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Galaxy Puu-chan: Hello from the Edge of the Universe"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "スズカワ リン",
-    "ruby": [
-     [
-      "涼川",
-      "すずかわ"
-     ],
-     [
-      "りん",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Suzukawa Rin",
-     "double": "Suzukawa Rin",
-     "plain": "Suzukawa Rin"
-    },
-    "en": "Rin Suzukawa",
-    "basis": "romaji",
-    "reading_basis": "community-printed",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q27917710",
-     "kind": "community-db"
-    },
-    "unverified": true,
-    "id": "c00236"
-   }
-  },
-  {
-   "id": "manga-park:https://manga-park.com/title/67724:第44話①",
-   "work": "ロックは淑女の嗜みでして",
-   "ep": "第44話①",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-01",
-   "seen": "2026-11-01",
-   "basis": "heuristic",
-   "conf": "low",
-   "why": "date matched as a pattern in the page, not stated by the platform",
-   "moved": "",
-   "url": "https://manga-park.com/title/67724",
-   "author": "福田宏",
-   "author_basis": "carried from another record of the same work",
-   "plat": "manga-park-com",
-   "plat_name": "マンガPark",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 44, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "マンガPark",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-11-01",
-   "wid": "w00432",
-   "work_en": {
-    "reading": "ロック ワ レディ ノ タシナミ デシテ",
-    "ruby": [
-     [
-      "ロックは",
-      null
-     ],
-     [
-      "淑女",
-      "れでぃ"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "嗜",
-      "たしな"
-     ],
-     [
-      "みでして",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Rokku wa Redi no Tashinami Deshite",
-     "double": "Rokku wa Redi no Tashinami Deshite",
-     "plain": "Rokku wa Redi no Tashinami Deshite"
-    },
-    "en": "Rock Is a Lady's Refinement",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Rock Is a Lady's Refinement"
-    },
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "ndlsearch.ndl.go.jp",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033124127",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    }
-   },
-   "author_en": {
-    "reading": "フクダ ヒロシ",
-    "ruby": [
-     [
-      "福田宏",
-      "ふくだひろし"
-     ]
-    ],
-    "romaji": {
-     "macron": "Fukuda Hiroshi",
-     "double": "Fukuda Hiroshi",
-     "plain": "Fukuda Hiroshi"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "MADB",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1060846",
-     "kind": "national-library",
-     "reviewed": "2026-08-06"
-    },
-    "id": "c00567"
-   }
   }
  ],
  "month": "2026-11",
- "generated": "2026-11-01"
+ "generated": "2026-11-02"
 }

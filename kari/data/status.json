@@ -1,8 +1,10 @@
 {
- "generated": "2026-11-01T13:47:28+00:00",
+ "generated": "2026-11-01T20:45:29+00:00",
  "since_last": {
-  "at": "2026-11-01T10:58:49+00:00",
-  "statistics": {}
+  "at": "2026-11-01T13:47:28+00:00",
+  "statistics": {
+   "chapters": 1
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -23,21 +25,21 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-11-01",
-  "releases": 1053,
+  "at": "2026-11-02",
+  "releases": 1042,
   "works": 2761,
   "platforms": 19,
   "series_rows": 3317,
   "assembled": 3317,
   "awaiting_identifier": 0,
   "identification": {
-   "discovery-candidate": 756,
+   "discovery-candidate": 747,
    "known-work-match": 33,
-   "platform-genre": 264
+   "platform-genre": 262
   },
   "collapsed": {
-   "duplicate_chapters": 244,
-   "resolver": 119,
+   "duplicate_chapters": 246,
+   "resolver": 118,
    "samples": 0,
    "thin_sitemap": 14
   }
@@ -385,10 +387,24 @@
     "measure": "regression"
    },
    {
+    "name": "curated names citing a page that is not there",
+    "means": "curated entries whose cited address answered 404 or 410 on two sweeps in a row, recorded by adapters/names/cited_pages.py. A rise means an entry cites a page nobody opened, or a licensor moved its catalogue; either way the name has lost the page it rests on.",
+    "budget": 0,
+    "value": 0,
+    "measure": "regression"
+   },
+   {
+    "name": "attributed names their cited page does not show",
+    "means": "licensed and official-jp names whose cited page answered without carrying the name. Some are pages assembled by script, which serve no title; the rest are names the page does not state. Falls as entries are corrected or pages confirmed by hand.",
+    "budget": 14,
+    "value": 14,
+    "measure": "regression"
+   },
+   {
     "name": "titles with no translation of our own",
     "means": "titles whose only English is the publisher's or the licensor's, so a reader who moves those down EN_ORDER is shown a romanisation instead of an alternative. A rise means a translation stopped reaching the shipped file, which is coverage lost and never a tidy-up.",
     "budget": 0,
-    "value": 2,
+    "value": 0,
     "measure": "regression"
    },
    {
@@ -408,8 +424,8 @@
    {
     "name": "imprint strings that reach no line",
     "means": "imprint strings the corpus carries that no entry in data/names/imprints.yaml answers for, so the string stands as its own object. A coverage deficit: it falls as houses are curated and it will not reach zero, because some of these are a company name or a magazine sitting in the imprint field. A rise means new imprint spellings entered faster than they were placed.",
-    "budget": 21,
-    "value": 21,
+    "budget": 18,
+    "value": 18,
     "measure": "arrival"
    },
    {
@@ -450,8 +466,8 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1315,
-    "value": 1315,
+    "budget": 1212,
+    "value": 1212,
     "measure": "arrival"
    },
    {
@@ -464,15 +480,15 @@
    {
     "name": "divisions resting on a community database",
     "means": "people whose name divides where Wikidata says it divides and where nothing else does, either because their reading came from there or because the space was carried onto a reading of their own. The project owner ruled the source noncanonical and admitted it as a floor, so this is what that admission costs, counted where somebody can watch it. It falls when a publisher or the national library states a division.",
-    "budget": 88,
-    "value": 88,
+    "budget": 68,
+    "value": 68,
     "measure": "arrival"
    },
    {
     "name": "publisher readings nobody has settled",
     "means": "publisher and imprint keys shipped as a romanisation of ours over a reading no source states, which is what the mark beside them says. A coverage deficit and the other half of the budget above it: that one reached zero by romanising, and a romanisation is the reading spelt out. It falls as readings get sourced, and it is measured on the shipped map so that hiding the mark would show as a fall nobody earned.",
-    "budget": 25,
-    "value": 25,
+    "budget": 23,
+    "value": 23,
     "measure": "arrival"
    },
    {
@@ -485,8 +501,8 @@
    {
     "name": "kana names with no stated division",
     "means": "author names written entirely in kana whose romanisation ships as one unbroken word of eight letters or more, because the surface states no boundary and the reading is the surface. A coverage deficit and not a fault count: こかむも is printed Kokamumo by its own publisher and belongs in this number as much as Igarashiyumiko did. It falls only when a source states a division, which `a division cites its source` is what enforces, and it never reaches zero.",
-    "budget": 310,
-    "value": 310,
+    "budget": 251,
+    "value": 251,
     "measure": "arrival"
    },
    {
@@ -499,8 +515,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 534,
-    "value": 534,
+    "budget": 531,
+    "value": 531,
     "measure": "arrival"
    },
    {
@@ -569,8 +585,8 @@
    {
     "name": "credits sharing a reading nobody has ruled on",
     "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
-    "budget": 10,
-    "value": 10,
+    "budget": 6,
+    "value": 6,
     "measure": "regression"
    },
    {
@@ -590,8 +606,8 @@
    {
     "name": "readings an analyser no longer installed produced",
     "means": "analyser readings stamped with a version other than the one this run holds. requirements.txt pins the analyser so an upgrade is a decision rather than whatever pip resolved that morning, and this is the other half of that: the day the pin moves, every reading made under the old version still says what that analyser thought. It falls as those are re-made or overridden and it rises when the pin does, which is the only time it should. On 2026-09-24 an unpinned upgrade took 40 titles out of `ordinary` and put the mark on 36, and no measure was asking whether the analyser under the rule had changed.",
-    "budget": 189,
-    "value": 189,
+    "budget": 187,
+    "value": 187,
     "measure": "report"
    },
    {
@@ -618,15 +634,15 @@
    {
     "name": "titles showing a romanisation nobody has ruled on",
     "means": "titles falling through to a romanisation that nobody has examined. Distinct from the budget below, which counts every such title and cannot reach zero because a romanisation finishes a name; this counts the ones still owed a reading of the work, and it can. A rise means a new title nobody has looked at, which is ordinary and is the queue doing its job.",
-    "budget": 33,
-    "value": 33,
+    "budget": 21,
+    "value": 21,
     "measure": "arrival"
    },
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 59,
-    "value": 59,
+    "budget": 47,
+    "value": 47,
     "measure": "arrival"
    },
    {
@@ -916,9 +932,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 34,
+    "consecutive": 35,
     "failing_since": "2026-10-16",
-    "days": 16,
+    "days": 17,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -926,9 +942,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 34,
+    "consecutive": 35,
     "failing_since": "2026-10-16",
-    "days": 16,
+    "days": 17,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -936,9 +952,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 34,
+    "consecutive": 35,
     "failing_since": "2026-10-16",
-    "days": 16,
+    "days": 17,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -946,9 +962,9 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 17,
+    "consecutive": 18,
     "failing_since": "2026-10-24",
-    "days": 8,
+    "days": 9,
     "last_ok": "2026-10-23",
     "error": "2 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
     "issue": true
@@ -956,9 +972,9 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 13,
+    "consecutive": 14,
     "failing_since": "2026-10-26",
-    "days": 6,
+    "days": 7,
     "last_ok": "2026-10-25",
     "error": "17 file(s) past their age, e.g. data/source/webpages/asacomi.yaml dated 2026-10-22",
     "issue": true
@@ -966,15 +982,15 @@
    {
     "source": "stale:stage-a:gigaviewer-platform-feeds",
     "stage": "freshness",
-    "consecutive": 2,
+    "consecutive": 3,
     "failing_since": "2026-11-01",
-    "days": 0,
+    "days": 1,
     "last_ok": "2026-10-31",
     "error": "2 file(s) past their age, e.g. data/source/gigaviewer/ourfeel-series.yaml dated 2026-10-28",
-    "issue": false
+    "issue": true
    }
   ],
-  "healthy": 161,
+  "healthy": 162,
   "threshold": 3
  },
  "connectors": [
@@ -984,7 +1000,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 91,
+   "age_days": 92,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -998,7 +1014,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 85,
+   "age_days": 86,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1012,35 +1028,7 @@
    "works": 1792,
    "rows": 4275,
    "retrieved": "2026-10-31",
-   "age_days": 1,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 0,
-   "well_formed": 0,
-   "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "comicfuz",
-   "files": 2,
-   "works": 130,
-   "rows": 6338,
-   "retrieved": "2026-11-01",
-   "age_days": 0,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 6291,
-   "well_formed": 6291,
-   "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "comparators",
-   "files": 5,
-   "works": 9,
-   "rows": 9,
-   "retrieved": "2026-11-01",
-   "age_days": 0,
+   "age_days": 2,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1054,7 +1042,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-11-01",
-   "age_days": 0,
+   "age_days": 1,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1063,40 +1051,12 @@
    "drop": null
   },
   {
-   "source": "gigaviewer",
-   "files": 86,
-   "works": 1674,
-   "rows": 17633,
-   "retrieved": "2026-11-01",
-   "age_days": 0,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 17221,
-   "well_formed": 17221,
-   "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "kadokomi",
-   "files": 5,
-   "works": 1016,
-   "rows": 7826,
-   "retrieved": "2026-11-01",
-   "age_days": 0,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 7131,
-   "well_formed": 6683,
-   "malformed": 448,
-   "drop": null
-  },
-  {
    "source": "madb",
    "files": 982,
    "works": 982,
    "rows": 2580,
    "retrieved": "2026-11-01",
-   "age_days": 0,
+   "age_days": 1,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1110,6 +1070,34 @@
    "works": 66,
    "rows": 66,
    "retrieved": "2026-11-01",
+   "age_days": 1,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 0,
+   "well_formed": 0,
+   "malformed": 0,
+   "drop": null
+  },
+  {
+   "source": "comicfuz",
+   "files": 2,
+   "works": 130,
+   "rows": 6338,
+   "retrieved": "2026-11-02",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 6291,
+   "well_formed": 6291,
+   "malformed": 0,
+   "drop": null
+  },
+  {
+   "source": "comparators",
+   "files": 5,
+   "works": 9,
+   "rows": 9,
+   "retrieved": "2026-11-02",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1119,11 +1107,39 @@
    "drop": null
   },
   {
+   "source": "gigaviewer",
+   "files": 86,
+   "works": 1674,
+   "rows": 17633,
+   "retrieved": "2026-11-02",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 17221,
+   "well_formed": 17221,
+   "malformed": 0,
+   "drop": null
+  },
+  {
+   "source": "kadokomi",
+   "files": 5,
+   "works": 1016,
+   "rows": 7827,
+   "retrieved": "2026-11-02",
+   "age_days": 0,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 7132,
+   "well_formed": 6684,
+   "malformed": 448,
+   "drop": null
+  },
+  {
    "source": "nicovideo",
    "files": 3,
    "works": 1343,
    "rows": 11580,
-   "retrieved": "2026-11-01",
+   "retrieved": "2026-11-02",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1137,7 +1153,7 @@
    "files": 880,
    "works": 880,
    "rows": 2303,
-   "retrieved": "2026-11-01",
+   "retrieved": "2026-11-02",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1150,13 +1166,13 @@
    "source": "webpages",
    "files": 50,
    "works": 656,
-   "rows": 9451,
-   "retrieved": "2026-11-01",
+   "rows": 9450,
+   "retrieved": "2026-11-02",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9397,
-   "well_formed": 9395,
+   "checked_rows": 9396,
+   "well_formed": 9394,
    "malformed": 2,
    "drop": null
   }
@@ -1176,7 +1192,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 34,
+   "count": 22,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "11番目のねこはねね",
@@ -1200,19 +1216,7 @@
     "サクラ*ナデシコ",
     "シーズンシアターシアトリカル",
     "ストロベリー・フィールズをもう一度",
-    "ダイガクちゃん×はいすくーる！",
-    "トラとハチドリ",
-    "ネコと海の彼方",
-    "ブラッドフレンド",
-    "メジロバナの咲く",
-    "レストア！ ～改造車工房へようこそ～",
-    "同居人が不安定でして",
-    "吸血鬼ちゃん×後輩ちゃん",
-    "女子高生の生態図鑑",
-    "寮長は料理上手",
-    "平尾アウリ短編集",
-    "彼女のイデア",
-    "恋する名画"
+    "ダイガクちゃん×はいすくーる！"
    ]
   },
   {
@@ -1230,7 +1234,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 49,
+   "count": 50,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1239,23 +1243,25 @@
     "titles read past their own gloss": 1,
     "titles shorter than their own reading": 3,
     "labels with nothing to quote": 0,
+    "curated names citing a page that is not there": 0,
+    "attributed names their cited page does not show": 14,
     "titles with no translation of our own": 0,
     "publishers with no English": 0,
     "an imprint field repeating its publisher": 371,
-    "imprint strings that reach no line": 21,
+    "imprint strings that reach no line": 18,
     "credit fields the division does not account for": 0,
     "works shaped like prose": 0,
     "credit phrases spelling a person otherwise": 3,
     "names rendered two ways": 0,
     "one work named two ways across its rows": 0,
-    "author names romanised as one word": 1315,
+    "author names romanised as one word": 1212,
     "divisions read back from a romanisation": 3,
-    "divisions resting on a community database": 88,
-    "publisher readings nobody has settled": 25,
+    "divisions resting on a community database": 68,
+    "publisher readings nobody has settled": 23,
     "renderings with nothing to show": 0,
-    "kana names with no stated division": 310,
+    "kana names with no stated division": 251,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 534,
+    "author readings no source states": 531,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
@@ -1265,15 +1271,15 @@
     "credit pages listing a work that does not name them": 11,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
-    "credits sharing a reading nobody has ruled on": 10,
+    "credits sharing a reading nobody has ruled on": 6,
     "ruby asserting a reading per character": 224,
     "implausible ruby spans": 0,
-    "readings an analyser no longer installed produced": 189,
+    "readings an analyser no longer installed produced": 187,
     "titles read by a machine, unmarked": 1225,
     "uncertain readings": 62,
     "data reaching the site around the store": 0,
-    "titles showing a romanisation nobody has ruled on": 33,
-    "works showing a romanisation": 59,
+    "titles showing a romanisation nobody has ruled on": 21,
+    "works showing a romanisation": 47,
     "works shown under an outranked spelling": 0,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
@@ -1323,23 +1329,23 @@
    "print": 1790,
    "oneshot": 498,
    "completed": 497,
-   "active": 286,
+   "active": 287,
    "dormant": 146,
-   "slow": 57,
+   "slow": 56,
    "unknown": 43
   },
   "english_basis": {
-   "translated": 2906,
+   "translated": 2918,
    "official-jp": 242,
    "licensed": 110,
-   "romaji": 58,
+   "romaji": 46,
    "none": 1
   },
   "print_works": 2640,
   "print_only": 1790,
   "volumes": 6579,
   "with_identifier": 3317,
-  "chapters": 31058,
+  "chapters": 31059,
   "delivery_dated": 1110
  }
 }
