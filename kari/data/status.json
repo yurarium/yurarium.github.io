@@ -1,10 +1,8 @@
 {
- "generated": "2026-11-01T20:45:29+00:00",
+ "generated": "2026-11-02T11:38:32+00:00",
  "since_last": {
-  "at": "2026-11-01T13:47:28+00:00",
-  "statistics": {
-   "chapters": 1
-  }
+  "at": "2026-11-01T20:45:29+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -38,7 +36,7 @@
    "platform-genre": 262
   },
   "collapsed": {
-   "duplicate_chapters": 246,
+   "duplicate_chapters": 243,
    "resolver": 118,
    "samples": 0,
    "thin_sitemap": 14
@@ -634,15 +632,15 @@
    {
     "name": "titles showing a romanisation nobody has ruled on",
     "means": "titles falling through to a romanisation that nobody has examined. Distinct from the budget below, which counts every such title and cannot reach zero because a romanisation finishes a name; this counts the ones still owed a reading of the work, and it can. A rise means a new title nobody has looked at, which is ordinary and is the queue doing its job.",
-    "budget": 21,
-    "value": 21,
+    "budget": 9,
+    "value": 9,
     "measure": "arrival"
    },
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 47,
-    "value": 47,
+    "budget": 36,
+    "value": 36,
     "measure": "arrival"
    },
    {
@@ -932,7 +930,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 35,
+    "consecutive": 36,
     "failing_since": "2026-10-16",
     "days": 17,
     "last_ok": null,
@@ -942,7 +940,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 35,
+    "consecutive": 36,
     "failing_since": "2026-10-16",
     "days": 17,
     "last_ok": null,
@@ -952,7 +950,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 35,
+    "consecutive": 36,
     "failing_since": "2026-10-16",
     "days": 17,
     "last_ok": null,
@@ -962,7 +960,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 18,
+    "consecutive": 19,
     "failing_since": "2026-10-24",
     "days": 9,
     "last_ok": "2026-10-23",
@@ -972,7 +970,7 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 14,
+    "consecutive": 15,
     "failing_since": "2026-10-26",
     "days": 7,
     "last_ok": "2026-10-25",
@@ -982,7 +980,7 @@
    {
     "source": "stale:stage-a:gigaviewer-platform-feeds",
     "stage": "freshness",
-    "consecutive": 3,
+    "consecutive": 4,
     "failing_since": "2026-11-01",
     "days": 1,
     "last_ok": "2026-10-31",
@@ -1166,13 +1164,13 @@
    "source": "webpages",
    "files": 50,
    "works": 656,
-   "rows": 9450,
+   "rows": 9448,
    "retrieved": "2026-11-02",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9396,
-   "well_formed": 9394,
+   "checked_rows": 9394,
+   "well_formed": 9392,
    "malformed": 2,
    "drop": null
   }
@@ -1192,7 +1190,7 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 22,
+   "count": 10,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "11番目のねこはねね",
@@ -1204,19 +1202,7 @@
     "はつ恋、ときめき うすいほん",
     "ふたつ屋根の下",
     "わたしたちの終わりと",
-    "わたしのお腹の責任取って！",
-    "わたしの友達が世界一かわいい",
-    "んねこん（ビームコミックス（ハルタ））",
-    "ウィッチギルド　ファンタジア",
-    "オンリー☆ユー",
-    "カーグラフィティJK",
-    "ギャルとオタクはわかりあえない。",
-    "クラスのアイドルは今日も推せない",
-    "ケンカップル百合×性愛アンソロジー",
-    "サクラ*ナデシコ",
-    "シーズンシアターシアトリカル",
-    "ストロベリー・フィールズをもう一度",
-    "ダイガクちゃん×はいすくーる！"
+    "ギャルとオタクはわかりあえない。"
    ]
   },
   {
@@ -1278,8 +1264,8 @@
     "titles read by a machine, unmarked": 1225,
     "uncertain readings": 62,
     "data reaching the site around the store": 0,
-    "titles showing a romanisation nobody has ruled on": 21,
-    "works showing a romanisation": 47,
+    "titles showing a romanisation nobody has ruled on": 9,
+    "works showing a romanisation": 36,
     "works shown under an outranked spelling": 0,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
@@ -1335,10 +1321,10 @@
    "unknown": 43
   },
   "english_basis": {
-   "translated": 2918,
+   "translated": 2929,
    "official-jp": 242,
    "licensed": 110,
-   "romaji": 46,
+   "romaji": 35,
    "none": 1
   },
   "print_works": 2640,
