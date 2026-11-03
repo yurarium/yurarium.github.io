@@ -1824,7 +1824,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-02",
+   "seen": "2026-11-03",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -1901,6 +1901,100 @@
    }
   },
   {
+   "id": "manga-one:https://manga-one.com/viewer/70173:TVドラマレポ漫画⑧",
+   "work": "付き合ってあげてもいいかな",
+   "ep": "TVドラマレポ漫画⑧",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-30",
+   "seen": "2026-11-03",
+   "basis": "rendered",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://manga-one.com/viewer/70173",
+   "author": "たみふる",
+   "author_basis": "carried from another record of the same work",
+   "plat": "mangaone",
+   "plat_name": "マンガワン",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "final",
+   "kind_basis": "series marked 完結; newest release we hold",
+   "kind_inferred": true,
+   "preferred": "マンガワン",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-30",
+   "wid": "w00522",
+   "work_en": {
+    "reading": "ツキアッテ アゲテ モ イイ カ ナ",
+    "ruby": [
+     [
+      "付",
+      "つ"
+     ],
+     [
+      "き",
+      null
+     ],
+     [
+      "合",
+      "あ"
+     ],
+     [
+      "ってあげてもいいかな",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Tsukiatte Agete mo Ii Ka Na",
+     "double": "Tsukiatte Agete mo Ii Ka Na",
+     "plain": "Tsukiatte Agete mo Ii Ka Na"
+    },
+    "en": "How Do We Relationship?",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "How Do We Relationship?",
+     "translated": "I Suppose I Could Go Out With You"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "Viz Media",
+     "url": "https://www.viz.com/how-do-we-relationship",
+     "kind": "licensor",
+     "reviewed": "2026-08-08"
+    }
+   },
+   "author_en": {
+    "reading": "タミフル",
+    "romaji": {
+     "macron": "Tamifuru",
+     "double": "Tamifuru",
+     "plain": "Tamifuru"
+    },
+    "undivided": true,
+    "en": "Tamifull",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "openBD",
+     "kind": "publisher-jp",
+     "reviewed": "2026-08-06",
+     "isbn": "9784091287557"
+    },
+    "id": "c00639"
+   }
+  },
+  {
    "id": "manga-one:https://manga-one.com/viewer/70173:番外編③",
    "work": "付き合ってあげてもいいかな",
    "ep": "番外編③",
@@ -1923,10 +2017,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "extra or side story — content, not notice",
    "preferred": "マンガワン",
@@ -5199,6 +5293,87 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00234"
+   }
+  },
+  {
+   "id": "urasunday:https://urasunday.com/title/26962:第1話",
+   "work": "かわいい同盟",
+   "ep": "第1話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-28",
+   "seen": "2026-11-03",
+   "basis": "heuristic",
+   "conf": "low",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://urasunday.com/title/26962",
+   "author": "南文夏",
+   "author_basis": "carried from another record of the same work",
+   "plat": "urasunday-com",
+   "plat_name": "裏サンデー",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 1 but the work has a higher-numbered chapter dated earlier — the date is not trustworthy, so not read as a start",
+   "kind_inferred": true,
+   "preferred": "裏サンデー",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-28",
+   "wid": "w00313",
+   "work_en": {
+    "reading": "カワイイ ドウメイ",
+    "ruby": [
+     [
+      "かわいい",
+      null
+     ],
+     [
+      "同盟",
+      "どうめい"
+     ]
+    ],
+    "romaji": {
+     "macron": "Kawaii Dōmei",
+     "double": "Kawaii Doumei",
+     "plain": "Kawaii Domei"
+    },
+    "en": "The Cute Alliance",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Cute Alliance"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ミナミ フミカ",
+    "ruby": [
+     [
+      "南文夏",
+      "みなみふみか"
+     ]
+    ],
+    "romaji": {
+     "macron": "Minami Fumika",
+     "double": "Minami Fumika",
+     "plain": "Minami Fumika"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1088342",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00423"
    }
   },
   {
@@ -11830,87 +12005,6 @@
    }
   },
   {
-   "id": "urasunday:https://urasunday.com/title/26962:第1話",
-   "work": "かわいい同盟",
-   "ep": "第1話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-24",
-   "seen": "2026-11-03",
-   "basis": "heuristic",
-   "conf": "low",
-   "why": "date matched as a pattern in the page, not stated by the platform",
-   "moved": "",
-   "url": "https://urasunday.com/title/26962",
-   "author": "南文夏",
-   "author_basis": "carried from another record of the same work",
-   "plat": "urasunday-com",
-   "plat_name": "裏サンデー",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 1 but the work has a higher-numbered chapter dated earlier — the date is not trustworthy, so not read as a start",
-   "kind_inferred": true,
-   "preferred": "裏サンデー",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-24",
-   "wid": "w00313",
-   "work_en": {
-    "reading": "カワイイ ドウメイ",
-    "ruby": [
-     [
-      "かわいい",
-      null
-     ],
-     [
-      "同盟",
-      "どうめい"
-     ]
-    ],
-    "romaji": {
-     "macron": "Kawaii Dōmei",
-     "double": "Kawaii Doumei",
-     "plain": "Kawaii Domei"
-    },
-    "en": "The Cute Alliance",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Cute Alliance"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "ミナミ フミカ",
-    "ruby": [
-     [
-      "南文夏",
-      "みなみふみか"
-     ]
-    ],
-    "romaji": {
-     "macron": "Minami Fumika",
-     "double": "Minami Fumika",
-     "plain": "Minami Fumika"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "MADB",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1088342",
-     "kind": "national-library",
-     "reviewed": "2026-08-06"
-    },
-    "id": "c00423"
-   }
-  },
-  {
    "id": "pixivcomic:https://comic.pixiv.net/works/13373:第17話 決別する女の子の話②",
    "work": "彼氏の女友達がぐいぐい来る(私に)",
    "ep": "第17話 決別する女の子の話②",
@@ -14463,7 +14557,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-02",
+   "seen": "2026-11-03",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -45445,7 +45539,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-25",
-   "seen": "2026-11-02",
+   "seen": "2026-11-03",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -58845,10 +58939,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "provenance": "attested",
-   "free": true,
+   "free": false,
    "kind": "new-chapter",
    "kind_basis": "extra or side story — content, not notice",
    "preferred": "マンガワン",
@@ -73055,7 +73149,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-11-02",
+   "seen": "2026-11-03",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -73569,7 +73663,7 @@
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
-   "kind_basis": "work has an earlier release here",
+   "kind_basis": "work is attested elsewhere in this database",
    "kind_inferred": true,
    "preferred": "マンガワン",
    "also_on": [],
