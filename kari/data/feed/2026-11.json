@@ -1,6 +1,545 @@
 {
  "releases": [
   {
+   "id": "reported:takecomic:https://takecomic.jp/series/b53a116d9f0e7:2026-10-23",
+   "work": "今年注目のエースちゃん",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-23",
+   "seen": "2026-11-04",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://takecomic.jp/series/b53a116d9f0e7",
+   "author": "ゔぇじたぶる",
+   "author_basis": "carried from another record of the same work",
+   "plat": "takecomic",
+   "plat_name": "竹コミ",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "discovered_on": "2026-11-04",
+   "late_discovered": true,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp+yurinavi",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "we hold 9 earlier chapters of this work on this platform",
+   "kind_inferred": true,
+   "preferred": "竹コミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-04",
+   "wid": "w00189",
+   "work_en": {
+    "reading": "コトシ チュウモク ノ エースチャン",
+    "ruby": [
+     [
+      "今年",
+      "ことし"
+     ],
+     [
+      "注目",
+      "ちゅうもく"
+     ],
+     [
+      "のエースちゃん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kotoshi Chūmoku no Ēsuchan",
+     "double": "Kotoshi Chuumoku no Eesuchan",
+     "plain": "Kotoshi Chumoku no Esuchan"
+    },
+    "en": "This Year's Ace to Watch",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "This Year's Ace to Watch"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ヴェジタブル",
+    "romaji": {
+     "macron": "Vejitaburu",
+     "double": "Vejitaburu",
+     "plain": "Vejitaburu"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00298"
+   }
+  },
+  {
+   "id": "pixivcomic:https://comic.pixiv.net/works/11800:18-②",
+   "work": "冷たくて 柔らか",
+   "ep": "18-②",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-28",
+   "seen": "2026-11-04",
+   "basis": "rendered",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic.pixiv.net/works/11800",
+   "author": "ウオズミアミ",
+   "plat": "pixivcomic",
+   "plat_name": "pixivコミック",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-11-04",
+   "late_discovered": true,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work is attested elsewhere in this database",
+   "kind_inferred": true,
+   "preferred": "pixivコミック",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-04",
+   "wid": "w00072",
+   "work_en": {
+    "reading": "ツメタクテ   ヤワラカ",
+    "ruby": [
+     [
+      "冷",
+      "つめ"
+     ],
+     [
+      "たくて ",
+      null
+     ],
+     [
+      "柔",
+      "やわ"
+     ],
+     [
+      "らか",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Tsumetakute Yawaraka",
+     "double": "Tsumetakute Yawaraka",
+     "plain": "Tsumetakute Yawaraka"
+    },
+    "en": "Cold and Soft",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Cold and Soft"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ウオズミ アミ",
+    "romaji": {
+     "macron": "Uozumi Ami",
+     "double": "Uozumi Ami",
+     "plain": "Uozumi Ami"
+    },
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00144"
+   }
+  },
+  {
+   "id": "pixivcomic:https://comic.pixiv.net/works/11800:18-①",
+   "work": "冷たくて 柔らか",
+   "ep": "18-①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-28",
+   "seen": "2026-11-04",
+   "basis": "rendered",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic.pixiv.net/works/11800",
+   "author": "ウオズミアミ",
+   "plat": "pixivcomic",
+   "plat_name": "pixivコミック",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-11-04",
+   "late_discovered": true,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work is attested elsewhere in this database",
+   "kind_inferred": true,
+   "preferred": "pixivコミック",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-04",
+   "wid": "w00072",
+   "work_en": {
+    "reading": "ツメタクテ   ヤワラカ",
+    "ruby": [
+     [
+      "冷",
+      "つめ"
+     ],
+     [
+      "たくて ",
+      null
+     ],
+     [
+      "柔",
+      "やわ"
+     ],
+     [
+      "らか",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Tsumetakute Yawaraka",
+     "double": "Tsumetakute Yawaraka",
+     "plain": "Tsumetakute Yawaraka"
+    },
+    "en": "Cold and Soft",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Cold and Soft"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ウオズミ アミ",
+    "romaji": {
+     "macron": "Uozumi Ami",
+     "double": "Uozumi Ami",
+     "plain": "Uozumi Ami"
+    },
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00144"
+   }
+  },
+  {
+   "id": "comicdays:episode:12207421983566481774",
+   "work": "サタノファニ",
+   "ep": "第３４４話　「大義のために」",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-04",
+   "seen": "2026-11-04",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421983566481774",
+   "author": "山田恵庸",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 344",
+   "kind_inferred": true,
+   "preferred": "コミックDAYS",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-04",
+   "wid": "w00054",
+   "work_en": {
+    "reading": "サタノファニ",
+    "romaji": {
+     "macron": "Satanofani",
+     "double": "Satanofani",
+     "plain": "Satanofani"
+    },
+    "translation_refused": "The kana are the coinage the publisher prints in capitals, so ours is that name in another case.",
+    "en": "SATANOPHANY",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "SATANOPHANY"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "mediaarts-db",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/madb-t-f2ab6d5672fb",
+     "kind": "bibliography",
+     "reviewed": "2026-08-07"
+    }
+   },
+   "author_en": {
+    "reading": "ヤマダ ヨシノブ",
+    "ruby": [
+     [
+      "山田恵庸",
+      "やまだよしのぶ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Yamada Yoshinobu",
+     "double": "Yamada Yoshinobu",
+     "plain": "Yamada Yoshinobu"
+    },
+    "en": "Yoshinobu Yamada",
+    "basis": "romaji",
+    "reading_basis": "community-printed",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q11470371",
+     "kind": "community-db"
+    },
+    "unverified": true,
+    "id": "c00115"
+   }
+  },
+  {
+   "id": "magapoke:https://pocket.shonenmagazine.com/title/02901/episode/446072",
+   "work": "アイドラトリィ",
+   "ep": "【#58】lgnite",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-04",
+   "seen": "2026-11-04",
+   "basis": "platform-stated",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://pocket.shonenmagazine.com/title/02901/episode/446072",
+   "author": "原作/大鷹シン 漫画/ホマレ",
+   "plat": "magapoke",
+   "plat_name": "マガポケ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 58",
+   "kind_inferred": true,
+   "preferred": "マガポケ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-04",
+   "wid": "w01225",
+   "work_en": {
+    "reading": "アイドラトリィ",
+    "romaji": {
+     "macron": "Aidoratorii",
+     "double": "Aidoratorii",
+     "plain": "Aidoratorii"
+    },
+    "en": "Idolatry",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Idolatry"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "オオタカ シン / ホマレ",
+    "ruby": [
+     [
+      "原作/",
+      null
+     ],
+     [
+      "大鷹",
+      "おおたか"
+     ],
+     [
+      "シン",
+      null
+     ],
+     [
+      " 漫画/",
+      null
+     ],
+     [
+      "ホマレ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Ōtaka Shin / Homare",
+     "double": "Ootaka Shin / Homare",
+     "plain": "Otaka Shin / Homare"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "magapoke:https://pocket.shonenmagazine.com/title/02758/episode/446290",
+   "work": "ドリーム☆ジャンボ☆ガール",
+   "ep": "【第63話】先輩は☆過去の女☆ガール",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-04",
+   "seen": "2026-11-04",
+   "basis": "platform-stated",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://pocket.shonenmagazine.com/title/02758/episode/446290",
+   "author": "ヒロユキ",
+   "plat": "magapoke",
+   "plat_name": "マガポケ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 63",
+   "kind_inferred": true,
+   "preferred": "マガポケ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-04",
+   "wid": "w01224",
+   "work_en": {
+    "reading": "ドリーム☆ジャンボ☆ガール",
+    "romaji": {
+     "macron": "Dorīmu☆janbo☆gāru",
+     "double": "Doriimu☆janbo☆gaaru",
+     "plain": "Dorimu☆janbo☆garu"
+    },
+    "en": "Dream☆Jumbo☆Girl",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Dream☆Jumbo☆Girl"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ヒロユキ",
+    "romaji": {
+     "macron": "Hiroyuki",
+     "double": "Hiroyuki",
+     "plain": "Hiroyuki"
+    },
+    "undivided": true,
+    "en": "Hiroyuki",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00022"
+   }
+  },
+  {
+   "id": "magapoke:https://pocket.shonenmagazine.com/title/03338/episode/446299",
+   "work": "怨霊日和",
+   "ep": "【第9話】ギャルとバイト",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-04",
+   "seen": "2026-11-04",
+   "basis": "platform-stated",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://pocket.shonenmagazine.com/title/03338/episode/446299",
+   "author": "イマイ悠",
+   "plat": "magapoke",
+   "plat_name": "マガポケ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 9",
+   "kind_inferred": true,
+   "preferred": "マガポケ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-04",
+   "wid": "w03314",
+   "work_en": {
+    "reading": "オンリョウ ヒヨリ",
+    "ruby": [
+     [
+      "怨霊",
+      "おんりょう"
+     ],
+     [
+      "日和",
+      "ひより"
+     ]
+    ],
+    "romaji": {
+     "macron": "Onryō Hiyori",
+     "double": "Onryou Hiyori",
+     "plain": "Onryo Hiyori"
+    },
+    "en": "A Fine Day for Vengeful Spirits",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Fine Day for Vengeful Spirits"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "イマイ ハルカ",
+    "ruby": [
+     [
+      "イマイ",
+      null
+     ],
+     [
+      "悠",
+      "はるか"
+     ]
+    ],
+    "romaji": {
+     "macron": "Imai Haruka",
+     "double": "Imai Haruka",
+     "plain": "Imai Haruka"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033378875",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00454"
+   }
+  },
+  {
    "id": "action:episode:12207421984440039225",
    "work": "変な奴",
    "ep": "変な奴",
@@ -70,7 +609,8 @@
     },
     "basis": "romaji",
     "reading_basis": "analyser",
-    "unverified": true
+    "unverified": true,
+    "id": "c02459"
    }
   },
   {
@@ -242,7 +782,8 @@
     "undivided": true,
     "basis": "romaji",
     "reading_basis": "analyser",
-    "unverified": true
+    "unverified": true,
+    "id": "c02460"
    }
   },
   {
@@ -437,7 +978,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -538,7 +1079,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -629,7 +1170,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -721,7 +1262,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -813,7 +1354,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -919,7 +1460,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -1006,7 +1547,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -1112,7 +1653,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -1176,7 +1717,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -1232,6 +1773,331 @@
    }
   },
   {
+   "id": "reported:kimicomi:https://kimicomi.com/series/0cd32d6a7efc2:2026-11-03",
+   "work": "魔王城デート大作戦!",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-03",
+   "seen": "2026-11-04",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://kimicomi.com/series/0cd32d6a7efc2",
+   "author": "涼海来夏",
+   "author_basis": "carried from another record of the same work",
+   "plat": "kimicomi",
+   "plat_name": "キミコミ",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "キミコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-03",
+   "wid": "w00009",
+   "work_en": {
+    "reading": "マオウジョウ デート ダイ サクセン !",
+    "ruby": [
+     [
+      "魔王",
+      "まおう"
+     ],
+     [
+      "城",
+      "じょう"
+     ],
+     [
+      "デート",
+      null
+     ],
+     [
+      "大",
+      "だい"
+     ],
+     [
+      "作戦",
+      "さくせん"
+     ],
+     [
+      "!",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Maōjō Dēto Dai Sakusen !",
+     "double": "Maoujou Deeto Dai Sakusen !",
+     "plain": "Maojo Deto Dai Sakusen !"
+    },
+    "en": "Operation Date at the Demon Lord's Castle!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Operation Date at the Demon Lord's Castle!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "スズミ ライカ",
+    "ruby": [
+     [
+      "涼海来夏",
+      "すずみらいか"
+     ]
+    ],
+    "romaji": {
+     "macron": "Suzumi Raika",
+     "double": "Suzumi Raika",
+     "plain": "Suzumi Raika"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I031650150",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00058"
+   }
+  },
+  {
+   "id": "reported:kimicomi:https://kimicomi.com/series/01e004cee82d9:2026-11-03",
+   "work": "人妻とJK",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-03",
+   "seen": "2026-11-04",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://kimicomi.com/series/01e004cee82d9",
+   "author": "焼肉定食",
+   "author_basis": "carried from another record of the same work",
+   "plat": "kimicomi",
+   "plat_name": "キミコミ",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "キミコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-03",
+   "wid": "w00254",
+   "work_en": {
+    "reading": "ヒトヅマ ト JK",
+    "ruby": [
+     [
+      "人妻",
+      "ひとづま"
+     ],
+     [
+      "とJK",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hitozuma to JK",
+     "double": "Hitozuma to JK",
+     "plain": "Hitozuma to JK"
+    },
+    "en": "The Married Woman and the Schoolgirl",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Married Woman and the Schoolgirl"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ヤキニク テイショク",
+    "ruby": [
+     [
+      "焼肉",
+      "やきにく"
+     ],
+     [
+      "定食",
+      "ていしょく"
+     ]
+    ],
+    "romaji": {
+     "macron": "Yakiniku Teishoku",
+     "double": "Yakiniku Teishoku",
+     "plain": "Yakiniku Teishoku"
+    },
+    "en": "Yakiniku Teishoku",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I031969086",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00367"
+   }
+  },
+  {
+   "id": "reported:hanayume:https://hanayume.com/series/f3ce082d639de:2026-11-03",
+   "work": "フレンドガールフレンド",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-03",
+   "seen": "2026-11-04",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://hanayume.com/series/f3ce082d639de",
+   "author": "瑠夏子",
+   "author_basis": "carried from another record of the same work",
+   "plat": "hanayume",
+   "plat_name": "花とゆめ+",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "花とゆめ+",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-03",
+   "wid": "w00007",
+   "work_en": {
+    "reading": "フレンドガールフレンド",
+    "romaji": {
+     "macron": "Furendogārufurendo",
+     "double": "Furendogaarufurendo",
+     "plain": "Furendogarufurendo"
+    },
+    "en": "Friend Girlfriend",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Friend Girlfriend"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ルカコ",
+    "ruby": [
+     [
+      "瑠夏子",
+      "るかこ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Rukako",
+     "double": "Rukako",
+     "plain": "Rukako"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I592XXXXXfrgirlf00111",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00054"
+   }
+  },
+  {
+   "id": "reported:championcross:https://championcross.jp/series/f30e2f58bbbdf:2026-11-03",
+   "work": "ガールズ×ヴァンパイア",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-03",
+   "seen": "2026-11-04",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://championcross.jp/series/f30e2f58bbbdf",
+   "author": "みかみてれん,千種みのり",
+   "author_basis": "carried from another record of the same work",
+   "plat": "championcross",
+   "plat_name": "チャンピオンクロス",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "チャンピオンクロス",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-03",
+   "wid": "w00178",
+   "work_en": {
+    "reading": "ガールズ×ヴァンパイア",
+    "romaji": {
+     "macron": "Gāruzuxvanpaia",
+     "double": "Gaaruzuxvanpaia",
+     "plain": "Garuzuxvanpaia"
+    },
+    "en": "Girls x Vampire",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Girls × Vampire"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ミカミ テレン, チグサ ミノリ",
+    "ruby": [
+     [
+      "みかみてれん",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "千種",
+      "ちぐさ"
+     ],
+     [
+      "みのり",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mikami Teren, Chigusa Minori",
+     "double": "Mikami Teren, Chigusa Minori",
+     "plain": "Mikami Teren, Chigusa Minori"
+    },
+    "reading_basis": "surface",
+    "basis": "romaji"
+   }
+  },
+  {
    "id": "comicfuz:64797",
    "work": "星屑テレパス",
    "ep": "５巻 第５０話「前進メソッド」",
@@ -1239,7 +2105,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1332,7 +2198,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1426,7 +2292,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1511,7 +2377,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1592,7 +2458,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -1687,7 +2553,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -1773,7 +2639,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -1852,7 +2718,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1959,7 +2825,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2060,7 +2926,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2146,7 +3012,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2229,7 +3095,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2305,7 +3171,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -2362,7 +3228,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -2447,6 +3313,258 @@
    }
   },
   {
+   "id": "reported:takecomic:https://takecomic.jp/series/b3efcd5f3a6a7:2026-11-01",
+   "work": "灼熱の卓球娘 REBURN!!",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-04",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://takecomic.jp/series/b3efcd5f3a6a7",
+   "author": "朝野やぐら",
+   "author_basis": "carried from another record of the same work",
+   "plat": "takecomic",
+   "plat_name": "竹コミ",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "we hold 6 earlier chapters of this work on this platform",
+   "kind_inferred": true,
+   "preferred": "竹コミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w00153",
+   "work_en": {
+    "reading": "シャクネツ ノ タッキュウ ムスメ   REBURN ! !",
+    "ruby": [
+     [
+      "灼熱",
+      "しゃくねつ"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "卓球",
+      "たっきゅう"
+     ],
+     [
+      "娘",
+      "むすめ"
+     ],
+     [
+      " REBURN!!",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Shakunetsu no Takkyū Musume REBURN ! !",
+     "double": "Shakunetsu no Takkyuu Musume REBURN ! !",
+     "plain": "Shakunetsu no Takkyu Musume REBURN ! !"
+    },
+    "en": "Scorching Ping Pong Girls: Reburn!!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Scorching Ping Pong Girls: Reburn!!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "アサノ ヤグラ",
+    "ruby": [
+     [
+      "朝野",
+      "あさの"
+     ],
+     [
+      "やぐら",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Asano Yagura",
+     "double": "Asano Yagura",
+     "plain": "Asano Yagura"
+    },
+    "en": "Yagura Asano",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I026188782",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00248"
+   }
+  },
+  {
+   "id": "reported:kimicomi:https://kimicomi.com/series/f42014b3e7df6:2026-11-01",
+   "work": "ワインガールズ",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-04",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://kimicomi.com/series/f42014b3e7df6",
+   "author": "真田一輝",
+   "author_basis": "carried from another record of the same work",
+   "plat": "kimicomi",
+   "plat_name": "キミコミ",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "キミコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w00011",
+   "work_en": {
+    "reading": "ワインガールズ",
+    "romaji": {
+     "macron": "Waingāruzu",
+     "double": "Waingaaruzu",
+     "plain": "Waingaruzu"
+    },
+    "en": "Wine Girls",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Wine Girls"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "サナダ イッキ",
+    "ruby": [
+     [
+      "真田",
+      "さなだ"
+     ],
+     [
+      "一輝",
+      "いっき"
+     ]
+    ],
+    "romaji": {
+     "macron": "Sanada Ikki",
+     "double": "Sanada Ikki",
+     "plain": "Sanada Ikki"
+    },
+    "en": "Ikki Sanada",
+    "basis": "romaji",
+    "reading_basis": "community-printed",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q11583352",
+     "kind": "community-db"
+    },
+    "unverified": true,
+    "id": "c00062"
+   }
+  },
+  {
+   "id": "reported:championcross:https://championcross.jp/series/21fe5b3d50300:2026-11-01",
+   "work": "Killer♡Twinkle～アンチはステージに上がれません♡～",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-01",
+   "seen": "2026-11-04",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://championcross.jp/series/21fe5b3d50300",
+   "author": "田中こめ",
+   "author_basis": "carried from another record of the same work",
+   "plat": "championcross",
+   "plat_name": "チャンピオンクロス",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "チャンピオンクロス",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-01",
+   "wid": "w00143",
+   "work_en": {
+    "reading": "Killer ♡ Twinkle ～ アンチ ワ ステージ ニ アガレマセン ♡ ～",
+    "ruby": [
+     [
+      "Killer♡Twinkle～アンチはステージに",
+      null
+     ],
+     [
+      "上",
+      "あ"
+     ],
+     [
+      "がれません♡～",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Killer ♡ Twinkle ~ Anchi wa Sutēji ni Agaremasen ♡ ~",
+     "double": "Killer ♡ Twinkle ~ Anchi wa Suteeji ni Agaremasen ♡ ~",
+     "plain": "Killer ♡ Twinkle ~ Anchi wa Suteji ni Agaremasen ♡ ~"
+    },
+    "en": "Killer♡Twinkle ~Anti-Fans Don't Get to Take the Stage♡~",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Killer♡Twinkle ~Anti-Fans Don't Get to Take the Stage♡~"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "タナカ コメ",
+    "ruby": [
+     [
+      "田中",
+      "たなか"
+     ],
+     [
+      "こめ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Tanaka Kome",
+     "double": "Tanaka Kome",
+     "plain": "Tanaka Kome"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "id": "c00237"
+   }
+  },
+  {
    "id": "manga-park:https://manga-park.com/title/67724:第44話①",
    "work": "ロックは淑女の嗜みでして",
    "ep": "第44話①",
@@ -2454,7 +3572,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-03",
+   "seen": "2026-11-04",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -2805,5 +3923,5 @@
   }
  ],
  "month": "2026-11",
- "generated": "2026-11-03"
+ "generated": "2026-11-04"
 }

@@ -1,11 +1,9 @@
 {
- "generated": "2026-11-03T11:17:23+00:00",
+ "generated": "2026-11-03T21:48:39+00:00",
  "since_last": {
-  "at": "2026-11-03T00:15:55+00:00",
+  "at": "2026-11-03T11:17:23+00:00",
   "statistics": {
-   "works": 3,
-   "with_identifier": 3,
-   "chapters": 7
+   "chapters": 2
   }
  },
  "means": {
@@ -15,7 +13,8 @@
   "samples": "Held back promotional read-throughs of finished volumes as print candidates",
   "discovery-candidate": "Admitted works that a discovery list names",
   "platform-genre": "Admitted works that a platform files under its own yuri genre",
-  "known-work-match": "Matched updates to works the database already held"
+  "known-work-match": "Matched updates to works the database already held",
+  "comparator-claim": "Published updates a listing site reported on a platform closed to us"
  },
  "labels": {
   "works": "works",
@@ -27,23 +26,24 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-11-03",
-  "releases": 1046,
+  "at": "2026-11-04",
+  "releases": 1055,
   "works": 2762,
   "platforms": 19,
   "series_rows": 3319,
   "assembled": 3320,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 750,
+   "comparator-claim": 21,
+   "discovery-candidate": 741,
    "known-work-match": 33,
-   "platform-genre": 263
+   "platform-genre": 260
   },
   "collapsed": {
-   "duplicate_chapters": 246,
-   "resolver": 122,
+   "duplicate_chapters": 241,
+   "resolver": 123,
    "samples": 0,
-   "thin_sitemap": 14
+   "thin_sitemap": 13
   }
  },
  "gate": {
@@ -305,7 +305,7 @@
     "examples": []
    },
    {
-    "name": "feed holds only attested rows",
+    "name": "a feed row is attested or names who reported it",
     "violations": 0,
     "examples": []
    },
@@ -559,8 +559,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 20,
-    "value": 20,
+    "budget": 17,
+    "value": 17,
     "measure": "arrival"
    },
    {
@@ -909,8 +909,8 @@
    {
     "name": "predicted updates already behind the run",
     "means": "works whose stated rhythm names a date the run has already passed, so the updates tab reports them overdue. Either the series has gone quiet or the date was worked out for a slot the month's chapter had already filled",
-    "budget": 1,
-    "value": 1,
+    "budget": 0,
+    "value": 0,
     "measure": "report"
    },
    {
@@ -934,9 +934,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 38,
+    "consecutive": 39,
     "failing_since": "2026-10-16",
-    "days": 18,
+    "days": 19,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -944,9 +944,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 38,
+    "consecutive": 39,
     "failing_since": "2026-10-16",
-    "days": 18,
+    "days": 19,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -954,9 +954,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 38,
+    "consecutive": 39,
     "failing_since": "2026-10-16",
-    "days": 18,
+    "days": 19,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -964,9 +964,9 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 21,
+    "consecutive": 22,
     "failing_since": "2026-10-24",
-    "days": 10,
+    "days": 11,
     "last_ok": "2026-10-23",
     "error": "2 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
     "issue": true
@@ -974,9 +974,9 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 17,
+    "consecutive": 18,
     "failing_since": "2026-10-26",
-    "days": 8,
+    "days": 9,
     "last_ok": "2026-10-25",
     "error": "17 file(s) past their age, e.g. data/source/webpages/asacomi.yaml dated 2026-10-22",
     "issue": true
@@ -984,9 +984,9 @@
    {
     "source": "stale:stage-a:gigaviewer-platform-feeds",
     "stage": "freshness",
-    "consecutive": 6,
+    "consecutive": 7,
     "failing_since": "2026-11-01",
-    "days": 2,
+    "days": 3,
     "last_ok": "2026-10-31",
     "error": "2 file(s) past their age, e.g. data/source/gigaviewer/ourfeel-series.yaml dated 2026-10-28",
     "issue": true
@@ -1002,7 +1002,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 93,
+   "age_days": 94,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1016,7 +1016,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 87,
+   "age_days": 88,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1030,7 +1030,7 @@
    "works": 1792,
    "rows": 4275,
    "retrieved": "2026-10-31",
-   "age_days": 3,
+   "age_days": 4,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1044,7 +1044,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-11-01",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1058,7 +1058,7 @@
    "works": 983,
    "rows": 2583,
    "retrieved": "2026-11-01",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1072,7 +1072,7 @@
    "works": 68,
    "rows": 68,
    "retrieved": "2026-11-02",
-   "age_days": 1,
+   "age_days": 2,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1085,7 +1085,7 @@
    "files": 2,
    "works": 130,
    "rows": 6339,
-   "retrieved": "2026-11-03",
+   "retrieved": "2026-11-04",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1099,7 +1099,7 @@
    "files": 5,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-11-03",
+   "retrieved": "2026-11-04",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1111,9 +1111,9 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1684,
-   "rows": 17655,
-   "retrieved": "2026-11-03",
+   "works": 1685,
+   "rows": 17656,
+   "retrieved": "2026-11-04",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1127,7 +1127,7 @@
    "files": 5,
    "works": 1017,
    "rows": 7831,
-   "retrieved": "2026-11-03",
+   "retrieved": "2026-11-04",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1141,7 +1141,7 @@
    "files": 3,
    "works": 1343,
    "rows": 11580,
-   "retrieved": "2026-11-03",
+   "retrieved": "2026-11-04",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1155,7 +1155,7 @@
    "files": 881,
    "works": 881,
    "rows": 2306,
-   "retrieved": "2026-11-03",
+   "retrieved": "2026-11-04",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1168,13 +1168,13 @@
    "source": "webpages",
    "files": 50,
    "works": 658,
-   "rows": 9466,
-   "retrieved": "2026-11-03",
+   "rows": 9472,
+   "retrieved": "2026-11-04",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9412,
-   "well_formed": 9411,
+   "checked_rows": 9418,
+   "well_formed": 9417,
    "malformed": 1,
    "drop": null
   }
@@ -1215,7 +1215,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 47,
+   "count": 46,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1248,7 +1248,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 20,
+    "credit fields an identifier does not cover": 17,
     "credit pages listing a work that does not name them": 12,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1298,7 +1298,7 @@
     "attested rows with no access state": 0,
     "works without English": 0,
     "volume rows with no publication date": 2643,
-    "predicted updates already behind the run": 1,
+    "predicted updates already behind the run": 0,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
    }
@@ -1309,11 +1309,11 @@
   "states": {
    "print": 1790,
    "oneshot": 500,
-   "completed": 497,
-   "active": 288,
-   "dormant": 146,
-   "slow": 55,
-   "unknown": 43
+   "completed": 498,
+   "active": 285,
+   "dormant": 147,
+   "slow": 54,
+   "unknown": 45
   },
   "english_basis": {
    "translated": 2942,
@@ -1326,7 +1326,7 @@
   "print_only": 1790,
   "volumes": 6579,
   "with_identifier": 3319,
-  "chapters": 31069,
+  "chapters": 31071,
   "delivery_dated": 1108
  }
 }

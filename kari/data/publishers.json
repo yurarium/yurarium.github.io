@@ -1,54 +1,19 @@
 {
- "generated": "2026-11-03",
+ "generated": "2026-11-04",
  "note": "One record per publishing house, holding the imprint lines it runs with the spellings each line is catalogued under and the years those cover. Publishers and distributors share one namespace: the seat is on the edge to the book.",
  "count": 163,
  "publishers": {
-  "h00039": {
-   "id": "h00039",
-   "name": "とりからの巣",
-   "rows": 2,
-   "works": [
-    "w01878",
-    "w02099"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": null,
-     "name": "とりからの巣",
-     "parent": null,
-     "resolved": false,
-     "rows": 2,
-     "works": [
-      "w01878",
-      "w02099"
-     ],
-     "spellings": [
-      {
-       "raw": "とりからの巣",
-       "rows": 2,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    }
-   ]
-  },
   "h00004": {
    "id": "h00004",
    "name": "講談社",
    "rows": 254,
    "works": [
+    "w01224",
+    "w01225",
     "w00004",
     "w00016",
     "w00054",
-    "w01224",
     "w00055",
-    "w01225",
     "w00066",
     "w00068",
     "w00146",
@@ -656,6 +621,194 @@
        "years": [
         "2017",
         "2017"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00008": {
+   "id": "h00008",
+   "name": "双葉社",
+   "rows": 22,
+   "works": [
+    "w00205",
+    "w00105",
+    "w00020",
+    "w00511",
+    "w00594",
+    "w00622",
+    "w00623",
+    "w00700",
+    "w00751",
+    "w00784",
+    "w00896",
+    "w00960",
+    "w01103",
+    "w01270",
+    "w01351",
+    "w01591",
+    "w02417",
+    "w02502",
+    "w02949",
+    "w02963",
+    "w01294",
+    "w01453"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "action-comics",
+     "name": "アクションコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 14,
+     "works": [
+      "w00205",
+      "w00105",
+      "w00020",
+      "w00511",
+      "w00594",
+      "w00623",
+      "w00784",
+      "w00896",
+      "w00960",
+      "w01351",
+      "w02417",
+      "w02502",
+      "w02949",
+      "w02963"
+     ],
+     "spellings": [
+      {
+       "raw": "ACTION COMICS",
+       "rows": 9,
+       "years": [
+        "2014",
+        "2025"
+       ]
+      },
+      {
+       "raw": "アクションコミックス",
+       "rows": 4,
+       "years": [
+        "2009",
+        "2013"
+       ]
+      },
+      {
+       "raw": "Action comics",
+       "rows": 1,
+       "years": [
+        "2021",
+        "2021"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "comic-highs-brand",
+     "name": "comic high's brand",
+     "parent": "アクションコミックス",
+     "resolved": true,
+     "rows": 3,
+     "works": [
+      "w01103",
+      "w01270",
+      "w01294"
+     ],
+     "spellings": [
+      {
+       "raw": "Action comics　／　comic high's brand",
+       "rows": 2,
+       "years": [
+        "2012",
+        "2012"
+       ]
+      },
+      {
+       "raw": "Action comics : comic high's brand",
+       "rows": 1,
+       "years": [
+        "2008",
+        "2008"
+       ]
+      }
+     ]
+    },
+    {
+     "id": null,
+     "name": "web ACTION",
+     "parent": null,
+     "resolved": false,
+     "rows": 1,
+     "works": [
+      "w00622"
+     ],
+     "spellings": [
+      {
+       "raw": "web ACTION",
+       "rows": 1,
+       "years": [
+        "2022",
+        "2022"
+       ]
+      }
+     ]
+    },
+    {
+     "id": null,
+     "name": "コミックハイ!",
+     "parent": null,
+     "resolved": false,
+     "rows": 1,
+     "works": [
+      "w01591"
+     ],
+     "spellings": [
+      {
+       "raw": "コミックハイ!",
+       "rows": 1,
+       "years": [
+        "2013",
+        "2013"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00039": {
+   "id": "h00039",
+   "name": "とりからの巣",
+   "rows": 2,
+   "works": [
+    "w01878",
+    "w02099"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": null,
+     "name": "とりからの巣",
+     "parent": null,
+     "resolved": false,
+     "rows": 2,
+     "works": [
+      "w01878",
+      "w02099"
+     ],
+     "spellings": [
+      {
+       "raw": "とりからの巣",
+       "rows": 2,
+       "years": [
+        null,
+        null
        ]
       }
      ]
@@ -4021,10 +4174,10 @@
     "w00029",
     "w03221",
     "w00051",
+    "w00072",
     "w00716",
     "w00158",
     "w00188",
-    "w00072",
     "w00157",
     "w00378",
     "w00392",
@@ -6808,159 +6961,6 @@
        "years": [
         "2007",
         "2007"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00008": {
-   "id": "h00008",
-   "name": "双葉社",
-   "rows": 22,
-   "works": [
-    "w00105",
-    "w00205",
-    "w00020",
-    "w00511",
-    "w00594",
-    "w00622",
-    "w00623",
-    "w00700",
-    "w00751",
-    "w00784",
-    "w00896",
-    "w00960",
-    "w01103",
-    "w01270",
-    "w01351",
-    "w01591",
-    "w02417",
-    "w02502",
-    "w02949",
-    "w02963",
-    "w01294",
-    "w01453"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "action-comics",
-     "name": "アクションコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 14,
-     "works": [
-      "w00105",
-      "w00205",
-      "w00020",
-      "w00511",
-      "w00594",
-      "w00623",
-      "w00784",
-      "w00896",
-      "w00960",
-      "w01351",
-      "w02417",
-      "w02502",
-      "w02949",
-      "w02963"
-     ],
-     "spellings": [
-      {
-       "raw": "ACTION COMICS",
-       "rows": 9,
-       "years": [
-        "2014",
-        "2025"
-       ]
-      },
-      {
-       "raw": "アクションコミックス",
-       "rows": 4,
-       "years": [
-        "2009",
-        "2013"
-       ]
-      },
-      {
-       "raw": "Action comics",
-       "rows": 1,
-       "years": [
-        "2021",
-        "2021"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "comic-highs-brand",
-     "name": "comic high's brand",
-     "parent": "アクションコミックス",
-     "resolved": true,
-     "rows": 3,
-     "works": [
-      "w01103",
-      "w01270",
-      "w01294"
-     ],
-     "spellings": [
-      {
-       "raw": "Action comics　／　comic high's brand",
-       "rows": 2,
-       "years": [
-        "2012",
-        "2012"
-       ]
-      },
-      {
-       "raw": "Action comics : comic high's brand",
-       "rows": 1,
-       "years": [
-        "2008",
-        "2008"
-       ]
-      }
-     ]
-    },
-    {
-     "id": null,
-     "name": "web ACTION",
-     "parent": null,
-     "resolved": false,
-     "rows": 1,
-     "works": [
-      "w00622"
-     ],
-     "spellings": [
-      {
-       "raw": "web ACTION",
-       "rows": 1,
-       "years": [
-        "2022",
-        "2022"
-       ]
-      }
-     ]
-    },
-    {
-     "id": null,
-     "name": "コミックハイ!",
-     "parent": null,
-     "resolved": false,
-     "rows": 1,
-     "works": [
-      "w01591"
-     ],
-     "spellings": [
-      {
-       "raw": "コミックハイ!",
-       "rows": 1,
-       "years": [
-        "2013",
-        "2013"
        ]
       }
      ]
