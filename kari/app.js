@@ -4601,6 +4601,22 @@ function byDate(rows) {
   return days;
 }
 
+/* WHO REPORTED IT, on a row no platform attests. Where a platform's own listing is closed to the
+   pipeline, a listing site's report is published as that site's, and the row names it the way every
+   other row names its platform. The report gives a work, a platform and a day, so the tooltip says
+   that much and no more: it names no chapter and says nothing about whether one is free. The site
+   names are the record and are not translated. */
+const CLAIM_SITE = { 'webcomics.jp': 'Web漫画アンテナ', 'yurinavi': '百合ナビ' };
+function reportedBy(r) {
+  if (r.provenance !== 'claimed' || !r.claim_source) return '';
+  const names = r.claim_source.split('+').map(s => CLAIM_SITE[s] || s);
+  const who = names.join(LANG === 'en' ? ', ' : '・');
+  return `<span class="meta via" title="${esc(T(
+    `${who}が伝えた更新です。話数と、無料かどうかの記載はありません。`,
+    `An update reported by ${who}. The report names no chapter and does not say whether it is free.`))}">${
+    esc(L(`${who}より`, `via ${who}`))}</span>`;
+}
+
 // BADGE ORDER, and why 有料先行 carries no count.
 //
 // The free badge comes first. If an update put out a chapter anyone can read, that is the fact a
@@ -4667,6 +4683,7 @@ function compactList(rows) {
         ${lead.basis === 'read' ? `<span class="k k-unk" title="${esc(T(UNSTATED_DATE[0], UNSTATED_DATE[1]))}">${esc(T('日付不明'))}</span>` : ''}
         ${lead.title_unsplit ? `<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">${esc(T('作者未分離'))}</span>` : ''}
         </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(platName(lead.plat_name || lead.plat))}</span>
+        ${reportedBy(lead)}
         ${lead.syndicated ? `<span class="k k-unk" title="${esc(lead.origin_note || 'a syndicated appearance, not original web publication')}">${esc(T('転載'))}</span>` : ''}
         ${anyFree ? `<span class="k k-free">${esc(T('無料'))}</span>` : ''}
         ${(el('fmodel').value === 'all' && lead.ahead_n)
@@ -4825,6 +4842,7 @@ function detailList(rows) {
               esc(r.origin_note || `read this instalment on ${where}`)}">${esc(where)}</a>`
           : `<span class="meta plat"${r.origin_note ? ` title="${esc(r.origin_note)}"` : ''}>${esc(where)}</span>`}
         ${r.channel_name ? `<span class="meta chan" title="a channel within ${esc(platName(r.plat_name))}, not a platform of its own">${esc(platName(r.channel_name))}</span>` : ''}
+        ${reportedBy(r)}
         ${r.syndicated ? `<span class="tag grey" title="${esc(r.origin_note || '')}">${esc(T('転載'))}</span>` : ''}
         ${(r.also_on && r.also_on.length) ? `<span class="meta">${LANG === 'en' ? '· ' : '・'}${esc(L('他', 'also on'))} ${esc(r.also_on.map(platName).join(LANG === 'en' ? ', ' : '、'))}</span>` : ''}
       </div>
