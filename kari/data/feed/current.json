@@ -1,6 +1,126 @@
 {
  "releases": [
   {
+   "id": "tonarino_yj:episode:12207421984467777208",
+   "work": "ナイーブ・リザーブド",
+   "ep": "ナイーブ・リザーブド",
+   "type": "oneshot",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-11-05",
+   "seen": "2026-11-05",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://tonarinoyj.jp/episode/12207421984467777208",
+   "author": "不飽和デザ",
+   "plat": "tonarinoyj",
+   "plat_name": "となりのヤングジャンプ",
+   "ident": "discovery-candidate",
+   "free_from": "2026-11-04T15:00:00Z",
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "oneshot",
+   "kind_basis": "となりのヤングジャンプ publishes it as a prize-winning entry, the citation standing as its description",
+   "kind_inferred": false,
+   "preferred": "となりのヤングジャンプ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-05",
+   "wid": "w03526",
+   "work_en": {
+    "reading": "ナイーブ・リザーブド",
+    "romaji": {
+     "macron": "Naību Rizābudo",
+     "double": "Naiibu Rizaabudo",
+     "plain": "Naibu Rizabudo"
+    },
+    "en": "Naive Reserved",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Naive Reserved"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "フホウワ デザ",
+    "romaji": {
+     "macron": "Fuhōwa Deza",
+     "double": "Fuhouwa Deza",
+     "plain": "Fuhowa Deza"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true
+   }
+  },
+  {
+   "id": "magapoke:https://pocket.shonenmagazine.com/title/03349/episode/446085",
+   "work": "ぎるてぃらいぶらり",
+   "ep": "【第6話】1年で1番多い日",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-05",
+   "seen": "2026-11-05",
+   "basis": "platform-stated",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://pocket.shonenmagazine.com/title/03349/episode/446085",
+   "author": "閉伊川広輔",
+   "plat": "magapoke",
+   "plat_name": "マガポケ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 6",
+   "kind_inferred": true,
+   "preferred": "マガポケ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-05",
+   "wid": "w03309",
+   "work_en": {
+    "reading": "ギルティ ライブラリ",
+    "romaji": {
+     "macron": "Giruti Raiburari",
+     "double": "Giruti Raiburari",
+     "plain": "Giruti Raiburari"
+    },
+    "en": "Guilty Library",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Guilty Library"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ヘイイガワコウスケ",
+    "romaji": {
+     "macron": "Heiigawakōsuke",
+     "double": "Heiigawakousuke",
+     "plain": "Heiigawakosuke"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true,
+    "id": "c02342"
+   }
+  },
+  {
    "id": "reported:takecomic:https://takecomic.jp/series/b53a116d9f0e7:2026-10-23",
    "work": "今年注目のエースちゃん",
    "ep": "",
@@ -8,7 +128,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -83,7 +203,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -161,7 +281,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -253,6 +373,7 @@
    "access_modes": [
     "purchase"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -264,29 +385,27 @@
    "feed_date": "2026-11-04",
    "wid": "w03525",
    "work_en": {
-    "reading": "ゼ サワギ サワギ",
+    "reading": "コレ サイサイ",
     "ruby": [
      [
-      "是",
-      "ぜ"
-     ],
-     [
-      "騒",
-      "さわぎ"
-     ],
-     [
-      "騒",
-      "さわぎ"
+      "是騒騒",
+      "これさいさい"
      ]
     ],
     "romaji": {
-     "macron": "Ze Sawagi Sawagi",
-     "double": "Ze Sawagi Sawagi",
-     "plain": "Ze Sawagi Sawagi"
+     "macron": "Kore Saisai",
+     "double": "Kore Saisai",
+     "plain": "Kore Saisai"
     },
+    "translation_refused": "The title gives its characters a reading of its own: 是 as コレ, this, and 騒騒 as サイサイ, where 騒 is ordinarily ソウ or さわぐ, to clamour. The page calls the work a 妖艶怪異譚 and says nothing of what the name means, so a translation would choose a sense the work has not stated. The owner ruled on 2026-11-04 that it stays as Kore Saisai.",
     "basis": "romaji",
-    "reading_basis": "analyser",
-    "unverified": true
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "コミックDAYS",
+     "url": "https://comic-days.com/episode/12207421984407366672",
+     "kind": "platform",
+     "reviewed": "2026-11-04"
+    }
    },
    "author_en": {
     "reading": "ラカワマリモ",
@@ -299,7 +418,8 @@
     "basis": "romaji",
     "reading_basis": "analyser",
     "unverified": true,
-    "uncertain": true
+    "uncertain": true,
+    "id": "c02461"
    }
   },
   {
@@ -324,6 +444,7 @@
    "access_modes": [
     "free"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": true,
    "kind": "new-series",
@@ -335,29 +456,27 @@
    "feed_date": "2026-11-04",
    "wid": "w03525",
    "work_en": {
-    "reading": "ゼ サワギ サワギ",
+    "reading": "コレ サイサイ",
     "ruby": [
      [
-      "是",
-      "ぜ"
-     ],
-     [
-      "騒",
-      "さわぎ"
-     ],
-     [
-      "騒",
-      "さわぎ"
+      "是騒騒",
+      "これさいさい"
      ]
     ],
     "romaji": {
-     "macron": "Ze Sawagi Sawagi",
-     "double": "Ze Sawagi Sawagi",
-     "plain": "Ze Sawagi Sawagi"
+     "macron": "Kore Saisai",
+     "double": "Kore Saisai",
+     "plain": "Kore Saisai"
     },
+    "translation_refused": "The title gives its characters a reading of its own: 是 as コレ, this, and 騒騒 as サイサイ, where 騒 is ordinarily ソウ or さわぐ, to clamour. The page calls the work a 妖艶怪異譚 and says nothing of what the name means, so a translation would choose a sense the work has not stated. The owner ruled on 2026-11-04 that it stays as Kore Saisai.",
     "basis": "romaji",
-    "reading_basis": "analyser",
-    "unverified": true
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "コミックDAYS",
+     "url": "https://comic-days.com/episode/12207421984407366672",
+     "kind": "platform",
+     "reviewed": "2026-11-04"
+    }
    },
    "author_en": {
     "reading": "ラカワマリモ",
@@ -370,7 +489,8 @@
     "basis": "romaji",
     "reading_basis": "analyser",
     "unverified": true,
-    "uncertain": true
+    "uncertain": true,
+    "id": "c02461"
    }
   },
   {
@@ -462,7 +582,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -535,7 +655,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -667,7 +787,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -744,7 +864,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -862,7 +982,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -943,7 +1063,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -1005,7 +1125,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -1092,7 +1212,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -1242,7 +1362,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -1306,7 +1426,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -1369,7 +1489,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -1440,6 +1560,83 @@
    }
   },
   {
+   "id": "reported:youngchampion:https://youngchampion.jp/series/81d9b296d7bc7:2026-11-04",
+   "work": "スカベンジャーズアナザースカイ",
+   "ep": "",
+   "type": "unclassified",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-04",
+   "seen": "2026-11-05",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://youngchampion.jp/series/81d9b296d7bc7",
+   "author": "古部亮",
+   "author_basis": "carried from another record of the same work",
+   "plat": "youngchampion",
+   "plat_name": "ヤングチャンピオン",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "ヤングチャンピオン",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-04",
+   "wid": "w00118",
+   "work_en": {
+    "reading": "スカベンジャーズアナザースカイ",
+    "romaji": {
+     "macron": "Sukabenjāzuanazāsukai",
+     "double": "Sukabenjaazuanazaasukai",
+     "plain": "Sukabenjazuanazasukai"
+    },
+    "translation_refused": "The kana are the three English words the publisher prints in capitals, so ours is the attributed name re-typeset.",
+    "en": "SCAVENGERS ANOTHER SKY",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "SCAVENGERS ANOTHER SKY"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "mediaarts-db",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/madb-t-0b0ad8cae7a4",
+     "kind": "bibliography",
+     "reviewed": "2026-08-07"
+    }
+   },
+   "author_en": {
+    "reading": "フルベ リョウ",
+    "ruby": [
+     [
+      "古部亮",
+      "ふるべりょう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Furube Ryō",
+     "double": "Furube Ryou",
+     "plain": "Furube Ryo"
+    },
+    "en": "FURUBE Ryo",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034666202",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00214"
+   }
+  },
+  {
    "id": "reported:championcross:https://championcross.jp/series/f30e2f58bbbdf:2026-11-04",
    "work": "ガールズ×ヴァンパイア",
    "ep": "",
@@ -1447,7 +1644,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -1521,7 +1718,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -1594,6 +1791,79 @@
    }
   },
   {
+   "id": "reported:bigcomics:https://bigcomics.jp/series/cad403cdddf52:2026-11-04",
+   "work": "あくまで!アットホームな職場です。",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-04",
+   "seen": "2026-11-05",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://bigcomics.jp/series/cad403cdddf52",
+   "author": "たるはる",
+   "author_basis": "carried from another record of the same work",
+   "plat": "bigcomics",
+   "plat_name": "ビッコミ",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "ビッコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-04",
+   "wid": "w00079",
+   "work_en": {
+    "reading": "アクマデ ! アットホームナ ショクバデス。",
+    "ruby": [
+     [
+      "あくまで!アットホームな",
+      null
+     ],
+     [
+      "職場",
+      "しょくば"
+     ],
+     [
+      "です。",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Akumade ! Attohōmuna Shokubadesu.",
+     "double": "Akumade ! Attohoomuna Shokubadesu.",
+     "plain": "Akumade ! Attohomuna Shokubadesu."
+    },
+    "en": "We're a Demonically Friendly Workplace!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "We're a Demonically Friendly Workplace!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "タルハル",
+    "romaji": {
+     "macron": "Taruharu",
+     "double": "Taruharu",
+     "plain": "Taruharu"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00156"
+   }
+  },
+  {
    "id": "action:episode:12207421984440039225",
    "work": "変な奴",
    "ep": "変な奴",
@@ -1619,7 +1889,7 @@
    "provenance": "attested",
    "free": true,
    "kind": "oneshot",
-   "kind_basis": "the platform titles a one-shot's only instalment after the work and numbers a serial's chapters, as its own listings show throughout",
+   "kind_basis": "Web漫画アンテナ tags this work 読み切り",
    "kind_inferred": false,
    "preferred": "webアクション",
    "also_on": [],
@@ -2034,7 +2304,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2049,8 +2319,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -2135,7 +2405,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2226,7 +2496,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2355,7 +2625,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2446,7 +2716,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -2531,6 +2801,97 @@
    }
   },
   {
+   "id": "pixivcomic:https://comic.pixiv.net/works/13609:第11話",
+   "work": "姫騎士と姫巫女",
+   "ep": "第11話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-03",
+   "seen": "2026-11-05",
+   "basis": "rendered",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic.pixiv.net/works/13609",
+   "author": "真くん",
+   "plat": "pixivcomic",
+   "plat_name": "pixivコミック",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 11",
+   "kind_inferred": true,
+   "preferred": "pixivコミック",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-03",
+   "wid": "w03311",
+   "work_en": {
+    "reading": "ヒメキシ ト ヒメミコ",
+    "ruby": [
+     [
+      "姫騎士",
+      "ひめきし"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "姫巫女",
+      "ひめみこ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Himekishi to Himemiko",
+     "double": "Himekishi to Himemiko",
+     "plain": "Himekishi to Himemiko"
+    },
+    "en": "The Princess Knight and the Princess Shrine Maiden",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Princess Knight and the Princess Shrine Maiden"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "シンクン",
+    "ruby": [
+     [
+      "真",
+      "しん"
+     ],
+     [
+      "くん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Shinkun",
+     "double": "Shinkun",
+     "plain": "Shinkun"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033517222",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00008"
+   }
+  },
+  {
    "id": "yanmaga:https://yanmaga.jp/comics/%E4%B9%99%E5%A5%B3%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%9A/227565c303dd9441a83489057257e052",
    "work": "乙女のおかず",
    "ep": "第４９話　乙女と或る思い出",
@@ -2538,7 +2899,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2630,7 +2991,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -2736,7 +3097,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -2823,7 +3184,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -2929,7 +3290,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -3006,7 +3367,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -3072,7 +3433,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -3188,7 +3549,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -3271,7 +3632,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -3367,7 +3728,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -3452,7 +3813,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -3522,7 +3883,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -3615,7 +3976,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -3709,7 +4070,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -3794,7 +4155,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -3875,7 +4236,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -3970,7 +4331,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -4056,7 +4417,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -4135,7 +4496,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4242,7 +4603,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4343,7 +4704,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4429,7 +4790,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4512,7 +4873,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4588,7 +4949,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -4645,7 +5006,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -4737,7 +5098,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -4834,7 +5195,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -4908,7 +5269,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -4989,7 +5350,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -5088,7 +5449,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -5269,7 +5630,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5365,7 +5726,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5428,7 +5789,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -5500,7 +5861,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -5793,7 +6154,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5869,7 +6230,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5960,7 +6321,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6061,7 +6422,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6137,7 +6498,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6229,7 +6590,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6344,7 +6705,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6419,7 +6780,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6560,7 +6921,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6626,7 +6987,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6751,7 +7112,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6829,7 +7190,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6989,7 +7350,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -7083,7 +7444,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -7176,7 +7537,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -7267,7 +7628,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -7372,7 +7733,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -7542,7 +7903,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -7631,7 +7992,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -7789,7 +8150,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7861,7 +8222,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7934,7 +8295,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8018,7 +8379,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8086,7 +8447,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8177,7 +8538,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8263,7 +8624,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8353,7 +8714,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8480,7 +8841,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -8597,7 +8958,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -8690,7 +9051,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -8752,7 +9113,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -8832,7 +9193,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -9000,7 +9361,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9105,7 +9466,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9205,7 +9566,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9350,7 +9711,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9445,7 +9806,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9522,7 +9883,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9599,7 +9960,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9676,7 +10037,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9754,7 +10115,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -9835,7 +10196,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -9897,7 +10258,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -9995,7 +10356,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -10091,7 +10452,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -10184,7 +10545,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -10284,7 +10645,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -10377,7 +10738,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -10471,7 +10832,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -10741,7 +11102,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10818,7 +11179,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10885,7 +11246,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10976,7 +11337,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11070,7 +11431,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11158,7 +11519,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11270,7 +11631,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11352,7 +11713,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11466,7 +11827,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11570,7 +11931,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11690,7 +12051,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11781,7 +12142,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11869,7 +12230,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11947,7 +12308,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12077,7 +12438,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12179,7 +12540,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -12279,7 +12640,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -12370,97 +12731,6 @@
    }
   },
   {
-   "id": "pixivcomic:https://comic.pixiv.net/works/13609:第10話",
-   "work": "姫騎士と姫巫女",
-   "ep": "第10話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-27",
-   "seen": "2026-11-04",
-   "basis": "rendered",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic.pixiv.net/works/13609",
-   "author": "真くん",
-   "plat": "pixivcomic",
-   "plat_name": "pixivコミック",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 10",
-   "kind_inferred": true,
-   "preferred": "pixivコミック",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-27",
-   "wid": "w03311",
-   "work_en": {
-    "reading": "ヒメキシ ト ヒメミコ",
-    "ruby": [
-     [
-      "姫騎士",
-      "ひめきし"
-     ],
-     [
-      "と",
-      null
-     ],
-     [
-      "姫巫女",
-      "ひめみこ"
-     ]
-    ],
-    "romaji": {
-     "macron": "Himekishi to Himemiko",
-     "double": "Himekishi to Himemiko",
-     "plain": "Himekishi to Himemiko"
-    },
-    "en": "The Princess Knight and the Princess Shrine Maiden",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Princess Knight and the Princess Shrine Maiden"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "シンクン",
-    "ruby": [
-     [
-      "真",
-      "しん"
-     ],
-     [
-      "くん",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Shinkun",
-     "double": "Shinkun",
-     "plain": "Shinkun"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033517222",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00008"
-   }
-  },
-  {
    "id": "yanmaga:https://yanmaga.jp/comics/%E4%B9%99%E5%A5%B3%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%9A/dbdebf0a126cda90a5ec43873664aee8",
    "work": "乙女のおかず",
    "ep": "第４８話　アニマルカフェへようこそ♡",
@@ -12468,7 +12738,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12560,7 +12830,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12760,7 +13030,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -12853,7 +13123,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -12939,7 +13209,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -13087,7 +13357,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -13171,7 +13441,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -13246,7 +13516,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -13345,7 +13615,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -13424,7 +13694,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -13529,7 +13799,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -13604,7 +13874,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -13960,7 +14230,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14053,7 +14323,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14144,7 +14414,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14206,7 +14476,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14373,7 +14643,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14487,7 +14757,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14602,7 +14872,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14684,7 +14954,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14758,7 +15028,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -14814,7 +15084,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -14889,7 +15159,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-25",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14996,7 +15266,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-25",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15097,7 +15367,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-25",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15196,7 +15466,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-25",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15279,7 +15549,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-25",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15364,7 +15634,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15458,7 +15728,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15560,7 +15830,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15651,7 +15921,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15728,7 +15998,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15799,7 +16069,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15893,7 +16163,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15987,7 +16257,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16076,7 +16346,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -16169,7 +16439,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -16237,7 +16507,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16317,7 +16587,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -16398,7 +16668,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -16485,7 +16755,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -17488,7 +17758,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17588,7 +17858,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17664,7 +17934,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17762,7 +18032,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17897,7 +18167,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17997,7 +18267,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18118,7 +18388,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18191,7 +18461,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18332,7 +18602,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18398,7 +18668,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18503,7 +18773,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18584,7 +18854,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18706,7 +18976,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18820,7 +19090,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18932,7 +19202,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -19120,7 +19390,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -19365,7 +19635,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -19447,7 +19717,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -19532,7 +19802,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -19626,7 +19896,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -19720,7 +19990,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -19808,7 +20078,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -19919,7 +20189,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "listing-site",
    "conf": "reported",
    "why": "the date a listing site reported the update; the platform's own record is closed to us",
@@ -19978,1300 +20248,10 @@
     "reading_basis": "surface",
     "id": "c00287"
    }
-  },
-  {
-   "id": "earthstar:episode:12207421984388736593",
-   "work": "おみかんジュースと、レモネード",
-   "ep": "【読切】おみかんジュースと、レモネード",
-   "type": "oneshot",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-10-23",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-earthstar.com/episode/12207421984388736593",
-   "author": "漫画：海雄ロック",
-   "plat": "comic-earthstar",
-   "plat_name": "コミック アース・スター",
-   "ident": "discovery-candidate",
-   "free_from": "2026-10-22T09:00:00Z",
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "the platform's own episode list",
-   "provenance": "attested",
-   "free": true,
-   "kind": "oneshot",
-   "kind_basis": "a one-shot, complete in one instalment",
-   "preferred": "コミック アース・スター",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-22",
-   "wid": "w03447",
-   "work_en": {
-    "reading": "オミカンジュースト、レモネード",
-    "romaji": {
-     "macron": "Omikanjūsuto, Remonēdo",
-     "double": "Omikanjuusuto, Remoneedo",
-     "plain": "Omikanjusuto, Remonedo"
-    },
-    "en": "Mandarin Orange Juice and Lemonade",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Mandarin Orange Juice and Lemonade"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "カイユウ ロック",
-    "romaji": {
-     "macron": "Kaiyū Rokku",
-     "double": "Kaiyuu Rokku",
-     "plain": "Kaiyu Rokku"
-    },
-    "basis": "romaji",
-    "reading_basis": "analyser",
-    "unverified": true,
-    "id": "c02409",
-    "ruby": [
-     [
-      "漫画：",
-      null
-     ],
-     [
-      "海雄ロック",
-      null
-     ]
-    ]
-   }
-  },
-  {
-   "id": "comicfuz:81100",
-   "work": "IDOL×IDOL STORY！",
-   "ep": "SSSオフショット99",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/81100",
-   "series_url": "https://comic-fuz.com/manga/3140",
-   "author": "得能正太郎",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "work has an earlier release here",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-22",
-   "wid": "w00040",
-   "work_en": {
-    "en": "IDOLxIDOL STORY!",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "IDOL×IDOL STORY！"
-    },
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "トクノウ ショウタロウ",
-    "ruby": [
-     [
-      "得能",
-      "とくのう"
-     ],
-     [
-      "正太郎",
-      "しょうたろう"
-     ]
-    ],
-    "romaji": {
-     "macron": "Tokunō Shōtarō",
-     "double": "Tokunou Shoutarou",
-     "plain": "Tokuno Shotaro"
-    },
-    "en": "Shōtarō Tokunō",
-    "basis": "romaji",
-    "reading_basis": "community-printed",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q18458173",
-     "kind": "community-db"
-    },
-    "unverified": true,
-    "id": "c00097"
-   }
-  },
-  {
-   "id": "comicfuz:80782",
-   "work": "エイティエイトを２でわって",
-   "ep": "第４５話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/80782",
-   "series_url": "https://comic-fuz.com/manga/3423",
-   "author": "有馬",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free-timed"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "ahead_n": 1,
-   "ahead_ep": "第４６話",
-   "ahead_next_free": "2026-11-26",
-   "ahead_next_ep": "第４６話",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 45",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-22",
-   "wid": "w00112",
-   "work_en": {
-    "reading": "エイティエイト ヲ ニ デ ワッテ",
-    "ruby": [
-     [
-      "エイティエイトを",
-      null
-     ],
-     [
-      "２",
-      "に"
-     ],
-     [
-      "でわって",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Eitieito o ni de Watte",
-     "double": "Eitieito o ni de Watte",
-     "plain": "Eitieito o ni de Watte"
-    },
-    "en": "Eighty-Eight Divided by Two",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Eighty-Eight Divided by Two"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "アリマ",
-    "ruby": [
-     [
-      "有馬",
-      "ありま"
-     ]
-    ],
-    "romaji": {
-     "macron": "Arima",
-     "double": "Arima",
-     "plain": "Arima"
-    },
-    "undivided": true,
-    "en": "Arima",
-    "basis": "romaji",
-    "reading_basis": "community-printed",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q98755182",
-     "kind": "community-db"
-    },
-    "unverified": true,
-    "id": "c00209"
-   }
-  },
-  {
-   "id": "comicfuz:58956",
-   "work": "しあわせ鳥見んぐ",
-   "ep": "３巻 第３９話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/58956",
-   "series_url": "https://comic-fuz.com/manga/2474",
-   "author": "わらびもちきなこ",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free-timed"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 39",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-22",
-   "wid": "w00041",
-   "work_en": {
-    "reading": "シアワセ トリミング",
-    "ruby": [
-     [
-      "しあわせ",
-      null
-     ],
-     [
-      "鳥見",
-      "とりみ"
-     ],
-     [
-      "んぐ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Shiawase Torimingu",
-     "double": "Shiawase Torimingu",
-     "plain": "Shiawase Torimingu"
-    },
-    "en": "HAPPINESS BIRD WITHIN YOU.",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "HAPPINESS BIRD WITHIN YOU.",
-     "translated": "Happy Birding"
-    },
-    "reading_basis": "researched",
-    "en_cite": {
-     "source": "series-art",
-     "url": "https://img.comic-fuz.com/c/1CSlK_/oP.webp",
-     "kind": "platform",
-     "reviewed": "2026-08-05"
-    }
-   },
-   "author_en": {
-    "reading": "ワラビモチ キナコ",
-    "romaji": {
-     "macron": "Warabimochi Kinako",
-     "double": "Warabimochi Kinako",
-     "plain": "Warabimochi Kinako"
-    },
-    "en": "Warabimochi Kinako",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00098"
-   }
-  },
-  {
-   "id": "comicfuz:59793",
-   "work": "キルミーベイベー",
-   "ep": "１５巻 第１８９話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/59793",
-   "series_url": "https://comic-fuz.com/manga/295",
-   "author": "カヅホ",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free-timed"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "ahead_n": 8,
-   "ahead_ep": "１５巻 第１９８話",
-   "ahead_next_free": "2026-11-05",
-   "ahead_next_ep": "１５巻 第１９１話",
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 189",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-22",
-   "wid": "w01897",
-   "work_en": {
-    "reading": "キルミーベイベー",
-    "romaji": {
-     "macron": "Kirumībeibē",
-     "double": "Kirumiibeibee",
-     "plain": "Kirumibeibe"
-    },
-    "en": "Kill Me Baby",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Kill Me Baby"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "カヅホ",
-    "romaji": {
-     "macron": "Kazuho",
-     "double": "Kazuho",
-     "plain": "Kazuho"
-    },
-    "undivided": true,
-    "en": "Kazuho",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00010"
-   }
-  },
-  {
-   "id": "kadokomi:KC_0044320006400021_E",
-   "work": "悪いが私は百合じゃない",
-   "ep": "Chapter57-2 クラス旅行編②",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_004432_S/episodes/KC_0044320006400021_E",
-   "series_url": "https://comic-walker.com/detail/KC_004432_S",
-   "author": "もちオーレ",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "work has an earlier release here",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-22",
-   "wid": "w00231",
-   "work_en": {
-    "reading": "ワルイ ガ ワタシ ワ ユリ ジャ ナイ",
-    "ruby": [
-     [
-      "悪",
-      "わる"
-     ],
-     [
-      "いが",
-      null
-     ],
-     [
-      "私",
-      "わたし"
-     ],
-     [
-      "は",
-      null
-     ],
-     [
-      "百合",
-      "ゆり"
-     ],
-     [
-      "じゃない",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Warui ga Watashi wa Yuri Ja Nai",
-     "double": "Warui ga Watashi wa Yuri Ja Nai",
-     "plain": "Warui ga Watashi wa Yuri Ja Nai"
-    },
-    "en": "Sorry, but I'm Not Yuri",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Sorry, but I'm Not Yuri"
-    },
-    "reading_basis": "back-converted",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q116030695",
-     "kind": "community-db"
-    },
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "モチ オーレ",
-    "romaji": {
-     "macron": "Mochi Ōre",
-     "double": "Mochi Oore",
-     "plain": "Mochi Ore"
-    },
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00342"
-   }
-  },
-  {
-   "id": "kadokomi:KC_0044320006400011_E",
-   "work": "悪いが私は百合じゃない",
-   "ep": "Chapter57-1 クラス旅行編②",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_004432_S/episodes/KC_0044320006400011_E",
-   "series_url": "https://comic-walker.com/detail/KC_004432_S",
-   "author": "もちオーレ",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "work has an earlier release here",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-22",
-   "wid": "w00231",
-   "work_en": {
-    "reading": "ワルイ ガ ワタシ ワ ユリ ジャ ナイ",
-    "ruby": [
-     [
-      "悪",
-      "わる"
-     ],
-     [
-      "いが",
-      null
-     ],
-     [
-      "私",
-      "わたし"
-     ],
-     [
-      "は",
-      null
-     ],
-     [
-      "百合",
-      "ゆり"
-     ],
-     [
-      "じゃない",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Warui ga Watashi wa Yuri Ja Nai",
-     "double": "Warui ga Watashi wa Yuri Ja Nai",
-     "plain": "Warui ga Watashi wa Yuri Ja Nai"
-    },
-    "en": "Sorry, but I'm Not Yuri",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Sorry, but I'm Not Yuri"
-    },
-    "reading_basis": "back-converted",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q116030695",
-     "kind": "community-db"
-    },
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "モチ オーレ",
-    "romaji": {
-     "macron": "Mochi Ōre",
-     "double": "Mochi Oore",
-     "plain": "Mochi Ore"
-    },
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00342"
-   }
-  },
-  {
-   "id": "kadokomi:KC_0060920003300011_E",
-   "work": "拝啓、在りし日に咲く花たちへ",
-   "ep": "第21話前編",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_006092_S/episodes/KC_0060920003300011_E",
-   "series_url": "https://comic-walker.com/detail/KC_006092_S",
-   "author": "五十嵐純",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 21",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [
-    "ニコニコ漫画"
-   ],
-   "is_preferred": true,
-   "feed_date": "2026-10-22",
-   "wid": "w00113",
-   "work_en": {
-    "reading": "ハイケイ、 アリシ ヒ ニ サク ハナタチ エ",
-    "ruby": [
-     [
-      "拝啓",
-      "はいけい"
-     ],
-     [
-      "、",
-      null
-     ],
-     [
-      "在",
-      "あ"
-     ],
-     [
-      "りし",
-      null
-     ],
-     [
-      "日",
-      "ひ"
-     ],
-     [
-      "に",
-      null
-     ],
-     [
-      "咲",
-      "さ"
-     ],
-     [
-      "く",
-      null
-     ],
-     [
-      "花",
-      "はな"
-     ],
-     [
-      "たちへ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Haikei, Arishi Hi ni Saku Hanatachi e",
-     "double": "Haikei, Arishi Hi ni Saku Hanatachi e",
-     "plain": "Haikei, Arishi Hi ni Saku Hanatachi e"
-    },
-    "en": "Dear Flowers That Bloom in Days Gone By",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Dear Flowers That Bloom in Days Gone By"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "イガラシ ジュン",
-    "ruby": [
-     [
-      "五十嵐",
-      "いがらし"
-     ],
-     [
-      "純",
-      "じゅん"
-     ]
-    ],
-    "romaji": {
-     "macron": "Igarashi Jun",
-     "double": "Igarashi Jun",
-     "plain": "Igarashi Jun"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034603991",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00210"
-   }
-  },
-  {
-   "id": "kadokomi:KC_0079520001000011_E",
-   "work": "魔法少女イナバ",
-   "ep": "第9話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_007952_S/episodes/KC_0079520001000011_E",
-   "series_url": "https://comic-walker.com/detail/KC_007952_S",
-   "author": "猫にゃん",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 9",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [
-    "ニコニコ漫画"
-   ],
-   "is_preferred": true,
-   "feed_date": "2026-10-22",
-   "wid": "w02411",
-   "work_en": {
-    "reading": "マホウ ショウジョ イナバ",
-    "ruby": [
-     [
-      "魔法",
-      "まほう"
-     ],
-     [
-      "少女",
-      "しょうじょ"
-     ],
-     [
-      "イナバ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Mahō Shōjo Inaba",
-     "double": "Mahou Shoujo Inaba",
-     "plain": "Maho Shojo Inaba"
-    },
-    "en": "Magical Girl Inaba",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Magical Girl Inaba"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ネコニャン",
-    "ruby": [
-     [
-      "猫",
-      "ねこ"
-     ],
-     [
-      "にゃん",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Nekonyan",
-     "double": "Nekonyan",
-     "plain": "Nekonyan"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "MADB",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1060316",
-     "kind": "national-library",
-     "reviewed": "2026-08-06"
-    },
-    "id": "c00259"
-   }
-  },
-  {
-   "id": "magapoke:https://pocket.shonenmagazine.com/title/03349/episode/445525",
-   "work": "ぎるてぃらいぶらり",
-   "ep": "【第4話】言いなり",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "platform-stated",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://pocket.shonenmagazine.com/title/03349/episode/445525",
-   "author": "閉伊川広輔",
-   "plat": "magapoke",
-   "plat_name": "マガポケ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 4",
-   "kind_inferred": true,
-   "preferred": "マガポケ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-22",
-   "wid": "w03309",
-   "work_en": {
-    "reading": "ギルティ ライブラリ",
-    "romaji": {
-     "macron": "Giruti Raiburari",
-     "double": "Giruti Raiburari",
-     "plain": "Giruti Raiburari"
-    },
-    "en": "Guilty Library",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Guilty Library"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "ヘイイガワコウスケ",
-    "romaji": {
-     "macron": "Heiigawakōsuke",
-     "double": "Heiigawakousuke",
-     "plain": "Heiigawakosuke"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "analyser",
-    "unverified": true,
-    "id": "c02342"
-   }
-  },
-  {
-   "id": "nicovideo:67280:2026-10-22",
-   "work": "押しかけ女房、コドモ付き！",
-   "ep": "第20話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1160171",
-   "author": "とめきち",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 20, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 8,
-   "free_episodes": 8,
-   "started": "2024-03-28",
-   "work_level": true,
-   "channel": null,
-   "feed_date": "2026-10-22",
-   "wid": "w03222",
-   "work_en": {
-    "reading": "オシカケ ニョウボウ、 コドモ ツキ !",
-    "ruby": [
-     [
-      "押",
-      "お"
-     ],
-     [
-      "しかけ",
-      null
-     ],
-     [
-      "女房",
-      "にょうぼう"
-     ],
-     [
-      "、コドモ",
-      null
-     ],
-     [
-      "付",
-      "つ"
-     ],
-     [
-      "き！",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Oshikake Nyōbō, Kodomo Tsuki !",
-     "double": "Oshikake Nyoubou, Kodomo Tsuki !",
-     "plain": "Oshikake Nyobo, Kodomo Tsuki !"
-    },
-    "en": "An Uninvited Wife, Child Included!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "An Uninvited Wife, Child Included!"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "トメキチ",
-    "romaji": {
-     "macron": "Tomekichi",
-     "double": "Tomekichi",
-     "plain": "Tomekichi"
-    },
-    "undivided": true,
-    "en": "Tomekichi",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00705"
-   }
-  },
-  {
-   "id": "nicovideo:74044:2026-10-22",
-   "work": "桃色カンパネラ",
-   "ep": "第14話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1160214",
-   "author": "リンリココ",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 14, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 7,
-   "free_episodes": 7,
-   "started": "2025-11-27",
-   "work_level": true,
-   "channel": null,
-   "feed_date": "2026-10-22",
-   "wid": "w03224",
-   "work_en": {
-    "reading": "モモイロ カンパネラ",
-    "ruby": [
-     [
-      "桃色",
-      "ももいろ"
-     ],
-     [
-      "カンパネラ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Momoiro Kanpanera",
-     "double": "Momoiro Kanpanera",
-     "plain": "Momoiro Kanpanera"
-    },
-    "en": "Pink Campanella",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Pink Campanella"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "リンリココ",
-    "romaji": {
-     "macron": "Rinrikoko",
-     "double": "Rinrikoko",
-     "plain": "Rinrikoko"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c02260"
-   }
-  },
-  {
-   "id": "nicovideo:65870:2026-10-22",
-   "work": "魔法少女201",
-   "ep": "第58話①",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1168066",
-   "author": "むちゃ",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 58",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 9,
-   "free_episodes": 9,
-   "started": "2023-10-19",
-   "work_level": true,
-   "syndicated": true,
-   "origin_note": "carried on ニコニコ漫画; originates on 少年ジャンプ+, which is where it should be read",
-   "channel": null,
-   "feed_date": "2026-10-22",
-   "wid": "w00716",
-   "work_en": {
-    "reading": "マホウ ショウジョ 201",
-    "ruby": [
-     [
-      "魔法",
-      "まほう"
-     ],
-     [
-      "少女",
-      "しょうじょ"
-     ],
-     [
-      "201",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Mahō Shōjo 201",
-     "double": "Mahou Shoujo 201",
-     "plain": "Maho Shojo 201"
-    },
-    "en": "Magical Girl 201",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Magical Girl 201"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ムチャ",
-    "romaji": {
-     "macron": "Mucha",
-     "double": "Mucha",
-     "plain": "Mucha"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00828"
-   }
-  },
-  {
-   "id": "nicovideo:69333:2026-10-22",
-   "work": "魔女まじょS-WITCH",
-   "ep": "第21話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1160192",
-   "author": "海老川ケイ",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 21, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 4,
-   "free_episodes": 4,
-   "started": "2024-10-24",
-   "work_level": true,
-   "channel": null,
-   "feed_date": "2026-10-22",
-   "wid": "w03230",
-   "work_en": {
-    "reading": "マジョ マジョ S-WITCH",
-    "ruby": [
-     [
-      "魔女",
-      "まじょ"
-     ],
-     [
-      "まじょ",
-      null
-     ],
-     [
-      "S",
-      null
-     ],
-     [
-      "-",
-      null
-     ],
-     [
-      "WITCH",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Majo Majo S-WITCH",
-     "double": "Majo Majo S-WITCH",
-     "plain": "Majo Majo S-WITCH"
-    },
-    "en": "Witch, Witch, S-WITCH",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Witch, Witch, S-WITCH"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "エビガワ ケイ",
-    "ruby": [
-     [
-      "海老川",
-      "えびがわ"
-     ],
-     [
-      "ケイ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Ebigawa Kei",
-     "double": "Ebigawa Kei",
-     "plain": "Ebigawa Kei"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "MADB",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1087463",
-     "kind": "national-library",
-     "reviewed": "2026-08-06"
-    },
-    "id": "c01220"
-   }
-  },
-  {
-   "id": "nicovideo:73172:2026-10-22",
-   "work": "愛焦がれキャラメリゼ",
-   "ep": "第18話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-22",
-   "seen": "2026-11-04",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1159960",
-   "author": "杉谷エコ",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 18, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 6,
-   "free_episodes": 6,
-   "started": "2025-07-24",
-   "work_level": true,
-   "channel": null,
-   "feed_date": "2026-10-22",
-   "wid": "w02729",
-   "work_en": {
-    "reading": "マナ コガレ キャラメリゼ",
-    "ruby": [
-     [
-      "愛",
-      "まな"
-     ],
-     [
-      "焦",
-      "こ"
-     ],
-     [
-      "がれキャラメリゼ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Mana Kogare Kyaramerize",
-     "double": "Mana Kogare Kyaramerize",
-     "plain": "Mana Kogare Kyaramerize"
-    },
-    "en": "Love-Scorched Caramelisation",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Love-Scorched Caramelisation"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "スギタニ エコ",
-    "ruby": [
-     [
-      "杉谷",
-      "すぎたに"
-     ],
-     [
-      "エコ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Sugitani Eko",
-     "double": "Sugitani Eko",
-     "plain": "Sugitani Eko"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "MADB",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1111220",
-     "kind": "national-library",
-     "reviewed": "2026-08-06"
-    },
-    "id": "c01227"
-   }
   }
  ],
  "window_days": 14,
- "from": "2026-10-22",
- "to": "2026-11-04",
- "generated": "2026-11-04"
+ "from": "2026-10-23",
+ "to": "2026-11-05",
+ "generated": "2026-11-05"
 }
