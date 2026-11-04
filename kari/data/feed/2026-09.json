@@ -20,11 +20,11 @@
    "ident": "discovery-candidate",
    "free_from": null,
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "access_basis": "the platform's own episode list",
    "provenance": "attested",
-   "free": true,
+   "free": false,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 340",
    "kind_inferred": true,
@@ -7701,89 +7701,6 @@
    }
   },
   {
-   "id": "kadokomi:KC_0086580000700011_E",
-   "work": "月はタピオカみたいに",
-   "ep": "第6話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-09-27",
-   "seen": "2026-11-04",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_008658_S/episodes/KC_0086580000700011_E",
-   "series_url": "https://comic-walker.com/detail/KC_008658_S",
-   "author": "小畠泪, 今安",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 6, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-09-27",
-   "wid": "w00085",
-   "work_en": {
-    "reading": "ツキ ワ タピオカ ミタイニ",
-    "ruby": [
-     [
-      "月",
-      "つき"
-     ],
-     [
-      "はタピオカみたいに",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Tsuki wa Tapioka Mitaini",
-     "double": "Tsuki wa Tapioka Mitaini",
-     "plain": "Tsuki wa Tapioka Mitaini"
-    },
-    "en": "The Moon, Like Tapioca",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Moon, Like Tapioca"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "オバタ ルイ, ジンアン",
-    "ruby": [
-     [
-      "小畠泪",
-      "おばたるい"
-     ],
-     [
-      ", ",
-      null
-     ],
-     [
-      "今安",
-      "じんあん"
-     ]
-    ],
-    "romaji": {
-     "macron": "Obata Rui, Jin'an",
-     "double": "Obata Rui, Jin'an",
-     "plain": "Obata Rui, Jin'an"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji"
-   }
-  },
-  {
    "id": "kadokomi:KC_0119270000600011_E",
    "work": "残光再撮",
    "ep": "第5話",
@@ -8429,6 +8346,89 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00504"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0086580000700011_E",
+   "work": "月はタピオカみたいに",
+   "ep": "第6話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-27",
+   "seen": "2026-11-04",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_008658_S/episodes/KC_0086580000700011_E",
+   "series_url": "https://comic-walker.com/detail/KC_008658_S",
+   "author": "小畠泪, 今安",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 6, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-09-27",
+   "wid": "w00085",
+   "work_en": {
+    "reading": "ツキ ワ タピオカ ミタイニ",
+    "ruby": [
+     [
+      "月",
+      "つき"
+     ],
+     [
+      "はタピオカみたいに",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Tsuki wa Tapioka Mitaini",
+     "double": "Tsuki wa Tapioka Mitaini",
+     "plain": "Tsuki wa Tapioka Mitaini"
+    },
+    "en": "The Moon, Like Tapioca",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Moon, Like Tapioca"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "オバタ ルイ, ジンアン",
+    "ruby": [
+     [
+      "小畠泪",
+      "おばたるい"
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "今安",
+      "じんあん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Obata Rui, Jin'an",
+     "double": "Obata Rui, Jin'an",
+     "plain": "Obata Rui, Jin'an"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
    }
   },
   {
@@ -41303,13 +41303,13 @@
    "plat": "comic-action",
    "plat_name": "webアクション",
    "ident": "discovery-candidate",
-   "free_from": "2026-10-06",
+   "free_from": null,
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "access_basis": "the platform's own episode list",
    "provenance": "attested",
-   "free": true,
+   "free": false,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 192",
    "kind_inferred": true,
