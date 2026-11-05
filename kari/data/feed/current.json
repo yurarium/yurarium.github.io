@@ -1,6 +1,90 @@
 {
  "releases": [
   {
+   "id": "comicdays:episode:12207421983484134468",
+   "work": "新刊１００億冊ください",
+   "ep": "３８冊目：萌えるには本棚ひとつあればいい",
+   "type": "unclassified",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-11-05",
+   "seen": "2026-11-05",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421983484134468",
+   "author": "破賀ミチル",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "コミックDAYS",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-05",
+   "wid": "w00167",
+   "work_en": {
+    "reading": "シンカン ヒャクオクサツ クダサイ",
+    "ruby": [
+     [
+      "新刊100億冊",
+      "しんかんひゃくおくさつ"
+     ],
+     [
+      "ください",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Shinkan Hyakuokusatsu Kudasai",
+     "double": "Shinkan Hyakuokusatsu Kudasai",
+     "plain": "Shinkan Hyakuokusatsu Kudasai"
+    },
+    "en": "Please Give Me 10 Billion Copies of the New Book",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Please Give Me 10 Billion Copies of the New Book"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "ハガ ミチル",
+    "ruby": [
+     [
+      "破賀",
+      "はが"
+     ],
+     [
+      "ミチル",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Haga Michiru",
+     "double": "Haga Michiru",
+     "plain": "Haga Michiru"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034363229",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00267"
+   }
+  },
+  {
    "id": "tonarino_yj:episode:12207421984467777208",
    "work": "ナイーブ・リザーブド",
    "ep": "ナイーブ・リザーブド",
@@ -55,6 +139,107 @@
     },
     "basis": "romaji",
     "reading_basis": "analyser",
+    "unverified": true,
+    "id": "c02462"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0215760000200011_E",
+   "work": "いばら姫とおやすみ。",
+   "ep": "第1話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-05",
+   "seen": "2026-11-05",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_021576_S/episodes/KC_0215760000200011_E",
+   "series_url": "https://comic-walker.com/detail/KC_021576_S",
+   "author": "深水紅茶, 千野なこ, 椎名くろ",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-series",
+   "kind_basis": "episode numbered 1",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-05",
+   "wid": "w03527",
+   "work_en": {
+    "reading": "イバラ ヒメ ト オヤスミ。",
+    "ruby": [
+     [
+      "いばら",
+      null
+     ],
+     [
+      "姫",
+      "ひめ"
+     ],
+     [
+      "とおやすみ。",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Ibara Hime to Oyasumi.",
+     "double": "Ibara Hime to Oyasumi.",
+     "plain": "Ibara Hime to Oyasumi."
+    },
+    "en": "Good Night with Briar Rose",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Good Night with Briar Rose"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "フカミ コウチャ, チノ ナコ, シイナ クロ",
+    "ruby": [
+     [
+      "深水紅茶",
+      "ふかみこうちゃ"
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "千野",
+      "ちの"
+     ],
+     [
+      "なこ",
+      null
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "椎名くろ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Fukami Kōcha, Chino Nako, Shiina Kuro",
+     "double": "Fukami Koucha, Chino Nako, Shiina Kuro",
+     "plain": "Fukami Kocha, Chino Nako, Shiina Kuro"
+    },
+    "reading_basis": "analyser",
+    "basis": "romaji",
     "unverified": true
    }
   },
@@ -118,6 +303,414 @@
     "reading_basis": "analyser",
     "unverified": true,
     "id": "c02342"
+   }
+  },
+  {
+   "id": "reported:kimicomi:https://kimicomi.com/series/330f3ad1270c8:2026-11-05",
+   "work": "見えてますよ! 愛沢さん",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-05",
+   "seen": "2026-11-05",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://kimicomi.com/series/330f3ad1270c8",
+   "author": "棘尾どろしー",
+   "author_basis": "carried from another record of the same work",
+   "plat": "kimicomi",
+   "plat_name": "キミコミ",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "キミコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-05",
+   "wid": "w00114",
+   "work_en": {
+    "reading": "ミエテマス ヨ ! アイザワサン",
+    "ruby": [
+     [
+      "見",
+      "み"
+     ],
+     [
+      "えてますよ! ",
+      null
+     ],
+     [
+      "愛沢",
+      "あいざわ"
+     ],
+     [
+      "さん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Mietemasu Yo ! Aizawasan",
+     "double": "Mietemasu Yo ! Aizawasan",
+     "plain": "Mietemasu Yo ! Aizawasan"
+    },
+    "en": "I See You, Aizawa-san!",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "I See You, Aizawa-san!",
+     "translated": "It's Showing, Aizawa-san!"
+    },
+    "reading_basis": "researched",
+    "en_cite": {
+     "source": "sevenseasentertainment.com",
+     "url": "https://sevenseasentertainment.com/series/i-see-you-aizawa-san/",
+     "kind": "licensor",
+     "reviewed": "2026-08-05"
+    }
+   },
+   "author_en": {
+    "reading": "オドロオ ドロシー",
+    "ruby": [
+     [
+      "棘尾",
+      "おどろお"
+     ],
+     [
+      "どろしー",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Odorō Doroshī",
+     "double": "Odoroo Doroshii",
+     "plain": "Odoro Doroshi"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033947041",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00211"
+   }
+  },
+  {
+   "id": "reported:youngchampion:https://youngchampion.jp/series/81d9b296d7bc7:2026-11-05",
+   "work": "スカベンジャーズアナザースカイ",
+   "ep": "",
+   "type": "unclassified",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-05",
+   "seen": "2026-11-05",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://youngchampion.jp/series/81d9b296d7bc7",
+   "author": "古部亮",
+   "author_basis": "carried from another record of the same work",
+   "plat": "youngchampion",
+   "plat_name": "ヤングチャンピオン",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "ヤングチャンピオン",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-05",
+   "wid": "w00118",
+   "work_en": {
+    "reading": "スカベンジャーズアナザースカイ",
+    "romaji": {
+     "macron": "Sukabenjāzuanazāsukai",
+     "double": "Sukabenjaazuanazaasukai",
+     "plain": "Sukabenjazuanazasukai"
+    },
+    "translation_refused": "The kana are the three English words the publisher prints in capitals, so ours is the attributed name re-typeset.",
+    "en": "SCAVENGERS ANOTHER SKY",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "SCAVENGERS ANOTHER SKY"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "mediaarts-db",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/madb-t-0b0ad8cae7a4",
+     "kind": "bibliography",
+     "reviewed": "2026-08-07"
+    }
+   },
+   "author_en": {
+    "reading": "フルベ リョウ",
+    "ruby": [
+     [
+      "古部亮",
+      "ふるべりょう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Furube Ryō",
+     "double": "Furube Ryou",
+     "plain": "Furube Ryo"
+    },
+    "en": "FURUBE Ryo",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034666202",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00214"
+   }
+  },
+  {
+   "id": "reported:takecomic:https://takecomic.jp/series/86a4f1e41d627:2026-11-05",
+   "work": "シュナイダーラリー",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-05",
+   "seen": "2026-11-05",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://takecomic.jp/series/86a4f1e41d627",
+   "author": "シャチ,かみねし,エストレーヤ★彡",
+   "author_basis": "carried from another record of the same work",
+   "plat": "takecomic",
+   "plat_name": "竹コミ",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "竹コミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-05",
+   "wid": "w00316",
+   "work_en": {
+    "reading": "シュナイダーラリー",
+    "romaji": {
+     "macron": "Shunaidārarī",
+     "double": "Shunaidaararii",
+     "plain": "Shunaidarari"
+    },
+    "en": "Schneider Rally",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Schneider Rally"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "シャチ, カミネシ, エストレーヤ★サン",
+    "ruby": [
+     [
+      "シャチ",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "かみねし",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "エストレーヤ★彡",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Shachi, Kamineshi, Esutorēya★San",
+     "double": "Shachi, Kamineshi, Esutoreeya★San",
+     "plain": "Shachi, Kamineshi, Esutoreya★San"
+    },
+    "reading_basis": "analyser",
+    "basis": "romaji",
+    "unverified": true
+   }
+  },
+  {
+   "id": "reported:bigcomics:https://bigcomics.jp/series/cad403cdddf52:2026-11-05",
+   "work": "あくまで!アットホームな職場です。",
+   "ep": "",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-05",
+   "seen": "2026-11-05",
+   "basis": "listing-site",
+   "conf": "reported",
+   "why": "the date a listing site reported the update; the platform's own record is closed to us",
+   "moved": "",
+   "url": "https://bigcomics.jp/series/cad403cdddf52",
+   "author": "たるはる",
+   "author_basis": "carried from another record of the same work",
+   "plat": "bigcomics",
+   "plat_name": "ビッコミ",
+   "ident": "comparator-claim",
+   "free_from": null,
+   "provenance": "claimed",
+   "claim_source": "webcomics.jp",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "ビッコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-05",
+   "wid": "w00079",
+   "work_en": {
+    "reading": "アクマデ ! アットホームナ ショクバデス。",
+    "ruby": [
+     [
+      "あくまで!アットホームな",
+      null
+     ],
+     [
+      "職場",
+      "しょくば"
+     ],
+     [
+      "です。",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Akumade ! Attohōmuna Shokubadesu.",
+     "double": "Akumade ! Attohoomuna Shokubadesu.",
+     "plain": "Akumade ! Attohomuna Shokubadesu."
+    },
+    "en": "We're a Demonically Friendly Workplace!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "We're a Demonically Friendly Workplace!"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "タルハル",
+    "romaji": {
+     "macron": "Taruharu",
+     "double": "Taruharu",
+     "plain": "Taruharu"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00156"
+   }
+  },
+  {
+   "id": "alphapolis:https://www.alphapolis.co.jp/manga/official/791000435:５回目の人生、転生したら死にそうな孤児でした",
+   "work": "君の初恋を私は知らない",
+   "ep": "５回目の人生、転生したら死にそうな孤児でした",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-05",
+   "seen": "2026-11-05",
+   "basis": "heuristic",
+   "conf": "low",
+   "why": "date matched as a pattern in the page, not stated by the platform",
+   "moved": "",
+   "url": "https://www.alphapolis.co.jp/manga/official/791000435",
+   "author": "",
+   "plat": "www-alphapolis-co-jp",
+   "plat_name": "アルファポリス",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 5, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "アルファポリス",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-05",
+   "wid": "w03257",
+   "work_en": {
+    "reading": "キミ ノ ハツコイ ヲ ワタシ ワ シラナイ",
+    "ruby": [
+     [
+      "君",
+      "きみ"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "初恋",
+      "はつこい"
+     ],
+     [
+      "を",
+      null
+     ],
+     [
+      "私",
+      "わたし"
+     ],
+     [
+      "は",
+      null
+     ],
+     [
+      "知",
+      "し"
+     ],
+     [
+      "らない",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kimi no Hatsukoi o Watashi wa Shiranai",
+     "double": "Kimi no Hatsukoi o Watashi wa Shiranai",
+     "plain": "Kimi no Hatsukoi o Watashi wa Shiranai"
+    },
+    "en": "I Don't Know Your First Love",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "I Don't Know Your First Love"
+    },
+    "reading_basis": "analyser"
    }
   },
   {
@@ -1560,83 +2153,6 @@
    }
   },
   {
-   "id": "reported:youngchampion:https://youngchampion.jp/series/81d9b296d7bc7:2026-11-04",
-   "work": "スカベンジャーズアナザースカイ",
-   "ep": "",
-   "type": "unclassified",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-04",
-   "seen": "2026-11-05",
-   "basis": "listing-site",
-   "conf": "reported",
-   "why": "the date a listing site reported the update; the platform's own record is closed to us",
-   "moved": "",
-   "url": "https://youngchampion.jp/series/81d9b296d7bc7",
-   "author": "古部亮",
-   "author_basis": "carried from another record of the same work",
-   "plat": "youngchampion",
-   "plat_name": "ヤングチャンピオン",
-   "ident": "comparator-claim",
-   "free_from": null,
-   "provenance": "claimed",
-   "claim_source": "webcomics.jp",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "work has an earlier release here",
-   "kind_inferred": true,
-   "preferred": "ヤングチャンピオン",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-11-04",
-   "wid": "w00118",
-   "work_en": {
-    "reading": "スカベンジャーズアナザースカイ",
-    "romaji": {
-     "macron": "Sukabenjāzuanazāsukai",
-     "double": "Sukabenjaazuanazaasukai",
-     "plain": "Sukabenjazuanazasukai"
-    },
-    "translation_refused": "The kana are the three English words the publisher prints in capitals, so ours is the attributed name re-typeset.",
-    "en": "SCAVENGERS ANOTHER SKY",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "SCAVENGERS ANOTHER SKY"
-    },
-    "reading_basis": "surface",
-    "en_cite": {
-     "source": "mediaarts-db",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/madb-t-0b0ad8cae7a4",
-     "kind": "bibliography",
-     "reviewed": "2026-08-07"
-    }
-   },
-   "author_en": {
-    "reading": "フルベ リョウ",
-    "ruby": [
-     [
-      "古部亮",
-      "ふるべりょう"
-     ]
-    ],
-    "romaji": {
-     "macron": "Furube Ryō",
-     "double": "Furube Ryou",
-     "plain": "Furube Ryo"
-    },
-    "en": "FURUBE Ryo",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034666202",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00214"
-   }
-  },
-  {
    "id": "reported:championcross:https://championcross.jp/series/f30e2f58bbbdf:2026-11-04",
    "work": "ガールズ×ヴァンパイア",
    "ep": "",
@@ -1788,79 +2304,6 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c01514"
-   }
-  },
-  {
-   "id": "reported:bigcomics:https://bigcomics.jp/series/cad403cdddf52:2026-11-04",
-   "work": "あくまで!アットホームな職場です。",
-   "ep": "",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-04",
-   "seen": "2026-11-05",
-   "basis": "listing-site",
-   "conf": "reported",
-   "why": "the date a listing site reported the update; the platform's own record is closed to us",
-   "moved": "",
-   "url": "https://bigcomics.jp/series/cad403cdddf52",
-   "author": "たるはる",
-   "author_basis": "carried from another record of the same work",
-   "plat": "bigcomics",
-   "plat_name": "ビッコミ",
-   "ident": "comparator-claim",
-   "free_from": null,
-   "provenance": "claimed",
-   "claim_source": "webcomics.jp",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "work has an earlier release here",
-   "kind_inferred": true,
-   "preferred": "ビッコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-11-04",
-   "wid": "w00079",
-   "work_en": {
-    "reading": "アクマデ ! アットホームナ ショクバデス。",
-    "ruby": [
-     [
-      "あくまで!アットホームな",
-      null
-     ],
-     [
-      "職場",
-      "しょくば"
-     ],
-     [
-      "です。",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Akumade ! Attohōmuna Shokubadesu.",
-     "double": "Akumade ! Attohoomuna Shokubadesu.",
-     "plain": "Akumade ! Attohomuna Shokubadesu."
-    },
-    "en": "We're a Demonically Friendly Workplace!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "We're a Demonically Friendly Workplace!"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "タルハル",
-    "romaji": {
-     "macron": "Taruharu",
-     "double": "Taruharu",
-     "plain": "Taruharu"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00156"
    }
   },
   {
@@ -7266,7 +7709,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -19298,7 +19741,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-04",
+   "seen": "2026-11-05",
    "basis": "stated",
    "conf": "reported",
    "why": "",

@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-04T21:55:08+00:00",
+ "generated": "2026-11-05T11:44:29+00:00",
  "since_last": {
-  "at": "2026-11-04T14:52:50+00:00",
+  "at": "2026-11-04T21:55:08+00:00",
   "statistics": {
    "works": 1,
    "with_identifier": 1,
-   "chapters": 3
+   "chapters": 4
   }
  },
  "means": {
@@ -29,21 +29,21 @@
  },
  "last_run": {
   "at": "2026-11-05",
-  "releases": 1056,
+  "releases": 1062,
   "works": 2762,
   "platforms": 19,
-  "series_rows": 3321,
-  "assembled": 3322,
+  "series_rows": 3322,
+  "assembled": 3323,
   "awaiting_identifier": 1,
   "identification": {
-   "comparator-claim": 22,
-   "discovery-candidate": 741,
+   "comparator-claim": 25,
+   "discovery-candidate": 743,
    "known-work-match": 33,
-   "platform-genre": 260
+   "platform-genre": 261
   },
   "collapsed": {
    "duplicate_chapters": 246,
-   "resolver": 123,
+   "resolver": 124,
    "samples": 0,
    "thin_sitemap": 13
   }
@@ -519,8 +519,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 535,
-    "value": 535,
+    "budget": 536,
+    "value": 536,
     "measure": "arrival"
    },
    {
@@ -561,8 +561,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 18,
-    "value": 18,
+    "budget": 19,
+    "value": 19,
     "measure": "arrival"
    },
    {
@@ -617,8 +617,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1227,
-    "value": 1227,
+    "budget": 1228,
+    "value": 1228,
     "measure": "arrival"
    },
    {
@@ -936,7 +936,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 41,
+    "consecutive": 42,
     "failing_since": "2026-10-16",
     "days": 20,
     "last_ok": null,
@@ -946,7 +946,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 41,
+    "consecutive": 42,
     "failing_since": "2026-10-16",
     "days": 20,
     "last_ok": null,
@@ -956,7 +956,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 41,
+    "consecutive": 42,
     "failing_since": "2026-10-16",
     "days": 20,
     "last_ok": null,
@@ -966,7 +966,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 24,
+    "consecutive": 25,
     "failing_since": "2026-10-24",
     "days": 12,
     "last_ok": "2026-10-23",
@@ -976,25 +976,15 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 20,
+    "consecutive": 21,
     "failing_since": "2026-10-26",
     "days": 10,
     "last_ok": "2026-10-25",
     "error": "17 file(s) past their age, e.g. data/source/webpages/asacomi.yaml dated 2026-10-22",
     "issue": true
-   },
-   {
-    "source": "stale:stage-a:gigaviewer-platform-feeds",
-    "stage": "freshness",
-    "consecutive": 9,
-    "failing_since": "2026-11-01",
-    "days": 4,
-    "last_ok": "2026-10-31",
-    "error": "2 file(s) past their age, e.g. data/source/gigaviewer/ourfeel-series.yaml dated 2026-10-28",
-    "issue": true
    }
   ],
-  "healthy": 163,
+  "healthy": 165,
   "threshold": 3
  },
  "connectors": [
@@ -1113,8 +1103,8 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1692,
-   "rows": 17673,
+   "works": 1693,
+   "rows": 17674,
    "retrieved": "2026-11-05",
    "age_days": 0,
    "in_scope": true,
@@ -1127,14 +1117,14 @@
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 1018,
-   "rows": 7838,
+   "works": 1020,
+   "rows": 7840,
    "retrieved": "2026-11-05",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7142,
-   "well_formed": 6690,
+   "checked_rows": 7143,
+   "well_formed": 6691,
    "malformed": 452,
    "drop": null
   },
@@ -1170,13 +1160,13 @@
    "source": "webpages",
    "files": 50,
    "works": 658,
-   "rows": 9474,
+   "rows": 9476,
    "retrieved": "2026-11-05",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9420,
-   "well_formed": 9420,
+   "checked_rows": 9422,
+   "well_formed": 9422,
    "malformed": 0,
    "drop": null
   }
@@ -1245,13 +1235,13 @@
     "renderings with nothing to show": 0,
     "kana names with no stated division": 251,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 535,
+    "author readings no source states": 536,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 18,
+    "credit fields an identifier does not cover": 19,
     "credit pages listing a work that does not name them": 12,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1259,7 +1249,7 @@
     "ruby asserting a reading per character": 224,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 187,
-    "titles read by a machine, unmarked": 1227,
+    "titles read by a machine, unmarked": 1228,
     "uncertain readings": 63,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1308,18 +1298,18 @@
   }
  ],
  "statistics": {
-  "works": 3321,
+  "works": 3322,
   "states": {
    "print": 1790,
    "oneshot": 501,
    "completed": 498,
-   "active": 288,
-   "dormant": 146,
+   "active": 290,
+   "dormant": 145,
    "slow": 53,
    "unknown": 45
   },
   "english_basis": {
-   "translated": 2943,
+   "translated": 2944,
    "official-jp": 242,
    "licensed": 108,
    "romaji": 27,
@@ -1328,8 +1318,8 @@
   "print_works": 2640,
   "print_only": 1790,
   "volumes": 6579,
-  "with_identifier": 3321,
-  "chapters": 31081,
+  "with_identifier": 3322,
+  "chapters": 31085,
   "delivery_dated": 1108
  }
 }
