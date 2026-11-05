@@ -555,8 +555,12 @@ def budget_full_width_forms_in_english_renderings(ctx):
         out = _interface(ctx).labels(calls)
     except interface.Unavailable:
         return UNMEASURED    # this could not be measured; see UNMEASURED
-    return sum(1 for (_s, _v), shown in zip(about, out)
-               if fw.search(shown) and not interface.KANA_KANJI.search(shown))
+    # DISTINCT TITLES, NOT PLACES SHOWN. It counted every rendering, so a correct title moved it
+    # each time the work published: on 2026-11-06 IDOL×IDOL STORY！ went from 27 renderings to 29
+    # with two new chapters, the budget of 44 became 45, and the night's deploy stopped. Nothing a
+    # reader could read differently had changed. A new title in full width still raises it.
+    return len({shown for (_s, _v), shown in zip(about, out)
+                if fw.search(shown) and not interface.KANA_KANJI.search(shown)})
 
 
 
@@ -1283,7 +1287,10 @@ RECORDED = {
     # name, two nights of readers served stale files by a number that cannot fall for the reason it
     # names.
     "renderings resting on a mechanical romanisation": 809,
-    "full-width forms in English renderings": 44,
+    # 44 RENDERINGS BECAME 5 TITLES ON 2026-11-06, when the count changed from places shown to
+    # distinct titles: 2×2＝SHINOBUDEN+, IDOL×IDOL STORY！, maimaimaimai mind！, Rouge　caprice and
+    # YuRe：Log, each the work's own published form.
+    "full-width forms in English renderings": 5,
     "imprint names the interface disagrees with": 0,
     "publisher keys the interface misses": 0,
     # 24 -> 25 ON 2026-08-15. The population is a name whose division the store keeps and whose
