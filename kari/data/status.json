@@ -1,12 +1,15 @@
 {
- "generated": "2026-11-05T18:46:11+00:00",
+ "generated": "2026-11-05T22:04:57+00:00",
  "since_last": {
-  "at": "2026-11-05T11:44:29+00:00",
+  "at": "2026-11-05T18:46:11+00:00",
   "statistics": {
-   "works": 1,
-   "volumes": 6,
-   "with_identifier": 1,
-   "chapters": 47
+   "works": 4,
+   "print_works": 4,
+   "print_only": 4,
+   "volumes": 8,
+   "with_identifier": 4,
+   "chapters": 37,
+   "delivery_dated": 3
   }
  },
  "means": {
@@ -33,9 +36,9 @@
   "releases": 1075,
   "works": 2766,
   "platforms": 19,
-  "series_rows": 3323,
+  "series_rows": 3327,
   "assembled": 3328,
-  "awaiting_identifier": 5,
+  "awaiting_identifier": 1,
   "identification": {
    "discovery-candidate": 780,
    "known-work-match": 33,
@@ -464,7 +467,7 @@
     "name": "one work named two ways across its rows",
     "means": "works whose rows render the same Japanese phrase two different ways, grouped on the name at the front of each rather than on the fold key, which folds an anthology apart from the work it collects. A rise means a row was named without looking at what its siblings already say.",
     "budget": 0,
-    "value": 0,
+    "value": 1,
     "measure": "regression"
    },
    {
@@ -561,8 +564,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 17,
-    "value": 17,
+    "budget": 19,
+    "value": 19,
     "measure": "arrival"
    },
    {
@@ -617,7 +620,7 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1229,
+    "budget": 1232,
     "value": 1232,
     "measure": "arrival"
    },
@@ -827,8 +830,8 @@
    {
     "name": "works whose first publication country is unattested",
     "means": "works whose `first_publication.country` is empty, which is DEFINITIONS §6's inclusion test not having run. It read 0 until now because build.py wrote the literal \"JP\" on every record, so the field asserted the answer and no check on it could fail. Every source here catalogues the Japanese EDITION and none states where the work first appeared, so this falls one work at a time as a serialisation venue is read off a publisher's page and recorded in data/scope.yaml. A rise means the corpus grew, which is expected, and the number to watch is the share rather than the count.",
-    "budget": 2761,
-    "value": 2761,
+    "budget": 2765,
+    "value": 2765,
     "measure": "report"
    },
    {
@@ -904,8 +907,8 @@
    {
     "name": "volume rows with no publication date",
     "means": "volumes on a work's print run that state no printing date, which is what the dating passes work through",
-    "budget": 2647,
-    "value": 2647,
+    "budget": 2651,
+    "value": 2651,
     "measure": "arrival"
    },
    {
@@ -936,7 +939,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 44,
+    "consecutive": 45,
     "failing_since": "2026-10-16",
     "days": 21,
     "last_ok": null,
@@ -946,7 +949,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 44,
+    "consecutive": 45,
     "failing_since": "2026-10-16",
     "days": 21,
     "last_ok": null,
@@ -956,7 +959,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 44,
+    "consecutive": 45,
     "failing_since": "2026-10-16",
     "days": 21,
     "last_ok": null,
@@ -966,7 +969,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 27,
+    "consecutive": 28,
     "failing_since": "2026-10-24",
     "days": 13,
     "last_ok": "2026-10-23",
@@ -1122,14 +1125,14 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1343,
-   "rows": 11580,
+   "rows": 11626,
    "retrieved": "2026-11-06",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10733,
+   "checked_rows": 10779,
    "well_formed": 0,
-   "malformed": 10733,
+   "malformed": 10779,
    "drop": null
   },
   {
@@ -1231,7 +1234,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 17,
+    "credit fields an identifier does not cover": 19,
     "credit pages listing a work that does not name them": 12,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1239,7 +1242,7 @@
     "ruby asserting a reading per character": 224,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 187,
-    "titles read by a machine, unmarked": 1229,
+    "titles read by a machine, unmarked": 1232,
     "uncertain readings": 63,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1269,7 +1272,7 @@
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
     "updates naming a work we do not hold": 2,
-    "works whose first publication country is unattested": 2761,
+    "works whose first publication country is unattested": 2765,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 7,
     "producers not yet scheduled": 8,
@@ -1280,7 +1283,7 @@
     "incomplete attested rows": 0,
     "attested rows with no access state": 0,
     "works without English": 0,
-    "volume rows with no publication date": 2647,
+    "volume rows with no publication date": 2651,
     "predicted updates already behind the run": 0,
     "volume rows a page counts but cannot list": 0,
     "works named by a truncation": 0
@@ -1288,9 +1291,9 @@
   }
  ],
  "statistics": {
-  "works": 3323,
+  "works": 3327,
   "states": {
-   "print": 1790,
+   "print": 1794,
    "oneshot": 501,
    "completed": 499,
    "active": 294,
@@ -1299,17 +1302,17 @@
    "unknown": 43
   },
   "english_basis": {
-   "translated": 2944,
+   "translated": 2948,
    "official-jp": 243,
    "licensed": 108,
    "romaji": 27,
    "none": 1
   },
-  "print_works": 2640,
-  "print_only": 1790,
-  "volumes": 6585,
-  "with_identifier": 3323,
-  "chapters": 31132,
-  "delivery_dated": 1108
+  "print_works": 2644,
+  "print_only": 1794,
+  "volumes": 6593,
+  "with_identifier": 3327,
+  "chapters": 31169,
+  "delivery_dated": 1111
  }
 }
