@@ -2207,6 +2207,23 @@ const TYPE_JA = { chapter:'話', oneshot:'読み切り', trial:'試し読み', e
 // values are quarantined, not coerced).
 const NON_STORY = new Set(['trial', 'notice', 'apology-art', 'republication']);
 
+/* ── Links a reader outside Japan cannot follow ──────────────────────────────────────────────
+   `feed/meta.json` lists the hosts that refuse readers outside Japan (`data/platforms.yaml`,
+   `geoblocked`, in the pipeline). Every link to one is marked, whichever template drew it, because
+   the rule matches the address: a link added later is marked without being taught. The selector is
+   written here because the hosts arrive with the data; the words are app.css's, per language. */
+function markJapanOnly(hosts) {
+  if (!Array.isArray(hosts) || !hosts.length) return;
+  const sel = hosts.flatMap(h => [`a[href^="https://${h}/"]`, `a[href^="http://${h}/"]`,
+                                  `a[href="https://${h}"]`, `a[href="http://${h}"]`]).join(',');
+  const st = document.createElement('style');
+  st.textContent = `:is(${sel})::after{content:var(--jp-only);display:inline-block;margin-left:.35em;
+    font-size:.62rem;font-weight:500;padding:0 .3rem;border-radius:3px;white-space:nowrap;
+    vertical-align:.12em;color:var(--faint);box-shadow:inset 0 0 0 1px var(--line);
+    text-decoration:none}`;
+  document.head.appendChild(st);
+}
+
 /* ── tabs ─────────────────────────────────────────────── */
 /* ── Where the browser's Back button goes ─────────────────────────────────────────────────────
    NAVIGATION IS IN THE URL; PREFERENCE IS NOT. What moves a reader somewhere is the tab, the
@@ -5657,6 +5674,7 @@ Promise.all([
   NAMES = names && names.titles ? names : null;
   PUBS = (names && names.publishers) || null;
   INDEX = idx; FEED = feed; SERIES = series; META = meta;
+  markJapanOnly(meta && meta.japan_only);
   // The header used to restate the totals: "1350 更新 · 302 作品 · 646 巻" and a release/platform
   // count under it. The tabs already carry those numbers, next to the thing they count, and a
   // reader arriving wants the list rather than its size. Gone; the tab badges remain.
