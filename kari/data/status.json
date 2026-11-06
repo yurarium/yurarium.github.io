@@ -1,15 +1,11 @@
 {
- "generated": "2026-11-05T22:04:57+00:00",
+ "generated": "2026-11-06T11:10:06+00:00",
  "since_last": {
-  "at": "2026-11-05T18:46:11+00:00",
+  "at": "2026-11-05T22:04:57+00:00",
   "statistics": {
-   "works": 4,
-   "print_works": 4,
-   "print_only": 4,
-   "volumes": 8,
-   "with_identifier": 4,
-   "chapters": 37,
-   "delivery_dated": 3
+   "works": 1,
+   "with_identifier": 1,
+   "chapters": 16
   }
  },
  "means": {
@@ -33,26 +29,26 @@
  },
  "last_run": {
   "at": "2026-11-06",
-  "releases": 1075,
+  "releases": 1077,
   "works": 2766,
   "platforms": 19,
-  "series_rows": 3327,
-  "assembled": 3328,
+  "series_rows": 3328,
+  "assembled": 3329,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 780,
+   "discovery-candidate": 782,
    "known-work-match": 33,
    "platform-genre": 262
   },
   "collapsed": {
    "duplicate_chapters": 256,
-   "resolver": 126,
+   "resolver": 129,
    "samples": 0,
    "thin_sitemap": 13
   }
  },
  "gate": {
-  "invariants_passing": 59,
+  "invariants_passing": 58,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -286,8 +282,10 @@
    },
    {
     "name": "every platform a reader is shown is registered",
-    "violations": 0,
-    "examples": []
+    "violations": 1,
+    "examples": [
+     "('ドリコミ+',)"
+    ]
    },
    {
     "name": "the store refused no row",
@@ -473,8 +471,8 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1215,
-    "value": 1215,
+    "budget": 1216,
+    "value": 1216,
     "measure": "arrival"
    },
    {
@@ -522,8 +520,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 537,
-    "value": 537,
+    "budget": 538,
+    "value": 538,
     "measure": "arrival"
    },
    {
@@ -564,8 +562,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 19,
-    "value": 19,
+    "budget": 18,
+    "value": 18,
     "measure": "arrival"
    },
    {
@@ -620,8 +618,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1232,
-    "value": 1232,
+    "budget": 1231,
+    "value": 1231,
     "measure": "arrival"
    },
    {
@@ -939,7 +937,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 45,
+    "consecutive": 46,
     "failing_since": "2026-10-16",
     "days": 21,
     "last_ok": null,
@@ -949,7 +947,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 45,
+    "consecutive": 46,
     "failing_since": "2026-10-16",
     "days": 21,
     "last_ok": null,
@@ -959,7 +957,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 45,
+    "consecutive": 46,
     "failing_since": "2026-10-16",
     "days": 21,
     "last_ok": null,
@@ -969,7 +967,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 28,
+    "consecutive": 29,
     "failing_since": "2026-10-24",
     "days": 13,
     "last_ok": "2026-10-23",
@@ -1096,8 +1094,8 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1696,
-   "rows": 17680,
+   "works": 1698,
+   "rows": 17682,
    "retrieved": "2026-11-06",
    "age_days": 0,
    "in_scope": true,
@@ -1117,8 +1115,8 @@
    "in_scope": true,
    "empty": false,
    "checked_rows": 7145,
-   "well_formed": 6693,
-   "malformed": 452,
+   "well_formed": 6698,
+   "malformed": 447,
    "drop": null
   },
   {
@@ -1151,15 +1149,15 @@
   },
   {
    "source": "webpages",
-   "files": 50,
-   "works": 662,
-   "rows": 9567,
+   "files": 51,
+   "works": 664,
+   "rows": 9602,
    "retrieved": "2026-11-06",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9512,
-   "well_formed": 9512,
+   "checked_rows": 9547,
+   "well_formed": 9547,
    "malformed": 0,
    "drop": null
   }
@@ -1221,20 +1219,20 @@
     "credit phrases spelling a person otherwise": 3,
     "names rendered two ways": 0,
     "one work named two ways across its rows": 0,
-    "author names romanised as one word": 1215,
+    "author names romanised as one word": 1216,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 68,
     "publisher readings nobody has settled": 23,
     "renderings with nothing to show": 0,
     "kana names with no stated division": 252,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 537,
+    "author readings no source states": 538,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 19,
+    "credit fields an identifier does not cover": 18,
     "credit pages listing a work that does not name them": 12,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1242,7 +1240,7 @@
     "ruby asserting a reading per character": 224,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 187,
-    "titles read by a machine, unmarked": 1232,
+    "titles read by a machine, unmarked": 1231,
     "uncertain readings": 63,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1291,18 +1289,18 @@
   }
  ],
  "statistics": {
-  "works": 3327,
+  "works": 3328,
   "states": {
    "print": 1794,
    "oneshot": 501,
    "completed": 499,
    "active": 294,
    "dormant": 145,
-   "slow": 51,
+   "slow": 52,
    "unknown": 43
   },
   "english_basis": {
-   "translated": 2948,
+   "translated": 2949,
    "official-jp": 243,
    "licensed": 108,
    "romaji": 27,
@@ -1311,8 +1309,8 @@
   "print_works": 2644,
   "print_only": 1794,
   "volumes": 6593,
-  "with_identifier": 3327,
-  "chapters": 31169,
+  "with_identifier": 3328,
+  "chapters": 31185,
   "delivery_dated": 1111
  }
 }
