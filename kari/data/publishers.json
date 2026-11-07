@@ -1,8 +1,157 @@
 {
- "generated": "2026-11-07",
+ "generated": "2026-11-08",
  "note": "One record per publishing house, holding the imprint lines it runs with the spellings each line is catalogued under and the years those cover. Publishers and distributors share one namespace: the seat is on the edge to the book.",
  "count": 163,
  "publishers": {
+  "h00025": {
+   "id": "h00025",
+   "name": "白泉社",
+   "rows": 13,
+   "works": [
+    "w00432",
+    "w00007",
+    "w00360",
+    "w03264",
+    "w00428",
+    "w00988",
+    "w03157",
+    "w01243",
+    "w03521",
+    "w01575",
+    "w02682",
+    "w02997"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "young-animal-comics",
+     "name": "YOUNG ANIMAL COMICS",
+     "parent": null,
+     "resolved": true,
+     "rows": 5,
+     "works": [
+      "w00432",
+      "w03264",
+      "w00428",
+      "w00988"
+     ],
+     "spellings": [
+      {
+       "raw": "YOUNG ANIMAL COMICS",
+       "rows": 5,
+       "years": [
+        "2017",
+        "2025"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "hc-special",
+     "name": "HC SPECIAL",
+     "parent": null,
+     "resolved": true,
+     "rows": 2,
+     "works": [
+      "w00007",
+      "w00360"
+     ],
+     "spellings": [
+      {
+       "raw": "HC SPECIAL",
+       "rows": 2,
+       "years": [
+        "2024",
+        "2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": null,
+     "name": "楽園",
+     "parent": null,
+     "resolved": false,
+     "rows": 2,
+     "works": [
+      "w01575",
+      "w02997"
+     ],
+     "spellings": [
+      {
+       "raw": "楽園",
+       "rows": 2,
+       "years": [
+        "2018",
+        "2018"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "jets-comics",
+     "name": "JETS COMICS",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w03157"
+     ],
+     "spellings": [
+      {
+       "raw": "JETS COMICS",
+       "rows": 1,
+       "years": [
+        "2006",
+        "2006"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "love-jossie",
+     "name": "Love Jossie",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w02682"
+     ],
+     "spellings": [
+      {
+       "raw": "Love Jossie",
+       "rows": 1,
+       "years": [
+        null,
+        null
+       ]
+      }
+     ]
+    },
+    {
+     "id": "rakuen-comics",
+     "name": "楽園コミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w01243"
+     ],
+     "spellings": [
+      {
+       "raw": "楽園コミックス",
+       "rows": 1,
+       "years": [
+        "2010",
+        "2010"
+       ]
+      }
+     ]
+    }
+   ]
+  },
   "h00003": {
    "id": "h00003",
    "name": "小学館",
@@ -7092,155 +7241,6 @@
        "years": [
         "2022",
         "2022"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00025": {
-   "id": "h00025",
-   "name": "白泉社",
-   "rows": 13,
-   "works": [
-    "w00007",
-    "w00360",
-    "w00432",
-    "w03264",
-    "w00428",
-    "w00988",
-    "w03157",
-    "w01243",
-    "w03521",
-    "w01575",
-    "w02682",
-    "w02997"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "young-animal-comics",
-     "name": "YOUNG ANIMAL COMICS",
-     "parent": null,
-     "resolved": true,
-     "rows": 5,
-     "works": [
-      "w00432",
-      "w03264",
-      "w00428",
-      "w00988"
-     ],
-     "spellings": [
-      {
-       "raw": "YOUNG ANIMAL COMICS",
-       "rows": 5,
-       "years": [
-        "2017",
-        "2025"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "hc-special",
-     "name": "HC SPECIAL",
-     "parent": null,
-     "resolved": true,
-     "rows": 2,
-     "works": [
-      "w00007",
-      "w00360"
-     ],
-     "spellings": [
-      {
-       "raw": "HC SPECIAL",
-       "rows": 2,
-       "years": [
-        "2024",
-        "2026"
-       ]
-      }
-     ]
-    },
-    {
-     "id": null,
-     "name": "楽園",
-     "parent": null,
-     "resolved": false,
-     "rows": 2,
-     "works": [
-      "w01575",
-      "w02997"
-     ],
-     "spellings": [
-      {
-       "raw": "楽園",
-       "rows": 2,
-       "years": [
-        "2018",
-        "2018"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "jets-comics",
-     "name": "JETS COMICS",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w03157"
-     ],
-     "spellings": [
-      {
-       "raw": "JETS COMICS",
-       "rows": 1,
-       "years": [
-        "2006",
-        "2006"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "love-jossie",
-     "name": "Love Jossie",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w02682"
-     ],
-     "spellings": [
-      {
-       "raw": "Love Jossie",
-       "rows": 1,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    },
-    {
-     "id": "rakuen-comics",
-     "name": "楽園コミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w01243"
-     ],
-     "spellings": [
-      {
-       "raw": "楽園コミックス",
-       "rows": 1,
-       "years": [
-        "2010",
-        "2010"
        ]
       }
      ]
