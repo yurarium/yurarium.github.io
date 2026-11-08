@@ -2858,13 +2858,13 @@ async function paintVolumes(r) {
          コミック百合姫's 2017年1月号 six weeks after the shop began delivering it, so a delivery
          date labelled as a printing would be wrong by that much on every issue. It is shown,
          because a reader asking when they could buy this is owed an answer, and it says what it
-         is. */
+         is. `available from` and not `on sale`, which also means discounted. */
       const d = v.published
         ? `<time datetime="${esc(v.published)}">${esc(fmtDate(v.published, { year: true }))}</time>`
         : v.delivered
           ? `<time class="vdeliv" datetime="${esc(v.delivered)}">${esc(T(
               `配信 ${fmtDate(v.delivered, { year: true })}`,
-              `on sale ${fmtDate(v.delivered, { year: true })}`))}</time>`
+              `available from ${fmtDate(v.delivered, { year: true })}`))}</time>`
           : `<span class="vnod">${esc(T('刊行日不明', 'no date recorded'))}</span>`;
       // The ISBN is why most of these works are here at all: it is what a shop stated and what the
       // bibliography answered. A bibliographic record should show its identifier.
@@ -3970,17 +3970,17 @@ async function renderReleases() {
      so. This tab read `published` alone, written when every volume in works.json came from a
      bibliography, and a week later BOOK☆WALKER's volumes arrived carrying only `delivered`: 604 of
      the 1,016 volumes dated since 2025-11 were on their work pages and absent here. A volume is what
-     the publisher sells as one (ruled by the owner on 2026-11-08), and the delivery date is never
-     shown as a printing, which is the separation the work page already draws. */
-  /* NOT BEFORE IT IS ON SALE. A shop states 配信開始日 ahead for a pre-order, 27 volumes on
-     2026-11-08, 落差 76 to 78 a week apart among them. This tab leaves forthcoming releases out, as
-     it always has, and `on sale` under a date still to come would say something untrue. */
+     the publisher sells as one (ruled by the owner on 2026-11-08). The row carries no mark saying
+     which date it is: the month is what this list is for, and the work page says which. */
+  /* NOT BEFORE A SHOP SELLS IT. A shop states 配信開始日 ahead for a pre-order, 27 volumes on
+     2026-11-08, 落差 76 to 78 a week apart among them, and this tab leaves forthcoming releases out,
+     as it always has. */
   const today = todayISO();
   const rows = [];
   (WORKS.works || []).forEach(w => (w.volumes || []).forEach(v => {
     const d = v.published || (String(v.delivered || '') <= today ? v.delivered : null);
-    if (d) rows.push({ d: String(d), deliv: !v.published, w, n: v.number, at: v.number_n,
-                       isbn: v.isbn, fin: v.final_volume ? v.final_volume_basis : null });
+    if (d) rows.push({ d: String(d), w, n: v.number, at: v.number_n, isbn: v.isbn,
+                       fin: v.final_volume ? v.final_volume_basis : null });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
   /* Each row is rendered ONCE, into a string, and the controls only choose which strings are
@@ -4040,10 +4040,7 @@ async function renderReleases() {
         // leave the second one showing nothing and the comment sitting in the markup. The mark
         // itself is `visTag`, which pairs its own two words with T().
         const held = (stacked && lang === 'en') ? '' : '<!--vis-->';
-        const deliv = r.deliv ? ` <span class="k k-unk" title="${esc(T(
-            '書店が配信を始めた日。紙の刊行日は記録がない',
-            'the day a shop began selling it; no printing is dated'))}">${esc(T('配信', 'on sale'))}</span>` : '';
-        return `<div class="relvt">${name} ${vol}${fin}${deliv}${held}</div>` +
+        return `<div class="relvt">${name} ${vol}${fin}${held}</div>` +
           `<div class="relvm">${[people, who].filter(Boolean).join(' · ')}</div>`;
       };
     return {
