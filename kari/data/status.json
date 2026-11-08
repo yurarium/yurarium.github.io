@@ -1,10 +1,8 @@
 {
- "generated": "2026-11-08T20:20:19+00:00",
+ "generated": "2026-11-08T21:26:14+00:00",
  "since_last": {
-  "at": "2026-11-08T18:50:57+00:00",
-  "statistics": {
-   "chapters": 1
-  }
+  "at": "2026-11-08T20:20:19+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -27,14 +25,14 @@
  },
  "last_run": {
   "at": "2026-11-09",
-  "releases": 1085,
+  "releases": 1075,
   "works": 2766,
   "platforms": 19,
   "series_rows": 3329,
   "assembled": 3330,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 785,
+   "discovery-candidate": 775,
    "known-work-match": 33,
    "platform-genre": 267
   },
@@ -933,7 +931,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 52,
+    "consecutive": 53,
     "failing_since": "2026-10-16",
     "days": 24,
     "last_ok": null,
@@ -943,7 +941,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 52,
+    "consecutive": 53,
     "failing_since": "2026-10-16",
     "days": 24,
     "last_ok": null,
@@ -953,7 +951,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 52,
+    "consecutive": 53,
     "failing_since": "2026-10-16",
     "days": 24,
     "last_ok": null,
@@ -963,7 +961,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 35,
+    "consecutive": 36,
     "failing_since": "2026-10-24",
     "days": 16,
     "last_ok": "2026-10-23",
@@ -973,15 +971,25 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 2,
+    "consecutive": 3,
     "failing_since": "2026-11-09",
     "days": 0,
     "last_ok": "2026-11-08",
     "error": "1 file(s) past their age, e.g. data/source/webpages/bookwalker-tanwa.yaml dated 2026-11-05",
+    "issue": true
+   },
+   {
+    "source": "stale:stage-print:shop-volume-names",
+    "stage": "freshness",
+    "consecutive": 1,
+    "failing_since": "2026-11-09",
+    "days": 0,
+    "last_ok": null,
+    "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
     "issue": false
    }
   ],
-  "healthy": 166,
+  "healthy": 167,
   "threshold": 3
  },
  "connectors": [
@@ -1085,7 +1093,7 @@
   },
   {
    "source": "comparators",
-   "files": 5,
+   "files": 6,
    "works": 9,
    "rows": 9,
    "retrieved": "2026-11-09",
