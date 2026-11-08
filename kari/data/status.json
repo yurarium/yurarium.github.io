@@ -1,8 +1,10 @@
 {
- "generated": "2026-11-07T20:22:38+00:00",
+ "generated": "2026-11-08T11:19:57+00:00",
  "since_last": {
-  "at": "2026-11-07T13:33:47+00:00",
-  "statistics": {}
+  "at": "2026-11-07T20:22:38+00:00",
+  "statistics": {
+   "chapters": 6
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -25,19 +27,19 @@
  },
  "last_run": {
   "at": "2026-11-08",
-  "releases": 1076,
+  "releases": 1086,
   "works": 2766,
   "platforms": 19,
   "series_rows": 3329,
   "assembled": 3330,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 776,
+   "discovery-candidate": 783,
    "known-work-match": 33,
-   "platform-genre": 267
+   "platform-genre": 270
   },
   "collapsed": {
-   "duplicate_chapters": 258,
+   "duplicate_chapters": 259,
    "resolver": 128,
    "samples": 0,
    "thin_sitemap": 13
@@ -934,7 +936,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 49,
+    "consecutive": 50,
     "failing_since": "2026-10-16",
     "days": 23,
     "last_ok": null,
@@ -944,7 +946,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 49,
+    "consecutive": 50,
     "failing_since": "2026-10-16",
     "days": 23,
     "last_ok": null,
@@ -954,7 +956,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 49,
+    "consecutive": 50,
     "failing_since": "2026-10-16",
     "days": 23,
     "last_ok": null,
@@ -964,7 +966,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 32,
+    "consecutive": 33,
     "failing_since": "2026-10-24",
     "days": 15,
     "last_ok": "2026-10-23",
@@ -1106,14 +1108,14 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1022,
-   "rows": 7855,
+   "rows": 7860,
    "retrieved": "2026-11-08",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7156,
-   "well_formed": 6713,
-   "malformed": 443,
+   "checked_rows": 7161,
+   "well_formed": 6825,
+   "malformed": 336,
    "drop": null
   },
   {
@@ -1148,13 +1150,13 @@
    "source": "webpages",
    "files": 51,
    "works": 665,
-   "rows": 9618,
+   "rows": 9621,
    "retrieved": "2026-11-08",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9563,
-   "well_formed": 9563,
+   "checked_rows": 9566,
+   "well_formed": 9566,
    "malformed": 0,
    "drop": null
   }
@@ -1289,10 +1291,10 @@
   "works": 3329,
   "states": {
    "print": 1794,
-   "completed": 501,
+   "completed": 502,
    "oneshot": 501,
-   "active": 296,
-   "dormant": 145,
+   "active": 294,
+   "dormant": 146,
    "slow": 50,
    "unknown": 42
   },
@@ -1307,7 +1309,7 @@
   "print_only": 1794,
   "volumes": 6593,
   "with_identifier": 3329,
-  "chapters": 31214,
+  "chapters": 31220,
   "delivery_dated": 1111
  }
 }
