@@ -1578,10 +1578,19 @@ function renderWorkPage() {
   fact(T('分量', 'Length'), esc(len.join(SEP)));
   /* WHAT FORM IT EXISTS IN. Every row can answer this and it had to be inferred from which
      sections happened to be populated. */
-  fact(T('形態', 'Available as'), esc(
-    web && hasPrint ? T('ウェブ連載と単行本', 'web serialisation and collected volumes')
-    : web ? T('ウェブ連載', 'web serialisation')
-    : hasPrint ? T('単行本', 'collected volumes') : ''));
+  /* AND A SHOP SELLING THE WORK BY THE CHAPTER IS A THIRD FORM. 単話 are chapters (ruled by the
+     owner on 2026-11-08), and a BOOK☆WALKER listing selling them is neither a web serialisation
+     nor a book: each SM百合えっちアンソロジー story read `web serialisation and collected volumes`
+     from one listing. The emitter marks both halves of such a listing `sold_by_chapter`. */
+  const onWeb = web && (!(r.sources || []).length || r.sources.some(s => !s.sold_by_chapter));
+  const byChapter = (r.sources || []).some(s => s.sold_by_chapter);
+  const inPrint = (r.print || []).some(p => !p.sold_by_chapter);
+  const forms = [onWeb ? ['ウェブ連載', 'web serialisation'] : null,
+                 byChapter ? ['単話売り', 'single chapters'] : null,
+                 inPrint ? ['単行本', 'collected volumes'] : null].filter(Boolean);
+  fact(T('形態', 'Available as'), esc(T(
+    forms.map(f => f[0]).join('と'),
+    forms.map(f => f[1]).join(', ').replace(/, ([^,]*)$/, ' and $1'))));
   // What the platform says comes next. Marked as the platform's statement, because it is a date
   // for something that has not happened.
   /* A DATE FOR SOMETHING THAT HAS NOT HAPPENED has to still be in the future. アイドラトリィ
@@ -1623,9 +1632,14 @@ function renderWorkPage() {
   /* A TITLE OF THE SAME SERIES IS ANOTHER RELATION, ruled by the owner on 2026-10-18. 加瀬さん
      renames itself every volume or two and each title is the work a shop sells under it, so the
      page names the title before and after it, and a series listing that holds them all. */
+  /* AND A STORY SOLD ON ITS OWN IS A WORK BESIDE THE BOOK THAT COLLECTS IT, ruled by the owner on
+     2026-11-08. BOOK☆WALKER sells nine stories of SM百合えっちアンソロジー one at a time, so the
+     story's page names the book with the same word the 収録 line uses, and the book lists them. */
   for (const rel of (r.related || [])) {
     const series = rel.kind === 'series';
-    const label = series
+    const label = rel.kind === 'collection'
+      ? (rel.holds === 'other' ? T('収録', 'Part of') : T('収録作品', 'Includes'))
+      : series
       ? (rel.order === 'precedes' ? T('シリーズの次作', 'Next in the series')
         : rel.order === 'follows' ? T('シリーズの前作', 'Previous in the series')
         : T('同じシリーズ', 'Same series'))
@@ -1652,7 +1666,7 @@ function renderWorkPage() {
      and when it last updated are all properties of that platform's offer and not of the work.
      "12 of 99" rather than "12" keeps our coverage and the work's length apart, which is the same
      conflation the works list carries. */
-  const chapRows = (r.sources || []).map(s => {
+  const chapRow = s => {
     const f = (s.free || 0) + (s.free_timed || 0);
     const held = r.chapters && s.chapters && r.chapters > s.chapters
       ? T(`${r.chapters}話中${s.chapters}話`, `${s.chapters} listed of ${r.chapters}`)
@@ -1686,16 +1700,22 @@ function renderWorkPage() {
            esc(fmtDate(s.latest, { year: true }))}${s.latest_work_level ? '*' : ''}</span>`
       : `<span class="m">${esc(T('記録なし', 'not recorded'))}</span>`;
     return `<tr><td>${nm}</td><td>${esc(held)}</td><td>${esc(money)}</td><td>${when}</td></tr>`;
-  }).join('');
-  const webBody = chapRows ? `<div class="wp-scroll"><table class="wp-rows">
-      <tr><th>${esc(T('掲載サイト', 'Platform'))}</th><th>${esc(T('話数', 'Chapters'))}</th>
+  };
+  // A SHOP'S 単話 ARE LISTED APART FROM THE WEB PLATFORMS, under a heading that says what they are.
+  const chapTable = (list, where) => list.length ? `<div class="wp-scroll"><table class="wp-rows">
+      <tr><th>${esc(where)}</th><th>${esc(T('話数', 'Chapters'))}</th>
           <th>${esc(T('閲覧', 'Reading'))}</th><th>${esc(T('最新', 'Newest'))}</th></tr>
-      ${chapRows}</table></div>${nextLine}` : '';
+      ${list.map(chapRow).join('')}</table></div>` : '';
+  const webRows = (r.sources || []).filter(s => !s.sold_by_chapter);
+  const shopRows = (r.sources || []).filter(s => s.sold_by_chapter);
+  const webBody = webRows.length
+    ? chapTable(webRows, T('掲載サイト', 'Platform')) + nextLine : '';
+  const shopBody = chapTable(shopRows, T('書店', 'Shop'));
 
   /* COLLECTED VOLUMES. paintVolumes fills #wp-vols and is left where it is; what it lists belongs
      under this heading rather than after an undifferentiated run of facts. Seller links are NOT
      here yet: shop_url is on the source records and reaches no build output. */
-  const printBody = (r.print || []).map(pr => {
+  const printBody = (r.print || []).filter(pr => !pr.sold_by_chapter).map(pr => {
     const who = publisherPartsHtml(pr).join(' \u00b7 ');
     /* WHERE TO BUY IT, beside the volumes it describes, which parallels the platform links the
        serialisation carries. A retailer is a Tier C source and its shelf is never a marketing
@@ -1822,13 +1842,14 @@ function renderWorkPage() {
     </header>
     <dl class="wp-facts">${facts.join('')}</dl>
     ${sect(T('ウェブ連載', 'Web serialisation'), webBody)}
+    ${sect(T('単話売り', 'Sold by the chapter'), shopBody)}
     ${/* A HEADING OVER NOTHING IS A CLAIM THAT THERE IS SOMETHING. `sect` drops an empty body and
           this one was never empty: the container `paintVolumes` fills is always in it, so 560 web
           works with no print record at all carried a `Collected volumes` heading. The container is
           only wanted where there is a run to put in it, and `paintVolumes` already returns early
           without one. */
       sect(T('単行本', 'Collected volumes'),
-           (r.print || []).length ? printBody + '<div id="wp-vols"></div>' : '')}
+           printBody ? printBody + '<div id="wp-vols"></div>' : '')}
     ${srcBody}`;
   el('wp-back').addEventListener('click', ev => { ev.preventDefault(); closeWorkPage(true); });
   paintVolumes(r);
@@ -2373,10 +2394,21 @@ async function renderReleases() {
   (SERIES?.series || []).forEach(r => (r.print || []).forEach(pr => {
     if (r.id) printIds(pr).forEach(id => byMadb.set(id, r.id));
   }));
+  /* A VOLUME IS LISTED UNDER THE DAY A SHOP BEGAN SELLING IT WHERE NO PRINTING IS DATED, and says
+     so. This tab read `published` alone, written when every volume in works.json came from a
+     bibliography, and a week later BOOK☆WALKER's volumes arrived carrying only `delivered`: 604 of
+     the 1,016 volumes dated since 2025-11 were on their work pages and absent here. A volume is what
+     the publisher sells as one (ruled by the owner on 2026-11-08), and the delivery date is never
+     shown as a printing, which is the separation the work page already draws. */
+  /* NOT BEFORE IT IS ON SALE. A shop states 配信開始日 ahead for a pre-order, 27 volumes on
+     2026-11-08, 落差 76 to 78 a week apart among them. This tab leaves forthcoming releases out, as
+     it always has, and `on sale` under a date still to come would say something untrue. */
+  const today = todayISO();
   const rows = [];
   (WORKS.works || []).forEach(w => (w.volumes || []).forEach(v => {
-    if (v.published) rows.push({ d: String(v.published), w, n: v.number, at: v.number_n, isbn: v.isbn,
-                                 fin: v.final_volume ? v.final_volume_basis : null });
+    const d = v.published || (String(v.delivered || '') <= today ? v.delivered : null);
+    if (d) rows.push({ d: String(d), deliv: !v.published, w, n: v.number, at: v.number_n,
+                       isbn: v.isbn, fin: v.final_volume ? v.final_volume_basis : null });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
   /* Each row is rendered ONCE, into a string, and the controls only choose which strings are
@@ -2436,7 +2468,10 @@ async function renderReleases() {
         // leave the second one showing nothing and the comment sitting in the markup. The mark
         // itself is `visTag`, which pairs its own two words with T().
         const held = (stacked && lang === 'en') ? '' : '<!--vis-->';
-        return `<div class="relvt">${name} ${vol}${fin}${held}</div>` +
+        const deliv = r.deliv ? ` <span class="k k-unk" title="${esc(T(
+            '書店が配信を始めた日。紙の刊行日は記録がない',
+            'the day a shop began selling it; no printing is dated'))}">${esc(T('配信', 'on sale'))}</span>` : '';
+        return `<div class="relvt">${name} ${vol}${fin}${deliv}${held}</div>` +
           `<div class="relvm">${[people, who].filter(Boolean).join(' · ')}</div>`;
       };
     return {

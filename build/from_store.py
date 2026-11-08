@@ -53,7 +53,7 @@ import rules                                                            # noqa: 
 #: `514800d93712ae3f` adds `source_health` and `check_result.measure`, and stays listed so a store
 #: published before the change is still readable.
 #: `488027d7634c5c45` came out with this change, being two schemas old.
-KNOWN_SCHEMAS = ("5eaea5c57b33455d", "0bf35cb71a9c480c", "e695e91aab5e9372")
+KNOWN_SCHEMAS = ("5eaea5c57b33455d", "0bf35cb71a9c480c", "e695e91aab5e9372", "d38fd8cce4898a71")
 
 
 def open_store(path):
