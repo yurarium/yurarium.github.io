@@ -1,11 +1,9 @@
 {
- "generated": "2026-11-08T18:50:57+00:00",
+ "generated": "2026-11-08T20:20:19+00:00",
  "since_last": {
-  "at": "2026-11-08T13:51:59+00:00",
+  "at": "2026-11-08T18:50:57+00:00",
   "statistics": {
-   "print_only": -12,
-   "chapters": 111,
-   "delivery_dated": -1
+   "chapters": 1
   }
  },
  "means": {
@@ -400,7 +398,7 @@
     "name": "attributed names their cited page does not show",
     "means": "licensed and official-jp names whose cited page answered without carrying the name. Some are pages assembled by script, which serve no title; the rest are names the page does not state. Falls as entries are corrected or pages confirmed by hand.",
     "budget": 0,
-    "value": 2,
+    "value": 0,
     "measure": "regression"
    },
    {
@@ -935,7 +933,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 51,
+    "consecutive": 52,
     "failing_since": "2026-10-16",
     "days": 24,
     "last_ok": null,
@@ -945,7 +943,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 51,
+    "consecutive": 52,
     "failing_since": "2026-10-16",
     "days": 24,
     "last_ok": null,
@@ -955,7 +953,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 51,
+    "consecutive": 52,
     "failing_since": "2026-10-16",
     "days": 24,
     "last_ok": null,
@@ -965,7 +963,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 34,
+    "consecutive": 35,
     "failing_since": "2026-10-24",
     "days": 16,
     "last_ok": "2026-10-23",
@@ -975,7 +973,7 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 1,
+    "consecutive": 2,
     "failing_since": "2026-11-09",
     "days": 0,
     "last_ok": "2026-11-08",
@@ -1131,14 +1129,14 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1343,
-   "rows": 11626,
+   "rows": 11637,
    "retrieved": "2026-11-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10779,
+   "checked_rows": 10790,
    "well_formed": 0,
-   "malformed": 10779,
+   "malformed": 10790,
    "drop": null
   },
   {
@@ -1318,7 +1316,7 @@
   "print_only": 1782,
   "volumes": 6593,
   "with_identifier": 3329,
-  "chapters": 31331,
+  "chapters": 31332,
   "delivery_dated": 1110
  }
 }
