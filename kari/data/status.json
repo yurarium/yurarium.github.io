@@ -1,8 +1,12 @@
 {
- "generated": "2026-11-08T13:51:59+00:00",
+ "generated": "2026-11-08T18:50:57+00:00",
  "since_last": {
-  "at": "2026-11-08T11:19:57+00:00",
-  "statistics": {}
+  "at": "2026-11-08T13:51:59+00:00",
+  "statistics": {
+   "print_only": -12,
+   "chapters": 111,
+   "delivery_dated": -1
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,27 +28,27 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-11-08",
-  "releases": 1086,
+  "at": "2026-11-09",
+  "releases": 1085,
   "works": 2766,
   "platforms": 19,
   "series_rows": 3329,
   "assembled": 3330,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 783,
+   "discovery-candidate": 785,
    "known-work-match": 33,
-   "platform-genre": 270
+   "platform-genre": 267
   },
   "collapsed": {
-   "duplicate_chapters": 259,
-   "resolver": 128,
+   "duplicate_chapters": 253,
+   "resolver": 131,
    "samples": 0,
-   "thin_sitemap": 13
+   "thin_sitemap": 11
   }
  },
  "gate": {
-  "invariants_passing": 58,
+  "invariants_passing": 59,
   "invariants": [
    {
     "name": "ruby covers its surface",
@@ -278,11 +282,8 @@
    },
    {
     "name": "every platform a reader is shown is registered",
-    "violations": 2,
-    "examples": [
-     "('ゴラクエッグ',)",
-     "('ドリコミ+',)"
-    ]
+    "violations": 0,
+    "examples": []
    },
    {
     "name": "the store refused no row",
@@ -399,7 +400,7 @@
     "name": "attributed names their cited page does not show",
     "means": "licensed and official-jp names whose cited page answered without carrying the name. Some are pages assembled by script, which serve no title; the rest are names the page does not state. Falls as entries are corrected or pages confirmed by hand.",
     "budget": 0,
-    "value": 0,
+    "value": 2,
     "measure": "regression"
    },
    {
@@ -462,7 +463,7 @@
     "name": "one work named two ways across its rows",
     "means": "works whose rows render the same Japanese phrase two different ways, grouped on the name at the front of each rather than on the fold key, which folds an anthology apart from the work it collects. A rise means a row was named without looking at what its siblings already say.",
     "budget": 0,
-    "value": 1,
+    "value": 0,
     "measure": "regression"
    },
    {
@@ -594,8 +595,8 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 224,
-    "value": 224,
+    "budget": 213,
+    "value": 213,
     "measure": "arrival"
    },
    {
@@ -615,8 +616,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1231,
-    "value": 1231,
+    "budget": 1238,
+    "value": 1238,
     "measure": "arrival"
    },
    {
@@ -934,9 +935,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 50,
+    "consecutive": 51,
     "failing_since": "2026-10-16",
-    "days": 23,
+    "days": 24,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -944,9 +945,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 50,
+    "consecutive": 51,
     "failing_since": "2026-10-16",
-    "days": 23,
+    "days": 24,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -954,9 +955,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 50,
+    "consecutive": 51,
     "failing_since": "2026-10-16",
-    "days": 23,
+    "days": 24,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -964,12 +965,22 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 33,
+    "consecutive": 34,
     "failing_since": "2026-10-24",
-    "days": 15,
+    "days": 16,
     "last_ok": "2026-10-23",
-    "error": "2 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
+    "error": "1 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
     "issue": true
+   },
+   {
+    "source": "stale:stage-a:webpages",
+    "stage": "freshness",
+    "consecutive": 1,
+    "failing_since": "2026-11-09",
+    "days": 0,
+    "last_ok": "2026-11-08",
+    "error": "1 file(s) past their age, e.g. data/source/webpages/bookwalker-tanwa.yaml dated 2026-11-05",
+    "issue": false
    }
   ],
   "healthy": 166,
@@ -982,7 +993,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 98,
+   "age_days": 99,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -996,7 +1007,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 92,
+   "age_days": 93,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1010,7 +1021,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-11-01",
-   "age_days": 7,
+   "age_days": 8,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1024,7 +1035,7 @@
    "works": 983,
    "rows": 2583,
    "retrieved": "2026-11-01",
-   "age_days": 7,
+   "age_days": 8,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1038,7 +1049,7 @@
    "works": 1796,
    "rows": 4289,
    "retrieved": "2026-11-05",
-   "age_days": 3,
+   "age_days": 4,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1052,7 +1063,7 @@
    "works": 68,
    "rows": 68,
    "retrieved": "2026-11-07",
-   "age_days": 1,
+   "age_days": 2,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1065,7 +1076,7 @@
    "files": 2,
    "works": 130,
    "rows": 6340,
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1079,7 +1090,7 @@
    "files": 5,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1091,9 +1102,9 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1699,
-   "rows": 17690,
-   "retrieved": "2026-11-08",
+   "works": 1709,
+   "rows": 17700,
+   "retrieved": "2026-11-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1107,7 +1118,7 @@
    "files": 5,
    "works": 1022,
    "rows": 7860,
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1121,7 +1132,7 @@
    "files": 3,
    "works": 1343,
    "rows": 11626,
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1135,7 +1146,7 @@
    "files": 881,
    "works": 881,
    "rows": 2306,
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1146,15 +1157,15 @@
   },
   {
    "source": "webpages",
-   "files": 51,
-   "works": 665,
-   "rows": 9621,
-   "retrieved": "2026-11-08",
+   "files": 52,
+   "works": 694,
+   "rows": 10153,
+   "retrieved": "2026-11-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 9566,
-   "well_formed": 9566,
+   "checked_rows": 10098,
+   "well_formed": 10098,
    "malformed": 0,
    "drop": null
   }
@@ -1234,10 +1245,10 @@
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
     "credits sharing a reading nobody has ruled on": 0,
-    "ruby asserting a reading per character": 224,
+    "ruby asserting a reading per character": 213,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 187,
-    "titles read by a machine, unmarked": 1231,
+    "titles read by a machine, unmarked": 1238,
     "uncertain readings": 63,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1288,12 +1299,12 @@
  "statistics": {
   "works": 3329,
   "states": {
-   "print": 1794,
-   "completed": 502,
-   "oneshot": 501,
-   "active": 294,
+   "print": 1782,
+   "oneshot": 511,
+   "completed": 504,
+   "active": 290,
    "dormant": 146,
-   "slow": 50,
+   "slow": 54,
    "unknown": 42
   },
   "english_basis": {
@@ -1304,10 +1315,10 @@
    "none": 1
   },
   "print_works": 2644,
-  "print_only": 1794,
+  "print_only": 1782,
   "volumes": 6593,
   "with_identifier": 3329,
-  "chapters": 31220,
-  "delivery_dated": 1111
+  "chapters": 31331,
+  "delivery_dated": 1110
  }
 }
