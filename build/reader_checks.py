@@ -523,7 +523,18 @@ def budget_renderings_resting_on_a_mechanical_romanisation(ctx):
         out = _interface(ctx).values(calls)
     except interface.Unavailable:
         return UNMEASURED    # this could not be measured; see UNMEASURED
-    return sum(html.count(FLOOR_MARKUP) for html in out)
+    return floor_marks(out)
+
+
+def floor_marks(out):
+    """The marks over each distinct rendering, from what the interface returned for every call.
+
+    EACH RENDERING ONCE, NOT EACH TIME A ROW DRAWS IT. Counting every row let one byline add a
+    mark each time its work published, so the count rose six times in September while the marked
+    names stayed the same, and from 809 to 989 by 2026-11-08 the same way. A name drawn the same
+    on forty rows is one guess at one name. A call answering with rows rather than markup holds no
+    mark, as it never did."""
+    return sum(html.count(FLOOR_MARKUP) for html in {h for h in out if isinstance(h, str)})
 
 
 def budget_full_width_forms_in_english_renderings(ctx):
@@ -1286,7 +1297,7 @@ RECORDED = {
     # the last time it should be raised without the question above being answered. Six rises, no new
     # name, two nights of readers served stale files by a number that cannot fall for the reason it
     # names.
-    "renderings resting on a mechanical romanisation": 809,
+    "renderings resting on a mechanical romanisation": 225,
     # 44 RENDERINGS BECAME 5 TITLES ON 2026-11-06, when the count changed from places shown to
     # distinct titles: 2×2＝SHINOBUDEN+, IDOL×IDOL STORY！, maimaimaimai mind！, Rouge　caprice and
     # YuRe：Log, each the work's own published form.
@@ -1317,6 +1328,12 @@ RECORDED = {
 #: lost each time was a day of fresh data over a name that was correctly rendered and correctly
 #: marked. The data gap it names is gated in the pipeline by `author readings no source states`,
 #: which counts RECORDS and does not move with the window, so nothing stops being watched here.
+#:
+#: THE WINDOW IS OUT OF IT SINCE 2026-11-08. It counts each distinct rendering once, so a byline
+#: drawn on more rows adds nothing: 225 on two stores where counting rows read 982 and 989. It
+#: stays reported because a new work bringing a name nobody has read still raises it, and the
+#: pipeline already takes that rise as an arrival; gating it here would hold the site on the same
+#: news a second time.
 #:
 #: WHAT IT COSTS AND WHERE THAT IS ANSWERED. The number's only consumer was this exit code, so a
 #: reported budget rests on the `::warning::` above and on somebody reading the run. Putting it on

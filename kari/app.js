@@ -286,11 +286,15 @@ function curly(s) {
   if (!s) return s;
   return String(s)
     .replace(/"([^"]*)"/g, '\u201c$1\u201d')
-    // PAIRS BEFORE APOSTROPHES. The other order turned the closing half of 'Manslayer' into an
-    // apostrophe, because a quote after a letter and before a space is exactly what the Eguchis'
-    // looks like. A pair is unambiguous, so it is claimed first and what is left is an apostrophe.
-    .replace(/(^|[\s(\[\u2014])'([^']+)'(?=[\s.,;:!?)\]\u2014]|$)/g, '$1\u2018$2\u2019')
+    // AN APOSTROPHE BETWEEN TWO LETTERS FIRST, because nothing else can be one. A pair cannot hold
+    // a straight quote, so 'I'll Be Watching the Whole Time' never paired: its inner apostrophe and
+    // its closing quote turned and its opening one stayed straight, on nine titles of one anthology.
     .replace(/(\p{L})'(?=\p{L})/gu, '$1\u2019')
+    // PAIRS BEFORE THE REMAINING APOSTROPHES. The other order turned the closing half of
+    // 'Manslayer' into an apostrophe, because a quote after a letter and before a space is exactly
+    // what the Eguchis' looks like. A pair is unambiguous, so it is claimed next and what is left
+    // is an apostrophe.
+    .replace(/(^|[\s(\[\u2014])'([^']+)'(?=[\s.,;:!?)\]\u2014]|$)/g, '$1\u2018$2\u2019')
     .replace(/(\p{L})'(?=\s|$|[,.;:!?)\]])/gu, '$1\u2019');
 }
 

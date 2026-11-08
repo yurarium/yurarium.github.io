@@ -112,6 +112,7 @@ def main(s):
     s.check("雨夜の月" in got[1]["text"] and "moon" in got[1]["text"],
             "a title whose two languages differ still shows both")
     volume_names(s)
+    quotes(s)
 
 
 def volume_names(s):
@@ -138,6 +139,26 @@ def volume_names(s):
          "a name nobody has translated falls back to its romanisation, after the place the "
          "build gave the book, so two books sharing a name are still two rows")
     s.eq(label(placed, "ja"), "(2) -民宿かがや", "and the Japanese keeps the position as written")
+
+
+def quotes(s):
+    """A quoted title that holds an apostrophe is still one pair.
+
+    The pair rule could not span a straight quote, so 'I'll Be Watching the Whole Time' opened on a
+    straight quote and closed on a curly one, on nine titles of one anthology."""
+    def en(t):
+        return interface.render([("curly", t)], prefs={"LANG": "en"})[0]["text"]
+
+    s.eq(en("An SM Yuri Erotic Anthology: 'I'll Be Watching the Whole Time'"),
+         "An SM Yuri Erotic Anthology: \u2018I\u2019ll Be Watching the Whole Time\u2019",
+         "an apostrophe inside a quoted title no longer breaks the pair around it")
+    s.eq(en("'How to Train a Girlfriend Who Can't Wait'"),
+         "\u2018How to Train a Girlfriend Who Can\u2019t Wait\u2019",
+         "and the same holds where the apostrophe comes late")
+    s.eq(en("The Blade 'Manslayer'"), "The Blade \u2018Manslayer\u2019",
+         "a plain pair is still a pair, not an apostrophe at its end")
+    s.eq(en("The Eguchis' House"), "The Eguchis\u2019 House",
+         "and a trailing apostrophe with no partner is still an apostrophe")
 
 
 if __name__ == "__main__":

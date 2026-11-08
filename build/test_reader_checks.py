@@ -29,6 +29,16 @@ COVERS = ["build/reader_checks.py"]
 
 
 def main(s):
+    # A MARKED NAME IS ONE GUESS HOWEVER MANY ROWS DRAW IT, so the count does not climb as its
+    # works publish. 989 marks were 225 names on 2026-11-08.
+    mark = '<sup class="unc floor" title="t">[?]</sup>'
+    byline = f"Ikeda Shiori{mark}"
+    s.eq(rc.floor_marks([byline] * 40), 1, "a byline drawn on forty rows is one mark")
+    s.eq(rc.floor_marks([byline, f"Mori Natsu{mark} / Ikeda Shiori{mark}"]), 3,
+         "two renderings are counted each, with every mark each one carries")
+    s.eq(rc.floor_marks([["a row"], "no mark", byline]), 1,
+         "a call answering with rows holds no mark, and a rendering without one adds none")
+
     import tempfile
 
     # ── THE SUITE'S OWN SHAPE ─────────────────────────────────────────────────────────────────
