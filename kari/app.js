@@ -3979,7 +3979,7 @@ async function renderReleases() {
   const rows = [];
   (WORKS.works || []).forEach(w => (w.volumes || []).forEach(v => {
     const d = v.published || (String(v.delivered || '') <= today ? v.delivered : null);
-    if (d) rows.push({ d: String(d), w, n: v.number, at: v.number_n, isbn: v.isbn,
+    if (d) rows.push({ d: String(d), w, v, n: v.number, at: v.number_n, isbn: v.isbn,
                        fin: v.final_volume ? v.final_volume_basis : null });
   }));
   rows.sort((a, b) => b.d.localeCompare(a.d) || a.w.title.ja.localeCompare(b.w.title.ja));
@@ -4025,8 +4025,11 @@ async function renderReleases() {
         // and the rest say nothing rather than being numbered by their position in a sorted list.
         // Same rule as the work page, from the same function: the releases tab was printing
         // `第vol. 8巻` for every volume MADB numbered in words.
-        const vol = r.n
-          ? `<span class="relvn">${esc(volLabel({ number: r.n, number_n: r.at }))}</span>` : '';
+        // AND BY WHAT THE RECORD CALLS IT WHERE IT HAS NO NUMBER, as the work page does. Asked for
+        // the number alone, seven stories BOOK☆WALKER sells from ギャルと地味子が恋をする青春百合
+        // アンソロジー on one day were drawn as the anthology seven times over.
+        const volText = volLabel(r.v);
+        const vol = volText ? `<span class="relvn">${esc(volText)}</span>` : '';
         // The volume that ended the series, where a shop states both that it ended and how long it
         // is. The updates tab marks a final chapter the same way; a volume carries no such marking
         // of its own, so this says whose claim it is.
@@ -4729,10 +4732,12 @@ function compactList(rows) {
       // One complete row per language. Everything in it. The kind badge, the platform name, the
       // access badges: is rendered again on the English line rather than left in Japanese, which
       // is what 併記 asks for and what the previous "English title underneath" did not give.
+      // A LATE FIND'S DATE CARRIES ITS YEAR. It is by definition not this month's, and drawn
+      // without one, あのレモンかじって。's 2019-03-08 read as a March this year.
       const line = () => `${kindTag(lead)}
         <span class="ccell"><span class="cmain">${goTo ? `<a href="${esc(goTo)}" target="_blank" rel="noopener noreferrer nofollow">${workLabel(lead)}</a>`
                    : `<span style="font-weight:600">${workLabel(lead)}</span>`}
-        ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc(fmtDate(lead.pub))}</span>` : ''}
+        ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc(fmtDate(lead.pub, { year: true }))}</span>` : ''}
         ${lead.basis === 'read' ? `<span class="k k-unk" title="${esc(T(UNSTATED_DATE[0], UNSTATED_DATE[1]))}">${esc(T('日付不明'))}</span>` : ''}
         ${lead.title_unsplit ? `<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">${esc(T('作者未分離'))}</span>` : ''}
         </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(platName(lead.plat_name || lead.plat))}</span>
