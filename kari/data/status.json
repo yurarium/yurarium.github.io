@@ -1,12 +1,8 @@
 {
- "generated": "2026-11-09T12:44:15+00:00",
+ "generated": "2026-11-09T14:57:11+00:00",
  "since_last": {
-  "at": "2026-11-08T21:26:14+00:00",
-  "statistics": {
-   "works": 1,
-   "with_identifier": 1,
-   "chapters": 4
-  }
+  "at": "2026-11-09T12:44:15+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -29,20 +25,20 @@
  },
  "last_run": {
   "at": "2026-11-09",
-  "releases": 1087,
+  "releases": 1089,
   "works": 2766,
   "platforms": 19,
   "series_rows": 3330,
   "assembled": 3331,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 785,
+   "discovery-candidate": 787,
    "known-work-match": 33,
    "platform-genre": 269
   },
   "collapsed": {
-   "duplicate_chapters": 259,
-   "resolver": 132,
+   "duplicate_chapters": 258,
+   "resolver": 131,
    "samples": 0,
    "thin_sitemap": 11
   }
@@ -819,8 +815,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 4,
-    "value": 4,
+    "budget": 2,
+    "value": 2,
     "measure": "arrival"
    },
    {
@@ -935,7 +931,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 54,
+    "consecutive": 55,
     "failing_since": "2026-10-16",
     "days": 24,
     "last_ok": null,
@@ -945,7 +941,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 54,
+    "consecutive": 55,
     "failing_since": "2026-10-16",
     "days": 24,
     "last_ok": null,
@@ -955,7 +951,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 54,
+    "consecutive": 55,
     "failing_since": "2026-10-16",
     "days": 24,
     "last_ok": null,
@@ -965,7 +961,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 37,
+    "consecutive": 38,
     "failing_since": "2026-10-24",
     "days": 16,
     "last_ok": "2026-10-23",
@@ -975,7 +971,7 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 4,
+    "consecutive": 5,
     "failing_since": "2026-11-09",
     "days": 0,
     "last_ok": "2026-11-08",
@@ -985,12 +981,12 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 2,
+    "consecutive": 3,
     "failing_since": "2026-11-09",
     "days": 0,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
-    "issue": false
+    "issue": true
    }
   ],
   "healthy": 167,
@@ -1112,14 +1108,14 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1713,
-   "rows": 17707,
+   "works": 1714,
+   "rows": 17708,
    "retrieved": "2026-11-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17268,
-   "well_formed": 17268,
+   "checked_rows": 17269,
+   "well_formed": 17269,
    "malformed": 0,
    "drop": null
   },
@@ -1169,13 +1165,13 @@
    "source": "webpages",
    "files": 52,
    "works": 695,
-   "rows": 10156,
+   "rows": 10157,
    "retrieved": "2026-11-09",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10101,
-   "well_formed": 10099,
+   "checked_rows": 10102,
+   "well_formed": 10100,
    "malformed": 2,
    "drop": null
   }
@@ -1287,7 +1283,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
-    "updates naming a work we do not hold": 4,
+    "updates naming a work we do not hold": 2,
     "works whose first publication country is unattested": 2765,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 7,
