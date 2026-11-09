@@ -1,8 +1,10 @@
 {
- "generated": "2026-11-09T14:57:11+00:00",
+ "generated": "2026-11-09T16:14:14+00:00",
  "since_last": {
-  "at": "2026-11-09T12:44:15+00:00",
-  "statistics": {}
+  "at": "2026-11-09T14:57:11+00:00",
+  "statistics": {
+   "chapters": 2
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,17 +26,17 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-11-09",
-  "releases": 1089,
+  "at": "2026-11-10",
+  "releases": 1081,
   "works": 2766,
   "platforms": 19,
   "series_rows": 3330,
   "assembled": 3331,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 787,
+   "discovery-candidate": 782,
    "known-work-match": 33,
-   "platform-genre": 269
+   "platform-genre": 266
   },
   "collapsed": {
    "duplicate_chapters": 258,
@@ -931,9 +933,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 55,
+    "consecutive": 56,
     "failing_since": "2026-10-16",
-    "days": 24,
+    "days": 25,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -941,9 +943,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 55,
+    "consecutive": 56,
     "failing_since": "2026-10-16",
-    "days": 24,
+    "days": 25,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -951,9 +953,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 55,
+    "consecutive": 56,
     "failing_since": "2026-10-16",
-    "days": 24,
+    "days": 25,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -961,9 +963,9 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 38,
+    "consecutive": 39,
     "failing_since": "2026-10-24",
-    "days": 16,
+    "days": 17,
     "last_ok": "2026-10-23",
     "error": "1 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
     "issue": true
@@ -971,9 +973,9 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 5,
+    "consecutive": 6,
     "failing_since": "2026-11-09",
-    "days": 0,
+    "days": 1,
     "last_ok": "2026-11-08",
     "error": "1 file(s) past their age, e.g. data/source/webpages/bookwalker-tanwa.yaml dated 2026-11-05",
     "issue": true
@@ -981,9 +983,9 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 3,
+    "consecutive": 4,
     "failing_since": "2026-11-09",
-    "days": 0,
+    "days": 1,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
     "issue": true
@@ -999,7 +1001,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 99,
+   "age_days": 100,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1013,7 +1015,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 93,
+   "age_days": 94,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1027,7 +1029,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-11-01",
-   "age_days": 8,
+   "age_days": 9,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1041,7 +1043,7 @@
    "works": 983,
    "rows": 2583,
    "retrieved": "2026-11-01",
-   "age_days": 8,
+   "age_days": 9,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1055,7 +1057,7 @@
    "works": 1796,
    "rows": 4289,
    "retrieved": "2026-11-05",
-   "age_days": 4,
+   "age_days": 5,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1069,7 +1071,7 @@
    "works": 68,
    "rows": 68,
    "retrieved": "2026-11-07",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1082,7 +1084,7 @@
    "files": 2,
    "works": 130,
    "rows": 6340,
-   "retrieved": "2026-11-09",
+   "retrieved": "2026-11-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1096,7 +1098,7 @@
    "files": 6,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-11-09",
+   "retrieved": "2026-11-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1108,9 +1110,9 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1714,
-   "rows": 17708,
-   "retrieved": "2026-11-09",
+   "works": 1716,
+   "rows": 17710,
+   "retrieved": "2026-11-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1124,7 +1126,7 @@
    "files": 5,
    "works": 1022,
    "rows": 7863,
-   "retrieved": "2026-11-09",
+   "retrieved": "2026-11-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1138,7 +1140,7 @@
    "files": 3,
    "works": 1343,
    "rows": 11637,
-   "retrieved": "2026-11-09",
+   "retrieved": "2026-11-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1152,7 +1154,7 @@
    "files": 881,
    "works": 881,
    "rows": 2306,
-   "retrieved": "2026-11-09",
+   "retrieved": "2026-11-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1166,7 +1168,7 @@
    "files": 52,
    "works": 695,
    "rows": 10157,
-   "retrieved": "2026-11-09",
+   "retrieved": "2026-11-10",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1308,9 +1310,9 @@
    "print": 1782,
    "oneshot": 512,
    "completed": 504,
-   "active": 289,
+   "active": 286,
    "dormant": 147,
-   "slow": 54,
+   "slow": 57,
    "unknown": 42
   },
   "english_basis": {
@@ -1324,7 +1326,7 @@
   "print_only": 1782,
   "volumes": 6593,
   "with_identifier": 3330,
-  "chapters": 31336,
+  "chapters": 31338,
   "delivery_dated": 1110
  }
 }
