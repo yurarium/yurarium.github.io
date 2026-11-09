@@ -1,0 +1,20 @@
+# Published update rows that were never updates, withdrawn one at a time.
+#
+# Read by build/from_store.py. A row the store stops producing is otherwise carried forward as
+# published, because an update that happened does not stop having happened. These did not happen:
+# each is page furniture or a reader's words that the chapter-list parser read as a chapter, and
+# the parser has since been taught to refuse it. `--regenerate` would remove them too, along with
+# every legitimate carried row of the month, so each is named here with its reason instead.
+withdrawn:
+  - id: "urasunday:https://urasunday.com/title/2565:10話ずつ"
+    why: >-
+      裏サンデー's pager control, 「10話ずつ」 (ten chapters at a time), paired with a date. Refused by
+      `PAGER` in the pipeline's adapters/recon/extract.py since September.
+  - id: "urasunday:https://urasunday.com/title/603:10話ずつ"
+    why: >-
+      The same pager control on 付き合ってあげてもいいかな's page.
+  - id: "urasunday:https://urasunday.com/title/603:1話の作風と過去作似てんのかな？って過去作調べたら全然違くて（中身も）最高でした"
+    why: >-
+      A reader's comment beside the chapter list, saying that chapter 1's style made them look up
+      the author's earlier work. Refused by `REFERENCE` in adapters/recon/extract.py from
+      2026-11-09.

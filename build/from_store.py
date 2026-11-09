@@ -35,6 +35,22 @@ KARI = ROOT / "kari"
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import rules                                                            # noqa: E402
 
+#: PUBLISHED ROWS THAT WERE NEVER UPDATES, withdrawn one at a time with the reason written down.
+#: The carry below keeps every row the store stops producing, because an update that happened does
+#: not stop having happened. A row that was a pager control or a reader's comment did not happen,
+#: and `--regenerate` would take every legitimate carried row of its month with it.
+WITHDRAWN = pathlib.Path(__file__).resolve().parent / "withdrawn-updates.yaml"
+
+
+def withdrawn(path=None):
+    """`{row id: reason}` from the register, empty where there is none."""
+    p = pathlib.Path(path or WITHDRAWN)
+    if not p.exists():
+        return {}
+    import yaml
+    return {str(e["id"]): str(e.get("why") or "").strip()
+            for e in (yaml.safe_load(p.read_text(encoding="utf-8")) or {}).get("withdrawn") or []}
+
 #: WHERE THE CORPUS'S OWN RULES LIVE, and the dependency runs one way. How a name folds, what a
 #: citation may show a reader, where a personal name parts: those are facts about the corpus and
 #: they have one home, in the pipeline. This build reads them; the pipeline knows nothing about this
@@ -178,7 +194,8 @@ def main(argv=None):
     # half that has to keep moving.
     rules.on_path()
     import emit as _emit
-    carried = []
+    carried, dropped = [], []
+    _withdrawn = withdrawn()
     for name, text in written.items():
         if not re.fullmatch(r"feed/[0-9]{4}-[0-9]{2}\.json", name):
             continue
@@ -195,6 +212,8 @@ def main(argv=None):
         doc = json.loads(text)
         now = {r.get("id") for r in doc.get("releases") or []}
         gone = [held[i] for i in held if i not in now]
+        dropped += [(name, r.get("id")) for r in gone if r.get("id") in _withdrawn]
+        gone = [r for r in gone if r.get("id") not in _withdrawn]
         if not gone:
             continue
         # THE ROWS THE STORE NO LONGER PRODUCES, KEPT AS PUBLISHED. An update that HAPPENED does
@@ -223,6 +242,8 @@ def main(argv=None):
 
     # SAID OUT LOUD, EVERY TIME. A carry that printed nothing would be an archive quietly diverging
     # from the store with no way to see it, which is the shape the refusal was protecting against.
+    for name, i in dropped:
+        print(f"withdrawn: {name}: {i}: {_withdrawn[i]}")
     for name, n, gone in carried:
         print(f"carried forward: {name}: {n} published row(s) the store no longer builds")
         for r in gone[:12]:

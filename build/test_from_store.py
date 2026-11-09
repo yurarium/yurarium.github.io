@@ -184,6 +184,27 @@ def main(s):
     s.eq(rows["a"].get("work"), "corrected", "a row the store still states is rewritten from it")
     s.check("b" in rows, "and the carried row is still carried on the run after")
 
+    # A ROW THAT WAS NEVER AN UPDATE IS WITHDRAWN BY NAME, and nothing else in its month moves.
+    # 裏サンデー's pager 「10話ずつ」 and a reader's comment were published as chapters; regenerating
+    # their months would have taken every legitimate carried row with them.
+    reg = d / "withdrawn.yaml"
+    reg.write_text('withdrawn:\n  - id: "b"\n    why: "a pager control"\n', encoding="utf-8")
+    s.eq(from_store.withdrawn(reg), {"b": "a pager control"}, "the register reads as id and reason")
+    s.eq(from_store.withdrawn(d / "absent.yaml"), {}, "and an absent register withdraws nothing")
+    _was = from_store.WITHDRAWN
+    from_store.WITHDRAWN = reg
+    try:
+        code, said = run()
+    finally:
+        from_store.WITHDRAWN = _was
+    s.eq([r["id"] for r in
+          json.loads((site / "data" / "feed" / "2026-07.json").read_text())["releases"]],
+         ["a", "c"], "the withdrawn row is not carried, and the rows the store states stay")
+    s.check("withdrawn:" in said and "a pager control" in said,
+            "and the withdrawal is said with its reason")
+    (site / "data" / "feed" / "2026-07.json").write_text(_dated(published), encoding="utf-8")
+    produced["feed/2026-07.json"] = _dated([("a", "2026-07-30"), ("c", "2026-07-10")])
+
     # A MONTH NAMED FOR REGENERATION KEEPS NOTHING, which is how a row leaves an archive on
     # purpose: 28 preview instalments were removed that way, deliberately and in a commit message.
     code, said = run("--regenerate", "2026-07")
