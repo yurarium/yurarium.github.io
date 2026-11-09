@@ -3165,7 +3165,7 @@ function compactList(rows) {
       const line = () => `${kindTag(lead)}
         <span class="ccell"><span class="cmain">${goTo ? `<a href="${esc(goTo)}" target="_blank" rel="noopener noreferrer nofollow">${workLabel(lead)}</a>`
                    : `<span style="font-weight:600">${workLabel(lead)}</span>`}
-        ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; we only learned of it on ${esc(lead.feed_date)}. Editorial coverage of one-shots runs weeks behind publication, so it is shown on the day it became known rather than buried under its publication date.">${esc(T('既出'))} ${esc(fmtDate(lead.pub, { year: true }))}</span>` : ''}
+        ${lead.late_discovered ? `<span class="k k-adv" title="published ${esc(lead.pub)}; found on ${esc(lead.feed_date)}, after an earlier update had missed it, so it is listed on the day it was found rather than below days you may already have read.">${esc(T('既出'))} ${esc(fmtDate(lead.pub, { year: true }))}</span>` : ''}
         ${lead.basis === 'read' ? `<span class="k k-unk" title="${esc(T(UNSTATED_DATE[0], UNSTATED_DATE[1]))}">${esc(T('日付不明'))}</span>` : ''}
         ${lead.title_unsplit ? `<span class="k k-unk" title="the source runs title and author together in one cell; we have no confirmed title to split it on, so it is shown as given">${esc(T('作者未分離'))}</span>` : ''}
         </span><span class="cmeta"><span class="m"${lead.origin_note ? ` title="${esc(lead.origin_note)}"` : ''}>${esc(platName(lead.plat_name || lead.plat))}</span>
