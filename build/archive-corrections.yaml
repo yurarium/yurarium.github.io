@@ -1,0 +1,85 @@
+# Corrections to published update rows the store no longer builds, one row at a time.
+#
+# Read by build/from_store.py. A row the store stops producing is otherwise carried forward exactly
+# as published, because an update that happened does not stop having happened, and nothing else
+# reaches it. `--regenerate` would correct these only by dropping every legitimate carried row of
+# the month, so each is named here with its reason instead.
+#
+# `withdrawn`: rows that never were updates. Each is page furniture or a reader's words that the
+# chapter-list parser read as a chapter, and the parser has since been taught to refuse it.
+withdrawn:
+  - id: "urasunday:https://urasunday.com/title/2565:10話ずつ"
+    why: >-
+      裏サンデー's pager control, 「10話ずつ」 (ten chapters at a time), paired with a date. Refused by
+      `PAGER` in the pipeline's adapters/recon/extract.py since September.
+  - id: "urasunday:https://urasunday.com/title/603:10話ずつ"
+    why: >-
+      The same pager control on 付き合ってあげてもいいかな's page.
+  - id: "urasunday:https://urasunday.com/title/603:1話の作風と過去作似てんのかな？って過去作調べたら全然違くて（中身も）最高でした"
+    why: >-
+      A reader's comment beside the chapter list, saying that chapter 1's style made them look up
+      the author's earlier work. Refused by `REFERENCE` in adapters/recon/extract.py from
+      2026-11-09.
+
+# `reclassified`: rows that happened and were called the wrong thing. Only `kind`, `kind_basis` and
+# `type` may be set; a row's dates and address are what it is a record of.
+#
+# 付き合ってあげてもいいかな ENDED IN 2025 AND WAS RE-DATED ON 2026-09-04. マンガワン's capture of
+# that day listed 「最終14巻コミックスPR」 dated 2025-03-14 above 第127話 to 第133話(最終話), all
+# seven dated 2026-09-04 and six of them for purchase; 裏サンデー gave its 最終話 the same day. Ruled
+# by the project owner on 2026-11-09: access changes, not chapters and not a finale.
+reclassified:
+  - id: "manga-one:https://manga-one.com/viewer/70173:第127話"
+    type: "access-change"
+    kind: "access-change"
+    kind_basis: "an earlier chapter the platform re-dated; ruled an access change"
+    why: >-
+      re-dated by マンガワン on 2026-09-04, eighteen months after the series ended; for purchase that day.
+  - id: "manga-one:https://manga-one.com/viewer/70173:第128話"
+    type: "access-change"
+    kind: "access-change"
+    kind_basis: "an earlier chapter the platform re-dated; ruled an access change"
+    why: >-
+      re-dated by マンガワン on 2026-09-04, eighteen months after the series ended; for purchase that day.
+  - id: "manga-one:https://manga-one.com/viewer/70173:第129話"
+    type: "access-change"
+    kind: "access-change"
+    kind_basis: "an earlier chapter the platform re-dated; ruled an access change"
+    why: >-
+      re-dated by マンガワン on 2026-09-04, eighteen months after the series ended; for purchase that day.
+  - id: "manga-one:https://manga-one.com/viewer/70173:第130話"
+    type: "access-change"
+    kind: "access-change"
+    kind_basis: "an earlier chapter the platform re-dated; ruled an access change"
+    why: >-
+      re-dated by マンガワン on 2026-09-04, eighteen months after the series ended; for purchase that day.
+  - id: "manga-one:https://manga-one.com/viewer/70173:第131話"
+    type: "access-change"
+    kind: "access-change"
+    kind_basis: "an earlier chapter the platform re-dated; ruled an access change"
+    why: >-
+      re-dated by マンガワン on 2026-09-04, eighteen months after the series ended; for purchase that day.
+  - id: "manga-one:https://manga-one.com/viewer/70173:第132話"
+    type: "access-change"
+    kind: "access-change"
+    kind_basis: "an earlier chapter the platform re-dated; ruled an access change"
+    why: >-
+      re-dated by マンガワン on 2026-09-04, eighteen months after the series ended; for purchase that day.
+  - id: "manga-one:https://manga-one.com/viewer/70173:第133話(最終話)"
+    type: "access-change"
+    kind: "access-change"
+    kind_basis: "an earlier chapter the platform re-dated; ruled an access change"
+    why: >-
+      the finale, re-dated by マンガワン on 2026-09-04; the series ended by early 2025, when its final volume was promoted.
+  - id: "urasunday:https://urasunday.com/title/603:最終話) 10年後…"
+    type: "access-change"
+    kind: "access-change"
+    kind_basis: "an earlier chapter the platform re-dated; ruled an access change"
+    why: >-
+      the same finale, re-dated by 裏サンデー on 2026-09-04.
+  - id: "urasunday:https://urasunday.com/title/603:最終話) 10年後… 無料"
+    type: "access-change"
+    kind: "access-change"
+    kind_basis: "an earlier chapter the platform re-dated; ruled an access change"
+    why: >-
+      the same finale with 裏サンデー's free badge read into its name, re-dated on 2026-09-04.

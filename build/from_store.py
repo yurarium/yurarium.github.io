@@ -35,21 +35,30 @@ KARI = ROOT / "kari"
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import rules                                                            # noqa: E402
 
-#: PUBLISHED ROWS THAT WERE NEVER UPDATES, withdrawn one at a time with the reason written down.
-#: The carry below keeps every row the store stops producing, because an update that happened does
-#: not stop having happened. A row that was a pager control or a reader's comment did not happen,
-#: and `--regenerate` would take every legitimate carried row of its month with it.
-WITHDRAWN = pathlib.Path(__file__).resolve().parent / "withdrawn-updates.yaml"
+#: CORRECTIONS TO PUBLISHED ROWS THE STORE NO LONGER BUILDS, one row at a time with the reason
+#: written down. The carry below keeps every such row as it was published, because an update that
+#: happened does not stop having happened, and nothing else can reach it. `withdrawn` names a row
+#: that never was an update: a pager control, a reader's comment. `reclassified` names one that
+#: happened and was called the wrong thing, and states what it was. `--regenerate` would do either
+#: only by dropping every legitimate carried row of the month.
+CORRECTIONS = pathlib.Path(__file__).resolve().parent / "archive-corrections.yaml"
+#: What a reclassification may set. A row's dates and address are what it is a record of, and are
+#: not corrected here.
+RECLASSIFIABLE = ("kind", "kind_basis", "type")
 
 
-def withdrawn(path=None):
-    """`{row id: reason}` from the register, empty where there is none."""
-    p = pathlib.Path(path or WITHDRAWN)
+def corrections(path=None):
+    """`(withdrawn, reclassified)`: `{row id: reason}` and `{row id: (fields, reason)}`."""
+    p = pathlib.Path(path or CORRECTIONS)
     if not p.exists():
-        return {}
+        return {}, {}
     import yaml
-    return {str(e["id"]): str(e.get("why") or "").strip()
-            for e in (yaml.safe_load(p.read_text(encoding="utf-8")) or {}).get("withdrawn") or []}
+    doc = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+    out = {str(e["id"]): str(e.get("why") or "").strip() for e in doc.get("withdrawn") or []}
+    re_ = {str(e["id"]): ({k: e[k] for k in RECLASSIFIABLE if k in e},
+                          str(e.get("why") or "").strip())
+           for e in doc.get("reclassified") or []}
+    return out, re_
 
 #: WHERE THE CORPUS'S OWN RULES LIVE, and the dependency runs one way. How a name folds, what a
 #: citation may show a reader, where a personal name parts: those are facts about the corpus and
@@ -194,8 +203,8 @@ def main(argv=None):
     # half that has to keep moving.
     rules.on_path()
     import emit as _emit
-    carried, dropped = [], []
-    _withdrawn = withdrawn()
+    carried, dropped, corrected = [], [], []
+    _withdrawn, _reclassified = corrections()
     for name, text in written.items():
         if not re.fullmatch(r"feed/[0-9]{4}-[0-9]{2}\.json", name):
             continue
@@ -214,6 +223,13 @@ def main(argv=None):
         gone = [held[i] for i in held if i not in now]
         dropped += [(name, r.get("id")) for r in gone if r.get("id") in _withdrawn]
         gone = [r for r in gone if r.get("id") not in _withdrawn]
+        for r in gone:
+            if r.get("id") in _reclassified:
+                fields, _why = _reclassified[r["id"]]
+                if any(r.get(k) != v for k, v in fields.items()):
+                    corrected.append((name, r["id"], {k: (r.get(k), v) for k, v in fields.items()
+                                                     if r.get(k) != v}))
+                r.update(fields)
         if not gone:
             continue
         # THE ROWS THE STORE NO LONGER PRODUCES, KEPT AS PUBLISHED. An update that HAPPENED does
@@ -244,6 +260,10 @@ def main(argv=None):
     # from the store with no way to see it, which is the shape the refusal was protecting against.
     for name, i in dropped:
         print(f"withdrawn: {name}: {i}: {_withdrawn[i]}")
+    for name, i, changed in corrected:
+        print(f"reclassified: {name}: {i}: "
+              + ", ".join(f"{k} {a!r} -> {b!r}" for k, (a, b) in changed.items())
+              + f": {_reclassified[i][1]}")
     for name, n, gone in carried:
         print(f"carried forward: {name}: {n} published row(s) the store no longer builds")
         for r in gone[:12]:

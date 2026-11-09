@@ -2209,7 +2209,7 @@ const TYPE_JA = { chapter:'話', oneshot:'読み切り', trial:'試し読み', e
 // De-emphasise only what is KNOWN not to advance the story. `unclassified` is not known either
 // way: dimming it would assert something the data does not support (REQUIREMENTS §6: unmatched
 // values are quarantined, not coerced).
-const NON_STORY = new Set(['trial', 'notice', 'apology-art', 'republication']);
+const NON_STORY = new Set(['trial', 'notice', 'apology-art', 'republication', 'access-change']);
 
 /* ── Links a reader outside Japan cannot follow ──────────────────────────────────────────────
    `feed/meta.json` lists the hosts that refuse readers outside Japan (`data/platforms.yaml`,
@@ -4568,7 +4568,7 @@ const EN = {
   /* badges: initial capital */
   '更新中':'Updating', '停滞':'Slow', '休眠':'Dormant', '不明':'Unknown', '完結':'Completed',
   '読切':'One-shot', '最終回':'Final', '新連載':'New', '新話':'Chapter', 'その他':'Other',
-  '休載':'Hiatus',
+  '休載':'Hiatus', '無料化':'Now free', '配信変更':'Access change',
   '更新予定':'Expected',
   '公式予告':'Announced',
   '予告日超過':'Overdue',
@@ -4618,6 +4618,10 @@ const KIND = {
   // AN EARLIER CHAPTER MADE FREE, which the free view exists for. It had no badge and went through
   // the chapter rules, so 2026-10-16 drew nineteen old chapters of 幸腹グラフィティ as 新話.
   'became-free': ['無料化', 'k-oth', 'an earlier chapter the platform made free to read'],
+  // AN EARLIER CHAPTER LISTED AGAIN, on terms that are not free. マンガワン re-dated the last seven
+  // chapters of 付き合ってあげてもいいかな to 2026-09-04, eighteen months after the series ended,
+  // six of them for purchase: an update about access, and neither a chapter nor 無料化.
+  'access-change': ['配信変更', 'k-oth', 'an earlier chapter the platform listed again; not a new chapter'],
   'unknown':     ['—',      'k-unk', 'no chapter information available'],
   // A prediction, and the only kind here that describes something which has not happened. It gets
   // its own badge because reusing 新話 would state that a chapter exists, which is exactly the
@@ -4692,7 +4696,7 @@ function reportedBy(r) {
 // outranks a notice, so a new series arriving with several chapters still reads as 新連載.
 // An ending outranks an ordinary chapter but not a new series: a series starting is the thing a
 // reader most wants surfaced, and a finale should not be shouting over it.
-const KIND_RANK = { 'new-series': 4, 'oneshot': 4, 'final': 3, 'new-chapter': 2, 'announced': 2, 'overdue': 2, 'expected': 2, 'overdue-inferred': 2, 'other': 1, 'skipped': 1, 'became-free': 1, 'unknown': 0 };
+const KIND_RANK = { 'new-series': 4, 'oneshot': 4, 'final': 3, 'new-chapter': 2, 'announced': 2, 'overdue': 2, 'expected': 2, 'overdue-inferred': 2, 'other': 1, 'skipped': 1, 'became-free': 1, 'access-change': 1, 'unknown': 0 };
 
 function compactList(rows) {
   let html = '';
@@ -4763,8 +4767,10 @@ function compactList(rows) {
 
 // The kind tag already says 読切; TYPE_JA says 読み切り. Same fact, twice, side by side.
 function redundantType(r) {
+  // An access change is drawn by its kind, 無料化 or 配信変更, and its type printed raw beside it.
   return (r.type === 'oneshot' && r.kind === 'oneshot') ||
-         (r.type === 'chapter' && r.kind !== 'unknown');
+         (r.type === 'chapter' && r.kind !== 'unknown') ||
+         r.type === 'access-change';
 }
 
 // One badge for access, because free / free-timed / paid are one question with one answer.

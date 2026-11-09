@@ -187,19 +187,27 @@ def main(s):
     # A ROW THAT WAS NEVER AN UPDATE IS WITHDRAWN BY NAME, and nothing else in its month moves.
     # 裏サンデー's pager 「10話ずつ」 and a reader's comment were published as chapters; regenerating
     # their months would have taken every legitimate carried row with them.
-    reg = d / "withdrawn.yaml"
-    reg.write_text('withdrawn:\n  - id: "b"\n    why: "a pager control"\n', encoding="utf-8")
-    s.eq(from_store.withdrawn(reg), {"b": "a pager control"}, "the register reads as id and reason")
-    s.eq(from_store.withdrawn(d / "absent.yaml"), {}, "and an absent register withdraws nothing")
-    _was = from_store.WITHDRAWN
-    from_store.WITHDRAWN = reg
+    reg = d / "corrections.yaml"
+    reg.write_text('withdrawn:\n  - id: "b"\n    why: "a pager control"\n'
+                   'reclassified:\n  - id: "c"\n    kind: "access-change"\n    date: "nope"\n'
+                   '    why: "re-dated by the platform"\n', encoding="utf-8")
+    s.eq(from_store.corrections(reg),
+         ({"b": "a pager control"}, {"c": ({"kind": "access-change"}, "re-dated by the platform")}),
+         "the register reads as id and reason, and a reclassification sets only what it may")
+    s.eq(from_store.corrections(d / "absent.yaml"), ({}, {}), "and an absent register corrects nothing")
+    _was = from_store.CORRECTIONS
+    from_store.CORRECTIONS = reg
+    produced["feed/2026-07.json"] = _dated([("a", "2026-07-30")])
     try:
         code, said = run()
     finally:
-        from_store.WITHDRAWN = _was
-    s.eq([r["id"] for r in
-          json.loads((site / "data" / "feed" / "2026-07.json").read_text())["releases"]],
-         ["a", "c"], "the withdrawn row is not carried, and the rows the store states stay")
+        from_store.CORRECTIONS = _was
+    rows = {r["id"]: r for r in
+            json.loads((site / "data" / "feed" / "2026-07.json").read_text())["releases"]}
+    s.eq(sorted(rows), ["a", "c"], "the withdrawn row is not carried, and the rest are")
+    s.eq(rows["c"].get("kind"), "access-change", "a reclassified carried row says what it was")
+    s.check("reclassified:" in said and "re-dated by the platform" in said,
+            "and the reclassification is said with its reason")
     s.check("withdrawn:" in said and "a pager control" in said,
             "and the withdrawal is said with its reason")
     (site / "data" / "feed" / "2026-07.json").write_text(_dated(published), encoding="utf-8")
