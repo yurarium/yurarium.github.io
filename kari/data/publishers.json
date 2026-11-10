@@ -3,46 +3,12 @@
  "note": "One record per publishing house, holding the imprint lines it runs with the spellings each line is catalogued under and the years those cover. Publishers and distributors share one namespace: the seat is on the edge to the book.",
  "count": 163,
  "publishers": {
-  "h00039": {
-   "id": "h00039",
-   "name": "とりからの巣",
-   "rows": 2,
-   "works": [
-    "w02099",
-    "w01878"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": null,
-     "name": "とりからの巣",
-     "parent": null,
-     "resolved": false,
-     "rows": 2,
-     "works": [
-      "w02099",
-      "w01878"
-     ],
-     "spellings": [
-      {
-       "raw": "とりからの巣",
-       "rows": 2,
-       "years": [
-        null,
-        null
-       ]
-      }
-     ]
-    }
-   ]
-  },
   "h00002": {
    "id": "h00002",
    "name": "KADOKAWA",
    "rows": 452,
    "works": [
+    "w00098",
     "w00183",
     "w00184",
     "w00014",
@@ -58,7 +24,6 @@
     "w00212",
     "w00122",
     "w03049",
-    "w00098",
     "w00206",
     "w00077",
     "w03307",
@@ -1604,6 +1569,41 @@
        "years": [
         "2019",
         "2019"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "h00039": {
+   "id": "h00039",
+   "name": "とりからの巣",
+   "rows": 2,
+   "works": [
+    "w02099",
+    "w01878"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": null,
+     "name": "とりからの巣",
+     "parent": null,
+     "resolved": false,
+     "rows": 2,
+     "works": [
+      "w02099",
+      "w01878"
+     ],
+     "spellings": [
+      {
+       "raw": "とりからの巣",
+       "rows": 2,
+       "years": [
+        null,
+        null
        ]
       }
      ]

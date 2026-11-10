@@ -1,6 +1,183 @@
 {
  "series": [
   {
+   "chapters": 74,
+   "partial": false,
+   "latest": "2026-11-10",
+   "latest_ep": "第59話",
+   "first": "2021-01-08",
+   "state": "active",
+   "oneshot": false,
+   "completed_basis": null,
+   "state_basis": "no chapter for 18 days in what we hold, but カドコミ still marks the serialisation as running",
+   "free": 18,
+   "free_timed": 0,
+   "priced": 0,
+   "url": "https://comic-walker.com/detail/KC_002798_S",
+   "series_url": null,
+   "sources": [
+    {
+     "platform": "カドコミ",
+     "url": "https://comic-walker.com/detail/KC_002798_S",
+     "chapters": 74,
+     "free": 18,
+     "free_timed": 0,
+     "priced": 0,
+     "latest": "2026-10-23",
+     "partial": false,
+     "format": "standard",
+     "retrieved": "2026-11-10"
+    },
+    {
+     "platform": "pixivコミック",
+     "url": "https://comic.pixiv.net/works/7182",
+     "chapters": 8,
+     "free": 8,
+     "free_timed": 0,
+     "priced": 0,
+     "latest": "2026-11-10",
+     "partial": true,
+     "format": "standard",
+     "retrieved": "2026-11-10"
+    }
+   ],
+   "collection": null,
+   "id": "w00098",
+   "skipped": [
+    [
+     "2022-05-13",
+     "休載イラスト"
+    ]
+   ],
+   "completed_basis_ja": null,
+   "state_basis_ja": "18日間新しい話がないが、カドコミは連載中と表示している",
+   "work": "作りたい女と食べたい女",
+   "author": "ゆざきさかおみ",
+   "evidence": [
+    {
+     "kind": "platform-tag",
+     "rank": 3,
+     "type": "platform",
+     "source": "カドコミ",
+     "term": "GL",
+     "read": "2026-11-10",
+     "url": "https://comic-walker.com/detail/KC_002798_S"
+    }
+   ],
+   "state_claims": [
+    {
+     "source": "カドコミ",
+     "says": "running",
+     "term": "ongoing",
+     "read": "2026-11-10",
+     "url": "https://comic-walker.com/detail/KC_002798_S"
+    }
+   ],
+   "sourced_from": [
+    {
+     "source": "メディア芸術データベース",
+     "holds": "volumes",
+     "read": "2026-11-01",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C450012"
+    },
+    {
+     "source": "openBD",
+     "holds": "volumes",
+     "read": "2026-11-10"
+    },
+    {
+     "source": "メディア芸術データベース",
+     "holds": "attribution",
+     "read": "2026-11-01",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/C450012"
+    }
+   ],
+   "stated_next": {
+    "next_update": "2026-11-27",
+    "platform": "カドコミ"
+   },
+   "print": [
+    {
+     "work_id": "C450012",
+     "shop_url": null,
+     "volumes": 6,
+     "publisher": "KADOKAWA",
+     "imprint": "it COMICS",
+     "first": "2021-06",
+     "last": null,
+     "label": "none",
+     "work_ids": [
+      "C450012"
+     ]
+    }
+   ],
+   "latest_any": "2026-11-10",
+   "latest_any_kind": "chapter",
+   "work_en": {
+    "reading": "ツクリタイ オンナ ト タベタイ オンナ",
+    "ruby": [
+     [
+      "作",
+      "つく"
+     ],
+     [
+      "りたい",
+      null
+     ],
+     [
+      "女",
+      "おんな"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "食",
+      "た"
+     ],
+     [
+      "べたい",
+      null
+     ],
+     [
+      "女",
+      "おんな"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tsukuritai Onna to Tabetai Onna",
+     "double": "Tsukuritai Onna to Tabetai Onna",
+     "plain": "Tsukuritai Onna to Tabetai Onna"
+    },
+    "en": "She Loves to Cook, and She Loves to Eat",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "She Loves to Cook, and She Loves to Eat",
+     "translated": "The Woman Who Wants to Cook and the Woman Who Wants to Eat"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "Yen Press",
+     "url": "https://yenpress.com/series/she-loves-to-cook-and-she-loves-to-eat",
+     "kind": "licensor",
+     "reviewed": "2026-08-08"
+    }
+   },
+   "author_en": {
+    "reading": "ユザキ サカオミ",
+    "romaji": {
+     "macron": "Yuzaki Sakaomi",
+     "double": "Yuzaki Sakaomi",
+     "plain": "Yuzaki Sakaomi"
+    },
+    "en": "Sakaomi Yuzaki",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00003"
+   }
+  },
+  {
    "chapters": 32,
    "partial": false,
    "latest": "2026-11-10",
@@ -38,7 +215,7 @@
      "latest": "2026-11-03",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -90,6 +267,222 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c00124"
+   },
+   "admitted_by": [
+    {
+     "comparator": "webcomics.jp",
+     "shelf": "百合 tag",
+     "retrieved": "2026-11-10",
+     "note": "An aggregator listing a work under its yuri tag is a comparator (DEFINITIONS §2). It says the work exists and where, attests nothing about it, and is never a marketing_label (§4).",
+     "url": "https://webcomics.jp/tag/%E7%99%BE%E5%90%88"
+    }
+   ]
+  },
+  {
+   "chapters": 14,
+   "partial": false,
+   "latest": "2026-11-10",
+   "latest_ep": "第14話「フィアナ、新たな勝負に挑む！～課外演習編～」(1)",
+   "first": "2025-07-29",
+   "state": "active",
+   "oneshot": false,
+   "completed_basis": null,
+   "state_basis": "a chapter arrived today, and nothing states it has ended",
+   "free": 4,
+   "free_timed": 0,
+   "priced": 25,
+   "url": "https://comic-gardo.com/episode/12207421984415789682",
+   "series_url": "https://comic-gardo.com/atom/series/2550912965959809012",
+   "sources": [
+    {
+     "platform": "コミックガルド",
+     "url": "https://comic-gardo.com/episode/12207421984415789682",
+     "chapters": 14,
+     "free": 4,
+     "free_timed": 0,
+     "priced": 25,
+     "latest": "2026-11-10",
+     "partial": false,
+     "format": "standard",
+     "retrieved": "2026-11-10"
+    }
+   ],
+   "collection": null,
+   "id": "w00059",
+   "skipped": [],
+   "completed_basis_ja": null,
+   "state_basis_ja": "本日新しい話があり、終了したとする情報もない",
+   "work": "病弱少女、転生して健康な肉体（最強）を手に入れる　～友達が欲しくて魔境から旅立ったのですが、どうやら私の魔法は少しおかしいようです！？～",
+   "author": "あらた伊里 / アトハ / 狐印",
+   "evidence": [],
+   "state_claims": [],
+   "stated_next": null,
+   "latest_any": "2026-11-10",
+   "latest_any_kind": "chapter",
+   "work_en": {
+    "reading": "ビョウジャク ショウジョ、 テンセイ シテ ケンコウナ ニクタイ （サイキョウ） ヲ テ ニ イレル 　 ～ トモダチ ガ ホシクテ マキョウ カラ タビダッタ ノデスガ、 ドウ ヤラ ワタシ ノ マホウ ワ スコシ オカシイ ヨウデス！？ ～",
+    "ruby": [
+     [
+      "病弱少女",
+      "びょうじゃくしょうじょ"
+     ],
+     [
+      "、",
+      null
+     ],
+     [
+      "転生",
+      "てんせい"
+     ],
+     [
+      "して",
+      null
+     ],
+     [
+      "健康",
+      "けんこう"
+     ],
+     [
+      "な",
+      null
+     ],
+     [
+      "肉体",
+      "にくたい"
+     ],
+     [
+      "（",
+      null
+     ],
+     [
+      "最強",
+      "さいきょう"
+     ],
+     [
+      "）を",
+      null
+     ],
+     [
+      "手",
+      "て"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "入",
+      "い"
+     ],
+     [
+      "れる　～",
+      null
+     ],
+     [
+      "友達",
+      "ともだち"
+     ],
+     [
+      "が",
+      null
+     ],
+     [
+      "欲",
+      "ほ"
+     ],
+     [
+      "しくて",
+      null
+     ],
+     [
+      "魔境",
+      "まきょう"
+     ],
+     [
+      "から",
+      null
+     ],
+     [
+      "旅立",
+      "たびだ"
+     ],
+     [
+      "ったのですが、どうやら",
+      null
+     ],
+     [
+      "私",
+      "わたし"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "は",
+      null
+     ],
+     [
+      "少",
+      "すこ"
+     ],
+     [
+      "しおかしいようです！？～",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Byōjaku Shōjo, Tensei Shite Kenkōna Nikutai (Saikyō) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyō kara Tabidatta Nodesuga, Dō Yara Watashi no Mahō wa Sukoshi Okashii Yōdesu!? ~",
+     "double": "Byoujaku Shoujo, Tensei Shite Kenkouna Nikutai (Saikyou) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyou kara Tabidatta Nodesuga, Dou Yara Watashi no Mahou wa Sukoshi Okashii Youdesu!? ~",
+     "plain": "Byojaku Shojo, Tensei Shite Kenkona Nikutai (Saikyo) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyo kara Tabidatta Nodesuga, Do Yara Watashi no Maho wa Sukoshi Okashii Yodesu!? ~"
+    },
+    "en": "A Sickly Girl Reincarnates and Gets a Healthy (Overpowered) Body ~I Left the Demon Wilds Because I Wanted Friends, but It Seems My Magic Is a Little Strange!?~",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Sickly Girl Reincarnates and Gets a Healthy (Overpowered) Body ~I Left the Demon Wilds Because I Wanted Friends, but It Seems My Magic Is a Little Strange!?~"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "アラタ イリ / アトハ / コイン",
+    "ruby": [
+     [
+      "あらた",
+      null
+     ],
+     [
+      "伊里",
+      "いり"
+     ],
+     [
+      " / ",
+      null
+     ],
+     [
+      "アトハ",
+      null
+     ],
+     [
+      " / ",
+      null
+     ],
+     [
+      "狐印",
+      "こいん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Arata Iri / Atoha / Koin",
+     "double": "Arata Iri / Atoha / Koin",
+     "plain": "Arata Iri / Atoha / Koin"
+    },
+    "reading_basis": "community-printed",
+    "basis": "romaji",
+    "unverified": true
    },
    "admitted_by": [
     {
@@ -179,6 +572,113 @@
    ]
   },
   {
+   "chapters": 12,
+   "partial": true,
+   "latest": "2026-11-10",
+   "latest_ep": "第12話",
+   "first": "2026-08-25",
+   "state": "active",
+   "oneshot": false,
+   "completed_basis": null,
+   "state_basis": "a chapter arrived today, and nothing states it has ended",
+   "free": 4,
+   "free_timed": 0,
+   "priced": 0,
+   "url": "https://comic.pixiv.net/works/13609",
+   "series_url": null,
+   "sources": [
+    {
+     "platform": "pixivコミック",
+     "url": "https://comic.pixiv.net/works/13609",
+     "chapters": 4,
+     "free": 4,
+     "free_timed": 0,
+     "priced": 0,
+     "latest": "2026-11-10",
+     "partial": true,
+     "format": "standard",
+     "retrieved": "2026-11-10"
+    }
+   ],
+   "collection": null,
+   "id": "w03311",
+   "skipped": [],
+   "completed_basis_ja": null,
+   "state_basis_ja": "本日新しい話があり、終了したとする情報もない",
+   "work": "姫騎士と姫巫女",
+   "author": "真くん",
+   "evidence": [],
+   "state_claims": [],
+   "stated_next": null,
+   "latest_any": "2026-11-10",
+   "latest_any_kind": "chapter",
+   "work_en": {
+    "reading": "ヒメキシ ト ヒメミコ",
+    "ruby": [
+     [
+      "姫騎士",
+      "ひめきし"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "姫巫女",
+      "ひめみこ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Himekishi to Himemiko",
+     "double": "Himekishi to Himemiko",
+     "plain": "Himekishi to Himemiko"
+    },
+    "en": "The Princess Knight and the Princess Shrine Maiden",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Princess Knight and the Princess Shrine Maiden"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "シンクン",
+    "ruby": [
+     [
+      "真",
+      "しん"
+     ],
+     [
+      "くん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Shinkun",
+     "double": "Shinkun",
+     "plain": "Shinkun"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033517222",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00008"
+   },
+   "admitted_by": [
+    {
+     "comparator": "webcomics.jp",
+     "shelf": "百合 tag",
+     "retrieved": "2026-11-10",
+     "note": "An aggregator listing a work under its yuri tag is a comparator (DEFINITIONS §2). It says the work exists and where, attests nothing about it, and is never a marketing_label (§4).",
+     "url": "https://webcomics.jp/tag/%E7%99%BE%E5%90%88"
+    }
+   ]
+  },
+  {
    "chapters": 167,
    "partial": true,
    "latest": "2026-11-09",
@@ -204,7 +704,7 @@
      "latest": "2026-11-09",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -320,7 +820,7 @@
      "latest": "2026-11-09",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -498,7 +998,7 @@
      "latest": "2026-10-17",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -639,7 +1139,7 @@
      "latest": "2026-11-09",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -1989,7 +2489,7 @@
      "latest": "2026-11-09",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -2169,7 +2669,7 @@
      "latest": "2026-11-03",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -2556,7 +3056,7 @@
      "latest": "2026-10-20",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -2719,7 +3219,7 @@
      "latest": "2023-09-05",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -3051,7 +3551,7 @@
      "latest": "2026-11-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -3246,7 +3746,7 @@
      "latest": "2026-10-13",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -3784,7 +4284,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -3942,7 +4442,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -4616,7 +5116,7 @@
      "latest": "2026-11-07",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -4917,7 +5417,7 @@
      "latest": "2026-11-07",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -5075,7 +5575,7 @@
      "latest": "2026-11-07",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -5707,7 +6207,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -5946,7 +6446,7 @@
      "latest": "2026-11-06",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -6378,7 +6878,7 @@
      "latest": "2026-11-06",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -6703,7 +7203,7 @@
      "latest": "2026-11-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -7092,7 +7592,7 @@
      "latest": "2026-11-06",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -7526,7 +8026,7 @@
      "latest": "2026-11-06",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -9774,7 +10274,7 @@
      "latest": "2016-04-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -9884,7 +10384,7 @@
      "latest": "2026-11-05",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -10025,7 +10525,7 @@
      "latest": "2019-06-21",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -10212,7 +10712,7 @@
      "latest": "2026-11-05",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -10328,7 +10828,7 @@
      "latest": "2024-10-05",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -10341,7 +10841,7 @@
      "latest": "2022-01-09",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -10354,7 +10854,7 @@
      "latest": "2026-11-05",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -10476,7 +10976,7 @@
      "latest": "2026-11-05",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -10619,7 +11119,7 @@
      "latest": "2026-11-05",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -10881,7 +11381,7 @@
      "latest": "2026-10-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -12438,7 +12938,7 @@
      "latest": "2026-11-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -12582,7 +13082,7 @@
      "latest": "2026-11-04",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -13753,183 +14253,6 @@
    }
   },
   {
-   "chapters": 74,
-   "partial": false,
-   "latest": "2026-11-03",
-   "latest_ep": "第59話",
-   "first": "2021-01-08",
-   "state": "active",
-   "oneshot": false,
-   "completed_basis": null,
-   "state_basis": "no chapter for 18 days in what we hold, but カドコミ still marks the serialisation as running",
-   "free": 18,
-   "free_timed": 0,
-   "priced": 0,
-   "url": "https://comic-walker.com/detail/KC_002798_S",
-   "series_url": null,
-   "sources": [
-    {
-     "platform": "カドコミ",
-     "url": "https://comic-walker.com/detail/KC_002798_S",
-     "chapters": 74,
-     "free": 18,
-     "free_timed": 0,
-     "priced": 0,
-     "latest": "2026-10-23",
-     "partial": false,
-     "format": "standard",
-     "retrieved": "2026-11-10"
-    },
-    {
-     "platform": "pixivコミック",
-     "url": "https://comic.pixiv.net/works/7182",
-     "chapters": 8,
-     "free": 8,
-     "free_timed": 0,
-     "priced": 0,
-     "latest": "2026-11-03",
-     "partial": true,
-     "format": "standard",
-     "retrieved": "2026-11-10"
-    }
-   ],
-   "collection": null,
-   "id": "w00098",
-   "skipped": [
-    [
-     "2022-05-13",
-     "休載イラスト"
-    ]
-   ],
-   "completed_basis_ja": null,
-   "state_basis_ja": "18日間新しい話がないが、カドコミは連載中と表示している",
-   "work": "作りたい女と食べたい女",
-   "author": "ゆざきさかおみ",
-   "evidence": [
-    {
-     "kind": "platform-tag",
-     "rank": 3,
-     "type": "platform",
-     "source": "カドコミ",
-     "term": "GL",
-     "read": "2026-11-10",
-     "url": "https://comic-walker.com/detail/KC_002798_S"
-    }
-   ],
-   "state_claims": [
-    {
-     "source": "カドコミ",
-     "says": "running",
-     "term": "ongoing",
-     "read": "2026-11-10",
-     "url": "https://comic-walker.com/detail/KC_002798_S"
-    }
-   ],
-   "sourced_from": [
-    {
-     "source": "メディア芸術データベース",
-     "holds": "volumes",
-     "read": "2026-11-01",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C450012"
-    },
-    {
-     "source": "openBD",
-     "holds": "volumes",
-     "read": "2026-11-10"
-    },
-    {
-     "source": "メディア芸術データベース",
-     "holds": "attribution",
-     "read": "2026-11-01",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/C450012"
-    }
-   ],
-   "stated_next": {
-    "next_update": "2026-11-27",
-    "platform": "カドコミ"
-   },
-   "print": [
-    {
-     "work_id": "C450012",
-     "shop_url": null,
-     "volumes": 6,
-     "publisher": "KADOKAWA",
-     "imprint": "it COMICS",
-     "first": "2021-06",
-     "last": null,
-     "label": "none",
-     "work_ids": [
-      "C450012"
-     ]
-    }
-   ],
-   "latest_any": "2026-11-03",
-   "latest_any_kind": "chapter",
-   "work_en": {
-    "reading": "ツクリタイ オンナ ト タベタイ オンナ",
-    "ruby": [
-     [
-      "作",
-      "つく"
-     ],
-     [
-      "りたい",
-      null
-     ],
-     [
-      "女",
-      "おんな"
-     ],
-     [
-      "と",
-      null
-     ],
-     [
-      "食",
-      "た"
-     ],
-     [
-      "べたい",
-      null
-     ],
-     [
-      "女",
-      "おんな"
-     ]
-    ],
-    "romaji": {
-     "macron": "Tsukuritai Onna to Tabetai Onna",
-     "double": "Tsukuritai Onna to Tabetai Onna",
-     "plain": "Tsukuritai Onna to Tabetai Onna"
-    },
-    "en": "She Loves to Cook, and She Loves to Eat",
-    "basis": "licensed",
-    "en_forms": {
-     "licensed": "She Loves to Cook, and She Loves to Eat",
-     "translated": "The Woman Who Wants to Cook and the Woman Who Wants to Eat"
-    },
-    "reading_basis": "analyser",
-    "en_cite": {
-     "source": "Yen Press",
-     "url": "https://yenpress.com/series/she-loves-to-cook-and-she-loves-to-eat",
-     "kind": "licensor",
-     "reviewed": "2026-08-08"
-    }
-   },
-   "author_en": {
-    "reading": "ユザキ サカオミ",
-    "romaji": {
-     "macron": "Yuzaki Sakaomi",
-     "double": "Yuzaki Sakaomi",
-     "plain": "Yuzaki Sakaomi"
-    },
-    "en": "Sakaomi Yuzaki",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00003"
-   }
-  },
-  {
    "chapters": 67,
    "partial": false,
    "latest": "2026-11-03",
@@ -14300,7 +14623,7 @@
      "latest": "2026-10-10",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -14712,7 +15035,7 @@
      "latest": "2026-11-03",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -14935,113 +15258,6 @@
     "reading_basis": "surface",
     "id": "c00343"
    }
-  },
-  {
-   "chapters": 11,
-   "partial": true,
-   "latest": "2026-11-03",
-   "latest_ep": "第11話",
-   "first": "2026-08-25",
-   "state": "active",
-   "oneshot": false,
-   "completed_basis": null,
-   "state_basis": "no chapter for 7 days, and nothing states it has ended",
-   "free": 4,
-   "free_timed": 0,
-   "priced": 0,
-   "url": "https://comic.pixiv.net/works/13609",
-   "series_url": null,
-   "sources": [
-    {
-     "platform": "pixivコミック",
-     "url": "https://comic.pixiv.net/works/13609",
-     "chapters": 4,
-     "free": 4,
-     "free_timed": 0,
-     "priced": 0,
-     "latest": "2026-11-03",
-     "partial": true,
-     "format": "standard",
-     "retrieved": "2026-11-10"
-    }
-   ],
-   "collection": null,
-   "id": "w03311",
-   "skipped": [],
-   "completed_basis_ja": null,
-   "state_basis_ja": "7日間新しい話がなく、終了したとする情報もない",
-   "work": "姫騎士と姫巫女",
-   "author": "真くん",
-   "evidence": [],
-   "state_claims": [],
-   "stated_next": null,
-   "latest_any": "2026-11-03",
-   "latest_any_kind": "chapter",
-   "work_en": {
-    "reading": "ヒメキシ ト ヒメミコ",
-    "ruby": [
-     [
-      "姫騎士",
-      "ひめきし"
-     ],
-     [
-      "と",
-      null
-     ],
-     [
-      "姫巫女",
-      "ひめみこ"
-     ]
-    ],
-    "romaji": {
-     "macron": "Himekishi to Himemiko",
-     "double": "Himekishi to Himemiko",
-     "plain": "Himekishi to Himemiko"
-    },
-    "en": "The Princess Knight and the Princess Shrine Maiden",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Princess Knight and the Princess Shrine Maiden"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "シンクン",
-    "ruby": [
-     [
-      "真",
-      "しん"
-     ],
-     [
-      "くん",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Shinkun",
-     "double": "Shinkun",
-     "plain": "Shinkun"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033517222",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00008"
-   },
-   "admitted_by": [
-    {
-     "comparator": "webcomics.jp",
-     "shelf": "百合 tag",
-     "retrieved": "2026-11-10",
-     "note": "An aggregator listing a work under its yuri tag is a comparator (DEFINITIONS §2). It says the work exists and where, attests nothing about it, and is never a marketing_label (§4).",
-     "url": "https://webcomics.jp/tag/%E7%99%BE%E5%90%88"
-    }
-   ]
   },
   {
    "chapters": 10,
@@ -15907,7 +16123,7 @@
      "latest": "2026-11-02",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -16059,7 +16275,7 @@
      "latest": "2026-10-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -16672,7 +16888,7 @@
      "latest": "2022-01-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -17315,7 +17531,11 @@
      "url": "https://mediaarts-db.artmuseums.go.jp/id/C451264"
     }
    ],
-   "stated_next": null,
+   "stated_next": {
+    "next_update": "2026-11-17",
+    "cadence": "毎週火曜",
+    "platform": "マガポケ"
+   },
    "print": [
     {
      "work_id": "C451264",
@@ -17421,7 +17641,7 @@
      "latest": "2026-10-20",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -17657,7 +17877,7 @@
      "latest": "2026-10-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -17769,7 +17989,7 @@
      "latest": "2026-10-30",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -17947,7 +18167,7 @@
      "latest": "2026-10-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -18418,7 +18638,7 @@
      "latest": "2026-07-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -18832,7 +19052,7 @@
      "latest": "2026-10-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -19420,7 +19640,7 @@
      "latest": "2026-10-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -19707,7 +19927,7 @@
      "latest": "2026-10-29",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -19858,7 +20078,7 @@
      "latest": "2026-10-24",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -19982,7 +20202,7 @@
      "latest": "2026-10-29",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -20130,7 +20350,7 @@
      "latest": "2026-10-29",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -21019,7 +21239,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -21181,7 +21401,7 @@
      "latest": "2025-07-26",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -21929,7 +22149,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -22099,7 +22319,7 @@
      "latest": "2026-10-13",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -22509,7 +22729,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -22669,7 +22889,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -22848,7 +23068,7 @@
      "latest": "2022-06-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -23022,7 +23242,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -23155,7 +23375,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -23411,7 +23631,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -24219,7 +24439,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -24319,222 +24539,6 @@
     },
     "id": "c00157"
    }
-  },
-  {
-   "chapters": 13,
-   "partial": false,
-   "latest": "2026-10-27",
-   "latest_ep": "第13話「フィアナ、拉致される」(2)",
-   "first": "2025-07-29",
-   "state": "active",
-   "oneshot": false,
-   "completed_basis": null,
-   "state_basis": "no chapter for 14 days, and nothing states it has ended",
-   "free": 4,
-   "free_timed": 0,
-   "priced": 24,
-   "url": "https://comic-gardo.com/episode/12207421984415789682",
-   "series_url": "https://comic-gardo.com/atom/series/2550912965959809012",
-   "sources": [
-    {
-     "platform": "コミックガルド",
-     "url": "https://comic-gardo.com/episode/12207421984415789682",
-     "chapters": 13,
-     "free": 4,
-     "free_timed": 0,
-     "priced": 24,
-     "latest": "2026-10-27",
-     "partial": false,
-     "format": "standard",
-     "retrieved": "2026-11-10"
-    }
-   ],
-   "collection": null,
-   "id": "w00059",
-   "skipped": [],
-   "completed_basis_ja": null,
-   "state_basis_ja": "14日間新しい話がなく、終了したとする情報もない",
-   "work": "病弱少女、転生して健康な肉体（最強）を手に入れる　～友達が欲しくて魔境から旅立ったのですが、どうやら私の魔法は少しおかしいようです！？～",
-   "author": "あらた伊里 / アトハ / 狐印",
-   "evidence": [],
-   "state_claims": [],
-   "stated_next": null,
-   "latest_any": "2026-10-27",
-   "latest_any_kind": "chapter",
-   "work_en": {
-    "reading": "ビョウジャク ショウジョ、 テンセイ シテ ケンコウナ ニクタイ （サイキョウ） ヲ テ ニ イレル 　 ～ トモダチ ガ ホシクテ マキョウ カラ タビダッタ ノデスガ、 ドウ ヤラ ワタシ ノ マホウ ワ スコシ オカシイ ヨウデス！？ ～",
-    "ruby": [
-     [
-      "病弱少女",
-      "びょうじゃくしょうじょ"
-     ],
-     [
-      "、",
-      null
-     ],
-     [
-      "転生",
-      "てんせい"
-     ],
-     [
-      "して",
-      null
-     ],
-     [
-      "健康",
-      "けんこう"
-     ],
-     [
-      "な",
-      null
-     ],
-     [
-      "肉体",
-      "にくたい"
-     ],
-     [
-      "（",
-      null
-     ],
-     [
-      "最強",
-      "さいきょう"
-     ],
-     [
-      "）を",
-      null
-     ],
-     [
-      "手",
-      "て"
-     ],
-     [
-      "に",
-      null
-     ],
-     [
-      "入",
-      "い"
-     ],
-     [
-      "れる　～",
-      null
-     ],
-     [
-      "友達",
-      "ともだち"
-     ],
-     [
-      "が",
-      null
-     ],
-     [
-      "欲",
-      "ほ"
-     ],
-     [
-      "しくて",
-      null
-     ],
-     [
-      "魔境",
-      "まきょう"
-     ],
-     [
-      "から",
-      null
-     ],
-     [
-      "旅立",
-      "たびだ"
-     ],
-     [
-      "ったのですが、どうやら",
-      null
-     ],
-     [
-      "私",
-      "わたし"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "魔法",
-      "まほう"
-     ],
-     [
-      "は",
-      null
-     ],
-     [
-      "少",
-      "すこ"
-     ],
-     [
-      "しおかしいようです！？～",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Byōjaku Shōjo, Tensei Shite Kenkōna Nikutai (Saikyō) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyō kara Tabidatta Nodesuga, Dō Yara Watashi no Mahō wa Sukoshi Okashii Yōdesu!? ~",
-     "double": "Byoujaku Shoujo, Tensei Shite Kenkouna Nikutai (Saikyou) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyou kara Tabidatta Nodesuga, Dou Yara Watashi no Mahou wa Sukoshi Okashii Youdesu!? ~",
-     "plain": "Byojaku Shojo, Tensei Shite Kenkona Nikutai (Saikyo) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyo kara Tabidatta Nodesuga, Do Yara Watashi no Maho wa Sukoshi Okashii Yodesu!? ~"
-    },
-    "en": "A Sickly Girl Reincarnates and Gets a Healthy (Overpowered) Body ~I Left the Demon Wilds Because I Wanted Friends, but It Seems My Magic Is a Little Strange!?~",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "A Sickly Girl Reincarnates and Gets a Healthy (Overpowered) Body ~I Left the Demon Wilds Because I Wanted Friends, but It Seems My Magic Is a Little Strange!?~"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "アラタ イリ / アトハ / コイン",
-    "ruby": [
-     [
-      "あらた",
-      null
-     ],
-     [
-      "伊里",
-      "いり"
-     ],
-     [
-      " / ",
-      null
-     ],
-     [
-      "アトハ",
-      null
-     ],
-     [
-      " / ",
-      null
-     ],
-     [
-      "狐印",
-      "こいん"
-     ]
-    ],
-    "romaji": {
-     "macron": "Arata Iri / Atoha / Koin",
-     "double": "Arata Iri / Atoha / Koin",
-     "plain": "Arata Iri / Atoha / Koin"
-    },
-    "reading_basis": "community-printed",
-    "basis": "romaji",
-    "unverified": true
-   },
-   "admitted_by": [
-    {
-     "comparator": "webcomics.jp",
-     "shelf": "百合 tag",
-     "retrieved": "2026-11-10",
-     "note": "An aggregator listing a work under its yuri tag is a comparator (DEFINITIONS §2). It says the work exists and where, attests nothing about it, and is never a marketing_label (§4).",
-     "url": "https://webcomics.jp/tag/%E7%99%BE%E5%90%88"
-    }
-   ]
   },
   {
    "chapters": 9,
@@ -25511,7 +25515,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -25657,7 +25661,7 @@
      "latest": "2026-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -26055,7 +26059,7 @@
      "latest": "2026-10-26",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -26370,7 +26374,7 @@
      "latest": "2026-10-26",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -26505,7 +26509,7 @@
      "latest": "2026-10-26",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -26761,7 +26765,7 @@
      "latest": "2026-10-25",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -27179,7 +27183,7 @@
      "latest": "2026-10-24",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -27464,7 +27468,7 @@
      "latest": "2026-10-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -27764,7 +27768,7 @@
      "latest": "2026-10-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -28065,7 +28069,7 @@
      "latest": "2026-10-23",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -28380,7 +28384,7 @@
      "latest": "2026-10-23",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -28567,7 +28571,7 @@
      "latest": "2026-10-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -29635,7 +29639,7 @@
      "latest": "2026-10-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -30048,7 +30052,7 @@
      "latest": "2026-10-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -30272,7 +30276,7 @@
      "latest": "2026-10-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -30430,7 +30434,7 @@
      "latest": "2026-10-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -30543,7 +30547,7 @@
      "latest": "2026-10-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -30654,7 +30658,7 @@
      "latest": "2026-10-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -30793,7 +30797,7 @@
      "latest": "2026-10-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -31236,7 +31240,7 @@
      "latest": "2023-06-30",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     },
     {
      "platform": "pixivコミック",
@@ -31935,7 +31939,7 @@
      "latest": "2026-10-20",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -32084,7 +32088,7 @@
      "latest": "2026-10-19",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -32263,7 +32267,7 @@
      "latest": "2026-10-19",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -32892,7 +32896,7 @@
      "latest": "2022-01-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -33305,7 +33309,7 @@
      "latest": "2026-10-17",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -33551,7 +33555,7 @@
      "latest": "2026-10-16",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -33744,7 +33748,7 @@
      "latest": "2021-12-16",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -33964,7 +33968,7 @@
      "latest": "2021-12-16",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -34532,7 +34536,7 @@
      "latest": "2024-01-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -35122,7 +35126,7 @@
      "latest": "2026-09-11",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -35687,7 +35691,7 @@
      "latest": "2026-06-09",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -36739,7 +36743,7 @@
      "latest": "2026-10-15",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -37073,7 +37077,7 @@
      "latest": "2026-10-15",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -37395,7 +37399,7 @@
      "latest": "2026-10-15",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -37649,7 +37653,7 @@
      "latest": "2022-12-13",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -38137,7 +38141,7 @@
      "latest": "2017-11-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -38150,7 +38154,7 @@
      "latest": "2017-11-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -38300,7 +38304,7 @@
      "latest": "2026-10-13",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -38668,7 +38672,7 @@
      "latest": "2026-10-13",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -38787,7 +38791,7 @@
      "latest": "2026-10-13",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -38924,7 +38928,7 @@
      "latest": "2026-10-13",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -39632,7 +39636,7 @@
      "latest": "2026-10-10",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -39768,7 +39772,7 @@
      "latest": "2026-10-10",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -39857,7 +39861,7 @@
      "latest": "2026-10-09",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -40012,7 +40016,7 @@
      "latest": "2016-04-09",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -41232,7 +41236,7 @@
      "latest": "2026-10-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -41572,7 +41576,7 @@
      "latest": "2026-10-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -41674,7 +41678,7 @@
      "latest": "2026-10-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -41822,7 +41826,7 @@
      "latest": "2026-10-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -42305,7 +42309,7 @@
      "latest": "2026-10-06",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -42822,7 +42826,7 @@
      "latest": "2020-06-20",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -43062,7 +43066,7 @@
      "latest": "2026-10-02",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -43176,7 +43180,7 @@
      "latest": "2026-10-01",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -43536,7 +43540,7 @@
      "latest": "2026-09-29",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -43846,7 +43850,7 @@
      "latest": "2026-09-29",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -44177,7 +44181,7 @@
      "latest": "2026-09-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -44551,7 +44555,7 @@
      "latest": "2026-09-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -45226,7 +45230,7 @@
      "latest": "2026-09-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -45618,7 +45622,7 @@
      "latest": "2024-10-01",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -47383,7 +47387,7 @@
      "latest": "2026-09-15",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -47547,7 +47551,7 @@
      "latest": "2026-09-15",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -47637,7 +47641,7 @@
      "latest": "2026-09-10",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -48990,7 +48994,7 @@
      "latest": "2024-03-15",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -49363,7 +49367,7 @@
      "latest": "2026-09-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -50301,7 +50305,7 @@
      "latest": "2026-08-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -51303,7 +51307,7 @@
      "latest": "2024-10-15",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -53286,7 +53290,7 @@
      "latest": "2026-08-07",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -53616,7 +53620,7 @@
      "latest": "2026-08-06",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -54540,7 +54544,7 @@
      "latest": "2026-07-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -54697,7 +54701,7 @@
      "latest": "2019-04-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -56006,7 +56010,7 @@
      "latest": "2026-07-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -56351,7 +56355,7 @@
      "latest": "2025-10-31",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -56996,7 +57000,7 @@
      "latest": "2021-08-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -57009,7 +57013,7 @@
      "latest": "2021-08-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -57034,7 +57038,7 @@
      "latest": "2022-02-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -58601,7 +58605,7 @@
      "latest": "2026-06-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -58727,7 +58731,7 @@
      "latest": "2026-06-26",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -64530,7 +64534,7 @@
      "latest": "2026-05-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -65214,7 +65218,7 @@
      "latest": "2016-07-16",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -66038,7 +66042,7 @@
      "latest": "2019-06-12",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -67645,7 +67649,7 @@
      "latest": "2024-12-20",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -67813,7 +67817,7 @@
      "latest": "2026-04-17",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -68108,7 +68112,7 @@
      "latest": "2022-01-29",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -68916,7 +68920,7 @@
      "latest": "2026-04-10",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -69434,7 +69438,7 @@
      "latest": "2026-04-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -69703,7 +69707,7 @@
      "latest": "2026-04-01",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -70275,7 +70279,7 @@
      "latest": "2024-11-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -72734,7 +72738,7 @@
      "latest": "2026-02-17",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -73762,7 +73766,7 @@
      "latest": "2021-12-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -75018,7 +75022,7 @@
      "latest": "2026-01-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -76543,7 +76547,7 @@
      "latest": "2026-01-16",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -76699,7 +76703,7 @@
      "latest": "2026-01-15",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -76856,7 +76860,7 @@
      "latest": "2026-01-15",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -77292,7 +77296,7 @@
      "latest": "2024-12-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -78232,7 +78236,7 @@
      "latest": "2025-12-24",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -78593,7 +78597,7 @@
      "latest": "2025-12-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -79153,7 +79157,7 @@
      "latest": "2025-12-17",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -79653,7 +79657,7 @@
      "latest": "2025-12-09",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -79787,7 +79791,7 @@
      "latest": "2025-12-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -81234,7 +81238,7 @@
      "latest": "2025-11-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -82877,7 +82881,7 @@
      "latest": "2025-11-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -83440,7 +83444,7 @@
      "latest": "2025-10-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -83823,7 +83827,7 @@
      "latest": "2025-10-26",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -84226,7 +84230,7 @@
      "latest": "2025-10-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -84618,7 +84622,7 @@
      "latest": "2022-03-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -85284,7 +85288,7 @@
      "latest": "2025-10-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -85438,7 +85442,7 @@
      "latest": "2025-07-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -85590,7 +85594,7 @@
      "latest": "2025-10-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -85759,7 +85763,7 @@
      "latest": "2025-10-03",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -85948,7 +85952,7 @@
      "latest": "2024-03-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -85961,7 +85965,7 @@
      "latest": "2024-03-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -86460,7 +86464,7 @@
      "latest": "2023-12-21",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -87120,7 +87124,7 @@
      "latest": "2023-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -87591,7 +87595,7 @@
      "latest": "2025-09-01",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -87748,7 +87752,7 @@
      "latest": "2025-08-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -87908,7 +87912,7 @@
      "latest": "2025-08-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -88582,7 +88586,7 @@
      "latest": "2023-12-21",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -89787,7 +89791,7 @@
      "latest": "2025-08-13",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -97585,7 +97589,7 @@
      "latest": "2022-08-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -97725,7 +97729,7 @@
      "latest": "2025-08-06",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -98009,7 +98013,7 @@
      "latest": "2024-01-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -98254,7 +98258,7 @@
      "latest": "2023-06-15",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -98779,7 +98783,7 @@
      "latest": "2025-07-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -99060,7 +99064,7 @@
      "latest": "2025-07-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -99419,7 +99423,7 @@
      "latest": "2024-04-11",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -100929,7 +100933,7 @@
      "latest": "2025-06-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -101212,7 +101216,7 @@
      "latest": "2025-06-21",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -101781,7 +101785,7 @@
      "latest": "2025-06-18",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -102642,7 +102646,7 @@
      "latest": "2025-06-05",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -102873,7 +102877,7 @@
      "latest": "2025-06-02",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -103438,7 +103442,7 @@
      "latest": "2025-05-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -103952,7 +103956,7 @@
      "latest": "2025-05-09",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -104299,7 +104303,7 @@
      "latest": "2025-04-24",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -104683,7 +104687,7 @@
      "latest": "2021-07-17",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -105061,7 +105065,7 @@
      "latest": "2025-03-26",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -105686,7 +105690,7 @@
      "latest": "2025-03-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -105802,7 +105806,7 @@
      "latest": "2025-03-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -106317,7 +106321,7 @@
      "latest": "2025-03-14",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -107625,7 +107629,7 @@
      "latest": "2025-02-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -108186,7 +108190,7 @@
      "latest": "2025-02-24",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -108596,7 +108600,7 @@
      "latest": "2025-02-17",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -108747,7 +108751,7 @@
      "latest": "2025-02-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -109398,7 +109402,7 @@
      "latest": "2024-12-21",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -109570,7 +109574,7 @@
      "latest": "2025-02-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -109831,7 +109835,7 @@
      "latest": "2025-02-01",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -110123,7 +110127,7 @@
      "latest": "2025-02-01",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -110428,7 +110432,7 @@
      "latest": "2025-01-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -110578,7 +110582,7 @@
      "latest": "2025-01-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -110698,7 +110702,7 @@
      "latest": "2025-01-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -110841,7 +110845,7 @@
      "latest": "2025-01-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -110941,7 +110945,7 @@
      "latest": "2025-01-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -111263,7 +111267,7 @@
      "latest": "2025-01-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -111938,7 +111942,7 @@
      "latest": "2021-07-20",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -112184,7 +112188,7 @@
      "latest": "2025-01-19",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -112895,7 +112899,7 @@
      "latest": "2024-04-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -113260,7 +113264,7 @@
      "latest": "2018-12-29",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -113801,7 +113805,7 @@
      "latest": "2024-12-13",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -114406,7 +114410,7 @@
      "latest": "2024-12-05",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -115581,7 +115585,7 @@
      "latest": "2023-12-19",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -116075,7 +116079,7 @@
      "latest": "2024-11-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -117241,7 +117245,7 @@
      "latest": "2024-10-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -117386,7 +117390,7 @@
      "latest": "2024-10-23",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -117576,7 +117580,7 @@
      "latest": "2024-10-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -117705,7 +117709,7 @@
      "latest": "2024-10-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -118149,7 +118153,7 @@
      "latest": "2023-10-29",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -118287,7 +118291,7 @@
      "latest": "2023-08-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -119607,7 +119611,7 @@
      "latest": "2024-10-03",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -120356,7 +120360,7 @@
      "latest": "2024-09-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -120801,7 +120805,7 @@
      "latest": "2024-09-20",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -121045,7 +121049,7 @@
      "latest": "2024-09-18",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -121166,7 +121170,7 @@
      "latest": "2024-09-16",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -121539,7 +121543,7 @@
      "latest": "2024-09-13",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -124373,7 +124377,7 @@
      "latest": "2024-08-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -125177,7 +125181,7 @@
      "latest": "2024-08-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -126242,7 +126246,7 @@
      "latest": "2024-08-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -126724,7 +126728,7 @@
      "latest": "2024-08-05",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -127495,7 +127499,7 @@
      "latest": "2024-07-12",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -129255,7 +129259,7 @@
      "latest": "2023-06-01",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -130042,7 +130046,7 @@
      "latest": "2024-06-01",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -130195,7 +130199,7 @@
      "latest": "2024-05-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -130383,7 +130387,7 @@
      "latest": "2024-05-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -130506,7 +130510,7 @@
      "latest": "2024-05-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -130654,7 +130658,7 @@
      "latest": "2017-01-07",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -131184,7 +131188,7 @@
      "latest": "2024-05-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -131468,7 +131472,7 @@
      "latest": "2023-12-26",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -132226,7 +132230,7 @@
      "latest": "2024-04-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -132747,7 +132751,7 @@
      "latest": "2016-10-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -133022,7 +133026,7 @@
      "latest": "2018-04-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -133132,7 +133136,7 @@
      "latest": "2024-04-20",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -133476,7 +133480,7 @@
      "latest": "2022-03-02",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -133489,7 +133493,7 @@
      "latest": "2024-04-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -134364,7 +134368,7 @@
      "latest": "2023-05-13",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -134732,7 +134736,7 @@
      "latest": "2024-04-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -134971,7 +134975,7 @@
      "latest": "2023-12-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -135745,7 +135749,7 @@
      "latest": "2024-03-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -136111,7 +136115,7 @@
      "latest": "2024-03-26",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -136691,7 +136695,7 @@
      "latest": "2024-03-19",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -137548,7 +137552,7 @@
      "latest": "2024-03-01",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -137722,7 +137726,7 @@
      "latest": "2024-03-01",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -137949,7 +137953,7 @@
      "latest": "2024-02-28",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -138629,7 +138633,7 @@
      "latest": "2024-02-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -139176,7 +139180,7 @@
      "latest": "2022-01-06",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -140675,7 +140679,7 @@
      "latest": "2024-01-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -140853,7 +140857,7 @@
      "latest": "2023-02-25",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -141440,7 +141444,7 @@
      "latest": "2024-01-12",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -141609,7 +141613,7 @@
      "latest": "2023-12-07",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -142039,7 +142043,7 @@
      "latest": "2021-12-21",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -142309,7 +142313,7 @@
      "latest": "2023-12-31",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -142422,7 +142426,7 @@
      "latest": "2023-12-28",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -143104,7 +143108,7 @@
      "latest": "2019-09-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -143372,7 +143376,7 @@
      "latest": "2023-12-19",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -143528,7 +143532,7 @@
      "latest": "2023-12-10",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -143854,7 +143858,7 @@
      "latest": "2023-12-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -144138,7 +144142,7 @@
      "latest": "2023-12-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -145043,7 +145047,7 @@
      "latest": "2022-01-13",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -145394,7 +145398,7 @@
      "latest": "2023-02-10",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -145867,7 +145871,7 @@
      "latest": "2020-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -146789,7 +146793,7 @@
      "latest": "2023-11-01",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -148392,7 +148396,7 @@
      "latest": "2023-10-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -148870,7 +148874,7 @@
      "latest": "2023-09-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -149200,7 +149204,7 @@
      "latest": "2023-09-16",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -149384,7 +149388,7 @@
      "latest": "2023-09-15",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -150773,7 +150777,7 @@
      "latest": "2023-08-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -151035,7 +151039,7 @@
      "latest": "2023-08-21",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -151910,7 +151914,7 @@
      "latest": "2017-01-10",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -152047,7 +152051,7 @@
      "latest": "2023-08-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -152475,7 +152479,7 @@
      "latest": "2023-07-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -152614,7 +152618,7 @@
      "latest": "2023-07-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -152768,7 +152772,7 @@
      "latest": "2021-12-21",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -152938,7 +152942,7 @@
      "latest": "2016-04-09",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -153160,7 +153164,7 @@
      "latest": "2022-06-14",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -154284,7 +154288,7 @@
      "latest": "2023-06-25",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -154419,7 +154423,7 @@
      "latest": "2023-06-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -154587,7 +154591,7 @@
      "latest": "2023-06-21",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -154870,7 +154874,7 @@
      "latest": "2022-08-17",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -155016,7 +155020,7 @@
      "latest": "2023-06-09",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -155133,7 +155137,7 @@
      "latest": "2023-06-06",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -155933,7 +155937,7 @@
      "latest": "2023-05-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -156087,7 +156091,7 @@
      "latest": "2023-05-24",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -156349,7 +156353,7 @@
      "latest": "2023-05-19",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -156498,7 +156502,7 @@
      "latest": "2023-05-16",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -156791,7 +156795,7 @@
      "latest": "2022-05-09",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -156804,7 +156808,7 @@
      "latest": "2023-05-12",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -157732,7 +157736,7 @@
      "latest": "2023-04-15",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -157845,7 +157849,7 @@
      "latest": "2023-04-14",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -159151,7 +159155,7 @@
      "latest": "2019-03-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -159277,7 +159281,7 @@
      "latest": "2023-03-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -159528,7 +159532,7 @@
      "latest": "2023-03-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -159824,7 +159828,7 @@
      "latest": "2022-05-16",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -160012,7 +160016,7 @@
      "latest": "2023-03-16",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -160268,7 +160272,7 @@
      "latest": "2023-03-10",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -160545,7 +160549,7 @@
      "latest": "2023-03-03",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -160701,7 +160705,7 @@
      "latest": "2023-03-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -160948,7 +160952,7 @@
      "latest": "2023-02-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -161109,7 +161113,7 @@
      "latest": "2022-04-21",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -161280,7 +161284,7 @@
      "latest": "2022-06-16",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -161435,7 +161439,7 @@
      "latest": "2023-02-25",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -162008,7 +162012,7 @@
      "latest": "2023-02-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -162384,7 +162388,7 @@
      "latest": "2021-12-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -162549,7 +162553,7 @@
      "latest": "2023-01-14",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -162918,7 +162922,7 @@
      "latest": "2022-12-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -163424,7 +163428,7 @@
      "latest": "2022-12-17",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -163784,7 +163788,7 @@
      "latest": "2022-12-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -165176,7 +165180,7 @@
      "latest": "2022-11-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -165292,7 +165296,7 @@
      "latest": "2022-11-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -165717,7 +165721,7 @@
      "latest": "2022-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -165977,7 +165981,7 @@
      "latest": "2022-10-20",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -166341,7 +166345,7 @@
      "latest": "2022-07-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -166354,7 +166358,7 @@
      "latest": "2022-10-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -166752,7 +166756,7 @@
      "latest": "2022-09-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -166969,7 +166973,7 @@
      "latest": "2022-09-16",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -167208,7 +167212,7 @@
      "latest": "2022-09-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -167527,7 +167531,7 @@
      "latest": "2021-10-15",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -167675,7 +167679,7 @@
      "latest": "2022-08-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -167884,7 +167888,7 @@
      "latest": "2022-08-18",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -168021,7 +168025,7 @@
      "latest": "2022-08-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -168139,7 +168143,7 @@
      "latest": "2022-08-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -168459,7 +168463,7 @@
      "latest": "2022-08-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -169045,7 +169049,7 @@
      "latest": "2022-07-26",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -169383,7 +169387,7 @@
      "latest": "2022-07-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -169396,7 +169400,7 @@
      "latest": "2022-07-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -170362,7 +170366,7 @@
      "latest": "2022-07-04",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -171299,7 +171303,7 @@
      "latest": "2022-06-05",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -171915,7 +171919,7 @@
      "latest": "2022-05-17",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -172094,7 +172098,7 @@
      "latest": "2022-05-13",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -172394,7 +172398,7 @@
      "latest": "2022-05-10",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -172824,7 +172828,7 @@
      "latest": "2022-05-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -173188,7 +173192,7 @@
      "latest": "2022-04-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -173698,7 +173702,7 @@
      "latest": "2022-04-04",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -174171,7 +174175,7 @@
      "latest": "2022-03-25",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -174427,7 +174431,7 @@
      "latest": "2022-03-20",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -174567,7 +174571,7 @@
      "latest": "2022-03-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -174738,7 +174742,7 @@
      "latest": "2022-03-18",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -174950,7 +174954,7 @@
      "latest": "2016-07-19",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -175166,7 +175170,7 @@
      "latest": "2021-09-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -175179,7 +175183,7 @@
      "latest": "2022-03-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -175555,7 +175559,7 @@
      "latest": "2022-02-28",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -175840,7 +175844,7 @@
      "latest": "2022-02-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -175961,7 +175965,7 @@
      "latest": "2022-02-11",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -176384,7 +176388,7 @@
      "latest": "2022-02-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -176969,7 +176973,7 @@
      "latest": "2022-01-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09"
+     "retrieved": "2026-11-10"
     }
    ],
    "collection": null,
@@ -177071,7 +177075,7 @@
      "latest": "2022-01-20",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -177399,7 +177403,7 @@
      "latest": "2022-01-17",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -177563,7 +177567,7 @@
      "latest": "2022-01-14",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -177690,7 +177694,7 @@
      "latest": "2022-01-14",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -177836,7 +177840,7 @@
      "latest": "2022-01-06",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -178129,7 +178133,7 @@
      "latest": "2022-01-05",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -178299,7 +178303,7 @@
      "latest": "2016-04-09",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -178506,7 +178510,7 @@
      "latest": "2021-09-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -178641,7 +178645,7 @@
      "latest": "2021-03-11",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -178798,7 +178802,7 @@
      "latest": "2021-12-16",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -179164,7 +179168,7 @@
      "latest": "2021-12-02",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -179423,7 +179427,7 @@
      "latest": "2016-04-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -179546,7 +179550,7 @@
      "latest": "2021-11-16",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -180161,7 +180165,7 @@
      "latest": "2021-11-01",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -180355,7 +180359,7 @@
      "latest": "2021-10-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -180598,7 +180602,7 @@
      "latest": "2021-10-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -180756,7 +180760,7 @@
      "latest": "2021-09-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -180898,7 +180902,7 @@
      "latest": "2021-09-29",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -181147,7 +181151,7 @@
      "latest": "2021-09-15",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -181281,7 +181285,7 @@
      "latest": "2021-08-26",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -181746,7 +181750,7 @@
      "latest": "2021-08-07",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -182052,7 +182056,7 @@
      "latest": "2021-07-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -182191,7 +182195,7 @@
      "latest": "2021-07-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -182322,7 +182326,7 @@
      "latest": "2021-07-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -182440,7 +182444,7 @@
      "latest": "2021-07-17",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -182677,7 +182681,7 @@
      "latest": "2021-05-29",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -182809,7 +182813,7 @@
      "latest": "2021-05-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -183032,7 +183036,7 @@
      "latest": "2021-05-07",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -183162,7 +183166,7 @@
      "latest": "2021-05-05",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -183337,7 +183341,7 @@
      "latest": "2021-05-03",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -183510,7 +183514,7 @@
      "latest": "2021-05-02",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -183611,7 +183615,7 @@
      "latest": "2021-04-29",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -183913,7 +183917,7 @@
      "latest": "2021-04-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -184171,7 +184175,7 @@
      "latest": "2021-04-21",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -184488,7 +184492,7 @@
      "latest": "2021-04-06",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -184634,7 +184638,7 @@
      "latest": "2021-03-30",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -184801,7 +184805,7 @@
      "latest": "2021-03-26",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -184973,7 +184977,7 @@
      "latest": "2021-03-03",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -185298,7 +185302,7 @@
      "latest": "2021-02-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -185474,7 +185478,7 @@
      "latest": "2021-02-06",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -185750,7 +185754,7 @@
      "latest": "2021-01-15",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -185914,7 +185918,7 @@
      "latest": "2021-01-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -186134,7 +186138,7 @@
      "latest": "2020-12-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -186300,7 +186304,7 @@
      "latest": "2020-12-21",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -186471,7 +186475,7 @@
      "latest": "2020-12-15",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -186617,7 +186621,7 @@
      "latest": "2020-12-10",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -186765,7 +186769,7 @@
      "latest": "2020-11-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -186910,7 +186914,7 @@
      "latest": "2020-11-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -187175,7 +187179,7 @@
      "latest": "2020-11-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -187415,7 +187419,7 @@
      "latest": "2020-10-16",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -187574,7 +187578,7 @@
      "latest": "2020-10-02",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -187686,7 +187690,7 @@
      "latest": "2020-09-18",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -187836,7 +187840,7 @@
      "latest": "2020-09-13",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -187971,7 +187975,7 @@
      "latest": "2020-09-05",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -188097,7 +188101,7 @@
      "latest": "2020-09-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -188234,7 +188238,7 @@
      "latest": "2020-08-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -188363,7 +188367,7 @@
      "latest": "2020-08-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -188530,7 +188534,7 @@
      "latest": "2020-08-21",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -188715,7 +188719,7 @@
      "latest": "2020-08-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -188856,7 +188860,7 @@
      "latest": "2020-08-14",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -188981,7 +188985,7 @@
      "latest": "2020-07-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -189277,7 +189281,7 @@
      "latest": "2020-07-10",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -189422,7 +189426,7 @@
      "latest": "2020-07-03",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -189584,7 +189588,7 @@
      "latest": "2020-06-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -189755,7 +189759,7 @@
      "latest": "2020-06-05",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -189931,7 +189935,7 @@
      "latest": "2020-05-12",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -190069,7 +190073,7 @@
      "latest": "2020-05-04",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -190237,7 +190241,7 @@
      "latest": "2020-04-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -190413,7 +190417,7 @@
      "latest": "2020-04-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -190574,7 +190578,7 @@
      "latest": "2020-02-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -190744,7 +190748,7 @@
      "latest": "2020-02-26",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -190906,7 +190910,7 @@
      "latest": "2020-02-15",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -191081,7 +191085,7 @@
      "latest": "2020-02-01",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -191368,7 +191372,7 @@
      "latest": "2020-01-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -191489,7 +191493,7 @@
      "latest": "2020-01-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -191628,7 +191632,7 @@
      "latest": "2020-01-13",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -191810,7 +191814,7 @@
      "latest": "2019-12-24",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -191940,7 +191944,7 @@
      "latest": "2019-12-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -192115,7 +192119,7 @@
      "latest": "2019-12-15",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -192389,7 +192393,7 @@
      "latest": "2019-12-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -192571,7 +192575,7 @@
      "latest": "2019-11-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -192725,7 +192729,7 @@
      "latest": "2019-11-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -192866,7 +192870,7 @@
      "latest": "2019-11-16",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -193021,7 +193025,7 @@
      "latest": "2019-11-11",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -193192,7 +193196,7 @@
      "latest": "2019-11-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -193319,7 +193323,7 @@
      "latest": "2019-10-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -193456,7 +193460,7 @@
      "latest": "2019-10-22",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -193633,7 +193637,7 @@
      "latest": "2019-10-18",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -193885,7 +193889,7 @@
      "latest": "2019-10-10",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -194213,7 +194217,7 @@
      "latest": "2019-10-08",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -194327,7 +194331,7 @@
      "latest": "2019-10-03",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -194605,7 +194609,7 @@
      "latest": "2019-10-02",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -194742,7 +194746,7 @@
      "latest": "2019-08-26",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -194877,7 +194881,7 @@
      "latest": "2019-08-17",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -195150,7 +195154,7 @@
      "latest": "2019-08-03",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -195283,7 +195287,7 @@
      "latest": "2019-07-31",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -195444,7 +195448,7 @@
      "latest": "2019-07-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -195615,7 +195619,7 @@
      "latest": "2019-07-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -195731,7 +195735,7 @@
      "latest": "2019-07-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -195865,7 +195869,7 @@
      "latest": "2019-07-30",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -196020,7 +196024,7 @@
      "latest": "2019-07-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -196129,7 +196133,7 @@
      "latest": "2019-07-20",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -196272,7 +196276,7 @@
      "latest": "2019-07-15",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -196430,7 +196434,7 @@
      "latest": "2019-06-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -196443,7 +196447,7 @@
      "latest": "2019-06-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -196592,7 +196596,7 @@
      "latest": "2019-05-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -196755,7 +196759,7 @@
      "latest": "2019-05-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -196894,7 +196898,7 @@
      "latest": "2019-05-13",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -197004,7 +197008,7 @@
      "latest": "2019-05-02",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -197138,7 +197142,7 @@
      "latest": "2019-04-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -197292,7 +197296,7 @@
      "latest": "2019-04-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -197412,7 +197416,7 @@
      "latest": "2019-04-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -197598,7 +197602,7 @@
      "latest": "2019-04-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -197760,7 +197764,7 @@
      "latest": "2019-03-22",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -197906,7 +197910,7 @@
      "latest": "2019-03-17",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -198059,7 +198063,7 @@
      "latest": "2019-03-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -198334,7 +198338,7 @@
      "latest": "2019-03-07",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -198473,7 +198477,7 @@
      "latest": "2019-02-05",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -198633,7 +198637,7 @@
      "latest": "2019-01-15",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -198765,7 +198769,7 @@
      "latest": "2018-12-23",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -199221,7 +199225,7 @@
      "latest": "2018-11-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -199330,7 +199334,7 @@
      "latest": "2018-09-01",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -199474,7 +199478,7 @@
      "latest": "2018-05-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -199487,7 +199491,7 @@
      "latest": "2018-05-31",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -199625,7 +199629,7 @@
      "latest": "2018-05-29",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -199791,7 +199795,7 @@
      "latest": "2018-03-29",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -199959,7 +199963,7 @@
      "latest": "2018-01-08",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -200102,7 +200106,7 @@
      "latest": "2017-11-30",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -200273,7 +200277,7 @@
      "latest": "2017-10-27",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -200398,7 +200402,7 @@
      "latest": "2017-10-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -200507,7 +200511,7 @@
      "latest": "2017-10-02",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -200651,7 +200655,7 @@
      "latest": "2017-08-28",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     },
     {
@@ -200788,7 +200792,7 @@
      "latest": "2017-05-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -200914,7 +200918,7 @@
      "latest": "2017-05-20",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -201037,7 +201041,7 @@
      "latest": "2017-04-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -201170,7 +201174,7 @@
      "latest": "2017-04-10",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -201286,7 +201290,7 @@
      "latest": "2017-03-25",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -201432,7 +201436,7 @@
      "latest": "2017-01-27",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -201557,7 +201561,7 @@
      "latest": "2015-12-19",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -201685,7 +201689,7 @@
      "latest": "2015-09-23",
      "partial": true,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -201815,7 +201819,7 @@
      "latest": "2015-08-11",
      "partial": false,
      "format": "standard",
-     "retrieved": "2026-11-09",
+     "retrieved": "2026-11-10",
      "latest_work_level": true
     }
    ],
@@ -429155,6 +429159,207 @@
     "basis": "romaji",
     "unverified": true
    }
+  },
+  {
+   "chapters": 2,
+   "partial": false,
+   "latest": "2026-11-10",
+   "latest_ep": "第2話①　飼い猫契約とトマトリゾット",
+   "first": "2026-11-10",
+   "state": "active",
+   "oneshot": false,
+   "completed_basis": null,
+   "state_basis": "a chapter arrived today, and nothing states it has ended",
+   "free": 1,
+   "free_timed": 0,
+   "priced": 1,
+   "url": "https://kuragebunch.com/episode/12207421984481017724",
+   "series_url": "https://kuragebunch.com/atom/series/12207421984481011289",
+   "sources": [
+    {
+     "platform": "くらげバンチ",
+     "url": "https://kuragebunch.com/episode/12207421984481017724",
+     "chapters": 2,
+     "free": 1,
+     "free_timed": 0,
+     "priced": 1,
+     "latest": "2026-11-10",
+     "partial": false,
+     "format": "standard",
+     "retrieved": "2026-11-10"
+    }
+   ],
+   "collection": null,
+   "id": "w03537",
+   "skipped": [],
+   "completed_basis_ja": null,
+   "state_basis_ja": "本日新しい話があり、終了したとする情報もない",
+   "work": "ヒモお姉さん、餌付け中。",
+   "author": "春露彗",
+   "evidence": [],
+   "state_claims": [],
+   "sourced_from": [
+    {
+     "source": "くらげバンチ",
+     "holds": "attribution",
+     "read": "2026-11-10",
+     "url": "https://kuragebunch.com/episode/12207421984481017724"
+    }
+   ],
+   "stated_next": null,
+   "latest_any": "2026-11-10",
+   "latest_any_kind": "chapter",
+   "work_en": {
+    "reading": "ヒモ オネエサン、 エヅケチュウ。",
+    "ruby": [
+     [
+      "ヒモお",
+      null
+     ],
+     [
+      "姉",
+      "ねえ"
+     ],
+     [
+      "さん、",
+      null
+     ],
+     [
+      "餌付",
+      "えづ"
+     ],
+     [
+      "け",
+      null
+     ],
+     [
+      "中",
+      "ちゅう"
+     ],
+     [
+      "。",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Himo Onēsan, Ezukechū.",
+     "double": "Himo Oneesan, Ezukechuu.",
+     "plain": "Himo Onesan, Ezukechu."
+    },
+    "en": "Freeloader Big Sis, Feeding in Progress.",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Freeloader Big Sis, Feeding in Progress."
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ハルロスイ",
+    "romaji": {
+     "macron": "Harurosui",
+     "double": "Harurosui",
+     "plain": "Harurosui"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true,
+    "uncertain": true
+   },
+   "admitted_by": [
+    {
+     "comparator": "webcomics.jp",
+     "shelf": "百合 tag",
+     "retrieved": "2026-11-10",
+     "note": "An aggregator listing a work under its yuri tag is a comparator (DEFINITIONS §2). It says the work exists and where, attests nothing about it, and is never a marketing_label (§4).",
+     "url": "https://webcomics.jp/tag/%E7%99%BE%E5%90%88"
+    }
+   ]
+  },
+  {
+   "chapters": 1,
+   "partial": false,
+   "latest": "2026-11-10",
+   "latest_ep": "特別読切",
+   "first": "2026-11-10",
+   "state": "oneshot",
+   "oneshot": true,
+   "completed_basis": null,
+   "state_basis": "every instalment here is marked 読切",
+   "free": 1,
+   "free_timed": 0,
+   "priced": 0,
+   "url": "https://magcomi.com/episode/12207421984482234304",
+   "series_url": "https://magcomi.com/atom/series/12207421984482184469",
+   "sources": [
+    {
+     "platform": "MAGCOMI",
+     "url": "https://magcomi.com/episode/12207421984482234304",
+     "chapters": 1,
+     "free": 1,
+     "free_timed": 0,
+     "priced": 0,
+     "latest": "2026-11-10",
+     "partial": false,
+     "format": "standard",
+     "retrieved": "2026-11-10"
+    }
+   ],
+   "collection": null,
+   "id": "w03538",
+   "skipped": [],
+   "completed_basis_ja": null,
+   "state_basis_ja": "掲載されている話すべてに読切の表示がある",
+   "work": "シアワセとりかえばや",
+   "author": "南儀よら",
+   "evidence": [],
+   "state_claims": [],
+   "sourced_from": [
+    {
+     "source": "MAGCOMI",
+     "holds": "attribution",
+     "read": "2026-11-10",
+     "url": "https://magcomi.com/episode/12207421984482234304"
+    }
+   ],
+   "stated_next": null,
+   "latest_any": "2026-11-10",
+   "latest_any_kind": "chapter",
+   "work_en": {
+    "reading": "シアワセトリカエバヤ",
+    "romaji": {
+     "macron": "Shiawasetorikaebaya",
+     "double": "Shiawasetorikaebaya",
+     "plain": "Shiawasetorikaebaya"
+    },
+    "en": "The Happy Switch",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Happy Switch"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ナンギヨラ",
+    "romaji": {
+     "macron": "Nangiyora",
+     "double": "Nangiyora",
+     "plain": "Nangiyora"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "admitted_by": [
+    {
+     "comparator": "webcomics.jp",
+     "shelf": "百合 tag",
+     "retrieved": "2026-11-10",
+     "note": "An aggregator listing a work under its yuri tag is a comparator (DEFINITIONS §2). It says the work exists and where, attests nothing about it, and is never a marketing_label (§4).",
+     "url": "https://webcomics.jp/tag/%E7%99%BE%E5%90%88"
+    }
+   ]
   }
  ],
  "generated": "2026-11-10",
