@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-09T21:08:03+00:00",
+ "generated": "2026-11-10T00:14:35+00:00",
  "since_last": {
-  "at": "2026-11-09T21:04:21+00:00",
+  "at": "2026-11-09T21:08:03+00:00",
   "statistics": {}
  },
  "means": {
@@ -931,7 +931,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 57,
+    "consecutive": 58,
     "failing_since": "2026-10-16",
     "days": 25,
     "last_ok": null,
@@ -941,7 +941,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 57,
+    "consecutive": 58,
     "failing_since": "2026-10-16",
     "days": 25,
     "last_ok": null,
@@ -951,7 +951,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 57,
+    "consecutive": 58,
     "failing_since": "2026-10-16",
     "days": 25,
     "last_ok": null,
@@ -961,7 +961,7 @@
    {
     "source": "stale:stage-a:generic",
     "stage": "freshness",
-    "consecutive": 40,
+    "consecutive": 41,
     "failing_since": "2026-10-24",
     "days": 17,
     "last_ok": "2026-10-23",
@@ -971,7 +971,7 @@
    {
     "source": "stale:stage-a:webpages",
     "stage": "freshness",
-    "consecutive": 7,
+    "consecutive": 8,
     "failing_since": "2026-11-09",
     "days": 1,
     "last_ok": "2026-11-08",
@@ -981,7 +981,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 5,
+    "consecutive": 6,
     "failing_since": "2026-11-09",
     "days": 1,
     "last_ok": null,
