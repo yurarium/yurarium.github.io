@@ -1,6 +1,620 @@
 {
  "releases": [
   {
+   "id": "comicdays:episode:12207421983566481778",
+   "work": "サタノファニ",
+   "ep": "第３４５話　「戦争」",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-11",
+   "seen": "2026-11-11",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421983566481778",
+   "author": "山田恵庸",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "access_basis": "the platform's own episode list",
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 345",
+   "kind_inferred": true,
+   "preferred": "コミックDAYS",
+   "also_on": [
+    "ヤンマガWeb"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-11-11",
+   "wid": "w00054",
+   "work_en": {
+    "reading": "サタノファニ",
+    "romaji": {
+     "macron": "Satanofani",
+     "double": "Satanofani",
+     "plain": "Satanofani"
+    },
+    "translation_refused": "The kana are the coinage the publisher prints in capitals, so ours is that name in another case.",
+    "en": "SATANOPHANY",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "SATANOPHANY"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "mediaarts-db",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/madb-t-f2ab6d5672fb",
+     "kind": "bibliography",
+     "reviewed": "2026-08-07"
+    }
+   },
+   "author_en": {
+    "reading": "ヤマダ ヨシノブ",
+    "ruby": [
+     [
+      "山田恵庸",
+      "やまだよしのぶ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Yamada Yoshinobu",
+     "double": "Yamada Yoshinobu",
+     "plain": "Yamada Yoshinobu"
+    },
+    "en": "Yoshinobu Yamada",
+    "basis": "romaji",
+    "reading_basis": "community-printed",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q11470371",
+     "kind": "community-db"
+    },
+    "unverified": true,
+    "id": "c00115"
+   }
+  },
+  {
+   "id": "comicfuz:79832",
+   "work": "好都合セミフレンド",
+   "ep": "第４３話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-11",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/79832",
+   "series_url": "https://comic-fuz.com/manga/3397",
+   "author": "千種みのり",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "became_free": false,
+   "access_changed": null,
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": false,
+   "ahead_n": 1,
+   "ahead_ep": "第４４話",
+   "ahead_next_free": "2026-12-09",
+   "ahead_next_ep": "第４４話",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 43",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-11",
+   "wid": "w00202",
+   "work_en": {
+    "reading": "コウツゴウ セミフレンド",
+    "ruby": [
+     [
+      "好都合",
+      "こうつごう"
+     ],
+     [
+      "セミフレンド",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kōtsugō Semifurendo",
+     "double": "Koutsugou Semifurendo",
+     "plain": "Kotsugo Semifurendo"
+    },
+    "en": "Convenient Semi-Friend",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Convenient Semi-Friend"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "チグサ ミノリ",
+    "ruby": [
+     [
+      "千種",
+      "ちぐさ"
+     ],
+     [
+      "みのり",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Chigusa Minori",
+     "double": "Chigusa Minori",
+     "plain": "Chigusa Minori"
+    },
+    "en": "Minori Chigusa",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034681747",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00286"
+   }
+  },
+  {
+   "id": "comicfuz:80968",
+   "work": "花唄メモワール",
+   "ep": "特別編4(1)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-11",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/80968",
+   "series_url": "https://comic-fuz.com/manga/3274",
+   "author": "一ノ瀬けい",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "became_free": false,
+   "access_changed": null,
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": false,
+   "ahead_n": 1,
+   "ahead_ep": "特別編4(2)",
+   "ahead_next_free": "2026-11-25",
+   "ahead_next_ep": "特別編4(2)",
+   "kind": "new-chapter",
+   "kind_basis": "extra or side story — content, not notice",
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-11",
+   "wid": "w02150",
+   "work_en": {
+    "reading": "ハナ ウタ メモワール",
+    "ruby": [
+     [
+      "花",
+      "はな"
+     ],
+     [
+      "唄",
+      "うた"
+     ],
+     [
+      "メモワール",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hana Uta Memowāru",
+     "double": "Hana Uta Memowaaru",
+     "plain": "Hana Uta Memowaru"
+    },
+    "en": "Flower Song Memoir",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Flower Song Memoir"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "イチノセ ケイ",
+    "ruby": [
+     [
+      "一",
+      "いち"
+     ],
+     [
+      "ノ",
+      null
+     ],
+     [
+      "瀬",
+      "せ"
+     ],
+     [
+      "けい",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Ichinose Kei",
+     "double": "Ichinose Kei",
+     "plain": "Ichinose Kei"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "MADB",
+     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1036644",
+     "kind": "national-library",
+     "reviewed": "2026-08-06"
+    },
+    "id": "c00215"
+   }
+  },
+  {
+   "id": "bigcomics:https://bigcomics.jp/series/dd9141c4d469c:第55話",
+   "work": "酒と鬼は二合まで",
+   "ep": "第55話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-11",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://bigcomics.jp/series/dd9141c4d469c",
+   "author": "羽柴実里,zinbei",
+   "plat": "bigcomics",
+   "plat_name": "ビッコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 55, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ビッコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-11",
+   "wid": "w00175",
+   "work_en": {
+    "reading": "サケ ト オニ ワ ニ ゴウ マデ",
+    "ruby": [
+     [
+      "酒",
+      "さけ"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "鬼",
+      "おに"
+     ],
+     [
+      "は",
+      null
+     ],
+     [
+      "二合",
+      "にごう"
+     ],
+     [
+      "まで",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Sake to Oni wa ni Gō made",
+     "double": "Sake to Oni wa ni Gou made",
+     "plain": "Sake to Oni wa ni Go made"
+    },
+    "en": "Sake and the Demon, Two Cups at Most",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Sake and the Demon, Two Cups at Most"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "ハシバ ミサト, zinbei",
+    "ruby": [
+     [
+      "羽柴",
+      "はしば"
+     ],
+     [
+      "実里",
+      "みさと"
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "zinbei",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hashiba Misato, zinbei",
+     "double": "Hashiba Misato, zinbei",
+     "plain": "Hashiba Misato, zinbei"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "magapoke:https://pocket.shonenmagazine.com/title/03282/episode/446245",
+   "work": "オカルトタイムズ",
+   "ep": "【第27話】百人一首がおにあいどす",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-11",
+   "seen": "2026-11-11",
+   "basis": "platform-stated",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://pocket.shonenmagazine.com/title/03282/episode/446245",
+   "author": "いどんち",
+   "plat": "magapoke",
+   "plat_name": "マガポケ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 27",
+   "kind_inferred": true,
+   "preferred": "マガポケ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-11",
+   "wid": "w01226",
+   "work_en": {
+    "reading": "オカルトタイムズ",
+    "romaji": {
+     "macron": "Okarutotaimuzu",
+     "double": "Okarutotaimuzu",
+     "plain": "Okarutotaimuzu"
+    },
+    "en": "Occult Times",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Occult Times"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "イドンチ",
+    "romaji": {
+     "macron": "Idonchi",
+     "double": "Idonchi",
+     "plain": "Idonchi"
+    },
+    "undivided": true,
+    "en": "Idonchi",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00025"
+   }
+  },
+  {
+   "id": "magapoke:https://pocket.shonenmagazine.com/title/03338/episode/446790",
+   "work": "怨霊日和",
+   "ep": "【第10話】蛇女",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-11",
+   "seen": "2026-11-11",
+   "basis": "platform-stated",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://pocket.shonenmagazine.com/title/03338/episode/446790",
+   "author": "イマイ悠",
+   "plat": "magapoke",
+   "plat_name": "マガポケ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 10",
+   "kind_inferred": true,
+   "preferred": "マガポケ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-11",
+   "wid": "w03314",
+   "work_en": {
+    "reading": "オンリョウ ヒヨリ",
+    "ruby": [
+     [
+      "怨霊",
+      "おんりょう"
+     ],
+     [
+      "日和",
+      "ひより"
+     ]
+    ],
+    "romaji": {
+     "macron": "Onryō Hiyori",
+     "double": "Onryou Hiyori",
+     "plain": "Onryo Hiyori"
+    },
+    "en": "A Fine Day for Vengeful Spirits",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Fine Day for Vengeful Spirits"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "イマイ ハルカ",
+    "ruby": [
+     [
+      "イマイ",
+      null
+     ],
+     [
+      "悠",
+      "はるか"
+     ]
+    ],
+    "romaji": {
+     "macron": "Imai Haruka",
+     "double": "Imai Haruka",
+     "plain": "Imai Haruka"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033378875",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00454"
+   }
+  },
+  {
+   "id": "young-champion:https://youngchampion.jp/series/86c1162f34a04:第13話②",
+   "work": "公爵令嬢の籠絡ミッション～魔王との政略結婚が、人類最後の切り札です！…って、魔王が女の子の場合はどうすればいいのですか！？～",
+   "ep": "第13話②",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-11",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://youngchampion.jp/series/86c1162f34a04",
+   "author": "りんご飴サード,川田暁生",
+   "plat": "remaining",
+   "plat_name": "チャンピオンクロス",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 13",
+   "kind_inferred": true,
+   "preferred": "チャンピオンクロス",
+   "also_on": [
+    "ヤングチャンピオン"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-11-11",
+   "wid": "w00177",
+   "work_en": {
+    "reading": "コウシャク レイジョウ ノ ロウラク ミッション",
+    "romaji": {
+     "macron": "Kōshaku Reijō no Rōraku Misshon",
+     "double": "Koushaku Reijou no Rouraku Misshon",
+     "plain": "Koshaku Reijo no Roraku Misshon"
+    },
+    "en": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Duke's Daughter's Seduction Mission: A Political Marriage to the Demon Lord Is Humanity's Last Card, but What Am I Supposed to Do If the Demon Lord Is a Girl?!"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "リンゴアメ サード, カワダ アキオ",
+    "ruby": [
+     [
+      "りんご",
+      null
+     ],
+     [
+      "飴",
+      "あめ"
+     ],
+     [
+      "サード",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "川田暁生",
+      "かわだあきお"
+     ]
+    ],
+    "romaji": {
+     "macron": "Ringoame Sādo, Kawada Akio",
+     "double": "Ringoame Saado, Kawada Akio",
+     "plain": "Ringoame Sado, Kawada Akio"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
+   }
+  },
+  {
    "id": "kuragebunch:episode:12207421984481017724",
    "work": "ヒモお姉さん、餌付け中。",
    "ep": "第2話①　飼い猫契約とトマトリゾット",
@@ -88,7 +702,8 @@
     "basis": "romaji",
     "reading_basis": "analyser",
     "unverified": true,
-    "uncertain": true
+    "uncertain": true,
+    "id": "c02468"
    }
   },
   {
@@ -179,7 +794,8 @@
     "basis": "romaji",
     "reading_basis": "analyser",
     "unverified": true,
-    "uncertain": true
+    "uncertain": true,
+    "id": "c02468"
    }
   },
   {
@@ -238,7 +854,8 @@
     "undivided": true,
     "basis": "romaji",
     "reading_basis": "analyser",
-    "unverified": true
+    "unverified": true,
+    "id": "c02469"
    }
   },
   {
@@ -371,21 +988,890 @@
    }
   },
   {
-   "id": "comic-gardo:https://comic-gardo.com/episode/2550912966011803878:第14話「フィアナ、新たな勝負に挑む！～課外演習編～」(1)",
+   "id": "comicfuz:80980",
+   "work": "しゅがー・みーつ・がーる！",
+   "ep": "第33皿(1)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/80980",
+   "series_url": "https://comic-fuz.com/manga/3108",
+   "author": "白野アキヒロ",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 1,
+   "ahead_ep": "第33皿(2)",
+   "ahead_next_free": "2026-11-24",
+   "ahead_next_ep": "第33皿(2)",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 33",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-10",
+   "wid": "w00181",
+   "work_en": {
+    "reading": "シュガー・ミーツ・ガール！",
+    "romaji": {
+     "macron": "Shugā Mītsu Gāru!",
+     "double": "Shugaa Miitsu Gaaru!",
+     "plain": "Shuga Mitsu Garu!"
+    },
+    "en": "Sugar Meets Girl!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Sugar Meets Girl!"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "シラノ アキヒロ",
+    "ruby": [
+     [
+      "白野",
+      "しらの"
+     ],
+     [
+      "アキヒロ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Shirano Akihiro",
+     "double": "Shirano Akihiro",
+     "plain": "Shirano Akihiro"
+    },
+    "en": "SHIRANO Akihiro",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "id": "c00288"
+   }
+  },
+  {
+   "id": "comicfuz:81001",
+   "work": "あまねくシグナル",
+   "ep": "第16話（1）",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-fuz.com/manga/viewer/81001",
+   "series_url": "https://comic-fuz.com/manga/3896",
+   "author": "はうあゆ",
+   "plat": "comic-fuz",
+   "plat_name": "COMIC FUZ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free-timed"
+   ],
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
+   "date_means": "free-from",
+   "provenance": "attested",
+   "free": true,
+   "ahead_n": 1,
+   "ahead_ep": "第16話（2）",
+   "ahead_next_free": "2026-11-24",
+   "ahead_next_ep": "第16話（2）",
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 16",
+   "kind_inferred": true,
+   "preferred": "COMIC FUZ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-10",
+   "wid": "w02428",
+   "work_en": {
+    "reading": "アマネクシグナル",
+    "romaji": {
+     "macron": "Amanekushigunaru",
+     "double": "Amanekushigunaru",
+     "plain": "Amanekushigunaru"
+    },
+    "en": "Signal, Everywhere",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Signal, Everywhere"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "ハウアユ",
+    "romaji": {
+     "macron": "Hauayu",
+     "double": "Hauayu",
+     "plain": "Hauayu"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00131"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0000760005500011_E",
+   "work": "志乃と恋",
+   "ep": "梅雨",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_000076_S/episodes/KC_0000760005500011_E",
+   "series_url": "https://comic-walker.com/detail/KC_000076_S",
+   "author": "千種みのり",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-10",
+   "wid": "w00332",
+   "work_en": {
+    "reading": "シノ ト レン",
+    "ruby": [
+     [
+      "志乃",
+      "しの"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "恋",
+      "れん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Shino to Ren",
+     "double": "Shino to Ren",
+     "plain": "Shino to Ren"
+    },
+    "en": "Shino and Ren",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Shino and Ren"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "チグサ ミノリ",
+    "ruby": [
+     [
+      "千種",
+      "ちぐさ"
+     ],
+     [
+      "みのり",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Chigusa Minori",
+     "double": "Chigusa Minori",
+     "plain": "Chigusa Minori"
+    },
+    "en": "Minori Chigusa",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034681747",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00286"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0084450001100011_E",
+   "work": "バクガタリzzZ",
+   "ep": "第8話①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_008445_S/episodes/KC_0084450001100011_E",
+   "series_url": "https://comic-walker.com/detail/KC_008445_S",
+   "author": "鰤尾みちる",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 8",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-10",
+   "wid": "w00065",
+   "work_en": {
+    "reading": "バクガタリ zzZ",
+    "romaji": {
+     "macron": "Bakugatari ZzZ",
+     "double": "Bakugatari ZzZ",
+     "plain": "Bakugatari ZzZ"
+    },
+    "en": "Baku Tales zzZ",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Baku Tales zzZ"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ブリオ ミチル",
+    "ruby": [
+     [
+      "鰤",
+      "ぶり"
+     ],
+     [
+      "尾",
+      "お"
+     ],
+     [
+      "みちる",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Burio Michiru",
+     "double": "Burio Michiru",
+     "plain": "Burio Michiru"
+    },
+    "en": "BURIO Michiru",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "id": "c00134"
+   }
+  },
+  {
+   "id": "kadokomi:KC_0196580000700011_E",
+   "work": "ハウリング・ブレイズ　葬焔の剣士と不死の魔女",
+   "ep": "第6話①",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_019658_S/episodes/KC_0196580000700011_E",
+   "series_url": "https://comic-walker.com/detail/KC_019658_S",
+   "author": "koko, 志瑞祐, 遠坂あさぎ",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "platform-genre",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 6",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-10",
+   "wid": "w00182",
+   "work_en": {
+    "reading": "ハウリング・ ブレイズ 　 ソウエン ノ ケンシ ト フシ ノ マジョ",
+    "ruby": [
+     [
+      "ハウリング・ブレイズ　",
+      null
+     ],
+     [
+      "葬焔",
+      "そうえん"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "剣士",
+      "けんし"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "不死",
+      "ふし"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "魔女",
+      "まじょ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Hauringu Bureizu Sōen no Kenshi to Fushi no Majo",
+     "double": "Hauringu Bureizu Souen no Kenshi to Fushi no Majo",
+     "plain": "Hauringu Bureizu Soen no Kenshi to Fushi no Majo"
+    },
+    "en": "Howling Blaze: The Cremation-Flame Swordswoman and the Undying Witch",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Howling Blaze: The Cremation-Flame Swordswoman and the Undying Witch"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "koko, シミズ ユウ, トオサカ アサギ",
+    "ruby": [
+     [
+      "koko",
+      null
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "志瑞祐",
+      "しみずゆう"
+     ],
+     [
+      ", ",
+      null
+     ],
+     [
+      "遠坂",
+      "とおさか"
+     ],
+     [
+      "あさぎ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "koko, Shimizu Yū, Tōsaka Asagi",
+     "double": "koko, Shimizu Yuu, Toosaka Asagi",
+     "plain": "koko, Shimizu Yu, Tosaka Asagi"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji",
+    "unverified": true
+   }
+  },
+  {
+   "id": "kadokomi:KC_0006960033000011_E",
+   "work": "女子高生の無駄づかい",
+   "ep": "第151話　まほう",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_000696_S/episodes/KC_0006960033000011_E",
+   "series_url": "https://comic-walker.com/detail/KC_000696_S",
+   "author": "ビーノ",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 151",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [
+    "ニコニコ漫画"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-11-10",
+   "wid": "w02518",
+   "work_en": {
+    "reading": "ジョシコウセイ ノ ムダヅカイ",
+    "ruby": [
+     [
+      "女子高生",
+      "じょしこうせい"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "無駄",
+      "むだ"
+     ],
+     [
+      "づかい",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Joshikōsei no Mudazukai",
+     "double": "Joshikousei no Mudazukai",
+     "plain": "Joshikosei no Mudazukai"
+    },
+    "en": "The Wasteful Days of High School Girls",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Wasteful Days of High School Girls"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ビーノ",
+    "romaji": {
+     "macron": "Bīno",
+     "double": "Biino",
+     "plain": "Bino"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00116"
+   }
+  },
+  {
+   "id": "pixivcomic:https://comic.pixiv.net/works/7182:第52話 常に共に",
+   "work": "作りたい女と食べたい女",
+   "ep": "第52話 常に共に",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "rendered",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic.pixiv.net/works/7182",
+   "author": "ゆざきさかおみ",
+   "plat": "pixivcomic",
+   "plat_name": "pixivコミック",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 52",
+   "kind_inferred": true,
+   "preferred": "pixivコミック",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-10",
+   "wid": "w00098",
+   "work_en": {
+    "reading": "ツクリタイ オンナ ト タベタイ オンナ",
+    "ruby": [
+     [
+      "作",
+      "つく"
+     ],
+     [
+      "りたい",
+      null
+     ],
+     [
+      "女",
+      "おんな"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "食",
+      "た"
+     ],
+     [
+      "べたい",
+      null
+     ],
+     [
+      "女",
+      "おんな"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tsukuritai Onna to Tabetai Onna",
+     "double": "Tsukuritai Onna to Tabetai Onna",
+     "plain": "Tsukuritai Onna to Tabetai Onna"
+    },
+    "en": "She Loves to Cook, and She Loves to Eat",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "She Loves to Cook, and She Loves to Eat",
+     "translated": "The Woman Who Wants to Cook and the Woman Who Wants to Eat"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "Yen Press",
+     "url": "https://yenpress.com/series/she-loves-to-cook-and-she-loves-to-eat",
+     "kind": "licensor",
+     "reviewed": "2026-08-08"
+    }
+   },
+   "author_en": {
+    "reading": "ユザキ サカオミ",
+    "romaji": {
+     "macron": "Yuzaki Sakaomi",
+     "double": "Yuzaki Sakaomi",
+     "plain": "Yuzaki Sakaomi"
+    },
+    "en": "Sakaomi Yuzaki",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00003"
+   }
+  },
+  {
+   "id": "pixivcomic:https://comic.pixiv.net/works/13609:第12話",
+   "work": "姫騎士と姫巫女",
+   "ep": "第12話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "rendered",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic.pixiv.net/works/13609",
+   "author": "真くん",
+   "plat": "pixivcomic",
+   "plat_name": "pixivコミック",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 12, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "pixivコミック",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-10",
+   "wid": "w03311",
+   "work_en": {
+    "reading": "ヒメキシ ト ヒメミコ",
+    "ruby": [
+     [
+      "姫騎士",
+      "ひめきし"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "姫巫女",
+      "ひめみこ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Himekishi to Himemiko",
+     "double": "Himekishi to Himemiko",
+     "plain": "Himekishi to Himemiko"
+    },
+    "en": "The Princess Knight and the Princess Shrine Maiden",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Princess Knight and the Princess Shrine Maiden"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "シンクン",
+    "ruby": [
+     [
+      "真",
+      "しん"
+     ],
+     [
+      "くん",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Shinkun",
+     "double": "Shinkun",
+     "plain": "Shinkun"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033517222",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00008"
+   }
+  },
+  {
+   "id": "yanmaga:https://yanmaga.jp/comics/%E4%B9%99%E5%A5%B3%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%9A/dc18a561adfa22a470bd96ca34bee06f",
+   "work": "乙女のおかず",
+   "ep": "第５０話　はじめてのお見舞い　前編",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://yanmaga.jp/comics/%E4%B9%99%E5%A5%B3%E3%81%AE%E3%81%8A%E3%81%8B%E3%81%9A/dc18a561adfa22a470bd96ca34bee06f",
+   "author": "藤川よつ葉/かかとぶし",
+   "author_basis": "carried from another record of the same work",
+   "plat": "yanmaga",
+   "plat_name": "ヤンマガWeb",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 50",
+   "kind_inferred": true,
+   "preferred": "ヤンマガWeb",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-10",
+   "wid": "w00004",
+   "work_en": {
+    "reading": "オトメ ノ オカズ",
+    "ruby": [
+     [
+      "乙女",
+      "おとめ"
+     ],
+     [
+      "のおかず",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Otome no Okazu",
+     "double": "Otome no Okazu",
+     "plain": "Otome no Okazu"
+    },
+    "en": "Otome's Side Dish",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Otome's Side Dish"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "フジカワ ヨツバ / カカトブシ",
+    "ruby": [
+     [
+      "藤川",
+      "ふじかわ"
+     ],
+     [
+      "よつ",
+      null
+     ],
+     [
+      "葉",
+      "ば"
+     ],
+     [
+      "/",
+      null
+     ],
+     [
+      "かかとぶし",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Fujikawa Yotsuba / Kakatobushi",
+     "double": "Fujikawa Yotsuba / Kakatobushi",
+     "plain": "Fujikawa Yotsuba / Kakatobushi"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
+   }
+  },
+  {
+   "id": "younganimal:https://younganimal.com/episodes/24a3e6bcb998e:第八話",
+   "work": "最恐呪物令嬢 〜彼女は呪物を愛しすぎている〜",
+   "ep": "第八話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://younganimal.com/episodes/24a3e6bcb998e",
+   "author": "保坂歩,藤津一,法螺貝こゐ",
+   "plat": "younganimal",
+   "plat_name": "ヤングアニマルWeb",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "free-timed"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 8",
+   "kind_inferred": true,
+   "preferred": "ヤングアニマルWeb",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-10",
+   "wid": "w03269",
+   "work_en": {
+    "en": "The Most Frightening Lady of Cursed Objects: She Loves Cursed Objects Far Too Much",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Most Frightening Lady of Cursed Objects: She Loves Cursed Objects Far Too Much"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ホサカアユミ, フジツハジメ, ホラカイコイ",
+    "ruby": [
+     [
+      "保坂歩",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "藤津一",
+      null
+     ],
+     [
+      ",",
+      null
+     ],
+     [
+      "法螺貝こゐ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hosakāyumi, Fujitsuhajime, Horakaikoi",
+     "double": "Hosakaayumi, Fujitsuhajime, Horakaikoi",
+     "plain": "Hosakayumi, Fujitsuhajime, Horakaikoi"
+    },
+    "reading_basis": "analyser",
+    "basis": "romaji",
+    "unverified": true
+   }
+  },
+  {
+   "id": "comic-gardo:https://comic-gardo.com/episode/12207421984483962840",
    "work": "病弱少女、転生して健康な肉体（最強）を手に入れる　～友達が欲しくて魔境から旅立ったのですが、どうやら私の魔法は少しおかしいようです！？～",
    "ep": "第14話「フィアナ、新たな勝負に挑む！～課外演習編～」(1)",
    "type": "chapter",
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-10",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
    "moved": "",
-   "url": "https://comic-gardo.com/episode/2550912966011803878",
+   "url": "https://comic-gardo.com/episode/12207421984483962840",
    "author": "あらた伊里/アトハ/狐印",
-   "plat": "remaining",
+   "plat": "comic-gardo",
    "plat_name": "コミックガルド",
    "ident": "discovery-candidate",
    "free_from": null,
@@ -571,192 +2057,788 @@
    }
   },
   {
-   "id": "pixivcomic:https://comic.pixiv.net/works/7182:第52話 常に共に",
-   "work": "作りたい女と食べたい女",
-   "ep": "第52話 常に共に",
+   "id": "nicovideo:53991:2026-11-10",
+   "work": "ばっどがーる",
+   "ep": "学校のマドンナの理想と現実",
    "type": "chapter",
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-10",
-   "seen": "2026-11-10",
-   "basis": "rendered",
+   "seen": "2026-11-11",
+   "basis": "observed",
    "conf": "reported",
-   "why": "",
+   "why": "work-level update date stated by the platform; chapter not identified",
    "moved": "",
-   "url": "https://comic.pixiv.net/works/7182",
-   "author": "ゆざきさかおみ",
-   "plat": "pixivcomic",
-   "plat_name": "pixivコミック",
+   "url": "https://manga.nicovideo.jp/watch/mg1174818",
+   "author": "肉丸",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
    "ident": "discovery-candidate",
    "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
    "access_modes": [
     "free"
    ],
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
-   "kind_basis": "episode numbered 52",
+   "kind_basis": "work has an earlier release here",
    "kind_inferred": true,
-   "preferred": "pixivコミック",
+   "preferred": "ニコニコ漫画",
    "also_on": [],
    "is_preferred": true,
+   "episode_count": 46,
+   "free_episodes": 46,
+   "started": "2021-07-27",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on COMIC FUZ, which is where it should be read",
+   "channel": null,
    "feed_date": "2026-11-10",
-   "wid": "w00098",
+   "wid": "w00194",
    "work_en": {
-    "reading": "ツクリタイ オンナ ト タベタイ オンナ",
-    "ruby": [
-     [
-      "作",
-      "つく"
-     ],
-     [
-      "りたい",
-      null
-     ],
-     [
-      "女",
-      "おんな"
-     ],
-     [
-      "と",
-      null
-     ],
-     [
-      "食",
-      "た"
-     ],
-     [
-      "べたい",
-      null
-     ],
-     [
-      "女",
-      "おんな"
-     ]
-    ],
+    "reading": "バッドガール",
     "romaji": {
-     "macron": "Tsukuritai Onna to Tabetai Onna",
-     "double": "Tsukuritai Onna to Tabetai Onna",
-     "plain": "Tsukuritai Onna to Tabetai Onna"
+     "macron": "Baddogāru",
+     "double": "Baddogaaru",
+     "plain": "Baddogaru"
     },
-    "en": "She Loves to Cook, and She Loves to Eat",
+    "translation_refused": "ばっどがーる is the English bad girl written in kana and the licensor prints Bad Girl, so ours differs only in the capitals.",
+    "en": "Bad Girl",
     "basis": "licensed",
     "en_forms": {
-     "licensed": "She Loves to Cook, and She Loves to Eat",
-     "translated": "The Woman Who Wants to Cook and the Woman Who Wants to Eat"
+     "licensed": "Bad Girl"
     },
-    "reading_basis": "analyser",
+    "reading_basis": "surface",
     "en_cite": {
-     "source": "Yen Press",
-     "url": "https://yenpress.com/series/she-loves-to-cook-and-she-loves-to-eat",
+     "source": "yenpress.com",
+     "url": "https://yenpress.com/series/bad-girl",
      "kind": "licensor",
-     "reviewed": "2026-08-08"
+     "reviewed": "2026-08-06"
     }
    },
    "author_en": {
-    "reading": "ユザキ サカオミ",
-    "romaji": {
-     "macron": "Yuzaki Sakaomi",
-     "double": "Yuzaki Sakaomi",
-     "plain": "Yuzaki Sakaomi"
-    },
-    "en": "Sakaomi Yuzaki",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00003"
-   }
-  },
-  {
-   "id": "pixivcomic:https://comic.pixiv.net/works/13609:第12話",
-   "work": "姫騎士と姫巫女",
-   "ep": "第12話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-10",
-   "seen": "2026-11-10",
-   "basis": "rendered",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic.pixiv.net/works/13609",
-   "author": "真くん",
-   "plat": "pixivcomic",
-   "plat_name": "pixivコミック",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 12, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "pixivコミック",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-11-10",
-   "wid": "w03311",
-   "work_en": {
-    "reading": "ヒメキシ ト ヒメミコ",
+    "reading": "ニクマル",
     "ruby": [
      [
-      "姫騎士",
-      "ひめきし"
-     ],
-     [
-      "と",
-      null
-     ],
-     [
-      "姫巫女",
-      "ひめみこ"
+      "肉丸",
+      "にくまる"
      ]
     ],
     "romaji": {
-     "macron": "Himekishi to Himemiko",
-     "double": "Himekishi to Himemiko",
-     "plain": "Himekishi to Himemiko"
-    },
-    "en": "The Princess Knight and the Princess Shrine Maiden",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Princess Knight and the Princess Shrine Maiden"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "シンクン",
-    "ruby": [
-     [
-      "真",
-      "しん"
-     ],
-     [
-      "くん",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Shinkun",
-     "double": "Shinkun",
-     "plain": "Shinkun"
+     "macron": "Nikumaru",
+     "double": "Nikumaru",
+     "plain": "Nikumaru"
     },
     "undivided": true,
+    "en": "Nikumaru",
     "basis": "romaji",
     "reading_basis": "stated",
     "reading_cite": {
      "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033517222",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I032637695",
      "kind": "national-library",
      "reviewed": "2026-08-04"
     },
-    "id": "c00008"
+    "id": "c00305"
+   }
+  },
+  {
+   "id": "nicovideo:56286:2026-11-10",
+   "work": "彩純ちゃんはレズ風俗に興味があります！",
+   "ep": "34夜目",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1173273",
+   "author": "伊月クロ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 34",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 4,
+   "free_episodes": 4,
+   "started": "2021-12-09",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on 一迅プラス, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-11-10",
+   "wid": "w00243",
+   "work_en": {
+    "reading": "アスミチャン ワ レズ フウゾク ニ キョウミ ガ アリマス！",
+    "ruby": [
+     [
+      "彩純",
+      "あすみ"
+     ],
+     [
+      "ちゃんはレズ",
+      null
+     ],
+     [
+      "風俗",
+      "ふうぞく"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "興味",
+      "きょうみ"
+     ],
+     [
+      "があります！",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Asumichan wa Rezu Fūzoku ni Kyōmi ga Arimasu!",
+     "double": "Asumichan wa Rezu Fuuzoku ni Kyoumi ga Arimasu!",
+     "plain": "Asumichan wa Rezu Fuzoku ni Kyomi ga Arimasu!"
+    },
+    "en": "Asumi-chan is Interested in Lesbian Brothels!",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "Asumi-chan is Interested in Lesbian Brothels!",
+     "translated": "Asumi Is Interested in Lesbian Sex Work!"
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "sevenseasentertainment.com",
+     "url": "https://sevenseasentertainment.com/series/asumi-chan-is-interested-in-lesbian-brothels/",
+     "kind": "licensor",
+     "reviewed": "2026-08-05"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "イツキ クロ",
+    "ruby": [
+     [
+      "伊月",
+      "いつき"
+     ],
+     [
+      "クロ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Itsuki Kuro",
+     "double": "Itsuki Kuro",
+     "plain": "Itsuki Kuro"
+    },
+    "en": "Kuro Itsuki",
+    "basis": "romaji",
+    "reading_basis": "community-printed",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q114298643",
+     "kind": "community-db"
+    },
+    "unverified": true,
+    "id": "c00355"
+   }
+  },
+  {
+   "id": "nicovideo:22768:2026-11-10",
+   "work": "球詠",
+   "ep": "第121球：手を下すかもしれない(前編)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1173897",
+   "author": "マウンテンプクイチ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 121",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 5,
+   "free_episodes": 5,
+   "started": "2016-08-13",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on COMIC FUZ, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-11-10",
+   "wid": "w00026",
+   "work_en": {
+    "reading": "タマヨミ",
+    "ruby": [
+     [
+      "球詠",
+      "たまよみ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Tamayomi",
+     "double": "Tamayomi",
+     "plain": "Tamayomi"
+    },
+    "translation_refused": "Reads as ball and song, and is also the two leads' names, 山崎珠姫 and 武田詠深. Either rendering discards the other, which is why the entry's own note settled on the romanisation.",
+    "en": "Tamayomi",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "comic-fuz",
+     "url": "https://comic-fuz.com/manga/441",
+     "kind": "platform",
+     "reviewed": "2026-08-03"
+    }
+   },
+   "author_en": {
+    "reading": "マウンテン プクイチ",
+    "romaji": {
+     "macron": "Maunten Pukuichi",
+     "double": "Maunten Pukuichi",
+     "plain": "Maunten Pukuichi"
+    },
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00080"
+   }
+  },
+  {
+   "id": "nicovideo:65853:2026-11-10",
+   "work": "陰キャギャルでもイキがりたい！",
+   "ep": "第28話　世のイベント主催者もきっと創造と興行の狭間で葛藤している",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1173262",
+   "author": "かしわぎつきこ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 28",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 3,
+   "free_episodes": 3,
+   "started": "2023-10-12",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on pixivコミック, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-11-10",
+   "wid": "w00244",
+   "work_en": {
+    "reading": "インキャ ギャル デモ イキガリタイ",
+    "ruby": [
+     [
+      "陰",
+      "いん"
+     ],
+     [
+      "キャギャルでもイキがりたい！",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Inkya Gyaru Demo Ikigaritai",
+     "double": "Inkya Gyaru Demo Ikigaritai",
+     "plain": "Inkya Gyaru Demo Ikigaritai"
+    },
+    "en": "Even an Introverted Gal Wants to Act Tough!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Even an Introverted Gal Wants to Act Tough!"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "カシワギ ツキコ",
+    "romaji": {
+     "macron": "Kashiwagi Tsukiko",
+     "double": "Kashiwagi Tsukiko",
+     "plain": "Kashiwagi Tsukiko"
+    },
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01537"
+   }
+  },
+  {
+   "id": "nicovideo:82893:2026-11-10",
+   "work": "骨に願いを、星に呪いを",
+   "ep": "第5片",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1173279",
+   "author": "いくたはな",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 5",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 3,
+   "free_episodes": 3,
+   "started": "2026-07-14",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on pixivコミック, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-11-10",
+   "wid": "w00068",
+   "work_en": {
+    "reading": "ホネ ニ ネガイ ヲ、 ホシ ニ ノロイ ヲ",
+    "ruby": [
+     [
+      "骨",
+      "ほね"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "願",
+      "ねが"
+     ],
+     [
+      "いを、",
+      null
+     ],
+     [
+      "星",
+      "ほし"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "呪",
+      "のろ"
+     ],
+     [
+      "いを",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hone ni Negai o, Hoshi ni Noroi o",
+     "double": "Hone ni Negai o, Hoshi ni Noroi o",
+     "plain": "Hone ni Negai o, Hoshi ni Noroi o"
+    },
+    "en": "A Wish upon the Bones, a Curse upon the Stars",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Wish upon the Bones, a Curse upon the Stars"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "イクタハナ",
+    "romaji": {
+     "macron": "Ikutahana",
+     "double": "Ikutahana",
+     "plain": "Ikutahana"
+    },
+    "undivided": true,
+    "en": "IKUTA Hana",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00140"
+   }
+  },
+  {
+   "id": "nicovideo:69929:2026-11-10",
+   "work": "セーラー服と関西弁",
+   "ep": "第24話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1171579",
+   "author": "ライムマン",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 24, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 4,
+   "free_episodes": 4,
+   "started": "2024-12-10",
+   "work_level": true,
+   "channel": null,
+   "feed_date": "2026-11-10",
+   "wid": "w03316",
+   "work_en": {
+    "reading": "セーラーフク ト カンサイベン",
+    "ruby": [
+     [
+      "セーラー",
+      null
+     ],
+     [
+      "服",
+      "ふく"
+     ],
+     [
+      "と",
+      null
+     ],
+     [
+      "関西弁",
+      "かんさいべん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Sērāfuku to Kansaiben",
+     "double": "Seeraafuku to Kansaiben",
+     "plain": "Serafuku to Kansaiben"
+    },
+    "en": "Sailor Uniforms and the Kansai Dialect",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Sailor Uniforms and the Kansai Dialect"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "ライムマン",
+    "romaji": {
+     "macron": "Raimuman",
+     "double": "Raimuman",
+     "plain": "Raimuman"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c02344"
+   }
+  },
+  {
+   "id": "nicovideo:59722:2026-11-10",
+   "work": "ごきげんよう、一局いかが?",
+   "ep": "第43話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1171572",
+   "author": "卯花つかさ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 43, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 5,
+   "free_episodes": 5,
+   "started": "2022-09-13",
+   "work_level": true,
+   "channel": null,
+   "feed_date": "2026-11-10",
+   "wid": "w03225",
+   "work_en": {
+    "reading": "ゴキゲンヨウ 、 イッキョク イカガ ?",
+    "ruby": [
+     [
+      "ごきげんよう、",
+      null
+     ],
+     [
+      "一局",
+      "いっきょく"
+     ],
+     [
+      "いかが?",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Gokigen'yō , Ikkyoku Ikaga ?",
+     "double": "Gokigen'you , Ikkyoku Ikaga ?",
+     "plain": "Gokigen'yo , Ikkyoku Ikaga ?"
+    },
+    "en": "Good Day to You. Care for a Game?",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Good Day to You. Care for a Game?"
+    },
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "ndlsearch.ndl.go.jp",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I034783227",
+     "kind": "national-library",
+     "reviewed": "2026-08-08"
+    }
+   },
+   "author_en": {
+    "reading": "ウノハナ ツカサ",
+    "ruby": [
+     [
+      "卯花",
+      "うのはな"
+     ],
+     [
+      "つかさ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Unohana Tsukasa",
+     "double": "Unohana Tsukasa",
+     "plain": "Unohana Tsukasa"
+    },
+    "en": "Tsukasa Unohana",
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I032777113",
+     "kind": "national-library",
+     "reviewed": "2026-08-05"
+    },
+    "id": "c00710"
+   }
+  },
+  {
+   "id": "nicovideo:74042:2026-11-10",
+   "work": "ざこのみなさんお大事に",
+   "ep": "第16話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1171575",
+   "author": "薗田かんきつ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 16, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 4,
+   "free_episodes": 4,
+   "started": "2025-09-09",
+   "work_level": true,
+   "channel": null,
+   "feed_date": "2026-11-10",
+   "wid": "w01922",
+   "work_en": {
+    "reading": "ザ コノ ミナサン オ ダイジニ",
+    "ruby": [
+     [
+      "ざこのみなさんお",
+      null
+     ],
+     [
+      "大事",
+      "だいじ"
+     ],
+     [
+      "に",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Za Kono Minasan o Daijini",
+     "double": "Za Kono Minasan o Daijini",
+     "plain": "Za Kono Minasan o Daijini"
+    },
+    "en": "Get Well Soon, All You Weaklings",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Get Well Soon, All You Weaklings"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ソノダ カンキツ",
+    "ruby": [
+     [
+      "薗田",
+      "そのだ"
+     ],
+     [
+      "かんきつ",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Sonoda Kankitsu",
+     "double": "Sonoda Kankitsu",
+     "plain": "Sonoda Kankitsu"
+    },
+    "basis": "romaji",
+    "reading_basis": "researched",
+    "id": "c01242"
+   }
+  },
+  {
+   "id": "nicovideo:60084:2026-11-10",
+   "work": "ハッピーシュート！",
+   "ep": "第16話の4",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-10",
+   "seen": "2026-11-11",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1174805",
+   "author": "とりから",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 16, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 172,
+   "free_episodes": 172,
+   "started": "2022-08-31",
+   "work_level": true,
+   "feed_date": "2026-11-10",
+   "wid": "w02099",
+   "work_en": {
+    "reading": "ハッピーシュート！",
+    "romaji": {
+     "macron": "Happīshūto!",
+     "double": "Happiishuuto!",
+     "plain": "Happishuto!"
+    },
+    "en": "Happy Shoot!",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Happy Shoot!"
+    },
+    "reading_basis": "surface"
+   },
+   "author_en": {
+    "reading": "トリカラ",
+    "romaji": {
+     "macron": "Torikara",
+     "double": "Torikara",
+     "plain": "Torikara"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c01082"
    }
   },
   {
@@ -856,6 +2938,7 @@
    "access_modes": [
     "purchase"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -926,6 +3009,7 @@
    "access_modes": [
     "purchase"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -996,6 +3080,7 @@
    "access_modes": [
     "purchase"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": false,
    "kind": "new-chapter",
@@ -1066,6 +3151,7 @@
    "access_modes": [
     "free"
    ],
+   "access_basis": "the platform's own episode list",
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -1232,7 +3318,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-09",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1245,13 +3331,13 @@
    "ident": "discovery-candidate",
    "free_from": null,
    "access_modes": [
-    "purchase"
+    "free-timed"
    ],
-   "became_free": false,
-   "access_changed": null,
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
    "date_means": "free-from",
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "ahead_n": 5,
    "ahead_ep": "５巻 第５６話「彗星エンカウント」",
    "ahead_next_free": "2026-11-16",
@@ -1325,7 +3411,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-09",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1338,13 +3424,13 @@
    "ident": "discovery-candidate",
    "free_from": null,
    "access_modes": [
-    "purchase"
+    "free-timed"
    ],
-   "became_free": false,
-   "access_changed": null,
+   "became_free": true,
+   "access_changed": "purchase -> free-timed",
    "date_means": "free-from",
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "extra or side story — content, not notice",
    "preferred": "COMIC FUZ",
@@ -1411,7 +3497,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-09",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1516,7 +3602,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-09",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1683,7 +3769,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-09",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1780,7 +3866,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-09",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1853,7 +3939,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-09",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -1952,7 +4038,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-09",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -2025,7 +4111,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-09",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -2111,69 +4197,6 @@
    }
   },
   {
-   "id": "nicovideo:60084:2026-11-09",
-   "work": "ハッピーシュート！",
-   "ep": "第16話の3",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-11-09",
-   "seen": "2026-11-10",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1174473",
-   "author": "とりから",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 16, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 171,
-   "free_episodes": 171,
-   "started": "2022-08-31",
-   "work_level": true,
-   "feed_date": "2026-11-09",
-   "wid": "w02099",
-   "work_en": {
-    "reading": "ハッピーシュート！",
-    "romaji": {
-     "macron": "Happīshūto!",
-     "double": "Happiishuuto!",
-     "plain": "Happishuto!"
-    },
-    "en": "Happy Shoot!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Happy Shoot!"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "トリカラ",
-    "romaji": {
-     "macron": "Torikara",
-     "double": "Torikara",
-     "plain": "Torikara"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c01082"
-   }
-  },
-  {
    "id": "manga-park:https://manga-park.com/title/98459:第5話②",
    "work": "私のブルーガーネット",
    "ep": "第5話②",
@@ -2181,7 +4204,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-09",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -2267,7 +4290,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2374,7 +4397,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2475,7 +4498,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2558,7 +4581,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2703,7 +4726,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2813,7 +4836,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -2890,7 +4913,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -2969,7 +4992,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -3112,7 +5135,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -3223,7 +5246,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -3351,7 +5374,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -3443,7 +5466,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -3513,7 +5536,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -3596,7 +5619,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -3665,7 +5688,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-08",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -3764,7 +5787,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-07",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -3859,7 +5882,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-15",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4072,7 +6095,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-07",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4161,7 +6184,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-07",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4237,7 +6260,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-07",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4331,7 +6354,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-07",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -4418,7 +6441,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-07",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -4497,7 +6520,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-07",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -4595,7 +6618,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-07",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -5054,7 +7077,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5154,7 +7177,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5230,7 +7253,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5321,7 +7344,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5427,7 +7450,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5562,7 +7585,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5683,7 +7706,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5758,7 +7781,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5899,7 +7922,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -5965,7 +7988,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6070,7 +8093,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6151,7 +8174,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6270,7 +8293,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6382,7 +8405,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6477,7 +8500,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6565,7 +8588,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -6669,7 +8692,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6810,7 +8833,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -6895,7 +8918,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -6996,7 +9019,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7095,7 +9118,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7166,7 +9189,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-06",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -7254,7 +9277,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -7348,7 +9371,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-23",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7452,7 +9475,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-07",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7535,7 +9558,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-07",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7639,7 +9662,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-14",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7722,7 +9745,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-14",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7826,7 +9849,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-21",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7909,7 +9932,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-21",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -7978,7 +10001,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8054,7 +10077,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-24",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8155,7 +10178,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-25",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8232,7 +10255,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8304,7 +10327,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-26",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8403,7 +10426,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8515,7 +10538,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-27",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8591,7 +10614,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8750,7 +10773,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8836,7 +10859,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -8931,7 +10954,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9032,7 +11055,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9173,7 +11196,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9273,7 +11296,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9363,7 +11386,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9447,7 +11470,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9524,7 +11547,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9597,7 +11620,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9696,7 +11719,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -9952,7 +11975,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10025,7 +12048,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10093,7 +12116,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10164,7 +12187,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10271,7 +12294,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10357,7 +12380,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10457,7 +12480,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -10519,7 +12542,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -10601,7 +12624,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -10682,7 +12705,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -10762,7 +12785,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -10826,7 +12849,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-05",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -10882,7 +12905,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -10960,7 +12983,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -11261,7 +13284,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11334,7 +13357,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11466,7 +13489,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11543,7 +13566,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11661,7 +13684,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11738,7 +13761,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11821,7 +13844,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -11904,7 +13927,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12008,7 +14031,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12112,7 +14135,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12198,7 +14221,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -12212,7 +14235,7 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
    "free": false,
@@ -12279,7 +14302,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -12341,7 +14364,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -12428,7 +14451,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12442,10 +14465,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 13",
    "kind_inferred": true,
@@ -12511,7 +14534,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -12591,7 +14614,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-04",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -12741,7 +14764,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -12837,7 +14860,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -12937,7 +14960,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -13442,7 +15465,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13543,7 +15566,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13634,7 +15657,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13763,7 +15786,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -13854,7 +15877,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -13946,7 +15969,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14038,7 +16061,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -14144,7 +16167,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -14231,7 +16254,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -14337,7 +16360,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -14414,7 +16437,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -14480,7 +16503,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-03",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -14596,7 +16619,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -14694,7 +16717,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14787,7 +16810,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14881,7 +16904,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -14966,7 +16989,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15047,7 +17070,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -15142,7 +17165,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-02",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -15228,7 +17251,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-28",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -15321,7 +17344,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -15400,7 +17423,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15507,7 +17530,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15608,7 +17631,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15694,7 +17717,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15777,7 +17800,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -15853,7 +17876,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -15910,7 +17933,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -16002,7 +18025,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-11-01",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "heuristic",
    "conf": "low",
    "why": "date matched as a pattern in the page, not stated by the platform",
@@ -16187,7 +18210,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16283,7 +18306,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-31",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16346,7 +18369,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -16648,7 +18671,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16724,7 +18747,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16815,7 +18838,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16916,7 +18939,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -16992,7 +19015,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17084,7 +19107,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17219,7 +19242,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17354,7 +19377,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17489,7 +19512,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17604,7 +19627,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17677,7 +19700,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17818,7 +19841,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -17884,7 +19907,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18009,7 +20032,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18087,7 +20110,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18276,7 +20299,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "rendered",
    "conf": "reported",
    "why": "",
@@ -18369,7 +20392,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -18464,7 +20487,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -18569,7 +20592,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -18739,7 +20762,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18811,7 +20834,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18884,7 +20907,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -18968,7 +20991,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -19036,7 +21059,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -19127,7 +21150,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -19213,7 +21236,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -19303,7 +21326,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "bootstrap",
    "conf": "reported",
    "why": "",
@@ -19430,7 +21453,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -19547,7 +21570,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -19640,7 +21663,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "platform-stated",
    "conf": "reported",
    "why": "",
@@ -19702,7 +21725,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-29",
-   "seen": "2026-11-10",
+   "seen": "2026-11-11",
    "basis": "observed",
    "conf": "reported",
    "why": "work-level update date stated by the platform; chapter not identified",
@@ -19780,1069 +21803,10 @@
     "reading_basis": "researched",
     "id": "c01145"
    }
-  },
-  {
-   "id": "comicdays:episode:12207421983566481770",
-   "work": "サタノファニ",
-   "ep": "第３４３話②　「可哀想な人」",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-10-28",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-days.com/episode/12207421983566481770",
-   "author": "山田恵庸",
-   "plat": "comic-days",
-   "plat_name": "コミックDAYS",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "purchase"
-   ],
-   "access_basis": "the platform's own episode list",
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 343",
-   "kind_inferred": true,
-   "preferred": "コミックDAYS",
-   "also_on": [
-    "ヤンマガWeb"
-   ],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w00054",
-   "work_en": {
-    "reading": "サタノファニ",
-    "romaji": {
-     "macron": "Satanofani",
-     "double": "Satanofani",
-     "plain": "Satanofani"
-    },
-    "translation_refused": "The kana are the coinage the publisher prints in capitals, so ours is that name in another case.",
-    "en": "SATANOPHANY",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "SATANOPHANY"
-    },
-    "reading_basis": "surface",
-    "en_cite": {
-     "source": "mediaarts-db",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/madb-t-f2ab6d5672fb",
-     "kind": "bibliography",
-     "reviewed": "2026-08-07"
-    }
-   },
-   "author_en": {
-    "reading": "ヤマダ ヨシノブ",
-    "ruby": [
-     [
-      "山田恵庸",
-      "やまだよしのぶ"
-     ]
-    ],
-    "romaji": {
-     "macron": "Yamada Yoshinobu",
-     "double": "Yamada Yoshinobu",
-     "plain": "Yamada Yoshinobu"
-    },
-    "en": "Yoshinobu Yamada",
-    "basis": "romaji",
-    "reading_basis": "community-printed",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q11470371",
-     "kind": "community-db"
-    },
-    "unverified": true,
-    "id": "c00115"
-   }
-  },
-  {
-   "id": "comicfuz:80965",
-   "work": "花唄メモワール",
-   "ep": "第三十六唄(2)",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-fuz.com/manga/viewer/80965",
-   "series_url": "https://comic-fuz.com/manga/3274",
-   "author": "一ノ瀬けい",
-   "plat": "comic-fuz",
-   "plat_name": "COMIC FUZ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free-timed"
-   ],
-   "became_free": false,
-   "access_changed": null,
-   "date_means": "free-from",
-   "provenance": "attested",
-   "free": true,
-   "ahead_n": 2,
-   "ahead_ep": "特別編4(2)",
-   "ahead_next_free": "2026-11-11",
-   "ahead_next_ep": "特別編4(1)",
-   "kind": "new-chapter",
-   "kind_basis": "work has an earlier release here",
-   "kind_inferred": true,
-   "preferred": "COMIC FUZ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w02150",
-   "work_en": {
-    "reading": "ハナ ウタ メモワール",
-    "ruby": [
-     [
-      "花",
-      "はな"
-     ],
-     [
-      "唄",
-      "うた"
-     ],
-     [
-      "メモワール",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Hana Uta Memowāru",
-     "double": "Hana Uta Memowaaru",
-     "plain": "Hana Uta Memowaru"
-    },
-    "en": "Flower Song Memoir",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Flower Song Memoir"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "イチノセ ケイ",
-    "ruby": [
-     [
-      "一",
-      "いち"
-     ],
-     [
-      "ノ",
-      null
-     ],
-     [
-      "瀬",
-      "せ"
-     ],
-     [
-      "けい",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Ichinose Kei",
-     "double": "Ichinose Kei",
-     "plain": "Ichinose Kei"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "MADB",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1036644",
-     "kind": "national-library",
-     "reviewed": "2026-08-06"
-    },
-    "id": "c00215"
-   }
-  },
-  {
-   "id": "kadokomi:KC_0068460001500011_E",
-   "work": "魔法少女ノ魔女裁判",
-   "ep": "第13話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_006846_S/episodes/KC_0068460001500011_E",
-   "series_url": "https://comic-walker.com/detail/KC_006846_S",
-   "author": "時任せつな, Acacia",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 13",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w00062",
-   "work_en": {
-    "reading": "マホウ ショウジョ ノ マジョ サイバン",
-    "ruby": [
-     [
-      "魔法",
-      "まほう"
-     ],
-     [
-      "少女",
-      "しょうじょ"
-     ],
-     [
-      "ノ",
-      null
-     ],
-     [
-      "魔女",
-      "まじょ"
-     ],
-     [
-      "裁判",
-      "さいばん"
-     ]
-    ],
-    "romaji": {
-     "macron": "Mahō Shōjo no Majo Saiban",
-     "double": "Mahou Shoujo no Majo Saiban",
-     "plain": "Maho Shojo no Majo Saiban"
-    },
-    "en": "The Witch Trial of the Magical Girls",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Witch Trial of the Magical Girls"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "トキトウ セツナ, Acacia",
-    "ruby": [
-     [
-      "時任",
-      "ときとう"
-     ],
-     [
-      "せつな",
-      null
-     ],
-     [
-      ", ",
-      null
-     ],
-     [
-      "Acacia",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Tokitō Setsuna, Acacia",
-     "double": "Tokitou Setsuna, Acacia",
-     "plain": "Tokito Setsuna, Acacia"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji"
-   }
-  },
-  {
-   "id": "kadokomi:KC_0203890000300011_E",
-   "work": "盗賊少女に転生したけど、周回ボーナスで楽勝です！　100％盗む＆逃げるでラクラク冒険者生活",
-   "ep": "第2話①",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_020389_S/episodes/KC_0203890000300011_E",
-   "series_url": "https://comic-walker.com/detail/KC_020389_S",
-   "author": "邪武丸, 遠藤だいず, ファルまろ",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 2",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w03323",
-   "work_en": {
-    "reading": "トウゾク ショウジョ ニ テンショウ シタケド、 シュウカイ ボーナス デ ラクショウデス！ 　 100 ％ ヌスム ＆ ニゲルデ ラクラク ボウケンシャ セイカツ",
-    "ruby": [
-     [
-      "盗賊",
-      "とうぞく"
-     ],
-     [
-      "少女",
-      "しょうじょ"
-     ],
-     [
-      "に",
-      null
-     ],
-     [
-      "転生",
-      "てんしょう"
-     ],
-     [
-      "したけど、",
-      null
-     ],
-     [
-      "周回",
-      "しゅうかい"
-     ],
-     [
-      "ボーナスで",
-      null
-     ],
-     [
-      "楽勝",
-      "らくしょう"
-     ],
-     [
-      "です！　100％",
-      null
-     ],
-     [
-      "盗",
-      "ぬす"
-     ],
-     [
-      "む＆",
-      null
-     ],
-     [
-      "逃",
-      "に"
-     ],
-     [
-      "げるでラクラク",
-      null
-     ],
-     [
-      "冒険者",
-      "ぼうけんしゃ"
-     ],
-     [
-      "生活",
-      "せいかつ"
-     ]
-    ],
-    "romaji": {
-     "macron": "Tōzoku Shōjo ni Tenshō Shitakedo, Shūkai Bōnasu de Rakushōdesu! 100 % Nusumu & Nigerude Rakuraku Bōkensha Seikatsu",
-     "double": "Touzoku Shoujo ni Tenshou Shitakedo, Shuukai Boonasu de Rakushoudesu! 100 % Nusumu & Nigerude Rakuraku Boukensha Seikatsu",
-     "plain": "Tozoku Shojo ni Tensho Shitakedo, Shukai Bonasu de Rakushodesu! 100 % Nusumu & Nigerude Rakuraku Bokensha Seikatsu"
-    },
-    "en": "Reborn as a Thief Girl, I Breeze Through on New Game Plus Bonuses! An Easy Adventurer's Life of Stealing and Running Away, Every Time",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Reborn as a Thief Girl, I Breeze Through on New Game Plus Bonuses! An Easy Adventurer's Life of Stealing and Running Away, Every Time"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ヨコシマ タケマル, エンドウ ダイズ, ファルマロ",
-    "ruby": [
-     [
-      "邪武丸",
-      "よこしまたけまる"
-     ],
-     [
-      ", ",
-      null
-     ],
-     [
-      "遠藤だいず",
-      null
-     ],
-     [
-      ", ",
-      null
-     ],
-     [
-      "ファルまろ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Yokoshima Takemaru, Endō Daizu, Farumaro",
-     "double": "Yokoshima Takemaru, Endou Daizu, Farumaro",
-     "plain": "Yokoshima Takemaru, Endo Daizu, Farumaro"
-    },
-    "reading_basis": "analyser",
-    "basis": "romaji",
-    "unverified": true
-   }
-  },
-  {
-   "id": "kadokomi:KC_0213050000300011_E",
-   "work": "死神さんと昇天ごはん",
-   "ep": "第2話 日が暮れて途方に暮れて",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_021305_S/episodes/KC_0213050000300011_E",
-   "series_url": "https://comic-walker.com/detail/KC_021305_S",
-   "author": "菅野マナミ",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 2",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w03320",
-   "work_en": {
-    "reading": "シニガミサン ト ショウテン ゴハン",
-    "ruby": [
-     [
-      "死神",
-      "しにがみ"
-     ],
-     [
-      "さんと",
-      null
-     ],
-     [
-      "昇天",
-      "しょうてん"
-     ],
-     [
-      "ごはん",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Shinigamisan to Shōten Gohan",
-     "double": "Shinigamisan to Shouten Gohan",
-     "plain": "Shinigamisan to Shoten Gohan"
-    },
-    "en": "Miss Reaper and Meals to Die For",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Miss Reaper and Meals to Die For"
-    },
-    "reading_basis": "researched"
-   },
-   "author_en": {
-    "reading": "スガノ マナミ",
-    "ruby": [
-     [
-      "菅野",
-      "すがの"
-     ],
-     [
-      "マナミ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Sugano Manami",
-     "double": "Sugano Manami",
-     "plain": "Sugano Manami"
-    },
-    "en": "Manami Sugano",
-    "basis": "romaji",
-    "reading_basis": "community-printed",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q11619414",
-     "kind": "community-db"
-    },
-    "unverified": true,
-    "id": "c00963"
-   }
-  },
-  {
-   "id": "kadokomi:KC_0214880000400011_E",
-   "work": "アウトサイダーパラダイス",
-   "ep": "第3話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_021488_S/episodes/KC_0214880000400011_E",
-   "series_url": "https://comic-walker.com/detail/KC_021488_S",
-   "author": "涼川りん",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 3",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w00623",
-   "work_en": {
-    "reading": "アウトサイダーパラダイス",
-    "romaji": {
-     "macron": "Autosaidāparadaisu",
-     "double": "Autosaidaaparadaisu",
-     "plain": "Autosaidaparadaisu"
-    },
-    "en": "Outsider Paradise",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Outsider Paradise"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "スズカワ リン",
-    "ruby": [
-     [
-      "涼川",
-      "すずかわ"
-     ],
-     [
-      "りん",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Suzukawa Rin",
-     "double": "Suzukawa Rin",
-     "plain": "Suzukawa Rin"
-    },
-    "en": "Rin Suzukawa",
-    "basis": "romaji",
-    "reading_basis": "community-printed",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q27917710",
-     "kind": "community-db"
-    },
-    "unverified": true,
-    "id": "c00236"
-   }
-  },
-  {
-   "id": "kadokomi:KC_0214880000300011_E",
-   "work": "アウトサイダーパラダイス",
-   "ep": "第2話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_021488_S/episodes/KC_0214880000300011_E",
-   "series_url": "https://comic-walker.com/detail/KC_021488_S",
-   "author": "涼川りん",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 2",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w00623",
-   "work_en": {
-    "reading": "アウトサイダーパラダイス",
-    "romaji": {
-     "macron": "Autosaidāparadaisu",
-     "double": "Autosaidaaparadaisu",
-     "plain": "Autosaidaparadaisu"
-    },
-    "en": "Outsider Paradise",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Outsider Paradise"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "スズカワ リン",
-    "ruby": [
-     [
-      "涼川",
-      "すずかわ"
-     ],
-     [
-      "りん",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Suzukawa Rin",
-     "double": "Suzukawa Rin",
-     "plain": "Suzukawa Rin"
-    },
-    "en": "Rin Suzukawa",
-    "basis": "romaji",
-    "reading_basis": "community-printed",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q27917710",
-     "kind": "community-db"
-    },
-    "unverified": true,
-    "id": "c00236"
-   }
-  },
-  {
-   "id": "kadokomi:KC_0214880000200011_E",
-   "work": "アウトサイダーパラダイス",
-   "ep": "第1話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_021488_S/episodes/KC_0214880000200011_E",
-   "series_url": "https://comic-walker.com/detail/KC_021488_S",
-   "author": "涼川りん",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-series",
-   "kind_basis": "episode numbered 1",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w00623",
-   "work_en": {
-    "reading": "アウトサイダーパラダイス",
-    "romaji": {
-     "macron": "Autosaidāparadaisu",
-     "double": "Autosaidaaparadaisu",
-     "plain": "Autosaidaparadaisu"
-    },
-    "en": "Outsider Paradise",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Outsider Paradise"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "スズカワ リン",
-    "ruby": [
-     [
-      "涼川",
-      "すずかわ"
-     ],
-     [
-      "りん",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Suzukawa Rin",
-     "double": "Suzukawa Rin",
-     "plain": "Suzukawa Rin"
-    },
-    "en": "Rin Suzukawa",
-    "basis": "romaji",
-    "reading_basis": "community-printed",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q27917710",
-     "kind": "community-db"
-    },
-    "unverified": true,
-    "id": "c00236"
-   }
-  },
-  {
-   "id": "kadokomi:KC_0083720001200021_E",
-   "work": "らぶぶいっ！",
-   "ep": "第10話-2",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://comic-walker.com/detail/KC_008372_S/episodes/KC_0083720001200021_E",
-   "series_url": "https://comic-walker.com/detail/KC_008372_S",
-   "author": "芽瑠藻",
-   "plat": "kadokomi",
-   "plat_name": "カドコミ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 10",
-   "kind_inferred": true,
-   "preferred": "カドコミ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w00124",
-   "work_en": {
-    "reading": "ラブブイッ！",
-    "romaji": {
-     "macron": "Rabubui!",
-     "double": "Rabubui!",
-     "plain": "Rabubui!"
-    },
-    "en": "Love Parts!",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Love Parts!"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "メルモ",
-    "ruby": [
-     [
-      "芽瑠",
-      "める"
-     ],
-     [
-      "藻",
-      "も"
-     ]
-    ],
-    "romaji": {
-     "macron": "Merumo",
-     "double": "Merumo",
-     "plain": "Merumo"
-    },
-    "undivided": true,
-    "en": "Merumo",
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000137-I04000000A26474900000",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00221"
-   }
-  },
-  {
-   "id": "magapoke:https://pocket.shonenmagazine.com/title/02901/episode/445733",
-   "work": "アイドラトリィ",
-   "ep": "【#57】Shoes",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "platform-stated",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://pocket.shonenmagazine.com/title/02901/episode/445733",
-   "author": "原作/大鷹シン 漫画/ホマレ",
-   "plat": "magapoke",
-   "plat_name": "マガポケ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 57",
-   "kind_inferred": true,
-   "preferred": "マガポケ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w01225",
-   "work_en": {
-    "reading": "アイドラトリィ",
-    "romaji": {
-     "macron": "Aidoratorii",
-     "double": "Aidoratorii",
-     "plain": "Aidoratorii"
-    },
-    "en": "Idolatry",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Idolatry"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "オオタカ シン / ホマレ",
-    "ruby": [
-     [
-      "原作/",
-      null
-     ],
-     [
-      "大鷹",
-      "おおたか"
-     ],
-     [
-      "シン",
-      null
-     ],
-     [
-      " 漫画/",
-      null
-     ],
-     [
-      "ホマレ",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Ōtaka Shin / Homare",
-     "double": "Ootaka Shin / Homare",
-     "plain": "Otaka Shin / Homare"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji"
-   }
-  },
-  {
-   "id": "magapoke:https://pocket.shonenmagazine.com/title/02758/episode/446039",
-   "work": "ドリーム☆ジャンボ☆ガール",
-   "ep": "【第62話】有能☆後輩☆ガール",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "platform-stated",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://pocket.shonenmagazine.com/title/02758/episode/446039",
-   "author": "ヒロユキ",
-   "plat": "magapoke",
-   "plat_name": "マガポケ",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [
-    "purchase"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 62",
-   "kind_inferred": true,
-   "preferred": "マガポケ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w01224",
-   "work_en": {
-    "reading": "ドリーム☆ジャンボ☆ガール",
-    "romaji": {
-     "macron": "Dorīmu☆janbo☆gāru",
-     "double": "Doriimu☆janbo☆gaaru",
-     "plain": "Dorimu☆janbo☆garu"
-    },
-    "en": "Dream☆Jumbo☆Girl",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Dream☆Jumbo☆Girl"
-    },
-    "reading_basis": "surface"
-   },
-   "author_en": {
-    "reading": "ヒロユキ",
-    "romaji": {
-     "macron": "Hiroyuki",
-     "double": "Hiroyuki",
-     "plain": "Hiroyuki"
-    },
-    "undivided": true,
-    "en": "Hiroyuki",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00022"
-   }
-  },
-  {
-   "id": "urasunday:https://urasunday.com/title/26962:第1話",
-   "work": "かわいい同盟",
-   "ep": "第1話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-28",
-   "seen": "2026-11-10",
-   "basis": "heuristic",
-   "conf": "low",
-   "why": "date matched as a pattern in the page, not stated by the platform",
-   "moved": "",
-   "url": "https://urasunday.com/title/26962",
-   "author": "南文夏",
-   "author_basis": "carried from another record of the same work",
-   "plat": "urasunday-com",
-   "plat_name": "裏サンデー",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": null,
-   "late_discovered": false,
-   "access_modes": [],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 1 but the work has a higher-numbered chapter dated earlier — the date is not trustworthy, so not read as a start",
-   "kind_inferred": true,
-   "preferred": "裏サンデー",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-28",
-   "wid": "w00313",
-   "work_en": {
-    "reading": "カワイイ ドウメイ",
-    "ruby": [
-     [
-      "かわいい",
-      null
-     ],
-     [
-      "同盟",
-      "どうめい"
-     ]
-    ],
-    "romaji": {
-     "macron": "Kawaii Dōmei",
-     "double": "Kawaii Doumei",
-     "plain": "Kawaii Domei"
-    },
-    "en": "The Cute Alliance",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Cute Alliance"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "ミナミ フミカ",
-    "ruby": [
-     [
-      "南文夏",
-      "みなみふみか"
-     ]
-    ],
-    "romaji": {
-     "macron": "Minami Fumika",
-     "double": "Minami Fumika",
-     "plain": "Minami Fumika"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "MADB",
-     "url": "https://mediaarts-db.artmuseums.go.jp/id/M1088342",
-     "kind": "national-library",
-     "reviewed": "2026-08-06"
-    },
-    "id": "c00423"
-   }
   }
  ],
  "window_days": 14,
- "from": "2026-10-28",
- "to": "2026-11-10",
- "generated": "2026-11-10"
+ "from": "2026-10-29",
+ "to": "2026-11-11",
+ "generated": "2026-11-11"
 }

@@ -1,8 +1,10 @@
 {
- "generated": "2026-11-10T15:14:10+00:00",
+ "generated": "2026-11-10T22:24:54+00:00",
  "since_last": {
-  "at": "2026-11-10T11:32:17+00:00",
-  "statistics": {}
+  "at": "2026-11-10T15:14:10+00:00",
+  "statistics": {
+   "chapters": 2
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,23 +26,23 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-11-10",
-  "releases": 1085,
+  "at": "2026-11-11",
+  "releases": 1078,
   "works": 2766,
   "platforms": 19,
   "series_rows": 3332,
   "assembled": 3333,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 786,
+   "discovery-candidate": 784,
    "known-work-match": 33,
-   "platform-genre": 266
+   "platform-genre": 261
   },
   "collapsed": {
    "duplicate_chapters": 265,
-   "resolver": 131,
+   "resolver": 136,
    "samples": 0,
-   "thin_sitemap": 11
+   "thin_sitemap": 9
   }
  },
  "gate": {
@@ -556,8 +558,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 19,
-    "value": 19,
+    "budget": 17,
+    "value": 17,
     "measure": "arrival"
    },
    {
@@ -710,15 +712,15 @@
    {
     "name": "adapters fetching without net.py",
     "means": "modules that call urlopen themselves instead of going through adapters/net.py, and so have no per-host pause, no retry for a 503, no status code to tell an absent work from a refused request, and no sight of a redirect. Falls as each one is migrated. Its floor is not zero: adapters/editions/capture.py sends one route an extra header and keeps everything else net.py has, and a route that must not be fetched at all should not be made convenient.",
-    "budget": 31,
-    "value": 31,
+    "budget": 30,
+    "value": 30,
     "measure": "regression"
    },
    {
     "name": "captures with no floor",
     "means": "adapters that fetch from a host, write into data/source, and have nothing to refuse on. A host serving nonsense replaces the last good capture and reports success. adapters/ledger.py reports the damage afterwards; a floor prevents it.",
-    "budget": 8,
-    "value": 8,
+    "budget": 7,
+    "value": 7,
     "measure": "regression"
    },
    {
@@ -931,9 +933,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 59,
+    "consecutive": 60,
     "failing_since": "2026-10-16",
-    "days": 25,
+    "days": 26,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -941,9 +943,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 59,
+    "consecutive": 60,
     "failing_since": "2026-10-16",
-    "days": 25,
+    "days": 26,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -951,45 +953,25 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 59,
+    "consecutive": 60,
     "failing_since": "2026-10-16",
-    "days": 25,
+    "days": 26,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
    },
    {
-    "source": "stale:stage-a:generic",
-    "stage": "freshness",
-    "consecutive": 42,
-    "failing_since": "2026-10-24",
-    "days": 17,
-    "last_ok": "2026-10-23",
-    "error": "1 file(s) past their age, e.g. data/source/webpages/generic-firecross-jp.yaml dated 2026-10-22",
-    "issue": true
-   },
-   {
-    "source": "stale:stage-a:webpages",
-    "stage": "freshness",
-    "consecutive": 9,
-    "failing_since": "2026-11-09",
-    "days": 1,
-    "last_ok": "2026-11-08",
-    "error": "1 file(s) past their age, e.g. data/source/webpages/bookwalker-tanwa.yaml dated 2026-11-05",
-    "issue": true
-   },
-   {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 7,
+    "consecutive": 8,
     "failing_since": "2026-11-09",
-    "days": 1,
+    "days": 2,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
     "issue": true
    }
   ],
-  "healthy": 167,
+  "healthy": 169,
   "threshold": 3
  },
  "connectors": [
@@ -999,7 +981,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 100,
+   "age_days": 101,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1013,7 +995,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 94,
+   "age_days": 95,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1027,7 +1009,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-11-01",
-   "age_days": 9,
+   "age_days": 10,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1041,7 +1023,7 @@
    "works": 983,
    "rows": 2583,
    "retrieved": "2026-11-01",
-   "age_days": 9,
+   "age_days": 10,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1055,7 +1037,7 @@
    "works": 1796,
    "rows": 4289,
    "retrieved": "2026-11-05",
-   "age_days": 5,
+   "age_days": 6,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1069,7 +1051,7 @@
    "works": 68,
    "rows": 68,
    "retrieved": "2026-11-07",
-   "age_days": 3,
+   "age_days": 4,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1081,13 +1063,13 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6340,
-   "retrieved": "2026-11-10",
+   "rows": 6341,
+   "retrieved": "2026-11-11",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6293,
-   "well_formed": 6293,
+   "checked_rows": 6294,
+   "well_formed": 6294,
    "malformed": 0,
    "drop": null
   },
@@ -1096,7 +1078,7 @@
    "files": 6,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-11-10",
+   "retrieved": "2026-11-11",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1108,14 +1090,14 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1724,
-   "rows": 17723,
-   "retrieved": "2026-11-10",
+   "works": 1727,
+   "rows": 17735,
+   "retrieved": "2026-11-11",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17279,
-   "well_formed": 17279,
+   "checked_rows": 17290,
+   "well_formed": 17290,
    "malformed": 0,
    "drop": null
   },
@@ -1123,13 +1105,13 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1022,
-   "rows": 7863,
-   "retrieved": "2026-11-10",
+   "rows": 7867,
+   "retrieved": "2026-11-11",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7164,
-   "well_formed": 6828,
+   "checked_rows": 7168,
+   "well_formed": 6832,
    "malformed": 336,
    "drop": null
   },
@@ -1137,14 +1119,14 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1343,
-   "rows": 11637,
-   "retrieved": "2026-11-10",
+   "rows": 11627,
+   "retrieved": "2026-11-11",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10790,
+   "checked_rows": 10780,
    "well_formed": 0,
-   "malformed": 10790,
+   "malformed": 10780,
    "drop": null
   },
   {
@@ -1152,7 +1134,7 @@
    "files": 881,
    "works": 881,
    "rows": 2306,
-   "retrieved": "2026-11-10",
+   "retrieved": "2026-11-11",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1164,15 +1146,15 @@
   {
    "source": "webpages",
    "files": 52,
-   "works": 695,
-   "rows": 10158,
-   "retrieved": "2026-11-10",
+   "works": 696,
+   "rows": 10174,
+   "retrieved": "2026-11-11",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10103,
-   "well_formed": 10101,
-   "malformed": 2,
+   "checked_rows": 10119,
+   "well_formed": 10119,
+   "malformed": 0,
    "drop": null
   }
  ],
@@ -1246,7 +1228,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 19,
+    "credit fields an identifier does not cover": 17,
     "credit pages listing a work that does not name them": 12,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1268,8 +1250,8 @@
     "invented markup in tests": 76,
     "nicovideo works with no rights": 80,
     "modules reading a corpus file": 15,
-    "adapters fetching without net.py": 31,
-    "captures with no floor": 8,
+    "adapters fetching without net.py": 30,
+    "captures with no floor": 7,
     "unreadable bookwalker rows": 15,
     "bookwalker series unread": 0,
     "bookwalker listings unconfirmed": 0,
@@ -1308,10 +1290,10 @@
    "print": 1782,
    "oneshot": 513,
    "completed": 504,
-   "active": 287,
+   "active": 286,
    "dormant": 147,
-   "slow": 57,
-   "unknown": 42
+   "slow": 56,
+   "unknown": 44
   },
   "english_basis": {
    "translated": 2953,
@@ -1324,7 +1306,7 @@
   "print_only": 1782,
   "volumes": 6593,
   "with_identifier": 3332,
-  "chapters": 31343,
+  "chapters": 31345,
   "delivery_dated": 1110
  }
 }
