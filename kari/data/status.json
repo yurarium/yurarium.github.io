@@ -1,10 +1,8 @@
 {
- "generated": "2026-11-10T22:24:54+00:00",
+ "generated": "2026-11-11T11:11:35+00:00",
  "since_last": {
-  "at": "2026-11-10T15:14:10+00:00",
-  "statistics": {
-   "chapters": 2
-  }
+  "at": "2026-11-10T22:24:54+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -39,7 +37,7 @@
    "platform-genre": 261
   },
   "collapsed": {
-   "duplicate_chapters": 265,
+   "duplicate_chapters": 261,
    "resolver": 136,
    "samples": 0,
    "thin_sitemap": 9
@@ -614,8 +612,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1239,
-    "value": 1239,
+    "budget": 1240,
+    "value": 1240,
     "measure": "arrival"
    },
    {
@@ -933,7 +931,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 60,
+    "consecutive": 61,
     "failing_since": "2026-10-16",
     "days": 26,
     "last_ok": null,
@@ -943,7 +941,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 60,
+    "consecutive": 61,
     "failing_since": "2026-10-16",
     "days": 26,
     "last_ok": null,
@@ -953,7 +951,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 60,
+    "consecutive": 61,
     "failing_since": "2026-10-16",
     "days": 26,
     "last_ok": null,
@@ -963,7 +961,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 8,
+    "consecutive": 9,
     "failing_since": "2026-11-09",
     "days": 2,
     "last_ok": null,
@@ -1236,7 +1234,7 @@
     "ruby asserting a reading per character": 213,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 187,
-    "titles read by a machine, unmarked": 1239,
+    "titles read by a machine, unmarked": 1240,
     "uncertain readings": 64,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1296,9 +1294,9 @@
    "unknown": 44
   },
   "english_basis": {
-   "translated": 2953,
-   "official-jp": 243,
-   "licensed": 108,
+   "translated": 2768,
+   "official-jp": 429,
+   "licensed": 107,
    "romaji": 27,
    "none": 1
   },
