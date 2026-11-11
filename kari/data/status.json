@@ -1,8 +1,12 @@
 {
- "generated": "2026-11-11T14:43:13+00:00",
+ "generated": "2026-11-11T23:10:54+00:00",
  "since_last": {
-  "at": "2026-11-11T11:42:41+00:00",
-  "statistics": {}
+  "at": "2026-11-11T14:43:13+00:00",
+  "statistics": {
+   "works": 1,
+   "with_identifier": 1,
+   "chapters": 12
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,20 +28,20 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-11-11",
-  "releases": 1078,
+  "at": "2026-11-12",
+  "releases": 1087,
   "works": 2766,
   "platforms": 19,
-  "series_rows": 3332,
-  "assembled": 3333,
+  "series_rows": 3333,
+  "assembled": 3334,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 784,
+   "discovery-candidate": 791,
    "known-work-match": 33,
-   "platform-genre": 261
+   "platform-genre": 263
   },
   "collapsed": {
-   "duplicate_chapters": 261,
+   "duplicate_chapters": 266,
    "resolver": 136,
    "samples": 0,
    "thin_sitemap": 9
@@ -514,8 +518,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 540,
-    "value": 540,
+    "budget": 541,
+    "value": 541,
     "measure": "arrival"
    },
    {
@@ -931,9 +935,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 61,
+    "consecutive": 62,
     "failing_since": "2026-10-16",
-    "days": 26,
+    "days": 27,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -941,9 +945,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 61,
+    "consecutive": 62,
     "failing_since": "2026-10-16",
-    "days": 26,
+    "days": 27,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -951,9 +955,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 61,
+    "consecutive": 62,
     "failing_since": "2026-10-16",
-    "days": 26,
+    "days": 27,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -961,9 +965,9 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 9,
+    "consecutive": 10,
     "failing_since": "2026-11-09",
-    "days": 2,
+    "days": 3,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
     "issue": true
@@ -979,7 +983,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 101,
+   "age_days": 102,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -993,7 +997,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 95,
+   "age_days": 96,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1007,7 +1011,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-11-01",
-   "age_days": 10,
+   "age_days": 11,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1021,7 +1025,7 @@
    "works": 983,
    "rows": 2583,
    "retrieved": "2026-11-01",
-   "age_days": 10,
+   "age_days": 11,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1035,7 +1039,7 @@
    "works": 1796,
    "rows": 4289,
    "retrieved": "2026-11-05",
-   "age_days": 6,
+   "age_days": 7,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1049,7 +1053,7 @@
    "works": 68,
    "rows": 68,
    "retrieved": "2026-11-07",
-   "age_days": 4,
+   "age_days": 5,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1061,13 +1065,13 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6341,
-   "retrieved": "2026-11-11",
+   "rows": 6347,
+   "retrieved": "2026-11-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6294,
-   "well_formed": 6294,
+   "checked_rows": 6300,
+   "well_formed": 6300,
    "malformed": 0,
    "drop": null
   },
@@ -1076,7 +1080,7 @@
    "files": 6,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-11-11",
+   "retrieved": "2026-11-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1088,14 +1092,14 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1727,
-   "rows": 17735,
-   "retrieved": "2026-11-11",
+   "works": 1731,
+   "rows": 17739,
+   "retrieved": "2026-11-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17290,
-   "well_formed": 17290,
+   "checked_rows": 17293,
+   "well_formed": 17293,
    "malformed": 0,
    "drop": null
   },
@@ -1103,13 +1107,13 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1022,
-   "rows": 7867,
-   "retrieved": "2026-11-11",
+   "rows": 7872,
+   "retrieved": "2026-11-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7168,
-   "well_formed": 6832,
+   "checked_rows": 7173,
+   "well_formed": 6837,
    "malformed": 336,
    "drop": null
   },
@@ -1118,7 +1122,7 @@
    "files": 3,
    "works": 1343,
    "rows": 11627,
-   "retrieved": "2026-11-11",
+   "retrieved": "2026-11-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1132,7 +1136,7 @@
    "files": 881,
    "works": 881,
    "rows": 2306,
-   "retrieved": "2026-11-11",
+   "retrieved": "2026-11-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1145,14 +1149,14 @@
    "source": "webpages",
    "files": 52,
    "works": 696,
-   "rows": 10174,
-   "retrieved": "2026-11-11",
+   "rows": 10182,
+   "retrieved": "2026-11-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10119,
-   "well_formed": 10119,
-   "malformed": 0,
+   "checked_rows": 10127,
+   "well_formed": 10125,
+   "malformed": 2,
    "drop": null
   }
  ],
@@ -1220,7 +1224,7 @@
     "renderings with nothing to show": 0,
     "kana names with no stated division": 252,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 540,
+    "author readings no source states": 541,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
@@ -1283,28 +1287,28 @@
   }
  ],
  "statistics": {
-  "works": 3332,
+  "works": 3333,
   "states": {
    "print": 1782,
-   "oneshot": 513,
+   "oneshot": 514,
    "completed": 504,
-   "active": 286,
+   "active": 284,
    "dormant": 147,
-   "slow": 56,
+   "slow": 58,
    "unknown": 44
   },
   "english_basis": {
-   "translated": 2768,
-   "official-jp": 429,
-   "licensed": 107,
+   "translated": 2769,
+   "official-jp": 443,
+   "licensed": 93,
    "romaji": 27,
    "none": 1
   },
   "print_works": 2644,
   "print_only": 1782,
   "volumes": 6593,
-  "with_identifier": 3332,
-  "chapters": 31345,
+  "with_identifier": 3333,
+  "chapters": 31357,
   "delivery_dated": 1110
  }
 }
