@@ -34,6 +34,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 KARI = ROOT / "kari"
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import rules                                                            # noqa: E402
+import titlecase                                                        # noqa: E402
 
 #: CORRECTIONS TO PUBLISHED ROWS THE STORE NO LONGER BUILDS, one row at a time with the reason
 #: written down. The carry below keeps every such row as it was published, because an update that
@@ -113,9 +114,16 @@ def files(db, generated):
     out["feed/credit-keys.json"] = emit.as_compact(emit.credit_keys(db))
     out["index.json"] = emit.as_compact(emit.index(db))
     out["works.json"] = emit.as_text(emit.works(db))
-    out["feed/names.json"] = emit.as_text(emit.names(db, generated))
-    out["series.json"] = emit.as_text(emit.series(db, generated))
-    out.update(emit.feed_files(db))
+    # TITLES IN TITLE CASE, ruled 2026-11-11. The store keeps the capitals each source printed and
+    # a reader is shown title case; see titlecase.py, which is the one place that decides it.
+    names = emit.names(db, generated)
+    for rec in (names.get("titles") or {}).values():
+        titlecase.present(rec)
+    out["feed/names.json"] = emit.as_text(names)
+    out["series.json"] = emit.as_text(titlecase.present_rows(emit.series(db, generated)))
+    for name, text in emit.feed_files(db).items():
+        out[name] = (emit.as_text(titlecase.present_rows(json.loads(text)))
+                     if name.endswith(".json") else text)
 
     # ── THE RUN'S REPORT ON ITSELF, §13 ──────────────────────────────────────────────────────
     #
@@ -253,7 +261,8 @@ def main(argv=None):
         doc["releases"] = sorted((doc.get("releases") or []) + gone,
                                  key=lambda r: str(r.get("feed_date") or r.get("pub") or "")[:10],
                                  reverse=True)
-        written[name] = _emit.as_text(doc)
+        # A row carried from a file published before titles were cased is cased with the rest.
+        written[name] = _emit.as_text(titlecase.present_rows(doc))
         carried.append((name, len(gone), gone))
 
     # SAID OUT LOUD, EVERY TIME. A carry that printed nothing would be an archive quietly diverging
