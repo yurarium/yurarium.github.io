@@ -1,12 +1,8 @@
 {
- "generated": "2026-11-11T23:10:54+00:00",
+ "generated": "2026-11-12T11:26:09+00:00",
  "since_last": {
-  "at": "2026-11-11T14:43:13+00:00",
-  "statistics": {
-   "works": 1,
-   "with_identifier": 1,
-   "chapters": 12
-  }
+  "at": "2026-11-11T23:10:54+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -33,16 +29,16 @@
   "works": 2766,
   "platforms": 19,
   "series_rows": 3333,
-  "assembled": 3334,
-  "awaiting_identifier": 1,
+  "assembled": 3335,
+  "awaiting_identifier": 2,
   "identification": {
-   "discovery-candidate": 791,
-   "known-work-match": 33,
-   "platform-genre": 263
+   "discovery-candidate": 793,
+   "known-work-match": 30,
+   "platform-genre": 264
   },
   "collapsed": {
-   "duplicate_chapters": 266,
-   "resolver": 136,
+   "duplicate_chapters": 261,
+   "resolver": 138,
    "samples": 0,
    "thin_sitemap": 9
   }
@@ -518,8 +514,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 541,
-    "value": 541,
+    "budget": 542,
+    "value": 542,
     "measure": "arrival"
    },
    {
@@ -560,8 +556,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 17,
-    "value": 17,
+    "budget": 18,
+    "value": 18,
     "measure": "arrival"
    },
    {
@@ -616,8 +612,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1240,
-    "value": 1240,
+    "budget": 1241,
+    "value": 1241,
     "measure": "arrival"
    },
    {
@@ -819,8 +815,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 2,
-    "value": 2,
+    "budget": 6,
+    "value": 6,
     "measure": "arrival"
    },
    {
@@ -935,7 +931,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 62,
+    "consecutive": 63,
     "failing_since": "2026-10-16",
     "days": 27,
     "last_ok": null,
@@ -945,7 +941,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 62,
+    "consecutive": 63,
     "failing_since": "2026-10-16",
     "days": 27,
     "last_ok": null,
@@ -955,7 +951,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 62,
+    "consecutive": 63,
     "failing_since": "2026-10-16",
     "days": 27,
     "last_ok": null,
@@ -965,15 +961,25 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 10,
+    "consecutive": 11,
     "failing_since": "2026-11-09",
     "days": 3,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
     "issue": true
+   },
+   {
+    "source": "shopquery",
+    "stage": "stage-post",
+    "consecutive": 1,
+    "failing_since": "2026-11-12",
+    "days": 0,
+    "last_ok": "2026-11-12",
+    "error": "HEALTH: 1 of 1 works had every query answer nothing (over the 35% ceiling). This shop says 'no results' with a 404, so a run being refused looks exactly like a shop with no stock. Refusing to write.",
+    "issue": false
    }
   ],
-  "healthy": 169,
+  "healthy": 168,
   "threshold": 3
  },
  "connectors": [
@@ -1092,8 +1098,8 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1731,
-   "rows": 17739,
+   "works": 1732,
+   "rows": 17740,
    "retrieved": "2026-11-12",
    "age_days": 0,
    "in_scope": true,
@@ -1135,7 +1141,7 @@
    "source": "openbd",
    "files": 881,
    "works": 881,
-   "rows": 2306,
+   "rows": 2307,
    "retrieved": "2026-11-12",
    "age_days": 0,
    "in_scope": true,
@@ -1148,15 +1154,15 @@
   {
    "source": "webpages",
    "files": 52,
-   "works": 696,
-   "rows": 10182,
+   "works": 698,
+   "rows": 10184,
    "retrieved": "2026-11-12",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10127,
-   "well_formed": 10125,
-   "malformed": 2,
+   "checked_rows": 10129,
+   "well_formed": 10128,
+   "malformed": 1,
    "drop": null
   }
  ],
@@ -1224,13 +1230,13 @@
     "renderings with nothing to show": 0,
     "kana names with no stated division": 252,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 541,
+    "author readings no source states": 542,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 17,
+    "credit fields an identifier does not cover": 18,
     "credit pages listing a work that does not name them": 12,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1238,7 +1244,7 @@
     "ruby asserting a reading per character": 213,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 187,
-    "titles read by a machine, unmarked": 1240,
+    "titles read by a machine, unmarked": 1241,
     "uncertain readings": 64,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1267,7 +1273,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
-    "updates naming a work we do not hold": 2,
+    "updates naming a work we do not hold": 6,
     "works whose first publication country is unattested": 2765,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 7,
