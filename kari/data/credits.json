@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-13",
+ "generated": "2026-11-14",
  "note": "One record per credit, with the works it is named on and the role on each edge. Addresses are opaque and minted: a credit read three ways in a day would have broken a name-shaped one twice. Fetched only when a credit page is opened.",
- "count": 2463,
+ "count": 2468,
  "credits": {
   "c00001": {
    "credit": "クール教信者",
@@ -1041,7 +1041,10 @@
    "shape": "person",
    "works": [
     {
-     "id": "w00016"
+     "id": "w00016",
+     "roles": [
+      "著"
+     ]
     },
     {
      "id": "w00091"
@@ -13748,6 +13751,9 @@
      "roles": [
       "漫画"
      ]
+    },
+    {
+     "id": "w03544"
     }
    ],
    "spellings": [
@@ -38110,6 +38116,66 @@
    ],
    "spellings": [
     "藤原ハル"
+   ]
+  },
+  "c02471": {
+   "credit": "路田行",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03545"
+    }
+   ],
+   "spellings": [
+    "路田行"
+   ]
+  },
+  "c02472": {
+   "credit": "ながれで",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03546"
+    }
+   ],
+   "spellings": [
+    "ながれで"
+   ]
+  },
+  "c02473": {
+   "credit": "トヨダガク",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03547"
+    }
+   ],
+   "spellings": [
+    "トヨダガク"
+   ]
+  },
+  "c02474": {
+   "credit": "渡辺伊織",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03542"
+    }
+   ],
+   "spellings": [
+    "渡辺伊織"
+   ]
+  },
+  "c02475": {
+   "credit": "warabi餅",
+   "shape": "person",
+   "works": [
+    {
+     "id": "w03543"
+    }
+   ],
+   "spellings": [
+    "warabi餅"
    ]
   }
  },
