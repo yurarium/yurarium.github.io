@@ -925,10 +925,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 8,
+   "ahead_n": 7,
    "ahead_ep": "１５巻 第９０球 「示すしかなかろ」（２）",
-   "ahead_next_free": "2026-11-13",
-   "ahead_next_ep": "１５巻 第８７球 「顔面に当ててでも」（１）",
+   "ahead_next_free": "2026-11-20",
+   "ahead_next_ep": "１５巻 第８７球 「顔面に当ててでも」（２）",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 86",
    "kind_inferred": true,
@@ -2351,7 +2351,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-12",
+   "seen": "2026-11-13",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -15564,6 +15564,10 @@
    "plat_name": "サンデーうぇぶり",
    "ident": "discovery-candidate",
    "free_from": "2026-10-22T15:00:00Z",
+   "access_modes": [
+    "withdrawn"
+   ],
+   "access_basis": "the platform's own episode list marks this chapter no longer readable",
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -15660,8 +15664,8 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 4,
-   "ahead_ep": "第23話(2)",
+   "ahead_n": 5,
+   "ahead_ep": "第23.5話",
    "ahead_next_free": "2026-11-20",
    "ahead_next_ep": "第22話(2)",
    "kind": "new-chapter",
@@ -15760,10 +15764,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 8,
+   "ahead_n": 7,
    "ahead_ep": "１５巻 第９０球 「示すしかなかろ」（２）",
-   "ahead_next_free": "2026-11-13",
-   "ahead_next_ep": "１５巻 第８７球 「顔面に当ててでも」（１）",
+   "ahead_next_free": "2026-11-20",
+   "ahead_next_ep": "１５巻 第８７球 「顔面に当ててでも」（２）",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 85",
    "kind_inferred": true,
@@ -16880,9 +16884,7 @@
    "kind_basis": "episode numbered 31",
    "kind_inferred": true,
    "preferred": "カドコミ",
-   "also_on": [
-    "ニコニコ漫画"
-   ],
+   "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-10-23",
    "wid": "w02180",
@@ -17187,7 +17189,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-12",
+   "seen": "2026-11-13",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -19248,9 +19250,7 @@
    "kind_basis": "episode numbered 21",
    "kind_inferred": true,
    "preferred": "カドコミ",
-   "also_on": [
-    "ニコニコ漫画"
-   ],
+   "also_on": [],
    "is_preferred": true,
    "feed_date": "2026-10-22",
    "wid": "w00113",
@@ -19790,8 +19790,8 @@
    "preferred": "ニコニコ漫画",
    "also_on": [],
    "is_preferred": true,
-   "episode_count": 6,
-   "free_episodes": 6,
+   "episode_count": 5,
+   "free_episodes": 5,
    "started": "2025-07-24",
    "work_level": true,
    "channel": null,
@@ -21812,7 +21812,7 @@
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
-   "kind_basis": "numbered 10, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 10",
    "kind_inferred": true,
    "preferred": "カドコミ",
    "also_on": [],
@@ -24795,285 +24795,6 @@
    }
   },
   {
-   "id": "comicdays:episode:12207421984335676438",
-   "work": "ぜんぶ壊して地獄で愛して",
-   "ep": "第34話 嘘(3)",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-18",
-   "seen": "2026-10-18",
-   "basis": "observed",
-   "conf": "low",
-   "why": "3 releases of this work share this timestamp — consistent with a metadata refresh or a series import, not same-day publication",
-   "moved": "",
-   "url": "https://comic-days.com/episode/12207421984335676438",
-   "author": "くわばらたもつ",
-   "plat": "comic-days",
-   "plat_name": "コミックDAYS",
-   "ident": "known-work-match",
-   "free_from": null,
-   "access_modes": [
-    "purchase"
-   ],
-   "access_basis": "the platform's own episode list",
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 34",
-   "kind_inferred": true,
-   "preferred": "コミックDAYS",
-   "also_on": [
-    "マガポケ",
-    "一迅プラス"
-   ],
-   "is_preferred": true,
-   "feed_date": "2026-10-18",
-   "wid": "w00055",
-   "work_en": {
-    "reading": "ゼンブ コワシテ ジゴク デ アイシテ",
-    "ruby": [
-     [
-      "ぜんぶ",
-      null
-     ],
-     [
-      "壊",
-      "こわ"
-     ],
-     [
-      "して",
-      null
-     ],
-     [
-      "地獄",
-      "じごく"
-     ],
-     [
-      "で",
-      null
-     ],
-     [
-      "愛",
-      "あい"
-     ],
-     [
-      "して",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Zenbu Kowashite Jigoku de Aishite",
-     "double": "Zenbu Kowashite Jigoku de Aishite",
-     "plain": "Zenbu Kowashite Jigoku de Aishite"
-    },
-    "en": "Break It All, Love Me in Hell",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Break It All, Love Me in Hell"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "クワバラ タモツ",
-    "romaji": {
-     "macron": "Kuwabara Tamotsu",
-     "double": "Kuwabara Tamotsu",
-     "plain": "Kuwabara Tamotsu"
-    },
-    "en": "KUWABARA Tamotsu",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00119"
-   }
-  },
-  {
-   "id": "comicdays:episode:12207421984335676430",
-   "work": "ぜんぶ壊して地獄で愛して",
-   "ep": "第34話 嘘(2)",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-18",
-   "seen": "2026-10-18",
-   "basis": "observed",
-   "conf": "low",
-   "why": "3 releases of this work share this timestamp — consistent with a metadata refresh or a series import, not same-day publication",
-   "moved": "",
-   "url": "https://comic-days.com/episode/12207421984335676430",
-   "author": "くわばらたもつ",
-   "plat": "comic-days",
-   "plat_name": "コミックDAYS",
-   "ident": "known-work-match",
-   "free_from": null,
-   "access_modes": [
-    "purchase"
-   ],
-   "access_basis": "the platform's own episode list",
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 34",
-   "kind_inferred": true,
-   "preferred": "コミックDAYS",
-   "also_on": [
-    "マガポケ",
-    "一迅プラス"
-   ],
-   "is_preferred": true,
-   "feed_date": "2026-10-18",
-   "wid": "w00055",
-   "work_en": {
-    "reading": "ゼンブ コワシテ ジゴク デ アイシテ",
-    "ruby": [
-     [
-      "ぜんぶ",
-      null
-     ],
-     [
-      "壊",
-      "こわ"
-     ],
-     [
-      "して",
-      null
-     ],
-     [
-      "地獄",
-      "じごく"
-     ],
-     [
-      "で",
-      null
-     ],
-     [
-      "愛",
-      "あい"
-     ],
-     [
-      "して",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Zenbu Kowashite Jigoku de Aishite",
-     "double": "Zenbu Kowashite Jigoku de Aishite",
-     "plain": "Zenbu Kowashite Jigoku de Aishite"
-    },
-    "en": "Break It All, Love Me in Hell",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Break It All, Love Me in Hell"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "クワバラ タモツ",
-    "romaji": {
-     "macron": "Kuwabara Tamotsu",
-     "double": "Kuwabara Tamotsu",
-     "plain": "Kuwabara Tamotsu"
-    },
-    "en": "KUWABARA Tamotsu",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00119"
-   }
-  },
-  {
-   "id": "comicdays:episode:12207421984335676420",
-   "work": "ぜんぶ壊して地獄で愛して",
-   "ep": "第34話 嘘(1)",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-18",
-   "seen": "2026-10-18",
-   "basis": "observed",
-   "conf": "low",
-   "why": "3 releases of this work share this timestamp — consistent with a metadata refresh or a series import, not same-day publication",
-   "moved": "",
-   "url": "https://comic-days.com/episode/12207421984335676420",
-   "author": "くわばらたもつ",
-   "plat": "comic-days",
-   "plat_name": "コミックDAYS",
-   "ident": "known-work-match",
-   "free_from": null,
-   "access_modes": [
-    "purchase"
-   ],
-   "access_basis": "the platform's own episode list",
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 34",
-   "kind_inferred": true,
-   "preferred": "コミックDAYS",
-   "also_on": [
-    "マガポケ",
-    "一迅プラス"
-   ],
-   "is_preferred": true,
-   "feed_date": "2026-10-18",
-   "wid": "w00055",
-   "work_en": {
-    "reading": "ゼンブ コワシテ ジゴク デ アイシテ",
-    "ruby": [
-     [
-      "ぜんぶ",
-      null
-     ],
-     [
-      "壊",
-      "こわ"
-     ],
-     [
-      "して",
-      null
-     ],
-     [
-      "地獄",
-      "じごく"
-     ],
-     [
-      "で",
-      null
-     ],
-     [
-      "愛",
-      "あい"
-     ],
-     [
-      "して",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Zenbu Kowashite Jigoku de Aishite",
-     "double": "Zenbu Kowashite Jigoku de Aishite",
-     "plain": "Zenbu Kowashite Jigoku de Aishite"
-    },
-    "en": "Break It All, Love Me in Hell",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Break It All, Love Me in Hell"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "クワバラ タモツ",
-    "romaji": {
-     "macron": "Kuwabara Tamotsu",
-     "double": "Kuwabara Tamotsu",
-     "plain": "Kuwabara Tamotsu"
-    },
-    "en": "KUWABARA Tamotsu",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00119"
-   }
-  },
-  {
    "id": "sunday_webry:episode:12207421984388028467",
    "work": "つるこさん",
    "ep": "つるこさん",
@@ -25699,6 +25420,285 @@
     },
     "unverified": true,
     "id": "c00062"
+   }
+  },
+  {
+   "id": "comicdays:episode:12207421984335676438",
+   "work": "ぜんぶ壊して地獄で愛して",
+   "ep": "第34話 嘘(3)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-18",
+   "seen": "2026-10-18",
+   "basis": "observed",
+   "conf": "low",
+   "why": "3 releases of this work share this timestamp — consistent with a metadata refresh or a series import, not same-day publication",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421984335676438",
+   "author": "くわばらたもつ",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "known-work-match",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "access_basis": "the platform's own episode list",
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 34",
+   "kind_inferred": true,
+   "preferred": "コミックDAYS",
+   "also_on": [
+    "マガポケ",
+    "一迅プラス"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-18",
+   "wid": "w00055",
+   "work_en": {
+    "reading": "ゼンブ コワシテ ジゴク デ アイシテ",
+    "ruby": [
+     [
+      "ぜんぶ",
+      null
+     ],
+     [
+      "壊",
+      "こわ"
+     ],
+     [
+      "して",
+      null
+     ],
+     [
+      "地獄",
+      "じごく"
+     ],
+     [
+      "で",
+      null
+     ],
+     [
+      "愛",
+      "あい"
+     ],
+     [
+      "して",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Zenbu Kowashite Jigoku de Aishite",
+     "double": "Zenbu Kowashite Jigoku de Aishite",
+     "plain": "Zenbu Kowashite Jigoku de Aishite"
+    },
+    "en": "Break It All, Love Me in Hell",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Break It All, Love Me in Hell"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "クワバラ タモツ",
+    "romaji": {
+     "macron": "Kuwabara Tamotsu",
+     "double": "Kuwabara Tamotsu",
+     "plain": "Kuwabara Tamotsu"
+    },
+    "en": "KUWABARA Tamotsu",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00119"
+   }
+  },
+  {
+   "id": "comicdays:episode:12207421984335676430",
+   "work": "ぜんぶ壊して地獄で愛して",
+   "ep": "第34話 嘘(2)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-18",
+   "seen": "2026-10-18",
+   "basis": "observed",
+   "conf": "low",
+   "why": "3 releases of this work share this timestamp — consistent with a metadata refresh or a series import, not same-day publication",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421984335676430",
+   "author": "くわばらたもつ",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "known-work-match",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "access_basis": "the platform's own episode list",
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 34",
+   "kind_inferred": true,
+   "preferred": "コミックDAYS",
+   "also_on": [
+    "マガポケ",
+    "一迅プラス"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-18",
+   "wid": "w00055",
+   "work_en": {
+    "reading": "ゼンブ コワシテ ジゴク デ アイシテ",
+    "ruby": [
+     [
+      "ぜんぶ",
+      null
+     ],
+     [
+      "壊",
+      "こわ"
+     ],
+     [
+      "して",
+      null
+     ],
+     [
+      "地獄",
+      "じごく"
+     ],
+     [
+      "で",
+      null
+     ],
+     [
+      "愛",
+      "あい"
+     ],
+     [
+      "して",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Zenbu Kowashite Jigoku de Aishite",
+     "double": "Zenbu Kowashite Jigoku de Aishite",
+     "plain": "Zenbu Kowashite Jigoku de Aishite"
+    },
+    "en": "Break It All, Love Me in Hell",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Break It All, Love Me in Hell"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "クワバラ タモツ",
+    "romaji": {
+     "macron": "Kuwabara Tamotsu",
+     "double": "Kuwabara Tamotsu",
+     "plain": "Kuwabara Tamotsu"
+    },
+    "en": "KUWABARA Tamotsu",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00119"
+   }
+  },
+  {
+   "id": "comicdays:episode:12207421984335676420",
+   "work": "ぜんぶ壊して地獄で愛して",
+   "ep": "第34話 嘘(1)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-18",
+   "seen": "2026-10-18",
+   "basis": "observed",
+   "conf": "low",
+   "why": "3 releases of this work share this timestamp — consistent with a metadata refresh or a series import, not same-day publication",
+   "moved": "",
+   "url": "https://comic-days.com/episode/12207421984335676420",
+   "author": "くわばらたもつ",
+   "plat": "comic-days",
+   "plat_name": "コミックDAYS",
+   "ident": "known-work-match",
+   "free_from": null,
+   "access_modes": [
+    "purchase"
+   ],
+   "access_basis": "the platform's own episode list",
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 34",
+   "kind_inferred": true,
+   "preferred": "コミックDAYS",
+   "also_on": [
+    "マガポケ",
+    "一迅プラス"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-18",
+   "wid": "w00055",
+   "work_en": {
+    "reading": "ゼンブ コワシテ ジゴク デ アイシテ",
+    "ruby": [
+     [
+      "ぜんぶ",
+      null
+     ],
+     [
+      "壊",
+      "こわ"
+     ],
+     [
+      "して",
+      null
+     ],
+     [
+      "地獄",
+      "じごく"
+     ],
+     [
+      "で",
+      null
+     ],
+     [
+      "愛",
+      "あい"
+     ],
+     [
+      "して",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Zenbu Kowashite Jigoku de Aishite",
+     "double": "Zenbu Kowashite Jigoku de Aishite",
+     "plain": "Zenbu Kowashite Jigoku de Aishite"
+    },
+    "en": "Break It All, Love Me in Hell",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Break It All, Love Me in Hell"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "クワバラ タモツ",
+    "romaji": {
+     "macron": "Kuwabara Tamotsu",
+     "double": "Kuwabara Tamotsu",
+     "plain": "Kuwabara Tamotsu"
+    },
+    "en": "KUWABARA Tamotsu",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00119"
    }
   },
   {
@@ -28941,6 +28941,100 @@
    }
   },
   {
+   "id": "ichijinsha:episode:12207421984374441856",
+   "work": "ぜんぶ壊して地獄で愛して",
+   "ep": "第34話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-16",
+   "seen": "2026-10-16",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://ichicomi.com/episode/12207421984374441856",
+   "author": "くわばらたもつ",
+   "plat": "ichicomi",
+   "plat_name": "一迅プラス",
+   "ident": "platform-genre",
+   "free_from": "2026-12-10",
+   "access_modes": [
+    "purchase"
+   ],
+   "access_basis": "the platform's own episode list",
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 34",
+   "kind_inferred": true,
+   "preferred": "一迅プラス",
+   "preferred_reason": "the best-ranked carrier this chapter is actually free on",
+   "also_on": [
+    "コミックDAYS",
+    "マガポケ"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-16",
+   "wid": "w00055",
+   "work_en": {
+    "reading": "ゼンブ コワシテ ジゴク デ アイシテ",
+    "ruby": [
+     [
+      "ぜんぶ",
+      null
+     ],
+     [
+      "壊",
+      "こわ"
+     ],
+     [
+      "して",
+      null
+     ],
+     [
+      "地獄",
+      "じごく"
+     ],
+     [
+      "で",
+      null
+     ],
+     [
+      "愛",
+      "あい"
+     ],
+     [
+      "して",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Zenbu Kowashite Jigoku de Aishite",
+     "double": "Zenbu Kowashite Jigoku de Aishite",
+     "plain": "Zenbu Kowashite Jigoku de Aishite"
+    },
+    "en": "Break It All, Love Me in Hell",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Break It All, Love Me in Hell"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "クワバラ タモツ",
+    "romaji": {
+     "macron": "Kuwabara Tamotsu",
+     "double": "Kuwabara Tamotsu",
+     "plain": "Kuwabara Tamotsu"
+    },
+    "en": "KUWABARA Tamotsu",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00119"
+   }
+  },
+  {
    "id": "ichijinsha:episode:12207421984374441881",
    "work": "ささやくように恋を唄う",
    "ep": "第66話",
@@ -30543,10 +30637,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 8,
+   "ahead_n": 7,
    "ahead_ep": "１５巻 第９０球 「示すしかなかろ」（２）",
-   "ahead_next_free": "2026-11-13",
-   "ahead_next_ep": "１５巻 第８７球 「顔面に当ててでも」（１）",
+   "ahead_next_free": "2026-11-20",
+   "ahead_next_ep": "１５巻 第８７球 「顔面に当ててでも」（２）",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 85",
    "kind_inferred": true,
@@ -30993,10 +31087,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "provenance": "attested",
-   "free": true,
+   "free": false,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 12",
    "kind_inferred": true,
@@ -32733,95 +32827,6 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c01082"
-   }
-  },
-  {
-   "id": "ichijinsha:episode:12207421984374441856",
-   "work": "ぜんぶ壊して地獄で愛して",
-   "ep": "第34話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-16",
-   "seen": "2026-10-16",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://ichicomi.com/episode/12207421984374441856",
-   "author": "くわばらたもつ",
-   "plat": "ichicomi",
-   "plat_name": "一迅プラス",
-   "ident": "platform-genre",
-   "free_from": null,
-   "access_modes": [
-    "purchase"
-   ],
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 34",
-   "kind_inferred": true,
-   "preferred": "一迅プラス",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-16",
-   "wid": "w00055",
-   "work_en": {
-    "reading": "ゼンブ コワシテ ジゴク デ アイシテ",
-    "ruby": [
-     [
-      "ぜんぶ",
-      null
-     ],
-     [
-      "壊",
-      "こわ"
-     ],
-     [
-      "して",
-      null
-     ],
-     [
-      "地獄",
-      "じごく"
-     ],
-     [
-      "で",
-      null
-     ],
-     [
-      "愛",
-      "あい"
-     ],
-     [
-      "して",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Zenbu Kowashite Jigoku de Aishite",
-     "double": "Zenbu Kowashite Jigoku de Aishite",
-     "plain": "Zenbu Kowashite Jigoku de Aishite"
-    },
-    "en": "Break It All, Love Me in Hell",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Break It All, Love Me in Hell"
-    },
-    "reading_basis": "analyser"
-   },
-   "author_en": {
-    "reading": "クワバラ タモツ",
-    "romaji": {
-     "macron": "Kuwabara Tamotsu",
-     "double": "Kuwabara Tamotsu",
-     "plain": "Kuwabara Tamotsu"
-    },
-    "en": "KUWABARA Tamotsu",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00119"
    }
   },
   {
@@ -48862,7 +48867,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-25",
-   "seen": "2026-11-12",
+   "seen": "2026-11-13",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -58329,103 +58334,6 @@
    }
   },
   {
-   "id": "tonarinoyj:https://tonarinoyj.jp/episode/12207421984250783481",
-   "work": "明日ちゃんのセーラー服",
-   "ep": "[第92話] 明日（あけび）ちゃんのセーラー服",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-09-25",
-   "seen": "2026-11-13",
-   "basis": "bootstrap",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://tonarinoyj.jp/episode/12207421984250783481",
-   "author": "博（ひろ）",
-   "plat": "tonarinoyj",
-   "plat_name": "となりのヤングジャンプ",
-   "ident": "discovery-candidate",
-   "free_from": "2026-09-25",
-   "discovered_on": "2026-10-10",
-   "late_discovered": true,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 92, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "となりのヤングジャンプ",
-   "also_on": [],
-   "is_preferred": true,
-   "feed_date": "2026-10-10",
-   "wid": "w00157",
-   "work_en": {
-    "reading": "アケビ チャン ノ セーラーフク",
-    "ruby": [
-     [
-      "明日",
-      "あけび"
-     ],
-     [
-      "ちゃんのセーラー",
-      null
-     ],
-     [
-      "服",
-      "ふく"
-     ]
-    ],
-    "romaji": {
-     "macron": "Akebi Chan no Sērāfuku",
-     "double": "Akebi Chan no Seeraafuku",
-     "plain": "Akebi Chan no Serafuku"
-    },
-    "translation_refused": "Our rendering was Akebi's Sailor Uniform, which is the publisher's name in different letters, spacing or punctuation rather than a second form. Adopted from the anime's English release rather than translated fresh, unlicensed manga marked ours, the same shape as several titles this evening.",
-    "en": "AKEBI's Sailor Uniform",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "AKEBI's Sailor Uniform"
-    },
-    "reading_basis": "researched",
-    "en_cite": {
-     "source": "series-art",
-     "url": "https://cdn-img.tonarinoyj.jp/public/series-thumbnail/13932016480028984534-20d9c0d4a5426bfb249b5b0b956518b8?1767863613",
-     "kind": "platform",
-     "reviewed": "2026-11-11"
-    }
-   },
-   "author_en": {
-    "reading": "ヒロ",
-    "ruby": [
-     [
-      "博",
-      "ひろ"
-     ],
-     [
-      "（ひろ）",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Hiro",
-     "double": "Hiro",
-     "plain": "Hiro"
-    },
-    "undivided": true,
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "platform",
-     "url": "https://tonarinoyj.jp/episode/12207421983966650782",
-     "kind": "platform",
-     "reviewed": "2026-08-07"
-    },
-    "id": "c00244"
-   }
-  },
-  {
    "id": "comicfuz:78512",
    "work": "一畳間まんきつ暮らし！",
    "ep": "番外編 その1・梨絵",
@@ -59329,6 +59237,103 @@
     "basis": "romaji",
     "reading_basis": "surface",
     "id": "c01238"
+   }
+  },
+  {
+   "id": "tonarinoyj:https://tonarinoyj.jp/episode/12207421984250783481",
+   "work": "明日ちゃんのセーラー服",
+   "ep": "[第92話] 明日（あけび）ちゃんのセーラー服",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-25",
+   "seen": "2026-11-13",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://tonarinoyj.jp/episode/12207421984250783481",
+   "author": "博（ひろ）",
+   "plat": "tonarinoyj",
+   "plat_name": "となりのヤングジャンプ",
+   "ident": "discovery-candidate",
+   "free_from": "2026-09-25",
+   "discovered_on": "2026-10-10",
+   "late_discovered": true,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 92, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "となりのヤングジャンプ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-10-10",
+   "wid": "w00157",
+   "work_en": {
+    "reading": "アケビ チャン ノ セーラーフク",
+    "ruby": [
+     [
+      "明日",
+      "あけび"
+     ],
+     [
+      "ちゃんのセーラー",
+      null
+     ],
+     [
+      "服",
+      "ふく"
+     ]
+    ],
+    "romaji": {
+     "macron": "Akebi Chan no Sērāfuku",
+     "double": "Akebi Chan no Seeraafuku",
+     "plain": "Akebi Chan no Serafuku"
+    },
+    "translation_refused": "Our rendering was Akebi's Sailor Uniform, which is the publisher's name in different letters, spacing or punctuation rather than a second form. Adopted from the anime's English release rather than translated fresh, unlicensed manga marked ours, the same shape as several titles this evening.",
+    "en": "AKEBI's Sailor Uniform",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "AKEBI's Sailor Uniform"
+    },
+    "reading_basis": "researched",
+    "en_cite": {
+     "source": "series-art",
+     "url": "https://cdn-img.tonarinoyj.jp/public/series-thumbnail/13932016480028984534-20d9c0d4a5426bfb249b5b0b956518b8?1767863613",
+     "kind": "platform",
+     "reviewed": "2026-11-11"
+    }
+   },
+   "author_en": {
+    "reading": "ヒロ",
+    "ruby": [
+     [
+      "博",
+      "ひろ"
+     ],
+     [
+      "（ひろ）",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Hiro",
+     "double": "Hiro",
+     "plain": "Hiro"
+    },
+    "undivided": true,
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "platform",
+     "url": "https://tonarinoyj.jp/episode/12207421983966650782",
+     "kind": "platform",
+     "reviewed": "2026-08-07"
+    },
+    "id": "c00244"
    }
   },
   {
@@ -60419,8 +60424,9 @@
    "ident": "discovery-candidate",
    "free_from": "2026-10-09T03:00:00Z",
    "access_modes": [
-    "free"
+    "withdrawn"
    ],
+   "access_basis": "the platform's own episode list marks this chapter no longer readable",
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -60591,7 +60597,7 @@
    "provenance": "attested",
    "free": true,
    "kind": "other",
-   "kind_basis": "reads as a volume, artwork or notice, and only 9 of 169 chapters in this series do (5%) — not how this series names its instalments",
+   "kind_basis": "reads as a volume, artwork or notice, and only 9 of 172 chapters in this series do (5%) — not how this series names its instalments",
    "kind_inferred": true,
    "preferred": "サンデーうぇぶり",
    "also_on": [],
@@ -60767,8 +60773,8 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 4,
-   "ahead_ep": "第23話(2)",
+   "ahead_n": 5,
+   "ahead_ep": "第23.5話",
    "ahead_next_free": "2026-11-20",
    "ahead_next_ep": "第22話(2)",
    "kind": "new-chapter",
@@ -60867,10 +60873,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 8,
+   "ahead_n": 7,
    "ahead_ep": "１５巻 第９０球 「示すしかなかろ」（２）",
-   "ahead_next_free": "2026-11-13",
-   "ahead_next_ep": "１５巻 第８７球 「顔面に当ててでも」（１）",
+   "ahead_next_free": "2026-11-20",
+   "ahead_next_ep": "１５巻 第８７球 「顔面に当ててでも」（２）",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 84",
    "kind_inferred": true,
@@ -62221,12 +62227,12 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
-   "kind_basis": "numbered 2, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 2",
    "kind_inferred": true,
    "preferred": "ビビビコミック",
    "also_on": [],
@@ -65180,12 +65186,12 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
-   "kind_basis": "numbered 20, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_basis": "episode numbered 20",
    "kind_inferred": true,
    "preferred": "竹コミ",
    "also_on": [],
@@ -65264,6 +65270,83 @@
     "reading_basis": "community-printed",
     "basis": "romaji",
     "unverified": true
+   }
+  },
+  {
+   "id": "nicovideo:74043:2026-10-08",
+   "work": "ウイニングアンサー！",
+   "ep": "第16話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-08",
+   "seen": "2026-11-13",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1160012",
+   "author": "八代涼",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "numbered 16, but this is the only chapter we hold: the work was already running when we first saw it",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 4,
+   "free_episodes": 4,
+   "started": "2025-09-11",
+   "work_level": true,
+   "channel": null,
+   "feed_date": "2026-10-08",
+   "wid": "w02495",
+   "work_en": {
+    "reading": "ウイニングアンサー！",
+    "romaji": {
+     "macron": "Uininguansā!",
+     "double": "Uininguansaa!",
+     "plain": "Uininguansa!"
+    },
+    "translation_refused": "Our rendering was Winning Answer!, which is the publisher's name in different letters, spacing or punctuation rather than a second form. English in katakana.",
+    "en": "Winning Answer",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "Winning Answer"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "series-art",
+     "url": "https://deliver.cdn.nicomanga.jp/ogp-images/comics/74043",
+     "kind": "platform",
+     "reviewed": "2026-11-11"
+    }
+   },
+   "author_en": {
+    "reading": "ヤシロリョウ",
+    "ruby": [
+     [
+      "八代涼",
+      "やしろりょう"
+     ]
+    ],
+    "romaji": {
+     "macron": "Yashiroryō",
+     "double": "Yashiroryou",
+     "plain": "Yashiroryo"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "researched",
+    "id": "c01243"
    }
   },
   {
@@ -65427,83 +65510,6 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00143"
-   }
-  },
-  {
-   "id": "nicovideo:74043:2026-10-08",
-   "work": "ウイニングアンサー！",
-   "ep": "第16話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-08",
-   "seen": "2026-11-13",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1160012",
-   "author": "八代涼",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "numbered 16, but this is the only chapter we hold: the work was already running when we first saw it",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 4,
-   "free_episodes": 4,
-   "started": "2025-09-11",
-   "work_level": true,
-   "channel": null,
-   "feed_date": "2026-10-08",
-   "wid": "w02495",
-   "work_en": {
-    "reading": "ウイニングアンサー！",
-    "romaji": {
-     "macron": "Uininguansā!",
-     "double": "Uininguansaa!",
-     "plain": "Uininguansa!"
-    },
-    "translation_refused": "Our rendering was Winning Answer!, which is the publisher's name in different letters, spacing or punctuation rather than a second form. English in katakana.",
-    "en": "Winning Answer",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "Winning Answer"
-    },
-    "reading_basis": "surface",
-    "en_cite": {
-     "source": "series-art",
-     "url": "https://deliver.cdn.nicomanga.jp/ogp-images/comics/74043",
-     "kind": "platform",
-     "reviewed": "2026-11-11"
-    }
-   },
-   "author_en": {
-    "reading": "ヤシロリョウ",
-    "ruby": [
-     [
-      "八代涼",
-      "やしろりょう"
-     ]
-    ],
-    "romaji": {
-     "macron": "Yashiroryō",
-     "double": "Yashiroryou",
-     "plain": "Yashiroryo"
-    },
-    "undivided": true,
-    "basis": "romaji",
-    "reading_basis": "researched",
-    "id": "c01243"
    }
   },
   {
@@ -76017,8 +76023,9 @@
    "ident": "discovery-candidate",
    "free_from": "2026-10-02T03:00:00Z",
    "access_modes": [
-    "free"
+    "withdrawn"
    ],
+   "access_basis": "the platform's own episode list marks this chapter no longer readable",
    "provenance": "attested",
    "free": true,
    "kind": "new-chapter",
@@ -76193,7 +76200,7 @@
    "ident": "discovery-candidate",
    "free_from": "2026-10-01T15:00:00Z",
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "access_basis": "the platform's own episode list",
    "provenance": "attested",
@@ -76372,10 +76379,10 @@
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 8,
+   "ahead_n": 7,
    "ahead_ep": "１５巻 第９０球 「示すしかなかろ」（２）",
-   "ahead_next_free": "2026-11-13",
-   "ahead_next_ep": "１５巻 第８７球 「顔面に当ててでも」（１）",
+   "ahead_next_free": "2026-11-20",
+   "ahead_next_ep": "１５巻 第８７球 「顔面に当ててでも」（２）",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 84",
    "kind_inferred": true,
@@ -76441,17 +76448,17 @@
    "ident": "discovery-candidate",
    "free_from": null,
    "access_modes": [
-    "free"
+    "free-timed"
    ],
    "became_free": false,
-   "access_changed": null,
+   "access_changed": "free -> free-timed",
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
-   "ahead_n": 2,
-   "ahead_ep": "第87話(2)",
-   "ahead_next_free": "2026-11-13",
-   "ahead_next_ep": "第87話(1)",
+   "ahead_n": 3,
+   "ahead_ep": "第88話(2)",
+   "ahead_next_free": "2026-11-27",
+   "ahead_next_ep": "第87話(2)",
    "kind": "new-chapter",
    "kind_basis": "episode numbered 86",
    "kind_inferred": true,
@@ -77149,7 +77156,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-11-12",
+   "seen": "2026-11-13",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -77352,10 +77359,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 21",
    "kind_inferred": true,
