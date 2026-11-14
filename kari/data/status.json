@@ -1,8 +1,12 @@
 {
- "generated": "2026-11-14T13:47:49+00:00",
+ "generated": "2026-11-14T20:55:41+00:00",
  "since_last": {
-  "at": "2026-11-14T10:44:06+00:00",
-  "statistics": {}
+  "at": "2026-11-14T13:47:49+00:00",
+  "statistics": {
+   "works": 1,
+   "with_identifier": 1,
+   "chapters": 25
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,20 +28,20 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-11-14",
-  "releases": 1104,
+  "at": "2026-11-15",
+  "releases": 1109,
   "works": 2769,
   "platforms": 19,
-  "series_rows": 3342,
-  "assembled": 3344,
+  "series_rows": 3343,
+  "assembled": 3345,
   "awaiting_identifier": 2,
   "identification": {
-   "discovery-candidate": 808,
+   "discovery-candidate": 812,
    "known-work-match": 22,
-   "platform-genre": 274
+   "platform-genre": 275
   },
   "collapsed": {
-   "duplicate_chapters": 267,
+   "duplicate_chapters": 268,
    "resolver": 132,
    "samples": 0,
    "thin_sitemap": 10
@@ -612,8 +616,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1243,
-    "value": 1243,
+    "budget": 1244,
+    "value": 1244,
     "measure": "arrival"
    },
    {
@@ -815,8 +819,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 4,
-    "value": 4,
+    "budget": 6,
+    "value": 6,
     "measure": "arrival"
    },
    {
@@ -931,9 +935,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 67,
+    "consecutive": 68,
     "failing_since": "2026-10-16",
-    "days": 29,
+    "days": 30,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -941,9 +945,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 67,
+    "consecutive": 68,
     "failing_since": "2026-10-16",
-    "days": 29,
+    "days": 30,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -951,9 +955,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 67,
+    "consecutive": 68,
     "failing_since": "2026-10-16",
-    "days": 29,
+    "days": 30,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -961,9 +965,9 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 15,
+    "consecutive": 16,
     "failing_since": "2026-11-09",
-    "days": 5,
+    "days": 6,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
     "issue": true
@@ -979,7 +983,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 104,
+   "age_days": 105,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -993,7 +997,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 98,
+   "age_days": 99,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1007,7 +1011,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-11-01",
-   "age_days": 13,
+   "age_days": 14,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1021,21 +1025,7 @@
    "works": 983,
    "rows": 2583,
    "retrieved": "2026-11-01",
-   "age_days": 13,
-   "in_scope": true,
-   "empty": false,
-   "checked_rows": 0,
-   "well_formed": 0,
-   "malformed": 0,
-   "drop": null
-  },
-  {
-   "source": "madb-title",
-   "files": 68,
-   "works": 68,
-   "rows": 68,
-   "retrieved": "2026-11-07",
-   "age_days": 7,
+   "age_days": 14,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1049,7 +1039,21 @@
    "works": 1799,
    "rows": 4297,
    "retrieved": "2026-11-12",
-   "age_days": 2,
+   "age_days": 3,
+   "in_scope": true,
+   "empty": false,
+   "checked_rows": 0,
+   "well_formed": 0,
+   "malformed": 0,
+   "drop": null
+  },
+  {
+   "source": "madb-title",
+   "files": 68,
+   "works": 68,
+   "rows": 68,
+   "retrieved": "2026-11-14",
+   "age_days": 1,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1061,13 +1065,13 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6350,
-   "retrieved": "2026-11-14",
+   "rows": 6354,
+   "retrieved": "2026-11-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6303,
-   "well_formed": 6303,
+   "checked_rows": 6307,
+   "well_formed": 6307,
    "malformed": 0,
    "drop": null
   },
@@ -1076,7 +1080,7 @@
    "files": 6,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-11-14",
+   "retrieved": "2026-11-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1089,13 +1093,13 @@
    "source": "gigaviewer",
    "files": 86,
    "works": 1748,
-   "rows": 17792,
-   "retrieved": "2026-11-14",
+   "rows": 17794,
+   "retrieved": "2026-11-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17335,
-   "well_formed": 17335,
+   "checked_rows": 17337,
+   "well_formed": 17337,
    "malformed": 0,
    "drop": null
   },
@@ -1103,13 +1107,13 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1027,
-   "rows": 7890,
-   "retrieved": "2026-11-14",
+   "rows": 7894,
+   "retrieved": "2026-11-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7189,
-   "well_formed": 6853,
+   "checked_rows": 7193,
+   "well_formed": 6857,
    "malformed": 336,
    "drop": null
   },
@@ -1118,7 +1122,7 @@
    "files": 3,
    "works": 1343,
    "rows": 11627,
-   "retrieved": "2026-11-14",
+   "retrieved": "2026-11-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1132,7 +1136,7 @@
    "files": 881,
    "works": 881,
    "rows": 2307,
-   "retrieved": "2026-11-14",
+   "retrieved": "2026-11-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1144,15 +1148,15 @@
   {
    "source": "webpages",
    "files": 52,
-   "works": 699,
-   "rows": 10201,
-   "retrieved": "2026-11-14",
+   "works": 701,
+   "rows": 10207,
+   "retrieved": "2026-11-15",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10146,
-   "well_formed": 10144,
-   "malformed": 2,
+   "checked_rows": 10152,
+   "well_formed": 10151,
+   "malformed": 1,
    "drop": null
   }
  ],
@@ -1234,7 +1238,7 @@
     "ruby asserting a reading per character": 214,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 187,
-    "titles read by a machine, unmarked": 1243,
+    "titles read by a machine, unmarked": 1244,
     "uncertain readings": 64,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1263,7 +1267,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
-    "updates naming a work we do not hold": 4,
+    "updates naming a work we do not hold": 6,
     "works whose first publication country is unattested": 2768,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 7,
@@ -1283,7 +1287,7 @@
   }
  ],
  "statistics": {
-  "works": 3342,
+  "works": 3343,
   "states": {
    "print": 1785,
    "oneshot": 520,
@@ -1291,10 +1295,10 @@
    "active": 286,
    "dormant": 148,
    "slow": 57,
-   "unknown": 42
+   "unknown": 43
   },
   "english_basis": {
-   "translated": 2778,
+   "translated": 2779,
    "official-jp": 443,
    "licensed": 93,
    "romaji": 27,
@@ -1303,8 +1307,8 @@
   "print_works": 2647,
   "print_only": 1785,
   "volumes": 6601,
-  "with_identifier": 3342,
-  "chapters": 31390,
+  "with_identifier": 3343,
+  "chapters": 31415,
   "delivery_dated": 1112
  }
 }
