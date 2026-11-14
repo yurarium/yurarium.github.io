@@ -1,12 +1,10 @@
 {
- "generated": "2026-11-13T22:03:29+00:00",
+ "generated": "2026-11-14T10:44:06+00:00",
  "since_last": {
-  "at": "2026-11-13T14:55:06+00:00",
+  "at": "2026-11-13T22:03:29+00:00",
   "statistics": {
-   "works": 2,
-   "print_only": 1,
-   "with_identifier": 2,
-   "chapters": -124
+   "print_only": -1,
+   "chapters": 127
   }
  },
  "means": {
@@ -30,14 +28,14 @@
  },
  "last_run": {
   "at": "2026-11-14",
-  "releases": 1102,
+  "releases": 1104,
   "works": 2769,
   "platforms": 19,
   "series_rows": 3342,
   "assembled": 3344,
   "awaiting_identifier": 2,
   "identification": {
-   "discovery-candidate": 806,
+   "discovery-candidate": 808,
    "known-work-match": 22,
    "platform-genre": 274
   },
@@ -470,8 +468,8 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1224,
-    "value": 1224,
+    "budget": 1225,
+    "value": 1225,
     "measure": "arrival"
    },
    {
@@ -519,8 +517,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 547,
-    "value": 547,
+    "budget": 548,
+    "value": 548,
     "measure": "arrival"
    },
    {
@@ -561,8 +559,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 19,
-    "value": 19,
+    "budget": 18,
+    "value": 18,
     "measure": "arrival"
    },
    {
@@ -820,8 +818,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 2,
-    "value": 2,
+    "budget": 4,
+    "value": 4,
     "measure": "arrival"
    },
    {
@@ -936,7 +934,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 66,
+    "consecutive": 67,
     "failing_since": "2026-10-16",
     "days": 29,
     "last_ok": null,
@@ -946,7 +944,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 66,
+    "consecutive": 67,
     "failing_since": "2026-10-16",
     "days": 29,
     "last_ok": null,
@@ -956,7 +954,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 66,
+    "consecutive": 67,
     "failing_since": "2026-10-16",
     "days": 29,
     "last_ok": null,
@@ -966,7 +964,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 14,
+    "consecutive": 15,
     "failing_since": "2026-11-09",
     "days": 5,
     "last_ok": null,
@@ -1093,8 +1091,8 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1747,
-   "rows": 17791,
+   "works": 1748,
+   "rows": 17792,
    "retrieved": "2026-11-14",
    "age_days": 0,
    "in_scope": true,
@@ -1149,14 +1147,14 @@
   {
    "source": "webpages",
    "files": 52,
-   "works": 697,
-   "rows": 10197,
+   "works": 699,
+   "rows": 10201,
    "retrieved": "2026-11-14",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10142,
-   "well_formed": 10140,
+   "checked_rows": 10146,
+   "well_formed": 10144,
    "malformed": 2,
    "drop": null
   }
@@ -1218,20 +1216,20 @@
     "credit phrases spelling a person otherwise": 3,
     "names rendered two ways": 0,
     "one work named two ways across its rows": 0,
-    "author names romanised as one word": 1224,
+    "author names romanised as one word": 1225,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 68,
     "publisher readings nobody has settled": 23,
     "renderings with nothing to show": 0,
     "kana names with no stated division": 254,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 547,
+    "author readings no source states": 548,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 19,
+    "credit fields an identifier does not cover": 18,
     "credit pages listing a work that does not name them": 12,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1268,7 +1266,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
-    "updates naming a work we do not hold": 2,
+    "updates naming a work we do not hold": 4,
     "works whose first publication country is unattested": 2768,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 7,
@@ -1290,10 +1288,10 @@
  "statistics": {
   "works": 3342,
   "states": {
-   "print": 1786,
+   "print": 1785,
    "oneshot": 520,
    "completed": 504,
-   "active": 285,
+   "active": 286,
    "dormant": 148,
    "slow": 57,
    "unknown": 42
@@ -1306,10 +1304,10 @@
    "none": 1
   },
   "print_works": 2647,
-  "print_only": 1786,
+  "print_only": 1785,
   "volumes": 6601,
   "with_identifier": 3342,
-  "chapters": 31263,
+  "chapters": 31390,
   "delivery_dated": 1112
  }
 }
