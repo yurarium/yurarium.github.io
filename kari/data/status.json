@@ -1,8 +1,10 @@
 {
- "generated": "2026-11-15T14:18:46+00:00",
+ "generated": "2026-11-15T21:32:56+00:00",
  "since_last": {
-  "at": "2026-11-15T11:10:17+00:00",
-  "statistics": {}
+  "at": "2026-11-15T14:18:46+00:00",
+  "statistics": {
+   "chapters": 3
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,21 +26,21 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-11-15",
-  "releases": 1109,
+  "at": "2026-11-16",
+  "releases": 1101,
   "works": 2769,
   "platforms": 19,
   "series_rows": 3344,
   "assembled": 3345,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 812,
+   "discovery-candidate": 806,
    "known-work-match": 22,
-   "platform-genre": 275
+   "platform-genre": 273
   },
   "collapsed": {
-   "duplicate_chapters": 266,
-   "resolver": 132,
+   "duplicate_chapters": 251,
+   "resolver": 120,
    "samples": 0,
    "thin_sitemap": 10
   }
@@ -931,9 +933,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 69,
+    "consecutive": 70,
     "failing_since": "2026-10-16",
-    "days": 30,
+    "days": 31,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -941,9 +943,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 69,
+    "consecutive": 70,
     "failing_since": "2026-10-16",
-    "days": 30,
+    "days": 31,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -951,9 +953,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 69,
+    "consecutive": 70,
     "failing_since": "2026-10-16",
-    "days": 30,
+    "days": 31,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -961,9 +963,9 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 17,
+    "consecutive": 18,
     "failing_since": "2026-11-09",
-    "days": 6,
+    "days": 7,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
     "issue": true
@@ -979,7 +981,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 105,
+   "age_days": 106,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -993,7 +995,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 99,
+   "age_days": 100,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1007,7 +1009,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-11-01",
-   "age_days": 14,
+   "age_days": 15,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1021,7 +1023,7 @@
    "works": 983,
    "rows": 2583,
    "retrieved": "2026-11-01",
-   "age_days": 14,
+   "age_days": 15,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1035,7 +1037,7 @@
    "works": 1799,
    "rows": 4297,
    "retrieved": "2026-11-12",
-   "age_days": 3,
+   "age_days": 4,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1049,7 +1051,7 @@
    "works": 68,
    "rows": 68,
    "retrieved": "2026-11-14",
-   "age_days": 1,
+   "age_days": 2,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1062,7 +1064,7 @@
    "files": 2,
    "works": 130,
    "rows": 6354,
-   "retrieved": "2026-11-15",
+   "retrieved": "2026-11-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1076,7 +1078,7 @@
    "files": 6,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-11-15",
+   "retrieved": "2026-11-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1090,7 +1092,7 @@
    "files": 86,
    "works": 1748,
    "rows": 17794,
-   "retrieved": "2026-11-15",
+   "retrieved": "2026-11-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1104,7 +1106,7 @@
    "files": 5,
    "works": 1027,
    "rows": 7894,
-   "retrieved": "2026-11-15",
+   "retrieved": "2026-11-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1118,7 +1120,7 @@
    "files": 3,
    "works": 1343,
    "rows": 11627,
-   "retrieved": "2026-11-15",
+   "retrieved": "2026-11-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1132,7 +1134,7 @@
    "files": 881,
    "works": 881,
    "rows": 2307,
-   "retrieved": "2026-11-15",
+   "retrieved": "2026-11-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1145,13 +1147,13 @@
    "source": "webpages",
    "files": 52,
    "works": 701,
-   "rows": 10207,
-   "retrieved": "2026-11-15",
+   "rows": 10209,
+   "retrieved": "2026-11-16",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10152,
-   "well_formed": 10151,
+   "checked_rows": 10154,
+   "well_formed": 10153,
    "malformed": 1,
    "drop": null
   }
@@ -1287,10 +1289,10 @@
   "states": {
    "print": 1785,
    "oneshot": 520,
-   "completed": 504,
-   "active": 287,
+   "completed": 505,
+   "active": 285,
    "dormant": 148,
-   "slow": 57,
+   "slow": 58,
    "unknown": 43
   },
   "english_basis": {
@@ -1304,7 +1306,7 @@
   "print_only": 1785,
   "volumes": 6601,
   "with_identifier": 3344,
-  "chapters": 31417,
+  "chapters": 31420,
   "delivery_dated": 1112
  }
 }
