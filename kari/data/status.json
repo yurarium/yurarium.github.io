@@ -1,8 +1,12 @@
 {
- "generated": "2026-11-14T21:09:32+00:00",
+ "generated": "2026-11-15T11:10:17+00:00",
  "since_last": {
-  "at": "2026-11-14T20:55:41+00:00",
-  "statistics": {}
+  "at": "2026-11-14T21:09:32+00:00",
+  "statistics": {
+   "works": 1,
+   "with_identifier": 1,
+   "chapters": 2
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -28,16 +32,16 @@
   "releases": 1109,
   "works": 2769,
   "platforms": 19,
-  "series_rows": 3343,
+  "series_rows": 3344,
   "assembled": 3345,
-  "awaiting_identifier": 2,
+  "awaiting_identifier": 1,
   "identification": {
    "discovery-candidate": 812,
    "known-work-match": 22,
    "platform-genre": 275
   },
   "collapsed": {
-   "duplicate_chapters": 268,
+   "duplicate_chapters": 266,
    "resolver": 132,
    "samples": 0,
    "thin_sitemap": 10
@@ -556,15 +560,15 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 18,
-    "value": 18,
+    "budget": 17,
+    "value": 17,
     "measure": "arrival"
    },
    {
     "name": "credit pages listing a work that does not name them",
     "means": "pairings a credit page would show whose work does not carry that credit's spelling in its own credit field. Substring arithmetic on two shipped fields, so it owes the splitter, the fold and the registry lookup nothing and cannot be satisfied by them agreeing. It will not reach zero: six of the eight are merges, where the surviving spelling is by construction not the one on the retired spelling's works, and two are release-row edges. A rise with neither behind it is a page claiming somebody worked on a book that does not name them.",
-    "budget": 12,
-    "value": 12,
+    "budget": 13,
+    "value": 13,
     "measure": "regression"
    },
    {
@@ -585,7 +589,7 @@
     "name": "credits sharing a reading nobody has ruled on",
     "means": "readings the shipped name map gives to several credits with no ruling on the pair. Should be 0: a rise means a newly sourced reading has put two credits together and nobody has said whether they are one credit written twice or two names that sound alike.",
     "budget": 0,
-    "value": 1,
+    "value": 0,
     "measure": "regression"
    },
    {
@@ -612,8 +616,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1244,
-    "value": 1244,
+    "budget": 1243,
+    "value": 1243,
     "measure": "arrival"
    },
    {
@@ -815,8 +819,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 6,
-    "value": 6,
+    "budget": 2,
+    "value": 2,
     "measure": "arrival"
    },
    {
@@ -931,7 +935,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 68,
+    "consecutive": 69,
     "failing_since": "2026-10-16",
     "days": 30,
     "last_ok": null,
@@ -941,7 +945,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 68,
+    "consecutive": 69,
     "failing_since": "2026-10-16",
     "days": 30,
     "last_ok": null,
@@ -951,7 +955,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 68,
+    "consecutive": 69,
     "failing_since": "2026-10-16",
     "days": 30,
     "last_ok": null,
@@ -961,7 +965,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 16,
+    "consecutive": 17,
     "failing_since": "2026-11-09",
     "days": 6,
     "last_ok": null,
@@ -1226,15 +1230,15 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 18,
-    "credit pages listing a work that does not name them": 12,
+    "credit fields an identifier does not cover": 17,
+    "credit pages listing a work that does not name them": 13,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
     "credits sharing a reading nobody has ruled on": 0,
     "ruby asserting a reading per character": 214,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 187,
-    "titles read by a machine, unmarked": 1244,
+    "titles read by a machine, unmarked": 1243,
     "uncertain readings": 64,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1263,7 +1267,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
-    "updates naming a work we do not hold": 6,
+    "updates naming a work we do not hold": 2,
     "works whose first publication country is unattested": 2768,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 7,
@@ -1283,18 +1287,18 @@
   }
  ],
  "statistics": {
-  "works": 3343,
+  "works": 3344,
   "states": {
    "print": 1785,
    "oneshot": 520,
    "completed": 504,
-   "active": 286,
+   "active": 287,
    "dormant": 148,
    "slow": 57,
    "unknown": 43
   },
   "english_basis": {
-   "translated": 2779,
+   "translated": 2780,
    "official-jp": 443,
    "licensed": 93,
    "romaji": 27,
@@ -1303,8 +1307,8 @@
   "print_works": 2647,
   "print_only": 1785,
   "volumes": 6601,
-  "with_identifier": 3343,
-  "chapters": 31415,
+  "with_identifier": 3344,
+  "chapters": 31417,
   "delivery_dated": 1112
  }
 }
