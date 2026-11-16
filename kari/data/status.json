@@ -1,10 +1,8 @@
 {
- "generated": "2026-11-15T21:32:56+00:00",
+ "generated": "2026-11-16T11:27:55+00:00",
  "since_last": {
-  "at": "2026-11-15T14:18:46+00:00",
-  "statistics": {
-   "chapters": 3
-  }
+  "at": "2026-11-15T21:32:56+00:00",
+  "statistics": {}
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -39,7 +37,7 @@
    "platform-genre": 273
   },
   "collapsed": {
-   "duplicate_chapters": 251,
+   "duplicate_chapters": 248,
    "resolver": 120,
    "samples": 0,
    "thin_sitemap": 10
@@ -933,7 +931,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 70,
+    "consecutive": 71,
     "failing_since": "2026-10-16",
     "days": 31,
     "last_ok": null,
@@ -943,7 +941,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 70,
+    "consecutive": 71,
     "failing_since": "2026-10-16",
     "days": 31,
     "last_ok": null,
@@ -953,7 +951,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 70,
+    "consecutive": 71,
     "failing_since": "2026-10-16",
     "days": 31,
     "last_ok": null,
@@ -963,7 +961,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 18,
+    "consecutive": 19,
     "failing_since": "2026-11-09",
     "days": 7,
     "last_ok": null,

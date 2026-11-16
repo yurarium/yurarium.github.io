@@ -852,6 +852,95 @@
     }
    ]
   },
+  "h00017": {
+   "id": "h00017",
+   "name": "マッグガーデン",
+   "rows": 7,
+   "works": [
+    "w00128",
+    "w00379",
+    "w00546",
+    "w00901",
+    "w02202",
+    "w02587"
+   ],
+   "seats": [
+    "publisher"
+   ],
+   "lines": [
+    {
+     "id": "blade-comics",
+     "name": "ブレイドコミックス",
+     "parent": null,
+     "resolved": true,
+     "rows": 5,
+     "works": [
+      "w00379",
+      "w00546",
+      "w00901",
+      "w02587"
+     ],
+     "spellings": [
+      {
+       "raw": "Blade comics",
+       "rows": 4,
+       "years": [
+        "2018",
+        "2023"
+       ]
+      },
+      {
+       "raw": "ブレイドコミックス",
+       "rows": 1,
+       "years": [
+        "2010",
+        "2010"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "blade-comics-pixiv",
+     "name": "Blade comics. Pixiv",
+     "parent": "ブレイドコミックス",
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w00128"
+     ],
+     "spellings": [
+      {
+       "raw": "Blade comics. Pixiv",
+       "rows": 1,
+       "years": [
+        "2026",
+        "2026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "mag-garden-comics-beats",
+     "name": "マッグガーデンコミックスBeat'sシリーズ",
+     "parent": null,
+     "resolved": true,
+     "rows": 1,
+     "works": [
+      "w02202"
+     ],
+     "spellings": [
+      {
+       "raw": "マッグガーデンコミックスBeat'sシリーズ",
+       "rows": 1,
+       "years": [
+        "2015",
+        "2015"
+       ]
+      }
+     ]
+    }
+   ]
+  },
   "h00005": {
    "id": "h00005",
    "name": "キルタイムコミュニケーション",
@@ -7715,95 +7804,6 @@
        "years": [
         "2014",
         "2014"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "h00017": {
-   "id": "h00017",
-   "name": "マッグガーデン",
-   "rows": 7,
-   "works": [
-    "w00128",
-    "w00379",
-    "w00546",
-    "w00901",
-    "w02202",
-    "w02587"
-   ],
-   "seats": [
-    "publisher"
-   ],
-   "lines": [
-    {
-     "id": "blade-comics",
-     "name": "ブレイドコミックス",
-     "parent": null,
-     "resolved": true,
-     "rows": 5,
-     "works": [
-      "w00379",
-      "w00546",
-      "w00901",
-      "w02587"
-     ],
-     "spellings": [
-      {
-       "raw": "Blade comics",
-       "rows": 4,
-       "years": [
-        "2018",
-        "2023"
-       ]
-      },
-      {
-       "raw": "ブレイドコミックス",
-       "rows": 1,
-       "years": [
-        "2010",
-        "2010"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "blade-comics-pixiv",
-     "name": "Blade comics. Pixiv",
-     "parent": "ブレイドコミックス",
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w00128"
-     ],
-     "spellings": [
-      {
-       "raw": "Blade comics. Pixiv",
-       "rows": 1,
-       "years": [
-        "2026",
-        "2026"
-       ]
-      }
-     ]
-    },
-    {
-     "id": "mag-garden-comics-beats",
-     "name": "マッグガーデンコミックスBeat'sシリーズ",
-     "parent": null,
-     "resolved": true,
-     "rows": 1,
-     "works": [
-      "w02202"
-     ],
-     "spellings": [
-      {
-       "raw": "マッグガーデンコミックスBeat'sシリーズ",
-       "rows": 1,
-       "years": [
-        "2015",
-        "2015"
        ]
       }
      ]
