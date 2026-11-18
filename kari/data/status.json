@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-17T21:58:36+00:00",
+ "generated": "2026-11-18T04:25:02+00:00",
  "since_last": {
-  "at": "2026-11-17T16:29:26+00:00",
+  "at": "2026-11-17T21:58:36+00:00",
   "statistics": {
    "works": 1,
    "with_identifier": 1,
-   "chapters": 16
+   "chapters": 19
   }
  },
  "means": {
@@ -29,22 +29,22 @@
  },
  "last_run": {
   "at": "2026-11-18",
-  "releases": 1106,
+  "releases": 1140,
   "works": 2769,
   "platforms": 19,
-  "series_rows": 3345,
-  "assembled": 3346,
+  "series_rows": 3346,
+  "assembled": 3347,
   "awaiting_identifier": 1,
   "identification": {
-   "discovery-candidate": 808,
-   "known-work-match": 25,
-   "platform-genre": 273
+   "discovery-candidate": 809,
+   "known-work-match": 40,
+   "platform-genre": 291
   },
   "collapsed": {
-   "duplicate_chapters": 233,
-   "resolver": 128,
+   "duplicate_chapters": 271,
+   "resolver": 140,
    "samples": 0,
-   "thin_sitemap": 14
+   "thin_sitemap": 12
   }
  },
  "gate": {
@@ -463,7 +463,7 @@
     "name": "one work named two ways across its rows",
     "means": "works whose rows render the same Japanese phrase two different ways, grouped on the name at the front of each rather than on the fold key, which folds an anthology apart from the work it collects. A rise means a row was named without looking at what its siblings already say.",
     "budget": 0,
-    "value": 0,
+    "value": 1,
     "measure": "regression"
    },
    {
@@ -560,8 +560,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 18,
-    "value": 18,
+    "budget": 16,
+    "value": 16,
     "measure": "arrival"
    },
    {
@@ -616,8 +616,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1244,
-    "value": 1244,
+    "budget": 1245,
+    "value": 1245,
     "measure": "arrival"
    },
    {
@@ -889,8 +889,8 @@
    {
     "name": "attested rows with no access state",
     "means": "attested releases that state no access on a platform whose other rows do, nearly always because the route that read them reads none. `rows with no access state, by route` lists them. A number to work down by route, not a tripwire: `adapters/fieldaudit.py` is the one for a platform going silent.",
-    "budget": 2,
-    "value": 2,
+    "budget": 0,
+    "value": 0,
     "measure": "report"
    },
    {
@@ -935,7 +935,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 74,
+    "consecutive": 75,
     "failing_since": "2026-10-16",
     "days": 33,
     "last_ok": null,
@@ -945,7 +945,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 74,
+    "consecutive": 75,
     "failing_since": "2026-10-16",
     "days": 33,
     "last_ok": null,
@@ -955,7 +955,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 74,
+    "consecutive": 75,
     "failing_since": "2026-10-16",
     "days": 33,
     "last_ok": null,
@@ -965,35 +965,15 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 22,
+    "consecutive": 23,
     "failing_since": "2026-11-09",
     "days": 9,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
     "issue": true
-   },
-   {
-    "source": "yurinavi-discover",
-    "stage": "stage-0",
-    "consecutive": 1,
-    "failing_since": "2026-11-18",
-    "days": 0,
-    "last_ok": "2026-11-17",
-    "error": "urllib.error.URLError: <urlopen error timed out>",
-    "issue": false
-   },
-   {
-    "source": "yurinavi-webyuri",
-    "stage": "stage-0",
-    "consecutive": 1,
-    "failing_since": "2026-11-18",
-    "days": 0,
-    "last_ok": "2026-11-17",
-    "error": "urllib.error.URLError: <urlopen error timed out>",
-    "issue": false
    }
   ],
-  "healthy": 168,
+  "healthy": 170,
   "threshold": 3
  },
  "connectors": [
@@ -1085,13 +1065,13 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6354,
+   "rows": 6355,
    "retrieved": "2026-11-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6307,
-   "well_formed": 6307,
+   "checked_rows": 6308,
+   "well_formed": 6308,
    "malformed": 0,
    "drop": null
   },
@@ -1112,14 +1092,14 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1782,
-   "rows": 17854,
+   "works": 1803,
+   "rows": 17952,
    "retrieved": "2026-11-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17363,
-   "well_formed": 17363,
+   "checked_rows": 17440,
+   "well_formed": 17440,
    "malformed": 0,
    "drop": null
   },
@@ -1127,21 +1107,21 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1027,
-   "rows": 7897,
+   "rows": 7901,
    "retrieved": "2026-11-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7196,
-   "well_formed": 6866,
+   "checked_rows": 7200,
+   "well_formed": 6870,
    "malformed": 330,
    "drop": null
   },
   {
    "source": "nicovideo",
    "files": 3,
-   "works": 1345,
-   "rows": 11638,
+   "works": 1343,
+   "rows": 11636,
    "retrieved": "2026-11-18",
    "age_days": 0,
    "in_scope": true,
@@ -1168,14 +1148,14 @@
   {
    "source": "webpages",
    "files": 52,
-   "works": 705,
-   "rows": 10497,
+   "works": 706,
+   "rows": 10508,
    "retrieved": "2026-11-18",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10442,
-   "well_formed": 10442,
+   "checked_rows": 10453,
+   "well_formed": 10453,
    "malformed": 0,
    "drop": null
   }
@@ -1217,7 +1197,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 47,
+   "count": 46,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1250,7 +1230,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 18,
+    "credit fields an identifier does not cover": 16,
     "credit pages listing a work that does not name them": 13,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1258,7 +1238,7 @@
     "ruby asserting a reading per character": 214,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 187,
-    "titles read by a machine, unmarked": 1244,
+    "titles read by a machine, unmarked": 1245,
     "uncertain readings": 64,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1297,7 +1277,7 @@
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
     "incomplete attested rows": 0,
-    "attested rows with no access state": 2,
+    "attested rows with no access state": 0,
     "works without English": 0,
     "volume rows with no publication date": 2657,
     "predicted updates already behind the run": 0,
@@ -1307,18 +1287,18 @@
   }
  ],
  "statistics": {
-  "works": 3345,
+  "works": 3346,
   "states": {
    "print": 1785,
-   "oneshot": 520,
-   "completed": 505,
-   "active": 285,
+   "oneshot": 521,
+   "completed": 504,
+   "active": 290,
    "dormant": 148,
-   "slow": 58,
-   "unknown": 44
+   "slow": 53,
+   "unknown": 45
   },
   "english_basis": {
-   "translated": 2781,
+   "translated": 2782,
    "official-jp": 443,
    "licensed": 93,
    "romaji": 27,
@@ -1327,8 +1307,8 @@
   "print_works": 2647,
   "print_only": 1785,
   "volumes": 6601,
-  "with_identifier": 3345,
-  "chapters": 31446,
+  "with_identifier": 3346,
+  "chapters": 31465,
   "delivery_dated": 1112
  }
 }

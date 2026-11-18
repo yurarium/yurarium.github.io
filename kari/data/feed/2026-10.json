@@ -2352,7 +2352,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-30",
-   "seen": "2026-11-17",
+   "seen": "2026-11-18",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -17188,7 +17188,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-23",
-   "seen": "2026-11-17",
+   "seen": "2026-11-18",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -20590,10 +20590,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 21",
    "kind_inferred": true,
@@ -21059,10 +21059,10 @@
    "discovered_on": null,
    "late_discovered": false,
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 51",
    "kind_inferred": true,
@@ -21633,11 +21633,11 @@
    "ident": "discovery-candidate",
    "free_from": "2026-11-17",
    "access_modes": [
-    "purchase"
+    "free"
    ],
    "access_basis": "the platform's own episode list",
    "provenance": "attested",
-   "free": false,
+   "free": true,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 22",
    "kind_inferred": true,
@@ -22353,6 +22353,99 @@
    }
   },
   {
+   "id": "nicovideo:44944:2026-10-20",
+   "work": "一畳間まんきつ暮らし！",
+   "ep": "第67話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-20",
+   "seen": "2026-11-18",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1160135",
+   "author": "ひさまくまこ",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 67",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 9,
+   "free_episodes": 9,
+   "started": "2019-11-19",
+   "work_level": true,
+   "syndicated": true,
+   "origin_note": "carried on ニコニコ漫画; originates on COMIC FUZ, which is where it should be read",
+   "channel": null,
+   "feed_date": "2026-10-20",
+   "wid": "w00015",
+   "work_en": {
+    "reading": "イチ ジョウカン マンキツ クラシ！",
+    "ruby": [
+     [
+      "一",
+      "いち"
+     ],
+     [
+      "畳",
+      "じょう"
+     ],
+     [
+      "間",
+      "かん"
+     ],
+     [
+      "まんきつ",
+      null
+     ],
+     [
+      "暮",
+      "く"
+     ],
+     [
+      "らし！",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Ichi Jōkan Mankitsu Kurashi!",
+     "double": "Ichi Joukan Mankitsu Kurashi!",
+     "plain": "Ichi Jokan Mankitsu Kurashi!"
+    },
+    "en": "Living It Up in a One-Tatami Manga Café",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Living It Up in a One-Tatami Manga Café"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "ヒサマ クマコ",
+    "romaji": {
+     "macron": "Hisama Kumako",
+     "double": "Hisama Kumako",
+     "plain": "Hisama Kumako"
+    },
+    "en": "Kumako Hisama",
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00065"
+   }
+  },
+  {
    "id": "nicovideo:70757:2026-10-20",
    "work": "ラブかライクか分からない！",
    "ep": "第21話",
@@ -22537,99 +22630,6 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00312"
-   }
-  },
-  {
-   "id": "nicovideo:44944:2026-10-20",
-   "work": "一畳間まんきつ暮らし！",
-   "ep": "第67話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-20",
-   "seen": "2026-11-18",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1160135",
-   "author": "ひさまくまこ",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 67",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 9,
-   "free_episodes": 9,
-   "started": "2019-11-19",
-   "work_level": true,
-   "syndicated": true,
-   "origin_note": "carried on ニコニコ漫画; originates on COMIC FUZ, which is where it should be read",
-   "channel": null,
-   "feed_date": "2026-10-20",
-   "wid": "w00015",
-   "work_en": {
-    "reading": "イチ ジョウカン マンキツ クラシ！",
-    "ruby": [
-     [
-      "一",
-      "いち"
-     ],
-     [
-      "畳",
-      "じょう"
-     ],
-     [
-      "間",
-      "かん"
-     ],
-     [
-      "まんきつ",
-      null
-     ],
-     [
-      "暮",
-      "く"
-     ],
-     [
-      "らし！",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Ichi Jōkan Mankitsu Kurashi!",
-     "double": "Ichi Joukan Mankitsu Kurashi!",
-     "plain": "Ichi Jokan Mankitsu Kurashi!"
-    },
-    "en": "Living It Up in a One-Tatami Manga Café",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "Living It Up in a One-Tatami Manga Café"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "ヒサマ クマコ",
-    "romaji": {
-     "macron": "Hisama Kumako",
-     "double": "Hisama Kumako",
-     "plain": "Hisama Kumako"
-    },
-    "en": "Kumako Hisama",
-    "basis": "romaji",
-    "reading_basis": "surface",
-    "id": "c00065"
    }
   },
   {
@@ -28009,150 +28009,6 @@
    }
   },
   {
-   "id": "nicovideo:74091:2026-09-28",
-   "work": "人妻教師が教え子の女子高生にドはまりする話",
-   "ep": "第10話後半",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-09-28",
-   "seen": "2026-11-18",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "work-level update date stated by the platform; chapter not identified",
-   "moved": "",
-   "url": "https://manga.nicovideo.jp/watch/mg1129744",
-   "author": "川上しをん(作画) 入間人間(原作) 猫屋敷ぷしお(キャラクターデザイン)",
-   "plat": "nicovideo",
-   "plat_name": "ニコニコ漫画",
-   "ident": "discovery-candidate",
-   "free_from": null,
-   "discovered_on": "2026-10-16",
-   "late_discovered": true,
-   "access_modes": [
-    "free"
-   ],
-   "provenance": "attested",
-   "free": true,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 10",
-   "kind_inferred": true,
-   "preferred": "ニコニコ漫画",
-   "also_on": [],
-   "is_preferred": true,
-   "episode_count": 2,
-   "free_episodes": 2,
-   "started": "2025-09-18",
-   "work_level": true,
-   "origin_note": "a work of this title also appears on カドコミ. Whether it is the same run is not established — we hold no chapter list on that side to compare, and a shared title is not evidence of a shared work.",
-   "same_title_elsewhere": "カドコミ",
-   "channel": null,
-   "feed_date": "2026-10-16",
-   "wid": "w00222",
-   "work_en": {
-    "reading": "ヒトヅマ キョウシ ガ オシエゴ ノ ジョシコウセイ ニ ド ハマリ スル ハナシ",
-    "ruby": [
-     [
-      "人妻",
-      "ひとづま"
-     ],
-     [
-      "教師",
-      "きょうし"
-     ],
-     [
-      "が",
-      null
-     ],
-     [
-      "教",
-      "おし"
-     ],
-     [
-      "え",
-      null
-     ],
-     [
-      "子",
-      "ご"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "女子高生",
-      "じょしこうせい"
-     ],
-     [
-      "にドはまりする",
-      null
-     ],
-     [
-      "話",
-      "はなし"
-     ]
-    ],
-    "romaji": {
-     "macron": "Hitozuma Kyōshi ga Oshiego no Joshikōsei ni Do Hamari Suru Hanashi",
-     "double": "Hitozuma Kyoushi ga Oshiego no Joshikousei ni Do Hamari Suru Hanashi",
-     "plain": "Hitozuma Kyoshi ga Oshiego no Joshikosei ni Do Hamari Suru Hanashi"
-    },
-    "en": "The Story of a Married Teacher Getting Hooked on Her Student",
-    "basis": "translated",
-    "en_forms": {
-     "translated": "The Story of a Married Teacher Getting Hooked on Her Student"
-    },
-    "reading_basis": "analyser",
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "カワカミ シオン, イルマ ヒトマ, ネコヤシキ プシオ",
-    "ruby": [
-     [
-      "川上",
-      "かわかみ"
-     ],
-     [
-      "しをん",
-      null
-     ],
-     [
-      "(作画) ",
-      null
-     ],
-     [
-      "入間人間",
-      "いるまひとま"
-     ],
-     [
-      "(原作) ",
-      null
-     ],
-     [
-      "猫屋敷",
-      "ねこやしき"
-     ],
-     [
-      "ぷしお",
-      null
-     ],
-     [
-      "(キャラクターデザイン)",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Kawakami Shion, Iruma Hitoma, Nekoyashiki Pushio",
-     "double": "Kawakami Shion, Iruma Hitoma, Nekoyashiki Pushio",
-     "plain": "Kawakami Shion, Iruma Hitoma, Nekoyashiki Pushio"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji",
-    "unverified": true
-   }
-  },
-  {
    "id": "comic_ogyaaa:episode:12207421984374790245",
    "work": "あの子とふたりで。",
    "ep": "番外編③",
@@ -28478,108 +28334,6 @@
    }
   },
   {
-   "id": "ichijinsha:episode:12207421984374441871",
-   "work": "今日はカノジョがいないから",
-   "ep": "第40話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-16",
-   "seen": "2026-10-16",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://ichicomi.com/episode/12207421984374441871",
-   "author": "岩見樹代子",
-   "plat": "ichicomi",
-   "plat_name": "一迅プラス",
-   "ident": "platform-genre",
-   "free_from": "2026-12-10",
-   "access_modes": [
-    "purchase"
-   ],
-   "access_basis": "the platform's own episode list",
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 40",
-   "kind_inferred": true,
-   "preferred": "一迅プラス",
-   "preferred_reason": "the best-ranked carrier this chapter is actually free on",
-   "also_on": [
-    "コミックDAYS",
-    "マガポケ"
-   ],
-   "is_preferred": true,
-   "feed_date": "2026-10-16",
-   "wid": "w00056",
-   "work_en": {
-    "reading": "キョウ ワ カノジョ ガ イナイ カラ",
-    "ruby": [
-     [
-      "今日",
-      "きょう"
-     ],
-     [
-      "はカノジョがいないから",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Kyō wa Kanojo ga Inai kara",
-     "double": "Kyou wa Kanojo ga Inai kara",
-     "plain": "Kyo wa Kanojo ga Inai kara"
-    },
-    "en": "My Girlfriend’s Not Here Today",
-    "basis": "licensed",
-    "en_forms": {
-     "licensed": "My Girlfriend’s Not Here Today",
-     "translated": "My Girlfriend Isn't Here Today"
-    },
-    "reading_basis": "back-converted",
-    "reading_cite": {
-     "source": "wikidata",
-     "url": "http://www.wikidata.org/entity/Q116233964",
-     "kind": "community-db"
-    },
-    "en_cite": {
-     "source": "sevenseasentertainment.com",
-     "url": "https://sevenseasentertainment.com/series/my-girlfriends-not-here-today/",
-     "kind": "licensor",
-     "reviewed": "2026-08-05"
-    },
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "イワミ キヨコ",
-    "ruby": [
-     [
-      "岩見",
-      "いわみ"
-     ],
-     [
-      "樹代子",
-      "きよこ"
-     ]
-    ],
-    "romaji": {
-     "macron": "Iwami Kiyoko",
-     "double": "Iwami Kiyoko",
-     "plain": "Iwami Kiyoko"
-    },
-    "basis": "romaji",
-    "reading_basis": "stated",
-    "reading_cite": {
-     "source": "national-library",
-     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I031868316",
-     "kind": "national-library",
-     "reviewed": "2026-08-04"
-    },
-    "id": "c00117"
-   }
-  },
-  {
    "id": "ichijinsha:episode:12207421984374441816",
    "work": "超深宇宙より愛をこめて",
    "ep": "第16話",
@@ -28849,136 +28603,6 @@
    }
   },
   {
-   "id": "ichijinsha:episode:12207421984374441877",
-   "work": "私の推しは悪役令嬢。",
-   "ep": "第65話",
-   "type": "chapter",
-   "adv": true,
-   "web": "serialised",
-   "pub": "2026-10-16",
-   "seen": "2026-10-16",
-   "basis": "observed",
-   "conf": "reported",
-   "why": "",
-   "moved": "",
-   "url": "https://ichicomi.com/episode/12207421984374441877",
-   "author": "青乃下/いのり。/花ヶ田",
-   "plat": "ichicomi",
-   "plat_name": "一迅プラス",
-   "ident": "platform-genre",
-   "free_from": "2026-12-10",
-   "access_modes": [
-    "purchase"
-   ],
-   "access_basis": "the platform's own episode list",
-   "provenance": "attested",
-   "free": false,
-   "kind": "new-chapter",
-   "kind_basis": "episode numbered 65",
-   "kind_inferred": true,
-   "preferred": "一迅プラス",
-   "preferred_reason": "the best-ranked carrier this chapter is actually free on",
-   "also_on": [
-    "コミックDAYS"
-   ],
-   "is_preferred": true,
-   "feed_date": "2026-10-16",
-   "wid": "w00165",
-   "work_en": {
-    "reading": "ワタシ ノ オシ ワ アクヤク レイジョウ。",
-    "ruby": [
-     [
-      "私",
-      "わたし"
-     ],
-     [
-      "の",
-      null
-     ],
-     [
-      "推",
-      "お"
-     ],
-     [
-      "しは",
-      null
-     ],
-     [
-      "悪役",
-      "あくやく"
-     ],
-     [
-      "令嬢",
-      "れいじょう"
-     ],
-     [
-      "。",
-      null
-     ]
-    ],
-    "romaji": {
-     "macron": "Watashi no Oshi wa Akuyaku Reijō.",
-     "double": "Watashi no Oshi wa Akuyaku Reijou.",
-     "plain": "Watashi no Oshi wa Akuyaku Reijo."
-    },
-    "en": "I'm in Love with the Villainess",
-    "basis": "official-jp",
-    "en_forms": {
-     "official-jp": "I'm in Love with the Villainess",
-     "licensed": "I'm in Love with the Villainess",
-     "translated": "My Favourite Is the Villainess."
-    },
-    "reading_basis": "analyser",
-    "en_cite": {
-     "source": "series-art",
-     "url": "https://cdn-img.ichicomi.com/public/series-thumbnail/2550912965923183996-6f30e7f54ac600a3b5a3e455dbcc27eb?1752730099",
-     "kind": "platform",
-     "reviewed": "2026-08-08"
-    },
-    "unverified": true
-   },
-   "author_en": {
-    "reading": "アオノ シモ / イノリ。 / ハナガタ",
-    "ruby": [
-     [
-      "青乃下",
-      "あおのしも"
-     ],
-     [
-      "/",
-      null
-     ],
-     [
-      "いのり。",
-      null
-     ],
-     [
-      "/",
-      null
-     ],
-     [
-      "花",
-      "はな"
-     ],
-     [
-      "ヶ",
-      null
-     ],
-     [
-      "田",
-      "た"
-     ]
-    ],
-    "romaji": {
-     "macron": "Aono Shimo / Inori. / Hanagata",
-     "double": "Aono Shimo / Inori. / Hanagata",
-     "plain": "Aono Shimo / Inori. / Hanagata"
-    },
-    "reading_basis": "stated",
-    "basis": "romaji"
-   }
-  },
-  {
    "id": "ichijinsha:episode:12207421984374441842",
    "work": "キミが吠えるための歌を、",
    "ep": "第22話",
@@ -28996,7 +28620,7 @@
    "plat": "ichicomi",
    "plat_name": "一迅プラス",
    "ident": "platform-genre",
-   "free_from": "2026-12-03",
+   "free_from": null,
    "access_modes": [
     "purchase"
    ],
@@ -29196,7 +28820,7 @@
    "plat": "ichicomi",
    "plat_name": "一迅プラス",
    "ident": "platform-genre",
-   "free_from": "2026-12-10",
+   "free_from": null,
    "access_modes": [
     "purchase"
    ],
@@ -29295,7 +28919,7 @@
    "plat": "ichicomi",
    "plat_name": "一迅プラス",
    "ident": "platform-genre",
-   "free_from": "2026-12-03",
+   "free_from": null,
    "access_modes": [
     "purchase"
    ],
@@ -29444,7 +29068,7 @@
    "plat": "ichicomi",
    "plat_name": "一迅プラス",
    "ident": "platform-genre",
-   "free_from": "2026-12-03",
+   "free_from": null,
    "access_modes": [
     "purchase"
    ],
@@ -29555,7 +29179,7 @@
    "plat": "ichicomi",
    "plat_name": "一迅プラス",
    "ident": "platform-genre",
-   "free_from": "2026-11-26",
+   "free_from": null,
    "access_modes": [
     "purchase"
    ],
@@ -29651,7 +29275,7 @@
    "plat": "ichicomi",
    "plat_name": "一迅プラス",
    "ident": "platform-genre",
-   "free_from": "2026-11-26",
+   "free_from": null,
    "access_modes": [
     "purchase"
    ],
@@ -32332,6 +31956,382 @@
      "translated": "The Day I Became the Protagonist"
     },
     "reading_basis": "analyser"
+   }
+  },
+  {
+   "id": "nicovideo:74091:2026-09-28",
+   "work": "人妻教師が教え子の女子高生にドはまりする話",
+   "ep": "第10話後半",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-09-28",
+   "seen": "2026-11-18",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "work-level update date stated by the platform; chapter not identified",
+   "moved": "",
+   "url": "https://manga.nicovideo.jp/watch/mg1129744",
+   "author": "川上しをん(作画) 入間人間(原作) 猫屋敷ぷしお(キャラクターデザイン)",
+   "plat": "nicovideo",
+   "plat_name": "ニコニコ漫画",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": "2026-10-16",
+   "late_discovered": true,
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 10",
+   "kind_inferred": true,
+   "preferred": "ニコニコ漫画",
+   "also_on": [],
+   "is_preferred": true,
+   "episode_count": 2,
+   "free_episodes": 2,
+   "started": "2025-09-18",
+   "work_level": true,
+   "origin_note": "a work of this title also appears on カドコミ. Whether it is the same run is not established — we hold no chapter list on that side to compare, and a shared title is not evidence of a shared work.",
+   "same_title_elsewhere": "カドコミ",
+   "channel": null,
+   "feed_date": "2026-10-16",
+   "wid": "w00222",
+   "work_en": {
+    "reading": "ヒトヅマ キョウシ ガ オシエゴ ノ ジョシコウセイ ニ ド ハマリ スル ハナシ",
+    "ruby": [
+     [
+      "人妻",
+      "ひとづま"
+     ],
+     [
+      "教師",
+      "きょうし"
+     ],
+     [
+      "が",
+      null
+     ],
+     [
+      "教",
+      "おし"
+     ],
+     [
+      "え",
+      null
+     ],
+     [
+      "子",
+      "ご"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "女子高生",
+      "じょしこうせい"
+     ],
+     [
+      "にドはまりする",
+      null
+     ],
+     [
+      "話",
+      "はなし"
+     ]
+    ],
+    "romaji": {
+     "macron": "Hitozuma Kyōshi ga Oshiego no Joshikōsei ni Do Hamari Suru Hanashi",
+     "double": "Hitozuma Kyoushi ga Oshiego no Joshikousei ni Do Hamari Suru Hanashi",
+     "plain": "Hitozuma Kyoshi ga Oshiego no Joshikosei ni Do Hamari Suru Hanashi"
+    },
+    "en": "The Story of a Married Teacher Getting Hooked on Her Student",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "The Story of a Married Teacher Getting Hooked on Her Student"
+    },
+    "reading_basis": "analyser",
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "カワカミ シオン, イルマ ヒトマ, ネコヤシキ プシオ",
+    "ruby": [
+     [
+      "川上",
+      "かわかみ"
+     ],
+     [
+      "しをん",
+      null
+     ],
+     [
+      "(作画) ",
+      null
+     ],
+     [
+      "入間人間",
+      "いるまひとま"
+     ],
+     [
+      "(原作) ",
+      null
+     ],
+     [
+      "猫屋敷",
+      "ねこやしき"
+     ],
+     [
+      "ぷしお",
+      null
+     ],
+     [
+      "(キャラクターデザイン)",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kawakami Shion, Iruma Hitoma, Nekoyashiki Pushio",
+     "double": "Kawakami Shion, Iruma Hitoma, Nekoyashiki Pushio",
+     "plain": "Kawakami Shion, Iruma Hitoma, Nekoyashiki Pushio"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji",
+    "unverified": true
+   }
+  },
+  {
+   "id": "ichijinsha:episode:12207421984374441871",
+   "work": "今日はカノジョがいないから",
+   "ep": "第40話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-16",
+   "seen": "2026-10-16",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://ichicomi.com/episode/12207421984374441871",
+   "author": "岩見樹代子",
+   "plat": "ichicomi",
+   "plat_name": "一迅プラス",
+   "ident": "platform-genre",
+   "free_from": "2026-12-10",
+   "access_modes": [
+    "purchase"
+   ],
+   "access_basis": "the platform's own episode list",
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 40",
+   "kind_inferred": true,
+   "preferred": "一迅プラス",
+   "preferred_reason": "the best-ranked carrier this chapter is actually free on",
+   "also_on": [
+    "コミックDAYS",
+    "マガポケ"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-16",
+   "wid": "w00056",
+   "work_en": {
+    "reading": "キョウ ワ カノジョ ガ イナイ カラ",
+    "ruby": [
+     [
+      "今日",
+      "きょう"
+     ],
+     [
+      "はカノジョがいないから",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Kyō wa Kanojo ga Inai kara",
+     "double": "Kyou wa Kanojo ga Inai kara",
+     "plain": "Kyo wa Kanojo ga Inai kara"
+    },
+    "en": "My Girlfriend’s Not Here Today",
+    "basis": "licensed",
+    "en_forms": {
+     "licensed": "My Girlfriend’s Not Here Today",
+     "translated": "My Girlfriend Isn't Here Today"
+    },
+    "reading_basis": "back-converted",
+    "reading_cite": {
+     "source": "wikidata",
+     "url": "http://www.wikidata.org/entity/Q116233964",
+     "kind": "community-db"
+    },
+    "en_cite": {
+     "source": "sevenseasentertainment.com",
+     "url": "https://sevenseasentertainment.com/series/my-girlfriends-not-here-today/",
+     "kind": "licensor",
+     "reviewed": "2026-08-05"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "イワミ キヨコ",
+    "ruby": [
+     [
+      "岩見",
+      "いわみ"
+     ],
+     [
+      "樹代子",
+      "きよこ"
+     ]
+    ],
+    "romaji": {
+     "macron": "Iwami Kiyoko",
+     "double": "Iwami Kiyoko",
+     "plain": "Iwami Kiyoko"
+    },
+    "basis": "romaji",
+    "reading_basis": "stated",
+    "reading_cite": {
+     "source": "national-library",
+     "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I031868316",
+     "kind": "national-library",
+     "reviewed": "2026-08-04"
+    },
+    "id": "c00117"
+   }
+  },
+  {
+   "id": "ichijinsha:episode:12207421984374441877",
+   "work": "私の推しは悪役令嬢。",
+   "ep": "第65話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-10-16",
+   "seen": "2026-10-16",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://ichicomi.com/episode/12207421984374441877",
+   "author": "青乃下/いのり。/花ヶ田",
+   "plat": "ichicomi",
+   "plat_name": "一迅プラス",
+   "ident": "platform-genre",
+   "free_from": "2026-12-10",
+   "access_modes": [
+    "purchase"
+   ],
+   "access_basis": "the platform's own episode list",
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 65",
+   "kind_inferred": true,
+   "preferred": "一迅プラス",
+   "preferred_reason": "the best-ranked carrier this chapter is actually free on",
+   "also_on": [
+    "コミックDAYS"
+   ],
+   "is_preferred": true,
+   "feed_date": "2026-10-16",
+   "wid": "w00165",
+   "work_en": {
+    "reading": "ワタシ ノ オシ ワ アクヤク レイジョウ。",
+    "ruby": [
+     [
+      "私",
+      "わたし"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "推",
+      "お"
+     ],
+     [
+      "しは",
+      null
+     ],
+     [
+      "悪役",
+      "あくやく"
+     ],
+     [
+      "令嬢",
+      "れいじょう"
+     ],
+     [
+      "。",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Watashi no Oshi wa Akuyaku Reijō.",
+     "double": "Watashi no Oshi wa Akuyaku Reijou.",
+     "plain": "Watashi no Oshi wa Akuyaku Reijo."
+    },
+    "en": "I'm in Love with the Villainess",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "I'm in Love with the Villainess",
+     "licensed": "I'm in Love with the Villainess",
+     "translated": "My Favourite Is the Villainess."
+    },
+    "reading_basis": "analyser",
+    "en_cite": {
+     "source": "series-art",
+     "url": "https://cdn-img.ichicomi.com/public/series-thumbnail/2550912965923183996-6f30e7f54ac600a3b5a3e455dbcc27eb?1752730099",
+     "kind": "platform",
+     "reviewed": "2026-08-08"
+    },
+    "unverified": true
+   },
+   "author_en": {
+    "reading": "アオノ シモ / イノリ。 / ハナガタ",
+    "ruby": [
+     [
+      "青乃下",
+      "あおのしも"
+     ],
+     [
+      "/",
+      null
+     ],
+     [
+      "いのり。",
+      null
+     ],
+     [
+      "/",
+      null
+     ],
+     [
+      "花",
+      "はな"
+     ],
+     [
+      "ヶ",
+      null
+     ],
+     [
+      "田",
+      "た"
+     ]
+    ],
+    "romaji": {
+     "macron": "Aono Shimo / Inori. / Hanagata",
+     "double": "Aono Shimo / Inori. / Hanagata",
+     "plain": "Aono Shimo / Inori. / Hanagata"
+    },
+    "reading_basis": "stated",
+    "basis": "romaji"
    }
   },
   {
@@ -49011,7 +49011,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-09-25",
-   "seen": "2026-11-17",
+   "seen": "2026-11-18",
    "basis": "stated",
    "conf": "reported",
    "why": "",
@@ -68838,13 +68838,13 @@
    "plat": "comic-action",
    "plat_name": "webアクション",
    "ident": "discovery-candidate",
-   "free_from": "2026-10-20",
+   "free_from": null,
    "access_modes": [
-    "free"
+    "purchase"
    ],
    "access_basis": "the platform's own episode list",
    "provenance": "attested",
-   "free": true,
+   "free": false,
    "kind": "new-chapter",
    "kind_basis": "episode numbered 193",
    "kind_inferred": true,
@@ -77300,7 +77300,7 @@
    "adv": true,
    "web": "serialised",
    "pub": "2026-10-02",
-   "seen": "2026-11-17",
+   "seen": "2026-11-18",
    "basis": "stated",
    "conf": "reported",
    "why": "",
