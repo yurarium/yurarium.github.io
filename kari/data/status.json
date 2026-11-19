@@ -1,9 +1,11 @@
 {
- "generated": "2026-11-18T16:24:26+00:00",
+ "generated": "2026-11-19T08:30:52+00:00",
  "since_last": {
-  "at": "2026-11-18T15:58:23+00:00",
+  "at": "2026-11-18T16:24:26+00:00",
   "statistics": {
-   "chapters": 12
+   "works": 1,
+   "with_identifier": 1,
+   "chapters": 7
   }
  },
  "means": {
@@ -27,20 +29,20 @@
  },
  "last_run": {
   "at": "2026-11-19",
-  "releases": 1129,
+  "releases": 1139,
   "works": 2769,
   "platforms": 19,
-  "series_rows": 3346,
-  "assembled": 3348,
+  "series_rows": 3347,
+  "assembled": 3349,
   "awaiting_identifier": 2,
   "identification": {
-   "discovery-candidate": 802,
+   "discovery-candidate": 810,
    "known-work-match": 40,
-   "platform-genre": 287
+   "platform-genre": 289
   },
   "collapsed": {
-   "duplicate_chapters": 272,
-   "resolver": 140,
+   "duplicate_chapters": 276,
+   "resolver": 142,
    "samples": 0,
    "thin_sitemap": 12
   }
@@ -558,8 +560,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 16,
-    "value": 16,
+    "budget": 17,
+    "value": 17,
     "measure": "arrival"
    },
    {
@@ -614,8 +616,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1246,
-    "value": 1246,
+    "budget": 1247,
+    "value": 1247,
     "measure": "arrival"
    },
    {
@@ -933,7 +935,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 76,
+    "consecutive": 77,
     "failing_since": "2026-10-16",
     "days": 34,
     "last_ok": null,
@@ -943,7 +945,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 76,
+    "consecutive": 77,
     "failing_since": "2026-10-16",
     "days": 34,
     "last_ok": null,
@@ -953,7 +955,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 76,
+    "consecutive": 77,
     "failing_since": "2026-10-16",
     "days": 34,
     "last_ok": null,
@@ -963,7 +965,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 24,
+    "consecutive": 25,
     "failing_since": "2026-11-09",
     "days": 10,
     "last_ok": null,
@@ -1063,13 +1065,13 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6355,
+   "rows": 6357,
    "retrieved": "2026-11-19",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6308,
-   "well_formed": 6308,
+   "checked_rows": 6310,
+   "well_formed": 6310,
    "malformed": 0,
    "drop": null
   },
@@ -1090,14 +1092,14 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1803,
-   "rows": 17952,
+   "works": 1807,
+   "rows": 17960,
    "retrieved": "2026-11-19",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17440,
-   "well_formed": 17440,
+   "checked_rows": 17445,
+   "well_formed": 17445,
    "malformed": 0,
    "drop": null
   },
@@ -1105,21 +1107,21 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1027,
-   "rows": 7901,
+   "rows": 7903,
    "retrieved": "2026-11-19",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7200,
-   "well_formed": 6870,
-   "malformed": 330,
+   "checked_rows": 7202,
+   "well_formed": 6867,
+   "malformed": 335,
    "drop": null
   },
   {
    "source": "nicovideo",
    "files": 3,
-   "works": 1345,
-   "rows": 11638,
+   "works": 1346,
+   "rows": 11639,
    "retrieved": "2026-11-19",
    "age_days": 0,
    "in_scope": true,
@@ -1147,14 +1149,14 @@
    "source": "webpages",
    "files": 52,
    "works": 707,
-   "rows": 10522,
+   "rows": 10525,
    "retrieved": "2026-11-19",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10467,
-   "well_formed": 10467,
-   "malformed": 0,
+   "checked_rows": 10470,
+   "well_formed": 10469,
+   "malformed": 1,
    "drop": null
   }
  ],
@@ -1228,7 +1230,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 16,
+    "credit fields an identifier does not cover": 17,
     "credit pages listing a work that does not name them": 13,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1236,7 +1238,7 @@
     "ruby asserting a reading per character": 214,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 187,
-    "titles read by a machine, unmarked": 1246,
+    "titles read by a machine, unmarked": 1247,
     "uncertain readings": 64,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1285,10 +1287,10 @@
   }
  ],
  "statistics": {
-  "works": 3346,
+  "works": 3347,
   "states": {
    "print": 1785,
-   "oneshot": 520,
+   "oneshot": 521,
    "completed": 505,
    "active": 290,
    "dormant": 148,
@@ -1296,7 +1298,7 @@
    "unknown": 44
   },
   "english_basis": {
-   "translated": 2782,
+   "translated": 2783,
    "official-jp": 443,
    "licensed": 93,
    "romaji": 27,
@@ -1305,8 +1307,8 @@
   "print_works": 2647,
   "print_only": 1785,
   "volumes": 6601,
-  "with_identifier": 3346,
-  "chapters": 31477,
+  "with_identifier": 3347,
+  "chapters": 31484,
   "delivery_dated": 1112
  }
 }
