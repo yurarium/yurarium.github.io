@@ -1,9 +1,11 @@
 {
- "generated": "2026-11-20T16:50:01+00:00",
+ "generated": "2026-11-21T07:51:05+00:00",
  "since_last": {
-  "at": "2026-11-20T15:45:43+00:00",
+  "at": "2026-11-20T16:50:01+00:00",
   "statistics": {
-   "chapters": 17
+   "works": 1,
+   "with_identifier": 1,
+   "chapters": 2
   }
  },
  "means": {
@@ -27,19 +29,19 @@
  },
  "last_run": {
   "at": "2026-11-21",
-  "releases": 1153,
+  "releases": 1157,
   "works": 2771,
   "platforms": 19,
-  "series_rows": 3350,
-  "assembled": 3354,
-  "awaiting_identifier": 4,
+  "series_rows": 3351,
+  "assembled": 3357,
+  "awaiting_identifier": 6,
   "identification": {
-   "discovery-candidate": 820,
+   "discovery-candidate": 822,
    "known-work-match": 40,
-   "platform-genre": 293
+   "platform-genre": 295
   },
   "collapsed": {
-   "duplicate_chapters": 280,
+   "duplicate_chapters": 277,
    "resolver": 151,
    "samples": 0,
    "thin_sitemap": 12
@@ -558,8 +560,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 16,
-    "value": 16,
+    "budget": 17,
+    "value": 17,
     "measure": "arrival"
    },
    {
@@ -593,8 +595,8 @@
    {
     "name": "ruby asserting a reading per character",
     "means": "runs where the ruby annotates one character after another, so a compound reaches a reader as several ruby units each claiming a reading nobody stated. A rise means a producer started cutting words again, or new works whose compounds the analyser has no entry for.",
-    "budget": 214,
-    "value": 214,
+    "budget": 215,
+    "value": 215,
     "measure": "arrival"
    },
    {
@@ -817,8 +819,8 @@
    {
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
-    "budget": 2,
-    "value": 2,
+    "budget": 6,
+    "value": 6,
     "measure": "arrival"
    },
    {
@@ -887,8 +889,8 @@
    {
     "name": "attested rows with no access state",
     "means": "attested releases that state no access on a platform whose other rows do, nearly always because the route that read them reads none. `rows with no access state, by route` lists them. A number to work down by route, not a tripwire: `adapters/fieldaudit.py` is the one for a platform going silent.",
-    "budget": 0,
-    "value": 0,
+    "budget": 2,
+    "value": 2,
     "measure": "report"
    },
    {
@@ -933,7 +935,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 80,
+    "consecutive": 81,
     "failing_since": "2026-10-16",
     "days": 36,
     "last_ok": null,
@@ -943,7 +945,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 80,
+    "consecutive": 81,
     "failing_since": "2026-10-16",
     "days": 36,
     "last_ok": null,
@@ -953,7 +955,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 80,
+    "consecutive": 81,
     "failing_since": "2026-10-16",
     "days": 36,
     "last_ok": null,
@@ -963,7 +965,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 28,
+    "consecutive": 29,
     "failing_since": "2026-11-09",
     "days": 12,
     "last_ok": null,
@@ -973,12 +975,12 @@
    {
     "source": "webcomics-coverage",
     "stage": "stage-0",
-    "consecutive": 2,
+    "consecutive": 3,
     "failing_since": "2026-11-20",
     "days": 1,
     "last_ok": "2026-11-20",
     "error": "UnboundLocalError: cannot access local variable 'carried' where it is not associated with a value",
-    "issue": false
+    "issue": true
    }
   ],
   "healthy": 170,
@@ -1114,14 +1116,14 @@
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 1031,
-   "rows": 7918,
+   "works": 1032,
+   "rows": 7920,
    "retrieved": "2026-11-21",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7215,
-   "well_formed": 6880,
+   "checked_rows": 7217,
+   "well_formed": 6882,
    "malformed": 335,
    "drop": null
   },
@@ -1156,14 +1158,14 @@
   {
    "source": "webpages",
    "files": 52,
-   "works": 706,
-   "rows": 10536,
+   "works": 708,
+   "rows": 10538,
    "retrieved": "2026-11-21",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10481,
-   "well_formed": 10480,
+   "checked_rows": 10483,
+   "well_formed": 10482,
    "malformed": 1,
    "drop": null
   }
@@ -1205,7 +1207,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 46,
+   "count": 47,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1238,12 +1240,12 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 16,
+    "credit fields an identifier does not cover": 17,
     "credit pages listing a work that does not name them": 13,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
     "credits sharing a reading nobody has ruled on": 0,
-    "ruby asserting a reading per character": 214,
+    "ruby asserting a reading per character": 215,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 183,
     "titles read by a machine, unmarked": 1246,
@@ -1275,7 +1277,7 @@
     "shelf admissions a reader cannot follow": 5,
     "scraped counters in chapter names": 0,
     "announced works the corpus does not hold": 0,
-    "updates naming a work we do not hold": 2,
+    "updates naming a work we do not hold": 6,
     "works whose first publication country is unattested": 2770,
     "scope questions left open": 2,
     "targets a capture wrote no row for": 7,
@@ -1285,7 +1287,7 @@
     "series names holding a page title": 0,
     "ruby spans that do not spell their own name": 11,
     "incomplete attested rows": 0,
-    "attested rows with no access state": 0,
+    "attested rows with no access state": 2,
     "works without English": 0,
     "volume rows with no publication date": 2664,
     "predicted updates already behind the run": 0,
@@ -1295,18 +1297,18 @@
   }
  ],
  "statistics": {
-  "works": 3350,
+  "works": 3351,
   "states": {
    "print": 1787,
    "oneshot": 522,
    "completed": 505,
-   "active": 290,
+   "active": 291,
    "dormant": 148,
    "slow": 56,
    "unknown": 42
   },
   "english_basis": {
-   "translated": 2786,
+   "translated": 2787,
    "official-jp": 443,
    "licensed": 93,
    "romaji": 27,
@@ -1315,8 +1317,8 @@
   "print_works": 2649,
   "print_only": 1787,
   "volumes": 6609,
-  "with_identifier": 3350,
-  "chapters": 31511,
+  "with_identifier": 3351,
+  "chapters": 31513,
   "delivery_dated": 1113
  }
 }
