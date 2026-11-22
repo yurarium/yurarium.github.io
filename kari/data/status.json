@@ -1,15 +1,9 @@
 {
- "generated": "2026-11-21T18:00:24+00:00",
+ "generated": "2026-11-22T07:33:02+00:00",
  "since_last": {
-  "at": "2026-11-21T14:56:48+00:00",
+  "at": "2026-11-21T18:00:24+00:00",
   "statistics": {
-   "works": 3,
-   "print_works": 4,
-   "print_only": -1,
-   "volumes": 20,
-   "with_identifier": 3,
-   "chapters": 28,
-   "delivery_dated": -2
+   "chapters": 1
   }
  },
  "means": {
@@ -33,14 +27,14 @@
  },
  "last_run": {
   "at": "2026-11-22",
-  "releases": 1158,
+  "releases": 1159,
   "works": 2777,
   "platforms": 19,
   "series_rows": 3354,
   "assembled": 3359,
   "awaiting_identifier": 5,
   "identification": {
-   "discovery-candidate": 825,
+   "discovery-candidate": 826,
    "known-work-match": 40,
    "platform-genre": 293
   },
@@ -564,8 +558,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 18,
-    "value": 18,
+    "budget": 16,
+    "value": 16,
     "measure": "arrival"
    },
    {
@@ -641,15 +635,15 @@
    {
     "name": "titles showing a romanisation nobody has ruled on",
     "means": "titles falling through to a romanisation that nobody has examined. Distinct from the budget below, which counts every such title and cannot reach zero because a romanisation finishes a name; this counts the ones still owed a reading of the work, and it can. A rise means a new title nobody has looked at, which is ordinary and is the queue doing its job.",
-    "budget": 1,
-    "value": 1,
+    "budget": 0,
+    "value": 0,
     "measure": "arrival"
    },
    {
     "name": "works showing a romanisation",
     "means": "works with no English name, showing a romanisation instead. Distinct from the budget above, which a romanisation satisfies: this is the one that answers 'can a reader tell what this is'. Never reaches zero, because romanising is right for a coinage.",
-    "budget": 29,
-    "value": 29,
+    "budget": 28,
+    "value": 28,
     "measure": "arrival"
    },
    {
@@ -939,7 +933,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 82,
+    "consecutive": 83,
     "failing_since": "2026-10-16",
     "days": 37,
     "last_ok": null,
@@ -949,7 +943,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 82,
+    "consecutive": 83,
     "failing_since": "2026-10-16",
     "days": 37,
     "last_ok": null,
@@ -959,7 +953,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 82,
+    "consecutive": 83,
     "failing_since": "2026-10-16",
     "days": 37,
     "last_ok": null,
@@ -969,7 +963,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 30,
+    "consecutive": 31,
     "failing_since": "2026-11-09",
     "days": 13,
     "last_ok": null,
@@ -979,25 +973,15 @@
    {
     "source": "webcomics-coverage",
     "stage": "stage-0",
-    "consecutive": 4,
+    "consecutive": 5,
     "failing_since": "2026-11-20",
     "days": 2,
     "last_ok": "2026-11-20",
     "error": "UnboundLocalError: cannot access local variable 'carried' where it is not associated with a value",
     "issue": true
-   },
-   {
-    "source": "shopquery",
-    "stage": "stage-post",
-    "consecutive": 1,
-    "failing_since": "2026-11-22",
-    "days": 0,
-    "last_ok": "2026-11-21",
-    "error": "HEALTH: 1 of 1 works had every query answer nothing (over the 35% ceiling). This shop says 'no results' with a 404, so a run being refused looks exactly like a shop with no stock. Refusing to write.",
-    "issue": false
    }
   ],
-  "healthy": 169,
+  "healthy": 170,
   "threshold": 3
  },
  "connectors": [
@@ -1116,14 +1100,14 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1815,
-   "rows": 17980,
+   "works": 1817,
+   "rows": 17982,
    "retrieved": "2026-11-22",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17460,
-   "well_formed": 17460,
+   "checked_rows": 17462,
+   "well_formed": 17462,
    "malformed": 0,
    "drop": null
   },
@@ -1157,9 +1141,9 @@
   },
   {
    "source": "openbd",
-   "files": 881,
-   "works": 881,
-   "rows": 2307,
+   "files": 887,
+   "works": 887,
+   "rows": 2326,
    "retrieved": "2026-11-22",
    "age_days": 0,
    "in_scope": true,
@@ -1173,13 +1157,13 @@
    "source": "webpages",
    "files": 52,
    "works": 711,
-   "rows": 10543,
+   "rows": 10545,
    "retrieved": "2026-11-22",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10488,
-   "well_formed": 10487,
+   "checked_rows": 10490,
+   "well_formed": 10489,
    "malformed": 1,
    "drop": null
   }
@@ -1199,12 +1183,11 @@
   {
    "kind": "research",
    "key": "english_names",
-   "count": 3,
+   "count": 2,
    "what": "Name in English the works that carry only a romanisation",
    "rows": [
     "ギャルとオタクはわかりあえない。",
-    "是騒騒",
-    "百音と四季"
+    "是騒騒"
    ]
   },
   {
@@ -1222,7 +1205,7 @@
   {
    "kind": "debt",
    "key": "data_debts",
-   "count": 47,
+   "count": 46,
    "what": "Bring down counts that may only ratchet downward",
    "rows": {
     "citations withheld from readers": 36,
@@ -1255,7 +1238,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 18,
+    "credit fields an identifier does not cover": 16,
     "credit pages listing a work that does not name them": 13,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1266,8 +1249,8 @@
     "titles read by a machine, unmarked": 1246,
     "uncertain readings": 64,
     "data reaching the site around the store": 0,
-    "titles showing a romanisation nobody has ruled on": 1,
-    "works showing a romanisation": 29,
+    "titles showing a romanisation nobody has ruled on": 0,
+    "works showing a romanisation": 28,
     "works shown under an outranked spelling": 0,
     "titles carrying cataloguing punctuation": 0,
     "works offered twice in a list": 0,
@@ -1323,17 +1306,17 @@
    "unknown": 43
   },
   "english_basis": {
-   "translated": 2789,
+   "translated": 2790,
    "official-jp": 443,
    "licensed": 93,
-   "romaji": 28,
+   "romaji": 27,
    "none": 1
   },
   "print_works": 2653,
   "print_only": 1786,
   "volumes": 6629,
   "with_identifier": 3354,
-  "chapters": 31541,
+  "chapters": 31542,
   "delivery_dated": 1111
  }
 }
