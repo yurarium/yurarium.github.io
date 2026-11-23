@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-22T18:28:09+00:00",
+ "generated": "2026-11-23T08:19:23+00:00",
  "since_last": {
-  "at": "2026-11-22T14:54:20+00:00",
+  "at": "2026-11-22T18:28:09+00:00",
   "statistics": {
-   "chapters": 3
+   "chapters": 5
   }
  },
  "means": {
@@ -27,20 +27,20 @@
  },
  "last_run": {
   "at": "2026-11-23",
-  "releases": 1157,
+  "releases": 1158,
   "works": 2777,
   "platforms": 19,
   "series_rows": 3354,
   "assembled": 3359,
   "awaiting_identifier": 5,
   "identification": {
-   "discovery-candidate": 825,
+   "discovery-candidate": 826,
    "known-work-match": 40,
    "platform-genre": 292
   },
   "collapsed": {
-   "duplicate_chapters": 281,
-   "resolver": 147,
+   "duplicate_chapters": 279,
+   "resolver": 151,
    "samples": 0,
    "thin_sitemap": 12
   }
@@ -933,7 +933,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 84,
+    "consecutive": 85,
     "failing_since": "2026-10-16",
     "days": 38,
     "last_ok": null,
@@ -943,7 +943,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 84,
+    "consecutive": 85,
     "failing_since": "2026-10-16",
     "days": 38,
     "last_ok": null,
@@ -953,7 +953,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 84,
+    "consecutive": 85,
     "failing_since": "2026-10-16",
     "days": 38,
     "last_ok": null,
@@ -963,7 +963,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 32,
+    "consecutive": 33,
     "failing_since": "2026-11-09",
     "days": 14,
     "last_ok": null,
@@ -973,7 +973,7 @@
    {
     "source": "webcomics-coverage",
     "stage": "stage-0",
-    "consecutive": 6,
+    "consecutive": 7,
     "failing_since": "2026-11-20",
     "days": 3,
     "last_ok": "2026-11-20",
@@ -1100,8 +1100,8 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1817,
-   "rows": 17982,
+   "works": 1818,
+   "rows": 17983,
    "retrieved": "2026-11-23",
    "age_days": 0,
    "in_scope": true,
@@ -1129,14 +1129,14 @@
    "source": "nicovideo",
    "files": 3,
    "works": 1347,
-   "rows": 11667,
+   "rows": 11680,
    "retrieved": "2026-11-23",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10818,
+   "checked_rows": 10831,
    "well_formed": 0,
-   "malformed": 10818,
+   "malformed": 10831,
    "drop": null
   },
   {
@@ -1156,14 +1156,14 @@
   {
    "source": "webpages",
    "files": 52,
-   "works": 711,
-   "rows": 10547,
+   "works": 712,
+   "rows": 10557,
    "retrieved": "2026-11-23",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10492,
-   "well_formed": 10491,
+   "checked_rows": 10502,
+   "well_formed": 10501,
    "malformed": 1,
    "drop": null
   }
@@ -1316,7 +1316,7 @@
   "print_only": 1786,
   "volumes": 6629,
   "with_identifier": 3354,
-  "chapters": 31545,
+  "chapters": 31550,
   "delivery_dated": 1111
  }
 }
