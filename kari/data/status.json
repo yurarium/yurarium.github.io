@@ -1,8 +1,10 @@
 {
- "generated": "2026-11-23T18:45:17+00:00",
+ "generated": "2026-11-23T19:42:55+00:00",
  "since_last": {
-  "at": "2026-11-23T08:19:23+00:00",
-  "statistics": {}
+  "at": "2026-11-23T18:45:17+00:00",
+  "statistics": {
+   "chapters": 8
+  }
  },
  "means": {
   "duplicate_chapters": "Merged chapters that two sources described separately",
@@ -24,20 +26,20 @@
   "delivery_dated": "works dated by the day a shop began delivering the file"
  },
  "last_run": {
-  "at": "2026-11-23",
-  "releases": 1158,
+  "at": "2026-11-24",
+  "releases": 1148,
   "works": 2777,
   "platforms": 19,
   "series_rows": 3354,
   "assembled": 3359,
   "awaiting_identifier": 5,
   "identification": {
-   "discovery-candidate": 826,
+   "discovery-candidate": 825,
    "known-work-match": 40,
-   "platform-genre": 292
+   "platform-genre": 283
   },
   "collapsed": {
-   "duplicate_chapters": 279,
+   "duplicate_chapters": 282,
    "resolver": 151,
    "samples": 0,
    "thin_sitemap": 12
@@ -396,7 +398,7 @@
     "name": "attributed names their cited page does not show",
     "means": "licensed and official-jp names whose cited page answered without carrying the name. Some are pages assembled by script, which serve no title; the rest are names the page does not state. Falls as entries are corrected or pages confirmed by hand.",
     "budget": 0,
-    "value": 1,
+    "value": 0,
     "measure": "regression"
    },
    {
@@ -556,8 +558,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 16,
-    "value": 16,
+    "budget": 15,
+    "value": 15,
     "measure": "arrival"
    },
    {
@@ -931,9 +933,9 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 85,
+    "consecutive": 86,
     "failing_since": "2026-10-16",
-    "days": 38,
+    "days": 39,
     "last_ok": null,
     "error": "net.Refused: www.cmoa.jp refused https://www.cmoa.jp/search/result/?genre_id=0000037&sort=14&page=1: HTTP 503 after 5 attempt(s)",
     "issue": true
@@ -941,9 +943,9 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 85,
+    "consecutive": 86,
     "failing_since": "2026-10-16",
-    "days": 38,
+    "days": 39,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-yuri.yaml dated 2026-08-04",
     "issue": true
@@ -951,9 +953,9 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 85,
+    "consecutive": 86,
     "failing_since": "2026-10-16",
-    "days": 38,
+    "days": 39,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/queue/cmoa-volumes.yaml dated 2026-08-05",
     "issue": true
@@ -961,9 +963,9 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 33,
+    "consecutive": 34,
     "failing_since": "2026-11-09",
-    "days": 14,
+    "days": 15,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
     "issue": true
@@ -971,15 +973,25 @@
    {
     "source": "webcomics-coverage",
     "stage": "stage-0",
-    "consecutive": 7,
+    "consecutive": 8,
     "failing_since": "2026-11-20",
-    "days": 3,
+    "days": 4,
     "last_ok": "2026-11-20",
     "error": "UnboundLocalError: cannot access local variable 'carried' where it is not associated with a value",
     "issue": true
+   },
+   {
+    "source": "stale:stage-0:webcomics-coverage",
+    "stage": "freshness",
+    "consecutive": 1,
+    "failing_since": "2026-11-24",
+    "days": 0,
+    "last_ok": "2026-11-23",
+    "error": "1 file(s) past their age, e.g. data/coverage/webcomics-works.yaml dated 2026-11-20",
+    "issue": false
    }
   ],
-  "healthy": 170,
+  "healthy": 169,
   "threshold": 3
  },
  "connectors": [
@@ -989,7 +1001,7 @@
    "works": 246,
    "rows": 246,
    "retrieved": "2026-08-02",
-   "age_days": 113,
+   "age_days": 114,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1003,7 +1015,7 @@
    "works": 364,
    "rows": 777,
    "retrieved": "2026-08-08",
-   "age_days": 107,
+   "age_days": 108,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1017,7 +1029,7 @@
    "works": 1801,
    "rows": 4305,
    "retrieved": "2026-11-19",
-   "age_days": 4,
+   "age_days": 5,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1031,7 +1043,7 @@
    "works": 4,
    "rows": 4,
    "retrieved": "2026-11-21",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1045,7 +1057,7 @@
    "works": 989,
    "rows": 2605,
    "retrieved": "2026-11-21",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1059,7 +1071,7 @@
    "works": 69,
    "rows": 69,
    "retrieved": "2026-11-21",
-   "age_days": 2,
+   "age_days": 3,
    "in_scope": true,
    "empty": false,
    "checked_rows": 0,
@@ -1071,13 +1083,13 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6358,
-   "retrieved": "2026-11-23",
+   "rows": 6362,
+   "retrieved": "2026-11-24",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6311,
-   "well_formed": 6311,
+   "checked_rows": 6315,
+   "well_formed": 6315,
    "malformed": 0,
    "drop": null
   },
@@ -1086,7 +1098,7 @@
    "files": 6,
    "works": 9,
    "rows": 9,
-   "retrieved": "2026-11-23",
+   "retrieved": "2026-11-24",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1098,14 +1110,14 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1818,
-   "rows": 17983,
-   "retrieved": "2026-11-23",
+   "works": 1819,
+   "rows": 17988,
+   "retrieved": "2026-11-24",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17462,
-   "well_formed": 17462,
+   "checked_rows": 17466,
+   "well_formed": 17466,
    "malformed": 0,
    "drop": null
   },
@@ -1113,13 +1125,13 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1034,
-   "rows": 7927,
-   "retrieved": "2026-11-23",
+   "rows": 7929,
+   "retrieved": "2026-11-24",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7222,
-   "well_formed": 6896,
+   "checked_rows": 7224,
+   "well_formed": 6898,
    "malformed": 326,
    "drop": null
   },
@@ -1128,7 +1140,7 @@
    "files": 3,
    "works": 1347,
    "rows": 11680,
-   "retrieved": "2026-11-23",
+   "retrieved": "2026-11-24",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1142,7 +1154,7 @@
    "files": 887,
    "works": 887,
    "rows": 2326,
-   "retrieved": "2026-11-23",
+   "retrieved": "2026-11-24",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
@@ -1155,14 +1167,14 @@
    "source": "webpages",
    "files": 52,
    "works": 712,
-   "rows": 10557,
-   "retrieved": "2026-11-23",
+   "rows": 10559,
+   "retrieved": "2026-11-24",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10502,
-   "well_formed": 10501,
-   "malformed": 1,
+   "checked_rows": 10504,
+   "well_formed": 10504,
+   "malformed": 0,
    "drop": null
   }
  ],
@@ -1236,7 +1248,7 @@
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 16,
+    "credit fields an identifier does not cover": 15,
     "credit pages listing a work that does not name them": 13,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1297,10 +1309,10 @@
   "states": {
    "print": 1786,
    "oneshot": 524,
-   "completed": 505,
-   "active": 289,
+   "completed": 506,
+   "active": 285,
    "dormant": 148,
-   "slow": 59,
+   "slow": 62,
    "unknown": 43
   },
   "english_basis": {
@@ -1314,7 +1326,7 @@
   "print_only": 1786,
   "volumes": 6629,
   "with_identifier": 3354,
-  "chapters": 31550,
+  "chapters": 31558,
   "delivery_dated": 1111
  }
 }
