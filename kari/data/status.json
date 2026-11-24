@@ -1,9 +1,11 @@
 {
- "generated": "2026-11-23T19:42:55+00:00",
+ "generated": "2026-11-24T04:28:11+00:00",
  "since_last": {
-  "at": "2026-11-23T18:45:17+00:00",
+  "at": "2026-11-23T19:42:55+00:00",
   "statistics": {
-   "chapters": 8
+   "works": 1,
+   "with_identifier": 1,
+   "chapters": 3
   }
  },
  "means": {
@@ -27,20 +29,20 @@
  },
  "last_run": {
   "at": "2026-11-24",
-  "releases": 1148,
+  "releases": 1152,
   "works": 2777,
   "platforms": 19,
-  "series_rows": 3354,
-  "assembled": 3359,
+  "series_rows": 3355,
+  "assembled": 3360,
   "awaiting_identifier": 5,
   "identification": {
-   "discovery-candidate": 825,
+   "discovery-candidate": 829,
    "known-work-match": 40,
    "platform-genre": 283
   },
   "collapsed": {
-   "duplicate_chapters": 282,
-   "resolver": 151,
+   "duplicate_chapters": 280,
+   "resolver": 154,
    "samples": 0,
    "thin_sitemap": 12
   }
@@ -516,8 +518,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 554,
-    "value": 554,
+    "budget": 555,
+    "value": 555,
     "measure": "arrival"
    },
    {
@@ -558,8 +560,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 15,
-    "value": 15,
+    "budget": 17,
+    "value": 17,
     "measure": "arrival"
    },
    {
@@ -614,8 +616,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1246,
-    "value": 1246,
+    "budget": 1247,
+    "value": 1247,
     "measure": "arrival"
    },
    {
@@ -933,7 +935,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 86,
+    "consecutive": 87,
     "failing_since": "2026-10-16",
     "days": 39,
     "last_ok": null,
@@ -943,7 +945,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 86,
+    "consecutive": 87,
     "failing_since": "2026-10-16",
     "days": 39,
     "last_ok": null,
@@ -953,7 +955,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 86,
+    "consecutive": 87,
     "failing_since": "2026-10-16",
     "days": 39,
     "last_ok": null,
@@ -963,7 +965,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 34,
+    "consecutive": 35,
     "failing_since": "2026-11-09",
     "days": 15,
     "last_ok": null,
@@ -973,7 +975,7 @@
    {
     "source": "webcomics-coverage",
     "stage": "stage-0",
-    "consecutive": 8,
+    "consecutive": 9,
     "failing_since": "2026-11-20",
     "days": 4,
     "last_ok": "2026-11-20",
@@ -983,7 +985,7 @@
    {
     "source": "stale:stage-0:webcomics-coverage",
     "stage": "freshness",
-    "consecutive": 1,
+    "consecutive": 2,
     "failing_since": "2026-11-24",
     "days": 0,
     "last_ok": "2026-11-23",
@@ -1110,8 +1112,8 @@
   {
    "source": "gigaviewer",
    "files": 86,
-   "works": 1819,
-   "rows": 17988,
+   "works": 1820,
+   "rows": 17989,
    "retrieved": "2026-11-24",
    "age_days": 0,
    "in_scope": true,
@@ -1124,14 +1126,14 @@
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 1034,
-   "rows": 7929,
+   "works": 1035,
+   "rows": 7931,
    "retrieved": "2026-11-24",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7224,
-   "well_formed": 6898,
+   "checked_rows": 7226,
+   "well_formed": 6900,
    "malformed": 326,
    "drop": null
   },
@@ -1166,14 +1168,14 @@
   {
    "source": "webpages",
    "files": 52,
-   "works": 712,
-   "rows": 10559,
+   "works": 713,
+   "rows": 10567,
    "retrieved": "2026-11-24",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10504,
-   "well_formed": 10504,
+   "checked_rows": 10512,
+   "well_formed": 10512,
    "malformed": 0,
    "drop": null
   }
@@ -1242,13 +1244,13 @@
     "renderings with nothing to show": 0,
     "kana names with no stated division": 255,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 554,
+    "author readings no source states": 555,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 15,
+    "credit fields an identifier does not cover": 17,
     "credit pages listing a work that does not name them": 13,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1256,7 +1258,7 @@
     "ruby asserting a reading per character": 215,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 183,
-    "titles read by a machine, unmarked": 1246,
+    "titles read by a machine, unmarked": 1247,
     "uncertain readings": 64,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1305,18 +1307,18 @@
   }
  ],
  "statistics": {
-  "works": 3354,
+  "works": 3355,
   "states": {
    "print": 1786,
    "oneshot": 524,
    "completed": 506,
-   "active": 285,
+   "active": 286,
    "dormant": 148,
    "slow": 62,
    "unknown": 43
   },
   "english_basis": {
-   "translated": 2790,
+   "translated": 2791,
    "official-jp": 443,
    "licensed": 93,
    "romaji": 27,
@@ -1325,8 +1327,8 @@
   "print_works": 2653,
   "print_only": 1786,
   "volumes": 6629,
-  "with_identifier": 3354,
-  "chapters": 31558,
+  "with_identifier": 3355,
+  "chapters": 31561,
   "delivery_dated": 1111
  }
 }

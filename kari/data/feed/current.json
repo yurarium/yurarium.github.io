@@ -1,6 +1,72 @@
 {
  "releases": [
   {
+   "id": "kuragebunch:episode:12207421984447442950",
+   "work": "ファーストペンギン・レクイエム",
+   "ep": "間話② ヤバガキとチビガキ",
+   "type": "unclassified",
+   "adv": false,
+   "web": "serialised",
+   "pub": "2026-11-24",
+   "seen": "2026-11-24",
+   "basis": "observed",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://kuragebunch.com/episode/12207421984447442950",
+   "author": "タダノなつ",
+   "plat": "kuragebunch",
+   "plat_name": "くらげバンチ",
+   "ident": "discovery-candidate",
+   "free_from": "2026-11-24T03:00:00Z",
+   "access_modes": [
+    "free"
+   ],
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "work has an earlier release here",
+   "kind_inferred": true,
+   "preferred": "くらげバンチ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-24",
+   "wid": "w00073",
+   "work_en": {
+    "reading": "ファーストペンギン・レクイエム",
+    "romaji": {
+     "macron": "Fāsutopengin Rekuiemu",
+     "double": "Faasutopengin Rekuiemu",
+     "plain": "Fasutopengin Rekuiemu"
+    },
+    "translation_refused": "Our rendering was First Penguin Requiem, which is the publisher's name in different letters, spacing or punctuation rather than a second form. The first penguin is the one that jumps in before anyone knows what is down there, a Japanese business idiom that English is beginning to share.",
+    "en": "First Penguin Requiem",
+    "basis": "official-jp",
+    "en_forms": {
+     "official-jp": "First Penguin Requiem"
+    },
+    "reading_basis": "surface",
+    "en_cite": {
+     "source": "series-art",
+     "url": "https://cdn-img.kuragebunch.com/public/series-thumbnail/12207421983893646743-dc8b9fa3f1adf31d32e131f392b773a2?1782738168",
+     "kind": "platform",
+     "reviewed": "2026-11-11"
+    }
+   },
+   "author_en": {
+    "reading": "タダノナツ",
+    "romaji": {
+     "macron": "Tadanonatsu",
+     "double": "Tadanonatsu",
+     "plain": "Tadanonatsu"
+    },
+    "undivided": true,
+    "basis": "romaji",
+    "reading_basis": "surface",
+    "id": "c00145"
+   }
+  },
+  {
    "id": "sunday_webry:episode:12207421984549118480",
    "work": "#ギャルとギャルの百合",
    "ep": "#31 #足したかったのよ",
@@ -222,6 +288,162 @@
    }
   },
   {
+   "id": "kadokomi:KC_0216570000300011_E",
+   "work": "夜にひまわり～お姉ちゃんとヤンキーちゃん～",
+   "ep": "第２話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-24",
+   "seen": "2026-11-24",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_021657_S/episodes/KC_0216570000300011_E",
+   "series_url": "https://comic-walker.com/detail/KC_021657_S",
+   "author": "佐崎いま＋高瀬ろく",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 2",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-24",
+   "wid": "w03563",
+   "work_en": {
+    "reading": "ヨル ニ ヒマワリ ～ オネエチャン ト ヤンキーチャン ～",
+    "ruby": [
+     [
+      "夜",
+      "よる"
+     ],
+     [
+      "にひまわり～お",
+      null
+     ],
+     [
+      "姉",
+      "ねえ"
+     ],
+     [
+      "ちゃんとヤンキーちゃん～",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Yoru ni Himawari ~ Onēchan to Yankīchan ~",
+     "double": "Yoru ni Himawari ~ Oneechan to Yankiichan ~",
+     "plain": "Yoru ni Himawari ~ Onechan to Yankichan ~"
+    },
+    "en": "Sunflower in the Night: Big Sister and the Delinquent Girl",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Sunflower in the Night: Big Sister and the Delinquent Girl"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ササキイマ＋タカセ ロク",
+    "romaji": {
+     "macron": "Sasakiima+Takase Roku",
+     "double": "Sasakiima+Takase Roku",
+     "plain": "Sasakiima+Takase Roku"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true
+   }
+  },
+  {
+   "id": "kadokomi:KC_0216570000200011_E",
+   "work": "夜にひまわり～お姉ちゃんとヤンキーちゃん～",
+   "ep": "第１話",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-24",
+   "seen": "2026-11-24",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-walker.com/detail/KC_021657_S/episodes/KC_0216570000200011_E",
+   "series_url": "https://comic-walker.com/detail/KC_021657_S",
+   "author": "佐崎いま＋高瀬ろく",
+   "plat": "kadokomi",
+   "plat_name": "カドコミ",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "access_modes": [
+    "free"
+   ],
+   "access_basis": "project owner, 2026-08-01: カドコミ chapters are free to read",
+   "provenance": "attested",
+   "free": true,
+   "kind": "new-series",
+   "kind_basis": "episode numbered 1",
+   "kind_inferred": true,
+   "preferred": "カドコミ",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-24",
+   "wid": "w03563",
+   "work_en": {
+    "reading": "ヨル ニ ヒマワリ ～ オネエチャン ト ヤンキーチャン ～",
+    "ruby": [
+     [
+      "夜",
+      "よる"
+     ],
+     [
+      "にひまわり～お",
+      null
+     ],
+     [
+      "姉",
+      "ねえ"
+     ],
+     [
+      "ちゃんとヤンキーちゃん～",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Yoru ni Himawari ~ Onēchan to Yankīchan ~",
+     "double": "Yoru ni Himawari ~ Oneechan to Yankiichan ~",
+     "plain": "Yoru ni Himawari ~ Onechan to Yankichan ~"
+    },
+    "en": "Sunflower in the Night: Big Sister and the Delinquent Girl",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "Sunflower in the Night: Big Sister and the Delinquent Girl"
+    },
+    "reading_basis": "analyser"
+   },
+   "author_en": {
+    "reading": "ササキイマ＋タカセ ロク",
+    "romaji": {
+     "macron": "Sasakiima+Takase Roku",
+     "double": "Sasakiima+Takase Roku",
+     "plain": "Sasakiima+Takase Roku"
+    },
+    "basis": "romaji",
+    "reading_basis": "analyser",
+    "unverified": true
+   }
+  },
+  {
    "id": "championcross:https://championcross.jp/series/ae4257e66bab5:#74",
    "work": "上伊那ぼたん、酔へる姿は百合の花",
    "ep": "#74",
@@ -331,6 +553,206 @@
      "reviewed": "2026-08-04"
     },
     "id": "c00118"
+   }
+  },
+  {
+   "id": "comic-gardo:https://comic-gardo.com/episode/2550912966011803878:第14話「フィアナ、新たな勝負に挑む！～課外演習編～」(2)",
+   "work": "病弱少女、転生して健康な肉体（最強）を手に入れる　～友達が欲しくて魔境から旅立ったのですが、どうやら私の魔法は少しおかしいようです！？～",
+   "ep": "第14話「フィアナ、新たな勝負に挑む！～課外演習編～」(2)",
+   "type": "chapter",
+   "adv": true,
+   "web": "serialised",
+   "pub": "2026-11-24",
+   "seen": "2026-11-24",
+   "basis": "bootstrap",
+   "conf": "reported",
+   "why": "",
+   "moved": "",
+   "url": "https://comic-gardo.com/episode/2550912966011803878",
+   "author": "あらた伊里/アトハ/狐印",
+   "plat": "remaining",
+   "plat_name": "コミックガルド",
+   "ident": "discovery-candidate",
+   "free_from": null,
+   "discovered_on": null,
+   "late_discovered": false,
+   "access_modes": [
+    "purchase"
+   ],
+   "provenance": "attested",
+   "free": false,
+   "kind": "new-chapter",
+   "kind_basis": "episode numbered 14",
+   "kind_inferred": true,
+   "preferred": "コミックガルド",
+   "also_on": [],
+   "is_preferred": true,
+   "feed_date": "2026-11-24",
+   "wid": "w00059",
+   "work_en": {
+    "reading": "ビョウジャク ショウジョ、 テンセイ シテ ケンコウナ ニクタイ （サイキョウ） ヲ テ ニ イレル 　 ～ トモダチ ガ ホシクテ マキョウ カラ タビダッタ ノデスガ、 ドウ ヤラ ワタシ ノ マホウ ワ スコシ オカシイ ヨウデス！？ ～",
+    "ruby": [
+     [
+      "病弱少女",
+      "びょうじゃくしょうじょ"
+     ],
+     [
+      "、",
+      null
+     ],
+     [
+      "転生",
+      "てんせい"
+     ],
+     [
+      "して",
+      null
+     ],
+     [
+      "健康",
+      "けんこう"
+     ],
+     [
+      "な",
+      null
+     ],
+     [
+      "肉体",
+      "にくたい"
+     ],
+     [
+      "（",
+      null
+     ],
+     [
+      "最強",
+      "さいきょう"
+     ],
+     [
+      "）を",
+      null
+     ],
+     [
+      "手",
+      "て"
+     ],
+     [
+      "に",
+      null
+     ],
+     [
+      "入",
+      "い"
+     ],
+     [
+      "れる　～",
+      null
+     ],
+     [
+      "友達",
+      "ともだち"
+     ],
+     [
+      "が",
+      null
+     ],
+     [
+      "欲",
+      "ほ"
+     ],
+     [
+      "しくて",
+      null
+     ],
+     [
+      "魔境",
+      "まきょう"
+     ],
+     [
+      "から",
+      null
+     ],
+     [
+      "旅立",
+      "たびだ"
+     ],
+     [
+      "ったのですが、どうやら",
+      null
+     ],
+     [
+      "私",
+      "わたし"
+     ],
+     [
+      "の",
+      null
+     ],
+     [
+      "魔法",
+      "まほう"
+     ],
+     [
+      "は",
+      null
+     ],
+     [
+      "少",
+      "すこ"
+     ],
+     [
+      "しおかしいようです！？～",
+      null
+     ]
+    ],
+    "romaji": {
+     "macron": "Byōjaku Shōjo, Tensei Shite Kenkōna Nikutai (Saikyō) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyō kara Tabidatta Nodesuga, Dō Yara Watashi no Mahō wa Sukoshi Okashii Yōdesu!? ~",
+     "double": "Byoujaku Shoujo, Tensei Shite Kenkouna Nikutai (Saikyou) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyou kara Tabidatta Nodesuga, Dou Yara Watashi no Mahou wa Sukoshi Okashii Youdesu!? ~",
+     "plain": "Byojaku Shojo, Tensei Shite Kenkona Nikutai (Saikyo) o Te ni Ireru ~ Tomodachi ga Hoshikute Makyo kara Tabidatta Nodesuga, Do Yara Watashi no Maho wa Sukoshi Okashii Yodesu!? ~"
+    },
+    "en": "A Sickly Girl Reincarnates and Gets a Healthy (Overpowered) Body ~I Left the Demon Wilds Because I Wanted Friends, but It Seems My Magic Is a Little Strange!?~",
+    "basis": "translated",
+    "en_forms": {
+     "translated": "A Sickly Girl Reincarnates and Gets a Healthy (Overpowered) Body ~I Left the Demon Wilds Because I Wanted Friends, but It Seems My Magic Is a Little Strange!?~"
+    },
+    "reading_basis": "researched"
+   },
+   "author_en": {
+    "reading": "アラタ イリ / アトハ / コイン",
+    "ruby": [
+     [
+      "あらた",
+      null
+     ],
+     [
+      "伊里",
+      "いり"
+     ],
+     [
+      "/",
+      null
+     ],
+     [
+      "アトハ",
+      null
+     ],
+     [
+      "/",
+      null
+     ],
+     [
+      "狐印",
+      "こいん"
+     ]
+    ],
+    "romaji": {
+     "macron": "Arata Iri / Atoha / Koin",
+     "double": "Arata Iri / Atoha / Koin",
+     "plain": "Arata Iri / Atoha / Koin"
+    },
+    "reading_basis": "community-printed",
+    "basis": "romaji",
+    "unverified": true
    }
   },
   {
@@ -634,8 +1056,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
@@ -1304,8 +1726,8 @@
    "access_modes": [
     "free-timed"
    ],
-   "became_free": true,
-   "access_changed": "purchase -> free-timed",
+   "became_free": false,
+   "access_changed": null,
    "date_means": "free-from",
    "provenance": "attested",
    "free": true,
