@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25",
+ "generated": "2026-11-26",
  "note": "English renderings and readings, keyed by NFKC-folded title/author. Joined onto feed rows at render time so archived months — which are never rewritten — still show current names.",
  "titles": {
   "#うちらが最強~陰キャ除霊師とギャルJK~": {
@@ -6368,6 +6368,42 @@
    "reading_basis": "analyser",
    "unverified": true,
    "alias_of": "君めく夜に焦がれて"
+  },
+  "♡劇薬お姉さん♡": {
+   "reading": "♡ ゲキヤク オネエサン ♡",
+   "ruby": [
+    [
+     "♡",
+     null
+    ],
+    [
+     "劇薬",
+     "げきやく"
+    ],
+    [
+     "お",
+     null
+    ],
+    [
+     "姉",
+     "ねえ"
+    ],
+    [
+     "さん♡",
+     null
+    ]
+   ],
+   "romaji": {
+    "macron": "♡ Gekiyaku Onēsan ♡",
+    "double": "♡ Gekiyaku Oneesan ♡",
+    "plain": "♡ Gekiyaku Onesan ♡"
+   },
+   "en": "Dangerous Medicine Onee-san",
+   "basis": "translated",
+   "en_forms": {
+    "translated": "Dangerous Medicine Onee-san"
+   },
+   "reading_basis": "analyser"
   },
   "〆切前には百合が捗る": {
    "reading": "シメキリ マエ ニ ワ ユリ ガ ハカドル",
@@ -117434,38 +117470,6 @@
    "reading_basis": "analyser",
    "unverified": true
   },
-  "♡劇薬お姉さん♡": {
-   "reading": "♡ ゲキヤク オネエサン ♡",
-   "ruby": [
-    [
-     "♡",
-     null
-    ],
-    [
-     "劇薬",
-     "げきやく"
-    ],
-    [
-     "お",
-     null
-    ],
-    [
-     "姉",
-     "ねえ"
-    ],
-    [
-     "さん♡",
-     null
-    ]
-   ],
-   "romaji": {
-    "macron": "♡ Gekiyaku Onēsan ♡",
-    "double": "♡ Gekiyaku Oneesan ♡",
-    "plain": "♡ Gekiyaku Onesan ♡"
-   },
-   "basis": "romaji",
-   "reading_basis": "analyser"
-  },
   "Idol×idolstory!": {
    "en": "IDOLxIDOL Story!",
    "basis": "official-jp",
@@ -162333,6 +162337,17 @@
    "en": "rioka",
    "basis": "stated",
    "id": "c01871"
+  },
+  "間瀬もえ": {
+   "reading": "マセ モエ",
+   "romaji": {
+    "macron": "Mase Moe",
+    "double": "Mase Moe",
+    "plain": "Mase Moe"
+   },
+   "basis": "romaji",
+   "reading_basis": "analyser",
+   "unverified": true
   }
  },
  "publishers": {
@@ -165087,6 +165102,14 @@
   }
  },
  "imprints": {
+  "ガンガンコミックスonline": {
+   "id": "gangan-comics-online",
+   "name": "ガンガンコミックスonline",
+   "parent": "ガンガンコミックス",
+   "publishers": [
+    "スクウェア・エニックス"
+   ]
+  },
   "講談社コミックス. 週刊少年マガジン": {
    "id": "kodansha-comics-shonen-magazine",
    "name": "講談社コミックス. 週刊少年マガジン",
@@ -165123,6 +165146,13 @@
    "parent": "HCヒーローズコミックス",
    "publishers": [
     "ヒーローズ"
+   ]
+  },
+  "ヤングジャンプコミックス": {
+   "id": "young-jump-comics",
+   "name": "ヤングジャンプコミックス",
+   "publishers": [
+    "集英社"
    ]
   },
   "KC Kiss": {
@@ -165688,13 +165718,6 @@
     "一迅社"
    ]
   },
-  "ヤングジャンプコミックス": {
-   "id": "young-jump-comics",
-   "name": "ヤングジャンプコミックス",
-   "publishers": [
-    "集英社"
-   ]
-  },
   "SHŌNEN CHAMPION COMICS": {
    "id": "shonen-champion-comics",
    "name": "少年チャンピオン・コミックス",
@@ -165762,14 +165785,6 @@
    "parent": "Bunkasha comics",
    "publishers": [
     "ぶんか社"
-   ]
-  },
-  "ガンガンコミックスonline": {
-   "id": "gangan-comics-online",
-   "name": "ガンガンコミックスonline",
-   "parent": "ガンガンコミックス",
-   "publishers": [
-    "スクウェア・エニックス"
    ]
   },
   "ヒーローズコミックス ふらっと": {
@@ -168057,6 +168072,31 @@
   }
  },
  "credit_parts": {
+  "森田季節/シバユウスケ/紅緒": {
+   "j": " / ",
+   "p": [
+    {
+     "n": "森田季節",
+     "r": "原作"
+    },
+    {
+     "n": "シバユウスケ",
+     "r": "漫画"
+    },
+    {
+     "n": "紅緒",
+     "r": "キャラクター原案"
+    }
+   ]
+  },
+  "閉伊川広輔": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "閉伊川広輔"
+    }
+   ]
+  },
   "大鷹シン/ホマレ": {
    "j": " / ",
    "p": [
@@ -168083,6 +168123,17 @@
    "p": [
     {
      "n": "柴田康平"
+    }
+   ]
+  },
+  "遠野めざ/彩乃浦助": {
+   "j": " / ",
+   "p": [
+    {
+     "n": "遠野めざ"
+    },
+    {
+     "n": "彩乃浦助"
     }
    ]
   },
@@ -168908,14 +168959,6 @@
     }
    ]
   },
-  "閉伊川広輔": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "閉伊川広輔"
-    }
-   ]
-  },
   "おにぎりパクパク": {
    "j": ", ",
    "p": [
@@ -169046,17 +169089,6 @@
     },
     {
      "n": "川田暁生"
-    }
-   ]
-  },
-  "遠野めざ/彩乃浦助": {
-   "j": " / ",
-   "p": [
-    {
-     "n": "遠野めざ"
-    },
-    {
-     "n": "彩乃浦助"
     }
    ]
   },
@@ -169665,23 +169697,6 @@
    "p": [
     {
      "n": "トヨダガク"
-    }
-   ]
-  },
-  "森田季節/シバユウスケ/紅緒": {
-   "j": " / ",
-   "p": [
-    {
-     "n": "森田季節",
-     "r": "原作"
-    },
-    {
-     "n": "シバユウスケ",
-     "r": "漫画"
-    },
-    {
-     "n": "紅緒",
-     "r": "キャラクター原案"
     }
    ]
   },
@@ -201863,6 +201878,14 @@
      "n": "ｒｉｏｋａ"
     }
    ]
+  },
+  "間瀬もえ": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "間瀬もえ"
+    }
+   ]
   }
  },
  "floor": {
@@ -203556,11 +203579,6 @@
    "double": "Memory6 Hikikomori Neko To Ojousama (2)",
    "plain": "Memory6 Hikikomori Neko To Ojosama (2)"
   },
-  "Memory6(後編)": {
-   "macron": "Memory6(Kōhen)",
-   "double": "Memory6(Kouhen)",
-   "plain": "Memory6(Kohen)"
-  },
   "Memory7ガチ映えの日(1)": "Memory7 Gachi Hae No Hi (1)",
   "Memory7ガチ映えの日(2)": "Memory7 Gachi Hae No Hi (2)",
   "Memory7(前編)": "Memory7(Zenpen)",
@@ -204197,6 +204215,11 @@
    "macron": "[Tēma Yomikiri:○○Na Onna] Saiteina Kimi Ga Suki",
    "double": "[Teema Yomikiri:○○Na Onna] Saiteina Kimi Ga Suki",
    "plain": "[Tema Yomikiri:○○Na Onna] Saiteina Kimi Ga Suki"
+  },
+  "[テーマ読切:おねえさん]♡劇薬お姉さん♡": {
+   "macron": "[Tēma Yomikiri:Onēsan] ♡Gekiyaku Onēsan♡",
+   "double": "[Teema Yomikiri:Oneesan] ♡Gekiyaku Oneesan♡",
+   "plain": "[Tema Yomikiri:Onesan] ♡Gekiyaku Onesan♡"
   },
   "[テーマ読切:お仕事]くゆらす女々": {
    "macron": "[Tēma Yomikiri:O Shigoto] Kuyurasu Onna Onna",
@@ -205405,6 +205428,11 @@
    "plain": "○Yama Kohei"
   },
   "●合本版●君めく夜に焦がれて": "●Gappon Ban●Kimimeku Yoru Ni Kogarete",
+  "♡劇薬お姉さん♡": {
+   "macron": "♡Gekiyaku Onēsan♡",
+   "double": "♡Gekiyaku Oneesan♡",
+   "plain": "♡Gekiyaku Onesan♡"
+  },
   "♥26「信じていいのは多分、料理研究家とふわふわの犬だけ」": {
    "macron": "♥26 “Shinjite Ii No Wa Tabun,Ryōri Kenkyūka To Fuwafuwa No Inu Dake”",
    "double": "♥26 “Shinjite Ii No Wa Tabun,Ryouri Kenkyuuka To Fuwafuwa No Inu Dake”",
@@ -206287,6 +206315,7 @@
    "double": "[Dai8Hanashi]Tsuzuku · Yuureisan To Deeto",
    "plain": "[Dai8Hanashi]Tsuzuku · Yureisan To Deto"
   },
+  "【第9話】エロい目で": "[Dai9Hanashi]Eroi Mede",
   "【第9話】ギャルとバイト": "[Dai9Hanashi]Gyarutobaito",
   "【試し読み】絶交": {
    "macron": "[Tameshiyomi]Zekkō",
@@ -223838,7 +223867,6 @@
   },
   "第100話": "Dai100Hanashi",
   "第101話": "Dai101Hanashi",
-  "第104話": "Dai104Hanashi",
   "第105話": "Dai105Hanashi",
   "第106話": "Dai106Hanashi",
   "第10巻": "Dai10Maki",
@@ -224277,7 +224305,6 @@
    "plain": "Dai24Hanashi Kanjo Meiro"
   },
   "第24話-1": "Dai24Hanashi-1",
-  "第25.5話秋だ!夏の日焼けあとだ!": "Dai25.5Hanashi Akida! Natsu No Hiyake Atoda!",
   "第25話アイすべきこの世界": "Dai25Hanashi Ai Subeki Kono Sekai",
   "第26話": "Dai26Hanashi",
   "第26話牙を取り戻せ!ローゼマリー!": {
@@ -224722,16 +224749,16 @@
   },
   "第97話": "Dai97Hanashi",
   "第98話": "Dai98Hanashi",
-  "第98話-4魔法少女が出た": {
-   "macron": "Dai98Hanashi-4 Mahō Shōjo Ga Deta",
-   "double": "Dai98Hanashi-4 Mahou Shoujo Ga Deta",
-   "plain": "Dai98Hanashi-4 Maho Shojo Ga Deta"
-  },
   "第99話": "Dai99Hanashi",
   "第99話-1誕生日を決めた": {
    "macron": "Dai99Hanashi-1 Tanjōbi O Kimeta",
    "double": "Dai99Hanashi-1 Tanjoubi O Kimeta",
    "plain": "Dai99Hanashi-1 Tanjobi O Kimeta"
+  },
+  "第99話-2誕生日を決めた": {
+   "macron": "Dai99Hanashi-2 Tanjōbi O Kimeta",
+   "double": "Dai99Hanashi-2 Tanjoubi O Kimeta",
+   "plain": "Dai99Hanashi-2 Tanjobi O Kimeta"
   },
   "第9話": "Dai9Hanashi",
   "第9話かっこよすぎてどうしよう": {
@@ -224924,6 +224951,7 @@
    "plain": "Dai25Hanashi Chokoretopanikku2"
   },
   "第26話特別なイベント": "Dai26Hanashi Tokubetsuna Ibento",
+  "第27話特別なイベント2": "Dai27Hanashi Tokubetsuna Ibento2",
   "第3話-3": "Dai3Hanashi-3",
   "第3話ライバルとーじょー!?小さくたって大怪獣!": {
    "macron": "Dai3Hanashi Raibarutōjō!?Chiisakutatte Dai Kaijū!",
@@ -228126,7 +228154,6 @@
   "11巻第13話": "11Maki Dai13Hanashi",
   "12巻第11話": "12Maki Dai11Hanashi",
   "13巻第16話": "13Maki Dai16Hanashi",
-  "13巻第166話": "13Maki Dai166Hanashi",
   "13巻第167話": "13Maki Dai167Hanashi",
   "13巻第168話": "13Maki Dai168Hanashi",
   "13巻第169話": "13Maki Dai169Hanashi",
@@ -228288,7 +228315,6 @@
    "plain": "5Maki Dai52Hanashi“Chu So Mameido”"
   },
   "5巻第53話「決心イグニッション」": "5Maki Dai53Hanashi“Kesshin Igunisshon”",
-  "5巻第59話": "5Maki Dai59Hanashi",
   "5巻第60話": "5Maki Dai60Hanashi",
   "5巻第67話": "5Maki Dai67Hanashi",
   "6巻第77話": "6Maki Dai77Hanashi",
@@ -228306,16 +228332,7 @@
    "double": "majoccoid / Yotsuba Yuuto / nyanya",
    "plain": "majoccoid / Yotsuba Yuto / nyanya"
   },
-  "[テーマ読切:おねえさん]♡劇薬お姉さん♡": {
-   "macron": "[Tēma Yomikiri:Onēsan] ♡Gekiyaku Onēsan♡",
-   "double": "[Teema Yomikiri:Oneesan] ♡Gekiyaku Oneesan♡",
-   "plain": "[Tema Yomikiri:Onesan] ♡Gekiyaku Onesan♡"
-  },
-  "♡劇薬お姉さん♡": {
-   "macron": "♡Gekiyaku Onēsan♡",
-   "double": "♡Gekiyaku Oneesan♡",
-   "plain": "♡Gekiyaku Onesan♡"
-  }
+  "間瀬もえ": "Mase Moe"
  },
  "phrases": {
   "#0051": "Ch. 005-1",
@@ -229321,6 +229338,7 @@
   "[おまけ8]春雷卓球": "Bonus 8 Shunrai Takkyū",
   "[おまけ9]春雷卓球": "Bonus 9 Shunrai Takkyū",
   "[テーマ読切:○○な女]最低な君が好き": "[Tēma Yomikiri: ○ ○Na Onna] Saiteina Kimi ga Suki",
+  "[テーマ読切:おねえさん]♡劇薬お姉さん♡": "[Tēma Yomikiri: Onēsan] ♡ Gekiyaku Onēsan ♡",
   "[テーマ読切:お仕事]くゆらす女々": "[Tēma Yomikiri: o Shigoto] Kuyurasu Onnaonna",
   "[最終話]きみと観たいレースがある": "Final Kimi to Mitai Rēsu ga Aru",
   "[最終話]夜嵐にわらう": "Final Yoarashi ni Warau",
@@ -229466,6 +229484,7 @@
   "─やナい創作百合再録集─": "─Ya Na I Sōsaku Yuri Sairokushū ─",
   "○山浩平": "○Yamakōhei",
   "●合本版●君めく夜に焦がれて": "● Gappon Ban ● Kimimeku Yoru ni Kogarete",
+  "♡劇薬お姉さん♡": "♡ Gekiyaku Onēsan ♡",
   "〆切前には百合が捗る": "Shimekiri Mae ni wa Yuri ga Hakadoru",
   "〈番外編": "<Bangaihen",
   "《終幕》おまけの一日": "<Shūmaku> Omake no Tsuitachi",
@@ -229789,6 +229808,7 @@
   "【第97話】紐解かれる記憶": "Ch. 97 Himotokareru Kioku",
   "【第98話】VS.カフニール": "Ch. 98 VS. Kafunīru",
   "【第99話】竜の叫び声": "Ch. 99 Ryū no Sakebigoe",
+  "【第9話】エロい目で": "Ch. 9 Eroi Mede",
   "【第9話】ギャルとバイト": "Ch. 9 Gyaru to Baito",
   "【第9話】熱血!お手当てチュウ": "Ch. 9 Nekketsu! o Teate Chū",
   "【試し読み】あのレモンかじって": "[Tameshiyomi] Ano Remon Kajitte",
@@ -236467,6 +236487,7 @@
   "第98話-4魔法少女が出た": "Ch. 98-4 Mahō Shōjo ga Deta",
   "第99話": "Ch. 99",
   "第99話-1誕生日を決めた": "Ch. 99-1 Tanjōbi o Kimeta",
+  "第99話-2誕生日を決めた": "Ch. 99-2 Tanjōbi o Kimeta",
   "第9話": "Ch. 9",
   "第9話1,493": "Ch. 9 1,493",
   "第9話かっこよすぎてどうしよう": "Ch. 9 Kakko Yo Sugite Dō Shiyō",
@@ -236684,6 +236705,7 @@
   "第26話乙女と友情": "Ch. 26 Otome to Yūjō",
   "第26話特別なイベント": "Ch. 26 Tokubetsuna Ibento",
   "第27話乙女なる戦い(1)": "Ch. 27 Otomenaru Tatakai (1)",
+  "第27話特別なイベント2": "Ch. 27 Tokubetsuna Ibento 2",
   "第28話乙女なる戦い(2)": "Ch. 28 Otomenaru Tatakai (2)",
   "第29話乙女なる戦い(3)": "Ch. 29 Otomenaru Tatakai (3)",
   "第3回名探偵": "Ch. 3 Meitantei",
@@ -237992,8 +238014,7 @@
   "nonco": "nonco",
   "sono.N": "sono.N",
   "{2話}告白": "{ 2Wa } Kokuhaku",
-  "[テーマ読切:おねえさん]♡劇薬お姉さん♡": "[Tēma Yomikiri: Onēsan] ♡ Gekiyaku Onēsan ♡",
-  "♡劇薬お姉さん♡": "♡ Gekiyaku Onēsan ♡"
+  "間瀬もえ": "Mase Moe"
  },
  "platforms": {
   "BOOK☆WALKER": "BOOK☆WALKER",
