@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-24T18:43:40+00:00",
+ "generated": "2026-11-25T05:30:02+00:00",
  "since_last": {
-  "at": "2026-11-24T18:20:01+00:00",
+  "at": "2026-11-24T18:43:40+00:00",
   "statistics": {
-   "chapters": 4
+   "chapters": 12
   }
  },
  "means": {
@@ -27,22 +27,22 @@
  },
  "last_run": {
   "at": "2026-11-25",
-  "releases": 1134,
+  "releases": 1149,
   "works": 2777,
   "platforms": 19,
   "series_rows": 3355,
-  "assembled": 3360,
-  "awaiting_identifier": 5,
+  "assembled": 3361,
+  "awaiting_identifier": 6,
   "identification": {
-   "discovery-candidate": 822,
+   "discovery-candidate": 829,
    "known-work-match": 40,
-   "platform-genre": 272
+   "platform-genre": 280
   },
   "collapsed": {
-   "duplicate_chapters": 273,
-   "resolver": 154,
+   "duplicate_chapters": 278,
+   "resolver": 155,
    "samples": 0,
-   "thin_sitemap": 13
+   "thin_sitemap": 12
   }
  },
  "gate": {
@@ -615,7 +615,7 @@
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
     "budget": 1238,
-    "value": 1247,
+    "value": 1248,
     "measure": "arrival"
    },
    {
@@ -822,7 +822,7 @@
     "name": "updates naming a work we do not hold",
     "means": "release rows whose work has no record, so the row links to the platform and nowhere else and the work cannot be browsed, searched or classified. Coverage stated as a deficit, because there is no floor to hold it up: it falls as the works are judged against DEFINITIONS §2 and given records, and it reaches zero, since every row counted here names a work to decide about. A rise means a discovery pass has started reporting updates for works no capture covers. Rulings already made are in data/queue/unheld-works.yaml and reduce nothing.",
     "budget": 2,
-    "value": 2,
+    "value": 4,
     "measure": "arrival"
    },
    {
@@ -892,7 +892,7 @@
     "name": "attested rows with no access state",
     "means": "attested releases that state no access on a platform whose other rows do, nearly always because the route that read them reads none. `rows with no access state, by route` lists them. A number to work down by route, not a tripwire: `adapters/fieldaudit.py` is the one for a platform going silent.",
     "budget": 0,
-    "value": 0,
+    "value": 1,
     "measure": "report"
    },
    {
@@ -937,7 +937,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 88,
+    "consecutive": 89,
     "failing_since": "2026-10-16",
     "days": 40,
     "last_ok": null,
@@ -947,7 +947,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 88,
+    "consecutive": 89,
     "failing_since": "2026-10-16",
     "days": 40,
     "last_ok": null,
@@ -957,7 +957,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 88,
+    "consecutive": 89,
     "failing_since": "2026-10-16",
     "days": 40,
     "last_ok": null,
@@ -967,7 +967,7 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 36,
+    "consecutive": 37,
     "failing_since": "2026-11-09",
     "days": 16,
     "last_ok": null,
@@ -977,7 +977,7 @@
    {
     "source": "webcomics-coverage",
     "stage": "stage-0",
-    "consecutive": 10,
+    "consecutive": 11,
     "failing_since": "2026-11-20",
     "days": 5,
     "last_ok": "2026-11-20",
@@ -987,7 +987,7 @@
    {
     "source": "stale:stage-0:webcomics-coverage",
     "stage": "freshness",
-    "consecutive": 3,
+    "consecutive": 4,
     "failing_since": "2026-11-24",
     "days": 1,
     "last_ok": "2026-11-23",
@@ -1087,13 +1087,13 @@
    "source": "comicfuz",
    "files": 2,
    "works": 130,
-   "rows": 6362,
+   "rows": 6364,
    "retrieved": "2026-11-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 6315,
-   "well_formed": 6315,
+   "checked_rows": 6317,
+   "well_formed": 6317,
    "malformed": 0,
    "drop": null
   },
@@ -1115,13 +1115,13 @@
    "source": "gigaviewer",
    "files": 86,
    "works": 1823,
-   "rows": 17992,
+   "rows": 18003,
    "retrieved": "2026-11-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17466,
-   "well_formed": 17466,
+   "checked_rows": 17477,
+   "well_formed": 17477,
    "malformed": 0,
    "drop": null
   },
@@ -1129,13 +1129,13 @@
    "source": "kadokomi",
    "files": 5,
    "works": 1036,
-   "rows": 7932,
+   "rows": 7942,
    "retrieved": "2026-11-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7226,
-   "well_formed": 6900,
+   "checked_rows": 7236,
+   "well_formed": 6910,
    "malformed": 326,
    "drop": null
   },
@@ -1170,21 +1170,21 @@
   {
    "source": "webpages",
    "files": 52,
-   "works": 713,
-   "rows": 10572,
+   "works": 714,
+   "rows": 10574,
    "retrieved": "2026-11-25",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10517,
-   "well_formed": 10517,
+   "checked_rows": 10519,
+   "well_formed": 10519,
    "malformed": 0,
    "drop": null
   }
  ],
  "ledger": {
   "runs_held": 40,
-  "previous_at": "2026-11-24T04:20:58+00:00",
+  "previous_at": "2026-11-24T18:42:08+00:00",
   "drops": []
  },
  "outstanding": [
@@ -1314,9 +1314,9 @@
    "print": 1786,
    "oneshot": 524,
    "completed": 506,
-   "active": 286,
+   "active": 287,
    "dormant": 148,
-   "slow": 62,
+   "slow": 61,
    "unknown": 43
   },
   "english_basis": {
@@ -1330,7 +1330,7 @@
   "print_only": 1786,
   "volumes": 6629,
   "with_identifier": 3355,
-  "chapters": 31565,
+  "chapters": 31577,
   "delivery_dated": 1111
  }
 }
