@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27",
+ "generated": "2026-11-28",
  "note": "English renderings and readings, keyed by NFKC-folded title/author. Joined onto feed rows at render time so archived months — which are never rewritten — still show current names.",
  "titles": {
   "#うちらが最強~陰キャ除霊師とギャルJK~": {
@@ -4981,6 +4981,58 @@
     "translated": "SQ: It Starts with Your Name"
    },
    "reading_basis": "analyser"
+  },
+  "SRG!!Mysisterisareincarnatedelffromagame!?~ゲームから転生してきたエルフが私のお姉ちゃん!?~": {
+   "reading": "SRG!!   My   sister   is   a   reincarnated   elf   from   a   game!? ～ ゲーム カラ テンショウ シテ キタ エルフ ガ ワタシ ノ オネエチャン!? ～",
+   "ruby": [
+    [
+     "SRG!! My sister is a reincarnated elf from a game!?～ゲームから",
+     null
+    ],
+    [
+     "転生",
+     "てんしょう"
+    ],
+    [
+     "してきたエルフが",
+     null
+    ],
+    [
+     "私",
+     "わたし"
+    ],
+    [
+     "のお",
+     null
+    ],
+    [
+     "姉",
+     "ねえ"
+    ],
+    [
+     "ちゃん!?～",
+     null
+    ]
+   ],
+   "romaji": {
+    "macron": "SRG!! My Sister Is A Reincarnated Elf From A Game!? ~ Gēmu kara Tenshō Shite Kita Erufu ga Watashi no Onēchan!? ~",
+    "double": "SRG!! My Sister Is A Reincarnated Elf From A Game!? ~ Geemu kara Tenshou Shite Kita Erufu ga Watashi no Oneechan!? ~",
+    "plain": "SRG!! My Sister Is A Reincarnated Elf From A Game!? ~ Gemu kara Tensho Shite Kita Erufu ga Watashi no Onechan!? ~"
+   },
+   "en": "Srg!! My Sister Is a Reincarnated Elf from a Game!?",
+   "basis": "official-jp",
+   "en_forms": {
+    "official-jp": "Srg!! My Sister Is a Reincarnated Elf from a Game!?",
+    "translated": "My Sister Is an Elf Reincarnated from a Game!?"
+   },
+   "reading_basis": "analyser",
+   "en_cite": {
+    "source": "Comic Walker",
+    "url": "https://comic-walker.com/detail/KC_021620_S",
+    "kind": "platform",
+    "reviewed": "2026-11-27"
+   },
+   "unverified": true
   },
   "SSSS.GRIDMANコミックアンソロジー": {
    "reading": "SSSS . GRIDMAN   コミックアンソロジー",
@@ -132493,7 +132545,8 @@
    "undivided": true,
    "basis": "romaji",
    "reading_basis": "analyser",
-   "unverified": true
+   "unverified": true,
+   "id": "c02490"
   },
   "仲原椿": {
    "reading": "ナカハラ ツバキ",
@@ -165226,6 +165279,20 @@
   }
  },
  "imprints": {
+  "サンデーGXコミックス": {
+   "id": "sunday-gx-comics",
+   "name": "サンデーGXコミックス",
+   "publishers": [
+    "小学館"
+   ]
+  },
+  "サンデーgxコミックス": {
+   "id": "sunday-gx-comics",
+   "name": "サンデーGXコミックス",
+   "publishers": [
+    "小学館"
+   ]
+  },
   "Manga time KR comics　／　Kirara menu": {
    "id": "manga-time-kr-comics",
    "name": "まんがタイムKRコミックス",
@@ -165269,6 +165336,22 @@
     "小学館"
    ]
   },
+  "芳文社コミックス. トレイル": {
+   "id": "trail-comics",
+   "name": "トレイルコミックス",
+   "parent": "芳文社コミックス",
+   "publishers": [
+    "芳文社"
+   ]
+  },
+  "芳文社コミックス.トレイル": {
+   "id": "trail-comics",
+   "name": "トレイルコミックス",
+   "parent": "芳文社コミックス",
+   "publishers": [
+    "芳文社"
+   ]
+  },
   "サンデーうぇぶりコミックス": {
    "id": "sunday-webry-comics",
    "name": "サンデーうぇぶりコミックス",
@@ -165276,18 +165359,18 @@
     "小学館"
    ]
   },
-  "サンデーGXコミックス": {
-   "id": "sunday-gx-comics",
-   "name": "サンデーGXコミックス",
+  "Manga time comics": {
+   "id": "manga-time-comics",
+   "name": "まんがタイムコミックス",
    "publishers": [
-    "小学館"
+    "芳文社"
    ]
   },
-  "サンデーgxコミックス": {
-   "id": "sunday-gx-comics",
-   "name": "サンデーGXコミックス",
+  "mangatimecomics": {
+   "id": "manga-time-comics",
+   "name": "まんがタイムコミックス",
    "publishers": [
-    "小学館"
+    "芳文社"
    ]
   },
   "FUZ comics": {
@@ -166095,22 +166178,6 @@
     "文藝春秋"
    ]
   },
-  "芳文社コミックス. トレイル": {
-   "id": "trail-comics",
-   "name": "トレイルコミックス",
-   "parent": "芳文社コミックス",
-   "publishers": [
-    "芳文社"
-   ]
-  },
-  "芳文社コミックス.トレイル": {
-   "id": "trail-comics",
-   "name": "トレイルコミックス",
-   "parent": "芳文社コミックス",
-   "publishers": [
-    "芳文社"
-   ]
-  },
   "RYU COMICS": {
    "id": "ryu-comics",
    "name": "RYU COMICS",
@@ -166146,20 +166213,6 @@
    "name": "コロコロコミックススペシャル",
    "publishers": [
     "小学館"
-   ]
-  },
-  "Manga time comics": {
-   "id": "manga-time-comics",
-   "name": "まんがタイムコミックス",
-   "publishers": [
-    "芳文社"
-   ]
-  },
-  "mangatimecomics": {
-   "id": "manga-time-comics",
-   "name": "まんがタイムコミックス",
-   "publishers": [
-    "芳文社"
    ]
   },
   "MFコミックス　フラッパーシリーズ": {
@@ -168196,6 +168249,22 @@
   }
  },
  "credit_parts": {
+  "みやしろ": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "みやしろ"
+    }
+   ]
+  },
+  "清水幸": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "清水幸"
+    }
+   ]
+  },
   "マウンテンプクイチ": {
    "j": ", ",
    "p": [
@@ -168241,6 +168310,14 @@
     }
    ]
   },
+  "しる": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "しる"
+    }
+   ]
+  },
   "はづき": {
    "j": ", ",
    "p": [
@@ -168249,19 +168326,28 @@
     }
    ]
   },
-  "みやしろ": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "みやしろ"
-    }
-   ]
-  },
   "空木帆子": {
    "j": ", ",
    "p": [
     {
      "n": "空木帆子"
+    }
+   ]
+  },
+  "いくたはな": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "いくたはな",
+     "r": "著"
+    }
+   ]
+  },
+  "森": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "森"
     }
    ]
   },
@@ -168409,6 +168495,14 @@
    "p": [
     {
      "n": "リンリココ"
+    }
+   ]
+  },
+  "仮死亡殺": {
+   "j": ", ",
+   "p": [
+    {
+     "n": "仮死亡殺"
     }
    ]
   },
@@ -168962,14 +169056,6 @@
     }
    ]
   },
-  "清水幸": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "清水幸"
-    }
-   ]
-  },
   "もずくず/いつきみずほ/risumi": {
    "j": " / ",
    "p": [
@@ -169435,15 +169521,6 @@
     }
    ]
   },
-  "いくたはな": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "いくたはな",
-     "r": "著"
-    }
-   ]
-  },
   "尾野凛": {
    "j": ", ",
    "p": [
@@ -169816,14 +169893,6 @@
    "p": [
     {
      "n": "ヨドカワ"
-    }
-   ]
-  },
-  "しる": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "しる"
     }
    ]
   },
@@ -170787,14 +170856,6 @@
    "p": [
     {
      "n": "ゔぇじたぶる"
-    }
-   ]
-  },
-  "森": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "森"
     }
    ]
   },
@@ -197367,14 +197428,6 @@
     }
    ]
   },
-  "仮死亡殺": {
-   "j": ", ",
-   "p": [
-    {
-     "n": "仮死亡殺"
-    }
-   ]
-  },
   "仲谷鳰/結川カズノ/缶乃/柊ゆたか/文尾文/ほか": {
    "j": " / ",
    "p": [
@@ -203152,7 +203205,6 @@
    "plain": "4Jihan,Koinrandorinite"
   },
   "4滴目-1優しくなれた香り": "4Shizukume-1 Yasashiku Nareta Kaori",
-  "4皿目": "4Sarame",
   "4話2<完>": "4Hanashi2<Kan>",
   "5~理央と真白とときどき真優": "5 ~Rio To Masshiro To Tokidoki Mahiro",
   "5もっとしたくて": "5 Mottoshitakute",
@@ -203744,6 +203796,11 @@
    "double": "Memory8 Furo Kyan Ojousama (2)",
    "plain": "Memory8 Furo Kyan Ojosama (2)"
   },
+  "Memory8(後編)": {
+   "macron": "Memory8(Kōhen)",
+   "double": "Memory8(Kouhen)",
+   "plain": "Memory8(Kohen)"
+  },
   "Memory9さなの開花予想(1)": {
    "macron": "Memory9 Sa Na No Kaika Yosō (1)",
    "double": "Memory9 Sa Na No Kaika Yosou (1)",
@@ -203966,6 +204023,11 @@
   },
   "SQ1君の名前から始まる": "SQ 1 Kimi No Namae Kara Hajimaru",
   "SQ君の名前から始まる": "SQ Kimi No Namae Kara Hajimaru",
+  "SRG!!Mysisterisareincarnatedelffromagame!?~ゲームから転生してきたエルフが私のお姉ちゃん!?~": {
+   "macron": "SRG!! My sister is a reincarnated elf from a game!?~Gēmu Kara Tenshō Shite Kita Erufu Ga Watashi No Onēchan!?~",
+   "double": "SRG!! My sister is a reincarnated elf from a game!?~Geemu Kara Tenshou Shite Kita Erufu Ga Watashi No Oneechan!?~",
+   "plain": "SRG!! My sister is a reincarnated elf from a game!?~Gemu Kara Tensho Shite Kita Erufu Ga Watashi No Onechan!?~"
+  },
   "SSSS.GRIDMANコミックアンソロジー": {
    "macron": "SSSS.GRIDMAN Komikkuansorojī",
    "double": "SSSS.GRIDMAN Komikkuansorojii",
@@ -206415,6 +206477,7 @@
   },
   "【第4話(1)】地獄の特訓!たえFlyHigh!": "[Dai4Hanashi(1)]Jigoku No Tokkun!TaeFly High!",
   "【第4話(2)】地獄の特訓!たえFlyHigh!": "[Dai4Hanashi(2)]Jigoku No Tokkun!TaeFly High!",
+  "【第4話】": "[Dai4Hanashi]",
   "【第4話】怨天様": "[Dai4Hanashi]Ontensama",
   "【第4話】言いなり": "[Dai4Hanashi]Iinari",
   "【第59話】さみしくて☆くっつき☆ガール": {
@@ -224269,8 +224332,6 @@
   },
   "第17話(1)": "Dai17Hanashi(1)",
   "第17話(2)": "Dai17Hanashi(2)",
-  "第17話-1": "Dai17Hanashi-1",
-  "第17話-2": "Dai17Hanashi-2",
   "第17話それぞれの意志": "Dai17Hanashi Sorezore No Ishi",
   "第17話【完結】": "Dai17Hanashi[Kanketsu]",
   "第17話は公開期限が終了いたしました。": {
@@ -224530,7 +224591,6 @@
    "double": "Dai28Hanashi Anshin! Daijoubu! Etchina Youso Wa Mijin Mo Nai Kenzen Manga!",
    "plain": "Dai28Hanashi Anshin! Daijobu! Etchina Yoso Wa Mijin Mo Nai Kenzen Manga!"
   },
-  "第29話記憶の檻": "Dai29Hanashi Kioku No Ori",
   "第29話後編1": {
    "macron": "Dai29Hanashi Kōhen1",
    "double": "Dai29Hanashi Kouhen1",
@@ -224629,7 +224689,6 @@
   },
   "第36話": "Dai36Hanashi",
   "第37話": "Dai37Hanashi",
-  "第37話「姦穽」": "Dai37Hanashi “Kan Wana”",
   "第37話前編ルイくんの大晦日": {
    "macron": "Dai37Hanashi Zenpen Ruikun No Ōmisoka",
    "double": "Dai37Hanashi Zenpen Ruikun No Oomisoka",
@@ -224744,7 +224803,6 @@
   },
   "第49話": "Dai49Hanashi",
   "第4巻": "Dai4Maki",
-  "第4片": "Dai4Kata",
   "第4話": "Dai4Hanashi",
   "第4話うちのカレー辛口なんだよね": {
    "macron": "Dai4Hanashi Uchi No Karē Karakuchina Nda Yo Ne",
@@ -228496,11 +228554,6 @@
   "4巻第13話": "4Maki Dai13Hanashi",
   "5巻第13話": "5Maki Dai13Hanashi",
   "5巻第32話たからもの(2)": "5Maki Dai32Hanashi Ta Ka Ra Mo No(2)",
-  "5巻第45話「足跡コンステレーション」": {
-   "macron": "5Maki Dai45Hanashi“Ashiato Konsuterēshon”",
-   "double": "5Maki Dai45Hanashi“Ashiato Konsutereeshon”",
-   "plain": "5Maki Dai45Hanashi“Ashiato Konsutereshon”"
-  },
   "5巻第46話「晴嵐カイト」": "5Maki Dai46Hanashi“Seiran Kaito”",
   "5巻第47話「冥土インヘヴン」": "5Maki Dai47Hanashi“Meido Inhevun”",
   "5巻第48話「銀狼フロウ」": {
@@ -229392,6 +229445,7 @@
   "Memory8ふろキャンお嬢様(1)": "Memory 8 Furo Kyan Ojōsama (1)",
   "Memory8ふろキャンお嬢様(2)": "Memory 8 Furo Kyan Ojōsama (2)",
   "Memory8(前編)": "Memory 8 (Zenpen)",
+  "Memory8(後編)": "Memory 8 (Kōhen)",
   "Memory9さなの開花予想(1)": "Memory 9 Sa Na no Kaika Yosō (1)",
   "Mr.マロウブルー": "Mr. Marōburū",
   "Mr.マロウブルー(あすかコミックスDX)": "Mr. Marōburū (Asuka Komikkusu DX)",
@@ -229977,6 +230031,7 @@
   "【第49話】限界☆ワーカホリック☆ガール": "Ch. 49 Genkai ☆ Wākahorikku ☆ Gāru",
   "【第4話(1)】地獄の特訓!たえFlyHigh!": "Ch. 4 (1) Jigoku no Tokkun! Tae Fly High!",
   "【第4話(2)】地獄の特訓!たえFlyHigh!": "Ch. 4 (2) Jigoku no Tokkun! Tae Fly High!",
+  "【第4話】": "Ch. 4",
   "【第4話】山に潜む獣": "Ch. 4 Yama ni Hisomu Kemono",
   "【第4話】怨天様": "Ch. 4 Ontensama",
   "【第4話】水泡にすら帰さず": "Ch. 4 Suihō ni Sura Kaesazu",
