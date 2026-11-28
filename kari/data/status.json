@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-27T17:36:55+00:00",
+ "generated": "2026-11-28T04:26:18+00:00",
  "since_last": {
-  "at": "2026-11-27T16:59:12+00:00",
+  "at": "2026-11-27T17:36:55+00:00",
   "statistics": {
    "works": 1,
    "with_identifier": 1,
-   "chapters": 5
+   "chapters": 38
   }
  },
  "means": {
@@ -29,19 +29,19 @@
  },
  "last_run": {
   "at": "2026-11-28",
-  "releases": 1141,
+  "releases": 1177,
   "works": 2777,
   "platforms": 19,
-  "series_rows": 3360,
-  "assembled": 3365,
+  "series_rows": 3361,
+  "assembled": 3366,
   "awaiting_identifier": 5,
   "identification": {
-   "discovery-candidate": 831,
+   "discovery-candidate": 850,
    "known-work-match": 40,
-   "platform-genre": 270
+   "platform-genre": 287
   },
   "collapsed": {
-   "duplicate_chapters": 281,
+   "duplicate_chapters": 292,
    "resolver": 172,
    "samples": 0,
    "thin_sitemap": 12
@@ -469,8 +469,8 @@
    {
     "name": "author names romanised as one word",
     "means": "people whose Latin name a reader is shown closed up, because the reading behind it states no word break: 太陽まりい is filed タイヨウマリイ and reads Taiyōmarii where the person is 太陽 まりい. It falls when a source states a division and cannot fall any other way, since the only alternative is guessing where somebody's name divides. Some of the residue is names that genuinely have one element.",
-    "budget": 1231,
-    "value": 1231,
+    "budget": 1232,
+    "value": 1232,
     "measure": "arrival"
    },
    {
@@ -518,8 +518,8 @@
    {
     "name": "author readings no source states",
     "means": "author names a reader meets as a romanisation carrying the unverified mark, because the reading behind the romanisation is a morphological analyser's and nobody else's. A coverage deficit and not a fault count, and the number a naming round is against. It falls when a name is sourced or a reviewer weighs a reading, since those are the two bases `build.py` clears the mark for. A fall with no new citation behind it means the mark stopped rendering, which is the failure this counts to prevent.",
-    "budget": 559,
-    "value": 559,
+    "budget": 560,
+    "value": 560,
     "measure": "arrival"
    },
    {
@@ -560,8 +560,8 @@
    {
     "name": "credit fields an identifier does not cover",
     "means": "name-shaped runs of a shipped credit field that no credit identifier accounts for, measured by deleting the registered spellings out of the field and reading what is left. A rise means a credit stopped reaching an identifier, and the count owes nothing to the splitter that assigns them, so it can say so.",
-    "budget": 15,
-    "value": 15,
+    "budget": 16,
+    "value": 16,
     "measure": "arrival"
    },
    {
@@ -616,8 +616,8 @@
    {
     "name": "titles read by a machine, unmarked",
     "means": "titles a reader is shown spelled from an analyser's reading with no mark on it. Created by the 2026-08-10 ruling that ordinary vocabulary in a title needs no mark; falls when a title gets a stated or researched reading. A rise means new works, or a widened rule letting through something the analyser was guessing at.",
-    "budget": 1249,
-    "value": 1249,
+    "budget": 1250,
+    "value": 1250,
     "measure": "arrival"
    },
    {
@@ -935,7 +935,7 @@
    {
     "source": "cmoa-shelf",
     "stage": "stage-print",
-    "consecutive": 94,
+    "consecutive": 95,
     "failing_since": "2026-10-16",
     "days": 43,
     "last_ok": null,
@@ -945,7 +945,7 @@
    {
     "source": "stale:stage-print:cmoa-shelf",
     "stage": "freshness",
-    "consecutive": 94,
+    "consecutive": 95,
     "failing_since": "2026-10-16",
     "days": 43,
     "last_ok": null,
@@ -955,7 +955,7 @@
    {
     "source": "stale:stage-print:cmoa-volumes",
     "stage": "freshness",
-    "consecutive": 94,
+    "consecutive": 95,
     "failing_since": "2026-10-16",
     "days": 43,
     "last_ok": null,
@@ -965,35 +965,15 @@
    {
     "source": "stale:stage-print:shop-volume-names",
     "stage": "freshness",
-    "consecutive": 42,
+    "consecutive": 43,
     "failing_since": "2026-11-09",
     "days": 19,
     "last_ok": null,
     "error": "1 file(s) past their age, e.g. data/source/comparators/shop-volume-names.yaml dated 2026-08-05",
     "issue": true
-   },
-   {
-    "source": "yurinavi-discover",
-    "stage": "stage-0",
-    "consecutive": 1,
-    "failing_since": "2026-11-28",
-    "days": 0,
-    "last_ok": "2026-11-27",
-    "error": "urllib.error.URLError: <urlopen error timed out>",
-    "issue": false
-   },
-   {
-    "source": "yurinavi-webyuri",
-    "stage": "stage-0",
-    "consecutive": 1,
-    "failing_since": "2026-11-28",
-    "days": 0,
-    "last_ok": "2026-11-27",
-    "error": "urllib.error.URLError: <urlopen error timed out>",
-    "issue": false
    }
   ],
-  "healthy": 169,
+  "healthy": 171,
   "threshold": 3
  },
  "connectors": [
@@ -1113,27 +1093,27 @@
    "source": "gigaviewer",
    "files": 86,
    "works": 1848,
-   "rows": 18038,
+   "rows": 18057,
    "retrieved": "2026-11-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 17495,
-   "well_formed": 17495,
+   "checked_rows": 17514,
+   "well_formed": 17514,
    "malformed": 0,
    "drop": null
   },
   {
    "source": "kadokomi",
    "files": 5,
-   "works": 1038,
-   "rows": 7950,
+   "works": 1039,
+   "rows": 7982,
    "retrieved": "2026-11-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 7243,
-   "well_formed": 6917,
+   "checked_rows": 7275,
+   "well_formed": 6949,
    "malformed": 326,
    "drop": null
   },
@@ -1169,14 +1149,14 @@
    "source": "webpages",
    "files": 52,
    "works": 717,
-   "rows": 10611,
+   "rows": 10616,
    "retrieved": "2026-11-28",
    "age_days": 0,
    "in_scope": true,
    "empty": false,
-   "checked_rows": 10556,
-   "well_formed": 10556,
-   "malformed": 0,
+   "checked_rows": 10561,
+   "well_formed": 10560,
+   "malformed": 1,
    "drop": null
   }
  ],
@@ -1238,20 +1218,20 @@
     "credit phrases spelling a person otherwise": 3,
     "names rendered two ways": 0,
     "one work named two ways across its rows": 0,
-    "author names romanised as one word": 1231,
+    "author names romanised as one word": 1232,
     "divisions read back from a romanisation": 3,
     "divisions resting on a community database": 68,
     "publisher readings nobody has settled": 24,
     "renderings with nothing to show": 0,
     "kana names with no stated division": 255,
     "claims whose evidence their basis does not admit": 102,
-    "author readings no source states": 559,
+    "author readings no source states": 560,
     "credits the corpus files as a venue": 16,
     "interpunct credits nobody has ruled on": 0,
     "credits carrying their own cataloguing": 38,
     "credits that restate a name": 0,
     "credits matching a chapter": 0,
-    "credit fields an identifier does not cover": 15,
+    "credit fields an identifier does not cover": 16,
     "credit pages listing a work that does not name them": 13,
     "publisher pages listing a work from another house": 0,
     "credit identifiers naming nobody": 29,
@@ -1259,7 +1239,7 @@
     "ruby asserting a reading per character": 216,
     "implausible ruby spans": 0,
     "readings an analyser no longer installed produced": 183,
-    "titles read by a machine, unmarked": 1249,
+    "titles read by a machine, unmarked": 1250,
     "uncertain readings": 64,
     "data reaching the site around the store": 0,
     "titles showing a romanisation nobody has ruled on": 0,
@@ -1308,18 +1288,18 @@
   }
  ],
  "statistics": {
-  "works": 3360,
+  "works": 3361,
   "states": {
    "print": 1786,
    "oneshot": 528,
    "completed": 506,
-   "active": 287,
+   "active": 293,
    "dormant": 148,
-   "slow": 63,
+   "slow": 58,
    "unknown": 42
   },
   "english_basis": {
-   "translated": 2794,
+   "translated": 2795,
    "official-jp": 444,
    "licensed": 93,
    "romaji": 27,
@@ -1328,8 +1308,8 @@
   "print_works": 2653,
   "print_only": 1786,
   "volumes": 6644,
-  "with_identifier": 3360,
-  "chapters": 31701,
+  "with_identifier": 3361,
+  "chapters": 31739,
   "delivery_dated": 1111
  }
 }
